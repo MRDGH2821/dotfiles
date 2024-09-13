@@ -1,0 +1,16 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $editor := promptStringOnce . "editor" "Editor (code/zed/vi/notepad)" -}}
+{{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
+
+
+[data]
+    email = {{ $email | quote }}
+[edit]
+    command = {{ $editor | quote }}
+    args = ["--wait"]
+[keepassxc]
+    database = {{ $keepassxcdb | quote }}
+
+encryption = "gpg"
+[gpg]
+    recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"

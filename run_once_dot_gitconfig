@@ -1,0 +1,12 @@
+[user]
+	name = MRDGH2821
+	email = ask.mrdgh2821@outlook.com
+	signingkey = 1915CBA05A598D01
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = false

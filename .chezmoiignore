@@ -1,2 +1,6 @@
-**/*.src.ini
+./README.md
+.gitignore
+.prettierrc.json
 .trunk
+.vscode
+**/*.src.ini

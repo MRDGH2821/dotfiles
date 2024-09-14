@@ -2,7 +2,7 @@
 
 if type -P apt &>/dev/null; then
   echo "Installing KeepassXC on Ubuntu/Debian..."
-  sudo add-apt-repository ppa:phoerious/keepassxc
+  sudo add-apt-repository ppa:phoerious/keepassxc --yes
   sudo apt update
   sudo apt install -y keepassxc
 # Fedora-based

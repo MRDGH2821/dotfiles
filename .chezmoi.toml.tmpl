@@ -4,6 +4,8 @@
 
 [data]
 email = {{ $email | quote }}
+username = "MRDGH2821"
+profile = "personal"
 
 [edit]
 command = {{ $editor | quote }}
@@ -15,3 +17,11 @@ database = {{ $keepassxcdb | quote }}
 encryption = "gpg"
 [gpg]
 recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
+
+[hooks.read-source-state.pre]
+{{- if eq .chezmoi.os "windows" }}
+command = "powershell"
+args = [".local/share/chezmoi/.chezmoiscripts/.install-password-manager.ps1"]
+{{- else -}}
+command = ".local/share/chezmoi/.chezmoiscripts/.install-password-manager.sh"
+{{- end -}}

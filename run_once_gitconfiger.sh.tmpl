@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+git config --global commit.gpgsign true
+git config --global core.autocrlf false
+git config --global init.defaultBranch main
+git config --global tag.forceSignAnnotated true
+git config --global user.email {{ .email }}
+git config --global user.name {{ .username }}
+
+{{- if eq .profile "personal" }}
+git config --global user.signingkey 1915CBA05A598D01
+{{- end -}}
+
+{{- if eq .chezmoi.os "windows" }}
+  git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
+{{- end -}}

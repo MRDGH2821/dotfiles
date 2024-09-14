@@ -1,0 +1,3 @@
+{{- range .packages.windows.winget -}}
+winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id {{ . | quote }}
+{{ end -}}

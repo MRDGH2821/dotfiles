@@ -1,0 +1,76 @@
+packages:
+  windows:
+    winget:
+      - 7zip.7zip
+      - calibre.calibre
+      - Discord.Discord
+      - Docker.DockerDesktop
+      - Element.Element
+      - EpicGames.EpicGamesLauncher
+      - Espanso.Espanso
+      - Git.Git
+      - GitHub.cli
+      - GnuPG.GnuPG
+      - GnuPG.Gpg4win
+      - Gramps.Gramps
+      - HermannSchinagl.LinkShellExtension
+      - JanDeDobbeleer.OhMyPosh
+      - KeePassXCTeam.KeePassXC
+      - Klocman.BulkCrapUninstaller
+      - Microsoft.OneDrive
+      - Microsoft.PowerToys
+      - Microsoft.VisualStudioCode
+      - Microsoft.WindowsTerminal
+      - Mozilla.Firefox
+      - mtkennerly.ludusavi
+      - OBSProject.OBSStudio
+      - SomePythonThings.WingetUIStore
+      - universal.input-overlay
+      - Valve.Steam
+      - VideoLAN.VLC
+      - voidtools.Everything
+      - WeMod.WeMod
+  linux:
+    nala:
+      - apparmor-utils
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-ce
+      - docker-ce-cli
+      - docker-compose-plugin
+      - fastfetch
+      - firefox
+      - flatpak
+      - gh
+      - gir1.2-goocanvas-2.0
+      - grsync
+      - keepassxc
+      - language-pack-gnome-en
+      - onedrive
+      - python3
+      - python3-pip
+      - python3-venv
+      - waydroid
+    nala_url:
+      - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+      - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+      - https://github.com/gramps-project/gramps/releases/download/v5.2.3/gramps_5.2.3-1_all.ubuntu-22.04.deb
+      - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+    kde_deb:
+      - filelight
+      - kamoso
+      - kcalc
+      - marknote
+      - neochat
+      - partitionmanager
+      - skanlite
+      - skanpage
+    flatpak_dpkg_rpm:
+      - com.adilhanney.saber
+      - com.github.mtkennerly.ludusavi
+      - com.heroicgameslauncher.hgl
+      - it.mijorus.gearlever
+      - org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
+      - org.libreoffice.LibreOffice
+      - com.calibre_ebook.calibre
+      - com.github.marktext.marktext

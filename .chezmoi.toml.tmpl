@@ -2,31 +2,16 @@
 {{- $editor := promptStringOnce . "editor" "Editor (code/zed)" -}}
 {{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
 
-
 [data]
-    email = {{ $email | quote }}
+email = {{ $email | quote }}
+
 [edit]
-    command = {{ $editor | quote }}
-    args = ["--wait"]
+command = {{ $editor | quote }}
+args = ["--wait"]
+
 [keepassxc]
-    database = {{ $keepassxcdb | quote }}
+database = {{ $keepassxcdb | quote }}
 
 encryption = "gpg"
 [gpg]
-    recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
-
-[merge]
-{{- if eq .chezmoi.os "windows" -}}
-command = "powershell"
-args = [
-    "-Command",
-
-{{- else if eq .chezmoi.os "linux" -}}
-command = "bash"
-args = [
-    "-c",
-
-{{- end -}}
-    "cp {{ .Target }} {{ .Target }}.base && {{ $editor }} --new-window --wait --merge {{ .Destination }} {{ .Target }} {{ .Target }}.base {{ .Source }}",
-
-    ]
+recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"

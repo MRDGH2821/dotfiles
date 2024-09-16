@@ -2,7 +2,7 @@
 set -e
 LINE="-------------------------------------------"
 if command -v apt &>/dev/null; then
-
+  echo "Debian based system found!"
   # Install Nala
   if command -v nala &>/dev/null; then
     echo "Nala is already installed. Skipping"
@@ -51,4 +51,6 @@ if command -v apt &>/dev/null; then
   sudo add-apt-repository --remove ppa:yann1ck/onedrive
   wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg >/dev/null
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/ ./" | sudo tee /etc/apt/sources.list.d/onedrive.list
+else
+  echo "Nothing to do on non Debian based systems"
 fi

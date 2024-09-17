@@ -51,6 +51,18 @@ if command -v apt &>/dev/null; then
   sudo add-apt-repository --remove ppa:yann1ck/onedrive
   wget -qO - https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /usr/share/keyrings/obs-onedrive.gpg >/dev/null
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/ ./" | sudo tee /etc/apt/sources.list.d/onedrive.list
+else if command -v dnf &>/dev/null; then
+  sudo dnf install dnf5
+    
+  CONF_FILE=/etc/dnf/dnf.conf
+  
+  if grep -q "max_parallel_downloads=10" "$CONF_FILE" && grep -q "fastestmirror=True" "$CONF_FILE"; then
+    echo "Both lines are already present in $CONF_FILE"
+  else
+    echo "Adding missing lines to $CONF_FILE"
+    sudo echo "max_parallel_downloads=10" >> "$CONF_FILE"
+    sudo echo "fastestmirror=True" >> "$CONF_FILE"
+  fi
 else
-  echo "Nothing to do on non Debian based systems"
+  echo "Nothing to do on non unknown systems"
 fi

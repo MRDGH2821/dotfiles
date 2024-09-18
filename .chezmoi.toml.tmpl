@@ -1,7 +1,8 @@
-{{ $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" or .value "ask.mrdgh2821@outlook.com}}
-{{ $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" or .value "code" }}
+{{ $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" }}
+{{ if not $email }}{{ $email = "ask.mrdgh2821@outlook.com" }}{{ end }}
+{{ $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" }}
+{{ if not $editor }}{{ $editor = "code" }}{{ end }}
 {{ $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" }}
-
 [data]
 email = {{ $email | quote }}
 username = "MRDGH2821"

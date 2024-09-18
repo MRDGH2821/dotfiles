@@ -75,11 +75,10 @@ packages:
       - com.calibre_ebook.calibre
       - com.github.marktext.marktext
     linux_url:
-      - curl -f https://zed.dev/install.sh | sh
-      - curl -fsSL https://fnm.vercel.app/install | bash
-      - curl -s https://ohmyposh.dev/install.sh | bash -s
+      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
+      - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
+      - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; fi
     dnf5_url:
       - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
-    
     dnf5:
       - firefox

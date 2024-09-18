@@ -15,13 +15,13 @@ else
   echo "Skipping flatpak_deb_rpm instalation"
 fi
 
-{{ range .packages.linux.linux_url }}
-bash -c {{ . | quote }}
-{{ end }}
-
 if type -P dnf5 &>/dev/null; then
   sudo dnf5 install -y {{ joim (map quote .packages.linux.dnf) " " }}
 {{ range .packages.linux.dnf5_url }}
   sudo dnf5 install -y {{ . | quote }}
 {{ end }}
 fi
+
+{{ range .packages.linux.linux_url }}
+bash -c {{ . | quote }}
+{{ end }}

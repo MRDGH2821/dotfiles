@@ -1,6 +1,6 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $editor := promptStringOnce . "editor" "Editor (code/zed)" -}}
-{{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
+{{ $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" or .value "ask.mrdgh2821@outlook.com}}
+{{ $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" or .value "code" }}
+{{ $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" }}
 
 [data]
 email = {{ $email | quote }}
@@ -19,9 +19,9 @@ encryption = "gpg"
 recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
 
 [hooks.read-source-state.pre]
-{{ if eq .chezmoi.os "windows" -}}
+{{ if eq .chezmoi.os "windows" }}
 command = "powershell"
-args = [".local/share/chezmoi/.chezmoiscripts/.install-password-manager.ps1"]
-{{- else -}}
-command = ".local/share/chezmoi/.chezmoiscripts/.install-password-manager.sh"
-{{- end }}
+args = [".local/share/chezmoi/.chezmoiscripts/windows/.install-password-manager.ps1"]
+{{ else }}
+command = ".local/share/chezmoi/.chezmoiscripts/linux/.install-password-manager.sh"
+{{ end }}

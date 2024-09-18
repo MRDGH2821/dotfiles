@@ -61,8 +61,8 @@ elif command -v dnf &>/dev/null; then
     echo "Both lines are already present in $CONF_FILE"
   else
     echo "Adding missing lines to $CONF_FILE"
-    sudo echo "max_parallel_downloads=10" >> "$CONF_FILE"
-    sudo echo "fastestmirror=True" >> "$CONF_FILE"
+    echo "max_parallel_downloads=10" | sudo tee -a "$CONF_FILE"
+    echo "fastestmirror=True" | sudo tee -a "$CONF_FILE"
   fi
 else
   echo "Nothing to do on non unknown systems"

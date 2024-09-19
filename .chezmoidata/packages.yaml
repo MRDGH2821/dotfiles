@@ -24,7 +24,6 @@ packages:
       - Mozilla.Firefox
       - mtkennerly.ludusavi
       - OBSProject.OBSStudio
-      - SomePythonThings.WingetUIStore
       - universal.input-overlay
       - Valve.Steam
       - VideoLAN.VLC
@@ -67,17 +66,17 @@ packages:
       - skanpage
     flatpak_dpkg_rpm:
       - com.adilhanney.saber
+      - com.calibre_ebook.calibre
+      - com.github.marktext.marktext
       - com.github.mtkennerly.ludusavi
       - com.heroicgameslauncher.hgl
       - it.mijorus.gearlever
       - org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
       - org.libreoffice.LibreOffice
-      - com.calibre_ebook.calibre
-      - com.github.marktext.marktext
     linux_url:
-      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
       - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
       - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; fi
+      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
     dnf5_url:
       - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
     dnf5:

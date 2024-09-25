@@ -1,0 +1,16 @@
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+launchAction=DoNotTakeScreenshot
+
+[GuiConfig]
+captureMode=4
+
+[ImageSave]
+imageFilenameTemplate=<yyyy>-<MM>/<yyyy>-<MM>-<dd>/<title>_<yyyy>-<MM>-<dd>_<HH>:<mm>:<ss>
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+preferredVideoFormat=2
+translatedScreencastsFolder=Screencasts
+videoFilenameTemplate=<yyyy>-<MM>/<yyyy>-<MM>-<dd>/<title>_<yyyy>-<MM>-<dd>_<HH>:<mm>:<ss>

@@ -53,17 +53,23 @@ if command -v apt &>/dev/null; then
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/obs-onedrive.gpg] https://download.opensuse.org/repositories/home:/npreining:/debian-ubuntu-onedrive/xUbuntu_22.04/ ./" | sudo tee /etc/apt/sources.list.d/onedrive.list
 
 elif command -v dnf &>/dev/null; then
+
+  # Install dnf5 for faster downloads
   sudo dnf install dnf5
 
+  # modify dnf settings for faster downloads
   CONF_FILE=/etc/dnf/dnf.conf
 
-  if grep -q "max_parallel_downloads=10" "$CONF_FILE" && grep -q "fastestmirror=True" "$CONF_FILE"; then
-    echo "Both lines are already present in $CONF_FILE"
-  else
-    echo "Adding missing lines to $CONF_FILE"
+  if ! grep -q "max_parallel_downloads=10" "$CONF_FILE"; then
     echo "max_parallel_downloads=10" | sudo tee -a "$CONF_FILE"
-    echo "fastestmirror=True" | sudo tee -a "$CONF_FILE"
+    echo "dnf downloads are now parallel!"
   fi
+
+  if ! grep -q "fastestmirror=True" "$CONF_FILE"; then
+    echo "fastestmirror=True" | sudo tee -a "$CONF_FILE"
+    echo "dnf downloads are now faster!"
+  fi
+
 else
   echo "Nothing to do on non unknown systems"
 fi

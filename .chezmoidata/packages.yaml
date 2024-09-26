@@ -74,7 +74,6 @@ packages:
       - com.github.mtkennerly.ludusavi
       - com.heroicgameslauncher.hgl
       - it.mijorus.gearlever
-      - org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/24.08
       - org.libreoffice.LibreOffice
     linux_url:
       - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi

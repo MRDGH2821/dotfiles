@@ -5,7 +5,7 @@ sudo aa-disable /etc/apparmor.d/*firefox*
 
 # Allow management of Docker as a non-root user
 sudo groupadd docker
-sudo usermod -aG docker "$USER"
+sudo usermod -aG docker "${USER}"
 newgrp docker
 
 # Add Flathub remote
@@ -23,6 +23,6 @@ omp_theme='
 themes=($(ls ~/.cache/oh-my-posh/themes/*.json))
 eval "$(oh-my-posh init bash --config "${themes[$RANDOM % ${#themes[@]}]}")"
 '
-if ! grep -q "$omp_theme" "$HOME/.bashrc"; then
-  echo "$omp_theme" >>~/.bashrc
+if ! grep -q "${omp_theme}" "${HOME}/.bashrc"; then
+  echo "${omp_theme}" >>~/.bashrc
 fi

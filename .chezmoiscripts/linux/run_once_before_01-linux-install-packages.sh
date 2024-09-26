@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2312
 set -e
 LINE="-------------------------------------------"
 if command -v apt &>/dev/null; then
@@ -20,11 +21,11 @@ if command -v apt &>/dev/null; then
 
   ## KeePassXC
   sudo add-apt-repository ppa:phoerious/keepassxc -y
-  echo $LINE
+  echo "${LINE}"
 
   ## Waydroid
   curl https://repo.waydro.id | sudo bash
-  echo $LINE
+  echo "${LINE}"
 
   ## Docker Engine
 
@@ -35,7 +36,7 @@ if command -v apt &>/dev/null; then
 
   ### Add the repository to Apt sources:
   # shellcheck disable=SC1091
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$UBUNTU_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
   ## Fastfetch
   sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
@@ -60,17 +61,17 @@ elif command -v dnf &>/dev/null; then
   # modify dnf settings for faster downloads
   CONF_FILE=/etc/dnf/dnf.conf
 
-  if ! grep -q "max_parallel_downloads=10" "$CONF_FILE"; then
-    echo "max_parallel_downloads=10" | sudo tee -a "$CONF_FILE"
+  if ! grep -q "max_parallel_downloads=10" "${CONF_FILE}"; then
+    echo "max_parallel_downloads=10" | sudo tee -a "${CONF_FILE}"
     echo "dnf downloads are now parallel!"
   fi
 
-  if ! grep -q "fastestmirror=True" "$CONF_FILE"; then
-    echo "fastestmirror=True" | sudo tee -a "$CONF_FILE"
+  if ! grep -q "fastestmirror=True" "${CONF_FILE}"; then
+    echo "fastestmirror=True" | sudo tee -a "${CONF_FILE}"
     echo "dnf downloads are now faster!"
   fi
 
-  if ! grep -q "alias dnf=\"dnf5\"" "$HOME/.bashrc"; then
+  if ! grep -q "alias dnf=\"dnf5\"" "${HOME}/.bashrc"; then
     echo "alias dnf=\"dnf5\"" | sudo tee -a ~/.bashrc
     echo "dnf is now an alias for dnf5!"
   fi

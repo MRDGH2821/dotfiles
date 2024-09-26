@@ -5,6 +5,7 @@
 .vscode
 **/*.src.ini
 package*.json
+node_modules
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
 {{ end }}

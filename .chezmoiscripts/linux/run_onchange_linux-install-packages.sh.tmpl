@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
 if type -P nala &>/dev/null; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala }}{{.}} {{ end }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala }} {{.}}{{ end }}
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala_url }}{{. | quote}} {{ end }}
 fi
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]] && type -P nala &>/dev/null; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.kde_deb_rpm }}{{.}} {{ end }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.kde_deb_rpm }} {{.}}{{ end }}
 fi
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]] && type -P dnf5 &>/dev/null; then
-  sudo dnf5 install -y {{ range .packages.linux.kde_deb_rpm }}{{.}} {{ end }}
+  sudo dnf5 install -y {{ range .packages.linux.kde_deb_rpm }} {{.}}{{ end }}
 fi
 
 if [[ $(type -P dpkg &>/dev/null) ]] || [[ $(type -P rpm &>/dev/null) ]]; then
-  flatpak install --user -y {{ range .packages.linux.flatpak_dpkg_rpm }}{{.}} {{ end }}
+  flatpak install --user -y {{ range .packages.linux.flatpak_dpkg_rpm }} {{.}}{{ end }}
 else
   echo "Skipping flatpak_deb_rpm instalation"
 fi
 
 if type -P dnf5 &>/dev/null; then
-  sudo dnf5 install -y {{ range .packages.linux.dnf5 }}{{.}} {{ end }}
+  sudo dnf5 install -y {{ range .packages.linux.dnf5 }} {{.}}{{ end }}
   {{ range .packages.linux.dnf5_url }}
   sudo dnf5 install -y {{ . | quote }}
   {{ end }}
@@ -31,4 +31,4 @@ bash -c {{ . | quote }}
 {{ end }}
 
 pip install pipx
-pipx install {{ range .packages.python3.pipx }}{{.}} {{ end }}
+pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}

@@ -26,6 +26,7 @@ packages:
       - Mozilla.Firefox
       - mtkennerly.ludusavi
       - OBSProject.OBSStudio
+      - Python.Python.3.10
       - universal.input-overlay
       - Valve.Steam
       - VideoLAN.VLC
@@ -102,3 +103,6 @@ packages:
       - python3-venv
       - rclone
       - waydroid
+  python3:
+    pipx:
+      - ggshield

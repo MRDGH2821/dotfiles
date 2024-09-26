@@ -29,3 +29,6 @@ fi
 {{ range .packages.linux.linux_url }}
 bash -c {{ . | quote }}
 {{ end }}
+
+pip install pipx
+pipx install {{ range .packages.python3.pipx }}{{.}}{{ end }}

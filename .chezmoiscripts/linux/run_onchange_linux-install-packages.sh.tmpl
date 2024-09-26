@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 
 if type -P nala &>/dev/null; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join ( quote .packages.linux.nala) " " }}
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join ( quote .packages.linux.nala_url) " " }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala }}{{.}}{{ end }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala_url }}{{. | quote}}{{ end }}
 fi
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]] && type -P nala &>/dev/null; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join ( quote .packages.linux.kde_deb_rpm) " " }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.kde_deb_rpm }}{{.}}{{ end }}
 fi
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]] && type -P dnf5 &>/dev/null; then
-  sudo dnf5 install -y {{ join ( quote .packages.linux.kde_deb_rpm) " " }}
+  sudo dnf5 install -y {{ range .packages.linux.kde_deb_rpm }}{{.}}{{ end }}
 fi
 
 if [[ $(type -P dpkg &>/dev/null) ]] || [[ $(type -P rpm &>/dev/null) ]]; then
-  flatpak install --user -y {{ join ( quote .packages.linux.flatpak_dpkg_rpm) " " }}
+  flatpak install --user -y {{ range .packages.linux.flatpak_dpkg_rpm }}{{.}}{{ end }}
 else
   echo "Skipping flatpak_deb_rpm instalation"
 fi
 
 if type -P dnf5 &>/dev/null; then
-  sudo dnf5 install -y {{ join ( quote .packages.linux.dnf5) " " }}
+  sudo dnf5 install -y {{ range .packages.linux.dnf5 }}{{.}}{{ end }}
   {{ range .packages.linux.dnf5_url }}
   sudo dnf5 install -y {{ . | quote }}
-{{ end }}
+  {{ end }}
 fi
 
 {{ range .packages.linux.linux_url }}

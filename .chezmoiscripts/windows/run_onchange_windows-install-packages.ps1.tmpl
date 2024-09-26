@@ -5,4 +5,4 @@ winget install -e --disable-interactivity --silent --accept-source-agreements --
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 pip install pipx
-pipx install {{ range .packages.python3.pipx }}{{.}}{{ end }}
+pipx install {{ range .packages.python3.pipx }}{{.}} {{ end }}

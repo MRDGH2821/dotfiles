@@ -70,6 +70,19 @@ elif command -v dnf &>/dev/null; then
     echo "dnf downloads are now faster!"
   fi
 
+  if ! grep -q "alias dnf=\"dnf5\"" "$HOME/.bashrc"; then
+    echo "alias dnf=\"dnf5\"" | sudo tee -a ~/.bashrc
+    echo "dnf is now an alias for dnf5!"
+  fi
+
+  # Add Repositories
+  echo "Setting up repositories"
+  sudo dnf -y install dnf-plugins-core
+
+  ## Docker Engine
+  sudo dnf remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-selinux docker-engine-selinux docker-engine
+  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+
 else
   echo "Nothing to do on non unknown systems"
 fi

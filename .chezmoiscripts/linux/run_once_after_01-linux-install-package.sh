@@ -16,7 +16,6 @@ sudo rclone selfupdate
 
 # Enable Oh my posh's theme randomiser
 # shellcheck disable=SC2016
-
 omp_theme='
 # Oh my posh random theme initializer
 

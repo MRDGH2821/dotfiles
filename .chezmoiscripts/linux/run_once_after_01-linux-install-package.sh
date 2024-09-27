@@ -14,3 +14,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Update rclone
 sudo rclone selfupdate
+
+# Add Cocogitto bash completition
+if ! type -P cog &>/dev/null; then
+  cog generate-completions bash >~/.local/share/bash-completion/completions/cog
+fi

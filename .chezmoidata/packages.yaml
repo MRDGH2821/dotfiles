@@ -74,6 +74,30 @@ packages:
       - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
       - https://github.com/gramps-project/gramps/releases/download/v5.2.3/gramps_5.2.3-1_all.ubuntu-22.04.deb
       - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+    yay:
+      - aur/gitkraken
+      - aur/onedrivegui
+      - aur/visual-studio-code-bin
+      - aur/waydroid
+      - core/python
+      - extra/discover
+      - extra/docker
+      - extra/docker-buildx
+      - extra/docker-compose
+      - extra/fastfetch
+      - extra/firefox
+      - extra/flatpak
+      - extra/github-cli
+      - extra/goocanvas
+      - extra/gramps
+      - extra/grsync
+      - extra/keepassxc
+      - extra/pam-u2f
+      - extra/python-pip
+      - extra/python-virtualenv
+      - extra/rclone
+      - extra/ttf-liberation
+      - multilib/steam
   python3:
     pipx:
       - ggshield

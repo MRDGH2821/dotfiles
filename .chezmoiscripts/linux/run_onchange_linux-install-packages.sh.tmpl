@@ -27,6 +27,14 @@ if type -P dnf5 &>/dev/null; then
   fi
 fi
 
+## Arch
+
+if type -P yay &>/dev/null; then
+  sudo yay -Syu {{ range .packages.linux.yay }} {{.}}{{end}}
+
+  if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
+    sudo yay -Syu {{ range .packages.linux.kde }} {{.}}{{ end }}
+  fi
 
 # Flatpak
 

@@ -1,0 +1,18 @@
+[Desktop Entry]
+DefaultProfile=Nerd-Console.profile
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+UseSingleInstance=true
+
+[MainWindow]
+ToolBarsMovable=Disabled
+
+[SearchSettings]
+SearchRegExpression=true

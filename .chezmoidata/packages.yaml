@@ -28,7 +28,6 @@ packages:
       - python3
       - python3-pip
       - python3-virtualenv
-      - rclone
       - steam
       - waydroid
     dnf5_url:
@@ -53,6 +52,7 @@ packages:
     linux_url:
       - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
       - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; fi
+      - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; fi
       - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
     nala:
       - apparmor-utils
@@ -76,7 +76,6 @@ packages:
       - python3
       - python3-pip
       - python3-venv
-      - rclone
       - waydroid
     nala_url:
       - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
@@ -110,7 +109,6 @@ packages:
       - extra/pam-u2f
       - extra/python-pip
       - extra/python-virtualenv
-      - extra/rclone
       - extra/ttf-liberation
       - multilib/steam
   python3:

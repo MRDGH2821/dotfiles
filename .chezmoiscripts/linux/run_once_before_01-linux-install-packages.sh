@@ -3,6 +3,8 @@
 set -e
 LINE="-------------------------------------------"
 
+export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+
 if command -v apt &>/dev/null; then
   echo "Debian based system found!"
   # Install Nala

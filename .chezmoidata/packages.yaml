@@ -1,7 +1,7 @@
 packages:
   linux:
     dra_bin:
-      - mtkennerly/ludusavi
+      - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
     dra_appimage:
       - bpozdena/OneDriveGUI
       - kapitainsky/RcloneBrowser
@@ -84,7 +84,7 @@ packages:
       - https://release.gitkraken.com/linux/gitkraken-amd64.deb
       - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
     dra_deb:
-      - gramps-project/gramps
+      - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
       - devmatteini/dra
     yay:
       - aur/gitkraken

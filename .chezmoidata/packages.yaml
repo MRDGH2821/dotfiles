@@ -68,8 +68,8 @@ packages:
       - grsync
       - keepassxc
       - language-pack-gnome-en
+      - libpam-u2f
       - onedrive
-      - pam-u2f
       - pamu2fcfg
       - python3
       - python3-pip

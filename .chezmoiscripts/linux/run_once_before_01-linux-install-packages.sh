@@ -84,6 +84,11 @@ elif command -v dnf &>/dev/null; then
   sudo dnf remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-selinux docker-engine-selinux docker-engine
   sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
+  ## RPM Fusion Free & Non-free repos
+  fedora_version=$(rpm -E %fedora)
+  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$fedora_version".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$fedora_version".noarch.rpm -y
+  sudo dnf config-manager --enable fedora-cisco-openh264 -y
+
 else
   echo "Nothing to do on non unknown systems"
 fi

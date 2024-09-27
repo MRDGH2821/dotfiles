@@ -99,7 +99,7 @@ elif command -v dnf &>/dev/null; then
   curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -
   filename=$(ls /tmp/dra)
   filedir="${filename%.*}"
-  tar -xvzf "$filename" -C /tmp/dra
+  tar -xvzf /tmp/dra/"$filename" -C /tmp/dra
   mkdir -p "$HOME"/bin
   cp "$filedir"/dra "$HOME"/bin/
   rm -fr /tmp/dra

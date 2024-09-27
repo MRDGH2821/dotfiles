@@ -1,4 +1,82 @@
 packages:
+  linux:
+    dnf5:
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-ce
+      - docker-ce-cli
+      - docker-compose-plugin
+      - fastfetch
+      - firefox
+      - flatpak
+      - gh
+      - goocanvas2
+      - gramps
+      - grsync
+      - keepassxc
+      - onedrive
+      - pam-u2f
+      - pamu2fcfg
+      - python3
+      - python3-pip
+      - python3-virtualenv
+      - rclone
+      - waydroid
+    dnf5_url:
+      - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
+      - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
+    flatpak_dpkg_rpm:
+      - com.adilhanney.saber
+      - com.calibre_ebook.calibre
+      - com.github.marktext.marktext
+      - com.github.mtkennerly.ludusavi
+      - com.heroicgameslauncher.hgl
+      - it.mijorus.gearlever
+      - org.libreoffice.LibreOffice
+    kde_deb_rpm:
+      - filelight
+      - kamoso
+      - kcalc
+      - marknote
+      - neochat
+      - partitionmanager
+      - skanlite
+      - skanpage
+    linux_url:
+      - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
+      - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; fi
+      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
+    nala:
+      - apparmor-utils
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-ce
+      - docker-ce-cli
+      - docker-compose-plugin
+      - fastfetch
+      - firefox
+      - flatpak
+      - gh
+      - gir1.2-goocanvas-2.0
+      - grsync
+      - keepassxc
+      - language-pack-gnome-en
+      - onedrive
+      - pam-u2f
+      - pamu2fcfg
+      - python3
+      - python3-pip
+      - python3-venv
+      - rclone
+      - waydroid
+    nala_url:
+      - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+      - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+      - https://github.com/gramps-project/gramps/releases/download/v5.2.3/gramps_5.2.3-1_all.ubuntu-22.04.deb
+      - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+  python3:
+    pipx:
+      - ggshield
   windows:
     winget:
       - 7zip.7zip
@@ -32,77 +110,3 @@ packages:
       - VideoLAN.VLC
       - voidtools.Everything
       - WeMod.WeMod
-  linux:
-    nala:
-      - apparmor-utils
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-ce
-      - docker-ce-cli
-      - docker-compose-plugin
-      - fastfetch
-      - firefox
-      - flatpak
-      - gh
-      - gir1.2-goocanvas-2.0
-      - grsync
-      - keepassxc
-      - language-pack-gnome-en
-      - onedrive
-      - python3
-      - python3-pip
-      - python3-venv
-      - rclone
-      - waydroid
-    nala_url:
-      - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-      - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-      - https://github.com/gramps-project/gramps/releases/download/v5.2.3/gramps_5.2.3-1_all.ubuntu-22.04.deb
-      - https://release.gitkraken.com/linux/gitkraken-amd64.deb
-    kde_deb_rpm:
-      - filelight
-      - kamoso
-      - kcalc
-      - marknote
-      - neochat
-      - partitionmanager
-      - skanlite
-      - skanpage
-    flatpak_dpkg_rpm:
-      - com.adilhanney.saber
-      - com.calibre_ebook.calibre
-      - com.github.marktext.marktext
-      - com.github.mtkennerly.ludusavi
-      - com.heroicgameslauncher.hgl
-      - it.mijorus.gearlever
-      - org.libreoffice.LibreOffice
-    linux_url:
-      - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
-      - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; fi
-      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
-    dnf5_url:
-      - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
-      - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
-    dnf5:
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-ce
-      - docker-ce-cli
-      - docker-compose-plugin
-      - fastfetch
-      - firefox
-      - flatpak
-      - gh
-      - goocanvas2
-      - gramps
-      - grsync
-      - keepassxc
-      - onedrive
-      - python3
-      - python3-pip
-      - python3-virtualenv
-      - rclone
-      - waydroid
-  python3:
-    pipx:
-      - ggshield

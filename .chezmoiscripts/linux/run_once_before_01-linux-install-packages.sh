@@ -2,6 +2,7 @@
 # shellcheck disable=SC2312
 set -e
 LINE="-------------------------------------------"
+
 if command -v apt &>/dev/null; then
   echo "Debian based system found!"
   # Install Nala
@@ -94,6 +95,15 @@ elif command -v dnf &>/dev/null; then
   fedora_version=$(rpm -E %fedora)
   sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$fedora_version".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$fedora_version".noarch.rpm -y
   sudo dnf config-manager --enable fedora-cisco-openh264 -y
+
+  ## Download dra executable
+  curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -
+  filename=$(ls /tmp/dra)
+  filedir="${filename%.*}"
+  tar -xvzf "$filename" -C /tmp/dra
+  mkdir -p "$HOME"/bin
+  cp "$filedir"/dra "$HOME"/bin/
+  rm -fr /tmp/dra
 
 else
   echo "Nothing to do on non unknown systems"

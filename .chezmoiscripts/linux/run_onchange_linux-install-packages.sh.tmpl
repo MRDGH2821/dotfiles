@@ -51,3 +51,34 @@ bash -c {{ . | quote }}
 
 pip install pipx
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
+
+# Executables from GitHub
+
+## Binaries
+
+{{ range .packages.linux.dra_bin }}
+dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+{{ end }}
+
+if type -P nala &>/dev/null; then
+  {{ range .packages.linux.dra_deb_rpm }}
+  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  {{ end }}
+
+  # Install deb packages
+  {{ range .packages.linux.dra_deb }}
+  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  {{ end }}
+
+fi
+
+if type -P dnf5 &>/dev/null; then
+  {{ range .packages.linux.dra_deb_rpm }}
+  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  {{ end }}
+fi
+
+## Appimages
+{{ range .packages.linux.dra_appimage }}
+dra download -a -o "$HOME"/AppImages -i {{.}}
+{{ end }}

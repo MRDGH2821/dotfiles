@@ -21,6 +21,7 @@ packages:
       - python3-pip
       - python3-virtualenv
       - rclone
+      - steam
       - waydroid
     dnf5_url:
       - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64

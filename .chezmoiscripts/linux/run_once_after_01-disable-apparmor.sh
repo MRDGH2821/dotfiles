@@ -3,4 +3,4 @@
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
 # Disable AppArmor for firefox
-sudo aa-disable firefox
+sudo aa-disable firefox || true

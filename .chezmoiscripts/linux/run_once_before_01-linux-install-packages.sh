@@ -99,7 +99,8 @@ elif command -v dnf &>/dev/null; then
   ## Download dra executable
   curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -
   filename=$(ls /tmp/dra)
-  filedir="${filename%.*}"
+  tarfile="${filename%.*}"
+  filedir="${tarfile%.*}"
   tar -xvzf /tmp/dra/"$filename" -C /tmp/dra
   mkdir -p "$HOME"/bin
   cp /tmp/dra/"$filedir"/dra "$HOME"/bin/

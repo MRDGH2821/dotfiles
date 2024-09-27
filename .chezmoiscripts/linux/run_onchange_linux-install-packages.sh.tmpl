@@ -5,7 +5,7 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 # Native packages
 
 ## Debian
-
+echo "Installing Debian Packages"
 if type -P nala &>/dev/null; then
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala }} {{.}}{{ end }}
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala_url }}{{. | quote}} {{ end }}
@@ -17,7 +17,7 @@ fi
 
 
 ## Fedora
-
+echo "Installing RPM packages"
 if type -P dnf5 &>/dev/null; then
   sudo dnf5 install -y {{ range .packages.linux.dnf5 }} {{.}}{{ end }}
   {{ range .packages.linux.dnf5_url }}
@@ -30,7 +30,7 @@ if type -P dnf5 &>/dev/null; then
 fi
 
 ## Arch
-
+echo "Installing Arch packages"
 if type -P yay &>/dev/null; then
   sudo yay -Syu {{ range .packages.linux.yay }} {{.}}{{end}}
 
@@ -40,35 +40,37 @@ if type -P yay &>/dev/null; then
 fi
 
 # Flatpak
-
+echo "Installing Flatpak packages"
 flatpak install --user -y {{ range .packages.linux.flatpak }} {{.}}{{ end }}
 
 
 # Linux self installing packages
-
+echo "Installing self installing packages"
 {{ range .packages.linux.linux_url }}
 bash -c {{ . | quote }}
 {{ end }}
 
 # Python3 packages
-
+echo "Installing Python3 packages"
 pip install pipx
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
 
 # Executables from GitHub
-
+echo "Installing executables from GitHub"
 ## Binaries
-
+echo "Installing binary executables"
 {{ range .packages.linux.dra_bin }}
 dra download -a -o "$HOME"/.local/bin/ -i {{.}}
 {{ end }}
 
 if type -P nala &>/dev/null; then
+  echo "Installng debian executables"
   {{ range .packages.linux.dra_deb_rpm }}
   dra download -a -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
 
   # Install deb packages
+  echo "Installing debian packages"
   {{ range .packages.linux.dra_deb }}
   dra download -a -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
@@ -76,12 +78,14 @@ if type -P nala &>/dev/null; then
 fi
 
 if type -P dnf5 &>/dev/null; then
+  echo "Installing rpm executables"
   {{ range .packages.linux.dra_deb_rpm }}
   dra download -a -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
 fi
 
 ## Appimages
+echo "Installing AppImages"
 {{ range .packages.linux.dra_appimage }}
 dra download -a -o "$HOME"/AppImages -i {{.}}
 {{ end }}

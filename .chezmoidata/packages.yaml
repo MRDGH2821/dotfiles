@@ -30,7 +30,6 @@ packages:
       - com.adilhanney.saber
       - com.calibre_ebook.calibre
       - com.github.marktext.marktext
-      - com.github.mtkennerly.ludusavi
       - com.heroicgameslauncher.hgl
       - it.mijorus.gearlever
       - org.libreoffice.LibreOffice

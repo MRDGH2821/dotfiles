@@ -14,7 +14,7 @@ if [[ $XDG_SESSION_DESKTOP == "KDE" ]] && type -P dnf5 &>/dev/null; then
 fi
 
 if [[ $(type -P dpkg &>/dev/null) ]] || [[ $(type -P rpm &>/dev/null) ]]; then
-  flatpak install --user -y {{ range .packages.linux.flatpak_dpkg_rpm }} {{.}}{{ end }}
+  flatpak install --user -y {{ range .packages.linux.flatpak_deb_rpm }} {{.}}{{ end }}
 else
   echo "Skipping flatpak_deb_rpm instalation"
 fi

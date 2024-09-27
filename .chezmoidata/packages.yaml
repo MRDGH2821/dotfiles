@@ -25,7 +25,7 @@ packages:
     dnf5_url:
       - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
       - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
-    flatpak_dpkg_rpm:
+    flatpak_deb_rpm:
       - com.adilhanney.saber
       - com.calibre_ebook.calibre
       - com.github.marktext.marktext

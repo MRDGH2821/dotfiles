@@ -6,7 +6,7 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 sudo aa-disable firefox
 
 # Allow management of Docker as a non-root user
-sudo groupadd docker
+sudo groupadd docker -f
 sudo usermod -aG docker "${USER}"
 newgrp docker
 sudo systemctl enable docker.service

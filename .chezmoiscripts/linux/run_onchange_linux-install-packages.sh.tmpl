@@ -35,6 +35,7 @@ if type -P yay &>/dev/null; then
   if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
     sudo yay -Syu {{ range .packages.linux.kde }} {{.}}{{ end }}
   fi
+fi
 
 # Flatpak
 

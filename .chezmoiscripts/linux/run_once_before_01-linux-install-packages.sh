@@ -102,7 +102,7 @@ elif command -v dnf &>/dev/null; then
   filedir="${filename%.*}"
   tar -xvzf /tmp/dra/"$filename" -C /tmp/dra
   mkdir -p "$HOME"/bin
-  cp "$filedir"/dra "$HOME"/bin/
+  cp /tmp/dra/"$filedir"/dra "$HOME"/bin/
   rm -fr /tmp/dra
 
 else

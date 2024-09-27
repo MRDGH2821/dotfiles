@@ -60,19 +60,19 @@ echo "Installing executables from GitHub"
 ## Binaries
 echo "Installing binary executables"
 {{ range .packages.linux.dra_bin }}
-dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+dra download -o "$HOME"/.local/bin/ -i {{.}}
 {{ end }}
 
 if type -P nala &>/dev/null; then
   echo "Installng debian executables"
   {{ range .packages.linux.dra_deb_rpm }}
-  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  dra download -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
 
   # Install deb packages
   echo "Installing debian packages"
   {{ range .packages.linux.dra_deb }}
-  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  dra download -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
 
 fi
@@ -80,12 +80,12 @@ fi
 if type -P dnf5 &>/dev/null; then
   echo "Installing rpm executables"
   {{ range .packages.linux.dra_deb_rpm }}
-  dra download -a -o "$HOME"/.local/bin/ -i {{.}}
+  dra download -o "$HOME"/.local/bin/ -i {{.}}
   {{ end }}
 fi
 
 ## Appimages
 echo "Installing AppImages"
 {{ range .packages.linux.dra_appimage }}
-dra download -a -o "$HOME"/AppImages -i {{.}}
+dra download -o "$HOME"/AppImages -i {{.}}
 {{ end }}

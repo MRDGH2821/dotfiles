@@ -3,10 +3,10 @@ packages:
     dra_bin:
       - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
     dra_appimage:
-      - bpozdena/OneDriveGUI
-      - kapitainsky/RcloneBrowser
+      - bpozdena/OneDriveGUI -a
+      - kapitainsky/RcloneBrowser -a
     dra_deb_rpm:
-      - cocogitto/cocogitto
+      - cocogitto/cocogitto -a
     dnf5:
       - containerd.io
       - docker-buildx-plugin
@@ -85,7 +85,7 @@ packages:
       - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
     dra_deb:
       - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
-      - devmatteini/dra
+      - devmatteini/dra -a
     yay:
       - aur/gitkraken
       - aur/onedrivegui

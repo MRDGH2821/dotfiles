@@ -16,6 +16,9 @@ if command -v apt &>/dev/null; then
   sudo nala fetch --auto -y --https-only --non-free
   sudo nala install --update -y curl wget git ca-certificates libfuse2 gnupg2
 
+  # Update system
+  sudo nala update -y
+
   # Add Repositories
   echo "Setting up repositories"
 
@@ -75,6 +78,9 @@ elif command -v dnf &>/dev/null; then
     echo "alias dnf=\"dnf5\"" | sudo tee -a ~/.bashrc
     echo "dnf is now an alias for dnf5!"
   fi
+
+  # Update System
+  sudo dnf update -y
 
   # Add Repositories
   echo "Setting up repositories"

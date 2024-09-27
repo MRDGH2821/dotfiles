@@ -3,7 +3,7 @@
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
 # Disable AppArmor for firefox
-sudo aa-disable /etc/apparmor.d/*firefox*
+sudo aa-disable firefox
 
 # Allow management of Docker as a non-root user
 sudo groupadd docker

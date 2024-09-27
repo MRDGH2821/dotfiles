@@ -7,3 +7,6 @@ sudo groupadd docker -f
 sudo usermod -aG docker "${USER}"
 newgrp docker
 sudo systemctl enable docker.service
+
+echo "Docker is now managable by $USER"
+exit 0

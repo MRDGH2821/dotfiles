@@ -15,3 +15,5 @@ fi
 
 # Install Nerd font
 oh-my-posh font install meslo
+
+exit 0

@@ -7,6 +7,7 @@ sudo aa-disable /etc/apparmor.d/*firefox*
 sudo groupadd docker
 sudo usermod -aG docker "${USER}"
 newgrp docker
+sudo systemctl enable docker.service
 
 # Add Flathub remote
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

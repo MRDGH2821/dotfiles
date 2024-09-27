@@ -17,9 +17,6 @@ if command -v apt &>/dev/null; then
   sudo nala fetch --auto -y --https-only --non-free
   sudo nala install --update -y curl wget git ca-certificates libfuse2 gnupg2
 
-  # Update system
-  sudo nala update
-
   # Add Repositories
   echo "Setting up repositories"
 

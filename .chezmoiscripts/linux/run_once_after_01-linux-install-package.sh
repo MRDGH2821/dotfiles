@@ -21,3 +21,6 @@ sudo rclone selfupdate
 if ! type -P cog &>/dev/null; then
   cog generate-completions bash >~/.local/share/bash-completion/completions/cog
 fi
+
+# Install Nerd font
+oh-my-posh font install meslo

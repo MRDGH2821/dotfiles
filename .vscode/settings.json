@@ -8,7 +8,8 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "conventionalCommits.scopes": ["chezmoi", "package", "vscode"],
+  "code-runner.runInTerminal": true,
+  "conventionalCommits.scopes": ["chezmoi", "package", "script", "vscode"],
   "prettier.prettierPath": "./node_modules/prettier",
   "prettier.resolveGlobalModules": true
 }

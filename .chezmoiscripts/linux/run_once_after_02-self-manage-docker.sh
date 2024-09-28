@@ -5,8 +5,7 @@ export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 # Allow management of Docker as a non-root user
 sudo groupadd docker -f
 sudo usermod -aG docker "${USER}"
-newgrp docker
 sudo systemctl enable docker.service
 
 echo "Docker is now managable by ${USER}"
-exit 0
+echo "Please reboot once for changes to take effect"

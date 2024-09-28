@@ -3,7 +3,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 
 if command -v apt &>/dev/null; then
   echo "Debian based system found!"
@@ -92,7 +92,7 @@ elif command -v dnf &>/dev/null; then
 
   ## RPM Fusion Free & Non-free repos
   fedora_version=$(rpm -E %fedora)
-  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$fedora_version".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$fedora_version".noarch.rpm -y
+  sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"${fedora_version}".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"${fedora_version}".noarch.rpm -y
   sudo dnf config-manager --enable fedora-cisco-openh264 -y
 
   trap 'rm -fr /tmp/dra' EXIT
@@ -101,9 +101,9 @@ elif command -v dnf &>/dev/null; then
   filename=$(ls /tmp/dra)
   tarfile="${filename%.*}"
   filedir="${tarfile%.*}"
-  tar -xvzf /tmp/dra/"$filename" -C /tmp/dra
-  mkdir -p "$HOME"/bin
-  cp /tmp/dra/"$filedir"/dra "$HOME"/bin/
+  tar -xvzf /tmp/dra/"${filename}" -C /tmp/dra
+  mkdir -p "${HOME}"/bin
+  cp /tmp/dra/"${filedir}"/dra "${HOME}"/bin/
   rm -fr /tmp/dra
 
 else

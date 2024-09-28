@@ -15,7 +15,6 @@ if type -P nala &>/dev/null; then
   fi
 fi
 
-
 ## Fedora
 echo "Installing RPM packages"
 if type -P dnf5 &>/dev/null; then
@@ -43,7 +42,6 @@ fi
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install --user -y {{ range .packages.linux.flatpak }} {{.}}{{ end }}
-
 
 # Linux self installing packages
 echo "Installing self installing packages"

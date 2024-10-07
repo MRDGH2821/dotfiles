@@ -108,6 +108,7 @@ packages:
       - extra/kleopatra
       - extra/pam-u2f
       - extra/python-pip
+      - extra/python-pipx
       - extra/python-virtualenv
       - extra/ttf-liberation
       - multilib/steam

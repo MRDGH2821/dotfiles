@@ -17,7 +17,7 @@ elif type -P dnf &>/dev/null; then
 # Arch Linux-based
 elif type -P pacman &>/dev/null; then
   echo "Installing KeepassXC on Arch Linux..."
-  sudo pacman -S --noconfirm keepassxc
+  sudo pacman -S --noconfirm --needed keepassxc
 else
   echo "Unsupported Linux distribution"
   exit 1

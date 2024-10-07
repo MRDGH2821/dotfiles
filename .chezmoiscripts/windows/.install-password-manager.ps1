@@ -1,3 +1,8 @@
+if (Get-Command keepassxc.exe -ErrorAction SilentlyContinue) {
+  Write-Host "KeePassXC is already installed. Skipping"
+  exit
+}
+
 winget install -e --id KeePassXCTeam.KeePassXC
 function Add-ToPath {
     param (

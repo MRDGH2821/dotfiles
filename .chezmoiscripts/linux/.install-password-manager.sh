@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if type -P keepassxc &>/dev/null; then
+  echo "KeepassXC is already installed. Skipping"
+  exit 0
+fi
+
 if type -P apt &>/dev/null; then
   echo "Installing KeepassXC on Ubuntu/Debian..."
   sudo add-apt-repository ppa:phoerious/keepassxc --yes

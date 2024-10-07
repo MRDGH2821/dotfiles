@@ -1,7 +1,7 @@
 packages:
   linux:
     dra_bin:
-      - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
+      - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip --install-file ludusavi
     dra_appimage:
       - bpozdena/OneDriveGUI -a
       - kapitainsky/RcloneBrowser -a

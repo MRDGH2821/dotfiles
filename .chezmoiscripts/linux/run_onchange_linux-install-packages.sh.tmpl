@@ -59,7 +59,7 @@ echo "Installing executables from GitHub"
 ## Binaries
 echo "Installing binary executables"
 {{ range .packages.linux.dra_bin }}
-dra download -o "$HOME"/.local/bin/ -i {{.}}
+dra download -o "$HOME"/.local/bin/ {{.}}
 {{ end }}
 
 if type -P nala &>/dev/null; then

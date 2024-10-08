@@ -3,10 +3,15 @@
 {{ $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" }}
 {{ if not $editor }}{{ $editor = "code" }}{{ end }}
 {{ $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" }}
+{{- $osid := .chezmoi.os -}}
+{{- if hasKey .chezmoi.osRelease "id" -}}
+{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
 [data]
 email = {{ $email | quote }}
 username = "MRDGH2821"
 profile = "personal"
+osid = {{ $osid | quote }}
 
 [edit]
 command = {{ $editor | quote }}

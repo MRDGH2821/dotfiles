@@ -7,6 +7,9 @@
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
 {{- end -}}
+{{- if hasKey .chezmoi.osRelease "idLike" -}}
+{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.idLike -}}
+{{- end -}}
 [data]
 email = {{ $email | quote }}
 username = "MRDGH2821"

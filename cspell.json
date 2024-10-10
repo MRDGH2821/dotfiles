@@ -1,7 +1,7 @@
 {
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "ignorePaths": ["node_modules"],
+  "ignorePaths": [".git", ".trunk", ".vscode", "node_modules"],
   "language": "en-GB",
   "useGitignore": true,
   "version": "0.2",
@@ -9,6 +9,8 @@
     "adilhanney",
     "bpozdena",
     "buildx",
+    "chezmoi",
+    "chezmoiscripts",
     "climent",
     "cocogitto",
     "devmatteini",

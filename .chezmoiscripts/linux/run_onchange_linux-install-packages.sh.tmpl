@@ -6,7 +6,7 @@ appimagedir="$HOME/AppImages"
 
 # Native packages
 
-{{ if eq .osid "linux-debian" }}
+{{ if or (eq .osid "linux-debian") (eq .osid "linux-ubuntu") (eq .osid "linux-debian ubuntu") (eq .osid "liux-ubuntu debian") }}
 ## Debian
 echo "Installing Debian Packages"
 

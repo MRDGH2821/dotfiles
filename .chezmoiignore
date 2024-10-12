@@ -8,7 +8,7 @@ cspell.json
 node_modules
 package*.json
 README.md
-Package.md
+Packages.md
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**

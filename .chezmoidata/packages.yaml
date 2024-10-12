@@ -1,117 +1,157 @@
 packages:
   linux:
-    dra_bin:
-      - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip --install-file ludusavi
-    dra_appimage:
-      - bpozdena/OneDriveGUI -a
-      - kapitainsky/RcloneBrowser -a
-    dra_deb_rpm:
-      - cocogitto/cocogitto -a
-    dnf5:
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-ce
-      - docker-ce-cli
-      - docker-compose-plugin
-      - fastfetch
-      - firefox
-      - flatpak
-      - gh
-      - goocanvas2
-      - gramps
-      - grsync
-      - keepassxc
-      - kleopatra
-      - onedrive
-      - pam-u2f
-      - pamu2fcfg
-      - python3
-      - python3-pip
-      - python3-virtualenv
-      - steam
-      - waydroid
-    dnf5_url:
-      - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
-      - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
-    flatpak:
-      - com.adilhanney.saber
-      - com.calibre_ebook.calibre
-      - com.github.marktext.marktext
-      - com.heroicgameslauncher.hgl
-      - it.mijorus.gearlever
-      - org.libreoffice.LibreOffice
-    kde:
-      - filelight
-      - kamoso
-      - kcalc
-      - marknote
-      - neochat
-      - partitionmanager
-      - skanlite
-      - skanpage
-    linux_url:
-      - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
-      - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
-      - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
-      - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
-    nala:
-      - apparmor-utils
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-ce
-      - docker-ce-cli
-      - docker-compose-plugin
-      - fastfetch
-      - firefox
-      - flatpak
-      - gh
-      - gir1.2-goocanvas-2.0
-      - grsync
-      - keepassxc
-      - kleopatra
-      - language-pack-gnome-en
-      - libpam-u2f
-      - onedrive
-      - pamu2fcfg
-      - python3
-      - python3-pip
-      - python3-venv
-      - waydroid
-    nala_url:
-      - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-      - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-      - https://release.gitkraken.com/linux/gitkraken-amd64.deb
-      - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
-    dra_deb:
-      - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
-      - devmatteini/dra -a
-    yay:
-      - aur/gitkraken
-      - aur/onedrivegui
-      - aur/visual-studio-code-bin
-      - aur/waydroid
-      - core/python
-      - extra/cocogitto
-      - extra/discover
-      - extra/docker
-      - extra/docker-buildx
-      - extra/docker-compose
-      - extra/dra
-      - extra/fastfetch
-      - extra/firefox
-      - extra/flatpak
-      - extra/github-cli
-      - extra/goocanvas
-      - extra/gramps
-      - extra/grsync
-      - extra/keepassxc
-      - extra/kleopatra
-      - extra/pam-u2f
-      - extra/python-pip
-      - extra/python-pipx
-      - extra/python-virtualenv
-      - extra/ttf-liberation
-      - multilib/steam
+    arch:
+      yay:
+        - aur/gitkraken
+        - aur/heroic-games-launcher-bin
+        - aur/onedrivegui
+        - aur/visual-studio-code-bin
+        - aur/waydroid
+        - core/gnupg
+        - core/python
+        - extra/calibre
+        - extra/cocogitto
+        - extra/docker
+        - extra/docker-buildx
+        - extra/docker-compose
+        - extra/dra
+        - extra/fastfetch
+        - extra/firefox
+        - extra/flatpak
+        - extra/git
+        - extra/github-cli
+        - extra/goocanvas
+        - extra/gramps
+        - extra/grsync
+        - extra/keepassxc
+        - extra/kleopatra
+        - extra/libreoffice-fresh
+        - extra/pam-u2f
+        - extra/python-pip
+        - extra/python-pipx
+        - extra/python-virtualenv
+        - extra/tldr
+        - extra/ttf-liberation
+        - extra/vlc
+        - multilib/steam
+    debian:
+      dra:
+        appimage:
+          - bpozdena/OneDriveGUI -a
+        bin:
+          - devmatteini/dra -a
+          - cocogitto/cocogitto -a
+        package:
+          - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
+          - Heroic-Games-Launcher/Heroic-Games-Launcher --select
+            heroic_{tag}_amd64.deb
+      flatpak:
+        - com.calibre_ebook.calibre
+        - org.libreoffice.LibreOffice
+      nala:
+        - apparmor-utils
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-ce
+        - docker-ce-cli
+        - docker-compose-plugin
+        - fastfetch
+        - firefox
+        - flatpak
+        - gh
+        - gir1.2-goocanvas-2.0
+        - git
+        - gnupg2
+        - grsync
+        - keepassxc
+        - kleopatra
+        - language-pack-gnome-en
+        - libpam-u2f
+        - onedrive
+        - pamu2fcfg
+        - python3
+        - python3-pip
+        - python3-venv
+        - vlc
+        - waydroid
+      nala_url:
+        - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+        - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+        - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
+        - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+    fedora:
+      dnf5:
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-ce
+        - docker-ce-cli
+        - docker-compose-plugin
+        - fastfetch
+        - firefox
+        - flatpak
+        - gh
+        - git
+        - gnupg2
+        - goocanvas2
+        - gramps
+        - grsync
+        - keepassxc
+        - kleopatra
+        - onedrive
+        - pam-u2f
+        - pamu2fcfg
+        - python3
+        - python3-pip
+        - python3-virtualenv
+        - steam
+        - tldr
+        - vlc
+        - waydroid
+      dnf5_url:
+        - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
+        - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
+      dra:
+        appimage:
+          - bpozdena/OneDriveGUI -a
+        bin:
+          - cocogitto/cocogitto -a
+          - devmatteini/dra -a
+        package:
+          - Heroic-Games-Launcher/Heroic-Games-Launcher --select
+            heroic-{tag}.x86_64.rpm
+      flatpak:
+        - com.calibre_ebook.calibre
+        - org.libreoffice.LibreOffice
+    linux_common:
+      dra:
+        appimage:
+          - kapitainsky/RcloneBrowser -a
+        bin:
+          - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
+            --install-file ludusavi
+      flatpak:
+        - com.adilhanney.saber
+        - io.ente.auth
+        - it.mijorus.gearlever
+      kde:
+        - discover
+        - filelight
+        - kamoso
+        - kcalc
+        - marknote
+        - neochat
+        - partitionmanager
+        - skanlite
+        - skanpage
+      linux_url:
+        - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL
+          https://fnm.vercel.app/install | bash; fi
+        - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s
+          https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
+        - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL
+          https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
+        - if ! type -P zed >/dev/null 2>&1; then curl -f
+          https://zed.dev/install.sh | sh; fi
   python3:
     pipx:
       - ggshield
@@ -122,6 +162,7 @@ packages:
       - Discord.Discord
       - Docker.DockerDesktop
       - Element.Element
+      - ente-io.auth-desktop
       - EpicGames.EpicGamesLauncher
       - Espanso.Espanso
       - Fastfetch-cli.Fastfetch
@@ -143,6 +184,7 @@ packages:
       - mtkennerly.ludusavi
       - OBSProject.OBSStudio
       - Python.Python.3.10
+      - TheDocumentFoundation.LibreOffice
       - universal.input-overlay
       - Valve.Steam
       - VideoLAN.VLC

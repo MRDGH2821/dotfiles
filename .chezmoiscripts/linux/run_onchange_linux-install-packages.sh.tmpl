@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+bindir="$HOME/.local/bin"
+appimagedir="$HOME/AppImages"
 
 # Native packages
 
@@ -8,12 +10,29 @@ export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 ## Debian
 echo "Installing Debian Packages"
 
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala }} {{.}}{{ end }}
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.nala_url }}{{. | quote}} {{ end }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.debian.nala }} {{.}}{{ end }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.debian.nala_url }}{{. | quote}} {{ end }}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.kde }} {{.}}{{ end }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux_common.kde }} {{.}}{{ end }}
 fi
+
+echo "Downloading packages via dra"
+{{ range .packages.linux.debian.dra.appimage }}
+dra download -o "$appimagedir" -i {{.}}
+{{ end }}
+
+{{ range .packages.linux.debian.dra.bin }}
+dra download -o "$bindir" {{.}}
+{{ end }}
+
+{{ range .packages.linux.debian.dra.package }}
+dra download -o "$bindir" -i {{.}}
+{{ end }}
+
+echo "Installing Flatpak packages"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user -y {{ range .packages.linux.debian.flatpak }} {{.}}{{ end }}
 
 {{ else if eq .osid "linux-fedora" }}
 ## Fedora
@@ -25,69 +44,69 @@ sudo dnf5 install -y {{ . | quote }}
 {{ end }}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo dnf5 install -y {{ range .packages.linux.kde }} {{.}}{{ end }}
+  sudo dnf5 install -y {{ range .packages.linux_common.kde }} {{.}}{{ end }}
 fi
+
+echo "Downloading packages via dra"
+{{ range .packages.linux.fedora.dra.appimage }}
+dra download -o "$appimagedir" -i {{.}}
+{{ end }}
+
+{{ range .packages.linux.fedora.dra.bin }}
+dra download -o "$bindir" {{.}}
+{{ end }}
+
+{{ range .packages.linux.fedora.dra.package }}
+dra download -o "$bindir" -i {{.}}
+{{ end }}
+
+echo "Installing Flatpak packages"
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install --user -y {{ range .packages.linux.fedora.flatpak }} {{.}}{{ end }}
 
 {{ else if eq .osid "linux-arch" }}
 ## Arch
 echo "Installing Arch packages"
 
-yay -Syu --needed {{ range .packages.linux.yay }} {{.}}{{end}}
+yay -Syu --needed {{ range .packages.linux.arch.yay }} {{.}}{{end}}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  yay -Syu --needed {{ range .packages.linux.kde }} {{.}}{{ end }}
+  yay -Syu --needed {{ range .packages.linux_common.kde }} {{.}}{{ end }}
 fi
 
 {{ end }}
 
+# Executables from GitHub
+echo "Installing executables from GitHub"
+
+## Appimages
+echo "Installing AppImages"
+{{ range .packages.linux_common.dra.appimage }}
+dra download -o "$HOME"/AppImages -i {{.}}
+{{ end }}
+
+## Binaries
+echo "Installing binary executables"
+{{ range .packages.linux_common.dra.bin }}
+dra download -o "$HOME"/.local/bin/ {{.}}
+{{ end }}
+
 # Flatpak
-echo "Installing Flatpak packages"
+echo "Installing Common Flatpaks"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user -y {{ range .packages.linux.flatpak }} {{.}}{{ end }}
+flatpak install --user -y {{ range .packages.linux_common.flatpak }} {{.}}{{ end }}
 
 # Linux self installing packages
 echo "Installing self installing packages"
-{{ range .packages.linux.linux_url }}
+{{ range .packages.linux_common.linux_url }}
 bash -c {{ . | quote }}
 {{ end }}
 
 # Python3 packages
-echo "Installing Python3 packages"
-pip install pipx
+
+if type -P pipx >/dev/null 2>&1; then
+  pip install pipx
+fi
+
+echo "Installing pipx packages"
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
-
-# Executables from GitHub
-echo "Installing executables from GitHub"
-## Binaries
-echo "Installing binary executables"
-{{ range .packages.linux.dra_bin }}
-dra download -o "$HOME"/.local/bin/ {{.}}
-{{ end }}
-
-{{ if eq .osid "linux-debian" }}
-
-echo "Installng debian executables"
-{{  range .packages.linux.dra_deb_rpm }}
-dra download -o "$HOME"/.local/bin/ -i {{.}}
-{{  end }}
-
-# Install deb packages
-echo "Installing debian packages"
-{{  range .packages.linux.dra_deb }}
-dra download -o "$HOME"/.local/bin/ -i {{.}}
-{{  end }}
-
-{{ else if eq .osid "linux-fedora" }}
-
-echo "Installing rpm executables"
-{{  range .packages.linux.dra_deb_rpm }}
-dra download -o "$HOME"/.local/bin/ -i {{.}}
-{{  end }}
-
-{{ end }}
-
-## Appimages
-echo "Installing AppImages"
-{{ range .packages.linux.dra_appimage }}
-dra download -o "$HOME"/AppImages -i {{.}}
-{{ end }}

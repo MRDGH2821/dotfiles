@@ -36,7 +36,7 @@ dra download -o "$bindir" -i {{.}}
 
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user -y {{ range .packages.linux.debian.flatpak }} {{.}}{{ end }}
+flatpak install --user -y flathub {{ range .packages.linux.debian.flatpak }} {{.}}{{ end }}
 
 {{ else if eq .osid "linux-fedora" }}
 ## Fedora

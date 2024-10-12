@@ -16,9 +16,11 @@
     "devmatteini",
     "dobbeleer",
     "dpkg",
+    "ente",
     "espanso",
     "fcfg",
     "ggshield",
+    "gnupg",
     "gramps",
     "grsync",
     "kamoso",
@@ -38,6 +40,7 @@
     "schinagl",
     "skanlite",
     "skanpage",
+    "tldr",
     "venv",
     "virtualenv"
   ]

@@ -37,7 +37,7 @@ dra download -o "$bindir" -i {{.}}
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user -y flathub {{ range .packages.linux.debian.flatpak }} {{.}}{{ end }}
+flatpak install -y flathub {{ range .packages.linux.debian.flatpak }} {{.}}{{ end }}
 
 {{ else if eq .osid "linux-fedora" }}
 ## Fedora
@@ -68,7 +68,7 @@ dra download -o "$bindir" -i {{.}}
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user -y {{ range .packages.linux.fedora.flatpak }} {{.}}{{ end }}
+flatpak install -y {{ range .packages.linux.fedora.flatpak }} {{.}}{{ end }}
 
 {{ else if eq .osid "linux-arch" }}
 ## Arch
@@ -101,7 +101,7 @@ dra download -o "$HOME"/.local/bin/ {{.}}
 echo "Installing Common Flatpaks"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user -y {{ range .packages.linux.linux_common.flatpak }} {{.}}{{ end }}
+flatpak install -y {{ range .packages.linux.linux_common.flatpak }} {{.}}{{ end }}
 
 # Linux self installing packages
 echo "Installing self installing packages"

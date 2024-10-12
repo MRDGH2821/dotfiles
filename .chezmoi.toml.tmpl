@@ -1,8 +1,8 @@
-{{ $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" }}
-{{ if not $email }}{{ $email = "ask.mrdgh2821@outlook.com" }}{{ end }}
-{{ $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" }}
-{{ if not $editor }}{{ $editor = "code" }}{{ end }}
-{{ $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" }}
+{{- $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" -}}
+{{- if not $email }}{{ $email = "ask.mrdgh2821@outlook.com" }}{{ end -}}
+{{- $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" -}}
+{{- if not $editor }}{{ $editor = "code" }}{{ end -}}
+{{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
@@ -33,4 +33,4 @@ command = "powershell"
 args = [".local/share/chezmoi/.chezmoiscripts/windows/.install-password-manager.ps1"]
 {{ else }}
 command = ".local/share/chezmoi/.chezmoiscripts/linux/.install-password-manager.sh"
-{{ end }}
+{{ end -}}

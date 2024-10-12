@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-bindir="$HOME/.local/bin"
-appimagedir="$HOME/AppImages"
+export PATH="$HOME/.local/bin/:$HOME/bin/:$PATH"
+bindir="$HOME/.local/bin/"
+appimagedir="$HOME/AppImages/"
+
+mkdir -p "$bindir"
+mkdir -p "$appimagedir"
+mkdir -p "$HOME/bin/"
 
 # Native packages
 

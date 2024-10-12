@@ -28,7 +28,7 @@ encryption = "gpg"
 recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
 
 [hooks.read-source-state.pre]
-{{ if eq .chezmoi.os "windows" }}
+{{- if eq .chezmoi.os "windows" }}
 command = "powershell"
 args = [".local/share/chezmoi/.chezmoiscripts/windows/.install-password-manager.ps1"]
 {{ else }}

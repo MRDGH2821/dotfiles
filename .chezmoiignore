@@ -8,14 +8,15 @@ cspell.json
 node_modules
 package*.json
 README.md
+Package.md
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
+dot_bashrc
+dot_config
+dot_local
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
-dot_bashrc
-dot_config
-dot_local
 {{ end }}

@@ -9,7 +9,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "code-runner.runInTerminal": true,
-  "conventionalCommits.scopes": ["chezmoi", "package", "script", "vscode"],
+  "conventionalCommits.scopes": [
+    "chezmoi",
+    "cspell",
+    "package",
+    "script",
+    "vscode"
+  ],
   "prettier.prettierPath": "./node_modules/prettier",
   "prettier.resolveGlobalModules": true
 }

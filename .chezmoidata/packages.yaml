@@ -21,12 +21,14 @@ packages:
         - extra/git
         - extra/github-cli
         - extra/goocanvas
+        - extra/goverlay
         - extra/gramps
         - extra/grsync
         - extra/keepassxc
         - extra/kleopatra
         - extra/libgexiv2
         - extra/libreoffice-fresh
+        - extra/mangohud
         - extra/osm-gps-map
         - extra/pam-u2f
         - extra/python-pip
@@ -35,6 +37,7 @@ packages:
         - extra/tldr
         - extra/ttf-liberation
         - extra/vlc
+        - multilib/lib32-mangohud
         - multilib/steam
     debian:
       dra:
@@ -44,9 +47,9 @@ packages:
           - devmatteini/dra -a
           - cocogitto/cocogitto -a
         package:
+          - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
           - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
-          - Heroic-Games-Launcher/Heroic-Games-Launcher --select
-            heroic_{tag}_amd64.deb
+          - Heroic-Games-Launcher/Heroic-Games-Launcher --select heroic_{tag}_amd64.deb
       flatpak:
         - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice
@@ -64,11 +67,14 @@ packages:
         - gir1.2-goocanvas-2.0
         - git
         - gnupg2
+        - goverlay
         - grsync
         - keepassxc
         - kleopatra
         - language-pack-gnome-en
         - libpam-u2f
+        - mangohud
+        - mangohud:i386
         - onedrive
         - pamu2fcfg
         - python3
@@ -95,10 +101,12 @@ packages:
         - git
         - gnupg2
         - goocanvas2
+        - goverlay
         - gramps
         - grsync
         - keepassxc
         - kleopatra
+        - mangohud
         - onedrive
         - pam-u2f
         - pamu2fcfg

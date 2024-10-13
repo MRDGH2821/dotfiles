@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "eamodio.gitlens",
+    "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "evondev.indent-rainbow-palettes",
     "formulahendry.code-runner",

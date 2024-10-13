@@ -74,8 +74,8 @@ elif command -v dnf &>/dev/null; then
     echo "dnf downloads are now faster!"
   fi
 
-  if ! grep -q "alias dnf=\"dnf5\"" "${HOME}/.bashrc"; then
-    echo "alias dnf=\"dnf5\"" | sudo tee -a ~/.bashrc
+  if ! grep -q 'alias dnf="dnf5"' "${HOME}/.bashrc"; then
+    echo 'alias dnf="dnf5"' | sudo tee -a ~/.bashrc
     echo "dnf is now an alias for dnf5!"
   fi
 

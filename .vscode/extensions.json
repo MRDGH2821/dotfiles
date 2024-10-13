@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "evondev.indent-rainbow-palettes",
+    "formulahendry.code-runner",
+    "foxundermoon.shell-format",
+    "golang.go",
+    "michaelcurrin.auto-commit-msg",
+    "ms-vscode.atom-keybindings",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml",
+    "timonwong.shellcheck",
+    "trunk.io",
+    "usernamehw.errorlens",
+    "vivaxy.vscode-conventional-commits"
+  ]
+}

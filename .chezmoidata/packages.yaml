@@ -25,7 +25,9 @@ packages:
         - extra/grsync
         - extra/keepassxc
         - extra/kleopatra
+        - extra/libgexiv2
         - extra/libreoffice-fresh
+        - extra/osm-gps-map
         - extra/pam-u2f
         - extra/python-pip
         - extra/python-pipx

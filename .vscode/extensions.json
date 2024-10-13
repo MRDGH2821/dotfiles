@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "bennycode.sort-everything",
+    "clover.md-table-editor",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
@@ -7,9 +9,11 @@
     "formulahendry.code-runner",
     "foxundermoon.shell-format",
     "golang.go",
+    "joshbolduc.commitlint",
     "michaelcurrin.auto-commit-msg",
     "ms-vscode.atom-keybindings",
     "oderwat.indent-rainbow",
+    "redhat.vscode-yaml",
     "streetsidesoftware.code-spell-checker",
     "tamasfe.even-better-toml",
     "timonwong.shellcheck",

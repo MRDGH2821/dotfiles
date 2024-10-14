@@ -4,14 +4,14 @@
 [[ $- != *i* ]] && return
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
+if [[ -f /etc/bashrc ]]; then
   # shellcheck source=/dev/null
   . /etc/bashrc
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ $HOME/.local/bin:$HOME/bin: ]]; then
-  PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+if ! [[ ${PATH} =~ ${HOME}/.local/bin:${HOME}/bin: ]]; then
+  PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}"
 fi
 export PATH
 
@@ -19,14 +19,14 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # Make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
+if [[ -d ~/.bashrc.d ]]; then
   for rc in ~/.bashrc.d/*; do
-    if [ -f "$rc" ]; then
+    if [[ -f ${rc} ]]; then
       # shellcheck source=/dev/null
-      . "$rc"
+      . "${rc}"
     fi
   done
 fi
@@ -37,13 +37,13 @@ unset rc
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [[ -f ~/.bash_aliases ]]; then
   # shellcheck source=/dev/null
   . ~/.bash_aliases
 fi
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [[ -x /usr/bin/dircolors ]]; then
   if test -r ~/.dircolors; then
     eval "$(dircolors -b ~/.dircolors)"
   else
@@ -71,14 +71,14 @@ alias l='ls -CF'
 
 # Bash prompt from KDE Neon
 # Set fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
+case "${TERM}" in
 xterm-color | *-256color) color_prompt=yes ;;
 esac
 
 # Fast Node Manager
-FNM_PATH="$HOME/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
+FNM_PATH="${HOME}/.local/share/fnm"
+if [[ -d ${FNM_PATH} ]]; then
+  export PATH="${FNM_PATH}:${PATH}"
   eval "$(fnm env)"
 fi
 
@@ -86,6 +86,6 @@ fi
 
 mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
 # Set a random theme
-eval "$(oh-my-posh init bash --config "${themes[$RANDOM % ${#themes[@]}]}")"
+eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"
 
 export PINENTRY_KDE_USE_WALLET=1

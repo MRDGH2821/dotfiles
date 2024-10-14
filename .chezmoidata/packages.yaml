@@ -24,6 +24,7 @@ packages:
         - extra/goverlay
         - extra/gramps
         - extra/grsync
+        - extra/iio-sensor-proxy
         - extra/keepassxc
         - extra/kleopatra
         - extra/libgexiv2
@@ -69,6 +70,7 @@ packages:
         - gnupg2
         - goverlay
         - grsync
+        - iio-sensor-proxy
         - keepassxc
         - kleopatra
         - language-pack-gnome-en

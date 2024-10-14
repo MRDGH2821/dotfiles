@@ -87,3 +87,5 @@ fi
 mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
 # Set a random theme
 eval "$(oh-my-posh init bash --config "${themes[$RANDOM % ${#themes[@]}]}")"
+
+export PINENTRY_KDE_USE_WALLET=1

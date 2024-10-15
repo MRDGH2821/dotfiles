@@ -19,4 +19,5 @@ dot_local
 
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
+WindowsPowerShell/*.ps1
 {{ end }}

@@ -102,7 +102,7 @@ echo "Installing executables from GitHub"
 ## Appimages
 echo "Installing AppImages"
 {{ range .packages.linux.linux_common.dra.appimage }}
-dra download -o "$HOME"/AppImages -i {{.}}
+dra download -o "$HOME"/AppImages/ -i {{.}}
 {{ end }}
 
 ## Binaries

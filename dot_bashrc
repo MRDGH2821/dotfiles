@@ -75,7 +75,7 @@ alias l='ls -CF'
 
 # Bash prompt from KDE Neon
 # Set fancy prompt (non-color, unless we know we "want" color)
-# shellcheck disable=SC2249
+# shellcheck disable=SC2249 disable=SC2034
 case "${TERM}" in
 xterm-color | *-256color) color_prompt=yes ;;
 esac

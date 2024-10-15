@@ -55,7 +55,7 @@ flatpak install -y flathub {{ range .packages.linux.debian.flatpak }} {{.}}{{ en
 ## Fedora
 echo "Installing RPM packages"
 
-sudo dnf5 install -y {{ range .packages.linux.dnf5 }} {{.}}{{ end }}
+sudo dnf5 install -y {{ range .packages.linux.fedora.dnf5 }} {{.}}{{ end }}
 {{ range .packages.linux.dnf5_url }}
 sudo dnf5 install -y {{ . | quote }}
 {{ end }}

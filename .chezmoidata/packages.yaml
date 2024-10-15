@@ -24,7 +24,6 @@ packages:
         - extra/goverlay
         - extra/gramps
         - extra/grsync
-        - extra/iio-sensor-proxy
         - extra/keepassxc
         - extra/kleopatra
         - extra/libgexiv2
@@ -70,7 +69,6 @@ packages:
         - gnupg2
         - goverlay
         - grsync
-        - iio-sensor-proxy
         - keepassxc
         - kleopatra
         - language-pack-gnome-en
@@ -163,7 +161,9 @@ packages:
         - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL
           https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
         - if ! type -P zed >/dev/null 2>&1; then curl -f
-          https://zed.dev/install.sh | sh; fi
+          https://zed.dev/install.sh | sh
+      tablet_only:
+        - iio-sensor-proxy
   python3:
     pipx:
       - ggshield

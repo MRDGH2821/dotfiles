@@ -49,7 +49,7 @@
 | gramps                    | 👍   | 👍🔗   | 👍     | 👍      |
 | grsync                    | 👍   | 👍     | 👍     | 🚫      |
 | heroic-games-launcher-bin | 👍   | 👍🔗   | 👍     | 🚫      |
-| iio-sensor-proxy          | 👍   | 👍     |        | 🚫      |
+| iio-sensor-proxy          | 👍   | 👍     | 👍     | 🚫      |
 | it.mijorus.gearlever      | 📦   | 📦     | 📦     | 🚫      |
 | keepassxc                 | 👍   | 👍     | 👍     | 👍      |
 | kleopatra                 | 👍   | 👍     | 👍     | 🚫      |

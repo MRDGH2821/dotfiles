@@ -17,3 +17,6 @@ oh-my-posh font install meslo
 
 # Install ggshield global precommit hook
 ggshield install -m global
+
+# Set gh as default git credentials helper
+gh auth setup-git

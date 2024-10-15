@@ -20,4 +20,5 @@ dot_local
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
 WindowsPowerShell/*.ps1
+readonly_Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 {{ end }}

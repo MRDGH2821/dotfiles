@@ -19,6 +19,7 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # Make less more friendly for non-text input files, see lesspipe(1)
+# shellcheck disable=SC2312
 [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # User specific aliases and functions
@@ -45,8 +46,10 @@ fi
 # enable color support of ls and also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
   if test -r ~/.dircolors; then
+    # shellcheck disable=SC2312
     eval "$(dircolors -b ~/.dircolors)"
   else
+    # shellcheck disable=SC2312
     eval "$(dircolors -b)"
   fi
   alias ls='ls --color=auto'
@@ -71,6 +74,7 @@ alias l='ls -CF'
 
 # Bash prompt from KDE Neon
 # Set fancy prompt (non-color, unless we know we "want" color)
+# shellcheck disable=SC2249
 case "${TERM}" in
 xterm-color | *-256color) color_prompt=yes ;;
 esac
@@ -79,11 +83,13 @@ esac
 FNM_PATH="${HOME}/.local/share/fnm"
 if [[ -d ${FNM_PATH} ]]; then
   export PATH="${FNM_PATH}:${PATH}"
+  # shellcheck disable=SC2312
   eval "$(fnm env)"
 fi
 
 # Oh my posh random theme initializer
-
+# shellcheck disable=SC2312
 mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
 # Set a random theme
+# shellcheck disable=SC2312
 eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"

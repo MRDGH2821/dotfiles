@@ -47,7 +47,7 @@ packages:
           - bpozdena/OneDriveGUI -a
         bin:
           - cocogitto/cocogitto -a
-          - tealdeer-rs/tealdear --select tealdeer-linux-x86_64-musl
+          - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl
         package:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
           - devmatteini/dra --select dra_{tag}-1_amd64.deb

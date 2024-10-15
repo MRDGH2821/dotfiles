@@ -78,11 +78,17 @@ packages:
         - kleopatra
         - language-pack-gnome-en
         - libpam-u2f
+        - libqt6core6
+        - libqt6gui6
+        - libqt6printsupport6
+        - libqt6widgets6
         - mangohud
         - mangohud:i386
         - onedrive
         - pamu2fcfg
         - python3
+        - python3-bsddb3
+        - python3-gi-cairo
         - python3-pip
         - python3-venv
         - tealdeer

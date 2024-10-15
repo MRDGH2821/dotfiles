@@ -35,7 +35,7 @@ dra download -o "$bindir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.debian.dra.package }}
-dra download -i {{.}}
+sudo dra download -i {{.}}
 {{ end }}
 
 echo "Installing Flatpak packages"

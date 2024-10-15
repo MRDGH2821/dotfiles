@@ -185,12 +185,12 @@ packages:
       - Fastfetch-cli.Fastfetch
       - Git.Git
       - GitHub.cli
-      - junegunn.fzf
       - GnuPG.GnuPG
       - GnuPG.Gpg4win
       - Gramps.Gramps
       - HermannSchinagl.LinkShellExtension
       - JanDeDobbeleer.OhMyPosh
+      - junegunn.fzf
       - KeePassXCTeam.KeePassXC
       - Klocman.BulkCrapUninstaller
       - MartiCliment.UniGetUI
@@ -202,6 +202,7 @@ packages:
       - mtkennerly.ludusavi
       - OBSProject.OBSStudio
       - Python.Python.3.10
+      - sharkdp.bat
       - TheDocumentFoundation.LibreOffice
       - universal.input-overlay
       - Valve.Steam

@@ -31,11 +31,11 @@ dra download -o "$appimagedir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.debian.dra.bin }}
-dra download -o "$bindir" {{.}}
+dra download -o "$bindir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.debian.dra.package }}
-dra download -o "$bindir" -i {{.}}
+dra download -i {{.}}
 {{ end }}
 
 echo "Installing Flatpak packages"
@@ -67,11 +67,11 @@ dra download -o "$appimagedir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.fedora.dra.bin }}
-dra download -o "$bindir" {{.}}
+dra download -o "$bindir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.fedora.dra.package }}
-dra download -o "$bindir" -i {{.}}
+dra download -i {{.}}
 {{ end }}
 
 echo "Installing Flatpak packages"
@@ -108,7 +108,7 @@ dra download -o "$HOME"/AppImages/ -i {{.}}
 ## Binaries
 echo "Installing binary executables"
 {{ range .packages.linux.linux_common.dra.bin }}
-dra download -o "$HOME"/.local/bin/ {{.}}
+dra download -o "$HOME"/.local/bin/ -i {{.}}
 {{ end }}
 
 # Flatpak

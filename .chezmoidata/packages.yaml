@@ -47,13 +47,13 @@ packages:
           - bpozdena/OneDriveGUI -a
         bin:
           - cocogitto/cocogitto -a
-          - tealdeer-rs/tealdear -a
+          - tealdeer-rs/tealdear --select tealdeer-linux-x86_64-musl
         package:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
-          - devmatteini/dra -a
+          - devmatteini/dra --select dra_{tag}-1_amd64.deb
           - gramps-project/gramps --select gramps_{tag}-1_all.ubuntu-22.04.deb
           - Heroic-Games-Launcher/Heroic-Games-Launcher --select heroic_{tag}_amd64.deb
-          - sharkdp/bat -a
+          - sharkdp/bat --select bat_{tag}-amd64.deb
       flatpak:
         - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice
@@ -91,7 +91,6 @@ packages:
         - python3-gi-cairo
         - python3-pip
         - python3-venv
-        - tealdeer
         - vlc
         - waydroid
       nala_url:

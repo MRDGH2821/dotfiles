@@ -7,6 +7,7 @@
   "version": "0.2",
   "words": [
     "adilhanney",
+    "ajeetdsouza",
     "bpozdena",
     "buildx",
     "chezmoi",
@@ -24,6 +25,7 @@
     "goverlay",
     "gramps",
     "grsync",
+    "junegunn",
     "kamoso",
     "kapitainsky",
     "kcalc",
@@ -44,10 +46,12 @@
     "rclone",
     "saber",
     "schinagl",
+    "sharkdp",
     "skanlite",
     "skanpage",
     "tldr",
     "venv",
-    "virtualenv"
+    "virtualenv",
+    "zoxide"
   ]
 }

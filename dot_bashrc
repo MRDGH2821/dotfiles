@@ -63,6 +63,7 @@ fi
 # Miscellaneous Aliases
 alias dnf="dnf5"
 alias tb="nc termbin.com 9999"
+alias cat='bat --paging=never'
 
 # ls aliases
 alias ll='ls -alF'
@@ -93,3 +94,9 @@ mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
 # Set a random theme
 # shellcheck disable=SC2312
 eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"
+
+# Zoxide
+# shellcheck disable=SC2312
+eval "$(zoxide init bash --cmd cd)"
+# shellcheck disable=SC2312
+eval "$(fzf --bash)"

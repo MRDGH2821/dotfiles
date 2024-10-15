@@ -146,7 +146,6 @@ packages:
           - kapitainsky/RcloneBrowser -a
         bin:
           - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
-            --install-file ludusavi
       flatpak:
         - com.adilhanney.saber
         - io.ente.auth
@@ -172,6 +171,26 @@ packages:
   python3:
     pipx:
       - ggshield
+  vs_code_extensions:
+    - clover.md-table-editor
+    - Codeium.codeium
+    - eamodio.gitlens
+    - EditorConfig.EditorConfig
+    - esbenp.prettier-vscode
+    - evondev.indent-rainbow-palettes
+    - formulahendry.code-runner
+    - MichaelCurrin.auto-commit-msg
+    - ms-azuretools.vscode-docker
+    - ms-vscode-remote.vscode-remote-extensionpack
+    - ms-vscode.atom-keybindings
+    - oderwat.indent-rainbow
+    - redhat.vscode-yaml
+    - softwaredotcom.swdc-vscode
+    - spmeesseman.vscode-taskexplorer
+    - streetsidesoftware.code-spell-checker
+    - trunk.io
+    - usernamehw.errorlens
+    - vivaxy.vscode-conventional-commits
   windows:
     winget:
       - 7zip.7zip
@@ -210,23 +229,3 @@ packages:
       - VideoLAN.VLC
       - voidtools.Everything
       - WeMod.WeMod
-  vs_code_extensions:
-    - clover.md-table-editor
-    - Codeium.codeium
-    - eamodio.gitlens
-    - EditorConfig.EditorConfig
-    - esbenp.prettier-vscode
-    - evondev.indent-rainbow-palettes
-    - formulahendry.code-runner
-    - MichaelCurrin.auto-commit-msg
-    - ms-azuretools.vscode-docker
-    - ms-vscode-remote.vscode-remote-extensionpack
-    - ms-vscode.atom-keybindings
-    - oderwat.indent-rainbow
-    - redhat.vscode-yaml
-    - softwaredotcom.swdc-vscode
-    - spmeesseman.vscode-taskexplorer
-    - streetsidesoftware.code-spell-checker
-    - trunk.io
-    - usernamehw.errorlens
-    - vivaxy.vscode-conventional-commits

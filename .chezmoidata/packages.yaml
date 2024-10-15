@@ -52,8 +52,9 @@ packages:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
           - devmatteini/dra --select dra_{tag}-1_amd64.deb
           - gramps-project/gramps --select gramps_{tag}-1_all.ubuntu-22.04.deb
-          - Heroic-Games-Launcher/Heroic-Games-Launcher --select heroic_{tag}_amd64.deb
-          - sharkdp/bat --select bat_{tag}-amd64.deb
+          - Heroic-Games-Launcher/HeroicGamesLauncher --select
+            heroic_{tag}_amd64.deb
+          - sharkdp/bat --select bat_{tag}_amd64.deb
       flatpak:
         - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice
@@ -140,7 +141,7 @@ packages:
           - cocogitto/cocogitto -a
           - devmatteini/dra -a
         package:
-          - Heroic-Games-Launcher/Heroic-Games-Launcher --select
+          - Heroic-Games-Launcher/HeroicGamesLauncher --select
             heroic-{tag}.x86_64.rpm
       flatpak:
         - com.calibre_ebook.calibre
@@ -166,11 +167,17 @@ packages:
         - skanlite
         - skanpage
       linux_url:
-        - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
-        - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
-        - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
-        - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
-        - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh; fi
+        - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL
+          https://fnm.vercel.app/install | bash; fi
+        - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s
+          https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
+        - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL
+          https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
+        - if ! type -P zed >/dev/null 2>&1; then curl -f
+          https://zed.dev/install.sh | sh; fi
+        - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL
+          https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh |
+          sh; fi
       tablet_only:
         - iio-sensor-proxy
   python3:

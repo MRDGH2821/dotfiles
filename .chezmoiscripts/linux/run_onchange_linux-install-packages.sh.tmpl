@@ -27,14 +27,17 @@ if hostnamectl | grep -iq 'starlite'; then
 fi
 echo "Downloading packages via dra"
 {{ range .packages.linux.debian.dra.appimage }}
+echo "Downloading {{.}}"
 dra download -o "$appimagedir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.debian.dra.bin }}
+echo "Downloading {{.}}"
 dra download -o "$bindir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.debian.dra.package }}
+echo "Downloading {{.}}"
 sudo dra download -i {{.}}
 {{ end }}
 
@@ -63,14 +66,17 @@ fi
 
 echo "Downloading packages via dra"
 {{ range .packages.linux.fedora.dra.appimage }}
+echo "Downloading {{.}}"
 dra download -o "$appimagedir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.fedora.dra.bin }}
+echo "Downloading {{.}}"
 dra download -o "$bindir" -i {{.}}
 {{ end }}
 
 {{ range .packages.linux.fedora.dra.package }}
+echo "Downloading {{.}}"
 dra download -i {{.}}
 {{ end }}
 
@@ -102,12 +108,14 @@ echo "Installing executables from GitHub"
 ## Appimages
 echo "Installing AppImages"
 {{ range .packages.linux.linux_common.dra.appimage }}
+echo "Downloading {{.}}"
 dra download -o "$HOME"/AppImages/ -i {{.}}
 {{ end }}
 
 ## Binaries
 echo "Installing binary executables"
 {{ range .packages.linux.linux_common.dra.bin }}
+echo "Downloading {{.}}"
 dra download -o "$HOME"/.local/bin/ -i {{.}}
 {{ end }}
 

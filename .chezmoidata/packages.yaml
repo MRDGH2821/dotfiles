@@ -47,7 +47,6 @@ packages:
           - bpozdena/OneDriveGUI -a
         bin:
           - cocogitto/cocogitto -a
-          - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl
         package:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
           - devmatteini/dra --select dra_{tag}-1_amd64.deb
@@ -55,6 +54,8 @@ packages:
           - Heroic-Games-Launcher/HeroicGamesLauncher --select
             heroic_{tag}_amd64.deb
           - sharkdp/bat --select bat_{tag}_amd64.deb
+        raw:
+          - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
       flatpak:
         - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice

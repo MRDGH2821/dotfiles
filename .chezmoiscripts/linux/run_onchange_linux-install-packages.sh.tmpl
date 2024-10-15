@@ -41,6 +41,11 @@ echo "Downloading {{.}}"
 sudo dra download -i {{.}}
 {{ end }}
 
+{{ range .packages.linux.debian.dra.raw }}
+echo "Downloading {{.}}"
+dra download {{.}}
+{{ end }}
+
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

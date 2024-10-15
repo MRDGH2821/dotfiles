@@ -50,7 +50,7 @@ packages:
           - cocogitto/cocogitto -a
         package:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
-          - gramps-project/gramps --select gramps-{tag}-1_all.ubuntu-22.04.deb
+          - gramps-project/gramps --select gramps_{tag}-1_all.ubuntu-22.04.deb
           - Heroic-Games-Launcher/Heroic-Games-Launcher --select heroic_{tag}_amd64.deb
           - sharkdp/bat -a
       flatpak:

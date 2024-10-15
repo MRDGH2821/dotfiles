@@ -1,8 +1,15 @@
+# Winget Packages
 {{- range .packages.windows.winget -}}
 winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id {{ . | quote }}
 {{ end -}}
 
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
+# Python Packages
 pip install pipx
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
+
+# VS Code Extensions
+{{ range .packages.vs_code_extensions }}
+code --install-extension {{.}}
+{{ end }}

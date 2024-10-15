@@ -123,3 +123,8 @@ fi
 
 echo "Installing pipx packages"
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
+
+# VS Code Extensions
+{{ range .packages.vs_code_extensions }}
+code --install-extension {{.}}
+{{ end }}

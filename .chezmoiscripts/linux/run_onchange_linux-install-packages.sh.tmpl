@@ -21,8 +21,10 @@ if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
 fi
 
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
-
+if hostnamectl | grep -iq 'starlite'; then
+  echo "Installing tablet specific packages"
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+fi
 echo "Downloading packages via dra"
 {{ range .packages.linux.debian.dra.appimage }}
 dra download -o "$appimagedir" -i {{.}}
@@ -54,7 +56,10 @@ if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
   sudo dnf5 install -y {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
 fi
 
-sudo dnf5 install -y {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+if hostnamectl | grep -iq 'starlite'; then
+  echo "Installing tablet specific packages"
+  sudo dnf5 install -y {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+fi
 
 echo "Downloading packages via dra"
 {{ range .packages.linux.fedora.dra.appimage }}
@@ -84,7 +89,10 @@ if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
   yay -Syu --needed {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
 fi
 
-yay -Syu --needed {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+if hostnamectl | grep -iq 'starlite'; then
+  echo "Installing tablet specific packages"
+  yay -Syu --needed {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+fi
 
 {{ end }}
 

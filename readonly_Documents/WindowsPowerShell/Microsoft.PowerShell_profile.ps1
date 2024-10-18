@@ -22,4 +22,5 @@ fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Aliases
-Set-Alias -Name cat -Value 'bat --paging=never'
+Remove-Item Alias:cat -Force
+Set-Alias -Name cat -Value bat

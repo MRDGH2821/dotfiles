@@ -94,15 +94,21 @@ flatpak install -y flathub {{ range .packages.linux.fedora.flatpak }} {{.}}{{ en
 ## Arch
 echo "Installing Arch packages"
 
-yay -Syu --needed {{ range .packages.linux.arch.yay }} {{.}}{{end}}
+sudo pacman -Syu --needed {{ range .packages.linux.arch.core }} {{.}}{{end}} {{ range .packages.linux.arch.extra }} {{.}}{{end}} {{ range .packages.linux.arch.multilib }} {{.}}{{end}}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  yay -Syu --needed {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
+  sudo pacman -Syu --needed {{ range .packages.linux.arch.kde }} {{.}}{{ end }} {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
 fi
 
 if hostnamectl | grep -iq 'starlite'; then
   echo "Installing tablet specific packages"
-  yay -Syu --needed {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+  sudo pacman -Syu --needed {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
+fi
+
+if type -P yay >/dev/null 2>$1; then
+  yay -Syu {{ range .packages.linux.arch.aur }} {{.}}{{ end }}
+elif type -P paru >/dev/null 2>$1; then
+  paru -Syu {{ range .packages.linux.arch.kde }} {{.}}{{ end }}
 fi
 
 {{ end }}

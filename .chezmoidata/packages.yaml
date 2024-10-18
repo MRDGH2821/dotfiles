@@ -1,14 +1,16 @@
 packages:
   linux:
     arch:
-      yay:
+      aur:
         - aur/gitkraken
         - aur/heroic-games-launcher-bin
         - aur/onedrivegui
         - aur/visual-studio-code-bin
         - aur/waydroid
+      core:
         - core/gnupg
         - core/python
+      extra:
         - extra/bat
         - extra/calibre
         - extra/cocogitto
@@ -38,7 +40,11 @@ packages:
         - extra/python-virtualenv
         - extra/tealdeer
         - extra/ttf-liberation
+        - extra/unzip
         - extra/vlc
+      kde:
+        - tesseract-data-eng
+      multilib:
         - multilib/lib32-mangohud
         - multilib/steam
     debian:

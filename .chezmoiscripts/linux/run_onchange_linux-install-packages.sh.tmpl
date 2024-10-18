@@ -105,9 +105,9 @@ if hostnamectl | grep -iq 'starlite'; then
   sudo pacman -Syu --needed {{ range .packages.linux.linux_common.tablet_only }} {{.}}{{ end }}
 fi
 
-if type -P yay >/dev/null 2>$1; then
+if type -P yay >/dev/null 2>&1; then
   yay -Syu {{ range .packages.linux.arch.aur }} {{.}}{{ end }}
-elif type -P paru >/dev/null 2>$1; then
+elif type -P paru >/dev/null 2>&1; then
   paru -Syu {{ range .packages.linux.arch.kde }} {{.}}{{ end }}
 fi
 

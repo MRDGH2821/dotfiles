@@ -162,6 +162,7 @@ packages:
         - filelight
         - kamoso
         - kcalc
+        - kclock
         - marknote
         - neochat
         - partitionmanager

@@ -106,9 +106,9 @@ if hostnamectl | grep -iq 'starlite'; then
 fi
 
 if type -P yay >/dev/null 2>&1; then
-  yay -Syu {{ range .packages.linux.arch.aur }} {{.}}{{ end }}
+  yay -Syu --needed {{ range .packages.linux.arch.aur }} {{.}}{{ end }}
 elif type -P paru >/dev/null 2>&1; then
-  paru -Syu {{ range .packages.linux.arch.kde }} {{.}}{{ end }}
+  paru -Syu --needed {{ range .packages.linux.arch.kde }} {{.}}{{ end }}
 fi
 
 {{ end }}

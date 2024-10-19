@@ -152,6 +152,13 @@ echo "Installing pipx packages"
 pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
 
 # VS Code Extensions
+
+installed_extensions=$(code --list-extensions)
+
 {{ range .packages.vs_code_extensions }}
-code --install-extension {{.}}
+if [[ ! "${installed_extensions[*]}" =~ {{.}} ]]; then
+  code --install-extension {{.}}
+else
+  echo "{{.}} is already installed"
+fi
 {{ end }}

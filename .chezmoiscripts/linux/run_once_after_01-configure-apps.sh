@@ -14,6 +14,7 @@ fi
 
 # Install Nerd font
 oh-my-posh font install meslo
+oh-my-posh enable autoupgrade
 
 # Install ggshield global precommit hook
 ggshield install -m global

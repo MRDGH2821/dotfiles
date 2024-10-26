@@ -27,6 +27,7 @@ packages:
         - extra/goocanvas
         - extra/goverlay
         - extra/gramps
+        - extra/graphviz
         - extra/grsync
         - extra/keepassxc
         - extra/kleopatra

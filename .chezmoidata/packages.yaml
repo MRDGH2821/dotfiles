@@ -38,6 +38,7 @@ packages:
         - extra/pam-u2f
         - extra/python-pip
         - extra/python-pipx
+        - extra/python-pyicu
         - extra/python-virtualenv
         - extra/tealdeer
         - extra/ttf-liberation

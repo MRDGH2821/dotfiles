@@ -106,6 +106,19 @@ elif command -v dnf &>/dev/null; then
   cp /tmp/dra/"${filedir}"/dra "${HOME}"/bin/
   rm -fr /tmp/dra
 
+elif command -v pacman &>/dev/null; then
+  pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+  pacman-key --lsign-key 3056513887B78AEB
+  sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+  sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+  if ! grep -q '\[chaotic-aur\]' /etc/pacman.conf; then
+    sudo echo '[chaotic-aur]' | sudo tee -a /etc/pacman.conf
+    sudo echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf
+    echo "Chaotic AUR Repo added!"
+  else
+    echo "Chaotic AUR Repo already present."
+  fi
 else
-  echo "Nothing to do on non unknown systems"
+  echo "Nothing to do on non unknown systems."
 fi

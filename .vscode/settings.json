@@ -11,6 +11,9 @@
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell"
   },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

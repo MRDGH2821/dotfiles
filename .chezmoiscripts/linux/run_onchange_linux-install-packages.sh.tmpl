@@ -111,6 +111,11 @@ elif type -P paru >/dev/null 2>&1; then
   paru -Syu --needed {{ range .packages.linux.arch.kde }} {{.}}{{ end }}
 fi
 
+echo "Installing Flatpak packages"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub {{ range .packages.linux.arch.flatpak }} {{.}}{{ end }}
+
 {{ end }}
 
 # Executables from GitHub

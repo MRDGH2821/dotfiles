@@ -24,26 +24,22 @@ packages:
         - extra/fzf
         - extra/git
         - extra/github-cli
-        - extra/goocanvas
         - extra/goverlay
-        - extra/gramps
-        - extra/graphviz
         - extra/grsync
         - extra/keepassxc
         - extra/kleopatra
-        - extra/libgexiv2
         - extra/libreoffice-fresh
         - extra/mangohud
-        - extra/osm-gps-map
         - extra/pam-u2f
         - extra/python-pip
         - extra/python-pipx
-        - extra/python-pyicu
         - extra/python-virtualenv
         - extra/tealdeer
         - extra/ttf-liberation
         - extra/unzip
         - extra/vlc
+      flatpak:
+        - org.gramps_project.Gramps
       kde:
         - tesseract-data-eng
       multilib:

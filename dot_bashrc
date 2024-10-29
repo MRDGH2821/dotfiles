@@ -100,3 +100,7 @@ eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"
 eval "$(zoxide init bash --cmd cd)"
 # shellcheck disable=SC2312
 eval "$(fzf --bash)"
+
+# Chezmoi
+
+eval "$(chezmoi completion bash)"

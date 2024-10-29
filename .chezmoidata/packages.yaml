@@ -156,7 +156,7 @@ packages:
         appimage:
           - kapitainsky/RcloneBrowser -a
         bin:
-          - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.zip
+          - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
       flatpak:
         - com.adilhanney.saber
         - io.ente.auth

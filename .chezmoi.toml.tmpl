@@ -10,6 +10,7 @@
 {{- if hasKey .chezmoi.osRelease "idLike" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.idLike -}}
 {{- end -}}
+encryption = "gpg"
 [data]
 email = {{ $email | quote }}
 username = "MRDGH2821"
@@ -23,7 +24,6 @@ args = ["--wait"]
 [keepassxc]
 database = {{ $keepassxcdb | quote }}
 
-encryption = "gpg"
 [gpg]
 recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
 

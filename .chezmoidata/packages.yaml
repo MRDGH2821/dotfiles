@@ -181,7 +181,7 @@ packages:
         - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL
           https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh |
           sh; fi
-        - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdinFV
+        - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
       tablet_only:
         - iio-sensor-proxy
   python3:

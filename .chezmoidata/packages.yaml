@@ -12,7 +12,6 @@ packages:
         - python
       extra:
         - bat
-        - calibre
         - cocogitto
         - docker
         - docker-buildx
@@ -61,7 +60,6 @@ packages:
         raw:
           - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
       flatpak:
-        - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice
       nala:
         - apparmor-utils
@@ -149,7 +147,6 @@ packages:
           - Heroic-Games-Launcher/HeroicGamesLauncher --select
             heroic-{tag}.x86_64.rpm
       flatpak:
-        - com.calibre_ebook.calibre
         - org.libreoffice.LibreOffice
     linux_common:
       dra:
@@ -184,6 +181,7 @@ packages:
         - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL
           https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh |
           sh; fi
+        - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdinFV
       tablet_only:
         - iio-sensor-proxy
   python3:

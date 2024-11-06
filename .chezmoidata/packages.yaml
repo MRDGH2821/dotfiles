@@ -53,13 +53,12 @@ packages:
         package:
           - davidbannon/libqt6pas --select libqt6pas6_{tag}-1_amd64.deb
           - devmatteini/dra --select dra_{tag}-1_amd64.deb
-          - gramps-project/gramps --select gramps_{tag}-1_all.ubuntu-22.04.deb
-          - Heroic-Games-Launcher/HeroicGamesLauncher --select
-            heroic_{tag}_amd64.deb
+          - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic_{tag}_amd64.deb
           - sharkdp/bat --select bat_{tag}_amd64.deb
         raw:
           - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
       flatpak:
+        - org.gramps_project.Gramps
         - org.libreoffice.LibreOffice
       nala:
         - apparmor-utils
@@ -73,14 +72,12 @@ packages:
         - flatpak
         - fzf
         - gh
-        - gir1.2-goocanvas-2.0
         - git
         - gnupg2
         - goverlay
         - grsync
         - keepassxc
         - kleopatra
-        - language-pack-gnome-en
         - libpam-u2f
         - libqt6core6
         - libqt6gui6
@@ -91,8 +88,6 @@ packages:
         - onedrive
         - pamu2fcfg
         - python3
-        - python3-bsddb3
-        - python3-gi-cairo
         - python3-pip
         - python3-venv
         - vlc
@@ -144,8 +139,7 @@ packages:
           - cocogitto/cocogitto -a
           - devmatteini/dra -a
         package:
-          - Heroic-Games-Launcher/HeroicGamesLauncher --select
-            heroic-{tag}.x86_64.rpm
+          - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic-{tag}.x86_64.rpm
       flatpak:
         - org.libreoffice.LibreOffice
     linux_common:
@@ -170,17 +164,11 @@ packages:
         - skanlite
         - skanpage
       linux_url:
-        - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL
-          https://fnm.vercel.app/install | bash; fi
-        - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s
-          https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
-        - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL
-          https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
-        - if ! type -P zed >/dev/null 2>&1; then curl -f
-          https://zed.dev/install.sh | sh; fi
-        - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL
-          https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh |
-          sh; fi
+        - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
+        - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
+        - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
+        - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
+        - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh; fi
         - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
       tablet_only:
         - iio-sensor-proxy

@@ -22,3 +22,7 @@ dot_local
 WindowsPowerShell/*.ps1
 readonly_Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 {{ end }}
+
+{{ if ne .chezmoi.osid "arch" }}
+dot_config/paru/**
+{{ end }}

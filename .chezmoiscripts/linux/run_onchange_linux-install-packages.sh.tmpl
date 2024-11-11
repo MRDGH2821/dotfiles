@@ -19,6 +19,7 @@ sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .p
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.linux_common.kde }} {{.}}{{ end }}
+  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range .packages.linux.debian.kde }} {{.}}{{ end }}
 fi
 
 if hostnamectl | grep -iq 'starlite'; then

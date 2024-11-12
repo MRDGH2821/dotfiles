@@ -33,8 +33,10 @@ packages:
         - python-pip
         - python-pipx
         - python-virtualenv
+        - sane
         - syncthing
         - syncthingtray-qt6
+        - system-config-printer
         - tealdeer
         - ttf-liberation
         - unzip
@@ -94,8 +96,10 @@ packages:
         - python3
         - python3-pip
         - python3-venv
+        - sane
         - syncthing
         - syncthingtray
+        - system-config-printer
         - vlc
         - waydroid
       nala_url:
@@ -131,8 +135,10 @@ packages:
         - python3
         - python3-pip
         - python3-virtualenv
+        - sane
         - steam
         - syncthing
+        - system-config-printer
         - tealdeer
         - vlc
         - waydroid

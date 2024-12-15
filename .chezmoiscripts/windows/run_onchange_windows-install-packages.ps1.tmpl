@@ -5,9 +5,10 @@ winget install -e --disable-interactivity --silent --accept-source-agreements --
 
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
-# Python Packages
-pip install pipx
-pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
+# Python CLI Packages
+
+echo "Installing Python CLI packages"
+rye install {{ range .packages.python3.cli }} {{.}}{{ end }}
 
 # VS Code Extensions
 

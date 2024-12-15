@@ -193,7 +193,7 @@ packages:
       tablet_only:
         - iio-sensor-proxy
   python3:
-    pipx:
+    cli:
       - ggshield
   vs_code_extensions:
     - clover.md-table-editor

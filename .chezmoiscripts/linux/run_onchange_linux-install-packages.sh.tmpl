@@ -148,14 +148,10 @@ echo "Installing self installing packages"
 bash -c {{ . | quote }}
 {{ end }}
 
-# Python3 packages
+# Python3 CLI packages
 
-if type -P pipx >/dev/null 2>&1; then
-  pip install pipx
-fi
-
-echo "Installing pipx packages"
-pipx install {{ range .packages.python3.pipx }} {{.}}{{ end }}
+echo "Installing Python CLI packages"
+rye install {{ range .packages.python3.cli }} {{.}}{{ end }}
 
 # VS Code Extensions
 

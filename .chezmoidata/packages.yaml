@@ -12,6 +12,7 @@ packages:
         - python
       extra:
         - bat
+        - btop
         - cocogitto
         - docker
         - docker-buildx
@@ -30,6 +31,7 @@ packages:
         - libreoffice-fresh
         - mangohud
         - pam-u2f
+        - python
         - python-pip
         - python-pipx
         - python-virtualenv
@@ -68,6 +70,7 @@ packages:
         - org.libreoffice.LibreOffice
       nala:
         - apparmor-utils
+        - btop
         - containerd.io
         - docker-buildx-plugin
         - docker-ce
@@ -110,6 +113,7 @@ packages:
     fedora:
       dnf5:
         - bat
+        - btop
         - containerd.io
         - docker-buildx-plugin
         - docker-ce
@@ -178,12 +182,14 @@ packages:
         - skanlite
         - skanpage
       linux_url:
+        - if ! type -P atuin >/dev/null 2>&1; then curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh; fi
+        - if ! type -P calibre >/dev/null 2>&1; then sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin; fi
         - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
         - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s; else oh-my-posh upgrade; fi
         - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; else rclone selfupdate; fi
+        - if ! type -P rye >/dev/null 2>&1; then curl -sSf https://rye.astral.sh/get | bash ; fi
         - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
         - if ! type -P zoxide >/dev/null 2>&1; then curl -fsSL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh; fi
-        - sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
       tablet_only:
         - iio-sensor-proxy
   python3:
@@ -213,6 +219,7 @@ packages:
     winget:
       - 7zip.7zip
       - ajeetdsouza.zoxide
+      - aristocratos.btop4win
       - calibre.calibre
       - Discord.Discord
       - Docker.DockerDesktop
@@ -241,6 +248,7 @@ packages:
       - mtkennerly.ludusavi
       - OBSProject.OBSStudio
       - Python.Python.3.10
+      - Rye.Rye
       - sharkdp.bat
       - TheDocumentFoundation.LibreOffice
       - universal.input-overlay

@@ -104,3 +104,16 @@ eval "$(fzf --bash)"
 # Chezmoi
 
 eval "$(chezmoi completion bash)"
+
+# Rye
+
+# shellcheck disable=SC1091
+. "${HOME}/.rye/env"
+
+# Python Site Packages
+
+export PATH="/usr/lib/python3.12/site-packages:${PATH}"
+
+# Atuin
+
+eval "$(atuin init bash)"

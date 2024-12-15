@@ -103,7 +103,7 @@ eval "$(fzf --bash)"
 
 # Chezmoi
 
-eval "$(chezmoi completion bash)"
+eval "$(chezmoi completion bash)" || true
 
 # Rye
 
@@ -114,6 +114,6 @@ eval "$(chezmoi completion bash)"
 
 export PATH="/usr/lib/python3.12/site-packages:${PATH}"
 
-# Atuin
+# McFly
 
-eval "$(atuin init bash)"
+eval "$(mcfly init bash)" || true

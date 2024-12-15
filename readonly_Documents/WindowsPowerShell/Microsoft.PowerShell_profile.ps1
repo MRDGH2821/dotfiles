@@ -24,3 +24,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Aliases
 Remove-Item Alias:cat -Force
 Set-Alias -Name cat -Value bat
+
+# McFly
+
+Invoke-Expression -Command $(mcfly init powershell | out-string)

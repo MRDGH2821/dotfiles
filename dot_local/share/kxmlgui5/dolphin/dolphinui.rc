@@ -1,5 +1,5 @@
 <!DOCTYPE gui>
-<gui name="dolphin" translationDomain="kxmlgui6" version="40">
+<gui name="dolphin" translationDomain="kxmlgui6" version="41">
  <MenuBar alreadyVisited="1">
   <Menu alreadyVisited="1" name="file" noMerge="1">
    <text translationDomain="kxmlgui6">&amp;File</text>
@@ -98,19 +98,15 @@
    <Action name="bookmarks"/>
    <Action name="closed_tabs"/>
   </Menu>
-  <Separator weakSeparator="1"/>
-  <Separator weakSeparator="1"/>
-  <Separator weakSeparator="1"/>
   <Menu alreadyVisited="1" name="tools" noMerge="1">
    <text translationDomain="kxmlgui6">&amp;Tools</text>
    <Action name="open_preferred_search_tool"/>
    <Action name="open_terminal"/>
    <Action name="open_terminal_here"/>
-   <Action name="focus_terminal_panel"/>
    <Action name="compare_files"/>
    <Action name="change_remote_encoding"/>
   </Menu>
-  <Menu alreadyVisited="1" name="settings" noMerge="1">
+  <Menu name="settings" noMerge="1">
    <text translationDomain="kxmlgui6">&amp;Settings</text>
    <Action name="options_show_menubar"/>
    <Merge name="StandardToolBarMenuHandler"/>
@@ -123,7 +119,7 @@
    <Action name="options_configure"/>
   </Menu>
   <Separator weakSeparator="1"/>
-  <Menu alreadyVisited="1" name="help" noMerge="1">
+  <Menu name="help" noMerge="1">
    <text translationDomain="kxmlgui6">&amp;Help</text>
    <Action name="help_contents"/>
    <Action name="help_whats_this"/>
@@ -141,8 +137,9 @@
   <text context="@title:menu" translationDomain="dolphin">Main Toolbar</text>
   <Action name="go_back"/>
   <Action name="go_forward"/>
-  <Separator name="separator_0"/>
   <Action name="new_tab"/>
+  <Separator name="separator_0"/>
+  <Action name="new_menu"/>
   <Action name="edit_cut"/>
   <Action name="edit_copy"/>
   <Action name="edit_paste"/>
@@ -183,28 +180,28 @@
   </disable>
  </State>
  <ActionProperties scheme="Default">
-  <Action name="go_back" priority="0"/>
-  <Action name="go_forward" priority="0"/>
-  <Action name="go_up" priority="0"/>
-  <Action name="go_home" priority="0"/>
-  <Action name="stop" priority="0"/>
-  <Action name="icons" priority="0"/>
   <Action name="compact" priority="0"/>
   <Action name="details" priority="0"/>
-  <Action name="view_zoom_in" priority="0"/>
-  <Action name="view_zoom_reset" priority="0"/>
-  <Action name="view_zoom_out" priority="0"/>
-  <Action name="edit_cut" priority="0"/>
   <Action name="edit_copy" priority="0"/>
+  <Action name="edit_cut" priority="0"/>
   <Action name="edit_paste" priority="0"/>
-  <Action name="toggle_search" priority="0"/>
-  <Action name="toggle_filter" priority="0"/>
+  <Action name="go_back" priority="0"/>
+  <Action name="go_forward" priority="0"/>
+  <Action name="go_home" priority="0"/>
+  <Action name="go_up" priority="0"/>
+  <Action name="icons" priority="0"/>
+  <Action name="movetotrash" priority="0"/>
+  <Action name="new_menu" priority="0"/>
+  <Action name="new_tab" priority="0"/>
   <Action name="open_terminal" priority="0"/>
   <Action name="show_terminal_panel" priority="0"/>
   <Action name="split_view" priority="0"/>
-  <Action name="new_menu" priority="0"/>
+  <Action name="stop" priority="0"/>
+  <Action name="toggle_filter" priority="0"/>
+  <Action name="toggle_search" priority="0"/>
   <Action name="view_redisplay" priority="0"/>
-  <Action name="movetotrash" priority="0"/>
-  <Action name="new_tab" priority="0"/>
+  <Action name="view_zoom_in" priority="0"/>
+  <Action name="view_zoom_out" priority="0"/>
+  <Action name="view_zoom_reset" priority="0"/>
  </ActionProperties>
 </gui>

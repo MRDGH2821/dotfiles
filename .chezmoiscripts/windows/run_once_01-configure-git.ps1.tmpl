@@ -11,7 +11,7 @@ git config --global user.signingkey 1915CBA05A598D01
 {{- end }}
 
 {{- if eq .chezmoi.os "windows" }}
-git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
+git config --global gpg.program "C:\Program Files\GnuPG\bin\gpg.exe"
 {{- end }}
 
 echo "Git is Configured!"

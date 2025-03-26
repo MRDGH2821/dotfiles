@@ -219,9 +219,9 @@ packages:
     winget:
       - 7zip.7zip
       - ajeetdsouza.zoxide
+      - AndrewCantino.McFly
       - aristocratos.btop4win
       - calibre.calibre
-      - cantino.mcfly
       - Discord.Discord
       - Docker.DockerDesktop
       - Element.Element
@@ -250,6 +250,7 @@ packages:
       - OBSProject.OBSStudio
       - Python.Python.3.10
       - Rye.Rye
+      - Schniz.fnm
       - sharkdp.bat
       - TheDocumentFoundation.LibreOffice
       - universal.input-overlay

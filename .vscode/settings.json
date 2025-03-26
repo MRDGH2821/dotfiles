@@ -26,6 +26,6 @@
     "vscode"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.prettierPath": "./node_modules/prettier",
+  "prettier.prettierPath": "",
   "prettier.resolveGlobalModules": true
 }

@@ -105,10 +105,9 @@ eval "$(fzf --bash)"
 
 eval "$(chezmoi completion bash)" || true
 
-# Rye
-
-# shellcheck disable=SC1091
-. "${HOME}/.rye/env"
+# UV
+eval "$(uv --generate-shell-completion bash)" || true
+eval "$(uvx --generate-shell-completion bash)" || true
 
 # Python Site Packages
 

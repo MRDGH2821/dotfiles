@@ -3,7 +3,10 @@ winget:
   - ajeetdsouza.zoxide
   - AndrewCantino.McFly
   - aristocratos.btop4win
+  - astral-sh.uv
+  - Axosoft.GitKraken
   - calibre.calibre
+  - CosimoMatteini.DRA
   - Discord.Discord
   - Docker.DockerDesktop
   - Element.Element
@@ -31,7 +34,6 @@ winget:
   - mtkennerly.ludusavi
   - OBSProject.OBSStudio
   - Python.Python.3.10
-  - Rye.Rye
   - Schniz.fnm
   - sharkdp.bat
   - TheDocumentFoundation.LibreOffice
@@ -40,3 +42,5 @@ winget:
   - VideoLAN.VLC
   - voidtools.Everything
   - WeMod.WeMod
+dra:
+  - cocogitto/cocogitto -a

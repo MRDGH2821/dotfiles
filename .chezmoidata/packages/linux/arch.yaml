@@ -1,7 +1,8 @@
 aur:
+  - espanso-wayland
   - gitkraken
   - heroic-games-launcher-bin
-  - onedrivegui
+  - ludusavi-bin
   - visual-studio-code-bin
   - waydroid
 core:
@@ -11,6 +12,7 @@ extra:
   - bat
   - btop
   - cocogitto
+  - discord
   - docker
   - docker-buildx
   - docker-compose
@@ -22,15 +24,12 @@ extra:
   - git
   - github-cli
   - goverlay
-  - grsync
   - keepassxc
   - kleopatra
   - libreoffice-fresh
   - mangohud
   - pam-u2f
-  - python
   - python-pip
-  - python-pipx
   - python-virtualenv
   - sane
   - syncthing
@@ -39,9 +38,8 @@ extra:
   - tealdeer
   - ttf-liberation
   - unzip
+  - uv
   - vlc
-flatpak:
-  - org.gramps_project.Gramps
 kde:
   - tesseract-data-eng
 multilib:

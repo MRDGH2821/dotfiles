@@ -1,11 +1,7 @@
 dnf5:
   - bat
   - btop
-  - containerd.io
-  - docker-buildx-plugin
-  - docker-ce
-  - docker-ce-cli
-  - docker-compose-plugin
+  - discord
   - fastfetch
   - firefox
   - flatpak
@@ -13,14 +9,10 @@ dnf5:
   - gh
   - git
   - gnupg2
-  - goocanvas2
   - goverlay
-  - gramps
-  - grsync
   - keepassxc
   - kleopatra
   - mangohud
-  - onedrive
   - pam-u2f
   - pamu2fcfg
   - python3
@@ -31,19 +23,21 @@ dnf5:
   - syncthing
   - system-config-printer
   - tealdeer
+  - uv
   - vlc
   - waydroid
 dnf5_url:
   - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
   - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
-  appimage:
-    - bpozdena/OneDriveGUI -a
   bin:
     - cocogitto/cocogitto -a
     - devmatteini/dra -a
     - Martchus/syncthingtray --select syncthingtray-{tag}-x86_64-pc-linux-gnu.tar.xz
+    - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic-{tag}.x86_64.rpm
 flatpak:
   - org.libreoffice.LibreOffice
+installer_url:
+  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi

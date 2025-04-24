@@ -22,5 +22,6 @@ ggshield install -m global
 # Set gh as default git credentials helper
 gh auth setup-git
 
-# Disable Rye global shims
-rye config --set-bool behavior.global-python=false
+# Add espanso capabilities
+ESPANSO_PATH=$(command -v espanso)
+sudo setcap "cap_dac_override+p" "${ESPANSO_PATH}"

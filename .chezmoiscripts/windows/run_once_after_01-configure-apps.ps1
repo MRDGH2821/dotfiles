@@ -7,6 +7,3 @@ oh-my-posh enable upgrade
 
 # Set gh as default git credentials helper
 gh auth setup-git
-
-# Disable Rye global shims
-rye config --set-bool behavior.global-python=false

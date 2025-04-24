@@ -1,11 +1,20 @@
 MenuBar=Disabled
 
+[ExtractDialog]
+2226x1391 screen: Height=696
+2226x1391 screen: Width=1409
+
+[FileDialogSize]
+2 screens: Height=584
+2 screens: Width=913
+
 [General]
 BrowseThroughArchives=true
 OpenExternallyCalledFolderInNewTab=true
 RememberOpenedTabs=false
 ShowFullPath=true
 ShowFullPathInTitlebar=true
+ShowToolTips=true
 Version=202
 ViewPropsTimestamp=2024,10,8,20,20,35.988
 
@@ -15,7 +24,6 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gdk-pixbuf-thumbnailer,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gsf-office
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,gsf-office,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer

@@ -3,6 +3,11 @@
 {{- $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" -}}
 {{- if not $editor }}{{ $editor = "code" }}{{ end -}}
 {{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
+{{- $pcloudfolder := promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
+{{- $devicetype := promptStringOnce . "devicetype" "Device type (laptop/tablet, default laptop)" -}}
+{{- if not $devicetype }}{{ $devicetype = "laptop" }}{{ end -}}
+{{- $gpu := promptStringOnce . "gpu" "GPU type (nvidia/amd/none, default none)" -}}
+{{- if not $gpu }}{{ $gpu = "none" }}{{ end -}}
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
@@ -16,6 +21,9 @@ email = {{ $email | quote }}
 username = "MRDGH2821"
 profile = "personal"
 osid = {{ $osid | quote }}
+pcloudfolder = {{ $pcloudfolder | quote }}
+devicetype = {{ $devicetype | quote }}
+gpu = {{ $gpu | quote }}
 
 [edit]
 command = {{ $editor | quote }}
@@ -30,7 +38,7 @@ recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
 [hooks.read-source-state.pre]
 {{- if eq .chezmoi.os "windows" }}
 command = "powershell"
-args = [".local/share/chezmoi/.chezmoiscripts/windows/.install-password-manager.ps1"]
+args = ["{{ .chezmoi.sourceDir }}/.chezmoiscripts/windows/.install-password-manager.ps1"]
 {{ else }}
-command = ".local/share/chezmoi/.chezmoiscripts/linux/.install-password-manager.sh"
+command = "{{ .chezmoi.sourceDir }}/.chezmoiscripts/linux/.install-password-manager.sh"
 {{ end -}}

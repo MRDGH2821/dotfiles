@@ -1,5 +1,8 @@
+{{ $python := include ".chezmoidata/packages/python3.yaml" | fromYaml }}
+{{ $vscode := include ".chezmoidata/packages/vscode.yaml" | fromYaml }}
+{{ $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml }}
 # Winget Packages
-{{- range .packages.windows.winget -}}
+{{- range $windows.winget -}}
 winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id {{ . | quote }}
 {{ end -}}
 
@@ -8,13 +11,13 @@ $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 # Python CLI Packages
 
 echo "Installing Python CLI packages"
-rye install {{ range .packages.python3.cli }} {{.}}{{ end }}
+rye install {{ range $python3.cli }} {{.}}{{ end }}
 
 # VS Code Extensions
 
 $installed_extensions = & code --list-extensions
 
-{{ range .packages.vs_code_extensions }}
+{{ range $vscode.extensions }}
 if ($installed_extensions -notcontains "{{.}}") {
     code --install-extension {{.}}
 }

@@ -1,0 +1,49 @@
+aur:
+  - gitkraken
+  - heroic-games-launcher-bin
+  - onedrivegui
+  - visual-studio-code-bin
+  - waydroid
+core:
+  - gnupg
+  - python
+extra:
+  - bat
+  - btop
+  - cocogitto
+  - docker
+  - docker-buildx
+  - docker-compose
+  - dra
+  - fastfetch
+  - firefox
+  - flatpak
+  - fzf
+  - git
+  - github-cli
+  - goverlay
+  - grsync
+  - keepassxc
+  - kleopatra
+  - libreoffice-fresh
+  - mangohud
+  - pam-u2f
+  - python
+  - python-pip
+  - python-pipx
+  - python-virtualenv
+  - sane
+  - syncthing
+  - syncthingtray-qt6
+  - system-config-printer
+  - tealdeer
+  - ttf-liberation
+  - unzip
+  - vlc
+flatpak:
+  - org.gramps_project.Gramps
+kde:
+  - tesseract-data-eng
+multilib:
+  - lib32-mangohud
+  - steam

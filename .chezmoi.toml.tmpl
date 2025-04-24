@@ -6,8 +6,30 @@
 {{- $pcloudfolder := promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
 {{- $devicetype := promptStringOnce . "devicetype" "Device type (laptop/tablet, default laptop)" -}}
 {{- if not $devicetype }}{{ $devicetype = "laptop" }}{{ end -}}
-{{- $gpu := promptStringOnce . "gpu" "GPU type (nvidia/amd/none, default none)" -}}
-{{- if not $gpu }}{{ $gpu = "none" }}{{ end -}}
+{{- $gpu := "" -}}
+{{- if eq .chezmoi.os "linux" -}}
+{{-   $detected_gpu := output "bash" "-c" "lspci | grep -i 'vga\\|3d\\|2d'" | trim -}}
+{{-   if contains "NVIDIA" $detected_gpu -}}
+{{-     $gpu = "nvidia" -}}
+{{-   else if contains "AMD" $detected_gpu -}}
+{{-     $gpu = "amd" -}}
+{{-   else -}}
+{{-     $gpu = "none" -}}
+{{-   end -}}
+{{- else if eq .chezmoi.os "windows" -}}
+{{-   $detected_gpu := output "powershell" "-NoProfile" "-NonInteractive" "-Command" "(Get-WmiObject Win32_VideoController).Name" | trim -}}
+{{-   if contains "NVIDIA" $detected_gpu -}}
+{{-     $gpu = "nvidia" -}}
+{{-   else if contains "AMD" $detected_gpu -}}
+{{-     $gpu = "amd" -}}
+{{-   else -}}
+{{-     $gpu = "none" -}}
+{{-   end -}}
+{{- end -}}
+{{- $gpu = promptStringOnce . "gpu" (printf "GPU type (nvidia/amd/none, default %s)" $gpu) -}}
+{{- if not (or (eq $gpu "nvidia") (eq $gpu "amd") (eq $gpu "none")) -}}
+{{-   $gpu = "none" -}}
+{{- end -}}
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}

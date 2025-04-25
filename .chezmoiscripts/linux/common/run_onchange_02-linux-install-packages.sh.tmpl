@@ -43,7 +43,7 @@ bash -c {{ . | quote }}
 # Python3 CLI packages
 
 echo "Installing Python CLI packages"
-uv install {{ range $python.cli }} {{.}}{{ end }}
+uv tool install {{ range $python.cli }} {{.}}{{ end }}
 
 # VS Code Extensions
 

@@ -1,37 +1,42 @@
-{{- $email := promptStringOnce . "email" "Email address (default ask.mrdgh2821@outlook.com)" -}}
-{{- if not $email }}{{ $email = "ask.mrdgh2821@outlook.com" }}{{ end -}}
-{{- $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" -}}
-{{- if not $editor }}{{ $editor = "code" }}{{ end -}}
+{{- $email := promptStringOnce . "email" "Commit email address" "ask.mrdgh2821@outlook.com" -}}
+{{- /* Ask Editor Choices */ -}}
+{{- $editorchoices := list "code" "zed" -}}
+{{- $editor := promptChoiceOnce . "editor" "Default Editor" $editorchoices "code" -}}
+{{- /* KeePassXC DB validation with 3 attempts */ -}}
 {{- $keepassxcdb := "" -}}
-{{- range $i := seq 3 -}}
-{{-   if not $keepassxcdb -}}
-{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
-{{-     if not (stat $keepassxcdb) -}}
-{{-       $keepassxcdb = "" -}}
-{{-       writeToStderr "Error: KeePassXC database file not found. Please enter a valid path.\n" -}}
-{{-     end -}}
-{{-   end -}}
-{{- end -}}
+{{- $attempt := 0 -}}
 {{- if not $keepassxcdb -}}
-{{-   writeToStderr "Error: Failed to get valid KeePassXC database path after 3 attempts.\n" -}}
-{{-   exit 1 -}}
-{{- end -}}
-{{- $pcloudfolder := "" -}}
-{{- range $i := seq 3 -}}
-{{-   if not $pcloudfolder -}}
-{{-     $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
-{{-     if not (stat $pcloudfolder) -}}
-{{-       $pcloudfolder = "" -}}
-{{-       writeToStderr "Error: pCloud folder not found. Please enter a valid path.\n" -}}
+{{-   $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
+{{-   if not (stat $keepassxcdb) -}}
+{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (Attempt 2)" -}}
+{{-     if not (stat $keepassxcdb) -}}
+{{-       $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (Final Attempt)" -}}
+{{-       if not (stat $keepassxcdb) -}}
+{{-         writeToStdout "Error: Failed to get valid KeePassXC database path after 3 attempts.\n" -}}
+{{-         exit 1 -}}
+{{-       end -}}
 {{-     end -}}
 {{-   end -}}
 {{- end -}}
+{{- /* pCloud folder validation with 3 attempts */ -}}
+{{- $pcloudfolder := "" -}}
 {{- if not $pcloudfolder -}}
-{{-   writeToStderr "Error: Failed to get valid pCloud folder path after 3 attempts.\n" -}}
-{{-   exit 1 -}}
+{{-   $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
+{{-   if not (stat $pcloudfolder) -}}
+{{-     $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Attempt 2)" -}}
+{{-     if not (stat $pcloudfolder) -}}
+{{-       $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Final Attempt)" -}}
+{{-       if not (stat $pcloudfolder) -}}
+{{-         writeToStdout "Error: Failed to get valid pCloud folder path after 3 attempts.\n" -}}
+{{-         exit 1 -}}
+{{-       end -}}
+{{-     end -}}
+{{-   end -}}
 {{- end -}}
-{{- $devicetype := promptStringOnce . "devicetype" "Device type (laptop/tablet, default laptop)" -}}
-{{- if not $devicetype }}{{ $devicetype = "laptop" }}{{ end -}}
+{{/* Ask Device Type */}}
+{{- $devicechoices := list "laptop" "tablet" -}}
+{{- $devicetype := promptChoiceOnce . "devicetype" "Current device type" $devicechoices "laptop" -}}
+{{/* Ask GPU Type */}}
 {{- $gpu := "" -}}
 {{- if eq .chezmoi.os "linux" -}}
 {{-   $detected_gpu := output "bash" "-c" "lspci | grep -i 'vga\\|3d\\|2d'" | trim -}}
@@ -52,10 +57,9 @@
 {{-     $gpu = "none" -}}
 {{-   end -}}
 {{- end -}}
-{{- $gpu = promptStringOnce . "gpu" (printf "GPU type (nvidia/amd/none, default %s)" $gpu) -}}
-{{- if not (or (eq $gpu "nvidia") (eq $gpu "amd") (eq $gpu "none")) -}}
-{{-   $gpu = "none" -}}
-{{- end -}}
+{{- $gpuchoices := list "nvidia" "amd" "none" -}}
+{{- $gpu := promptChoiceOnce . "gpu" "GPU Vendor" $gpuchoices $gpu -}}
+{{/* Detect OS Type */}}
 {{- $osid := .chezmoi.os -}}
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}

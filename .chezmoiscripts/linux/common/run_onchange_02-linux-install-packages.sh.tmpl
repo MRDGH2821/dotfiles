@@ -21,12 +21,12 @@ echo "Downloading {{.}}"
 dra download -o "$HOME"/AppImages/ -i {{.}}
 {{ end }}
 
-## Binaries
+{{/* ## Binaries
 echo "Installing binary executables"
 {{ range $common.dra.bin }}
 echo "Downloading {{.}}"
 dra download -o "$HOME"/.local/bin/ -i {{.}}
-{{ end }}
+{{ end }} */}}
 
 # Flatpak
 echo "Installing Common Flatpaks"

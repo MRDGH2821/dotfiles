@@ -2,8 +2,34 @@
 {{- if not $email }}{{ $email = "ask.mrdgh2821@outlook.com" }}{{ end -}}
 {{- $editor := promptStringOnce . "editor" "Editor (code/zed, default code)" -}}
 {{- if not $editor }}{{ $editor = "code" }}{{ end -}}
-{{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
-{{- $pcloudfolder := promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
+{{- $keepassxcdb := "" -}}
+{{- range $i := seq 3 -}}
+{{-   if not $keepassxcdb -}}
+{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
+{{-     if not (stat $keepassxcdb) -}}
+{{-       $keepassxcdb = "" -}}
+{{-       writeToStderr "Error: KeePassXC database file not found. Please enter a valid path.\n" -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+{{- if not $keepassxcdb -}}
+{{-   writeToStderr "Error: Failed to get valid KeePassXC database path after 3 attempts.\n" -}}
+{{-   exit 1 -}}
+{{- end -}}
+{{- $pcloudfolder := "" -}}
+{{- range $i := seq 3 -}}
+{{-   if not $pcloudfolder -}}
+{{-     $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
+{{-     if not (stat $pcloudfolder) -}}
+{{-       $pcloudfolder = "" -}}
+{{-       writeToStderr "Error: pCloud folder not found. Please enter a valid path.\n" -}}
+{{-     end -}}
+{{-   end -}}
+{{- end -}}
+{{- if not $pcloudfolder -}}
+{{-   writeToStderr "Error: Failed to get valid pCloud folder path after 3 attempts.\n" -}}
+{{-   exit 1 -}}
+{{- end -}}
 {{- $devicetype := promptStringOnce . "devicetype" "Device type (laptop/tablet, default laptop)" -}}
 {{- if not $devicetype }}{{ $devicetype = "laptop" }}{{ end -}}
 {{- $gpu := "" -}}

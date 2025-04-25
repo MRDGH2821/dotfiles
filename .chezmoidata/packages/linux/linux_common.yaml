@@ -2,10 +2,10 @@ dra:
   appimage:
     - kapitainsky/RcloneBrowser -a
 flatpak:
+  - com.github.tchx84.Flatseal
   - io.ente.auth
   - it.mijorus.gearlever
   - org.gramps_project.Gramps
-  - com.github.tchx86.Flatseal
   - org.kde.klevernotes
 kde:
   - discover

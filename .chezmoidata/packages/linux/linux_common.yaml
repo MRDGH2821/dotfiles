@@ -5,13 +5,14 @@ flatpak:
   - io.ente.auth
   - it.mijorus.gearlever
   - org.gramps_project.Gramps
+  - com.github.tchx86.Flatseal
+  - org.kde.klevernotes
 kde:
   - discover
   - filelight
   - kamoso
   - kcalc
   - kclock
-  - marknote
   - neochat
   - partitionmanager
   - skanlite

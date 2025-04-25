@@ -4,15 +4,14 @@
 {{- $editor := promptChoiceOnce . "editor" "Default Editor" $editorchoices "code" -}}
 {{- /* KeePassXC DB validation with 3 attempts */ -}}
 {{- $keepassxcdb := "" -}}
-{{- $attempt := 0 -}}
 {{- if not $keepassxcdb -}}
-{{-   $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path" -}}
-{{-   if not (stat $keepassxcdb) -}}
-{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (Attempt 2)" -}}
-{{-     if not (stat $keepassxcdb) -}}
-{{-       $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (Final Attempt)" -}}
-{{-       if not (stat $keepassxcdb) -}}
-{{-         writeToStdout "Error: Failed to get valid KeePassXC database path after 3 attempts.\n" -}}
+{{-   $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file)" -}}
+{{-   if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
+{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Attempt 2)" -}}
+{{-     if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
+{{-       $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Final Attempt)" -}}
+{{-       if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
+{{-         warnf "KeePassXC database must be a file path. Failed after 3 attempts.\n" -}}
 {{-         exit 1 -}}
 {{-       end -}}
 {{-     end -}}
@@ -22,12 +21,12 @@
 {{- $pcloudfolder := "" -}}
 {{- if not $pcloudfolder -}}
 {{-   $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
-{{-   if not (stat $pcloudfolder) -}}
+{{-   if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
 {{-     $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Attempt 2)" -}}
-{{-     if not (stat $pcloudfolder) -}}
+{{-     if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
 {{-       $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Final Attempt)" -}}
-{{-       if not (stat $pcloudfolder) -}}
-{{-         writeToStdout "Error: Failed to get valid pCloud folder path after 3 attempts.\n" -}}
+{{-       if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
+{{-         warnf "Failed to get valid pCloud directory path after 3 attempts.\n" -}}
 {{-         exit 1 -}}
 {{-       end -}}
 {{-     end -}}

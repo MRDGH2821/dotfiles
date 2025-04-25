@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+
+export PATH="$HOME/.local/bin/:$PATH"
+bindir="$HOME/.local/bin/"
+appimagedir="$HOME/AppImages/"
+
+mkdir -p "$bindir"
+mkdir -p "$appimagedir"
+
+{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
+{{ $python := include ".chezmoidata/packages/python3.yaml" | fromYaml }}
+{{ $vscode := include ".chezmoidata/packages/vscode.yaml" | fromYaml }}
+
+# Executables from GitHub
+echo "Installing executables from GitHub"
+
+## Appimages
+echo "Installing AppImages"
+{{ range $common.dra.appimage }}
+echo "Downloading {{.}}"
+dra download -o "$HOME"/AppImages/ -i {{.}}
+{{ end }}
+
+## Binaries
+echo "Installing binary executables"
+{{ range $common.dra.bin }}
+echo "Downloading {{.}}"
+dra download -o "$HOME"/.local/bin/ -i {{.}}
+{{ end }}
+
+# Flatpak
+echo "Installing Common Flatpaks"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub {{ range $common.flatpak }} {{.}}{{ end }}
+
+# Linux self installing packages
+echo "Installing self installing packages"
+{{ range $common.installer_url }}
+bash -c {{ . | quote }}
+{{ end }}
+
+# Python3 CLI packages
+
+echo "Installing Python CLI packages"
+uv install {{ range $python.cli }} {{.}}{{ end }}
+
+# VS Code Extensions
+
+installed_extensions=$(code --list-extensions)
+
+{{ range $vscode.extensions }}
+if [[ ! "${installed_extensions[*]}" =~ {{.}} ]]; then
+  code --install-extension {{.}}
+else
+  echo "{{.}} is already installed"
+fi
+{{ end }}

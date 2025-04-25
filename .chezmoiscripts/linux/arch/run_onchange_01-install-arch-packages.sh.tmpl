@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+export PATH="$HOME/.local/bin/:$PATH"
+bindir="$HOME/.local/bin/"
+appimagedir="$HOME/AppImages/"
+
+mkdir -p "$bindir"
+mkdir -p "$appimagedir"
+
+{{ $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml }}
+{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
+
+# Native packages
+
+{{ if eq .osid "linux-arch" }}
+## Arch
+echo "Installing Arch packages"
+
+sudo pacman -Syu --needed {{ range $arch.core }} {{.}}{{end}} {{ range $arch.extra }} {{.}}{{end}} {{ range $arch.multilib }} {{.}}{{end}}
+
+if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
+  sudo pacman -Syu --needed {{ range $arch.kde }} {{.}}{{ end }} {{ range $common.kde }} {{.}}{{ end }}
+fi
+
+{{ if eq .devicetype "tablet" }}
+echo "Installing tablet specific packages"
+sudo pacman -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }}
+{{ end }}
+
+if type -P yay >/dev/null 2>&1; then
+  yay -Syu --needed {{ range $arch.aur }} {{.}}{{ end }}
+elif type -P paru >/dev/null 2>&1; then
+  paru -Syu --needed {{ range $arch.kde }} {{.}}{{ end }}
+fi
+
+echo "Installing Flatpak packages"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+{{/* flatpak install -y flathub {{ range $arch.flatpak }} {{.}}{{ end }} */}}
+
+{{ else }}
+echo "This script is only for Arch based systems. Exiting..."
+exit 1
+{{ end }}

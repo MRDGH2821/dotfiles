@@ -21,6 +21,7 @@
   "conventionalCommits.scopes": [
     "chezmoi",
     "cspell",
+    "kde",
     "package",
     "script",
     "vscode"

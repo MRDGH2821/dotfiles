@@ -1,0 +1,5 @@
+$CONFIG = Join-Path $env:AppData "espanso"
+$NEW_CONFIG = "{{ joinPath .pcloudfolder "Apps/espanso" }}"
+
+Remove-Item -Recurse -Force $CONFIG
+New-Item -ItemType SymbolicLink -Path $CONFIG -Target $NEW_CONFIG

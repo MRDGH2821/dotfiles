@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CONFIG="~/.config/espanso"
+NEW_CONFIG="{{ joinPath .pcloudfolder "Apps/espanso"}}"
+
+rm -fr $CONFIG
+ln -s $NEW_CONFIG $CONFIG

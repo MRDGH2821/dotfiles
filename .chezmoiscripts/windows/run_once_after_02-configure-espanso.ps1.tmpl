@@ -6,4 +6,6 @@ espanso stop
 Remove-Item -Recurse -Force $CONFIG
 New-Item -ItemType SymbolicLink -Path $CONFIG -Target $NEW_CONFIG
 
+espanso service register
 echo "Espanso is configured."
+echo "-------------------------------------------------"

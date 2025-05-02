@@ -3,6 +3,7 @@ aur:
   - gitkraken
   - heroic-games-launcher-bin
   - ludusavi-bin
+  - mangojuice
   - visual-studio-code-bin
   - waydroid
 core:
@@ -23,7 +24,6 @@ extra:
   - fzf
   - git
   - github-cli
-  - goverlay
   - keepassxc
   - kleopatra
   - libreoffice-fresh

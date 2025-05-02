@@ -2,6 +2,7 @@ dra:
   bin:
     - cocogitto/cocogitto -a
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
+    - radiolamp/mangojuice -a
   package:
     - devmatteini/dra --select dra_{tag}-1_amd64.deb
     - espanso/espanso --select espanso-debian-wayland-amd64.deb
@@ -23,7 +24,6 @@ nala:
   - gh
   - git
   - gnupg2
-  - goverlay
   - keepassxc
   - kleopatra
   - libpam-u2f

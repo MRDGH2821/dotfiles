@@ -95,11 +95,6 @@ mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
 # shellcheck disable=SC2312
 eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"
 
-# Zoxide
-# shellcheck disable=SC2312
-eval "$(zoxide init bash --cmd cd)"
-# shellcheck disable=SC2312
-eval "$(fzf --bash)"
 
 # Chezmoi
 
@@ -116,3 +111,9 @@ export PATH="/usr/lib/python3.12/site-packages:${PATH}"
 # McFly
 
 eval "$(mcfly init bash)" || true
+
+# Zoxide
+
+eval "$(fzf --bash)" || true
+
+eval "$(zoxide init bash --cmd cd)" || true

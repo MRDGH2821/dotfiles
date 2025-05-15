@@ -1,5 +1,6 @@
 aur:
   - espanso-wayland
+  - fnm
   - gitkraken
   - heroic-games-launcher-bin
   - ludusavi-bin
@@ -28,6 +29,7 @@ extra:
   - kleopatra
   - libreoffice-fresh
   - mangohud
+  - mcfly
   - pam-u2f
   - python-pip
   - python-virtualenv
@@ -40,6 +42,7 @@ extra:
   - unzip
   - uv
   - vlc
+  - zoxide
 kde:
   - tesseract-data-eng
 multilib:

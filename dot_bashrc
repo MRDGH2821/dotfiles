@@ -46,11 +46,9 @@ fi
 # enable color support of ls and also add handy aliases
 if [[ -x /usr/bin/dircolors ]]; then
   if test -r ~/.dircolors; then
-    # shellcheck disable=SC2312
-    eval "$(dircolors -b ~/.dircolors)"
+    eval "$(dircolors -b ~/.dircolors)" || true
   else
-    # shellcheck disable=SC2312
-    eval "$(dircolors -b)"
+    eval "$(dircolors -b)" || true
   fi
   alias ls='ls --color=auto'
   alias dir='dir --color=auto'
@@ -84,16 +82,14 @@ esac
 FNM_PATH="${HOME}/.local/share/fnm"
 if [[ -d ${FNM_PATH} ]]; then
   export PATH="${FNM_PATH}:${PATH}"
-  # shellcheck disable=SC2312
-  eval "$(fnm env)"
+  eval "$(fnm env)" || true
 fi
 
 # Oh my posh random theme initializer
-# shellcheck disable=SC2312
-mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json)
+mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json) || true
+
 # Set a random theme
-# shellcheck disable=SC2312
-eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")"
+eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")" || true
 
 
 # Chezmoi

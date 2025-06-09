@@ -27,5 +27,5 @@ alias la='ls -A'
 alias l='ls -CF'
 
 touchfile() {
-  mkdir -p "$(dirname "$1")" && touch "$1"
+  mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }

@@ -54,6 +54,8 @@ case "${TERM}" in
 xterm-color | *-256color) color_prompt=yes ;;
 esac
 
+# Move shell invocations to ~/.bashrc.d/
+
 if command -v mktemp >/dev/null 2>&1; then
   BASHRC_BEFORE="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
   BASHRC_AFTER="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
@@ -64,39 +66,54 @@ if command -v mktemp >/dev/null 2>&1; then
   echo '#!/usr/bin/env bash' >"${BASHRC_AFTER}"
 
   BASHRC_MODE=before
+  PREV_LINE=""
+  SKIP_BEFORE=false
   while IFS= read -r LINE; do
     if [[ ${LINE} == '#!/usr/bin/env bash' ]] || [[ ${LINE} == '### BASHRC START' ]]; then
+      # Check if shebang immediately precedes BASHRC START marker
+      if [[ ${LINE} == '### BASHRC START' ]] && [[ ${PREV_LINE} == '#!/usr/bin/env bash' ]]; then
+        SKIP_BEFORE=true
+      fi
       BASHRC_MODE=bashrc
     elif [[ ${LINE} == '### BASHRC END' ]]; then
       BASHRC_MODE=after
       continue
     fi
 
-    if [[ ${BASHRC_MODE} == 'before' ]]; then
+    if [[ ${BASHRC_MODE} == 'before' ]] && [[ ${SKIP_BEFORE} == false ]]; then
       printf '%s\n' "${LINE}" >>"${BASHRC_BEFORE}"
     elif [[ ${BASHRC_MODE} == 'after' ]]; then
       printf '%s\n' "${LINE}" >>"${BASHRC_AFTER}"
     else
       printf '%s\n' "${LINE}" >>"${BASHRC_TEMP}"
     fi
+    PREV_LINE="${LINE}"
   done <"${HOME}/.bashrc"
 
-  # Add shebang to the generated file
-  sed -i '1i#!/usr/bin/env bash' "${BASHRC_TEMP}"
+  # Add shebang to the generated file if it doesn't already have one
+  if [[ $(head -1 "${BASHRC_TEMP}" || true) != '#!/usr/bin/env bash' ]]; then
+    sed -i '1i#!/usr/bin/env bash' "${BASHRC_TEMP}"
+  fi
 
   # this marker is never printed in the loop
   echo '### BASHRC END' >>"${BASHRC_TEMP}"
   mv "${BASHRC_TEMP}" "${HOME}/.bashrc"
 
-  if [[ -s ${BASHRC_BEFORE} ]] || [[ -s ${BASHRC_AFTER} ]]; then
+  # Remove BASHRC_BEFORE if it only contains shebang or if skipped
+  if [[ ${SKIP_BEFORE} == true ]] || [[ $(wc -l <"${BASHRC_BEFORE}" || true) -le 1 ]]; then
+    rm "${BASHRC_BEFORE}"
+    BASHRC_BEFORE=""
+  fi
+
+  if [[ -n ${BASHRC_BEFORE} && -s ${BASHRC_BEFORE} ]] || [[ -s ${BASHRC_AFTER} ]]; then
     echo "${HOME}/.bashrc has been modified. Check the following files for customizations:"
-    [[ -s ${BASHRC_BEFORE} ]] && echo "* ${BASHRC_BEFORE}"
+    [[ -n ${BASHRC_BEFORE} && -s ${BASHRC_BEFORE} ]] && echo "* ${BASHRC_BEFORE}"
     [[ -s ${BASHRC_AFTER} ]] && echo "* ${BASHRC_AFTER}"
   else
-    [[ ! -s ${BASHRC_BEFORE} ]] && rm "${BASHRC_BEFORE}"
+    [[ -n ${BASHRC_BEFORE} && ! -s ${BASHRC_BEFORE} ]] && rm "${BASHRC_BEFORE}"
     [[ ! -s ${BASHRC_AFTER} ]] && rm "${BASHRC_AFTER}"
   fi
-  unset BASHRC_BEFORE BASHRC_AFTER BASHRC_TEMP BASHRC_MODE
+  unset BASHRC_BEFORE BASHRC_AFTER BASHRC_TEMP BASHRC_MODE PREV_LINE SKIP_BEFORE
 fi
 
 # Zoxide

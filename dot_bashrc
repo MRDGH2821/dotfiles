@@ -58,9 +58,14 @@ if command -v mktemp >/dev/null 2>&1; then
   BASHRC_BEFORE="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
   BASHRC_AFTER="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
   BASHRC_TEMP="$(mktemp "${HOME}/.bashrc-XXXXXX")"
+
+  # Add shebangs to the temporary files
+  echo '#!/usr/bin/env bash' >"${BASHRC_BEFORE}"
+  echo '#!/usr/bin/env bash' >"${BASHRC_AFTER}"
+
   BASHRC_MODE=before
   while IFS= read -r LINE; do
-    if [[ ${LINE} == '### BASHRC START' ]]; then
+    if [[ ${LINE} == '#!/usr/bin/env bash' ]] || [[ ${LINE} == '### BASHRC START' ]]; then
       BASHRC_MODE=bashrc
     elif [[ ${LINE} == '### BASHRC END' ]]; then
       BASHRC_MODE=after
@@ -75,6 +80,10 @@ if command -v mktemp >/dev/null 2>&1; then
       printf '%s\n' "${LINE}" >>"${BASHRC_TEMP}"
     fi
   done <"${HOME}/.bashrc"
+
+  # Add shebang to the generated file
+  sed -i '1i#!/usr/bin/env bash' "${BASHRC_TEMP}"
+
   # this marker is never printed in the loop
   echo '### BASHRC END' >>"${BASHRC_TEMP}"
   mv "${BASHRC_TEMP}" "${HOME}/.bashrc"

@@ -1,14 +1,14 @@
+.cspell.json
 .editorconfig
 .gitignore
 .prettierrc.json
 .trunk
 .vscode
 **/*.src.ini
-cspell.json
 node_modules
 package*.json
-README.md
 Packages.md
+README.md
 
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**

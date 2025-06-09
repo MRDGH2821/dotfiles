@@ -97,32 +97,3 @@ eval "$(fzf --bash)" || true
 eval "$(zoxide init bash --cmd cd)" || true
 
 ### BASHRC END
-
-# Fast Node Manager
-FNM_PATH="${HOME}/.local/share/fnm"
-if [[ -d ${FNM_PATH} ]]; then
-  export PATH="${FNM_PATH}:${PATH}"
-  eval "$(fnm env)" || true
-fi
-
-# Oh my posh random theme initializer
-mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json) || true
-
-# Set a random theme
-eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")" || true
-
-# Chezmoi
-
-eval "$(chezmoi completion bash)" || true
-
-# UV
-eval "$(uv --generate-shell-completion bash)" || true
-eval "$(uvx --generate-shell-completion bash)" || true
-
-# Python Site Packages
-
-export PATH="/usr/lib/python3.12/site-packages:${PATH}"
-
-# McFly
-
-eval "$(mcfly init bash)" || true

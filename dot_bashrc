@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+### BASHRC START
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -53,6 +54,50 @@ case "${TERM}" in
 xterm-color | *-256color) color_prompt=yes ;;
 esac
 
+if command -v mktemp >/dev/null 2>&1; then
+  BASHRC_BEFORE="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
+  BASHRC_AFTER="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
+  BASHRC_TEMP="$(mktemp "${HOME}/.bashrc-XXXXXX")"
+  BASHRC_MODE=before
+  while IFS= read -r LINE; do
+    if [[ ${LINE} == '### BASHRC START' ]]; then
+      BASHRC_MODE=bashrc
+    elif [[ ${LINE} == '### BASHRC END' ]]; then
+      BASHRC_MODE=after
+      continue
+    fi
+
+    if [[ ${BASHRC_MODE} == 'before' ]]; then
+      printf '%s\n' "${LINE}" >>"${BASHRC_BEFORE}"
+    elif [[ ${BASHRC_MODE} == 'after' ]]; then
+      printf '%s\n' "${LINE}" >>"${BASHRC_AFTER}"
+    else
+      printf '%s\n' "${LINE}" >>"${BASHRC_TEMP}"
+    fi
+  done <"${HOME}/.bashrc"
+  # this marker is never printed in the loop
+  echo '### BASHRC END' >>"${BASHRC_TEMP}"
+  mv "${BASHRC_TEMP}" "${HOME}/.bashrc"
+
+  if [[ -s ${BASHRC_BEFORE} ]] || [[ -s ${BASHRC_AFTER} ]]; then
+    echo "${HOME}/.bashrc has been modified. Check the following files for customizations:"
+    [[ -s ${BASHRC_BEFORE} ]] && echo "* ${BASHRC_BEFORE}"
+    [[ -s ${BASHRC_AFTER} ]] && echo "* ${BASHRC_AFTER}"
+  else
+    [[ ! -s ${BASHRC_BEFORE} ]] && rm "${BASHRC_BEFORE}"
+    [[ ! -s ${BASHRC_AFTER} ]] && rm "${BASHRC_AFTER}"
+  fi
+  unset BASHRC_BEFORE BASHRC_AFTER BASHRC_TEMP BASHRC_MODE
+fi
+
+# Zoxide
+
+eval "$(fzf --bash)" || true
+
+eval "$(zoxide init bash --cmd cd)" || true
+
+### BASHRC END
+
 # Fast Node Manager
 FNM_PATH="${HOME}/.local/share/fnm"
 if [[ -d ${FNM_PATH} ]]; then
@@ -81,9 +126,3 @@ export PATH="/usr/lib/python3.12/site-packages:${PATH}"
 # McFly
 
 eval "$(mcfly init bash)" || true
-
-# Zoxide
-
-eval "$(fzf --bash)" || true
-
-eval "$(zoxide init bash --cmd cd)" || true

@@ -43,31 +43,6 @@ if [[ -f ~/.bash_aliases ]]; then
   . ~/.bash_aliases
 fi
 
-# enable color support of ls and also add handy aliases
-if [[ -x /usr/bin/dircolors ]]; then
-  if test -r ~/.dircolors; then
-    eval "$(dircolors -b ~/.dircolors)" || true
-  else
-    eval "$(dircolors -b)" || true
-  fi
-  alias ls='ls --color=auto'
-  alias dir='dir --color=auto'
-  alias vdir='vdir --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
-
-# Miscellaneous Aliases
-alias dnf="dnf5"
-alias tb="nc termbin.com 9999"
-alias cat='bat --paging=never'
-
-# ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Bash prompt from Endeavour OS
 # PS1='[\u@\h \W]\$ '
 
@@ -90,7 +65,6 @@ mapfile -t themes < <(ls ~/.cache/oh-my-posh/themes/*.json) || true
 
 # Set a random theme
 eval "$(oh-my-posh init bash --config "${themes[RANDOM % ${#themes[@]}]}")" || true
-
 
 # Chezmoi
 

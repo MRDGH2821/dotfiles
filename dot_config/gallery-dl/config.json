@@ -1,0 +1,11 @@
+{
+  "extractor": {
+    "base-directory": "./gallery-dl/",
+    "imgur": {
+      "directory": ["imgur", "{album['id']} - {album['title']}"]
+    },
+    "reddit": {
+      "directory": ["reddit", "{subreddit}", "{title} by {author}"]
+    }
+  }
+}

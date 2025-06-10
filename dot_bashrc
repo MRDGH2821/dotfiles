@@ -56,65 +56,36 @@ esac
 
 # Move shell invocations to ~/.bashrc.d/
 
-if command -v mktemp >/dev/null 2>&1; then
-  BASHRC_BEFORE="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
-  BASHRC_AFTER="$(mktemp "${HOME}/.bashrc.d/50-new-XXXXXX")"
-  BASHRC_TEMP="$(mktemp "${HOME}/.bashrc-XXXXXX")"
+# Check for content outside managed bashrc sections and alert user
+mkdir -p "${HOME}/.bashrc.d"
 
-  # Add shebangs to the temporary files
-  echo '#!/usr/bin/env bash' >"${BASHRC_BEFORE}"
-  echo '#!/usr/bin/env bash' >"${BASHRC_AFTER}"
+# Extract content before START marker (excluding shebang)
+BEFORE_CONTENT=$(sed -n '1,/^### BASHRC START$/p' "${HOME}/.bashrc" | head -n -1 | grep -v '^#!/usr/bin/env bash$' | grep -v '^$' || true)
 
-  BASHRC_MODE=before
-  PREV_LINE=""
-  SKIP_BEFORE=false
-  while IFS= read -r LINE; do
-    if [[ ${LINE} == '#!/usr/bin/env bash' ]] || [[ ${LINE} == '### BASHRC START' ]]; then
-      # Check if shebang immediately precedes BASHRC START marker
-      if [[ ${LINE} == '### BASHRC START' ]] && [[ ${PREV_LINE} == '#!/usr/bin/env bash' ]]; then
-        SKIP_BEFORE=true
-      fi
-      BASHRC_MODE=bashrc
-    elif [[ ${LINE} == '### BASHRC END' ]]; then
-      BASHRC_MODE=after
-      continue
-    fi
+# Extract content after END marker
+AFTER_CONTENT=$(sed -n '/^### BASHRC END$/,$p' "${HOME}/.bashrc" | tail -n +2 | grep -v '^$' || true)
 
-    if [[ ${BASHRC_MODE} == 'before' ]] && [[ ${SKIP_BEFORE} == false ]]; then
-      printf '%s\n' "${LINE}" >>"${BASHRC_BEFORE}"
-    elif [[ ${BASHRC_MODE} == 'after' ]]; then
-      printf '%s\n' "${LINE}" >>"${BASHRC_AFTER}"
-    else
-      printf '%s\n' "${LINE}" >>"${BASHRC_TEMP}"
-    fi
-    PREV_LINE="${LINE}"
-  done <"${HOME}/.bashrc"
+# Check if any problematic content exists
+if [[ -n ${BEFORE_CONTENT} ]] || [[ -n ${AFTER_CONTENT} ]]; then
+  echo "⚠️  WARNING: Content found outside managed bashrc sections!" >&2
+  echo "" >&2
 
-  # Add shebang to the generated file if it doesn't already have one
-  if [[ $(head -1 "${BASHRC_TEMP}" || true) != '#!/usr/bin/env bash' ]]; then
-    sed -i '1i#!/usr/bin/env bash' "${BASHRC_TEMP}"
+  if [[ -n ${BEFORE_CONTENT} ]]; then
+    echo "📍 Content BEFORE '### BASHRC START':" >&2
+    echo "${BEFORE_CONTENT}" | nl -s': ' >&2
+    echo "" >&2
   fi
 
-  # this marker is never printed in the loop
-  echo '### BASHRC END' >>"${BASHRC_TEMP}"
-  mv "${BASHRC_TEMP}" "${HOME}/.bashrc"
-
-  # Remove BASHRC_BEFORE if it only contains shebang or if skipped
-  if [[ ${SKIP_BEFORE} == true ]] || [[ $(wc -l <"${BASHRC_BEFORE}" || true) -le 1 ]]; then
-    rm "${BASHRC_BEFORE}"
-    BASHRC_BEFORE=""
+  if [[ -n ${AFTER_CONTENT} ]]; then
+    echo "📍 Content AFTER '### BASHRC END':" >&2
+    echo "${AFTER_CONTENT}" | nl -s': ' >&2
+    echo "" >&2
   fi
 
-  if [[ -n ${BASHRC_BEFORE} && -s ${BASHRC_BEFORE} ]] || [[ -s ${BASHRC_AFTER} ]]; then
-    echo "${HOME}/.bashrc has been modified. Check the following files for customizations:"
-    [[ -n ${BASHRC_BEFORE} && -s ${BASHRC_BEFORE} ]] && echo "* ${BASHRC_BEFORE}"
-    [[ -s ${BASHRC_AFTER} ]] && echo "* ${BASHRC_AFTER}"
-  else
-    [[ -n ${BASHRC_BEFORE} && ! -s ${BASHRC_BEFORE} ]] && rm "${BASHRC_BEFORE}"
-    [[ ! -s ${BASHRC_AFTER} ]] && rm "${BASHRC_AFTER}"
-  fi
-  unset BASHRC_BEFORE BASHRC_AFTER BASHRC_TEMP BASHRC_MODE PREV_LINE SKIP_BEFORE
+  echo "💡 Please move this content to ~/.bashrc.d/ files and re-run" >&2
 fi
+
+unset BEFORE_CONTENT AFTER_CONTENT
 
 # Zoxide
 

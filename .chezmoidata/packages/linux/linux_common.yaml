@@ -1,11 +1,15 @@
 dra:
   appimage:
     - kapitainsky/RcloneBrowser -a
+    - the-via/releases --select via-{tag}-linux.AppImage
+  bin:
+    - Matteo842/SaveState --select SaveState-{tag}-Linux.zip
 flatpak:
   - com.github.tchx84.Flatseal
   - com.jeffser.Alpaca
   - io.ente.auth
   - it.mijorus.gearlever
+  - net.sapples.LiveCaptions
   - org.gramps_project.Gramps
   - org.kde.klevernotes
 kde:

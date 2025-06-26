@@ -18,15 +18,15 @@ echo "Installing executables from GitHub"
 echo "Installing AppImages"
 {{ range $common.dra.appimage }}
 echo "Downloading {{.}}"
-dra download -o "$HOME"/AppImages/ -i {{.}}
+dra download -o "$appimagedir" -i {{.}}
 {{ end }}
 
-{{/* ## Binaries
+## Binaries
 echo "Installing binary executables"
 {{ range $common.dra.bin }}
 echo "Downloading {{.}}"
-dra download -o "$HOME"/.local/bin/ -i {{.}}
-{{ end }} */}}
+dra download -o "$bindir" -i {{.}}
+{{ end }}
 
 # Flatpak
 echo "Installing Common Flatpaks"

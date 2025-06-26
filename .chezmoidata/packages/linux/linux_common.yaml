@@ -10,6 +10,7 @@ flatpak:
   - io.ente.auth
   - it.mijorus.gearlever
   - net.sapples.LiveCaptions
+  - org.gnome.Firmware
   - org.gramps_project.Gramps
   - org.kde.klevernotes
 kde:

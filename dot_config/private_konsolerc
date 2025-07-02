@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [Desktop Entry]
-DefaultProfile=Nerd-Console.profile
+DefaultProfile=Nerd-Console Zsh.profile
 
 [FileLocation]
 scrollbackUseCacheLocation=true

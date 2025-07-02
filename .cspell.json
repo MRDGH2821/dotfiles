@@ -41,6 +41,7 @@
     "fcfg",
     "fgrep",
     "flatpaks",
+    "fpath",
     "ggshield",
     "gnupg",
     "goverlay",
@@ -56,10 +57,12 @@
     "keepassxc",
     "keepassxcdb",
     "kglobalshortcutsrc",
+    "kiesman",
     "klevernotes",
     "klocman",
     "kmdi",
     "kpartgui",
+    "krahlos",
     "kwriteconfig",
     "kxmlgui",
     "libgexiv",
@@ -111,6 +114,8 @@
     "xvzf",
     "yann",
     "zhangsongcui",
+    "zimfw",
+    "zmodule",
     "zoxide"
   ]
 }

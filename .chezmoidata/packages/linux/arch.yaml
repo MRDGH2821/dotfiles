@@ -43,6 +43,7 @@ extra:
   - uv
   - vlc
   - zoxide
+  - zsh
 kde:
   - tesseract-data-eng
 multilib:

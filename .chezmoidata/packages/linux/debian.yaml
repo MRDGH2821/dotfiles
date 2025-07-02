@@ -43,6 +43,7 @@ nala:
   - system-config-printer
   - vlc
   - waydroid
+  - zsh
 nala_url:
   - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
   - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64

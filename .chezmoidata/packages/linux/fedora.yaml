@@ -25,6 +25,7 @@ dnf5:
   - uv
   - vlc
   - waydroid
+  - zsh
 dnf5_url:
   - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
   - https://release.gitkraken.com/linux/gitkraken-amd64.rpm

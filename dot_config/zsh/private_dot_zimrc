@@ -57,10 +57,6 @@ zmodule ohmyzsh/ohmyzsh --root plugins/tldr
 
 zmodule ohmyzsh/ohmyzsh --root plugins/vscode
 
-zmodule ohmyzsh/ohmyzsh --root plugins/xdg-basedirs
-
-# zmodule krahlos/xdg-basedirs --source xdg-basedirs.plugin.zsh
-
 #
 # Prompt
 #

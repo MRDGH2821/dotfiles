@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-
+# shellcheck shell=bash
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -97,7 +97,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Download zimfw plugin manager if missing.
-if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+if [[ ! -e "${ZIM_HOME}/zimfw.zsh" ]]; then
   if (( ${+commands[curl]} )); then
     curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
         https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
@@ -123,6 +123,9 @@ source ${ZIM_HOME}/init.zsh
 
 zmodload -F zsh/terminfo +p:terminfo
 # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+# shellcheck disable=SC1073
+# shellcheck disable=SC1058
+# shellcheck disable=SC1072
 for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
 for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
 for key ('k') bindkey -M vicmd ${key} history-substring-search-up
@@ -160,3 +163,15 @@ if [[ -d ~/.zshrc.d ]]; then
   done
 fi
 unset rc
+
+# Source aliases from multiple locations
+for alias_file in ~/.zsh_aliases ~/.bash_aliases .zsh_aliases .bash_aliases; do
+  if [[ -f ${alias_file} ]]; then
+    # shellcheck source=/dev/null
+    . "${alias_file}"
+  fi
+done
+
+# Zoxide
+
+eval "$(zoxide init zsh --cmd cd)" || true

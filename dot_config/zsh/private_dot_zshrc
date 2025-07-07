@@ -154,8 +154,11 @@ fi
 export PATH
 
 # User specific aliases and functions
-if [[ -d ~/.zshrc.d ]]; then
-  for rc in ~/.zshrc.d/*; do
+
+ZSH_EXTRA_DIR="${ZDOTDIR:-${HOME}}/.zshrc.d"
+
+if [[ -d ${ZSH_EXTRA_DIR} ]]; then
+  for rc in ${ZSH_EXTRA_DIR}/*; do
     if [[ -f ${rc} ]]; then
       # shellcheck source=/dev/null
       . "${rc}"

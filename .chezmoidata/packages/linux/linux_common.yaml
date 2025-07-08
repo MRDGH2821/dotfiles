@@ -8,6 +8,7 @@ flatpak:
   - com.github.tchx84.Flatseal
   - com.jeffser.Alpaca
   - io.ente.auth
+  - io.github.flattool.Warehouse
   - it.mijorus.gearlever
   - net.sapples.LiveCaptions
   - org.gnome.Firmware

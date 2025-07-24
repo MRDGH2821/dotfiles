@@ -30,6 +30,5 @@
     "vscode"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.prettierPath": "",
   "prettier.resolveGlobalModules": true
 }

@@ -5,6 +5,7 @@ dra:
   bin:
     - Matteo842/SaveState --select SaveState-{tag}-Linux.zip
 flatpak:
+  - app.grayjay.Grayjay
   - com.github.tchx84.Flatseal
   - com.jeffser.Alpaca
   - io.ente.auth

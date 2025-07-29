@@ -13,5 +13,8 @@ ConfigVersion=1
 [KonsoleWindow]
 UseSingleInstance=true
 
+[SaveHistory Settings]
+Recent URLs[$e]=file:$HOME
+
 [SearchSettings]
 SearchRegExpression=true

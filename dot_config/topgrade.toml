@@ -198,6 +198,7 @@ no_self_update = true
 
 # Additional git repositories to pull
 repos = [
+    "~/Experiments/*/",
     "~/GitHub/*/",
     "~/GitLab/*/",
     "~/IdeaProjects/*/",

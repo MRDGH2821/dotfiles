@@ -36,6 +36,7 @@ dra:
     - Martchus/syncthingtray --select syncthingtray-{tag}-x86_64-pc-linux-gnu.tar.xz
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
     - radiolamp/mangojuice -a
+    - topgrade-rs/topgrade --select topgrade-v{tag}-x86_64-unknown-linux-musl.tar.gz
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic-{tag}.x86_64.rpm
 flatpak:

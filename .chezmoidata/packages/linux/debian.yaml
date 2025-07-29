@@ -8,6 +8,7 @@ dra:
     - espanso/espanso --select espanso-debian-wayland-amd64.deb
     - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic_{tag}_amd64.deb
     - sharkdp/bat --select bat_{tag}_amd64.deb
+    - topgrade-rs/topgrade -a
   raw:
     - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
 kde:

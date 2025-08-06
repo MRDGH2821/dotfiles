@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "mkhl.shfmt"
   },
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"

@@ -30,7 +30,7 @@ sudo pacman -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }}
 if type -P yay >/dev/null 2>&1; then
   yay -Syu --needed {{ range $arch.aur }} {{.}}{{ end }}
 elif type -P paru >/dev/null 2>&1; then
-  paru -Syu --needed {{ range $arch.kde }} {{.}}{{ end }}
+  paru -Syu --needed {{ range $arch.aur }} {{.}}{{ end }}
 fi
 
 echo "Installing Flatpak packages"

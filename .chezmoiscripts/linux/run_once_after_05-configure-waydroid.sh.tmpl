@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+{{ if eq .devicetype "tablet" }}
+systemctl --user enable waydroid-monitor.service --now
+sudo systemctl enable waydroid-mount.service --now
+
+echo "Waydroid Mounting Service is configured."
+echo "-------------------------------------------------"
+
+{{ end }}

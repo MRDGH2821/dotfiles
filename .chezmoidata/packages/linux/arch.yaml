@@ -7,7 +7,6 @@ aur:
   - mangojuice
   - topgrade
   - visual-studio-code-bin
-  - waydroid
 core:
   - gnupg
   - python
@@ -50,3 +49,6 @@ kde:
 multilib:
   - lib32-mangohud
   - steam
+tablet_only:
+  - waydroid
+  - waydroid-helper

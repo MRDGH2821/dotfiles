@@ -24,7 +24,7 @@ fi
 
 {{ if eq .devicetype "tablet" }}
 echo "Installing tablet specific packages"
-yay -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }}
+yay -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $arch.tablet_only }} {{.}}{{ end }}
 {{ end }}
 
 if type -P yay >/dev/null 2>&1; then

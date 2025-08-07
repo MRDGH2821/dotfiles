@@ -18,7 +18,9 @@ if ! grep -q '\[chaotic-aur\]' /etc/pacman.conf; then
   sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
   sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
+  # shellcheck disable=SC2312
   sudo echo '[chaotic-aur]' | sudo tee -a /etc/pacman.conf
+  # shellcheck disable=SC2312
   sudo echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | sudo tee -a /etc/pacman.conf
   echo "Chaotic AUR Repo added!"
 

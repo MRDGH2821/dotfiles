@@ -13,12 +13,12 @@ flatpak:
   - it.mijorus.gearlever
   - net.sapples.LiveCaptions
   - org.gnome.Firmware
+  - org.gnome.Snapshot
   - org.gramps_project.Gramps
   - org.kde.klevernotes
 kde:
   - discover
   - filelight
-  - kamoso
   - kcalc
   - kclock
   - neochat

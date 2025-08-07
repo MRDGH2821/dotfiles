@@ -24,7 +24,6 @@ dnf5:
   - tealdeer
   - uv
   - vlc
-  - waydroid
   - zsh
 dnf5_url:
   - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
@@ -43,3 +42,6 @@ flatpak:
   - org.libreoffice.LibreOffice
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+tablet_only:
+  - waydroid
+  - waydroid-helper

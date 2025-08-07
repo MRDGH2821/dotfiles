@@ -43,6 +43,7 @@ echo "${LINE}"
 # Add Repositories
 echo "Setting up repositories"
 sudo dnf -y install dnf-plugins-core
+sudo dnf copr enable cuteneko/waydroid-helper
 echo "${LINE}"
 
 ## RPM Fusion Free & Non-free repos
@@ -53,6 +54,7 @@ echo "${LINE}"
 
 ## Download dra executable
 trap 'rm -fr /tmp/dra' EXIT
+# shellcheck disable=SC2312
 curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -
 filename=$(ls /tmp/dra)
 tarfile="${filename%.*}"

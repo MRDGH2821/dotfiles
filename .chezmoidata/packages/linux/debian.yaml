@@ -43,7 +43,6 @@ nala:
   - syncthingtray
   - system-config-printer
   - vlc
-  - waydroid
   - zsh
 nala_url:
   - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
@@ -54,3 +53,6 @@ nala_url:
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
   - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update;fi
+tablet_only:
+  - waydroid
+  - waydroid-helper

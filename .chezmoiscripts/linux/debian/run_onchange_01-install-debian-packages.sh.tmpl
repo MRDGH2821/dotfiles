@@ -26,7 +26,7 @@ fi
 
 {{ if eq .devicetype "tablet" }}
 echo "Installing tablet specific packages"
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $common.tablet_only }} {{.}}{{ end }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $debian.tablet_only }} {{.}}{{ end }}
 {{ end }}
 
 echo "Downloading packages via dra"

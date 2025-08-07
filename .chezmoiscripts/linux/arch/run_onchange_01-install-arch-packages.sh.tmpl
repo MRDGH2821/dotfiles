@@ -16,15 +16,15 @@ mkdir -p "$appimagedir"
 ## Arch
 echo "Installing Arch packages"
 
-sudo pacman -Syu --needed {{ range $arch.core }} {{.}}{{end}} {{ range $arch.extra }} {{.}}{{end}} {{ range $arch.multilib }} {{.}}{{end}}
+yay -Syu --needed {{ range $arch.core }} {{.}}{{end}} {{ range $arch.extra }} {{.}}{{end}} {{ range $arch.multilib }} {{.}}{{end}}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo pacman -Syu --needed {{ range $arch.kde }} {{.}}{{ end }} {{ range $common.kde }} {{.}}{{ end }}
+  yay -Syu --needed {{ range $arch.kde }} {{.}}{{ end }} {{ range $common.kde }} {{.}}{{ end }}
 fi
 
 {{ if eq .devicetype "tablet" }}
 echo "Installing tablet specific packages"
-sudo pacman -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }}
+yay -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }}
 {{ end }}
 
 if type -P yay >/dev/null 2>&1; then

@@ -46,6 +46,8 @@ extra:
   - zoxide
   - zsh
 kde:
+  - qt5-graphicaleffects
+  - qt5-quickcontrols2
   - tesseract-data-eng
 multilib:
   - lib32-mangohud

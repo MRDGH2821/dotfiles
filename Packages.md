@@ -67,6 +67,7 @@
 | OneDrive              | 🚫   | 🚫     | 🚫     | 👍      |
 | pam-u2f               | 👍   | 👍     | 👍     | 🚫      |
 | pamu2fcfg             | 👍   | 👍     | 👍     | 🚫      |
+| Parui                 | 👍   | 🚫     | 🚫     | 🚫      |
 | Powertoys             | 🚫   | 🚫     | 🚫     | 👍      |
 | Python 3              | 👍   | 👍     | 👍     | 👍      |
 | Python pip            | 👍   | 👍     | 👍     | 🚫      |

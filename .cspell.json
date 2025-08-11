@@ -1,7 +1,13 @@
 {
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "ignorePaths": [".git", ".trunk", ".vscode", "node_modules", "package*.json"],
+  "ignorePaths": [
+    ".git",
+    ".trunk",
+    ".vscode",
+    "node_modules",
+    "package*.json"
+  ],
   "language": "en-GB,en,en-US",
   "useGitignore": true,
   "version": "0.2",
@@ -100,6 +106,7 @@
     "pamac",
     "pamu",
     "paru",
+    "parui",
     "pcloudfolder",
     "phoerious",
     "pikaur",

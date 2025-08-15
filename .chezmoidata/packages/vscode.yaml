@@ -5,6 +5,7 @@ extensions:
   - esbenp.prettier-vscode
   - evondev.indent-rainbow-palettes
   - formulahendry.code-runner
+  - mads-hartmann.bash-ide-vscode
   - MichaelCurrin.auto-commit-msg
   - ms-vscode-remote.vscode-remote-extensionpack
   - ms-vscode.atom-keybindings

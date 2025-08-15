@@ -39,6 +39,8 @@ nala:
   - python3-pip
   - python3-venv
   - sane
+  - shellcheck
+  - shfmt
   - syncthing
   - syncthingtray
   - system-config-printer

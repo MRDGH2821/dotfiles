@@ -6,6 +6,7 @@ aur:
   - ludusavi-bin
   - mangojuice
   - parui
+  - shellcheck-bin
   - topgrade
   - visual-studio-code-bin
 core:
@@ -35,6 +36,7 @@ extra:
   - python-pip
   - python-virtualenv
   - sane
+  - shfmt
   - syncthing
   - syncthingtray-qt6
   - system-config-printer

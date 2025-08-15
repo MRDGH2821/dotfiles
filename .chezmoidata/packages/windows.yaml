@@ -25,6 +25,7 @@ winget:
   - junegunn.fzf
   - KeePassXCTeam.KeePassXC
   - Klocman.BulkCrapUninstaller
+  - koalaman.shellcheck
   - Martchus.syncthingtray
   - MartiCliment.UniGetUI
   - Microsoft.OneDrive
@@ -33,6 +34,7 @@ winget:
   - Microsoft.WindowsTerminal
   - Mozilla.Firefox
   - mtkennerly.ludusavi
+  - mvdan.shfmt
   - OBSProject.OBSStudio
   - Python.Python.3.10
   - Schniz.fnm

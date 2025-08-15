@@ -18,6 +18,8 @@ dnf5:
   - python3-pip
   - python3-virtualenv
   - sane
+  - shellcheck
+  - shfmt
   - steam
   - syncthing
   - system-config-printer

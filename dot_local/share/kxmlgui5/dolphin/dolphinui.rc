@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE gui SYSTEM 'kpartgui.dtd'>
-<gui name="dolphin" version="43">
+<gui name="dolphin" version="46">
   <MenuBar>
     <Menu name="file">
       <Action name="new_menu" />
@@ -73,6 +73,7 @@
       <Action name="open_preferred_search_tool" />
       <Action name="open_terminal" />
       <Action name="open_terminal_here" />
+      <Action name="manage_disk_space" />
       <Action name="compare_files" />
       <Action name="change_remote_encoding" />
     </Menu>
@@ -124,7 +125,7 @@
     </disable>
   </State>
   <ActionProperties scheme="Default">
-    <Action name="view_mode" priority="0" />
+    <Action name="view_settings" priority="0" />
     <Action name="compact" priority="0" />
     <Action name="details" priority="0" />
     <Action name="edit_copy" priority="0" />
@@ -144,6 +145,7 @@
     <Action name="stop" priority="0" />
     <Action name="toggle_filter" priority="0" />
     <Action name="toggle_search" priority="0" />
+    <Action name="view_mode" priority="0" />
     <Action name="view_redisplay" priority="0" />
     <Action name="view_zoom_in" priority="0" />
     <Action name="view_zoom_out" priority="0" />

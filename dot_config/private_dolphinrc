@@ -14,6 +14,7 @@ OpenExternallyCalledFolderInNewTab=true
 RememberOpenedTabs=false
 ShowFullPath=true
 ShowFullPathInTitlebar=true
+ShowStatusBar=FullWidth
 ShowToolTips=true
 Version=202
 ViewPropsTimestamp=2024,10,8,20,20,35.988

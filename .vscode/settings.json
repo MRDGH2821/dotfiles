@@ -30,5 +30,8 @@
     "vscode"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.profile": "ini"
+  },
   "prettier.resolveGlobalModules": true
 }

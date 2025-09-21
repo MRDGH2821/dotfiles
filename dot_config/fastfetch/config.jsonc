@@ -33,11 +33,5 @@
       "text": "cat /sys/class/dmi/id/ec_firmware_release",
       "key": "EC version",
     },
-    "break",
-    {
-      "type": "command",
-      "text": "echo https://starlabs.systems/pages/starlite",
-      "key": "Visit StarLite MK V page",
-    },
   ],
 }

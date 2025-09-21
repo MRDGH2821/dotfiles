@@ -87,7 +87,3 @@ args = ["{{ .chezmoi.sourceDir }}/.chezmoiscripts/windows/.install-password-mana
 {{ else }}
 command = "{{ .chezmoi.sourceDir }}/.chezmoiscripts/linux/.install-password-manager.sh"
 {{ end -}}
-
-[diff]
-command = "code"
-args = ["--wait", "--diff"]

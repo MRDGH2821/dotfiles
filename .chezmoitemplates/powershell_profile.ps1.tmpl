@@ -1,6 +1,16 @@
+{{- if ne .chezmoi.os "windows" }}
+# Add ~/.local/bin to PATH for Linux
+$env:PATH = "$HOME/.local/bin:$env:PATH"
+{{- end }}
+
 # Oh my posh random theme initializer
 # Select a random theme
+{{- if eq .chezmoi.os "windows" }}
 $theme = Get-ChildItem $env:UserProfile\AppData\Local\Programs\oh-my-posh\themes\ | Get-Random
+{{- else }}
+$theme = Get-ChildItem ~/.cache/oh-my-posh/themes/*.json | Get-Random
+{{- end }}
+
 Write-Output $theme.name
 # Set the theme
 oh-my-posh --init --shell pwsh --config $theme.FullName | Invoke-Expression
@@ -21,9 +31,11 @@ fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression
 # Zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
+{{- if eq .chezmoi.os "windows" }}
 # Aliases
 Remove-Item Alias:cat -Force
 Set-Alias -Name cat -Value bat
+{{- end }}
 
 # McFly
 

@@ -1,4 +1,3 @@
 # Chezmoi
-
-{{- $shell := default "bash" .Shell -}}
+{{ $shell := default "bash" .Shell }}
 eval "$(chezmoi completion {{ $shell }})" || true

@@ -1,4 +1,3 @@
 # direnv
-
-{{- $shell := default "bash" .Shell -}}
+{{- $shell := default "bash" .Shell }}
 eval "$(direnv hook {{ $shell }})"

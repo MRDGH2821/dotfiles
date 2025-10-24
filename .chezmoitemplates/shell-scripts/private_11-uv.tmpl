@@ -1,5 +1,4 @@
 # uv
-
-{{- $shell := default "bash" .Shell -}}
+{{- $shell := default "bash" .Shell }}
 eval "$(uv --generate-shell-completion {{ $shell }})" || true
 eval "$(uvx --generate-shell-completion {{ $shell }})" || true

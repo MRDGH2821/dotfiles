@@ -21,6 +21,6 @@ if [ -e "$1" ]; then
   done
 
   # Initialize using the shell provided by the template caller ({{ .Shell }}), defaulting to bash
-  {{- $shell := default "bash" .Shell -}}
+  {{ $shell := default "bash" .Shell -}}
   eval "$(oh-my-posh init {{ $shell }} --config \"$theme\")" || true
 fi

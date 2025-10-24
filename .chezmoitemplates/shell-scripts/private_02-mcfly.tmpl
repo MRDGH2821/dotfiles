@@ -1,4 +1,3 @@
 # mcfly
-
-{{- $shell := default "bash" .Shell -}}
+{{- $shell := default "bash" .Shell }}
 eval "$(mcfly init {{ $shell }})" || true

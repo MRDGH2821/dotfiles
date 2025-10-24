@@ -1,26 +1,20 @@
-# Choose a random theme from the oh-my-posh cache and initialize the prompt
-set -- ~/.cache/oh-my-posh/themes/*.json
-if [ -e "$1" ]; then
-  count=0
-  for f in "$@"; do count=$((count+1)); done
+# Oh My Posh
 
-  if [ -n "${RANDOM+x}" ]; then
-    idx=$((RANDOM % count + 1))
-  else
-    idx=$(( $(date +%s) % count + 1 ))
-  fi
+#provide path to oh-my-posh installed themes
+omp_themes_dir="$HOME/.cache/oh-my-posh/themes"
 
-  n=1
-  theme=
-  for f in "$@"; do
-    if [ "$n" -eq "$idx" ]; then
-      theme="$f"
-      break
-    fi
-    n=$((n+1))
-  done
+# Get a list of all JSON theme files in the directory
+omp_themes=($(ls $omp_themes_dir/*.json))
 
-  # Initialize using the shell provided by the template caller ({{ .Shell }}), defaulting to bash
-  {{ $shell := default "bash" .Shell }}
-  eval "$(oh-my-posh init {{ $shell }} --config \"$theme\")" || true
-fi
+# Get the number of JSON theme files
+num_files=${#omp_themes[@]}
+
+# Generate a random index
+random_index=$((RANDOM % num_files))
+
+# Select a random theme
+random_omp_theme=${omp_themes[$random_index]}
+
+# Initialize using the shell provided by the template caller ({{ .Shell }}), defaulting to bash
+{{ $shell := default "bash" .Shell }}
+eval "$(oh-my-posh init {{ $shell }} --config \"$random_omp_theme\")" || true

@@ -12,8 +12,8 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="${HOME}/.config"}
 export ZSH_CACHE_DIR="${XDG_CACHE_HOME}/zsh"
 
 # Default Apps
-export EDITOR="zed"
-export VISUAL="code -n"
+export EDITOR="zed --wait"
+export VISUAL="code -n --wait"
 export PAGER="less"
 
 autoload -Uz +X compinit

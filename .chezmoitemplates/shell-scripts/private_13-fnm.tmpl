@@ -1,0 +1,15 @@
+# Fast Node Manager
+
+{{- $shell := default "bash" .Shell -}}
+
+FNM_PATH="${HOME}/.local/share/fnm"
+if [[ -d ${FNM_PATH} ]]; then
+  export PATH="${FNM_PATH}:${PATH}"
+  eval "$(fnm env)" || true
+fi
+
+eval "$(fnm env --use-on-cd --shell {{ $shell }})"
+
+if [ -f .node-version ] || [ -f .nvmrc ]; then
+  fnm use || true
+fi

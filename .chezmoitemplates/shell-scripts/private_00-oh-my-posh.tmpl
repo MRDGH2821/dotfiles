@@ -1,0 +1,26 @@
+# Choose a random theme from the oh-my-posh cache and initialize the prompt
+set -- ~/.cache/oh-my-posh/themes/*.json
+if [ -e "$1" ]; then
+  count=0
+  for f in "$@"; do count=$((count+1)); done
+
+  if [ -n "${RANDOM+x}" ]; then
+    idx=$((RANDOM % count + 1))
+  else
+    idx=$(( $(date +%s) % count + 1 ))
+  fi
+
+  n=1
+  theme=
+  for f in "$@"; do
+    if [ "$n" -eq "$idx" ]; then
+      theme="$f"
+      break
+    fi
+    n=$((n+1))
+  done
+
+  # Initialize using the shell provided by the template caller ({{ .Shell }}), defaulting to bash
+  {{- $shell := default "bash" .Shell -}}
+  eval "$(oh-my-posh init {{ $shell }} --config \"$theme\")" || true
+fi

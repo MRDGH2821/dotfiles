@@ -1,0 +1,5 @@
+# Chezmoi
+
+{{- $shell := default "bash" .Shell -}}
+# Chezmoi
+eval "$(chezmoi completion {{ $shell }})" || true

@@ -17,4 +17,4 @@ random_omp_theme=${omp_themes[$random_index]}
 
 # Initialize using the shell provided by the template caller ({{ .Shell }}), defaulting to bash
 {{ $shell := default "bash" .Shell }}
-eval "$(oh-my-posh init {{ $shell }} --config \"$random_omp_theme\")" || true
+eval "$(oh-my-posh init {{ $shell }} --config $random_omp_theme)" || true

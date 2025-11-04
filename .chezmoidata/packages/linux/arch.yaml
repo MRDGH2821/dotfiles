@@ -1,6 +1,7 @@
 aur:
   - espanso-wayland
   - fnm
+  - git-credential-oauth
   - gitkraken
   - heroic-games-launcher-bin
   - ludusavi-bin

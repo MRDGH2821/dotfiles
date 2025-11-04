@@ -16,8 +16,8 @@ mkdir -p "$appimagedir"
 ## Debian
 echo "Installing Debian Packages"
 
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala }} {{.}}{{ end }}
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala_url }}{{. | quote}} {{ end }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.native }} {{.}}{{ end }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.url }}{{. | quote}} {{ end }}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
   sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $common.kde }} {{.}}{{ end }}

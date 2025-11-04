@@ -16,43 +16,44 @@ kde:
 flatpak:
   - org.libreoffice.LibreOffice
 nala:
-  - apparmor-utils
-  - btop
-  - fastfetch
-  - firefox
-  - flatpak
-  - fzf
-  - gh
-  - git
-  - git-credential-oauth
-  - gnupg2
-  - keepassxc
-  - kleopatra
-  - libpam-u2f
-  - libqt6core6
-  - libqt6gui6
-  - libqt6printsupport6
-  - libqt6widgets6
-  - mangohud
-  - mangohud:i386
-  - pamu2fcfg
-  - python3
-  - python3-pip
-  - python3-venv
-  - sane
-  - shellcheck
-  - shfmt
-  - syncthing
-  - syncthingtray
-  - system-config-printer
-  - vlc
-  - zsh
-nala_url:
-  - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-  - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
-  - https://discord.com/api/download?platform=linux&format=deb
-  - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
-  - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+  native:
+    - apparmor-utils
+    - btop
+    - fastfetch
+    - firefox
+    - flatpak
+    - fzf
+    - gh
+    - git
+    - git-credential-oauth
+    - gnupg2
+    - keepassxc
+    - kleopatra
+    - libpam-u2f
+    - libqt6core6
+    - libqt6gui6
+    - libqt6printsupport6
+    - libqt6widgets6
+    - mangohud
+    - mangohud:i386
+    - pamu2fcfg
+    - python3
+    - python3-pip
+    - python3-venv
+    - sane
+    - shellcheck
+    - shfmt
+    - syncthing
+    - syncthingtray
+    - system-config-printer
+    - vlc
+    - zsh
+  url:
+    - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+    - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+    - https://discord.com/api/download?platform=linux&format=deb
+    - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
+    - https://release.gitkraken.com/linux/gitkraken-amd64.deb
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
   - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update;fi

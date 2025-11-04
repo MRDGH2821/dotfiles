@@ -24,6 +24,7 @@ nala:
   - fzf
   - gh
   - git
+  - git-credential-oauth
   - gnupg2
   - keepassxc
   - kleopatra

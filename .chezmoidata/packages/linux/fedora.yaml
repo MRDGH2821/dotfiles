@@ -8,6 +8,7 @@ dnf5:
   - fzf
   - gh
   - git
+  - git-credential-oauth
   - gnupg2
   - keepassxc
   - kleopatra

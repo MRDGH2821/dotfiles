@@ -21,6 +21,7 @@ winget:
   - GnuPG.Gpg4win
   - Gramps.Gramps
   - HermannSchinagl.LinkShellExtension
+  - hickford.git-credential-oauth
   - JanDeDobbeleer.OhMyPosh
   - junegunn.fzf
   - KeePassXCTeam.KeePassXC

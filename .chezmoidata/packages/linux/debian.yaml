@@ -11,10 +11,13 @@ dra:
     - topgrade-rs/topgrade -a
   raw:
     - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
-kde:
-  - syncthingtray-kde-plasma
 flatpak:
   - org.libreoffice.LibreOffice
+installer_url:
+  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+  - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update;fi
+kde:
+  - syncthingtray-kde-plasma
 nala:
   native:
     - apparmor-utils
@@ -54,9 +57,6 @@ nala:
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
     - https://release.gitkraken.com/linux/gitkraken-amd64.deb
-installer_url:
-  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
-  - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update;fi
 tablet_only:
   - waydroid
   - waydroid-helper

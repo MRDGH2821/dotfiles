@@ -30,11 +30,11 @@ if ! grep -q "fastestmirror=True" "${CONF_FILE}"; then
   echo "${LINE}"
 fi
 
-if ! grep -q 'alias dnf="dnf5"' "${HOME}/.bashrc"; then
-  echo 'alias dnf="dnf5"' | sudo tee -a ~/.bashrc
-  echo "dnf is now an alias for dnf5!"
-  echo "${LINE}"
-fi
+# if ! grep -q 'alias dnf="dnf5"' "${HOME}/.bashrc"; then
+#   echo 'alias dnf="dnf5"' | sudo tee -a ~/.bashrc
+#   echo "dnf is now an alias for dnf5!"
+#   echo "${LINE}"
+# fi
 
 # Update System
 sudo dnf update -y
@@ -49,7 +49,7 @@ echo "${LINE}"
 ## RPM Fusion Free & Non-free repos
 fedora_version=$(rpm -E %fedora)
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"${fedora_version}".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"${fedora_version}".noarch.rpm -y
-sudo dnf config-manager --enable fedora-cisco-openh264 -y
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 echo "${LINE}"
 
 ## Download dra executable

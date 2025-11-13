@@ -30,11 +30,11 @@ echo "Installing tablet specific packages"
 sudo dnf5 install -y {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $fedora.tablet_only }} {{.}}{{ end }}
 {{ end }}
 
-echo "Downloading packages via dra"
+{{/* echo "Downloading packages via dra"
 {{ range $fedora.dra.appimage }}
 echo "Downloading {{.}}"
 dra download -o "$appimagedir" -i {{.}}
-{{ end }}
+{{ end }} */}}
 
 {{ range $fedora.dra.bin }}
 echo "Downloading {{.}}"

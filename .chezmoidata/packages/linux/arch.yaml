@@ -17,6 +17,7 @@ extra:
   - bat
   - btop
   - cocogitto
+  - direnv
   - discord
   - docker
   - docker-buildx

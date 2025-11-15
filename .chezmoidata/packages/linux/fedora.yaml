@@ -1,5 +1,4 @@
 dnf5:
-  - bat
   - btop
   - direnv
   - discord
@@ -19,6 +18,7 @@ dnf5:
   - python3
   - python3-pip
   - python3-virtualenv
+  - rust-bat
   - sane
   - shellcheck
   - shfmt

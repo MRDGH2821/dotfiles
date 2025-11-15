@@ -1,6 +1,7 @@
 dnf5:
   - bat
   - btop
+  - direnv
   - discord
   - fastfetch
   - firefox

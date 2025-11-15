@@ -50,6 +50,7 @@ echo "${LINE}"
 fedora_version=$(rpm -E %fedora)
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"${fedora_version}".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"${fedora_version}".noarch.rpm -y
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:mkittler/Fedora_"${fedora_version}"/home:mkittler.repo
 echo "${LINE}"
 
 ## Login to gh cli

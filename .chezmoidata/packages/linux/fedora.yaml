@@ -19,7 +19,7 @@ dnf5:
   - python3-pip
   - python3-virtualenv
   - rust-bat
-  - sane
+  - sane-backends
   - shellcheck
   - shfmt
   - steam

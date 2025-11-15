@@ -16,18 +16,18 @@ mkdir -p "$appimagedir"
 ## Fedora
 echo "Installing RPM packages"
 
-sudo dnf5 install -y {{ range $fedora.dnf5 }} {{.}}{{ end }}
+sudo dnf5 install -y --skip-unavailable {{ range $fedora.dnf5 }} {{.}}{{ end }}
 {{ range $fedora.dnf5_url }}
-sudo dnf5 install -y {{ . | quote }}
+sudo dnf5 install -y --skip-unavailable {{ . | quote }}
 {{ end }}
 
 if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo dnf5 install -y {{ range $common.kde }} {{.}}{{ end }}
+  sudo dnf5 install -y --skip-unavailable {{ range $common.kde }} {{.}}{{ end }}
 fi
 
 {{ if eq .devicetype "tablet" }}
 echo "Installing tablet specific packages"
-sudo dnf5 install -y {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $fedora.tablet_only }} {{.}}{{ end }}
+sudo dnf5 install -y --skip-unavailable {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $fedora.tablet_only }} {{.}}{{ end }}
 {{ end }}
 
 {{/* echo "Downloading packages via dra"

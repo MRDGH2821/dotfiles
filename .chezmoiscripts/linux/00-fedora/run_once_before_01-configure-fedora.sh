@@ -53,7 +53,7 @@ sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 echo "${LINE}"
 
 ## Login to gh cli
-gh auth login
+gh auth login -p https -h github.com -w
 
 ## Download dra executable
 trap 'rm -fr /tmp/dra' EXIT

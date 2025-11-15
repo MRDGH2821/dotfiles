@@ -16,6 +16,10 @@ git config --global gpg.program "C:\Program Files\GnuPG\bin\gpg.exe"
 
 git config --global init.templatedir '~/.git-templates'
 
+gh auth login
+
+gh auth setup-git
+
 echo "Git is Configured!"
 
 git credential-oauth configure

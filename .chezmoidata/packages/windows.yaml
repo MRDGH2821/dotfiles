@@ -40,10 +40,10 @@ winget:
   - mtkennerly.ludusavi
   - mvdan.shfmt
   - OBSProject.OBSStudio
+  - ONLYOFFICE.DesktopEditors
   - Python.Python.3.10
   - Schniz.fnm
   - sharkdp.bat
-  - TheDocumentFoundation.LibreOffice
   - topgrade-rs.topgrade
   - universal.input-overlay
   - Valve.Steam

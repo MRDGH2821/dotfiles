@@ -11,8 +11,8 @@ if ! command -v dnf &>/dev/null; then
 fi
 
 echo "Fedora based system found!"
-# Install dnf5 for faster downloads & flatpak
-sudo dnf install dnf5 flatpak -y
+# Install dnf5 for faster downloads, flatpak & gh cli
+sudo dnf install dnf5 flatpak gh -y
 echo "${LINE}"
 
 # modify dnf settings for faster downloads
@@ -52,16 +52,19 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 echo "${LINE}"
 
+## Login to gh cli
+gh auth login
+
 ## Download dra executable
 trap 'rm -fr /tmp/dra' EXIT
-# shellcheck disable=SC2312
-curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -
-filename=$(ls /tmp/dra)
+mkdir -p /tmp/dra
+gh release download --repo devmatteini/dra --pattern '*linux*gnu*x86*.tar.gz' --dir /tmp/dra
+filename=$(ls /tmp/dra/*.tar.gz)
 tarfile="${filename%.*}"
 filedir="${tarfile%.*}"
-tar -xvzf /tmp/dra/"${filename}" -C /tmp/dra
-mkdir -p "${HOME}"/bin
-cp /tmp/dra/"${filedir}"/dra "${HOME}"/bin/
+tar -xvzf "${filename}" -C /tmp/dra
+mkdir -p "${HOME}"/.local/bin
+cp /tmp/dra/"${filedir}"/dra "${HOME}"/.local/bin/
 rm -fr /tmp/dra
 
 echo "${LINE}"

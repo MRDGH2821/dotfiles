@@ -24,6 +24,7 @@ dnf5:
   - shfmt
   - steam
   - syncthing
+  - syncthingtray
   - system-config-printer
   - tealdeer
   - uv
@@ -36,7 +37,6 @@ dra:
   bin:
     - cocogitto/cocogitto -a
     - devmatteini/dra -a
-    - Martchus/syncthingtray --select syncthingtray-{tag}-x86_64-pc-linux-gnu.tar.xz
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
     - radiolamp/mangojuice -a
     - topgrade-rs/topgrade --select topgrade-v{tag}-x86_64-unknown-linux-musl.tar.gz

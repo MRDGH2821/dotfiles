@@ -38,12 +38,12 @@ dra:
     - cocogitto/cocogitto -a
     - devmatteini/dra -a
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
-    - radiolamp/mangojuice -a
     - topgrade-rs/topgrade --select topgrade-v{tag}-x86_64-unknown-linux-musl.tar.gz
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:
-  - org.libreoffice.LibreOffice
+  - org.onlyoffice.desktopeditors
+  - io.github.radiolamp.mangojuice
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 tablet_only:

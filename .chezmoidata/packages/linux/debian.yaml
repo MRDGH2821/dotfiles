@@ -2,7 +2,6 @@ dra:
   bin:
     - cocogitto/cocogitto -a
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
-    - radiolamp/mangojuice -a
   package:
     - devmatteini/dra --select dra_{tag}-1_amd64.deb
     - espanso/espanso --select espanso-debian-wayland-amd64.deb
@@ -12,7 +11,8 @@ dra:
   raw:
     - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
 flatpak:
-  - org.libreoffice.LibreOffice
+  - org.onlyoffice.desktopeditors
+  - io.github.radiolamp.mangojuice
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
   - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update;fi

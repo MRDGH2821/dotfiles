@@ -58,7 +58,7 @@ gh auth login -p https -h github.com -w
 ## Download dra executable
 trap 'rm -fr /tmp/dra' EXIT
 mkdir -p /tmp/dra
-gh release download --repo devmatteini/dra --pattern '*linux*gnu*x86*.tar.gz' --dir /tmp/dra
+gh release download --repo devmatteini/dra --pattern 'dra-*-x86_64-*-linux-gnu.tar.gz' --dir /tmp/dra
 filename=$(ls /tmp/dra/*.tar.gz)
 tarfile="${filename%.*}"
 filedir="${tarfile%.*}"

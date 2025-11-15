@@ -41,7 +41,7 @@ dra:
     - radiolamp/mangojuice -a
     - topgrade-rs/topgrade --select topgrade-v{tag}-x86_64-unknown-linux-musl.tar.gz
   package:
-    - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic-{tag}.x86_64.rpm
+    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:
   - org.libreoffice.LibreOffice
 installer_url:

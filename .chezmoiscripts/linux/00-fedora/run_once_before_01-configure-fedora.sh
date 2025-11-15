@@ -53,7 +53,6 @@ sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 echo "${LINE}"
 
 ## Download dra executable
-mkdir -p /tmp/dra
 trap 'rm -fr /tmp/dra' EXIT
 # shellcheck disable=SC2312
 curl -s https://api.github.com/repos/devmatteini/dra/releases/latest | grep browser_download_url | cut -d : -f 2,3 | tr -d \" | grep linux | grep gnu | grep x86 | wget -P /tmp/dra -qi -

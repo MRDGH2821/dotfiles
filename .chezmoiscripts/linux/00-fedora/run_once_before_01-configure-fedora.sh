@@ -64,7 +64,7 @@ tarfile="${filename%.*}"
 filedir="${tarfile%.*}"
 tar -xvzf "${filename}" -C /tmp/dra
 mkdir -p "${HOME}"/.local/bin
-cp /tmp/dra/"${filedir}"/dra "${HOME}"/.local/bin/
+cp "${filedir}"/dra "${HOME}"/.local/bin/
 rm -fr /tmp/dra
 
 echo "${LINE}"

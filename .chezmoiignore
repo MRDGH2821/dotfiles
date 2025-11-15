@@ -27,16 +27,16 @@ readonly_Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
 
 {{ if ne .osid "linux-arch" }}
 dot_config/paru/**
-.chezmoiscripts/linux/arch/**
+.chezmoiscripts/linux/00-arch/**
 .chezmoidata/packages/linux/arch.yaml
 {{ end }}
 
 {{ if ne .osid "linux-fedora" }}
-.chezmoiscripts/linux/fedora/**
+.chezmoiscripts/linux/00-fedora/**
 .chezmoidata/packages/linux/fedora.yaml
 {{ end }}
 
 {{ if and (ne .osid "linux-debian") (ne .osid "linux-ubuntu") (ne .osid "linux-debian ubuntu") (ne .osid "linux-ubuntu debian") }}
-.chezmoiscripts/linux/debian/**
+.chezmoiscripts/linux/00-debian/**
 .chezmoidata/packages/linux/debian.yaml
 {{ end }}

@@ -24,7 +24,7 @@ dnf5:
   - shfmt
   - steam
   - syncthing
-  - syncthingtray
+  - syncthingtray-qt6
   - system-config-printer
   - tealdeer
   - uv

@@ -8,6 +8,7 @@ flatpak:
   - app.grayjay.Grayjay
   - com.github.tchx84.Flatseal
   - com.jeffser.Alpaca
+  - in.cinny.Cinny
   - io.ente.auth
   - io.github.flattool.Warehouse
   - it.mijorus.gearlever
@@ -29,7 +30,6 @@ kde:
   - filelight
   - kcalc
   - kclock
-  - neochat
   - partitionmanager
   - skanlite
   - skanpage

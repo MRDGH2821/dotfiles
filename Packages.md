@@ -29,7 +29,7 @@
 | docker-buildx         | 👍   | 👍🔗   | 👍🔗   | 🚫      |
 | docker-compose        | 👍   | 👍🔗   | 👍🔗   | 🚫      |
 | Dra                   | 👍   | 👍🔗   | 💻🔗   | 👍      |
-| Element matrix client | 🚫   | 🚫     | 🚫     | 👍      |
+| Cinny matrix client   | 📦   | 📦     | 📦     | 👍      |
 | Ente Auth             | 📦   | 📦     | 📦     | 👍      |
 | Epic games launcher   | 🚫   | 🚫     | 🚫     | 👍      |
 | Espanso               | 👍   | 👍🔗   | 🚫     | 👍      |

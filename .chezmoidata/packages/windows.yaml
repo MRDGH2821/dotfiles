@@ -8,11 +8,11 @@ winget:
   - astral-sh.uv
   - Axosoft.GitKraken
   - calibre.calibre
+  - cinnyapp.cinny-desktop
   - CosimoMatteini.DRA
   - direnv.direnv
   - Discord.Discord
   - Docker.DockerDesktop
-  - Element.Element
   - ente-io.auth-desktop
   - EpicGames.EpicGamesLauncher
   - Espanso.Espanso

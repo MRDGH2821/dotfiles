@@ -6,7 +6,31 @@ $env:PATH = "$HOME/.local/bin:$env:PATH"
 # Oh my posh random theme initializer
 # Select a random theme
 {{- if eq .chezmoi.os "windows" }}
-$theme = Get-ChildItem $env:UserProfile\AppData\Local\Programs\oh-my-posh\themes\ | Get-Random
+
+$package = Get-AppxPackage -Name ohmyposh.cli
+$installLocation = $package.InstallLocation
+
+# Define potential theme directories (not globs)
+$themeDirs = @(
+  "$env:UserProfile\AppData\Local\Programs\oh-my-posh\themes"
+  "$env:UserProfile\.oh-my-posh\themes"
+  Join-Path $installLocation "themes"
+)
+
+$validJsonFiles = @()
+
+foreach ($dir in $themeDirs) {
+  if (Test-Path $dir) {
+    $jsonFiles = Get-ChildItem -Path $dir -Filter '*.json' -File -ErrorAction SilentlyContinue
+    if ($jsonFiles.Count -gt 0) {
+      $validJsonFiles = $jsonFiles
+      break
+    }
+  }
+}
+
+$theme = Get-Random -InputObject $validJsonFiles
+
 {{- else }}
 $theme = Get-ChildItem ~/.cache/oh-my-posh/themes/*.json | Get-Random
 {{- end }}

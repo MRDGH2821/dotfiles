@@ -7,3 +7,6 @@ Directory=$HOME
 Name=Nerd-Console
 Parent=FALLBACK/
 StartInCurrentSessionDir=false
+
+[Interaction Options]
+AutoCopySelectedText=true

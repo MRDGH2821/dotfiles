@@ -2,6 +2,9 @@
 {{- /* Ask Editor Choices */ -}}
 {{- $editorchoices := list "code" "zed" -}}
 {{- $editor := promptChoiceOnce . "editor" "Default Editor" $editorchoices "code" -}}
+{{- /* Ask Forgejo Configuration */ -}}
+{{- $forgejourl := promptStringOnce . "forgejo.url" "Forgejo Server URL" "git.example.com" -}}
+{{- $forgejoclientid := promptStringOnce . "forgejo.client_id" "Forgejo OAuth Client ID" -}}
 {{- /* KeePassXC DB validation with 3 attempts */ -}}
 {{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file)" -}}
 {{- if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
@@ -69,6 +72,10 @@ osid = {{ $osid | quote }}
 pcloudfolder = {{ $pcloudfolder | quote }}
 devicetype = {{ $devicetype | quote }}
 gpu = {{ $gpu | quote }}
+
+[data.forgejo]
+url = {{ $forgejourl | quote }}
+client_id = {{ $forgejoclientid | quote }}
 
 [edit]
 command = {{ $editor | quote }}

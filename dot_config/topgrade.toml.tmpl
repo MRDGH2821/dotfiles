@@ -84,7 +84,8 @@ no_self_update = true
 # Commands to run before anything
 [pre_commands]
 # "Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
-
+"Configure git credentials - github.com" = "echo url=https://github.com | git credential fill"
+"Configure git credentials - {{.forgejo.url}}" = "echo url=https://{{.forgejo.url}} | git credential fill"
 
 # Commands to run after anything
 [post_commands]

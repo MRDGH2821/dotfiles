@@ -16,9 +16,6 @@ dnf5:
   - mangohud
   - pam-u2f
   - pamu2fcfg
-  - python3
-  - python3-pip
-  - python3-virtualenv
   - sane-backends
   - shellcheck
   - shfmt

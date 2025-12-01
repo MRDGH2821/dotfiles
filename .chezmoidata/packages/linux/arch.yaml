@@ -30,7 +30,6 @@ extra:
   - github-cli
   - keepassxc
   - kleopatra
-  - libreoffice-fresh
   - mangohud
   - mcfly
   - pam-u2f

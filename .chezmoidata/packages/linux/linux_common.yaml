@@ -19,7 +19,6 @@ flatpak:
   - org.kde.klevernotes
 installer_url:
   - if ! type -P calibre >/dev/null 2>&1; then sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin; fi
-  - if ! type -P fnm >/dev/null 2>&1; then curl -fsSL https://fnm.vercel.app/install | bash; fi
   - if ! type -P mcfly >/dev/null 2>&1; then curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh | sudo sh -s -- --git cantino/mcfly; fi
   - if ! type -P oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin ; else oh-my-posh upgrade; fi
   - if ! type -P rclone >/dev/null 2>&1; then sudo -v ; curl -fsSL https://rclone.org/install.sh | sudo bash; else sudo rclone self-update; fi

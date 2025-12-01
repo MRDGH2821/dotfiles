@@ -41,8 +41,6 @@ winget:
   - mvdan.shfmt
   - OBSProject.OBSStudio
   - ONLYOFFICE.DesktopEditors
-  - Python.Python.3.10
-  - Schniz.fnm
   - sharkdp.bat
   - topgrade-rs.topgrade
   - universal.input-overlay

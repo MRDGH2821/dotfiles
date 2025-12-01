@@ -1,6 +1,5 @@
 aur:
   - espanso-wayland
-  - fnm
   - git-credential-oauth
   - gitkraken
   - heroic-games-launcher-bin
@@ -13,7 +12,6 @@ aur:
   - visual-studio-code-bin
 core:
   - gnupg
-  - python
 extra:
   - bat
   - btop
@@ -36,8 +34,6 @@ extra:
   - mangohud
   - mcfly
   - pam-u2f
-  - python-pip
-  - python-virtualenv
   - sane
   - shfmt
   - syncthing

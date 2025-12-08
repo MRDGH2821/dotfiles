@@ -10,9 +10,11 @@ dnf5:
   - gh
   - git
   - git-credential-oauth
+  - git-delta
   - gnupg2
   - keepassxc
   - kleopatra
+  - lazygit
   - mangohud
   - pam-u2f
   - pamu2fcfg

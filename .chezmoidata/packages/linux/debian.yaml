@@ -30,9 +30,11 @@ nala:
     - gh
     - git
     - git-credential-oauth
+    - git-delta
     - gnupg2
     - keepassxc
     - kleopatra
+    - lazygit
     - libpam-u2f
     - libqt6core6
     - libqt6gui6

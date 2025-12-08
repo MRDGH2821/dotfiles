@@ -10,6 +10,7 @@ winget:
   - calibre.calibre
   - cinnyapp.cinny-desktop
   - CosimoMatteini.DRA
+  - dandavison.delta
   - direnv.direnv
   - Discord.Discord
   - Docker.DockerDesktop
@@ -26,6 +27,7 @@ winget:
   - HermannSchinagl.LinkShellExtension
   - hickford.git-credential-oauth
   - JanDeDobbeleer.OhMyPosh
+  - JesseDuffield.lazygit
   - junegunn.fzf
   - KeePassXCTeam.KeePassXC
   - Klocman.BulkCrapUninstaller

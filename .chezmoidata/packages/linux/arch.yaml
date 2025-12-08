@@ -27,9 +27,11 @@ extra:
   - flatpak
   - fzf
   - git
+  - git-delta
   - github-cli
   - keepassxc
   - kleopatra
+  - lazygit
   - mangohud
   - mcfly
   - pam-u2f

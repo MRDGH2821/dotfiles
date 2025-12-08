@@ -4,6 +4,7 @@
 .prettierrc.json
 .trunk
 .vscode
+.zed
 **/*.src.ini
 node_modules
 package*.json

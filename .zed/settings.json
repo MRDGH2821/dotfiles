@@ -1,0 +1,21 @@
+{
+  "languages": {
+    "TOML": {
+      "format_on_save": "off",
+      "language_servers": ["tombi"],
+      "prettier": {
+        "allowed": false
+      },
+      "enable_language_server": true,
+      "formatter": "language_server"
+    }
+  },
+  "lsp": {
+    "tombi": {
+      "binary": {
+        "arguments": ["lsp", "-vv"],
+        "env": { "NO_COLOR": "true" }
+      }
+    }
+  }
+}

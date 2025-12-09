@@ -1,15 +1,21 @@
-// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
 [
   {
-    "label": "Start Lazygit",
     "command": "lazygit -p $ZED_WORKTREE_ROOT",
-    "hide": "on_success"
+    "hide": "on_success",
+    "label": "Start Lazygit"
   },
   {
     "args": ["prettier", ".", "--write"],
     "command": "npx",
     "hide": "on_success",
     "label": "Format all files with prettier",
+    "show_command": true
+  },
+  {
+    "args": ["json-sort-cli", "$ZED_DIRNAME", "$ZED_FILE"],
+    "command": "npx",
+    "hide": "on_success",
+    "label": "Sort JSON properties",
     "show_command": true
   }
 ]

@@ -16,22 +16,61 @@ mkdir -p "$appimagedir"
 ## Arch
 echo "Installing Arch packages"
 
-yay -Syu --needed {{ range $arch.core }} {{.}}{{end}} {{ range $arch.extra }} {{.}}{{end}} {{ range $arch.multilib }} {{.}}{{end}}
+{{/* Collect ALL packages (official repos + AUR) into one single variable */}}
+{{ $allPackages := list }}
 
-if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  yay -Syu --needed {{ range $arch.kde }} {{.}}{{ end }} {{ range $common.kde }} {{.}}{{ end }}
-fi
-
-{{ if eq .devicetype "tablet" }}
-echo "Installing tablet specific packages"
-yay -Syu --needed {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $arch.tablet_only }} {{.}}{{ end }}
+{{/* Add core packages */}}
+{{ range $arch.core }}
+  {{ $allPackages = append $allPackages . }}
 {{ end }}
 
+{{/* Add extra packages */}}
+{{ range $arch.extra }}
+  {{ $allPackages = append $allPackages . }}
+{{ end }}
+
+{{/* Add multilib packages */}}
+{{ range $arch.multilib }}
+  {{ $allPackages = append $allPackages . }}
+{{ end }}
+
+{{/* Conditionally add KDE packages */}}
+{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
+  {{ range $arch.kde }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+  {{ range $common.kde }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Conditionally add tablet packages */}}
+{{ if eq .devicetype "tablet" }}
+  echo "Adding tablet specific packages"
+  {{ range $common.tablet_only }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+  {{ range $arch.tablet_only }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Add AUR packages */}}
+{{ range $arch.aur }}
+  {{ $allPackages = append $allPackages . }}
+{{ end }}
+
+{{/* Install all packages in one command */}}
+{{ if $allPackages }}
 if type -P yay >/dev/null 2>&1; then
-  yay -Syu --needed {{ range $arch.aur }} {{.}}{{ end }}
+  yay -Syu --needed {{ join " " $allPackages }}
 elif type -P paru >/dev/null 2>&1; then
-  paru -Syu --needed {{ range $arch.aur }} {{.}}{{ end }}
+  paru -Syu --needed {{ join " " $allPackages }}
+else
+  echo "Error: Neither yay nor paru found. Please install an AUR helper first."
+  exit 1
 fi
+{{ end }}
 
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

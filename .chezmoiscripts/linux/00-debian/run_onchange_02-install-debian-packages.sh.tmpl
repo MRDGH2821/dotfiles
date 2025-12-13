@@ -16,17 +16,43 @@ mkdir -p "$appimagedir"
 ## Debian
 echo "Installing Debian Packages"
 
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.native }} {{.}}{{ end }}
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.url }}{{. | quote}} {{ end }}
+{{/* Collect ALL nala native packages into one variable */}}
+{{ $allNalaPackages := list }}
 
-if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $common.kde }} {{.}}{{ end }}
-  sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.kde }} {{.}}{{ end }}
-fi
+{{/* Add native packages */}}
+{{ range $debian.nala.native }}
+  {{ $allNalaPackages = append $allNalaPackages . }}
+{{ end }}
 
+{{/* Conditionally add KDE packages */}}
+{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
+  {{ range $common.kde }}
+    {{ $allNalaPackages = append $allNalaPackages . }}
+  {{ end }}
+  {{ range $debian.kde }}
+    {{ $allNalaPackages = append $allNalaPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Conditionally add tablet packages */}}
 {{ if eq .devicetype "tablet" }}
-echo "Installing tablet specific packages"
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $debian.tablet_only }} {{.}}{{ end }}
+  echo "Adding tablet specific packages"
+  {{ range $common.tablet_only }}
+    {{ $allNalaPackages = append $allNalaPackages . }}
+  {{ end }}
+  {{ range $debian.tablet_only }}
+    {{ $allNalaPackages = append $allNalaPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Install all nala native packages in one command */}}
+{{ if $allNalaPackages }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join " " $allNalaPackages }}
+{{ end }}
+
+{{/* Install nala URL packages separately */}}
+{{ if $debian.nala.url }}
+sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.url }}{{. | quote}} {{ end }}
 {{ end }}
 
 echo "Downloading packages via dra"

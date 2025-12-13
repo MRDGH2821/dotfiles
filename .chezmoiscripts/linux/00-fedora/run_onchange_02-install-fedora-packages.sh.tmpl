@@ -16,18 +16,40 @@ mkdir -p "$appimagedir"
 ## Fedora
 echo "Installing RPM packages"
 
-sudo dnf5 install -y --skip-unavailable {{ range $fedora.dnf5 }} {{.}}{{ end }}
-{{ range $fedora.dnf5_url }}
-sudo dnf5 install -y --skip-unavailable {{ . | quote }}
+{{/* Collect ALL dnf5 packages into one variable */}}
+{{ $allDnfPackages := list }}
+
+{{/* Add base dnf5 packages */}}
+{{ range $fedora.dnf5 }}
+  {{ $allDnfPackages = append $allDnfPackages . }}
 {{ end }}
 
-if [[ $XDG_SESSION_DESKTOP == "KDE" ]]; then
-  sudo dnf5 install -y --skip-unavailable {{ range $common.kde }} {{.}}{{ end }}
-fi
+{{/* Conditionally add KDE packages */}}
+{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
+  {{ range $common.kde }}
+    {{ $allDnfPackages = append $allDnfPackages . }}
+  {{ end }}
+{{ end }}
 
+{{/* Conditionally add tablet packages */}}
 {{ if eq .devicetype "tablet" }}
-echo "Installing tablet specific packages"
-sudo dnf5 install -y --skip-unavailable {{ range $common.tablet_only }} {{.}}{{ end }} {{ range $fedora.tablet_only }} {{.}}{{ end }}
+  echo "Adding tablet specific packages"
+  {{ range $common.tablet_only }}
+    {{ $allDnfPackages = append $allDnfPackages . }}
+  {{ end }}
+  {{ range $fedora.tablet_only }}
+    {{ $allDnfPackages = append $allDnfPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Install all dnf5 packages in one command */}}
+{{ if $allDnfPackages }}
+sudo dnf5 install -y --skip-unavailable {{ join " " $allDnfPackages }}
+{{ end }}
+
+{{/* Install dnf5 URL packages separately */}}
+{{ range $fedora.dnf5_url }}
+sudo dnf5 install -y --skip-unavailable {{ . | quote }}
 {{ end }}
 
 {{/* echo "Downloading packages via dra"

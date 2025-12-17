@@ -5,6 +5,15 @@ disable_changelog = true
 disable_bump_commit = true
 generate_mono_repository_global_tag = true
 generate_mono_repository_package_tags = true
-scopes = ["chezmoi", "cspell", "kde", "package", "script", "vscode", "zed"]
+scopes = [
+  "chezmoi",
+  "cspell",
+  "git",
+  "kde",
+  "package",
+  "script",
+  "vscode",
+  "zed"
+]
 skip_ci = "[skip ci]"
 skip_untracked = false

@@ -33,12 +33,13 @@ dnf5:
 dnf5_url:
   - https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
   - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
+terra:
+  - topgrade
 dra:
   bin:
     - cocogitto/cocogitto -a
     - devmatteini/dra -a
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
-    - topgrade-rs/topgrade --select topgrade-v{tag}-x86_64-unknown-linux-musl.tar.gz
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:

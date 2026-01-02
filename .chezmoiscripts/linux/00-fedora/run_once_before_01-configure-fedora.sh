@@ -53,6 +53,9 @@ sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:mkittler/Fedora_"${fedora_version}"/home:mkittler.repo
 echo "${LINE}"
 
+## Terra repo
+sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
 ## Login to gh cli
 gh auth login -p https -h github.com -w
 

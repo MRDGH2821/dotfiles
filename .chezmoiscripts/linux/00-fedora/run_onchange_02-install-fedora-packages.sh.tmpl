@@ -24,6 +24,11 @@ echo "Installing RPM packages"
   {{ $allDnfPackages = append $allDnfPackages . }}
 {{ end }}
 
+{{/* Add terra dnf5 packages */}}
+{{ range $fedora.terra }}
+  {{ $allDnfPackages = append $allDnfPackages . }}
+{{ end }}
+
 {{/* Conditionally add KDE packages */}}
 {{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
   {{ range $common.kde }}

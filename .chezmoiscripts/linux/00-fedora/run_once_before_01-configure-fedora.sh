@@ -43,21 +43,32 @@ echo "${LINE}"
 # Add Repositories
 echo "Setting up repositories"
 sudo dnf -y install dnf-plugins-core
-sudo dnf copr enable cuteneko/waydroid-helper
+sudo dnf copr enable cuteneko/waydroid-helper -y
 echo "${LINE}"
 
 ## RPM Fusion Free & Non-free repos
 fedora_version=$(rpm -E %fedora)
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"${fedora_version}".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"${fedora_version}".noarch.rpm -y
-sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
-sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:mkittler/Fedora_"${fedora_version}"/home:mkittler.repo
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 -y
+
+if [ ! -f /etc/yum.repos.d/home:mkittler.repo ]; then
+  sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:mkittler/Fedora_"${fedora_version}"/home:mkittler.repo -y
+else
+  echo "Syncthing repo already exists. Skipping..."
+fi
 echo "${LINE}"
 
 ## Terra repo
-sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+if ! dnf repolist terra >/dev/null 2>&1; then
+  sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+else
+  echo "Terra repo already exists. Skipping..."
+fi
+echo "${LINE}"
 
 ## Login to gh cli
 gh auth login -p https -h github.com -w
+echo "${LINE}"
 
 ## Download dra executable
 trap 'rm -fr /tmp/dra' EXIT

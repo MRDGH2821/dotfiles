@@ -26,10 +26,10 @@ fi
 # Display detected system
 if [[ ${DISTRO_NAME} == "debian" ]]; then
   echo "Debian ${DISTRO_VERSION} (${DISTRO_CODENAME}) detected!"
-  if [[ ${DISTRO_VERSION} == "12" ]]; then
-    echo "Running on Debian 12 (Bookworm)"
+  if [[ ${DISTRO_VERSION} == "13" ]]; then
+    echo "Running on Debian 13 (Trixie)"
   else
-    echo "Warning: This script is optimized for Debian 12, but detected version ${DISTRO_VERSION}"
+    echo "Warning: This script is optimized for Debian 13, but detected version ${DISTRO_VERSION}"
   fi
 elif [[ ${DISTRO_NAME} == "ubuntu" ]]; then
   echo "Ubuntu ${DISTRO_VERSION} (${DISTRO_CODENAME}) detected!"

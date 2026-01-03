@@ -10,6 +10,7 @@
 | 🔗    | Url               |
 | 🖼️    | AppImage          |
 | 🚫    | Skipped           |
+| 🔨    | Soar package      |
 
 <!-- sort-table -->
 

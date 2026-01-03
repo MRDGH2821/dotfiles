@@ -33,4 +33,7 @@ echo "${LINE}"
 # Install AUR helpers & Flatpak
 sudo pacman -S --noconfirm yay paru flatpak --needed
 
+# Install Soar
+curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
+
 echo "${LINE}"

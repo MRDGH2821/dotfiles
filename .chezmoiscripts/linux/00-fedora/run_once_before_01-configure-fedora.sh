@@ -83,3 +83,7 @@ cp "${filedir}"/dra "${HOME}"/.local/bin/
 rm -fr /tmp/dra
 
 echo "${LINE}"
+
+# Install Soar
+curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
+echo "${LINE}"

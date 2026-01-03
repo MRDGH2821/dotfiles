@@ -36,6 +36,9 @@ elif [[ ${DISTRO_NAME} == "ubuntu" ]]; then
 else
   echo "Debian-based system detected: ${DISTRO_NAME} ${DISTRO_VERSION}"
 fi
+
+echo "${LINE}"
+
 # Install Nala
 if command -v nala &>/dev/null; then
   echo "Nala is already installed. Skipping"
@@ -93,5 +96,9 @@ elif [[ ${DISTRO_NAME} == "ubuntu" ]]; then
 else
   echo "Warning: Waydroid Helper repository not available for ${DISTRO_NAME} ${DISTRO_VERSION}"
 fi
+echo "${LINE}"
 
+
+# Install Soar
+curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"

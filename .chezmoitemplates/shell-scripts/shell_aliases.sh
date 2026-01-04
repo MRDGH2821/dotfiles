@@ -18,9 +18,9 @@ alias dnf="dnf5"
 alias tb="nc termbin.com 9999"
 alias tf='touchfile'
 
-if command -v batcat &> /dev/null; then
+if command -v batcat &>/dev/null; then
   alias cat='batcat --paging=never'
-elif command -v bat &> /dev/null; then
+elif command -v bat &>/dev/null; then
   alias cat='bat --paging=never'
 fi
 

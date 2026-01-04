@@ -7,13 +7,16 @@ appimagedir="$HOME/AppImages/"
 mkdir -p "$bindir"
 mkdir -p "$appimagedir"
 
+# Debian
+
 {{ $debian := include ".chezmoidata/packages/linux/debian.yaml" | fromYaml }}
 {{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
+{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
 
 # Native packages
 
-{{ if or (eq .osid "linux-debian") (eq .osid "linux-ubuntu") (eq .osid "linux-debian ubuntu") (eq .osid "linux-ubuntu debian") }}
-## Debian
+{{ if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) }}
+
 echo "Installing Debian Packages"
 
 {{/* Collect ALL nala native packages into one variable */}}

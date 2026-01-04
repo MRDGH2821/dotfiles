@@ -31,8 +31,6 @@ if [[ ${DISTRO_NAME} == "debian" ]]; then
   else
     echo "Warning: This script is optimized for Debian 13, but detected version ${DISTRO_VERSION}"
   fi
-elif [[ ${DISTRO_NAME} == "ubuntu" ]]; then
-  echo "Ubuntu ${DISTRO_VERSION} (${DISTRO_CODENAME}) detected!"
 else
   echo "Debian-based system detected: ${DISTRO_NAME} ${DISTRO_VERSION}"
 fi
@@ -89,20 +87,16 @@ if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "12" ]]; then
   # shellcheck disable=SC2312
   curl -fsSL https://download.opensuse.org/repositories/home:CuteNeko:waydroid-helper/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_CuteNeko_waydroid-helper.gpg >/dev/null
   echo -e "Package: python3-pywayland\nPin: origin \"download.opensuse.org\"\nPin-Priority: 1001" | sudo tee /etc/apt/preferences.d/99-pywayland.pref
-elif [[ ${DISTRO_NAME} == "ubuntu" ]]; then
-  echo "Setting up Waydroid Helper repository for Ubuntu..."
-  sudo add-apt-repository ppa:ichigo666/ppa -y
-  echo -e "Package: python3-pywayland\nPin: origin \"ppa.launchpadcontent.net\"\nPin-Priority: 1001" | sudo tee /etc/apt/preferences.d/99-ichigo666-ppa.pref
-else
-  echo "Warning: Waydroid Helper repository not available for ${DISTRO_NAME} ${DISTRO_VERSION}"
 fi
 echo "${LINE}"
 
 ## debian.griffo.io - Unofficial Repository for Latest Development Tools
+# shellcheck disable=SC2312
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
-
+# shellcheck disable=SC2312
 echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
 
 # Install Soar
+# shellcheck disable=SC2312
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"

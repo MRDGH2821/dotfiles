@@ -45,6 +45,7 @@ extra:
   - unzip
   - uv
   - vlc
+  - zed
   - zoxide
   - zsh
 kde:

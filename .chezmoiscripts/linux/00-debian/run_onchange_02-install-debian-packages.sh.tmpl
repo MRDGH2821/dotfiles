@@ -55,11 +55,13 @@ sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join " "
 sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.url }}{{. | quote}} {{ end }}
 {{ end }}
 
+# dra
+
 echo "Downloading packages via dra"
-{{ range $debian.dra.appimage }}
-echo "Downloading {{.}}"
-dra download -o "$appimagedir" -i {{.}}
-{{ end }}
+{{/* range $debian.dra.appimage */}}
+{{/* echo "Downloading {{.}}" */}}
+{{/* dra download -o "$appimagedir" -i {{.}} */}}
+{{/* end */}}
 
 {{ range $debian.dra.bin }}
 echo "Downloading {{.}}"
@@ -71,10 +73,12 @@ echo "Downloading {{.}}"
 sudo dra download -i {{.}}
 {{ end }}
 
-{{ range $debian.dra.raw }}
-echo "Downloading {{.}}"
-dra download {{.}}
-{{ end }}
+{{/* range $debian.dra.raw */}}
+{{/* echo "Downloading {{.}}" */}}
+{{/* dra download {{.}} */}}
+{{/* end */}}
+
+# Flatpaks
 
 echo "Installing Flatpak packages"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -86,6 +90,10 @@ echo "Installing self installing packages"
 {{ range $debian.installer_url }}
 bash -c {{ . | quote }}
 {{ end }}
+
+# Soar Packages
+echo "Installing Soar Packages"
+soar install {{ range $debian.soar }} {{.}} {{ end }}
 
 {{ else }}
 echo "This script is only for Debian based systems. Exiting..."

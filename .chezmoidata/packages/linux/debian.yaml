@@ -1,6 +1,5 @@
 dra:
   bin:
-    - cocogitto/cocogitto -a
     - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
   package:
     - devmatteini/dra --select dra_{tag}-1_amd64.deb
@@ -8,16 +7,16 @@ dra:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic_{tag}_amd64.deb
     - sharkdp/bat --select bat_{tag}_amd64.deb
     - topgrade-rs/topgrade -a
-  raw:
-    - tealdeer-rs/tealdeer --select tealdeer-linux-x86_64-musl -o $HOME/.local/bin/ -i && cd $HOME/.local/bin/ && mv tealdeer-linux-x86_64-musl tldr
 flatpak:
   - org.onlyoffice.desktopeditors
   - io.github.radiolamp.mangojuice
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
-  - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
 kde:
   - syncthingtray-kde-plasma
+soar:
+  - cocogitto#github.com.cocogitto.cocogitto
+  - tldr#github.com.tealdeer-rs.tealdeer
 nala:
   native:
     - apparmor-utils
@@ -49,14 +48,15 @@ nala:
     - syncthing
     - syncthingtray
     - system-config-printer
+    - uv
     - vlc
     - zed
+    - zoxide
     - zsh
   url:
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-    - https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
     - https://discord.com/api/download?platform=linux&format=deb
-    - https://github.com/devmatteini/dra/releases/download/0.6.2/dra_0.6.2-1_amd64.deb
+    - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
     - https://release.gitkraken.com/linux/gitkraken-amd64.deb
 tablet_only:
   - waydroid

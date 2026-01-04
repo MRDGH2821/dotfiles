@@ -1,0 +1,26 @@
+# Unless stated, match `.chezmoi.osRelease.id`
+debian:
+  - debian
+  - kali
+  - linuxmint
+debian_codes:
+  # debian has `.chezmoi.osRelease.versionCodename` , explicitly match values
+  - gigi
+  - kali-rolling
+  - trixie
+ubuntu:
+  - linuxmint
+  - pop
+  - ubuntu
+  - neon
+ubuntu_codes:
+  # ubuntu has `.chezmoi.osRelease.ubuntuCodename` , explicitly match values
+  - jammy
+  - noble
+fedora:
+  - fedora
+  - nobara
+arch:
+  - arch
+  - cachyos
+  - endeavouros

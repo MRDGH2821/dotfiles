@@ -55,20 +55,11 @@
 {{- end -}}
 {{- $gpuchoices := list "nvidia" "amd" "none" -}}
 {{- $gpu := promptChoiceOnce . "gpu" "GPU Vendor" $gpuchoices $gpu -}}
-{{/* Detect OS Type */}}
-{{- $osid := .chezmoi.os -}}
-{{- if hasKey .chezmoi.osRelease "id" -}}
-{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
-{{- end -}}
-{{- if hasKey .chezmoi.osRelease "idLike" -}}
-{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.idLike -}}
-{{- end -}}
 encryption = "gpg"
 [data]
 email = {{ $email | quote }}
 username = "MRDGH2821"
 profile = "personal"
-osid = {{ $osid | quote }}
 pcloudfolder = {{ $pcloudfolder | quote }}
 devicetype = {{ $devicetype | quote }}
 gpu = {{ $gpu | quote }}

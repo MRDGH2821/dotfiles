@@ -2,15 +2,15 @@
 
 ## Notation
 
-| Emoji | Meaning           |
-| ----- | ----------------- |
-| 👍    | Native package    |
-| 💻    | Binary executable |
-| 📦    | Flatpak           |
-| 🔗    | Url               |
-| 🖼️    | AppImage          |
-| 🚫    | Skipped           |
-| 🔨    | Soar package      |
+| Emoji | Meaning               |
+| ----- | --------------------- |
+| 👍    | Native/Distro package |
+| 💻    | Binary executable     |
+| 📦    | Flatpak               |
+| 🔗    | Url                   |
+| 🖼️    | AppImage              |
+| 🚫    | Skipped               |
+| 🔨    | Soar package          |
 
 <!-- sort-table -->
 

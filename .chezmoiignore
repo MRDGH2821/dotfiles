@@ -45,7 +45,7 @@ dot_config/paru/**
 .chezmoidata/packages/linux/debian.yaml
 {{ end }}
 
-{{- if or (not (hasKey .chezmoi.osRelease "versionCodename")) (not (has .chezmoi.osRelease.versionCodename $distros.ubuntu_codes)) -}}
+{{- if or (not (hasKey .chezmoi.osRelease "ubuntuCodename")) (not (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes)) -}}
 .chezmoiscripts/linux/00-ubuntu/**
 .chezmoidata/packages/linux/ubuntu.yaml
 {{ end }}

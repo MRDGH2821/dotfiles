@@ -23,10 +23,10 @@ binary_only = false
 # Map of package names to their specifications.
 # Supports both simple string form (version) and detailed table form.
 [packages]
-rclone-browser = { version = "1.8.0", pkg_type = "appimage", url = "https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage" }
-use-via = { version = "3.0.0", pkg_type = "appimage", url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage" }
-# savestate = { version = "2.1b", pkg_type = "archive", url = "https://github.com/Matteo842/SaveState/releases/download/v2.1b/SaveState_linux.tar.gz" }
 pcloud = "*"
+rclone-browser = { version = "1.8.0", pkg_type = "appimage", url = "https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage" }
+# savestate = { version = "2.1b", pkg_type = "archive", url = "https://github.com/Matteo842/SaveState/releases/download/v2.1b/SaveState_linux.tar.gz" }
+use-via = { version = "3.0.0", pkg_type = "appimage", url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage" }
 
 {{ if eq .devicetype "laptop" }}
 pince = { version = "0.4.5" , pkg_type = "appimage", url = "https://github.com/korcankaraokcu/PINCE/releases/download/v0.4.5/PINCE-x86_64.AppImage" }
@@ -34,7 +34,8 @@ pince = { version = "0.4.5" , pkg_type = "appimage", url = "https://github.com/k
 
 {{ if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) }}
 cocogitto = "*"
-tldr = "*"
 ludusavi = { version = "0.30.0", pkg_type = "archive", url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz" }
 mcfly = "*"
+rclone#github.com.rclone.rclone.stable = "*"
+tldr = "*"
 {{ end }}

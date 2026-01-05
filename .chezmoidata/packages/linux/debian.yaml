@@ -1,12 +1,10 @@
 dra:
-  bin:
-    - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
   package:
     - devmatteini/dra --select dra_{tag}-1_amd64.deb
     - espanso/espanso --select espanso-debian-wayland-amd64.deb
-    - Heroic-Games-Launcher/HeroicGamesLauncher --select heroic_{tag}_amd64.deb
+    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic_{tag}_amd64.deb
     - sharkdp/bat --select bat_{tag}_amd64.deb
-    - topgrade-rs/topgrade -a
+    - topgrade-rs/topgrade --select topgrade_{tag}-1_amd64.deb
 flatpak:
   - org.onlyoffice.desktopeditors
   - io.github.radiolamp.mangojuice
@@ -14,15 +12,11 @@ installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 kde:
   - syncthingtray-kde-plasma
-soar:
-  - cocogitto#github.com.cocogitto.cocogitto
-  - tldr#github.com.tealdeer-rs.tealdeer
 nala:
   native:
     - apparmor-utils
     - btop
     - direnv
-    - fastfetch
     - firefox
     - flatpak
     - fzf
@@ -42,7 +36,7 @@ nala:
     - mangohud
     - mangohud:i386
     - pamu2fcfg
-    - sane
+    - sane-utils
     - shellcheck
     - shfmt
     - syncthing
@@ -57,7 +51,12 @@ nala:
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
-    - https://release.gitkraken.com/linux/gitkraken-amd64.deb
+    - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
+    - https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
 tablet_only:
   - waydroid
   - waydroid-helper
+laptop_only:
+  dra:
+    package:
+      - TibixDev/winboat -a

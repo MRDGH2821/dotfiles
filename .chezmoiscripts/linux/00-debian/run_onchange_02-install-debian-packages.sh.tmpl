@@ -66,10 +66,10 @@ echo "Downloading packages via dra"
 {{/* dra download -o "$appimagedir" -i {{.}} */}}
 {{/* end */}}
 
-{{ range $debian.dra.bin }}
-echo "Downloading {{.}}"
-dra download -o "$bindir" -i {{.}}
-{{ end }}
+{{/* range $debian.dra.bin */}}
+{{/* echo "Downloading {{.}}" */}}
+{{/* dra download -o "$bindir" -i {{.}} */}}
+{{/* end */}}
 
 {{ range $debian.dra.package }}
 echo "Downloading {{.}}"
@@ -93,10 +93,6 @@ echo "Installing self installing packages"
 {{ range $debian.installer_url }}
 bash -c {{ . | quote }}
 {{ end }}
-
-# Soar Packages
-echo "Installing Soar Packages"
-soar install {{ range $debian.soar }} {{.}} {{ end }}
 
 {{ else }}
 echo "This script is only for Debian based systems. Exiting..."

@@ -9,7 +9,6 @@ aur:
   - parui
   - shellcheck-bin
   - topgrade
-  - visual-studio-code-bin
 core:
   - gnupg
 extra:
@@ -35,6 +34,7 @@ extra:
   - mangohud
   - mcfly
   - pam-u2f
+  - rclone
   - sane
   - shfmt
   - syncthing
@@ -56,5 +56,10 @@ multilib:
   - lib32-mangohud
   - steam
 tablet_only:
-  - waydroid
-  - waydroid-helper
+  aur:
+    - waydroid-helper
+  extra:
+    - waydroid
+laptop_only:
+  aur:
+    - winboat-bin

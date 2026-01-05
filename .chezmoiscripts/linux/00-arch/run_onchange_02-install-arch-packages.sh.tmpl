@@ -50,7 +50,18 @@ echo "Installing Arch packages"
   {{ range $common.tablet_only }}
     {{ $allPackages = append $allPackages . }}
   {{ end }}
-  {{ range $arch.tablet_only }}
+  {{ range $arch.tablet_only.aur }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+  {{ range $arch.tablet_only.extra }}
+    {{ $allPackages = append $allPackages . }}
+  {{ end }}
+{{ end }}
+
+{{/* Conditionally add laptop packages */}}
+{{ if eq .devicetype "laptop" }}
+  echo "Adding laptop specific packages"
+  {{ range $arch.laptop_only.aur }}
     {{ $allPackages = append $allPackages . }}
   {{ end }}
 {{ end }}

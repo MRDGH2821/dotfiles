@@ -57,17 +57,9 @@ echo "${LINE}"
 # Add Repositories
 echo "Setting up repositories for ${DISTRO_NAME} ${DISTRO_VERSION}"
 
-## KeePassXC
-sudo add-apt-repository ppa:phoerious/keepassxc -y
-echo "${LINE}"
-
 ## Waydroid
 # shellcheck disable=SC2312
 curl https://repo.waydro.id | sudo bash
-echo "${LINE}"
-
-## Fastfetch
-sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 echo "${LINE}"
 
 ## GitHub CLI
@@ -81,9 +73,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubc
 echo "${LINE}"
 
 ## Waydroid Helper
-if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "12" ]]; then
-  echo "Setting up Waydroid Helper repository for Debian 12..."
-  echo 'deb http://download.opensuse.org/repositories/home:/CuteNeko:/waydroid-helper/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:CuteNeko:waydroid-helper.list
+if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "13" ]]; then
+  echo "Setting up Waydroid Helper repository for Debian 13..."
+  echo 'deb http://download.opensuse.org/repositories/home:/CuteNeko:/waydroid-helper/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/home:CuteNeko:waydroid-helper.list
   # shellcheck disable=SC2312
   curl -fsSL https://download.opensuse.org/repositories/home:CuteNeko:waydroid-helper/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_CuteNeko_waydroid-helper.gpg >/dev/null
   echo -e "Package: python3-pywayland\nPin: origin \"download.opensuse.org\"\nPin-Priority: 1001" | sudo tee /etc/apt/preferences.d/99-pywayland.pref
@@ -95,6 +87,24 @@ echo "${LINE}"
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
 # shellcheck disable=SC2312
 echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
+
+## Firefox
+sudo install -d -m 0755 /etc/apt/keyrings
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc >/dev/null
+
+cat <<EOF | sudo tee /etc/apt/sources.list.d/mozilla.sources
+Types: deb
+URIs: https://packages.mozilla.org/apt
+Suites: mozilla
+Components: main
+Signed-By: /etc/apt/keyrings/packages.mozilla.org.asc
+EOF
+
+echo '
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+' | sudo tee /etc/apt/preferences.d/mozilla
 
 # Install Soar
 # shellcheck disable=SC2312

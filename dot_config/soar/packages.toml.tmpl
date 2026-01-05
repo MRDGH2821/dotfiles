@@ -1,0 +1,40 @@
+# Soar Declarative Package Configuration
+# Run `soar apply` to install packages defined here.
+# Run `soar apply --prune` to also remove packages not listed.
+#
+# Package format:
+#   package_name = "*"                    # Latest version
+#   package_name = "1.2.3"                # Specific version (pinned)
+#   package_name = { version = "1.2" }    # Same as above
+#   package_name = { pkg_id = "pkg-bin", repo = "bincache" }
+#   package_name = { pinned = true, portable = { home = "~/.pkg" } }
+
+{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
+
+# Default settings applied to all packages unless overridden.
+#
+# Default settings for all packages.
+[defaults]
+# Default profile to use for installations.
+profile = "default"
+# Whether to install binary only (exclude logs, desktop files, etc).
+binary_only = false
+
+# Map of package names to their specifications.
+# Supports both simple string form (version) and detailed table form.
+[packages]
+rclone-browser = { version = "1.8.0", pkg_type = "appimage", url = "https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage" }
+use-via = { version = "3.0.0", pkg_type = "appimage", url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage" }
+# savestate = { version = "2.1b", pkg_type = "archive", url = "https://github.com/Matteo842/SaveState/releases/download/v2.1b/SaveState_linux.tar.gz" }
+pcloud = "*"
+
+{{ if eq .devicetype "laptop" }}
+pince = { version = "0.4.5" , pkg_type = "appimage", url = "https://github.com/korcankaraokcu/PINCE/releases/download/v0.4.5/PINCE-x86_64.AppImage" }
+{{ end }}
+
+{{ if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) }}
+cocogitto = "*"
+tldr = "*"
+ludusavi = { version = "0.30.0", pkg_type = "archive", url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz" }
+mcfly = "*"
+{{ end }}

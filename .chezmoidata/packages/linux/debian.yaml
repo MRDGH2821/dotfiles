@@ -6,8 +6,8 @@ dra:
     - sharkdp/bat --select bat_{tag}_amd64.deb
     - topgrade-rs/topgrade --select topgrade_{tag}-1_amd64.deb
 flatpak:
-  - org.onlyoffice.desktopeditors
   - io.github.radiolamp.mangojuice
+  - org.onlyoffice.desktopeditors
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 kde:
@@ -48,10 +48,10 @@ nala:
     - zoxide
     - zsh
   url:
+    - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
-    - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
     - https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
 tablet_only:
   - waydroid

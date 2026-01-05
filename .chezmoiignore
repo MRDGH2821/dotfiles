@@ -29,13 +29,13 @@ readonly_Documents/PowerShell/Microsoft.PowerShell_profile.ps1
 readonly_Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
 {{ end }}
 
-{{- if and (hasKey .chezmoi.osRelease "idLike") (hasKey .chezmoi.osRelease "id") (ne .chezmoi.osRelease.idLike "arch") (not (has .chezmoi.osRelease.id $distros.arch)) -}}
+{{- if or (hasKey .chezmoi.osRelease "idLike") (hasKey .chezmoi.osRelease "id") (ne .chezmoi.osRelease.idLike "arch") (not (has .chezmoi.osRelease.id $distros.arch)) -}}
 dot_config/paru/**
 .chezmoiscripts/linux/00-arch/**
 .chezmoidata/packages/linux/arch.yaml
 {{ end }}
 
-{{- if and (hasKey .chezmoi.osRelease "idLike") (hasKey .chezmoi.osRelease "id") (ne .chezmoi.osRelease.idLike "fedora") (not (has .chezmoi.osRelease.id $distros.fedora)) -}}
+{{- if or (hasKey .chezmoi.osRelease "idLike") (hasKey .chezmoi.osRelease "id") (ne .chezmoi.osRelease.idLike "fedora") (not (has .chezmoi.osRelease.id $distros.fedora)) -}}
 .chezmoiscripts/linux/00-fedora/**
 .chezmoidata/packages/linux/fedora.yaml
 {{ end }}

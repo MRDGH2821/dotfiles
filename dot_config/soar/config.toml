@@ -94,7 +94,7 @@ url = "https://meta.pkgforge.dev/external/cargo-bins/x86_64-Linux.json.zstd"
 [[repositories]]
 name = "ivan-hc-am"
 url = "https://meta.pkgforge.dev/external/am/x86_64-Linux.json.zstd"
-
+desktop_integration = true
 
 # [[repositories]]
 # name = "appimagehub"

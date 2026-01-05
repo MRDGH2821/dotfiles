@@ -59,4 +59,4 @@ tablet_only:
 laptop_only:
   dra:
     package:
-      - TibixDev/winboat -a
+      - TibixDev/winboat --select winboat-{tag}-amd64.deb

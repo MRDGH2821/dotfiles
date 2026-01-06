@@ -7,13 +7,16 @@ appimagedir="$HOME/AppImages/"
 mkdir -p "$bindir"
 mkdir -p "$appimagedir"
 
+# Arch
+
 {{ $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml }}
 {{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
+{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
 
 # Native packages
 
-{{ if eq .osid "linux-arch" }}
-## Arch
+{{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch) }}
+
 echo "Installing Arch packages"
 
 {{/* Collect ALL packages (official repos + AUR) into one single variable */}}

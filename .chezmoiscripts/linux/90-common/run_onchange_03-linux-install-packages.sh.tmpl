@@ -9,10 +9,9 @@ mkdir -p "$appimagedir"
 
 {{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
 {{ $python := include ".chezmoidata/packages/python3.yaml" | fromYaml }}
-{{ $vscode := include ".chezmoidata/packages/vscode.yaml" | fromYaml }}
 
 # Executables from GitHub
-echo "Installing executables from GitHub"
+# echo "Installing executables from GitHub"
 
 ## Appimages
 echo "Installing AppImages"
@@ -44,15 +43,3 @@ bash -c {{ . | quote }}
 
 echo "Installing Python CLI packages"
 uv tool install {{ range $python.cli }} {{.}}{{ end }}
-
-# VS Code Extensions
-
-installed_extensions=$(code --list-extensions)
-
-{{ range $vscode.extensions }}
-if [[ ! "${installed_extensions[*]}" =~ {{.}} ]]; then
-  code --install-extension {{.}}
-else
-  echo "{{.}} is already installed"
-fi
-{{ end }}

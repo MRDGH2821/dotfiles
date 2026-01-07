@@ -1,7 +1,7 @@
+*.ps1.tmpl
 *.sh.tmpl
 *.toml.tmpl
-*.ps1.tmpl
-dot_bash_aliases.tmpl
 configure_git.tmpl
+dot_bash_aliases.tmpl
 private_dot_zsh_aliases.tmpl
 private_spectaclerc.tmpl

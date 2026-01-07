@@ -23,7 +23,7 @@ echo "Installing RPM packages"
 {{ $allDnfPackages := list }}
 
 {{/* Add base dnf5 packages */}}
-{{ range $fedora.dnf5 }}
+{{ range $fedora.dnf5.native }}
   {{ $allDnfPackages = append $allDnfPackages . }}
 {{ end }}
 
@@ -56,7 +56,7 @@ sudo dnf5 install -y --skip-unavailable {{ join " " $allDnfPackages }}
 {{ end }}
 
 {{/* Install dnf5 URL packages separately */}}
-{{ range $fedora.dnf5_url }}
+{{ range $fedora.dnf5.url }}
 sudo dnf5 install -y --skip-unavailable {{ . | quote }}
 {{ end }}
 

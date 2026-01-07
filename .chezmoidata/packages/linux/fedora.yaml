@@ -1,46 +1,47 @@
 dnf5:
-  - bat
-  - btop
-  - direnv
-  - discord
-  - fastfetch
-  - firefox
-  - flatpak
-  - fzf
-  - gh
-  - git
-  - git-credential-oauth
-  - git-delta
-  - gnupg2
-  - keepassxc
-  - kleopatra
-  - lazygit
-  - mangohud
-  - pam-u2f
-  - pamu2fcfg
-  - rclone
-  - sane-backends
-  - shellcheck
-  - shfmt
-  - steam
-  - syncthing
-  - syncthingplasmoid-qt6
-  - syncthingtray-qt6
-  - system-config-printer
-  - tealdeer
-  - uv
-  - vlc
-  - zed
-  - zoxide
-  - zsh
-dnf5_url:
-  - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
+  native:
+    - bat
+    - btop
+    - direnv
+    - discord
+    - fastfetch
+    - firefox
+    - flatpak
+    - fzf
+    - gh
+    - git
+    - git-credential-oauth
+    - git-delta
+    - gnupg2
+    - keepassxc
+    - kleopatra
+    - lazygit
+    - mangohud
+    - pam-u2f
+    - pamu2fcfg
+    - rclone
+    - sane-backends
+    - shellcheck
+    - shfmt
+    - steam
+    - syncthing
+    - syncthingplasmoid-qt6
+    - syncthingtray-qt6
+    - system-config-printer
+    - tealdeer
+    - uv
+    - vlc
+    - zed
+    - zoxide
+    - zsh
+  url:
+    - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:
-  - org.onlyoffice.desktopeditors
   - io.github.radiolamp.mangojuice
+  - org.onlyoffice.desktopeditors
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 laptop_only:

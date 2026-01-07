@@ -5,26 +5,26 @@
 {{- /* KeePassXC DB validation with 3 attempts */ -}}
 {{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file)" -}}
 {{- if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
-{{-   $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Attempt 2)" -}}
-{{-   if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
-{{-     $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Final Attempt)" -}}
-{{-     if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
-{{-       warnf "KeePassXC database must be a file path. Failed after 3 attempts.\n" -}}
-{{-       exit 1 -}}
-{{-     end -}}
-{{-   end -}}
+  {{- $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Attempt 2)" -}}
+  {{- if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
+    {{- $keepassxcdb = promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file, Final Attempt)" -}}
+    {{- if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
+      {{- warnf "KeePassXC database must be a file path. Failed after 3 attempts.\n" -}}
+      {{- exit 1 -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- /* pCloud folder validation with 3 attempts */ -}}
 {{- $pcloudfolder := promptStringOnce . "pcloudfolder" "pCloud Local Folder Path" -}}
 {{- if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
-{{-   $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Attempt 2)" -}}
-{{-   if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
-{{-     $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Final Attempt)" -}}
-{{-     if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
-{{-       warnf "Failed to get valid pCloud directory path after 3 attempts.\n" -}}
-{{-       exit 1 -}}
-{{-     end -}}
-{{-   end -}}
+  {{- $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Attempt 2)" -}}
+  {{- if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
+    {{- $pcloudfolder = promptStringOnce . "pcloudfolder" "pCloud Local Folder Path (Final Attempt)" -}}
+    {{- if or (not (stat $pcloudfolder)) (not (stat $pcloudfolder).isDir) -}}
+      {{- warnf "Failed to get valid pCloud directory path after 3 attempts.\n" -}}
+      {{- exit 1 -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 {{/* Ask Device Type */}}
 {{- $devicechoices := list "laptop" "tablet" -}}
@@ -32,23 +32,23 @@
 {{/* Ask GPU Type */}}
 {{- $gpu := "" -}}
 {{- if eq .chezmoi.os "linux" -}}
-{{-   $detected_gpu := output "bash" "-c" "lspci | grep -i 'vga\\|3d\\|2d'" | trim -}}
-{{-   if contains "NVIDIA" $detected_gpu -}}
-{{-     $gpu = "nvidia" -}}
-{{-   else if contains "AMD" $detected_gpu -}}
-{{-     $gpu = "amd" -}}
-{{-   else -}}
-{{-     $gpu = "none" -}}
-{{-   end -}}
+  {{- $detected_gpu := output "bash" "-c" "lspci | grep -i 'vga\\|3d\\|2d'" | trim -}}
+  {{- if contains "NVIDIA" $detected_gpu -}}
+    {{- $gpu = "nvidia" -}}
+  {{- else if contains "AMD" $detected_gpu -}}
+    {{- $gpu = "amd" -}}
+  {{- else -}}
+    {{- $gpu = "none" -}}
+  {{- end -}}
 {{- else if eq .chezmoi.os "windows" -}}
-{{-   $detected_gpu := output "powershell" "-NoProfile" "-NonInteractive" "-Command" "(Get-WmiObject Win32_VideoController).Name" | trim -}}
-{{-   if contains "NVIDIA" $detected_gpu -}}
-{{-     $gpu = "nvidia" -}}
-{{-   else if contains "AMD" $detected_gpu -}}
-{{-     $gpu = "amd" -}}
-{{-   else -}}
-{{-     $gpu = "none" -}}
-{{-   end -}}
+  {{- $detected_gpu := output "powershell" "-NoProfile" "-NonInteractive" "-Command" "(Get-WmiObject Win32_VideoController).Name" | trim -}}
+  {{- if contains "NVIDIA" $detected_gpu -}}
+    {{- $gpu = "nvidia" -}}
+  {{- else if contains "AMD" $detected_gpu -}}
+    {{- $gpu = "amd" -}}
+  {{- else -}}
+    {{- $gpu = "none" -}}
+  {{- end -}}
 {{- end -}}
 {{- $gpuchoices := list "nvidia" "amd" "none" -}}
 {{- $gpu := promptChoiceOnce . "gpu" "GPU Vendor" $gpuchoices $gpu -}}

@@ -43,6 +43,10 @@ flatpak:
   - io.github.radiolamp.mangojuice
 installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+laptop_only:
+  dra:
+    package:
+      - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
 tablet_only:
   - waydroid
   - waydroid-helper

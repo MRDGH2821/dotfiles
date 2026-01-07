@@ -32,12 +32,7 @@ search_limit = 20
 cross_repo_updates = false
 # Glob patterns for package files that should be included during install.
 # Default: ["!*.log", "!SBUILD", "!*.json", "!*.version"]
-install_patterns = [
-  "!*.log",
-  "!SBUILD",
-  "!*.json",
-  "!*.version",
-]
+install_patterns = ["!*.log", "!SBUILD", "!*.json", "!*.version"]
 
 # A profile defines a local package store and its configuration.
 [profile.default]

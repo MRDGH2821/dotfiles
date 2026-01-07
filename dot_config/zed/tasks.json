@@ -7,14 +7,14 @@
   {
     "args": ["prettier", ".", "--write"],
     "command": "npx",
-    "hide": "on_success",
+    "hide": "never",
     "label": "Format all files with prettier",
     "show_command": true
   },
   {
     "args": ["json-sort-cli", "$ZED_DIRNAME", "$ZED_FILE"],
     "command": "npx",
-    "hide": "on_success",
+    "hide": "never",
     "label": "Sort JSON properties",
     "show_command": true
   }

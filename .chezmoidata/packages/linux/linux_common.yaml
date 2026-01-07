@@ -1,9 +1,3 @@
-dra:
-  appimage:
-    - kapitainsky/RcloneBrowser -a
-    - the-via/releases --select via-{tag}-linux.AppImage
-  bin:
-    - Matteo842/SaveState --select SaveState-{tag}-Linux.zip
 flatpak:
   - app.grayjay.Grayjay
   - com.github.tchx84.Flatseal

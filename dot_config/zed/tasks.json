@@ -12,10 +12,10 @@
     "show_command": true
   },
   {
-    "args": ["json-sort-cli", "$ZED_DIRNAME", "$ZED_FILE"],
-    "command": "npx",
+    "args": ["-i", "'sort_keys(..)'", "$ZED_FILE"],
+    "command": "yq",
     "hide": "never",
-    "label": "Sort JSON properties",
+    "label": "Sort JSON/YAML properties",
     "show_command": true
   }
 ]

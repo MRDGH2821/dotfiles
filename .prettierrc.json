@@ -9,6 +9,7 @@
       }
     }
   ],
+  "plugins": ["prettier-plugin-go-template", "prettier-plugin-toml"],
   "tabWidth": 2,
   "useTabs": false
 }

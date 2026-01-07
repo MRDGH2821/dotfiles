@@ -1,0 +1,27 @@
+{
+  "types": [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "perf",
+    "refactor",
+    "style",
+    "test"
+  ],
+  "scopes": [
+    "chezmoi",
+    "cspell",
+    "git",
+    "kde",
+    "package",
+    "script",
+    "vscode",
+    "zed"
+  ],
+  "githubAction": {
+    "includeCommits": true,
+    "includePullRequest": true,
+    "updatePullRequestLabels": true
+  }
+}

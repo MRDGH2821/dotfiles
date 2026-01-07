@@ -1,6 +1,6 @@
 **/*.src.ini
+.commit-me.json
 .cspell.json
-.cz.yaml
 .editorconfig
 .gitignore
 .pre-commit-config.yaml

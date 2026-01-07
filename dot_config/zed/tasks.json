@@ -12,7 +12,7 @@
     "show_command": true
   },
   {
-    "args": ["-i", "'sort_keys(..)'", "$ZED_FILE"],
+    "args": ["-i", "-P", "'sort_keys(..)'", "$ZED_FILE"],
     "command": "yq",
     "hide": "never",
     "label": "Sort JSON/YAML properties",

@@ -29,6 +29,7 @@ echo "Installing Debian Packages"
 
 {{/* Conditionally add KDE packages */}}
 {{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
+  {{ println "Adding KDE Packages" }}
   {{ range $common.kde }}
     {{ $allNalaPackages = append $allNalaPackages . }}
   {{ end }}
@@ -39,7 +40,7 @@ echo "Installing Debian Packages"
 
 {{/* Conditionally add tablet packages */}}
 {{ if eq .devicetype "tablet" }}
-  echo "Adding tablet specific packages"
+  {{ println "Adding tablet specific packages" }}
   {{ range $common.tablet_only }}
     {{ $allNalaPackages = append $allNalaPackages . }}
   {{ end }}
@@ -71,7 +72,9 @@ echo "Downloading packages via dra"
 {{/* dra download -o "$bindir" -i {{.}} */}}
 {{/* end */}}
 
-{{ range $debian.dra.package }}
+{{ $dra_packages = concat $debian.dra.package $debian.laptop_only.dra.package }}
+
+{{ range $dra_packages }}
 echo "Downloading {{.}}"
 sudo dra download -i {{.}}
 {{ end }}

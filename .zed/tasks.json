@@ -5,5 +5,12 @@
     "hide": "on_success",
     "label": "Sort Markdown tables",
     "show_command": true
+  },
+  {
+    "allow_concurrent_runs": false,
+    "args": ["apply"],
+    "command": "chezmoi",
+    "hide": "on_success",
+    "label": "Apply chezmoi"
   }
 ]

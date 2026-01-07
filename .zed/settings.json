@@ -17,5 +17,9 @@
         "env": { "NO_COLOR": "true" }
       }
     }
+  },
+  "file_types": {
+    "Go Text Template": ["tmpl", ".chezmoiignore"],
+    "JSON": ["**/.zed/*.json"]
   }
 }

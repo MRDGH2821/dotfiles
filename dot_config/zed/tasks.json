@@ -17,5 +17,22 @@
     "hide": "never",
     "label": "Sort JSON/YAML properties",
     "show_command": true
+  },
+  {
+    "allow_concurrent_runs": false,
+    "command": "find . \\( -name '*.yaml' -o -name '*.yml' -o -name '*.json' \\) -exec yq -i -P 'sort_keys(..)' {} \\;",
+    "hide": "never",
+    "label": "Sort JSON/YAML properties of all files in workspace",
+    "shell": {
+      "program": "bash"
+    },
+    "show_command": true
+  },
+  {
+    "args": ["toml-sort", "-i", "-a", "$ZED_FILE"],
+    "command": "uvx",
+    "hide": "never",
+    "label": "Sort TOML properties",
+    "show_command": true
   }
 ]

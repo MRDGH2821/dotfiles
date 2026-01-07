@@ -2,7 +2,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
 if ! command -v dnf &>/dev/null; then
   echo "dnf not found. This script is only for Fedora based systems. Exiting..."

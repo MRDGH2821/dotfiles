@@ -1,3 +1,6 @@
+# bin
+export PATH="${HOME}/.local/bin:${PATH}"
+
 # soar
 export PATH="${HOME}/.local/share/soar/bin:${PATH}"
 

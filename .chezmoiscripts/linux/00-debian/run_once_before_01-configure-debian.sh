@@ -3,7 +3,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
 if ! command -v apt &>/dev/null; then
   echo "This script is only for Debian based systems. Exiting..."

@@ -10,6 +10,7 @@
 #   package_name = { pinned = true, portable = { home = "~/.pkg" } }
 
 {{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
+{{ $pkgs := include ".chezmoidata/packages/soar.toml" | fromToml }}
 
 # Default settings applied to all packages unless overridden.
 #
@@ -23,28 +24,27 @@ binary_only = false
 # Map of package names to their specifications.
 # Supports both simple string form (version) and detailed table form.
 [packages]
-pcloud = "*"
-rclone-browser = { version = "1.8.0", pkg_type = "appimage", url = "https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage" }
-# savestate = { version = "2.1b", pkg_type = "archive", url = "https://github.com/Matteo842/SaveState/releases/download/v2.1b/SaveState_linux.tar.gz" }
-use-via = { version = "3.0.0", pkg_type = "appimage", url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage" }
+pcloud = {{ $pkgs.pcloud | toJson }}
+rclone-browser = {{ $pkgs.rclone_browser | toJson }}
+savestate = {{ $pkgs.savestate | toJson }}
+use-via = {{ $pkgs.use_via | toJson }}
 
 {{ if eq .devicetype "laptop" }}
-pince = { version = "0.4.5" , pkg_type = "appimage", url = "https://github.com/korcankaraokcu/PINCE/releases/download/v0.4.5/PINCE-x86_64.AppImage" }
+pince = {{ $pkgs.pince | toJson }}
 {{ end }}
 
 {{ if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) }}
-cocogitto = "*"
-ludusavi = { version = "0.30.0", pkg_type = "archive", url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz" }
-mcfly = "*"
-rclone#github.com.rclone.rclone.stable = "*"
-tldr#github.com.tealdeer-rs.tealdeer = "*"
+cocogitto = {{ $pkgs.cocogitto | toJson }}
+ludusavi = {{ $pkgs.ludusavi | toJson }}
+mcfly = {{ $pkgs.mcfly | toJson }}
+rclone = {{ $pkgs.rclone | toJson }}
+tldr = {{ $pkgs.tldr | toJson }}
 {{ end }}
 
 {{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) }}
-cocogitto = "*"
-dra = { version = "0.10.1", pkg_type = "archive", url = "https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz"
-ludusavi = { version = "0.30.0", pkg_type = "archive", url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz" }
-mcfly = "*"
-}
+cocogitto = {{ $pkgs.cocogitto | toJson }}
+dra = {{ $pkgs.dra | toJson }}
+ludusavi = {{ $pkgs.ludusavi | toJson }}
+mcfly = {{ $pkgs.mcfly | toJson }}
 
 {{ end }}

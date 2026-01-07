@@ -1,0 +1,50 @@
+[cocogitto]
+pkg_type = "static"
+repo = "bincache"
+
+[dra]
+pkg_type = "archive"
+url = "https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz"
+version = "0.10.1"
+
+[ludusavi]
+pkg_type = "appimage"
+url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.AppImage"
+version = "0.30.0"
+
+[mcfly]
+pkg_type = "static"
+repo = "pkg-forge-cargo"
+
+[pcloud]
+pkg_type = "appimage"
+repo = "ivan-hc-am"
+
+[pince]
+pkg_type = "appimage"
+url = "https://github.com/korcankaraokcu/PINCE/releases/download/v0.4.5/PINCE-x86_64.AppImage"
+version = "0.4.5"
+
+[rclone]
+pkg_type = "static"
+repo = "bincache"
+
+[rclone_browser]
+pkg_type = "appimage"
+url = "https://github.com/kapitainsky/RcloneBrowser/releases/download/1.8.0/rclone-browser-1.8.0-a0b66c6-linux-x86_64.AppImage"
+version = "1.8.0"
+
+[savestate]
+pkg_type = "appimage"
+url = "https://github.com/Matteo842/SaveState/releases/download/v2.1b/SaveState.AppImage"
+version = "2.1b"
+
+[tldr]
+pkg_id = "github.com.tealdeer-rs.tealdeer"
+pkg_type = "static"
+repo = "bincache"
+
+[use_via]
+pkg_type = "appimage"
+url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage"
+version = "3.0.0"

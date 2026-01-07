@@ -7,7 +7,7 @@ appimagedir="$HOME/AppImages/"
 mkdir -p "$bindir"
 mkdir -p "$appimagedir"
 
-# Fedora 
+# Fedora
 
 {{ $fedora := include ".chezmoidata/packages/linux/fedora.yaml" | fromYaml }}
 {{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
@@ -41,7 +41,7 @@ echo "Installing RPM packages"
 
 {{/* Conditionally add tablet packages */}}
 {{ if eq .devicetype "tablet" }}
-  echo "Adding tablet specific packages"
+echo "Adding tablet specific packages"
   {{ range $common.tablet_only }}
     {{ $allDnfPackages = append $allDnfPackages . }}
   {{ end }}
@@ -87,7 +87,7 @@ echo "Installing self installing packages"
 bash -c {{ . | quote }}
 {{ end }}
 
-{{ else}}
+{{ else }}
 echo "This script is only for Fedora based systems. Exiting..."
 exit 1
 {{ end }}

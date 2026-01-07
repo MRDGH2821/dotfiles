@@ -18,6 +18,7 @@ dnf5:
   - mangohud
   - pam-u2f
   - pamu2fcfg
+  - rclone
   - sane-backends
   - shellcheck
   - shfmt
@@ -30,14 +31,11 @@ dnf5:
   - uv
   - vlc
   - zed
+  - zoxide
   - zsh
 dnf5_url:
   - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
-  bin:
-    - cocogitto/cocogitto -a
-    - devmatteini/dra -a
-    - mtkennerly/ludusavi --select ludusavi-v{tag}-linux.tar.gz
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:

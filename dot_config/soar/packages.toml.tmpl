@@ -39,3 +39,12 @@ mcfly = "*"
 rclone#github.com.rclone.rclone.stable = "*"
 tldr#github.com.tealdeer-rs.tealdeer = "*"
 {{ end }}
+
+{{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) }}
+cocogitto = "*"
+dra = { version = "0.10.1", pkg_type = "archive", url = "https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz"
+ludusavi = { version = "0.30.0", pkg_type = "archive", url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz" }
+mcfly = "*"
+}
+
+{{ end }}

@@ -1,14 +1,9 @@
 {
-  "types": [
-    "build",
-    "chore",
-    "ci",
-    "docs",
-    "perf",
-    "refactor",
-    "style",
-    "test"
-  ],
+  "githubAction": {
+    "includeCommits": true,
+    "includePullRequest": true,
+    "updatePullRequestLabels": true
+  },
   "scopes": [
     "chezmoi",
     "cspell",
@@ -19,9 +14,5 @@
     "vscode",
     "zed"
   ],
-  "githubAction": {
-    "includeCommits": true,
-    "includePullRequest": true,
-    "updatePullRequestLabels": true
-  }
+  "types": ["build", "chore", "ci", "docs", "perf", "refactor", "style", "test"]
 }

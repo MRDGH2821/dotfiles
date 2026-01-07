@@ -22,16 +22,16 @@
     "localip",
     "battery",
     {
-      "type": "command",
+      "key": "BIOS version",
       "shell": "bash",
       "text": "cat /sys/class/dmi/id/bios_version",
-      "key": "BIOS version",
+      "type": "command"
     },
     {
-      "type": "command",
+      "key": "EC version",
       "shell": "bash",
       "text": "cat /sys/class/dmi/id/ec_firmware_release",
-      "key": "EC version",
-    },
-  ],
+      "type": "command"
+    }
+  ]
 }

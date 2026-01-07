@@ -1,11 +1,14 @@
+**/*.src.ini
 .cspell.json
+.cz.yaml
 .editorconfig
 .gitignore
+.pre-commit-config.yaml
 .prettierrc.json
 .trunk
 .vscode
 .zed
-**/*.src.ini
+cog.toml
 node_modules
 package*.json
 Packages.md
@@ -24,28 +27,28 @@ dot_local
 .chezmoiscripts/windows/**
 readonly_Documents
 readonly_Documents/PowerShell/**
-readonly_Documents/WindowsPowerShell/**
 readonly_Documents/PowerShell/Microsoft.PowerShell_profile.ps1
+readonly_Documents/WindowsPowerShell/**
 readonly_Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
 {{ end }}
 
 {{- if not (and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch)) -}}
-dot_config/paru/**
-.chezmoiscripts/linux/00-arch/**
 .chezmoidata/packages/linux/arch.yaml
+.chezmoiscripts/linux/00-arch/**
+dot_config/paru/**
 {{ end }}
 
 {{- if not (and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora)) -}}
-.chezmoiscripts/linux/00-fedora/**
 .chezmoidata/packages/linux/fedora.yaml
+.chezmoiscripts/linux/00-fedora/**
 {{ end }}
 
 {{- if not (and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes)) -}}
-.chezmoiscripts/linux/00-debian/**
 .chezmoidata/packages/linux/debian.yaml
+.chezmoiscripts/linux/00-debian/**
 {{ end }}
 
 {{- if not (and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes)) -}}
-.chezmoiscripts/linux/00-ubuntu/**
 .chezmoidata/packages/linux/ubuntu.yaml
+.chezmoiscripts/linux/00-ubuntu/**
 {{ end }}

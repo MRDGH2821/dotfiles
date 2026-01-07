@@ -12,6 +12,10 @@ installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 kde:
   - syncthingtray-kde-plasma
+laptop_only:
+  dra:
+    package:
+      - TibixDev/winboat --select winboat-{tag}-amd64.deb
 nala:
   native:
     - apparmor-utils
@@ -56,7 +60,3 @@ nala:
 tablet_only:
   - waydroid
   - waydroid-helper
-laptop_only:
-  dra:
-    package:
-      - TibixDev/winboat --select winboat-{tag}-amd64.deb

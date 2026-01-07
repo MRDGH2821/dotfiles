@@ -33,8 +33,6 @@ dnf5:
   - zsh
 dnf5_url:
   - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
-terra:
-  - topgrade
 dra:
   bin:
     - cocogitto/cocogitto -a
@@ -50,3 +48,5 @@ installer_url:
 tablet_only:
   - waydroid
   - waydroid-helper
+terra:
+  - topgrade

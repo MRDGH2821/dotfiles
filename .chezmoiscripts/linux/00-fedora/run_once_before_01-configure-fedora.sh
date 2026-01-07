@@ -70,20 +70,9 @@ echo "${LINE}"
 gh auth login -p https -h github.com -w
 echo "${LINE}"
 
-## Download dra executable
-trap 'rm -fr /tmp/dra' EXIT
-mkdir -p /tmp/dra
-gh release download --repo devmatteini/dra --pattern 'dra-*-x86_64-*-linux-gnu.tar.gz' --dir /tmp/dra
-filename=$(ls /tmp/dra/*.tar.gz)
-tarfile="${filename%.*}"
-filedir="${tarfile%.*}"
-tar -xvzf "${filename}" -C /tmp/dra
-mkdir -p "${HOME}"/.local/bin
-cp "${filedir}"/dra "${HOME}"/.local/bin/
-rm -fr /tmp/dra
-
-echo "${LINE}"
-
 # Install Soar
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"
+
+## Install dra
+soar add https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz --pkg-type archive --name dra --version 0.10.1

@@ -1,97 +1,39 @@
 #!/usr/bin/env bash
+{{ $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml -}}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
-bindir="$HOME/.local/bin/"
-appimagedir="$HOME/AppImages/"
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch) -}}
+  {{- $allPackages := list -}}
+  {{- println "echo" "Installing Arch Packages" -}}
+  {{- /* Add packages */ -}}
+  {{- $allPackages = concat $allPackages $arch.extra $arch.core $arch.multilib $arch.aur -}}
 
-mkdir -p "$bindir"
-mkdir -p "$appimagedir"
+  {{- /* Conditionally add KDE packages */ -}}
+  {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
+    {{- $allPackages = concat $allPackages $arch.kde $common.kde -}}
+  {{- end -}}
 
-# Arch
+  {{- /* Conditionally add tablet packages */ -}}
+  {{- if eq .devicetype "tablet" -}}
+    {{- $allPackages = concat $allPackages $common.tablet_only $arch.tablet_only.aur $arch.tablet_only.extra -}}
+  {{- end -}}
 
-{{ $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml }}
-{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
-{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
+  {{- /* Conditionally add laptop packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $allPackages = concat $allPackages $arch.laptop_only.aur -}}
+  {{- end -}}
 
-# Native packages
+  {{- $aurHelper := "" -}}
+  {{- if lookPath "yay" -}}
+    {{- $aurHelper = "yay" -}}
+  {{- else if lookPath "paru" -}}
+    {{- $aurHelper = "paru" -}}
+  {{- else -}}
+    {{- fail "Error: Neither yay nor paru found in PATH. Please install one of them." -}}
+  {{- end -}}
 
-{{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch) }}
-
-echo "Installing Arch packages"
-
-{{/* Collect ALL packages (official repos + AUR) into one single variable */}}
-{{ $allPackages := list }}
-
-{{/* Add core packages */}}
-{{ range $arch.core }}
-  {{ $allPackages = append $allPackages . }}
-{{ end }}
-
-{{/* Add extra packages */}}
-{{ range $arch.extra }}
-  {{ $allPackages = append $allPackages . }}
-{{ end }}
-
-{{/* Add multilib packages */}}
-{{ range $arch.multilib }}
-  {{ $allPackages = append $allPackages . }}
-{{ end }}
-
-{{/* Conditionally add KDE packages */}}
-{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
-  {{ range $arch.kde }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-  {{ range $common.kde }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-{{ end }}
-
-{{/* Conditionally add tablet packages */}}
-{{ if eq .devicetype "tablet" }}
-  echo "Adding tablet specific packages"
-  {{ range $common.tablet_only }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-  {{ range $arch.tablet_only.aur }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-  {{ range $arch.tablet_only.extra }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-{{ end }}
-
-{{/* Conditionally add laptop packages */}}
-{{ if eq .devicetype "laptop" }}
-  echo "Adding laptop specific packages"
-  {{ range $arch.laptop_only.aur }}
-    {{ $allPackages = append $allPackages . }}
-  {{ end }}
-{{ end }}
-
-{{/* Add AUR packages */}}
-{{ range $arch.aur }}
-  {{ $allPackages = append $allPackages . }}
-{{ end }}
-
-{{/* Install all packages in one command */}}
-{{ if $allPackages }}
-if type -P yay >/dev/null 2>&1; then
-  yay -Syu --needed {{ join " " $allPackages }}
-elif type -P paru >/dev/null 2>&1; then
-  paru -Syu --needed {{ join " " $allPackages }}
-else
-  echo "Error: Neither yay nor paru found. Please install an AUR helper first."
-  exit 1
-fi
-{{ end }}
-
-echo "Installing Flatpak packages"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-{{/* flatpak install -y flathub {{ range $arch.flatpak }} {{.}}{{ end }} */}}
-
-{{ else }}
-echo "This script is only for Arch based systems. Exiting..."
-exit 1
-{{ end }}
+  {{- print $aurHelper " -Syu --needed " (join " " $allPackages) -}}
+{{- else -}}
+  {{- fail "This script is only for Arch based systems." -}}
+{{- end -}}

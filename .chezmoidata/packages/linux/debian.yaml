@@ -38,7 +38,6 @@ nala:
     - libqt6printsupport6
     - libqt6widgets6
     - mangohud
-    - mangohud:i386
     - pamu2fcfg
     - sane-utils
     - shellcheck
@@ -52,7 +51,7 @@ nala:
     - zoxide
     - zsh
   url:
-    - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
+    # - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb

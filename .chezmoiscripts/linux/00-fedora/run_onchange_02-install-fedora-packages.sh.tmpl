@@ -1,95 +1,50 @@
 #!/usr/bin/env bash
+{{ printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- $fedora := include ".chezmoidata/packages/linux/fedora.yaml" | fromYaml -}}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
-bindir="$HOME/.local/bin/"
-appimagedir="$HOME/AppImages/"
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Fedora Packages\"" -}}
+  {{- /* Add packages */ -}}
+  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra ($fedora.dnf5.url | quoteList) -}}
 
-mkdir -p "$bindir"
-mkdir -p "$appimagedir"
+  {{- /* Conditionally add KDE packages */ -}}
+  {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
+    {{- $allPackages = concat $allPackages $common.kde -}}
+  {{- end -}}
 
-# Fedora
+  {{- /* Conditionally add Tablet only packages */ -}}
+  {{- if eq .devicetype "tablet" -}}
+    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+  {{- end -}}
 
-{{ $fedora := include ".chezmoidata/packages/linux/fedora.yaml" | fromYaml }}
-{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
-{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
+  {{- println "sudo dnf5 install " (join " " $allPackages) -}}
 
-# Native packages
+  {{- /* DRA Packages */ -}}
+  {{- $draPackages := list -}}
+  {{- $draPackages = concat $draPackages $fedora.dra.package -}}
 
-{{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) }}
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $draPackages = concat $draPackages $fedora.laptop_only.dra.package -}}
+  {{- end -}}
 
-echo "Installing RPM packages"
+  {{- range $draPackages -}}
+    {{- println "sudo dra download -i " . -}}
+  {{- end -}}
 
-{{/* Collect ALL dnf5 packages into one variable */}}
-{{ $allDnfPackages := list }}
+  {{- /* Flatpaks */ -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak install -y flathub" (join " " $fedora.flatpak) -}}
 
-{{/* Add base dnf5 packages */}}
-{{ range $fedora.dnf5.native }}
-  {{ $allDnfPackages = append $allDnfPackages . }}
-{{ end }}
-
-{{/* Add terra dnf5 packages */}}
-{{ range $fedora.terra }}
-  {{ $allDnfPackages = append $allDnfPackages . }}
-{{ end }}
-
-{{/* Conditionally add KDE packages */}}
-{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
-  {{ range $common.kde }}
-    {{ $allDnfPackages = append $allDnfPackages . }}
+  {{- /* Self installing packages */ -}}
+  {{ range $fedora.installer_url }}
+    {{- println "bash -c " ( . | quote) -}}
   {{ end }}
-{{ end }}
 
-{{/* Conditionally add tablet packages */}}
-{{ if eq .devicetype "tablet" }}
-echo "Adding tablet specific packages"
-  {{ range $common.tablet_only }}
-    {{ $allDnfPackages = append $allDnfPackages . }}
-  {{ end }}
-  {{ range $fedora.tablet_only }}
-    {{ $allDnfPackages = append $allDnfPackages . }}
-  {{ end }}
-{{ end }}
-
-{{/* Install all dnf5 packages in one command */}}
-{{ if $allDnfPackages }}
-sudo dnf5 install -y --skip-unavailable {{ join " " $allDnfPackages }}
-{{ end }}
-
-{{/* Install dnf5 URL packages separately */}}
-{{ range $fedora.dnf5.url }}
-sudo dnf5 install -y --skip-unavailable {{ . | quote }}
-{{ end }}
-
-echo "Downloading packages via dra"
-{{/* range $fedora.dra.appimage }}
-echo "Downloading {{.}}"
-dra download -o "$appimagedir" -i {{.}}
-{{ end }} */}}
-
-{{/* range $fedora.dra.bin */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download -o "$bindir" -i {{.}} */}}
-{{/* end */}}
-
-{{ $dra_packages = concat $fedora.dra.package $fedora.laptop_only.dra.package }}
-
-{{ range $dra_packages }}
-echo "Downloading {{.}}"
-dra download -i {{.}}
-{{ end }}
-
-echo "Installing Flatpak packages"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub {{ range $fedora.flatpak }} {{.}}{{ end }}
-
-# Linux self installing packages
-echo "Installing self installing packages"
-{{ range $fedora.installer_url }}
-bash -c {{ . | quote }}
-{{ end }}
-
-{{ else }}
-echo "This script is only for Fedora based systems. Exiting..."
-exit 1
-{{ end }}
+{{- else -}}
+  {{- fail "This script is only for Debian based systems." -}}
+{{- end -}}

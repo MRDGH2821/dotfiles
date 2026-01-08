@@ -1,103 +1,50 @@
 #!/usr/bin/env bash
+{{ printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- $debian := include ".chezmoidata/packages/linux/debian.yaml" | fromYaml -}}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
-bindir="$HOME/.local/bin/"
-appimagedir="$HOME/AppImages/"
+{{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Debian Packages\"" -}}
+  {{- /* Add packages */ -}}
+  {{- $allPackages = concat $allPackages $debian.nala.native ($debian.nala.url | quoteList) -}}
 
-mkdir -p "$bindir"
-mkdir -p "$appimagedir"
+  {{- /* Conditionally add KDE packages */ -}}
+  {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
+    {{- $allPackages = concat $allPackages $debian.kde $common.kde -}}
+  {{- end -}}
 
-# Debian
+  {{- /* Conditionally add Tablet only packages */ -}}
+  {{- if eq .devicetype "tablet" -}}
+    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+  {{- end -}}
 
-{{ $debian := include ".chezmoidata/packages/linux/debian.yaml" | fromYaml }}
-{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
-{{ $distros := include ".chezmoidata/distros.yaml" | fromYaml }}
+  {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
 
-# Native packages
+  {{- /* DRA Packages */ -}}
+  {{- $draPackages := list -}}
+  {{- $draPackages = concat $draPackages $debian.dra.package -}}
 
-{{ if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) }}
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $draPackages = concat $draPackages $debian.laptop_only.dra.package -}}
+  {{- end -}}
 
-echo "Installing Debian Packages"
+  {{- range $draPackages -}}
+    {{- println "sudo dra download -i " . -}}
+  {{- end -}}
 
-{{/* Collect ALL nala native packages into one variable */}}
-{{ $allNalaPackages := list }}
+  {{- /* Flatpaks */ -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak install -y flathub" (join " " $debian.flatpak) -}}
 
-{{/* Add native packages */}}
-{{ range $debian.nala.native }}
-  {{ $allNalaPackages = append $allNalaPackages . }}
-{{ end }}
-
-{{/* Conditionally add KDE packages */}}
-{{ if eq (env "XDG_SESSION_DESKTOP") "KDE" }}
-  {{ println "Adding KDE Packages" }}
-  {{ range $common.kde }}
-    {{ $allNalaPackages = append $allNalaPackages . }}
+  {{- /* Self installing packages */ -}}
+  {{ range $debian.installer_url }}
+    {{- println "bash -c " ( . | quote) -}}
   {{ end }}
-  {{ range $debian.kde }}
-    {{ $allNalaPackages = append $allNalaPackages . }}
-  {{ end }}
-{{ end }}
 
-{{/* Conditionally add tablet packages */}}
-{{ if eq .devicetype "tablet" }}
-  {{ println "Adding tablet specific packages" }}
-  {{ range $common.tablet_only }}
-    {{ $allNalaPackages = append $allNalaPackages . }}
-  {{ end }}
-  {{ range $debian.tablet_only }}
-    {{ $allNalaPackages = append $allNalaPackages . }}
-  {{ end }}
-{{ end }}
-
-{{/* Install all nala native packages in one command */}}
-{{ if $allNalaPackages }}
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ join " " $allNalaPackages }}
-{{ end }}
-
-{{/* Install nala URL packages separately */}}
-{{ if $debian.nala.url }}
-sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true {{ range $debian.nala.url }}{{. | quote}} {{ end }}
-{{ end }}
-
-# dra
-
-echo "Downloading packages via dra"
-{{/* range $debian.dra.appimage */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download -o "$appimagedir" -i {{.}} */}}
-{{/* end */}}
-
-{{/* range $debian.dra.bin */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download -o "$bindir" -i {{.}} */}}
-{{/* end */}}
-
-{{ $dra_packages = concat $debian.dra.package $debian.laptop_only.dra.package }}
-
-{{ range $dra_packages }}
-echo "Downloading {{.}}"
-sudo dra download -i {{.}}
-{{ end }}
-
-{{/* range $debian.dra.raw */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download {{.}} */}}
-{{/* end */}}
-
-# Flatpaks
-
-echo "Installing Flatpak packages"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub {{ range $debian.flatpak }} {{.}}{{ end }}
-
-# Linux self installing packages
-echo "Installing self installing packages"
-{{ range $debian.installer_url }}
-bash -c {{ . | quote }}
-{{ end }}
-
-{{ else }}
-echo "This script is only for Debian based systems. Exiting..."
-exit 1
-{{ end }}
+{{- else -}}
+  {{- fail "This script is only for Debian based systems." -}}
+{{- end -}}

@@ -83,6 +83,7 @@
     "kwriteconfig",
     "kxmlgui",
     "libgexiv",
+    "libopengl",
     "libqt",
     "localip",
     "lsign",

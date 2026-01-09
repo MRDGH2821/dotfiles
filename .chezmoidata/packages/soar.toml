@@ -7,6 +7,11 @@ pkg_type = "archive"
 url = "https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz"
 version = "0.10.1"
 
+[lazygit]
+pkg_type = "archive"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygit_0.58.0_linux_x86_64.tar.gz"
+version = "0.58.0"
+
 [ludusavi]
 pkg_type = "appimage"
 url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.AppImage"

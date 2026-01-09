@@ -1,0 +1,61 @@
+dra:
+  package:
+    - devmatteini/dra --select dra_{tag}-1_amd64.deb
+    - espanso/espanso --select espanso-debian-wayland-amd64.deb
+    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-amd64.deb
+    - sharkdp/bat --select bat_{tag}_amd64.deb
+    - topgrade-rs/topgrade --select topgrade_{tag}-1_amd64.deb
+flatpak:
+  - io.github.radiolamp.mangojuice
+  - org.onlyoffice.desktopeditors
+installer_url:
+  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+  - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
+  - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
+
+kde:
+  - syncthingtray-kde-plasma
+laptop_only:
+  dra:
+    package:
+      - TibixDev/winboat --select winboat-{tag}-amd64.deb
+nala:
+  native:
+    - apparmor-utils
+    - btop
+    - direnv
+    - firefox
+    - flatpak
+    - fzf
+    - gh
+    - git
+    - git-credential-oauth
+    - git-delta
+    - gnupg2
+    - keepassxc
+    - kleopatra
+    - libpam-u2f
+    - libqt6core6
+    - libqt6gui6
+    - libqt6printsupport6
+    - libqt6widgets6
+    - mangohud
+    - pamu2fcfg
+    - sane-utils
+    - shellcheck
+    - shfmt
+    - syncthing
+    - syncthingtray
+    - system-config-printer
+    - vlc
+    - zoxide
+    - zsh
+  url:
+    # - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
+    - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+    - https://discord.com/api/download?platform=linux&format=deb
+    - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
+    - https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
+tablet_only:
+  - waydroid
+  - waydroid-helper

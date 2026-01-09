@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+{{ printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- $ubuntu := include ".chezmoidata/packages/linux/ubuntu.yaml" | fromYaml -}}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
+
+{{- if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Ubuntu Packages\"" -}}
+  {{- /* Add packages */ -}}
+  {{- $allPackages = concat $allPackages $ubuntu.nala.native ($ubuntu.nala.url | quoteList) -}}
+
+  {{- /* Conditionally add KDE packages */ -}}
+  {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
+    {{- $allPackages = concat $allPackages $ubuntu.kde $common.kde -}}
+  {{- end -}}
+
+  {{- /* Conditionally add Tablet only packages */ -}}
+  {{- if eq .devicetype "tablet" -}}
+    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+  {{- end -}}
+
+  {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
+
+  {{- /* DRA Packages */ -}}
+  {{- $draPackages := list -}}
+  {{- $draPackages = concat $draPackages $ubuntu.dra.package -}}
+
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $draPackages = concat $draPackages $ubuntu.laptop_only.dra.package -}}
+  {{- end -}}
+
+  {{- range $draPackages -}}
+    {{- println "sudo dra download -i " . -}}
+  {{- end -}}
+
+  {{- /* Flatpaks */ -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
+  {{- println "flatpak install -y flathub" (join " " $ubuntu.flatpak) -}}
+
+  {{- /* Self installing packages */ -}}
+  {{ range $ubuntu.installer_url }}
+    {{- println "bash -c " ( . | quote) -}}
+  {{ end }}
+
+{{- else -}}
+  {{- fail "This script is only for ubuntu based systems." -}}
+{{- end -}}

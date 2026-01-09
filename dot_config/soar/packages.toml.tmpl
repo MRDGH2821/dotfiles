@@ -46,5 +46,13 @@ cocogitto = {{ $pkgs.cocogitto | toJson }}
 dra = {{ $pkgs.dra | toJson }}
 ludusavi = {{ $pkgs.ludusavi | toJson }}
 mcfly = {{ $pkgs.mcfly | toJson }}
+{{ end }}
 
+{{ if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) }}
+cocogitto = {{ $pkgs.cocogitto | toJson }}
+lazygit = {{ $pkgs.lazygit | toJson }}
+ludusavi = {{ $pkgs.ludusavi | toJson }}
+mcfly = {{ $pkgs.mcfly | toJson }}
+rclone = {{ $pkgs.rclone | toJson }}
+tldr = {{ $pkgs.tldr | toJson }}
 {{ end }}

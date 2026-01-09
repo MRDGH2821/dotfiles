@@ -12,7 +12,6 @@ installer_url:
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
   - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
   - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
-
 kde:
   - syncthingtray-kde-plasma
 laptop_only:

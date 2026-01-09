@@ -64,9 +64,12 @@ echo "${LINE}"
 
 ## GitHub CLI
 sudo mkdir -p -m 755 /etc/apt/keyrings
-# shellcheck disable=SC2312
-wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
+out=$(mktemp)
+wget -nv -O"${out}" https://cli.github.com/packages/githubcli-archive-keyring.gpg
+# shellcheck disable=SC2312,SC2002
+cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
 sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+sudo mkdir -p -m 755 /etc/apt/sources.list.d
 # shellcheck disable=SC2312
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 

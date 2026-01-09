@@ -13,7 +13,8 @@
   },
   "file_types": {
     "Go Text Template": ["tmpl", ".chezmoiignore"],
-    "JSON": ["**/.zed/*.json"]
+    "JSON": ["**/.zed/*.json"],
+    "ini": ["*.profile", "private_konsolerc", "private_dolphinrc"]
   },
   "languages": {
     "TOML": {

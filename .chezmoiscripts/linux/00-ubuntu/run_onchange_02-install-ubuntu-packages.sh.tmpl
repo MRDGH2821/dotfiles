@@ -1,5 +1,5 @@
 {{- println "#!/usr/bin/env bash" -}}
-{{ printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
 {{- $ubuntu := include ".chezmoidata/packages/linux/ubuntu.yaml" | fromYaml -}}
 {{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}

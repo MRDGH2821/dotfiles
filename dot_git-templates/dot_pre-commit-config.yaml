@@ -1,0 +1,67 @@
+default_install_hook_types:
+  - commit-msg
+  - pre-commit
+repos:
+  - hooks:
+      - id: ggshield
+        language_version: python3
+        priority: 1
+        stages:
+          - pre-commit
+    repo: https://github.com/gitguardian/ggshield
+    rev: v1.46.0
+  - hooks:
+      - id: commit-me
+        priority: 2
+        stages:
+          - commit-msg
+    repo: https://github.com/dev-build-deploy/commit-me
+    rev: v0.12.0
+  - hooks:
+      - args:
+          - mega-linter-runner
+          - --containername
+          - megalinter-incremental
+          - --remove-container
+          - --fix
+          - --env
+          - "'APPLY_FIXES=all'"
+          - --env
+          - "'CLEAR_REPORT_FOLDER=true'"
+          - --env
+          - "'LOG_LEVEL=warning'"
+          - --filesonly
+        description: |
+          See https://megalinter.io/latest/mega-linter-runner/#usage and https://megalinter.io/latest/configuration/ if you wish to override the default arguments. mega-linter-runner is specified as an argument so that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the pertinent Docker image isn't already cached (c.f., https://github.com/marketplace/actions/docker-cache/). If you encounter permission errors, try running Docker in rootless mode (c.f., https://github.com/marketplace/actions/rootless-docker/). Linter results are logged to the megalinter-reports directory, so list it in your .gitignore. Skip linters that run in project mode since they don't run incrementally.
+        entry: npx --
+        id: megalinter-incremental
+        language: system
+        name: Run MegaLinter (skipping linters that run in project mode)
+        priority: 50
+        require_serial: true
+        stages:
+          - commit
+      - args:
+          - mega-linter-runner
+          - --containername
+          - megalinter-full
+          - --remove-container
+          - --fix
+          - --env
+          - "'APPLY_FIXES=all'"
+          - --env
+          - "'CLEAR_REPORT_FOLDER=true'"
+          - --env
+          - "'LOG_LEVEL=warning'"
+        description: |
+          See https://megalinter.io/latest/mega-linter-runner/#usage and https://megalinter.io/latest/configuration/ if you wish to override the default arguments. mega-linter-runner is specified as an argument so that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the pertinent Docker image isn't already cached (c.f., https://github.com/marketplace/actions/docker-cache/). If you encounter permission errors, try running Docker in rootless mode (c.f., https://github.com/marketplace/actions/rootless-docker/). Linter results are logged to the megalinter-reports directory, so list it in your .gitignore.
+        entry: npx --
+        id: megalinter-full
+        language: system
+        name: Run MegaLinter
+        priority: 50
+        require_serial: true
+        stages:
+          - push
+    repo: https://github.com/oxsecurity/megalinter
+    rev: v6.8.0 # Git tag specifying the hook, not mega-linter-runner, version

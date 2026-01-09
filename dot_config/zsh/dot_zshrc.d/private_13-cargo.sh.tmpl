@@ -1,3 +1,2 @@
-#!/usr/bin/env zsh
-
-{{ template "shell-scripts/private_13-cargo.sh.tmpl" (dict "Shell" "zsh") -}}
+{{- println "#!/usr/bin/env zsh" -}}
+{{- template "shell-scripts/private_13-cargo.sh.tmpl" (dict "Shell" "zsh") -}}

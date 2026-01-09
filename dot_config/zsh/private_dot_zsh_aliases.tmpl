@@ -1,3 +1,2 @@
-#!/usr/bin/env zsh
-
-{{ template "shell-scripts/shell_aliases.sh" . -}}
+{{- println "#!/usr/bin/env zsh" -}}
+{{- template "shell-scripts/shell_aliases.sh" . -}}

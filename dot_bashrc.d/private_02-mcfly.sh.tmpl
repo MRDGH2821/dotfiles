@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-
-{{ template "shell-scripts/private_02-mcfly.sh.tmpl" (dict "Shell" "bash") -}}
+{{- println "#!/usr/bin/env bash" -}}
+{{- template "shell-scripts/private_02-mcfly.sh.tmpl" (dict "Shell" "bash") -}}

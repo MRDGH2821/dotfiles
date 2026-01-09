@@ -9,15 +9,19 @@ flatpak:
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:
+  - if ! type -P bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
-  - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
   - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
+  - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
 kde:
   - syncthingtray-kde-plasma
 laptop_only:
   dra:
     package:
       - TibixDev/winboat --select winboat-{tag}-amd64.deb
+  nala:
+    native:
+      - obs-studio
 nala:
   native:
     - apparmor-utils
@@ -31,6 +35,7 @@ nala:
     - git-credential-oauth
     - git-delta
     - gnupg2
+    - fastfetch
     - keepassxc
     - kleopatra
     - libpam-u2f
@@ -54,7 +59,6 @@ nala:
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
-    - https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
 tablet_only:
   - waydroid
   - waydroid-helper

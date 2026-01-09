@@ -21,6 +21,11 @@
     {{- $allPackages = concat $allPackages $common.tablet_only -}}
   {{- end -}}
 
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $allPackages = concat $allPackages $fedora.laptop_only.dnf5 -}}
+  {{- end -}}
+
   {{- println "sudo dnf5 install " (join " " $allPackages) -}}
   {{- println $line -}}
 

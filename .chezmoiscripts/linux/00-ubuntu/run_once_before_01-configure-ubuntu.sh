@@ -84,6 +84,10 @@ echo -e "Package: python3-pywayland\nPin: origin \"ppa.launchpadcontent.net\"\nP
 
 echo "${LINE}"
 
+## OBS Studio
+sudo add-apt-repository ppa:obsproject/obs-studio -y
+echo "${LINE}"
+
 # Install Soar
 # shellcheck disable=SC2312
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh

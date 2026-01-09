@@ -53,3 +53,7 @@ repo = "bincache"
 pkg_type = "appimage"
 url = "https://github.com/the-via/releases/releases/download/v3.0.0/via-3.0.0-linux.AppImage"
 version = "3.0.0"
+
+[yq]
+pkg_type = "static"
+url = "https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64"

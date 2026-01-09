@@ -37,6 +37,7 @@
   {{- println "mcfly =" ($pkgs.mcfly | toJson ) -}}
   {{- println "rclone =" ($pkgs.rclone | toJson ) -}}
   {{- println "tldr =" ($pkgs.tldr | toJson ) -}}
+  {{- println "yq =" ($pkgs.yq | toJson ) -}}
 {{ end }}
 
 {{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) }}
@@ -53,4 +54,5 @@
   {{- println "mcfly =" ($pkgs.mcfly | toJson ) -}}
   {{- println "rclone =" ($pkgs.rclone | toJson ) -}}
   {{- println "tldr =" ($pkgs.tldr | toJson ) -}}
+  {{- println "yq =" ($pkgs.yq | toJson ) -}}
 {{ end }}

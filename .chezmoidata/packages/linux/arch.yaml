@@ -14,6 +14,7 @@ core:
 extra:
   - bat
   - btop
+  - bun
   - cocogitto
   - direnv
   - discord
@@ -28,11 +29,13 @@ extra:
   - git
   - git-delta
   - github-cli
+  - go-yq
   - keepassxc
   - kleopatra
   - lazygit
   - mangohud
   - mcfly
+  - meld
   - pam-u2f
   - rclone
   - sane
@@ -54,6 +57,7 @@ kde:
   - tesseract-data-eng
 laptop_only:
   aur:
+    - obs-studio-stable
     - winboat-bin
 multilib:
   - lib32-mangohud

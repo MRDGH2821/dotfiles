@@ -33,14 +33,17 @@ winget:
   - koalaman.shellcheck
   - Martchus.syncthingtray
   - MartiCliment.UniGetUI
+  - Meld.Meld
   - Microsoft.OneDrive
   - Microsoft.PowerToys
   - Microsoft.WindowsTerminal
+  - MikeFarah.yq
   - Mozilla.Firefox
   - mtkennerly.ludusavi
   - mvdan.shfmt
   - OBSProject.OBSStudio
   - ONLYOFFICE.DesktopEditors
+  - Oven-sh.Bun
   - sharkdp.bat
   - topgrade-rs.topgrade
   - universal.input-overlay

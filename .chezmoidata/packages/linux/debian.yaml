@@ -9,10 +9,15 @@ flatpak:
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:
+  - if ! type -P bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 kde:
   - syncthingtray-kde-plasma
 laptop_only:
+  nala:
+    native:
+      - obs-studio
+      - ffmpeg
   dra:
     package:
       - TibixDev/winboat --select winboat-{tag}-amd64.deb
@@ -42,6 +47,7 @@ nala:
     - sane-utils
     - shellcheck
     - shfmt
+    - meld
     - syncthing
     - syncthingtray
     - system-config-printer

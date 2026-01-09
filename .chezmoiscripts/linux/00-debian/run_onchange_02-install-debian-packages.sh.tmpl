@@ -21,6 +21,11 @@
     {{- $allPackages = concat $allPackages $common.tablet_only -}}
   {{- end -}}
 
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $allPackages = concat $allPackages $debian.laptop_only.nala.native -}}
+  {{- end -}}
+
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
   {{- println $line -}}
 

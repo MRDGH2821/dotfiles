@@ -30,8 +30,4 @@ echo "-------------------------------"
 
 git credential-oauth configure
 
-git config --global credential.{{.forgejo.url}}.oauthClientId {{.forgejo.client_id}}
-git config --global credential.{{.forgejo.url}}.oauthAuthURL /login/oauth/authorize
-git config --global credential.{{.forgejo.url}}.oauthTokenURL /login/oauth/access_token
-
 echo "-------------------------------"

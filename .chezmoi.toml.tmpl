@@ -1,7 +1,4 @@
 {{- $email := promptStringOnce . "email" "Commit email address" "ask.mrdgh2821@outlook.com" -}}
-{{- /* Ask Forgejo Configuration */ -}}
-{{- $forgejourl := promptStringOnce . "forgejo.url" "Forgejo Server URL" "git.example.com" -}}
-{{- $forgejoclientid := promptStringOnce . "forgejo.client_id" "Forgejo OAuth Client ID" -}}
 {{- /* KeePassXC DB validation with 3 attempts */ -}}
 {{- $keepassxcdb := promptStringOnce . "keepassxcdb" "KeepassXC DB Path (must be a file)" -}}
 {{- if or (not (stat $keepassxcdb)) ((stat $keepassxcdb).isDir) -}}
@@ -61,13 +58,9 @@ pcloudfolder = {{ $pcloudfolder | quote }}
 devicetype = {{ $devicetype | quote }}
 gpu = {{ $gpu | quote }}
 
-[data.forgejo]
-url = {{ $forgejourl | quote }}
-client_id = {{ $forgejoclientid | quote }}
-
-[edit] 
+[edit]
 command = "zed"
-args = ["--wait"] 
+args = ["--wait"]
 
 [keepassxc]
 database = {{ $keepassxcdb | quote }}

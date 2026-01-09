@@ -12,5 +12,11 @@
     "command": "chezmoi",
     "hide": "on_success",
     "label": "Apply chezmoi"
+  },
+  {
+    "args": ["execute-template", "-f", "$ZED_FILE"],
+    "command": "chezmoi",
+    "hide": "never",
+    "label": "Execute Chezmoi template"
   }
 ]

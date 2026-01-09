@@ -12,16 +12,3 @@ $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 
 echo "Installing Python CLI packages"
 uv tool install {{ range $python3.cli }} {{.}}{{ end }}
-
-# VS Code Extensions
-
-$installed_extensions = & code --list-extensions
-
-{{ range $vscode.extensions }}
-if ($installed_extensions -notcontains "{{.}}") {
-    code --install-extension {{.}}
-}
-else {
-    echo "{{.}} is already installed"
-}
-{{ end }}

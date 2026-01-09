@@ -49,29 +49,30 @@
 {{- end -}}
 {{- $gpuchoices := list "nvidia" "amd" "none" -}}
 {{- $gpu := promptChoiceOnce . "gpu" "GPU Vendor" $gpuchoices $gpu -}}
-encryption = "gpg"
-[data]
-email = {{ $email | quote }}
-username = "MRDGH2821"
-profile = "personal"
-pcloudfolder = {{ $pcloudfolder | quote }}
-devicetype = {{ $devicetype | quote }}
-gpu = {{ $gpu | quote }}
 
-[edit]
-command = "zed"
-args = ["--wait"]
+{{- println "encryption = \"gpg\"" -}}
+{{- println "[data]" -}}
+{{- println "email =" ($email | quote) -}}
+{{- println "username = \"MRDGH2821\"" -}}
+{{- println "profile = \"personal\"" -}}
+{{- println "pcloudfolder =" ($pcloudfolder | quote) -}}
+{{- println "devicetype =" ($devicetype | quote ) -}}
+{{- println "gpu =" ($gpu | quote) -}}
 
-[keepassxc]
-database = {{ $keepassxcdb | quote }}
+{{- println "[edit]" -}}
+{{- println "command = \"zed\"" -}}
+{{- println "args = [\"--wait\"]" -}}
 
-[gpg]
-recipient = "D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73"
+{{- println "[keepassxc]" -}}
+{{- println "database =" ($keepassxcdb | quote) -}}
 
-[hooks.read-source-state.pre]
-{{- if eq .chezmoi.os "windows" }}
-command = "powershell"
-args = ["{{ .chezmoi.sourceDir }}/.chezmoiscripts/windows/.install-password-manager.ps1"]
-{{ else }}
-command = "{{ .chezmoi.sourceDir }}/.chezmoiscripts/linux/.install-password-manager.sh"
-{{ end -}}
+{{- println "[gpg]" -}}
+{{- println "recipient = \"D30D1B600CF5CDEE9EC2D7DBDAD1E1E272A1FA73\"" -}}
+
+{{- println "[hooks.read-source-state.pre]" -}}
+{{- if eq .chezmoi.os "windows" -}}
+  {{- println "command = \"powershell\"" -}}
+  {{- println (printf "args = [\"%s/.chezmoiscripts/windows/.install-password-manager.ps1\"]" .chezmoi.sourceDir) }}
+{{- else -}}
+  {{- println (printf "command = \"%s/.chezmoiscripts/linux/.install-password-manager.sh\"" .chezmoi.sourceDir) }}
+{{- end -}}

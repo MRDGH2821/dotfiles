@@ -2,7 +2,7 @@ dra:
   package:
     - devmatteini/dra --select dra_{tag}-1_amd64.deb
     - espanso/espanso --select espanso-debian-wayland-amd64.deb
-    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic_{tag}_amd64.deb
+    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-amd64.deb
     - sharkdp/bat --select bat_{tag}_amd64.deb
     - topgrade-rs/topgrade --select topgrade_{tag}-1_amd64.deb
 flatpak:

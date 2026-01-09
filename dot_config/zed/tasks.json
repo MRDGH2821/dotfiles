@@ -34,5 +34,17 @@
     "hide": "never",
     "label": "Sort TOML properties",
     "show_command": true
+  },
+  {
+    "args": ["difftool", "--dir-diff"],
+    "command": "git",
+    "hide": "on_success",
+    "label": "Meld dir diff"
+  },
+  {
+    "args": ["difftool", "$ZED_FILE", "-y"],
+    "command": "git",
+    "hide": "on_success",
+    "label": "Meld file diff"
   }
 ]

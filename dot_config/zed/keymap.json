@@ -19,6 +19,18 @@
           "reveal_target": "center",
           "task_name": "Start Lazygit"
         }
+      ],
+      "alt-m": [
+        "task::Spawn",
+        {
+          "task_name": "Meld file diff"
+        }
+      ],
+      "alt-shift-m": [
+        "task::Spawn",
+        {
+          "task_name": "Meld dir diff"
+        }
       ]
     },
     "context": "Workspace"

@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
-{{ printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- println "#!/usr/bin/env bash" -}}
+{{- println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
 {{- $debian := include ".chezmoidata/packages/linux/debian.yaml" | fromYaml -}}
 {{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) -}}
   {{- $allPackages := list -}}
@@ -21,6 +22,7 @@
   {{- end -}}
 
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
+  {{- println $line -}}
 
   {{- /* DRA Packages */ -}}
   {{- $draPackages := list -}}
@@ -34,15 +36,18 @@
   {{- range $draPackages -}}
     {{- println "sudo dra download -i " . -}}
   {{- end -}}
+  {{- println $line -}}
 
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak install -y flathub" (join " " $debian.flatpak) -}}
+  {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
   {{ range $debian.installer_url }}
     {{- println "bash -c " ( . | quote) -}}
+    {{- println $line -}}
   {{ end }}
 
 {{- else -}}

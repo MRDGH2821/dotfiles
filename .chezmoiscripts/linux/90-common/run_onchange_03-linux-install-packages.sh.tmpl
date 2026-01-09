@@ -1,45 +1,21 @@
-#!/usr/bin/env bash
+{{- println "#!/usr/bin/env bash" -}}
+{{- printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir }}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $python := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
-bindir="$HOME/.local/bin/"
-appimagedir="$HOME/AppImages/"
+{{- /* Flatpaks */ -}}
+{{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
+{{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
+{{- println "flatpak install -y flathub" (join " " $common.flatpak) -}}
+{{- println $line -}}
 
-mkdir -p "$bindir"
-mkdir -p "$appimagedir"
-
-{{ $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml }}
-{{ $python := include ".chezmoidata/packages/python3.yaml" | fromYaml }}
-
-# Executables from GitHub
-# echo "Installing executables from GitHub"
-
-## Appimages
-echo "Installing AppImages"
-{{/* range $common.dra.appimage */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download -o "$appimagedir" -i {{.}} */}}
-{{/* end */}}
-
-## Binaries
-echo "Installing binary executables"
-{{/* range $common.dra.bin */}}
-{{/* echo "Downloading {{.}}" */}}
-{{/* dra download -o "$bindir" -i {{.}} */}}
-{{/* end */}}
-
-# Flatpak
-echo "Installing Common Flatpaks"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install -y flathub {{ range $common.flatpak }} {{.}}{{ end }}
-
-# Linux self installing packages
-echo "Installing self installing packages"
+{{- /* Self installing packages */ -}}
 {{ range $common.installer_url }}
-bash -c {{ . | quote }}
+  {{- println "bash -c " ( . | quote) -}}
 {{ end }}
+{{- println $line -}}
 
-# Python3 CLI packages
-
-echo "Installing Python CLI packages"
-uv tool install {{ range $python.cli }} {{.}}{{ end }}
+{{- /* Python3 CLI tools */ -}}
+{{- println "uv tool install" (join " " $python.cli) -}}
+{{- println $line -}}

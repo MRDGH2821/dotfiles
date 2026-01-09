@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+{{- println "#!/usr/bin/env bash" -}}
 
 {{ if eq .devicetype "tablet" }}
 systemctl --user enable waydroid-monitor.service --now

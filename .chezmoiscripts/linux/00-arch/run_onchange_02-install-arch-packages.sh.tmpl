@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
-{{ println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
+{{- println "#!/usr/bin/env bash" -}}
+{{- println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
 {{- $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml -}}
 {{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch) -}}
   {{- $allPackages := list -}}
@@ -35,6 +36,7 @@
   {{- end -}}
 
   {{- print $aurHelper " -Syu --needed " (join " " $allPackages) -}}
+  {{- println $line -}}
 {{- else -}}
   {{- fail "This script is only for Arch based systems." -}}
 {{- end -}}

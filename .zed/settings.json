@@ -1,4 +1,16 @@
 {
+  "auto_install_extensions": {
+    "basher": true,
+    "cspell": true,
+    "editorconfig": true,
+    "gotmpl": true,
+    "ini": true,
+    "json5": true,
+    "markdownlint": true,
+    "tombi": true,
+    "toml": true,
+    "xml": true
+  },
   "file_types": {
     "Go Text Template": ["tmpl", ".chezmoiignore"],
     "JSON": ["**/.zed/*.json"]

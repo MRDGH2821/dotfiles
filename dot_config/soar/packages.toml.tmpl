@@ -21,38 +21,62 @@
 
 {{- /*  Map of package names to their specifications. */ -}}
 {{- /*  Supports both simple string form (version) and detailed table form. */ -}}
-{{- println "[packages]" -}}
-{{- println "pcloud =" ( $pkgs.pcloud | toJson ) -}}
-{{- println "rclone-browser =" ($pkgs.rclone_browser | toJson ) -}}
-{{- println "savestate =" ($pkgs.savestate | toJson ) -}}
-{{- println "use-via =" ($pkgs.use_via | toJson ) -}}
+{{- println "[packages.pcloud]" -}}
+{{- print ( $pkgs.pcloud | toToml ) -}}
+
+{{- println "[packages.rclone-browser]" -}}
+{{- print ( $pkgs.rclone_browser | toToml ) -}}
+
+{{- /* println "[packages.savestate]" */ -}}
+{{- /* print ( $pkgs.savestate | toToml ) */ -}}
+
+{{- println "[packages.use-via]" -}}
+{{- print ( $pkgs.use_via | toToml ) -}}
 
 {{- if eq .devicetype "laptop" -}}
-  {{- println "pince =" ($pkgs.pince | toJson ) -}}
+  {{- println "[packages.pince]" -}}
+  {{- print ( $pkgs.pince | toToml ) -}}
 {{- end -}}
 
 {{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) -}}
-  {{- println "cocogitto =" ($pkgs.cocogitto | toJson ) -}}
-  {{- println "ludusavi =" ($pkgs.ludusavi | toJson ) -}}
-  {{- println "mcfly =" ($pkgs.mcfly | toJson ) -}}
-  {{- println "rclone =" ($pkgs.rclone | toJson ) -}}
-  {{- println "tldr =" ($pkgs.tldr | toJson ) -}}
-  {{- println "yq =" ($pkgs.yq | toJson ) -}}
-{{ end }}
+  {{- println "[packages.cocogitto]" -}}
+  {{- print ( $pkgs.cocogitto | toToml ) -}}
+  {{- println "[packages.ludusavi]" -}}
+  {{- print ( $pkgs.ludusavi | toToml ) -}}
+  {{- println "[packages.mcfly]" -}}
+  {{- print ( $pkgs.mcfly | toToml ) -}}
+  {{- println "[packages.rclone]" -}}
+  {{- print ( $pkgs.rclone | toToml ) -}}
+  {{- println "[packages.tldr]" -}}
+  {{- print ( $pkgs.tldr | toToml ) -}}
+  {{- println "[packages.yq]" -}}
+  {{- print ( $pkgs.yq | toToml ) -}}
+{{- end -}}
 
 {{ if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) }}
-  {{- println "cocogitto =" ($pkgs.cocogitto | toJson ) -}}
-  {{- println "dra =" ($pkgs.dra | toJson ) -}}
-  {{- println "ludusavi =" ($pkgs.ludusavi | toJson ) -}}
-  {{- println "mcfly =" ($pkgs.mcfly | toJson ) -}}
-{{ end }}
+  {{- println "[packages.cocogitto]" -}}
+  {{- print ($pkgs.cocogitto | toToml ) -}}
+  {{- println "[packages.dra]" -}}
+  {{- print ($pkgs.dra | toToml ) -}}
+  {{- println "[packages.ludusavi]" -}}
+  {{- print ($pkgs.ludusavi | toToml ) -}}
+  {{- println "[packages.mcfly]" -}}
+  {{- print ($pkgs.mcfly | toToml ) -}}
+{{- end -}}
 
 {{ if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) }}
-  {{- println "cocogitto =" ($pkgs.cocogitto | toJson ) -}}
-  {{- println "lazygit =" ($pkgs.lazygit | toJson ) -}}
-  {{- println "ludusavi =" ($pkgs.ludusavi | toJson ) -}}
-  {{- println "mcfly =" ($pkgs.mcfly | toJson ) -}}
-  {{- println "rclone =" ($pkgs.rclone | toJson ) -}}
-  {{- println "tldr =" ($pkgs.tldr | toJson ) -}}
-  {{- println "yq =" ($pkgs.yq | toJson ) -}}
-{{ end }}
+  {{- println "[packages.cocogitto]" -}}
+  {{- print ($pkgs.cocogitto | toToml ) -}}
+  {{- println "[packages.lazygit]" -}}
+  {{- print ($pkgs.lazygit | toToml ) -}}
+  {{- println "[packages.ludusavi]" -}}
+  {{- print ($pkgs.ludusavi | toToml ) -}}
+  {{- println "[packages.mcfly]" -}}
+  {{- print ($pkgs.mcfly | toToml ) -}}
+  {{- println "[packages.rclone]" -}}
+  {{- print ($pkgs.rclone | toToml ) -}}
+  {{- println "[packages.tldr]" -}}
+  {{- print ($pkgs.tldr | toToml ) -}}
+  {{- println "[packages.yq]" -}}
+  {{- print ($pkgs.yq | toToml ) -}}
+{{- end -}}

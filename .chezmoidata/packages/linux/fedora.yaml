@@ -48,14 +48,14 @@ installer_url:
   - if ! type -P bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 laptop_only:
-  dra:
-    package:
-      - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
   dnf5:
     - obs-studio
     - obs-studio-plugin-vkcapture
     - obs-studio-plugin-vlc-video
     - obs-studio-plugin-webkitgtk
+  dra:
+    package:
+      - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
 tablet_only:
   - waydroid
   - waydroid-helper

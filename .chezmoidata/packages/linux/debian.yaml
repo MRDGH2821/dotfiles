@@ -14,13 +14,13 @@ installer_url:
 kde:
   - syncthingtray-kde-plasma
 laptop_only:
+  dra:
+    package:
+      - TibixDev/winboat --select winboat-{tag}-amd64.deb
   nala:
     native:
       - obs-studio
       - ffmpeg
-  dra:
-    package:
-      - TibixDev/winboat --select winboat-{tag}-amd64.deb
 nala:
   native:
     - apparmor-utils

@@ -1,66 +1,66 @@
 {{- if ne .chezmoi.os "windows" }}
-# Add ~/.local/bin to PATH for Linux
-$env:PATH = "$HOME/.local/bin:$env:PATH"
+  {{- /* Add ~/.local/bin to PATH for Linux */ -}}
+  {{- println (printf "$env:PATH = \"%s/.local/bin:$env:PATH\"" .chezmoi.homeDir) -}}
 {{- end }}
 
-# Oh my posh random theme initializer
-# Select a random theme
+{{- /* Oh my posh random theme initializer */ -}}
+{{- /* Select a random theme */ -}}
 {{- if eq .chezmoi.os "windows" }}
 
-$package = Get-AppxPackage -Name ohmyposh.cli
-$installLocation = $package.InstallLocation
+  {{- println "$package = Get-AppxPackage -Name ohmyposh.cli" -}}
+  {{- println "$installLocation = $package.InstallLocation" -}}
 
-# Define potential theme directories (not globs)
-$themeDirs = @(
-  "$env:UserProfile\AppData\Local\Programs\oh-my-posh\themes"
-  "$env:UserProfile\.oh-my-posh\themes"
-  Join-Path $installLocation "themes"
-)
+  {{- /* Define potential theme directories (not globs) */ -}}
+  {{- println "$themeDirs = @(" -}}
+  {{- println "  \"$env:UserProfile\\AppData\\Local\\Programs\\oh-my-posh\\themes\"" -}}
+  {{- println "  \"$env:UserProfile\\.oh-my-posh\\themes\"" -}}
+  {{- println "  Join-Path $installLocation \"themes\"" -}}
+  {{- println ")" -}}
 
-$validJsonFiles = @()
+  {{- /* Define valid JSON files */ -}}
+  {{- println "$validJsonFiles = @()" -}}
 
-foreach ($dir in $themeDirs) {
-  if (Test-Path $dir) {
-    $jsonFiles = Get-ChildItem -Path $dir -Filter '*.json' -File -ErrorAction SilentlyContinue
-    if ($jsonFiles.Count -gt 0) {
-      $validJsonFiles = $jsonFiles
-      break
-    }
-  }
-}
+  {{- println "foreach ($dir in $themeDirs) {" -}}
+  {{- println "  if (Test-Path $dir) {" -}}
+  {{- println "    $jsonFiles = Get-ChildItem -Path $dir -Filter '*.json' -File -ErrorAction SilentlyContinue" -}}
+  {{- println "    if ($jsonFiles.Count -gt 0) {" -}}
+  {{- println "      $validJsonFiles = $jsonFiles" -}}
+  {{- println "      break" -}}
+  {{- println "    }" -}}
+  {{- println "  }" -}}
+  {{- println "}" -}}
 
-$theme = Get-Random -InputObject $validJsonFiles
+  {{- println "$theme = Get-Random -InputObject $validJsonFiles" -}}
 
 {{- else }}
-$theme = Get-ChildItem ~/.cache/oh-my-posh/themes/*.json | Get-Random
+  {{- println "$theme = Get-ChildItem ~/.cache/oh-my-posh/themes/*.json | Get-Random" -}}
 {{- end }}
 
-Write-Output $theme.name
-# Set the theme
-oh-my-posh --init --shell pwsh --config $theme.FullName | Invoke-Expression
+{{- println "Write-Output $theme.name" -}}
+{{- /* Set the theme */ -}}
+{{- println "oh-my-posh --init --shell pwsh --config $theme.FullName | Invoke-Expression" -}}
 
-# Import the Chocolatey Profile that contains the necessary code to enable
-# tab-completions to function for `choco`.
-# Be aware that if you are missing these lines from your profile, tab completion
-# for `choco` will not function.
-# See https://ch0.co/tab-completion for details.
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}
+{{- /* Import the Chocolatey Profile that contains the necessary code to enable */ -}}
+{{- /* tab-completions to function for `choco`. */ -}}
+{{- /* Be aware that if you are missing these lines from your profile, tab completion */ -}}
+{{- /* for `choco` will not function. */ -}}
+{{- /* See https://ch0.co/tab-completion for details. */ -}}
+{{- println "$ChocolateyProfile = \"$env:ChocolateyInstall\\helpers\\chocolateyProfile.psm1\"" -}}
+{{- println "if (Test-Path($ChocolateyProfile)) {" -}}
+{{- println "  Import-Module \"$ChocolateyProfile\"" -}}
+{{- println "}" -}}
 
-# Fast node Manager
-fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression
+{{- /* Fast node Manager */ -}}
+{{- println "fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression" -}}
 
-# Zoxide
-Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
+{{- /* Zoxide */ -}}
+{{- println "Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })" -}}
 
+{{- /* Aliases */ -}}
 {{- if eq .chezmoi.os "windows" }}
-# Aliases
-Remove-Item Alias:cat -Force
-Set-Alias -Name cat -Value bat
+  {{- println "Remove-Item Alias:cat -Force" -}}
+  {{- println "Set-Alias -Name cat -Value bat" -}}
 {{- end }}
 
-# McFly
-
-Invoke-Expression -Command $(mcfly init powershell | out-string)
+{{- /* McFly */ -}}
+{{- println "Invoke-Expression -Command $(mcfly init powershell | out-string)" -}}

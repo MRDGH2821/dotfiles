@@ -1,10 +1,9 @@
 {{- println "#!/usr/bin/env bash" -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{ if eq .devicetype "tablet" }}
-systemctl --user enable waydroid-monitor.service --now
-sudo systemctl enable waydroid-mount.service --now
-
-echo "Waydroid Mounting Service is configured."
-echo "-------------------------------------------------"
-
+  {{- println "systemctl --user enable waydroid-monitor.service --now" -}}
+  {{- println "sudo systemctl enable waydroid-mount.service --now" -}}
+  {{- println "echo \"Waydroid Mounting Service is configured.\"" -}}
+  {{- println $line -}}
 {{ end }}

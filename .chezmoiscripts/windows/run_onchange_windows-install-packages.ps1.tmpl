@@ -1,14 +1,16 @@
-{{ $python3 := include ".chezmoidata/packages/python3.yaml" | fromYaml }}
-{{ $vscode := include ".chezmoidata/packages/vscode.yaml" | fromYaml }}
-{{ $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml }}
-# Winget Packages
+{{- $python3 := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
+{{- $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml -}}
+{{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
+
+{{- /* Winget Packages */ -}}
 {{- range $windows.winget -}}
-winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id {{ . | quote }}
-{{ end -}}
+  {{- println "echo \"Installing\"" . -}}
+  {{- println "winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id" (. | quote) -}}
+  {{- println $line -}}
+{{- end -}}
+{{- println "$Env:Path = [System.Environment]::GetEnvironmentVariable(\"Path\",\"Machine\") + \";\" + [System.Environment]::GetEnvironmentVariable(\"Path\",\"User\")" -}}
 
-$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
-
-# Python CLI Packages
-
-echo "Installing Python CLI packages"
-uv tool install {{ range $python3.cli }} {{.}}{{ end }}
+{{- /* Python CLI Packages */ -}}
+{{- println "echo \"Installing Python CLI packages\"" -}}
+{{- println "uv tool install" (join " " $python3.cli -}}
+{{- println $line -}}

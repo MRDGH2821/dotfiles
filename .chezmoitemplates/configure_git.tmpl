@@ -1,33 +1,48 @@
-git config --global commit.gpgsign true
-git config --global core.autocrlf false
-git config --global core.pager = "delta --side-by-side --dark"
-git config --global init.defaultBranch main
-git config --global init.templatedir '~/.git-templates'
-git config --global merge.ff only
-git config --global tag.forceSignAnnotated true
-git config --global tag.gpgsign = true
-git config --global interactive.diffFilter = "delta --color-only"
-git config --global delta.side-by-side = true
-git config --global delta.line-numbers = true
-git config --global delta.syntax-theme = dracula
-git config --global user.email {{ .email }}
-git config --global user.name {{ .username }}
+{{- /* Configuring Git */ -}}
+{{- $cfg := "git config --global" -}}
+{{- $line := "" -}}
+{{- if eq .chezmoi.os "windows" }}
+  {{- $line = "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
+{{- else -}}
+  {{- $line = "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+{{- end -}}
+
+{{- println $cfg "commit.gpgsign true" -}}
+{{- println $cfg "core.autocrlf false" -}}
+{{- println $cfg "core.pager = \"delta --side-by-side --dark\"" -}}
+{{- println $cfg "init.defaultBranch main" -}}
+{{- println $cfg "init.templatedir '~/.git-templates'" -}}
+{{- println $cfg "merge.ff only" -}}
+{{- println $cfg "tag.forceSignAnnotated true" -}}
+{{- println $cfg "tag.gpgsign = true" -}}
+{{- println $cfg "interactive.diffFilter = \"delta --color-only\"" -}}
+{{- println $cfg "delta.side-by-side = true" -}}
+{{- println $cfg "delta.line-numbers = true" -}}
+{{- println $cfg "delta.syntax-theme = dracula" -}}
+{{- println $cfg "user.email" .email -}}
+{{- println $cfg "user.name" .username -}}
 
 {{- if eq .profile "personal" }}
-git config --global user.signingkey 1915CBA05A598D01
+  {{- println $cfg "user.signingkey 1915CBA05A598D01" -}}
 {{- end }}
 
 {{- if eq .chezmoi.os "windows" }}
-git config --global gpg.program "C:\Program Files\GnuPG\bin\gpg.exe"
+  {{- println $cfg "gpg.program" "C:\\Program Files\\GnuPG\\bin\\gpg.exe" -}}
 {{- end }}
 
-gh auth login -p https -h github.com -w
-gh auth setup-git
+{{- println "echo \"Git is Configured!\" " -}}
 
-echo "Git is Configured!"
+{{- println $line -}}
 
-echo "-------------------------------"
+{{- /* Configuring gh */ -}}
+{{- println "gh auth login -p https -h github.com -w" -}}
+{{- println "gh auth setup-git" -}}
+{{- println "echo \"gh cli is Configured!\" " -}}
 
-git credential-oauth configure
+{{- println $line -}}
 
-echo "-------------------------------"
+{{- /* Configuring git credential-oauth */ -}}
+{{- println "git credential-oauth configure" -}}
+{{- println "echo \"Git credential oauth is Configured!\" " -}}
+
+{{- println $line -}}

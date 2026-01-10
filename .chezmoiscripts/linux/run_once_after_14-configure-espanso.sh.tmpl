@@ -1,13 +1,12 @@
 {{- println "#!/usr/bin/env bash" -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-CONFIG="$HOME/.config/espanso"
-NEW_CONFIG="{{ joinPath .pcloudfolder "Apps/espanso" }}"
+{{- println (printf "CONFIG=\"%s/.config/espanso\"" .chezmoi.homeDir) -}}
+{{- println (printf "NEW_CONFIG=" (joinPath .pcloudfolder "Apps/espanso")) -}}
+{{- println "espanso stop" -}}
+{{- println "rm -fr $CONFIG" -}}
+{{- println "ln -s $NEW_CONFIG $CONFIG" -}}
 
-espanso stop
-
-rm -fr $CONFIG
-ln -s $NEW_CONFIG $CONFIG
-
-espanso service register
-echo "Espanso is configured."
-echo "-------------------------------------------------"
+{{- println "espanso service register" -}}
+{{- println "espanso service restart" -}}
+{{- println $line -}}

@@ -1,11 +1,15 @@
-$CONFIG = Join-Path $env:AppData "espanso"
-$NEW_CONFIG = "{{ joinPath .pcloudfolder "Apps/espanso" }}"
+{{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
 
-espanso stop
+{{- println "$CONFIG = Join-Path $env:AppData \"espanso\"" -}}
+{{- println "$NEW_CONFIG =" (joinPath .pcloudfolder "Apps/espanso") -}}
 
-Remove-Item -Recurse -Force $CONFIG
-New-Item -ItemType SymbolicLink -Path $CONFIG -Target $NEW_CONFIG
+{{- println "espanso stop" -}}
 
-espanso service register
-echo "Espanso is configured."
-echo "-------------------------------------------------"
+{{- println "Remove-Item -Recurse $CONFIG -Force" -}}
+{{- println "New-Item -ItemType SymbolicLink -Path $CONFIG -Target $NEW_CONFIG" -}}
+
+{{- println "espanso service register" -}}
+{{- println "espanso service restart" -}}
+
+{{- println "echo \"Espanso is configured.\"" -}}
+{{- println $line -}}

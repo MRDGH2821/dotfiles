@@ -12,3 +12,6 @@ fi
 
 # cargo
 export PATH="${HOME}/.cargo/bin:${PATH}"
+
+# bun
+export PATH="${HOME}/.cache/.bun/bin:${PATH}"

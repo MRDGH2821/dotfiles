@@ -1,4 +1,0 @@
-# cargo
-{{ $shell := default "bash" .Shell }}
-eval "$(rustup completions {{ $shell }} cargo)" || true
-export PATH="${HOME}/.cargo/bin:${PATH}"

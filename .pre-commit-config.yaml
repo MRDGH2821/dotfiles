@@ -12,3 +12,18 @@ repos:
           - commit-msg
     repo: https://github.com/dev-build-deploy/commit-me
     rev: v0.12.0
+  - hooks:
+      - id: cspell # Spell check changed files
+      - always_run: true # This might not be necessary.
+        args:
+          - --no-must-find-files
+          - --no-progress
+          - --no-summary
+          - --files
+          - .git/COMMIT_EDITMSG
+        id: cspell # Spell check the commit message
+        name: Check commit message spelling
+        stages:
+          - commit-msg
+    repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v9.4.0

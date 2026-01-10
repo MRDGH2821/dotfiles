@@ -11,16 +11,30 @@ repos:
     repo: https://github.com/gitguardian/ggshield
     rev: v1.46.0
   - hooks:
-      - id: commit-me
-        priority: 2
+      - args:
+          - --strict
+          - scopes zed,vscode,cspell
+          - --force-scope
+          - build
+          - chore
+          - ci
+          - docs
+          - feat
+          - fix
+          - perf
+          - refactor
+          - revert
+          - style
+          - test
+        id: conventional-pre-commit
         stages:
           - commit-msg
-    repo: https://github.com/dev-build-deploy/commit-me
-    rev: v0.12.0
+    repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.3.0
   - hooks:
-      - id: cspell # Spell check changed files
-        args:
+      - args:
           - --config .cspell.json
+        id: cspell # Spell check changed files
       - always_run: true # This might not be necessary.
         args:
           - --no-must-find-files

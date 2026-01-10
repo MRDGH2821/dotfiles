@@ -1,9 +1,0 @@
-{
-  "githubAction": {
-    "includeCommits": true,
-    "includePullRequest": true,
-    "updatePullRequestLabels": true
-  },
-  "scopes": ["cspell", "vscode", "zed"],
-  "types": ["build", "chore", "ci", "docs", "perf", "refactor", "style", "test"]
-}

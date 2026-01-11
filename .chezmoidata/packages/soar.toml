@@ -1,7 +1,3 @@
-[cocogitto]
-pkg_type = "static"
-repo = "bincache"
-
 [dra]
 pkg_type = "archive"
 url = "https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz"

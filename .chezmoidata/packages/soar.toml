@@ -9,8 +9,8 @@ url = "https://github.com/jesseduffield/lazygit/releases/download/v0.58.0/lazygi
 version = "0.58.0"
 
 [ludusavi]
-pkg_type = "appimage"
-url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.AppImage"
+pkg_type = "archive"
+url = "https://github.com/mtkennerly/ludusavi/releases/download/v0.30.0/ludusavi-v0.30.0-linux.tar.gz"
 version = "0.30.0"
 
 [mcfly]

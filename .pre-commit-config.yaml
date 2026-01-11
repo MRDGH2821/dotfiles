@@ -12,7 +12,7 @@ repos:
   - hooks:
       - args:
           - --strict
-          - scopes zed,vscode,chezmoi,cspell,git,kde,package,script,vscode,zed,pre-commit
+          - --scopes chezmoi,cspell,git,kde,package,pre-commit,script,vscode,zed
           - --force-scope
           - build
           - chore

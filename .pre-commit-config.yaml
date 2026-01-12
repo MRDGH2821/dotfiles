@@ -65,7 +65,10 @@ repos:
           - --env
           - "'LOG_LEVEL=warning'"
         description: |
-          See https://megalinter.io/latest/mega-linter-runner/#usage and https://megalinter.io/latest/configuration/ if you wish to override the default arguments. mega-linter-runner is specified as an argument so that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the pertinent Docker image isn't already cached (c.f., https://github.com/marketplace/actions/docker-cache/). If you encounter permission errors, try running Docker in rootless mode (c.f., https://github.com/marketplace/actions/rootless-docker/). Linter results are logged to the megalinter-reports directory, so list it in your .gitignore.
+          See https://megalinter.io/latest/mega-linter-runner/#usage and https://megalinter.io/latest/configuration/ if you wish to override the default arguments.
+          mega-linter-runner is specified as an argument so that you may override the version (e.g., mega-linter-runner@vx.y.z).
+          Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the pertinent Docker image isn't already cached (c.f., https://github.com/marketplace/actions/docker-cache/).
+          If you encounter permission errors, try running Docker in rootless mode (c.f., https://github.com/marketplace/actions/rootless-docker/). Linter results are logged to the megalinter-reports directory, so list it in your .gitignore.
         entry: bunx --
         id: megalinter-full
         language: system

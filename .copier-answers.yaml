@@ -1,5 +1,4 @@
----
-_commit: v0.0.8
+_commit: v0.0.11
 _src_path: gh:MRDGH2821/copier-mr-minimal
 project_name: dotfiles
 use_megalinter_in_pre_commit: true

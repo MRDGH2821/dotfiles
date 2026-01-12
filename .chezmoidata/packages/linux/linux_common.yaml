@@ -1,3 +1,4 @@
+---
 flatpak:
   - app.grayjay.Grayjay
   - com.github.tchx84.Flatseal

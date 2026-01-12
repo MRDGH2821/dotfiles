@@ -11,6 +11,7 @@
 .vscode
 .zed
 cog.toml
+megalinter-reports
 node_modules
 package*.json
 Packages.md

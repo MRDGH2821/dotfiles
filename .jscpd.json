@@ -3,6 +3,8 @@
   "ignore": [
     "**/*.svg",
     "**/*cache*/**",
+    "**/.chezmoidata/**",
+    "**/.chezmoiscripts/**",
     "**/.git/**",
     "**/.github/**",
     "**/.idea/**",

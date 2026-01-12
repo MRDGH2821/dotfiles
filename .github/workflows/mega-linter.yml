@@ -1,6 +1,6 @@
+---
 # MegaLinter GitHub Action configuration file
 # More info at https://megalinter.io
----
 concurrency:
   cancel-in-progress: true
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -37,9 +37,9 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
       # MegaLinter
-      - # All available variables are described in documentation
+        # All available variables are described in documentation
         # https://megalinter.io/latest/config-file/
-        env:
+      - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Uncomment to use ApiReporter (Grafana)
           # API_REPORTER: true
@@ -59,10 +59,10 @@ jobs:
             ${{
               github.event_name != 'pull_request' ||
               (github.event.pull_request.user.login != 'dependabot[bot]' &&
-               github.event.pull_request.user.login != 'renovate[bot]' &&
-               github.event.pull_request.user.login != 'github-actions[bot]' &&
-               !startsWith(github.event.pull_request.user.login, 'dependabot') &&
-               !startsWith(github.event.pull_request.user.login, 'renovate'))
+              github.event.pull_request.user.login != 'renovate[bot]' &&
+              github.event.pull_request.user.login != 'github-actions[bot]' &&
+              !startsWith(github.event.pull_request.user.login, 'dependabot') &&
+              !startsWith(github.event.pull_request.user.login, 'renovate'))
             }}
           # Validates all source when push on main, else just the git diff with
           # main. Override with true if you always want to lint all sources

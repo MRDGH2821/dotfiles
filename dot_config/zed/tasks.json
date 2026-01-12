@@ -4,7 +4,8 @@
     "command": "bunx",
     "hide": "never",
     "label": "Format all files with prettier",
-    "show_command": true
+    "show_command": true,
+    "tags": ["format"]
   },
   {
     "args": ["difftool", "--dir-diff"],
@@ -19,18 +20,24 @@
     "label": "Meld file diff"
   },
   {
-    "args": ["-i", "'.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)'", ".cspell.json"],
+    "args": [
+      "-i",
+      "'.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)'",
+      ".cspell.json"
+    ],
     "command": "yq",
     "hide": "never",
     "label": "Sort Cspell arrays",
-    "show_command": true
+    "show_command": true,
+    "tags": ["format"]
   },
   {
     "args": ["-i", "-P", "'sort_keys(..)'", "$ZED_FILE"],
     "command": "yq",
     "hide": "never",
     "label": "Sort JSON/YAML properties",
-    "show_command": true
+    "show_command": true,
+    "tags": ["format"]
   },
   {
     "allow_concurrent_runs": false,
@@ -40,14 +47,16 @@
     "shell": {
       "program": "bash"
     },
-    "show_command": true
+    "show_command": true,
+    "tags": ["format"]
   },
   {
     "args": ["toml-sort", "-i", "-a", "$ZED_FILE"],
     "command": "uvx",
     "hide": "never",
     "label": "Sort TOML properties",
-    "show_command": true
+    "show_command": true,
+    "tags": ["format"]
   },
   {
     "command": "lazygit -p $ZED_WORKTREE_ROOT",

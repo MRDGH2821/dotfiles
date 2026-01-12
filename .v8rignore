@@ -1,2 +1,3 @@
-.zed/tasks.json
 .copier-answers.mr-minimal.yaml
+.zed/tasks.json
+dot_config/zed/tasks.json

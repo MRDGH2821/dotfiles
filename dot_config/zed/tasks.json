@@ -19,10 +19,10 @@
     "label": "Meld file diff"
   },
   {
-    "args": ["-i", "'.words |= sort_by(downcase)'", ".cspell.json"],
+    "args": ["-i", "'.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)'", ".cspell.json"],
     "command": "yq",
     "hide": "never",
-    "label": "Sort Cspell word list",
+    "label": "Sort Cspell arrays",
     "show_command": true
   },
   {

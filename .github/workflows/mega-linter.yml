@@ -36,9 +36,9 @@ jobs:
           # improve performance
           fetch-depth: 0
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
-      # MegaLinter
-        # All available variables are described in documentation
-        # https://megalinter.io/latest/config-file/
+          # MegaLinter
+          # All available variables are described in documentation
+          # https://megalinter.io/latest/config-file/
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Uncomment to use ApiReporter (Grafana)

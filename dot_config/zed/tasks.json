@@ -1,14 +1,28 @@
 [
   {
-    "command": "lazygit -p $ZED_WORKTREE_ROOT",
-    "hide": "on_success",
-    "label": "Start Lazygit"
-  },
-  {
     "args": ["prettier", ".", "--write"],
-    "command": "npx",
+    "command": "bunx",
     "hide": "never",
     "label": "Format all files with prettier",
+    "show_command": true
+  },
+  {
+    "args": ["difftool", "--dir-diff"],
+    "command": "git",
+    "hide": "on_success",
+    "label": "Meld dir diff"
+  },
+  {
+    "args": ["difftool", "$ZED_FILE", "-y"],
+    "command": "git",
+    "hide": "on_success",
+    "label": "Meld file diff"
+  },
+  {
+    "args": ["-i", "'.ignorePaths |= sort_by(downcase)'", ".cspell.json"],
+    "command": "yq",
+    "hide": "never",
+    "label": "Sort Cspell word list",
     "show_command": true
   },
   {
@@ -36,15 +50,8 @@
     "show_command": true
   },
   {
-    "args": ["difftool", "--dir-diff"],
-    "command": "git",
+    "command": "lazygit -p $ZED_WORKTREE_ROOT",
     "hide": "on_success",
-    "label": "Meld dir diff"
-  },
-  {
-    "args": ["difftool", "$ZED_FILE", "-y"],
-    "command": "git",
-    "hide": "on_success",
-    "label": "Meld file diff"
+    "label": "Start Lazygit"
   }
 ]

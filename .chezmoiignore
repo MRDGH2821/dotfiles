@@ -4,8 +4,10 @@
 .editorconfig
 .gitignore
 .pre-commit-config.yaml
+.prettierignore
 .prettierrc.json
 .trunk
+.v8rignore
 .vscode
 .zed
 cog.toml

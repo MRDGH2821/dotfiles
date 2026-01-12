@@ -1,11 +1,21 @@
 {
   "allowCompoundWords": true,
   "caseSensitive": false,
-  "ignorePaths": [".git", ".trunk", ".vscode", "node_modules", "package*.json"],
-  "language": "en-GB,en,en-US",
+  "ignorePaths": [
+    "**/.git/**",
+    "**/.pnpm-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    ".vscode",
+    ".zed",
+    "megalinter-reports",
+    "package-lock.json"
+  ],
+  "language": "en,en-GB",
   "useGitignore": true,
   "version": "0.2",
   "words": [
+    ".v8rignore",
     "adilhanney",
     "ajeetdsouza",
     "aristocratos",

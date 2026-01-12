@@ -1,10 +1,13 @@
+---
 default_install_hook_types:
-  - pre-commit
   - commit-msg
+  - pre-commit
+  - pre-push
 repos:
   - hooks:
       - id: ggshield
         language_version: python3
+        priority: 1
         stages:
           - pre-commit
     repo: https://github.com/gitguardian/ggshield
@@ -12,7 +15,7 @@ repos:
   - hooks:
       - args:
           - --strict
-          - --scopes chezmoi,cspell,git,kde,package,pre-commit,script,vscode,zed
+          - --scopes zed,vscode,cspell,megalinter,pre-commit,chezmoi,cspell,git,kde,package,pre-commit,script,vscode,zed
           - --force-scope
           - build
           - chore
@@ -48,3 +51,43 @@ repos:
           - commit-msg
     repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v9.4.0
+  - hooks:
+      - args:
+          - mega-linter-runner
+          - --containername
+          - megalinter-full
+          - --remove-container
+          - --fix
+          - --env
+          - "'APPLY_FIXES=all'"
+          - --env
+          - "'CLEAR_REPORT_FOLDER=true'"
+          - --env
+          - "'LOG_LEVEL=warning'"
+        description: |
+          See https://megalinter.io/latest/mega-linter-runner/#usage and https://megalinter.io/latest/configuration/ if you wish to override the default arguments. mega-linter-runner is specified as an argument so that you may override the version (e.g., mega-linter-runner@vx.y.z). Depends on npx, which ships with npm 7+, and Docker. Runs very slowly when the pertinent Docker image isn't already cached (c.f., https://github.com/marketplace/actions/docker-cache/). If you encounter permission errors, try running Docker in rootless mode (c.f., https://github.com/marketplace/actions/rootless-docker/). Linter results are logged to the megalinter-reports directory, so list it in your .gitignore.
+        entry: bunx --
+        id: megalinter-full
+        language: system
+        name: Run MegaLinter
+        priority: 50
+        require_serial: true
+        stages:
+          - pre-push
+    repo: https://github.com/oxsecurity/megalinter
+    rev: v6.8.0 # Git tag specifying the hook, not mega-linter-runner, version
+  - hooks:
+      # Prevent committing inline conflict markers
+      - args:
+          - --assume-in-merge
+        id: check-merge-conflict
+    repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+  - hooks:
+      # Prevent committing .rej files
+      - entry: found Copier update rejection files; review and remove them before merging.
+        files: \.rej$
+        id: forbidden-files
+        language: fail
+        name: forbidden files
+    repo: local

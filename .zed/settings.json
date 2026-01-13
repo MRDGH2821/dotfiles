@@ -7,6 +7,7 @@
     "ini": true,
     "json5": true,
     "markdownlint": true,
+    "powershell": true,
     "tombi": true,
     "toml": true,
     "xml": true

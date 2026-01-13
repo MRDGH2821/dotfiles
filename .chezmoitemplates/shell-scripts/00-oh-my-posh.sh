@@ -1,5 +1,5 @@
+# shellcheck shell=bash
 # Oh My Posh
-
 SHELL_PATH=$(ps -p $$ -o comm=)
 SHELL_NAME=$(basename "${SHELL_PATH}")
 # Provide path to oh-my-posh installed themes

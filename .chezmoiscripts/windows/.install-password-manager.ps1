@@ -1,5 +1,5 @@
 if (Get-Command keepassxc.exe -ErrorAction SilentlyContinue) {
-  Write-Host "KeePassXC is already installed. Skipping"
+  Write-Output "KeePassXC is already installed. Skipping"
   exit
 }
 
@@ -20,11 +20,11 @@ function Add-ToPath {
     "PATH=$path" | Set-Content -Path "$env:USERPROFILE/path.env"
     # append dir to path
     [Environment]::SetEnvironmentVariable("PATH", $path + ";$dir", [EnvironmentVariableTarget]::Machine)
-    Write-Host "Added $dir to PATH"
+    Write-Output "Added $dir to PATH"
     return
   }
   Write-Error "$dir is already in PATH"
 }
 Add-ToPath "C:\Program Files\KeePassXC"
 
-Write-Host "KeePassXC installed"
+Write-Output "KeePassXC installed"

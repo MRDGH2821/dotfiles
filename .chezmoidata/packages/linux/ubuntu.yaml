@@ -28,6 +28,7 @@ nala:
     - apparmor-utils
     - btop
     - direnv
+    - fastfetch
     - firefox
     - flatpak
     - fzf
@@ -36,7 +37,6 @@ nala:
     - git-credential-oauth
     - git-delta
     - gnupg2
-    - fastfetch
     - keepassxc
     - kleopatra
     - libpam-u2f

@@ -20,8 +20,8 @@ laptop_only:
       - TibixDev/winboat --select winboat-{tag}-amd64.deb
   nala:
     native:
-      - obs-studio
       - ffmpeg
+      - obs-studio
 nala:
   native:
     - apparmor-utils
@@ -44,11 +44,11 @@ nala:
     - libqt6printsupport6
     - libqt6widgets6
     - mangohud
+    - meld
     - pamu2fcfg
     - sane-utils
     - shellcheck
     - shfmt
-    - meld
     - syncthing
     - syncthingtray
     - system-config-printer

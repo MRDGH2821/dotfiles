@@ -9,6 +9,7 @@
 
 {{- println $cfg "commit.gpgsign true" -}}
 {{- println $cfg "core.autocrlf false" -}}
+{{- println $cfg "core.editor = \"zed -n --wait\"" -}}
 {{- println $cfg "core.pager = \"delta --side-by-side --dark\"" -}}
 {{- println $cfg "init.defaultBranch main" -}}
 {{- println $cfg "init.templatedir '~/.git-templates'" -}}

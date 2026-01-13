@@ -46,7 +46,6 @@ flatpak:
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:
-  - if ! type -P bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
   - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 laptop_only:
   dnf5:
@@ -61,5 +60,6 @@ tablet_only:
   - waydroid
   - waydroid-helper
 terra:
+  - bun-bin
   - espanso-wayland
   - topgrade

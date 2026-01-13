@@ -19,5 +19,13 @@
     "label": "Sort Markdown tables",
     "show_command": true,
     "tags": ["format"]
+  },
+  {
+    "args": [".zed/sort-yaml-packages.sh"],
+    "command": "sh",
+    "hide": "never",
+    "label": "Sort YAML packages",
+    "show_command": true,
+    "tags": ["format"]
   }
 ]

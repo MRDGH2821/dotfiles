@@ -9,7 +9,14 @@
       }
     }
   ],
-  "plugins": ["prettier-plugin-go-template", "prettier-plugin-toml"],
+  "plugins": [
+    "prettier-plugin-go-template",
+    "prettier-plugin-powershell",
+    "prettier-plugin-toml"
+  ],
+  "powershellIndentSize": 2,
+  "powershellRewriteAliases": true,
+  "powershellRewriteWriteHost": true,
   "tabWidth": 2,
   "useTabs": false
 }

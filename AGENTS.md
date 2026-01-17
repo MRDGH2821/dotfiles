@@ -72,7 +72,7 @@ This file provides guidance for AI coding assistants working with this project.
 
 ### Format
 
-- Follow Conventional Commits format: `<type>(<scope>): <description>` as given here - https://www.conventionalcommits.org/en/v1.0.0/
+- Follow Conventional Commits format: `<type>(<scope>): <description>` as given here - <https://www.conventionalcommits.org/en/v1.0.0/>
 - Valid types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`
 - Valid scopes: `zed`, `vscode`, `cspell`, `megalinter`, `precommit`
 - For additional scopes, refer `conventional-pre-commit` hook in `.pre-commit-config.yaml`. It has additional scopes and is the source of truth.

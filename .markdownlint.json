@@ -6,14 +6,14 @@
   "MD013": {
     "line_length": 400
   },
+  "MD024": {
+    "siblings_only": true
+  },
   "MD026": {
     "punctuation": ".,;:!。，；:"
   },
   "MD029": false,
   "MD033": false,
   "MD036": false,
-  "blank_lines": false,
-  "MD024": {
-    "siblings_only": true
-  }
+  "blank_lines": false
 }

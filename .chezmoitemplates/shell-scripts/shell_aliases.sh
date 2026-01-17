@@ -28,3 +28,9 @@ alias l='ls -CF'
 touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }
+
+# Conditional aliases
+
+if type -P zeditor >/dev/null 2>&1; then
+  alias zed='zeditor'
+fi

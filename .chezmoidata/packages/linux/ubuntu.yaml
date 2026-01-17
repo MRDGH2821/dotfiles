@@ -10,10 +10,10 @@ flatpak:
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:
-  - if ! type -P bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
-  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
-  - if ! type -P uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
-  - if ! type -P zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
+  - if ! command -v bun >/dev/null 2>&1; then curl -fsSL https://bun.sh/install | bash; else bun upgrade; fi
+  - if ! command -v docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+  - if ! command -v uv >/dev/null 2>&1; then curl -LsSf https://astral.sh/uv/install.sh | sh; else uv self update; fi
+  - if ! command -v zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
 kde:
   - syncthingtray-kde-plasma
 laptop_only:

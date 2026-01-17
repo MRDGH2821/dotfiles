@@ -46,7 +46,7 @@ flatpak:
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:
-  - if ! type -P docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+  - if ! command -v docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
 laptop_only:
   dnf5:
     - obs-studio

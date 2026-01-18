@@ -17,8 +17,10 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [mcfly]
-pkg_type = "static"
-repo = "pkg-forge-cargo"
+asset_pattern = "*x86_64-unknown-linux-musl.tar.gz"
+github = "cantino/mcfly"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
 
 [pcloud]
 pkg_type = "appimage"

@@ -30,10 +30,6 @@ github = "korcankaraokcu/PINCE"
 pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
-[rclone]
-pkg_type = "static"
-repo = "bincache"
-
 [rclone_browser]
 asset_pattern = "*linux-x86_64.AppImage"
 github = "kapitainsky/RcloneBrowser"

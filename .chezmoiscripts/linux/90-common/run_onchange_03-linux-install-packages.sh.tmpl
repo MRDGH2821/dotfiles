@@ -11,11 +11,13 @@
 {{- println $line -}}
 
 {{- /* Self installing packages */ -}}
-{{ range $common.installer_url }}
+{{- range $common.installer_url -}}
   {{- println "bash -c " ( . | quote) -}}
-{{ end }}
+{{- end -}}
 {{- println $line -}}
 
 {{- /* Python3 CLI tools */ -}}
-{{- println "uv tool install" (join " " $python.cli) -}}
-{{- println $line -}}
+{{- range $python.cli -}}
+  {{- println "uv tool install" . -}}
+  {{- println $line -}}
+{{- end -}}

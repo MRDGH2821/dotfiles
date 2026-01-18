@@ -5,11 +5,11 @@ DISABLE_LINTERS:
   - REPOSITORY_KICS
 IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_PRE_COMMANDS:
-  - command: npm i -g prettier-plugin-go-template prettier-plugin-toml
+  - command: npm i prettier-plugin-go-template prettier-plugin-toml prettier-plugin-powershell
     continue_if_failed: true
     secured_env: true
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_PRE_COMMANDS:
-  - command: npm i -g prettier-plugin-go-template prettier-plugin-toml
+  - command: npm i prettier-plugin-go-template prettier-plugin-toml prettier-plugin-powershell
     continue_if_failed: true
     secured_env: true

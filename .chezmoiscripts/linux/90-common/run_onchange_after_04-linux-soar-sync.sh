@@ -4,3 +4,4 @@
 
 soar sync
 soar apply --prune
+soar update

@@ -29,6 +29,12 @@
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
   {{- println $line -}}
 
+  {{- /* Soar pkgs */ -}}
+  {{- println "soar sync" -}}
+  {{- println "soar apply --prune" -}}
+  {{- println "soar update" -}}
+  {{- println $line -}}
+
   {{- /* DRA Packages */ -}}
   {{- $draPackages := list -}}
   {{- $draPackages = concat $draPackages $debian.dra.package -}}

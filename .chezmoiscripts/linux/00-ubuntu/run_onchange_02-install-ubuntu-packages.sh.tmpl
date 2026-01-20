@@ -29,6 +29,12 @@
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
   {{- println $line -}}
 
+  {{- /* Soar pkgs */ -}}
+  {{- println "soar sync" -}}
+  {{- println "soar apply --prune" -}}
+  {{- println "soar update" -}}
+  {{- println $line -}}
+  
   {{- /* DRA Packages */ -}}
   {{- $draPackages := list -}}
   {{- $draPackages = concat $draPackages $ubuntu.dra.package -}}
@@ -50,10 +56,10 @@
   {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
-  {{ range $ubuntu.installer_url }}
+  {{- range $ubuntu.installer_url -}}
     {{- println "bash -c " ( . | quote) -}}
     {{- println $line -}}
-  {{ end }}
+  {{- end -}}
 
 {{- else -}}
   {{- fail "This script is only for Ubuntu based systems." -}}

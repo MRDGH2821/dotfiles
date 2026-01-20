@@ -1,0 +1,14 @@
+{
+  "cloudImages": [],
+  "currentUploader": "none",
+  "imageBed": {
+    "github": {
+      "branch": "",
+      "owner": "",
+      "repo": ""
+    }
+  },
+  "imageFolderPath": "/media/nvme-2280/pcloud-local/Pictures/MarkText-Images",
+  "screenshotFolderPath": "/home/mihirr/.config/marktext/screenshot",
+  "webImages": []
+}

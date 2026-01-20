@@ -1,0 +1,182 @@
+{
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "base_keymap": "Atom",
+  "buffer_font_family": "MesloLGM Nerd Font Mono",
+  "buffer_font_size": 16,
+  "calls": {
+    "mute_on_join": true
+  },
+  "colorize_brackets": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "file_types": {
+    "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"]
+  },
+  "format_on_save": "off",
+  "icon_theme": {
+    "dark": "Colored Zed Icons Theme Dark",
+    "light": "Colored Zed Icons Theme Light",
+    "mode": "system"
+  },
+  "languages": {
+    "Just": {
+      "formatter": "language_server"
+    },
+    "Nix": {
+      "formatter": {
+        "external": {
+          "arguments": ["--quiet", "--"],
+          "command": "alejandra"
+        }
+      }
+    },
+    "Shell Script": {
+      "formatter": {
+        "external": {
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+          "command": "shfmt"
+        }
+      }
+    },
+    "TOML": {
+      "enable_language_server": true,
+      "format_on_save": "off",
+      "formatter": ["language_server", "prettier"],
+      "language_servers": ["tombi"],
+      "prettier": {
+        "allowed": true
+      }
+    },
+    "Typst": {
+      "formatter": [
+        {
+          "external": {
+            "arguments": ["--use-std-in", "-s", "default", "--use-std-out"],
+            "command": "prettypst"
+          }
+        },
+        {
+          "external": {
+            "arguments": ["--use-std-in", "-s", "otbs", "--use-std-out"],
+            "command": "prettypst"
+          }
+        },
+        "language_server"
+      ]
+    },
+    "XML": {
+      "formatter": {
+        "external": {
+          "arguments": ["--format", "{buffer_path}"],
+          "command": "xmllint"
+        }
+      }
+    }
+  },
+  "lsp": {
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "schemas": [
+            {
+              "fileMatch": [
+                ".prettierrc.json",
+                ".prettierrc.json5",
+                ".prettierrc.jsonc",
+                ".prettierrc"
+              ],
+              "url": "https://www.schemastore.org/prettierrc.json"
+            },
+            {
+              "fileMatch": [
+                "*/.cspell.config.json",
+                "*/.cspell.config.jsonc",
+                "*/.cspell.json",
+                "*/.cspell.jsonc",
+                "*/cspell.config.json",
+                "*/cspell.config.jsonc",
+                "*/cspell.json",
+                "*/cspell.jsonc"
+              ],
+              "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json"
+            },
+            {
+              "fileMatch": [
+                ".v8rrc",
+                ".v8rrc.json",
+                ".v8rrc.yaml",
+                ".v8rrc.yml"
+              ],
+              "url": "https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json"
+            },
+            {
+              "fileMatch": [".jscpd.json"],
+              "url": "https://www.schemastore.org/jscpd.json"
+            },
+            {
+              "fileMatch": [".markdownlint.json"],
+              "url": "https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json"
+            }
+          ]
+        }
+      }
+    },
+    "tinymist": {
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      }
+    },
+    "tombi": {
+      "binary": {
+        "arguments": ["lsp", "-vv"],
+        "env": {
+          "NO_COLOR": "true"
+        }
+      }
+    }
+  },
+  "prettier": {
+    "allowed": true,
+    "plugins": ["prettier-plugin-packagejson"]
+  },
+  "project_panel": {
+    "hide_gitignore": false
+  },
+  "redact_private_values": false,
+  "tab_size": 2,
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "terminal": {
+    "copy_on_select": true
+  },
+  "theme": {
+    "dark": "Ayu Dark",
+    "light": "Ayu Light",
+    "mode": "system"
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_menus": true
+  },
+  "toolbar": {
+    "code_actions": true
+  },
+  "ui_font_family": "MesloLGM Nerd Font Mono",
+  "ui_font_size": 16
+}

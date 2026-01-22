@@ -2,9 +2,6 @@
 
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# Update rclone
-sudo rclone selfupdate
-
 # Install Nerd font
 oh-my-posh font install meslo
 oh-my-posh enable upgrade
@@ -18,3 +15,9 @@ gh auth setup-git
 # Add espanso capabilities
 ESPANSO_PATH=$(command -v espanso)
 sudo setcap "cap_dac_override+p" "${ESPANSO_PATH}"
+
+# Add Zed editor symlink
+if ! command -v zed >/dev/null 2>&1; then
+  ZEDITOR=$(command -v zeditor)
+  ln -s "${ZEDITOR}" "${HOME}/.local/bin/zed"
+fi

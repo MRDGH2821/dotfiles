@@ -18,6 +18,5 @@ sudo setcap "cap_dac_override+p" "${ESPANSO_PATH}"
 
 # Add Zed editor symlink
 if ! command -v zed >/dev/null 2>&1; then
-  ZEDITOR=$(command -v zeditor)
-  ln -s "${ZEDITOR}" "${HOME}/.local/bin/zed"
+  ln -s "$(command -v zeditor)" "${HOME}/.local/bin/zed"
 fi

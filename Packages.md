@@ -39,7 +39,6 @@
 | Fzf                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | GNOME Camera          | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | GNOME Firmware        | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Gear Lever            | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Git                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | GitHub cli            | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Gitkraken             | 👍     | 🚫     | 👍🔗   | 🚫     | 👍      |
@@ -65,6 +64,7 @@
 | Only Office           | 👍     | 📦     | 📦     | 📦     | 👍      |
 | PINCE                 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Parui                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| Planify               | 👍     | 📦     | 📦     | 📦     | 🚫      |
 | Powertoys             | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Rclone                | 👍     | 👍📥   | 👍     | 👍📥   | 🚫      |
 | Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |

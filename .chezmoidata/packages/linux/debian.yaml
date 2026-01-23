@@ -8,6 +8,7 @@ dra:
     - sharkdp/bat --select bat_{tag}_amd64.deb
     - topgrade-rs/topgrade --select topgrade_{tag}-1_amd64.deb
 flatpak:
+  - io.github.alainm23.planify
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:

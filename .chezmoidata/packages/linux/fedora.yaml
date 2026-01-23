@@ -43,6 +43,7 @@ dra:
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
 flatpak:
+  - io.github.alainm23.planify
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
 installer_url:

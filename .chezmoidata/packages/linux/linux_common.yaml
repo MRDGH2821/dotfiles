@@ -5,11 +5,9 @@ flatpak:
   - com.jeffser.Alpaca
   - io.ente.auth
   - io.github.flattool.Warehouse
-  - it.mijorus.gearlever
   - org.gnome.Firmware
   - org.gnome.Snapshot
   - org.gramps_project.Gramps
-  - org.kde.klevernotes
 installer_url:
   - if ! command -v calibre >/dev/null 2>&1; then sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin; fi
   - if ! command -v oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin ; else oh-my-posh upgrade --force; fi

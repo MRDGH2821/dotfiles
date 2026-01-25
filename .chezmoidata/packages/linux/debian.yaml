@@ -56,7 +56,6 @@ nala:
     - system-config-printer
     - uv
     - vlc
-    - zed
     - zoxide
     - zsh
   url:

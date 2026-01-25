@@ -11,6 +11,7 @@ flatpak:
 installer_url:
   - if ! command -v calibre >/dev/null 2>&1; then sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin; fi
   - if ! command -v oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin ; else oh-my-posh upgrade --force; fi
+  - if ! command -v zed >/dev/null 2>&1; then curl -f https://zed.dev/install.sh | sh; fi
 kde:
   - discover
   - filelight

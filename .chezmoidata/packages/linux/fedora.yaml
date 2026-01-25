@@ -34,7 +34,6 @@ dnf5:
     - uv
     - vlc
     - yq
-    - zed
     - zoxide
     - zsh
   url:

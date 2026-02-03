@@ -1,0 +1,39 @@
+branch_whitelist = []
+disable_bump_commit = false
+disable_changelog = false
+from_latest_tag = false
+generate_mono_repository_global_tag = true
+generate_mono_repository_package_tags = true
+ignore_fixup_commits = false
+ignore_merge_commits = false
+post_bump_hooks = []
+post_package_bump_hooks = []
+pre = "alpha.*"
+pre_bump_hooks = []
+pre_package_bump_hooks = []
+scopes = [
+  "chezmoi",
+  "cspell",
+  "git",
+  "kde",
+  "megalinter",
+  "package",
+  "pre-commit",
+  "script",
+  "vscode",
+  "zed",
+]
+skip_ci = "[skip ci]"
+skip_untracked = false
+
+[bump_profiles]
+
+[changelog]
+authors = []
+path = "CHANGELOG.md"
+
+[commit_types]
+
+[git_hooks]
+
+[packages]

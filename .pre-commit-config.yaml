@@ -44,3 +44,15 @@ repos:
         language: fail
         name: forbidden files
     repo: local
+  - hooks:
+      - args:
+          - verify
+          - --file
+        entry: cog
+        id: cocogitto
+        language: unsupported
+        name: Cocogitto commits check
+        stages:
+          - commit-msg
+        verbose: true
+    repo: local

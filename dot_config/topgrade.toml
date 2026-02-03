@@ -170,7 +170,7 @@ no_self_update = true
 # How many repos to pull at max in parallel
 max_concurrency = 1
 # Additional git repositories to pull
-repos = ["~/Source Codes/*/"]
+repos = ["~/Source-Codes/*/"]
 
 # Don't pull the predefined git repos
 # pull_predefined = false

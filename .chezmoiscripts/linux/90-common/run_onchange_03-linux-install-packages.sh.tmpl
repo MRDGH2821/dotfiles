@@ -2,6 +2,7 @@
 {{- println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
 {{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
 {{- $python := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
+{{- $rust := include ".chezmoidata/packages/rust.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- /* Flatpaks */ -}}
@@ -21,3 +22,13 @@
   {{- println "uv tool install" . -}}
   {{- println $line -}}
 {{- end -}}
+
+{{- /* Rust CLI tools */ -}}
+{{- println "rustup default stable" -}}
+{{- println "cargo install" (join " " $rust.install) -}}
+{{- range $rust.git -}}
+  {{- println "cargo install --git" . -}}
+  {{- println $line -}}
+{{- end -}}
+{{- println "cargo binstall" (join " " $rust.binstall) -}}
+{{- println $line -}}

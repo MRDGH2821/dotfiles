@@ -10,7 +10,18 @@
 {{- end -}}
 {{- println "$Env:Path = [System.Environment]::GetEnvironmentVariable(\"Path\",\"Machine\") + \";\" + [System.Environment]::GetEnvironmentVariable(\"Path\",\"User\")" -}}
 
-{{- /* Python CLI Packages */ -}}
-{{- println "echo \"Installing Python CLI packages\"" -}}
-{{- println "uv tool install" (join " " $python3.cli -}}
+{{- /* Python3 CLI tools */ -}}
+{{- range $python.cli -}}
+  {{- println "uv tool install" . -}}
+  {{- println $line -}}
+{{- end -}}
+
+{{- /* Rust CLI tools */ -}}
+{{- println "rustup default stable" -}}
+{{- println "cargo install" (join " " $rust.install) -}}
+{{- range $rust.git -}}
+  {{- println "cargo install --git" . -}}
+  {{- println $line -}}
+{{- end -}}
+{{- println "cargo binstall" (join " " $rust.binstall) -}}
 {{- println $line -}}

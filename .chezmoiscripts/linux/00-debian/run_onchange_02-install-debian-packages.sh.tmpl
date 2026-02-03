@@ -9,7 +9,7 @@
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Debian Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $debian.nala.native ($debian.nala.url | quoteList) -}}
+  {{- $allPackages = concat $allPackages $debian.nala.native ($debian.nala.url | quoteList) $common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}

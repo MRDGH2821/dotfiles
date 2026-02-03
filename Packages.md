@@ -68,6 +68,7 @@
 | Powertoys             | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Rclone                | 👍     | 👍📥   | 👍     | 👍📥   | 🚫      |
 | Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
+| Rustup                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Save State            | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Shellcheck            | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Shfmt                 | 👍     | 👍     | 👍     | 👍     | 👍      |

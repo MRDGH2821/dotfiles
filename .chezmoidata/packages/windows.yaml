@@ -43,6 +43,7 @@ winget:
   - OBSProject.OBSStudio
   - ONLYOFFICE.DesktopEditors
   - Oven-sh.Bun
+  - Rustlang.Rustup
   - sharkdp.bat
   - topgrade-rs.topgrade
   - universal.input-overlay

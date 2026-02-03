@@ -9,7 +9,7 @@
   {{- $allPackages := list -}}
   {{- println "echo \"Installing Arch Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $arch.extra $arch.core $arch.multilib $arch.aur -}}
+  {{- $allPackages = concat $allPackages $arch.extra $arch.core $arch.multilib $arch.aur $common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}

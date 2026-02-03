@@ -20,5 +20,7 @@ kde:
   - partitionmanager
   - skanlite
   - skanpage
+packages:
+  - rustup
 tablet_only:
   - iio-sensor-proxy

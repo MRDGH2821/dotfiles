@@ -9,7 +9,7 @@
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Fedora Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra ($fedora.dnf5.url | quoteList) -}}
+  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra ($fedora.dnf5.url | quoteList) $common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}

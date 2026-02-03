@@ -1,0 +1,9 @@
+binstall:
+  - cargo-update
+  - typstyle
+git:
+  - https://github.com/antonWetzel/prettypst
+  - https://github.com/cocogitto/cocogitto
+  - https://github.com/vlaci/git-agecrypt
+install:
+  - binstall

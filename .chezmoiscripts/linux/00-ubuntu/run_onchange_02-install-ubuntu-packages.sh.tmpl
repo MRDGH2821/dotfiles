@@ -9,7 +9,7 @@
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Ubuntu Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $ubuntu.nala.native ($ubuntu.nala.url | quoteList) -}}
+  {{- $allPackages = concat $allPackages $ubuntu.nala.native ($ubuntu.nala.url | quoteList) $common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}

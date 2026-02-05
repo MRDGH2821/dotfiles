@@ -1,4 +1,19 @@
 {
+  "agent": {
+    "default_model": {
+      "model": "claude-sonnet-4.5",
+      "provider": "copilot_chat"
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+    "tool_permissions": {
+      "tools": {
+        "fetch": {
+          "default_mode": "allow"
+        }
+      }
+    }
+  },
   "autosave": {
     "after_delay": {
       "milliseconds": 1000
@@ -16,8 +31,8 @@
       "enabled": true
     }
   },
-  "features": {
-    "edit_prediction_provider": "zed"
+  "edit_predictions": {
+    "provider": "zed"
   },
   "file_types": {
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"]

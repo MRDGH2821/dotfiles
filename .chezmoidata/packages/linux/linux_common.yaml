@@ -21,6 +21,24 @@ kde:
   - skanlite
   - skanpage
 packages:
+  - btop
+  - direnv
+  - firefox
+  - flatpak
+  - fzf
+  - git
+  - git-credential-oauth
+  - git-delta
+  - keepassxc
+  - kleopatra
+  - mangohud
   - rustup
+  - shfmt
+  - syncthing
+  - vlc
+  - zoxide
+  - zsh
 tablet_only:
   - iio-sensor-proxy
+  - waydroid
+  - waydroid-helper

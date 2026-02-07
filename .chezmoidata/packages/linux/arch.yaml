@@ -1,7 +1,6 @@
 ---
 aur:
   - espanso-wayland
-  - git-credential-oauth
   - gitkraken
   - heroic-games-launcher-bin
   - ludusavi-bin
@@ -17,40 +16,27 @@ extra:
   - bat
   - btop
   - bun
-  - direnv
   - discord
   - docker
   - docker-buildx
   - docker-compose
   - dra
   - fastfetch
-  - firefox
-  - flatpak
-  - fzf
-  - git
-  - git-delta
   - github-cli
   - go-yq
   - keepassxc
-  - kleopatra
   - lazygit
-  - mangohud
   - mcfly
   - meld
   - pam-u2f
   - rclone
   - sane
-  - shfmt
-  - syncthing
   - syncthingtray-qt6
   - system-config-printer
   - tealdeer
   - ttf-liberation
   - unzip
   - uv
-  - vlc
-  - zoxide
-  - zsh
 kde:
   - qt5-graphicaleffects
   - qt5-quickcontrols2
@@ -62,8 +48,3 @@ laptop_only:
 multilib:
   - lib32-mangohud
   - steam
-tablet_only:
-  aur:
-    - waydroid-helper
-  extra:
-    - waydroid

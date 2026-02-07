@@ -28,39 +28,21 @@ nala:
   native:
     - apparmor-utils
     - btop
-    - direnv
     - fastfetch
-    - firefox
-    - flatpak
-    - fzf
     - gh
-    - git
-    - git-credential-oauth
-    - git-delta
     - gnupg2
-    - keepassxc
-    - kleopatra
     - libpam-u2f
     - libqt6core6
     - libqt6gui6
     - libqt6printsupport6
     - libqt6widgets6
-    - mangohud
     - pamu2fcfg
     - sane-utils
     - shellcheck
-    - shfmt
-    - syncthing
     - syncthingtray
     - system-config-printer
-    - vlc
-    - zoxide
-    - zsh
   url:
     # - https://api.gitkraken.dev/releases/production/linux/x64/active/gitkraken-amd64.deb
     - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
     - https://discord.com/api/download?platform=linux&format=deb
     - https://github.com/devmatteini/dra/releases/download/0.10.1/dra_0.10.1-1_amd64.deb
-tablet_only:
-  - waydroid
-  - waydroid-helper

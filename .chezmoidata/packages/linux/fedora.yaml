@@ -3,39 +3,24 @@ dnf5:
   native:
     - bat
     - btop
-    - direnv
     - discord
     - fastfetch
-    - firefox
-    - flatpak
-    - fzf
     - gh
-    - git
-    - git-credential-oauth
-    - git-delta
     - gnupg2
-    - keepassxc
-    - kleopatra
     - lazygit
-    - mangohud
     - meld
     - pam-u2f
     - pamu2fcfg
     - rclone
     - sane-backends
     - shellcheck
-    - shfmt
     - steam
-    - syncthing
     - syncthingplasmoid-qt6
     - syncthingtray-qt6
     - system-config-printer
     - tealdeer
     - uv
-    - vlc
     - yq
-    - zoxide
-    - zsh
   url:
     - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
@@ -56,9 +41,6 @@ laptop_only:
   dra:
     package:
       - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
-tablet_only:
-  - waydroid
-  - waydroid-helper
 terra:
   - bun-bin
   - espanso-wayland

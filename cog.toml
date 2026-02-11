@@ -1,3 +1,5 @@
+# tombi: format.rules.table-keys-order = "ascending"
+
 branch_whitelist = []
 disable_bump_commit = true
 disable_changelog = true

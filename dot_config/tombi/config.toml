@@ -1,3 +1,26 @@
+[format]
+[format.rules]
+array-bracket-space-width = 0
+array-comma-space-width = 1
+date-time-delimiter = "T"
+indent-style = "space"
+indent-sub-tables = false
+indent-table-key-value-pairs = false
+indent-width = 2
+inline-table-brace-space-width = 1
+inline-table-comma-space-width = 1
+key-value-equals-sign-alignment = false
+key-value-equals-sign-space-width = 1
+line-ending = "lf"
+line-width = 80
+string-quote-style = "double"
+trailing-comment-alignment = false
+trailing-comment-space-width = 2
+# table-keys-order = "ascending"
+
+[lsp]
+formatting.enabled = true
+
 [[schemas]]
 path = "https://docs.cocogitto.io/cog-schema.json"
 include = ["cog.toml"]

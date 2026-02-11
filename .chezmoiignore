@@ -55,3 +55,7 @@ dot_config/paru/**
 .chezmoidata/packages/linux/ubuntu.yaml
 .chezmoiscripts/linux/00-ubuntu/**
 {{ end }}
+
+{{- if ne (env "XDG_SESSION_DESKTOP") "KDE" -}}
+dot_config/plasma-workspace
+{{ end }}

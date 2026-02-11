@@ -8,16 +8,16 @@
     "tags": ["format"]
   },
   {
-    "label": "Open Typst Preview",
-    "command": "xdg-open http://127.0.0.1:23635/",
-    "use_new_terminal": true,
     "allow_concurrent_runs": false,
+    "command": "xdg-open http://127.0.0.1:23635/",
+    "hide": "always",
+    "label": "Open Typst Preview",
     "reveal": "never",
     "reveal_target": "dock",
-    "hide": "always",
     "shell": "system",
+    "show_command": true,
     "show_summary": true,
-    "show_command": true
+    "use_new_terminal": true
   },
   {
     "args": ["difftool", "--dir-diff"],

@@ -71,7 +71,7 @@
     "TOML": {
       "enable_language_server": true,
       "format_on_save": "off",
-      "formatter": ["language_server", "prettier"],
+      "formatter": ["prettier", "language_server"],
       "language_servers": ["tombi"],
       "prettier": {
         "allowed": true

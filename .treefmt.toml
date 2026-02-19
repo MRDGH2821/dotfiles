@@ -1,0 +1,95 @@
+allow-missing-formatter = true
+
+[formatter.alejandra]
+command = "alejandra"
+includes = ["*.nix"]
+options = ["-q"]
+priority = 0
+
+[formatter.cspell-sort]
+command = "bash"
+includes = [".cspell.json"]
+options = [
+  "-c",
+  "for file in \"$@\"; do yq -i '.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)' \"$file\"; done",
+  "--"
+]
+priority = 9
+
+[formatter.prettier]
+command = "prettier"
+excludes = []
+includes = ["*.yaml", "*.yml", "*.json", "*.json", "*.toml", "*.md"]
+options = ["--log-level", "debug", "--write"]
+priority = 100
+
+[formatter.prettypst-default]
+command = "prettypst"
+includes = ["*.typ"]
+options = ["-s", "default"]
+priority = 1
+
+[formatter.prettypst-otbs]
+command = "prettypst"
+includes = ["*.typ"]
+options = ["-s", "otbs"]
+priority = 2
+
+[formatter.ruff-format]
+command = "ruff"
+excludes = []
+includes = ["*.py"]
+options = ["format"]
+priority = 9
+
+[formatter.ruff-lint]
+command = "ruff"
+excludes = []
+includes = ["*.py"]
+options = ["check", "--fix"]
+priority = 8
+
+[formatter.shfmt]
+command = "shfmt"
+includes = ["*.sh"]
+options = ["--indent", "2"]
+priority = 1
+
+[formatter.sort-package-json]
+command = "bunx"
+includes = ["package.json"]
+options = ["sort-package-json"]
+priority = 10
+
+[formatter.tombi-format]
+command = "tombi"
+includes = ["*.toml"]
+options = ["format"]
+priority = 11
+
+[formatter.toml-sort]
+command = "toml-sort"
+includes = ["*.toml"]
+options = ["-i", "--sort-table-keys", "--sort-inline-tables"]
+priority = 0
+
+[formatter.xmllint]
+command = "xmllint"
+includes = ["*.xml"]
+options = ["--format"]
+priority = 0
+
+[formatter.yamlfix]
+command = "yamlfix"
+includes = ["*.yaml", "*.yml"]
+priority = 8
+
+[formatter.yq-key-sort]
+command = "bash"
+includes = ["*.yaml", "*.yml", "*.json"]
+options = [
+  "-c",
+  "for file in \"$@\"; do yq -i -P 'sort_keys(..)' \"$file\"; done",
+  "--"
+]
+priority = 0

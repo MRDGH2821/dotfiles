@@ -1,78 +1,80 @@
-# The name of the default profile to use.
-default_profile = "default"
-# Path to the local cache directory.
-# Default: $SOAR_ROOT/cache
-cache_path = "/home/mihirr/.local/share/soar/cache"
-# Path where the Soar package database is stored.
-# Default: $SOAR_ROOT/db
-db_path = "/home/mihirr/.local/share/soar/db"
+# Soar config
+
 # Directory where binary symlinks are placed.
 # Default: $SOAR_ROOT/bin
 bin_path = "/home/mihirr/.local/share/soar/bin"
-# Path to the local clone of all repositories.
-# Default: $SOAR_ROOT/repos
-repositories_path = "/home/mihirr/.local/share/soar/repos"
-# Portable dirs path
-# Default: $SOAR_ROOT/portable-dirs
-portable_dirs = "/home/mihirr/.local/share/soar/portable-dirs"
+# Path to the local cache directory.
+# Default: $SOAR_ROOT/cache
+cache_path = "/home/mihirr/.local/share/soar/cache"
+# Allows packages to be updated across different repositories.
+# NOTE: This is not yet implemented
+cross_repo_updates = false
+# Path where the Soar package database is stored.
+# Default: $SOAR_ROOT/db
+db_path = "/home/mihirr/.local/share/soar/db"
+# The name of the default profile to use.
+default_profile = "default"
+# Maximum number of concurrent requests for GHCR (GitHub Container Registry).
+# Default: 8
+ghcr_concurrency = 8
+# Glob patterns for package files that should be included during install.
+# Default: ["!*.log", "!SBUILD", "!*.json", "!*.version"]
+install_patterns = ["!*.log", "!SBUILD", "!*.json", "!*.version"]
 # If true, enables parallel downloading of packages.
 # Default: true
 parallel = true
 # Maximum number of parallel downloads.
 # Default: 4
 parallel_limit = 4
-# Maximum number of concurrent requests for GHCR (GitHub Container Registry).
-# Default: 8
-ghcr_concurrency = 8
+# Portable dirs path
+# Default: $SOAR_ROOT/portable-dirs
+portable_dirs = "/home/mihirr/.local/share/soar/portable-dirs"
+# Path to the local clone of all repositories.
+# Default: $SOAR_ROOT/repos
+repositories_path = "/home/mihirr/.local/share/soar/repos"
 # Limits the number of results returned by a search.
 # Default: 20
 search_limit = 20
-# Allows packages to be updated across different repositories.
-# NOTE: This is not yet implemented
-cross_repo_updates = false
-# Glob patterns for package files that should be included during install.
-# Default: ["!*.log", "!SBUILD", "!*.json", "!*.version"]
-install_patterns = ["!*.log", "!SBUILD", "!*.json", "!*.version"]
 
 # A profile defines a local package store and its configuration.
 [profile.default]
-# Root directory for this profile’s data and packages.
-#
-# If `packages_path` is not set, packages will be stored in `root_path/packages`.
-root_path = "/home/mihirr/.local/share/soar"
 # Optional path where packages are stored.
 #
 # If unset, defaults to `root_path/packages`.
 packages_path = "/home/mihirr/.local/share/soar/packages"
+# Root directory for this profile’s data and packages.
+#
+# If `packages_path` is not set, packages will be stored in `root_path/packages`.
+root_path = "/home/mihirr/.local/share/soar"
 
 # List of configured repositories.
 #
 # Defines a remote repository that provides packages.
 [[repositories]]
-# Unique name of the repository.
-name = "bincache"
-# URL to the repository's metadata file.
-url = "https://meta.pkgforge.dev/bincache/x86_64-Linux.sdb.zstd"
 # Enables desktop integration for packages from this repository.
 # Default: false
 desktop_integration = false
-# URL to the repository's public key (for signature verification).
-pubkey = "https://meta.pkgforge.dev/bincache/minisign.pub"
 # Whether the repository is enabled.
 # Default: true
 enabled = true
+# Unique name of the repository.
+name = "bincache"
+# URL to the repository's public key (for signature verification).
+pubkey = "https://meta.pkgforge.dev/bincache/minisign.pub"
 # Enables signature verification for this repository.
 # Default is derived based on the existence of `pubkey`
 signature_verification = true
 # Optional sync interval (e.g., "1h", "12h", "1d").
 # Default: "3h"
 sync_interval = "3h"
+# URL to the repository's metadata file.
+url = "https://meta.pkgforge.dev/bincache/x86_64-Linux.sdb.zstd"
 
 [[repositories]]
-name = "pkgcache"
-url = "https://meta.pkgforge.dev/pkgcache/x86_64-Linux.sdb.zstd"
 desktop_integration = true
+name = "pkgcache"
 pubkey = "https://meta.pkgforge.dev/pkgcache/minisign.pub"
+url = "https://meta.pkgforge.dev/pkgcache/x86_64-Linux.sdb.zstd"
 
 [[repositories]]
 name = "pkgforge-cargo"
@@ -87,10 +89,9 @@ name = "cargo-bins"
 url = "https://meta.pkgforge.dev/external/cargo-bins/x86_64-Linux.json.zstd"
 
 [[repositories]]
+desktop_integration = true
 name = "ivan-hc-am"
 url = "https://meta.pkgforge.dev/external/am/x86_64-Linux.json.zstd"
-desktop_integration = true
-
 # [[repositories]]
 # name = "appimagehub"
 # url = "https://meta.pkgforge.dev/external/appimagehub/x86_64-Linux.json.zstd"

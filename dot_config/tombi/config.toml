@@ -16,7 +16,6 @@ line-width = 80
 string-quote-style = "double"
 trailing-comment-alignment = false
 trailing-comment-space-width = 2
-# table-keys-order = "ascending"
 
 [lsp]
 formatting.enabled = true

@@ -152,15 +152,15 @@
       }
     },
     "tinymist": {
-      "settings": {
-        "preview.invertColors": "auto"
-      },
       "initialization_options": {
         "preview": {
           "background": {
             "enabled": true
           }
         }
+      },
+      "settings": {
+        "preview.invertColors": "auto"
       }
     },
     "tombi": {

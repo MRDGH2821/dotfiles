@@ -16,7 +16,7 @@
 
 [git]
 max_concurrency = 1
-repos = ["~/Source-Codes/Code-Bases/*/"]
+repos = ["~/Source-Codes/*/*"]
 
 [include]
 

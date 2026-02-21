@@ -1,16 +1,25 @@
 **/*.src.ini
 .commit-me.json
+.copier-answers.yml
 .cspell.json
 .editorconfig
+.github
 .gitignore
+.jscpd.json
+.markdownlint.json
+.mega-linter.yml
 .pre-commit-config.yaml
 .prettierignore
 .prettierrc.json
+.treefmt.toml
 .trunk
 .v8rignore
 .vscode
+.yamlfix.toml
 .zed
+AGENTS.md
 cog.toml
+dot_git-templates
 megalinter-reports
 node_modules
 package*.json
@@ -21,7 +30,9 @@ README.md
 
 {{- if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
+dot_bash_aliases.tmpl
 dot_bashrc
+dot_bashrc.d
 dot_config
 dot_local
 {{ end }}

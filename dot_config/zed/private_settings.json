@@ -19,6 +19,19 @@
       }
     }
   },
+  "agent_servers": {
+    "github-copilot": {
+      "favorite_models": ["claude-sonnet-4.6"],
+      "type": "registry"
+    },
+    "opencode": {
+      "favorite_models": [
+        "github-copilot/claude-sonnet-4.6/thinking",
+        "github-copilot/claude-sonnet-4.6"
+      ],
+      "type": "extension"
+    }
+  },
   "autosave": {
     "after_delay": {
       "milliseconds": 1000
@@ -43,6 +56,9 @@
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"]
   },
   "format_on_save": "off",
+  "git_panel": {
+    "tree_view": false
+  },
   "icon_theme": {
     "dark": "Colored Zed Icons Theme Dark",
     "light": "Colored Zed Icons Theme Light",

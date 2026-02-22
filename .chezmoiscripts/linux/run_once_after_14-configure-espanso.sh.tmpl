@@ -2,7 +2,7 @@
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- println (printf "CONFIG=\"%s/.config/espanso\"" .chezmoi.homeDir) -}}
-{{- println (printf "NEW_CONFIG=" (joinPath .pcloudfolder "Apps/espanso")) -}}
+{{- println (print "NEW_CONFIG=" (joinPath .pcloudfolder "Apps/espanso")) -}}
 {{- println "espanso stop" -}}
 {{- println "rm -fr $CONFIG" -}}
 {{- println "ln -s $NEW_CONFIG $CONFIG" -}}

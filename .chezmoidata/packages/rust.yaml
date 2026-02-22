@@ -7,4 +7,4 @@ git:
   - https://github.com/cocogitto/cocogitto
   - https://github.com/vlaci/git-agecrypt
 install:
-  - binstall
+  - cargo-binstall

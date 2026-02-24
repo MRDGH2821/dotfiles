@@ -19,7 +19,7 @@ priority = 9
 [formatter.prettier]
 command = "bunx"
 excludes = []
-includes = ["*.yaml", "*.yml", "*.json", "*.json", "*.toml", "*.md"]
+includes = ["*.yaml", "*.yml", "*.json", "*.json", "*.toml", "*.md", "*.tmpl"]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 

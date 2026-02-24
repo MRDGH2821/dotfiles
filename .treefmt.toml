@@ -110,3 +110,21 @@ options = [
   "--"
 ]
 priority = 0
+
+[formatter.yq-packages-sort]
+command = "bash"
+# tombi: format.rules.array-values-order = "ascending"
+includes = [
+  ".chezmoidata/packages/*.json",
+  ".chezmoidata/packages/*.yaml",
+  ".chezmoidata/packages/*.yml",
+  ".chezmoidata/packages/*/*.json",
+  ".chezmoidata/packages/*/*.yaml",
+  ".chezmoidata/packages/*/*.yml"
+]
+options = [
+  "-c",
+  "for file in \"$@\"; do yq eval -i '(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))' \"$file\"; done",
+  "--"
+]
+priority = 0

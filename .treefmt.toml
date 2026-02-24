@@ -17,10 +17,10 @@ options = [
 priority = 9
 
 [formatter.prettier]
-command = "prettier"
+command = "bunx"
 excludes = []
 includes = ["*.yaml", "*.yml", "*.json", "*.json", "*.toml", "*.md"]
-options = ["--log-level", "debug", "--write"]
+options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 
 [formatter.prettypst-default]

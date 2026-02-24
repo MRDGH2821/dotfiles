@@ -19,7 +19,8 @@ priority = 9
 [formatter.prettier]
 command = "bunx"
 excludes = []
-includes = ["*.yaml", "*.yml", "*.json", "*.json", "*.toml", "*.md", "*.tmpl"]
+# tombi: format.rules.array-values-order = "ascending"
+includes = ["*.json", "*.md", "*.tmpl", "*.toml", "*.yaml", "*.yml"]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 
@@ -62,9 +63,9 @@ options = ["sort-package-json"]
 priority = 10
 
 [formatter.tombi-format]
-command = "tombi"
+command = "uvx"
 includes = ["*.toml"]
-options = ["format"]
+options = ["tombi", "format"]
 priority = 11
 
 [formatter.toml-sort]
@@ -81,12 +82,14 @@ priority = 0
 
 [formatter.yamlfix]
 command = "yamlfix"
+# tombi: format.rules.array-values-order = "ascending"
 includes = ["*.yaml", "*.yml"]
 priority = 8
 
 [formatter.yq-key-sort]
 command = "bash"
-includes = ["*.yaml", "*.yml", "*.json"]
+# tombi: format.rules.array-values-order = "ascending"
+includes = ["*.json", "*.yaml", "*.yml"]
 options = [
   "-c",
   "for file in \"$@\"; do yq -i -P 'sort_keys(..)' \"$file\"; done",

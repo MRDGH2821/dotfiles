@@ -50,6 +50,12 @@ root_path = "/home/mihirr/.local/share/soar"
 # List of configured repositories.
 #
 # Defines a remote repository that provides packages.
+# [[repositories]]
+# name = "appimagehub"
+# url = "https://meta.pkgforge.dev/external/appimagehub/x86_64-Linux.json.zstd"
+# [[repositories]]
+# name = "appimage-github-io"
+# url = "https://meta.pkgforge.dev/external/appimage.github.io/x86_64-Linux.json.zstd"
 [[repositories]]
 # Enables desktop integration for packages from this repository.
 # Default: false
@@ -92,10 +98,3 @@ url = "https://meta.pkgforge.dev/external/cargo-bins/x86_64-Linux.json.zstd"
 desktop_integration = true
 name = "ivan-hc-am"
 url = "https://meta.pkgforge.dev/external/am/x86_64-Linux.json.zstd"
-# [[repositories]]
-# name = "appimagehub"
-# url = "https://meta.pkgforge.dev/external/appimagehub/x86_64-Linux.json.zstd"
-
-# [[repositories]]
-# name = "appimage-github-io"
-# url = "https://meta.pkgforge.dev/external/appimage.github.io/x86_64-Linux.json.zstd"

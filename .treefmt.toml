@@ -1,5 +1,3 @@
-allow-missing-formatter = true
-
 [formatter.alejandra]
 command = "alejandra"
 includes = ["*.nix"]
@@ -20,7 +18,16 @@ priority = 9
 command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
-includes = ["*.json", "*.md", "*.tmpl", "*.toml", "*.yaml", "*.yml"]
+includes = [
+  "*.js",
+  "*.json",
+  "*.md",
+  "*.tmpl",
+  "*.toml",
+  "*.ts",
+  "*.yaml",
+  "*.yml"
+]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 
@@ -37,17 +44,17 @@ options = ["-s", "otbs"]
 priority = 2
 
 [formatter.ruff-format]
-command = "ruff"
+command = "uvx"
 excludes = []
 includes = ["*.py"]
-options = ["format"]
+options = ["ruff", "format"]
 priority = 9
 
 [formatter.ruff-lint]
-command = "ruff"
+command = "uvx"
 excludes = []
 includes = ["*.py"]
-options = ["check", "--fix"]
+options = ["ruff", "check", "--fix"]
 priority = 8
 
 [formatter.shfmt]
@@ -55,6 +62,12 @@ command = "shfmt"
 includes = ["*.sh"]
 options = ["--indent", "2"]
 priority = 1
+
+[formatter.sort-markdown-tables]
+command = "bunx"
+includes = ["*.md"]
+options = ["@fmma-npm/sort-markdown-tables", "-i"]
+priority = 2
 
 [formatter.sort-package-json]
 command = "bunx"
@@ -69,9 +82,9 @@ options = ["tombi", "format"]
 priority = 11
 
 [formatter.toml-sort]
-command = "toml-sort"
+command = "uvx"
 includes = ["*.toml"]
-options = ["-i", "--sort-table-keys", "--sort-inline-tables"]
+options = ["toml-sort", "-i", "--sort-table-keys", "--sort-inline-tables"]
 priority = 0
 
 [formatter.xmllint]
@@ -81,9 +94,10 @@ options = ["--format"]
 priority = 0
 
 [formatter.yamlfix]
-command = "yamlfix"
+command = "uvx"
 # tombi: format.rules.array-values-order = "ascending"
 includes = ["*.yaml", "*.yml"]
+options = ["yamlfix"]
 priority = 8
 
 [formatter.yq-key-sort]

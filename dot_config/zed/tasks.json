@@ -1,9 +1,9 @@
 [
   {
-    "args": ["prettier", ".", "--write"],
-    "command": "bunx",
+    "args": ["-vv"],
+    "command": "treefmt",
     "hide": "never",
-    "label": "Format all files with prettier",
+    "label": "Format files",
     "show_command": true,
     "tags": ["format"]
   },
@@ -32,47 +32,20 @@
     "label": "Meld file diff"
   },
   {
-    "args": [
-      "-i",
-      "'.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)'",
-      ".cspell.json"
-    ],
-    "command": "yq",
-    "hide": "never",
-    "label": "Sort Cspell arrays",
-    "show_command": true,
-    "tags": ["format"]
-  },
-  {
-    "args": ["-i", "-P", "'sort_keys(..)'", "$ZED_FILE"],
-    "command": "yq",
-    "hide": "never",
-    "label": "Sort JSON/YAML properties",
-    "show_command": true,
-    "tags": ["format"]
-  },
-  {
-    "allow_concurrent_runs": false,
-    "command": "find . \\( -name '*.yaml' -o -name '*.yml' -o -name '*.json' \\) -exec yq -i -P 'sort_keys(..)' {} \\;",
-    "hide": "never",
-    "label": "Sort JSON/YAML properties of all files in workspace",
-    "shell": {
-      "program": "bash"
-    },
-    "show_command": true,
-    "tags": ["format"]
-  },
-  {
-    "args": ["toml-sort", "-i", "-a", "$ZED_FILE"],
-    "command": "uvx",
-    "hide": "never",
-    "label": "Sort TOML properties",
-    "show_command": true,
-    "tags": ["format"]
-  },
-  {
     "command": "lazygit -p $ZED_WORKTREE_ROOT",
     "hide": "on_success",
     "label": "Start Lazygit"
+  },
+  {
+    "args": ["copy", "gh:MRDGH2821/copier-mr-minimal"],
+    "command": "copier",
+    "hide": "always",
+    "label": "Initialise with copier template"
+  },
+  {
+    "args": ["update"],
+    "command": "copier",
+    "hide": "always",
+    "label": "Update copier template"
   }
 ]

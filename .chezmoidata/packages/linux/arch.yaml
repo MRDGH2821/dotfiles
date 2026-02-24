@@ -7,10 +7,10 @@ aur:
   - mangojuice
   - onlyoffice-bin
   - parui
-  - treefmt
   - planify
   - shellcheck-bin
   - topgrade
+  - treefmt
 core:
   - gnupg
 extra:

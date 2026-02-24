@@ -1,72 +1,76 @@
-[alejandra]
+[defaults]
+binary_only = false
+profile = "default"
+
+[packages.alejandra]
 asset_pattern = "alejandra-x86_64-unknown-linux-musl"
 github = "kamadorueda/alejandra"
 pkg_type = "static"
 tag_pattern = "*.*.*"
 
-[dra]
+[packages.dra]
 asset_pattern = "*x86_64-unknown-linux-gnu.tar.gz"
 github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
-[lazygit]
+[packages.lazygit]
 asset_pattern = "*linux_x86_64.tar.gz"
 github = "jesseduffield/lazygit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
-[ludusavi]
+[packages.ludusavi]
 asset_pattern = "*linux.tar.gz"
 github = "mtkennerly/ludusavi"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
-[mcfly]
+[packages.mcfly]
 asset_pattern = "*x86_64-unknown-linux-musl.tar.gz"
 github = "cantino/mcfly"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
-[pcloud]
+[packages.pcloud]
 pkg_type = "appimage"
 repo = "ivan-hc-am"
 
-[pince]
+[packages.pince]
 asset_pattern = "*.AppImage"
 github = "korcankaraokcu/PINCE"
 pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
-[rclone_browser]
+[packages.rclone_browser]
 asset_pattern = "*linux-x86_64.AppImage"
 github = "kapitainsky/RcloneBrowser"
 pkg_type = "appimage"
 tag_pattern = "*.*.*"
 
-[savestate]
+[packages.savestate]
 asset_pattern = "*.AppImage"
 github = "Matteo842/SaveState"
 pkg_type = "appimage"
 
-[tldr]
+[packages.tldr]
 pkg_id = "github.com.tealdeer-rs.tealdeer"
 pkg_type = "static"
 repo = "bincache"
 
-[treefmt]
+[packages.treefmt]
 asset_pattern = "*amd64.tar.gz"
 github = "numtide/treefmt"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
-[use_via]
+[packages.use_via]
 asset_pattern = "*linux.AppImage"
 github = "the-via/releases"
 pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
-[yq]
+[packages.yq]
 asset_pattern = "yq_linux_amd64"
 github = "mikefarah/yq"
 pkg_type = "static"

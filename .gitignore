@@ -1,4 +1,5 @@
 .venv/
+bun.lock
 megalinter-reports/
 node_modules/
 package*.json

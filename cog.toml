@@ -12,11 +12,12 @@ post_bump_hooks = []
 post_package_bump_hooks = []
 pre = "alpha.*"
 pre_bump_hooks = [
+  "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'",
   "bunx git-cliff -o CHANGELOG.md -c cocogitto --tag {{version_tag}}",
-  "treefmt -v",
-  "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'"
+  "treefmt -v"
 ]
 pre_package_bump_hooks = []
+# tombi: format.rules.array-values-order = "ascending"
 scopes = [
   "chezmoi",
   "cocogitto",
@@ -29,8 +30,8 @@ scopes = [
   "megalinter",
   "package",
   "pre-commit",
-  "script",
   "prettier",
+  "script",
   "version",
   "vscode",
   "zed"

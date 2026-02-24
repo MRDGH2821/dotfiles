@@ -18,6 +18,7 @@
 | Name                  | Arch   | Debian | Fedora | Ubuntu | Windows |
 | --------------------- | ------ | ------ | ------ | ------ | ------- |
 | 7 Zip                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
+| Alejandra             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Alpaca                | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Bat                   | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
 | Btop                  | 👍     | 👍     | 👍     | 👍     | 👍      |
@@ -53,7 +54,6 @@
 | Lazygit               | 👍     | 👍     | 👍     | 🪽🔗   | 👍      |
 | Link Shell Extension  | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Ludusavi              | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
-| Treefmt               | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | MangoHUD              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Mangojuice            | 👍     | 📦     | 📦     | 📦     | 🚫      |
 | McFly                 | 👍     | 🪽     | 🪽     | 🪽     | 👍      |
@@ -77,6 +77,7 @@
 | Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Syncthing Tray        | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Topgrade              | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
+| Treefmt               | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | UnigetUI              | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Use VIA               | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | VLC                   | 👍     | 👍     | 👍     | 👍     | 👍      |

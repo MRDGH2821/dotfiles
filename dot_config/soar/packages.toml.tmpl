@@ -21,6 +21,10 @@
 
 {{- /*  Map of package names to their specifications. */ -}}
 {{- /*  Supports both simple string form (version) and detailed table form. */ -}}
+
+{{- println "[packages.alejandra]" -}}
+{{- print ( $pkgs.alejandra | toToml ) -}}
+
 {{- println "[packages.pcloud]" -}}
 {{- print ( $pkgs.pcloud | toToml ) -}}
 

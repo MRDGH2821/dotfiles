@@ -1,14 +1,14 @@
+[alejandra]
+asset_pattern = "alejandra-x86_64-unknown-linux-musl"
+github = "kamadorueda/alejandra"
+pkg_type = "static"
+tag_pattern = "*.*.*"
+
 [dra]
 asset_pattern = "*x86_64-unknown-linux-gnu.tar.gz"
 github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
-
-[treefmt]
-asset_pattern = "*amd64.tar.gz"
-github = "numtide/treefmt"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
 
 [lazygit]
 asset_pattern = "*linux_x86_64.tar.gz"
@@ -53,6 +53,12 @@ pkg_type = "appimage"
 pkg_id = "github.com.tealdeer-rs.tealdeer"
 pkg_type = "static"
 repo = "bincache"
+
+[treefmt]
+asset_pattern = "*amd64.tar.gz"
+github = "numtide/treefmt"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
 
 [use_via]
 asset_pattern = "*linux.AppImage"

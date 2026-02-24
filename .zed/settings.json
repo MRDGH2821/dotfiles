@@ -3,6 +3,7 @@
     "basher": true,
     "cspell": true,
     "editorconfig": true,
+    "git-firefly": true,
     "gotmpl": true,
     "ini": true,
     "json5": true,

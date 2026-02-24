@@ -45,6 +45,8 @@
   {{- print ( $pkgs.mcfly | toToml ) -}}
   {{- println "[packages.tldr]" -}}
   {{- print ( $pkgs.tldr | toToml ) -}}
+  {{- println "[packages.treefmt]" -}}
+  {{- print ( $pkgs.yq | toToml ) -}}
   {{- println "[packages.yq]" -}}
   {{- print ( $pkgs.yq | toToml ) -}}
 {{- end -}}
@@ -56,6 +58,8 @@
   {{- print ($pkgs.ludusavi | toToml ) -}}
   {{- println "[packages.mcfly]" -}}
   {{- print ($pkgs.mcfly | toToml ) -}}
+  {{- println "[packages.treefmt]" -}}
+  {{- print ( $pkgs.yq | toToml ) -}}
 {{- end -}}
 
 {{ if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) }}
@@ -67,6 +71,8 @@
   {{- print ($pkgs.mcfly | toToml ) -}}
   {{- println "[packages.tldr]" -}}
   {{- print ($pkgs.tldr | toToml ) -}}
+  {{- println "[packages.treefmt]" -}}
+  {{- print ( $pkgs.yq | toToml ) -}}
   {{- println "[packages.yq]" -}}
   {{- print ($pkgs.yq | toToml ) -}}
 {{- end -}}

@@ -53,6 +53,7 @@
 | Lazygit               | 👍     | 👍     | 👍     | 🪽🔗   | 👍      |
 | Link Shell Extension  | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Ludusavi              | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Treefmt               | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | MangoHUD              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Mangojuice            | 👍     | 📦     | 📦     | 📦     | 🚫      |
 | McFly                 | 👍     | 🪽     | 🪽     | 🪽     | 👍      |

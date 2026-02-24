@@ -4,6 +4,12 @@ github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
+[treefmt]
+asset_pattern = "*amd64.tar.gz"
+github = "numtide/treefmt"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [lazygit]
 asset_pattern = "*linux_x86_64.tar.gz"
 github = "jesseduffield/lazygit"

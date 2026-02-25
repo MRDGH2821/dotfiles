@@ -15,8 +15,3 @@ gh auth setup-git
 # Add espanso capabilities
 ESPANSO_PATH=$(command -v espanso)
 sudo setcap "cap_dac_override+p" "${ESPANSO_PATH}"
-
-# Add Zed editor symlink
-if ! command -v zed >/dev/null 2>&1; then
-  ln -s "$(command -v zeditor)" "${HOME}/.local/bin/zed"
-fi

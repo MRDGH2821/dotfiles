@@ -5,7 +5,7 @@
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) -}}
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) (ne (lookPath "dra") "") -}}
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Fedora Packages\"" -}}
 

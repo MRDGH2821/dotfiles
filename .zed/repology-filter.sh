@@ -2,7 +2,17 @@
 
 set -euo pipefail
 
-PROJECT="${1:-firefox}"
+# Get project name from CLI arg or prompt interactively
+if [[ $# -eq 0 ]]; then
+  read -rp "Enter project name (e.g., firefox): " PROJECT
+  if [[ -z "${PROJECT}" ]]; then
+    echo "Error: Project name cannot be empty" >&2
+    exit 1
+  fi
+else
+  PROJECT="$1"
+fi
+
 API="https://repology.org/api/v1/project/${PROJECT}"
 
 # Map human names to Repology repo IDs (you can adjust these).

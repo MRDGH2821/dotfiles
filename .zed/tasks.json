@@ -11,5 +11,11 @@
     "command": "chezmoi",
     "hide": "never",
     "label": "Execute Chezmoi template"
+  },
+  {
+    "args": ["./.zed/repology-filter.sh"],
+    "command": "bash",
+    "hide": "never",
+    "label": "Search Repology"
   }
 ]

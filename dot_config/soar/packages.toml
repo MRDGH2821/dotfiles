@@ -3,31 +3,73 @@ binary_only = false
 profile = "default"
 
 [packages.alejandra]
-asset_pattern = "alejandra-x86_64-unknown-linux-musl"
+asset_pattern = "alejandra-{arch}-unknown-{os}-musl"
 github = "kamadorueda/alejandra"
 pkg_type = "static"
 tag_pattern = "*.*.*"
 
+[packages.bat]
+asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
+github = "sharkdp/bat"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
+[packages.btop]
+asset_pattern = "btop-{arch}-unknown-{os}-musl.tbz"
+github = "aristocratos/btop"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
+[packages.bun]
+asset_pattern = "bun-{os}-{arch}-musl.zip"
+github = "oven-sh/bun"
+pkg_type = "archive"
+tag_pattern = "bun-v*.*.*"
+
+[packages.direnv]
+asset_pattern = "direnv.{os}.{arch}"
+github = "direnv/direnv"
+pkg_type = "static"
+tag_pattern = "v*.*.*"
+
 [packages.dra]
-asset_pattern = "*x86_64-unknown-linux-gnu.tar.gz"
+asset_pattern = "*{arch}-unknown-{os}-gnu.tar.gz"
 github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
+[packages.fastfetch]
+asset_pattern = "fastfetch-{os}-{arch}.tar.gz"
+github = "fastfetch-cli/fastfetch"
+pkg_type = "archive"
+tag_pattern = "*.*.*"
+
+[packages.fzf]
+asset_pattern = "*{os}_{arch}.tar.gz"
+github = "junegunn/fzf"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
+[packages.gh]
+asset_pattern = "gh_*_{os}_{arch}.tar.gz"
+github = "cli/cli"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [packages.lazygit]
-asset_pattern = "*linux_x86_64.tar.gz"
+asset_pattern = "*{os}_{arch}.tar.gz"
 github = "jesseduffield/lazygit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.ludusavi]
-asset_pattern = "*linux.tar.gz"
+asset_pattern = "*{os}.tar.gz"
 github = "mtkennerly/ludusavi"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.mcfly]
-asset_pattern = "*x86_64-unknown-linux-musl.tar.gz"
+asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
 github = "cantino/mcfly"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -42,8 +84,14 @@ github = "korcankaraokcu/PINCE"
 pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
+[packages.rclone]
+asset_pattern = "rclone-*-{os}-{arch}.zip"
+github = "rclone/rclone"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [packages.rclone_browser]
-asset_pattern = "*linux-x86_64.AppImage"
+asset_pattern = "*{os}-{arch}.AppImage"
 github = "kapitainsky/RcloneBrowser"
 pkg_type = "appimage"
 tag_pattern = "*.*.*"
@@ -53,25 +101,55 @@ asset_pattern = "*.AppImage"
 github = "Matteo842/SaveState"
 pkg_type = "appimage"
 
+[packages.shellcheck]
+asset_pattern = "*{os}.{arch}.tar.xz"
+github = "koalaman/shellcheck"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
+[packages.shfmt]
+asset_pattern = "shfmt_*_{os}_{arch}"
+github = "mvdan/sh"
+pkg_type = "static"
+tag_pattern = "v*.*.*"
+
 [packages.tldr]
 pkg_id = "github.com.tealdeer-rs.tealdeer"
 pkg_type = "static"
 repo = "bincache"
 
+[packages.topgrade]
+asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
+github = "topgrade-rs/topgrade"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [packages.treefmt]
-asset_pattern = "*amd64.tar.gz"
+asset_pattern = "*{arch}.tar.gz"
 github = "numtide/treefmt"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.use_via]
-asset_pattern = "*linux.AppImage"
+asset_pattern = "*{os}.AppImage"
 github = "the-via/releases"
 pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
+[packages.uv]
+asset_pattern = "uv-{arch}-unknown-{os}-musl.tar.gz"
+github = "astral-sh/uv"
+pkg_type = "archive"
+tag_pattern = "*.*.*"
+
 [packages.yq]
-asset_pattern = "yq_linux_amd64"
+asset_pattern = "yq_{os}_{arch}"
 github = "mikefarah/yq"
 pkg_type = "static"
+tag_pattern = "v*.*.*"
+
+[packages.zoxide]
+asset_pattern = "zoxide-*-{arch}-unknown-{os}-musl.tar.gz"
+github = "ajeetdsouza/zoxide"
+pkg_type = "archive"
 tag_pattern = "v*.*.*"

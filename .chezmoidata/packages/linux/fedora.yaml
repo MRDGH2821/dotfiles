@@ -1,26 +1,16 @@
 ---
 dnf5:
   native:
-    - bat
-    - btop
     - discord
-    - fastfetch
-    - gh
     - gnupg2
-    - lazygit
     - meld
     - pam-u2f
     - pamu2fcfg
-    - rclone
     - sane-backends
-    - shellcheck
     - steam
     - syncthingplasmoid-qt6
     - syncthingtray-qt6
     - system-config-printer
-    - tealdeer
-    - uv
-    - yq
   url:
     - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
@@ -42,6 +32,4 @@ laptop_only:
     package:
       - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
 terra:
-  - bun-bin
   - espanso-wayland
-  - topgrade

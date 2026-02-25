@@ -29,26 +29,6 @@
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
   {{- println $line -}}
 
-  {{- /* Soar pkgs */ -}}
-  {{- println "soar sync" -}}
-  {{- println "soar apply --prune" -}}
-  {{- println "soar update" -}}
-  {{- println $line -}}
-
-  {{- /* DRA Packages */ -}}
-  {{- $draPackages := list -}}
-  {{- $draPackages = concat $draPackages $debian.dra.package -}}
-
-  {{- /* Conditionally add Laptop only packages */ -}}
-  {{- if eq .devicetype "laptop" -}}
-    {{- $draPackages = concat $draPackages $debian.laptop_only.dra.package -}}
-  {{- end -}}
-
-  {{- range $draPackages -}}
-    {{- println "sudo dra download -i " . -}}
-  {{- end -}}
-  {{- println $line -}}
-
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}

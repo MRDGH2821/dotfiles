@@ -29,27 +29,6 @@
   {{- println "sudo dnf5 install " (join " " $allPackages) -}}
   {{- println $line -}}
 
-  {{- /* Soar pkgs */ -}}
-  {{- println "soar add https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz --pkg-type archive --name dra --version 0.10.1" -}}
-  {{- println "soar sync" -}}
-  {{- println "soar apply --prune" -}}
-  {{- println "soar update" -}}
-  {{- println $line -}}
-
-  {{- /* DRA Packages */ -}}
-  {{- $draPackages := list -}}
-  {{- $draPackages = concat $draPackages $fedora.dra.package -}}
-
-  {{- /* Conditionally add Laptop only packages */ -}}
-  {{- if eq .devicetype "laptop" -}}
-    {{- $draPackages = concat $draPackages $fedora.laptop_only.dra.package -}}
-  {{- end -}}
-
-  {{- range $draPackages -}}
-    {{- println "sudo dra download -i " . -}}
-    {{- println $line -}}
-  {{- end -}}
-
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}

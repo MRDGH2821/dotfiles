@@ -1,0 +1,28 @@
+{{- println "#!/usr/bin/env bash" -}}
+{{- println (printf "export PATH=\"%s/.local/bin:%s/.local/share/soar/bin:${PATH}\"" .chezmoi.homeDir .chezmoi.homeDir) -}}
+{{- $ubuntu := include ".chezmoidata/packages/linux/ubuntu.yaml" | fromYaml -}}
+{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
+{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+
+{{- if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Ubuntu DRA Packages\"" -}}
+
+  {{- /* DRA Packages */ -}}
+  {{- $draPackages := list -}}
+  {{- $draPackages = concat $draPackages $ubuntu.dra.package -}}
+
+  {{- /* Conditionally add Laptop only packages */ -}}
+  {{- if eq .devicetype "laptop" -}}
+    {{- $draPackages = concat $draPackages $ubuntu.laptop_only.dra.package -}}
+  {{- end -}}
+
+  {{- range $draPackages -}}
+    {{- println "sudo dra download -i " . -}}
+    {{- println $line -}}
+  {{- end -}}
+
+{{- else -}}
+  {{- fail "This script is only for Ubuntu based systems." -}}
+{{- end -}}

@@ -1,0 +1,8 @@
+{{- println "#!/usr/bin/env bash" -}}
+
+{{- include "dot_config/soar/packages.toml" | sha256sum -}}
+{{- println "# Soar" -}}
+
+{{- println "soar sync" -}}
+{{- println "soar apply --prune" -}}
+{{- println "soar update" -}}

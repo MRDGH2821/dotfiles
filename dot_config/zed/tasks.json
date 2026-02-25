@@ -2,8 +2,8 @@
   {
     "args": ["-vv"],
     "command": "treefmt",
-    "hide": "never",
-    "label": "Format files",
+    "hide": "on_success",
+    "label": "Format with treefmt",
     "show_command": true,
     "tags": ["format"]
   },
@@ -17,6 +17,7 @@
     "shell": "system",
     "show_command": true,
     "show_summary": true,
+    "tags": ["build"],
     "use_new_terminal": true
   },
   {
@@ -39,13 +40,13 @@
   {
     "args": ["copy", "gh:MRDGH2821/copier-mr-minimal"],
     "command": "copier",
-    "hide": "always",
+    "hide": "on_success",
     "label": "Initialise with copier template"
   },
   {
     "args": ["update"],
     "command": "copier",
-    "hide": "always",
+    "hide": "on_success",
     "label": "Update copier template"
   }
 ]

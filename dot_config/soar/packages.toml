@@ -21,13 +21,13 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.bun]
-asset_pattern = "bun-{os}-{arch}-musl.zip"
+asset_pattern = "bun-{os}-x64-musl.zip"
 github = "oven-sh/bun"
 pkg_type = "archive"
 tag_pattern = "bun-v*.*.*"
 
 [packages.direnv]
-asset_pattern = "direnv.{os}.{arch}"
+asset_pattern = "direnv.{os}-amd64"
 github = "direnv/direnv"
 pkg_type = "static"
 tag_pattern = "v*.*.*"
@@ -39,19 +39,19 @@ pkg_type = "archive"
 tag_pattern = "*.*.*"
 
 [packages.fastfetch]
-asset_pattern = "fastfetch-{os}-{arch}.tar.gz"
+asset_pattern = "fastfetch-{os}-amd64.tar.gz"
 github = "fastfetch-cli/fastfetch"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
 [packages.fzf]
-asset_pattern = "*{os}_{arch}.tar.gz"
+asset_pattern = "*{os}_amd64.tar.gz"
 github = "junegunn/fzf"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.gh]
-asset_pattern = "gh_*_{os}_{arch}.tar.gz"
+asset_pattern = "gh_*_{os}_amd64.tar.gz"
 github = "cli/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -85,7 +85,7 @@ pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
 [packages.rclone]
-asset_pattern = "rclone-*-{os}-{arch}.zip"
+asset_pattern = "rclone-*-{os}-amd64.zip"
 github = "rclone/rclone"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -108,7 +108,7 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.shfmt]
-asset_pattern = "shfmt_*_{os}_{arch}"
+asset_pattern = "shfmt_*_{os}_amd64"
 github = "mvdan/sh"
 pkg_type = "static"
 tag_pattern = "v*.*.*"
@@ -125,7 +125,7 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.treefmt]
-asset_pattern = "*{arch}.tar.gz"
+asset_pattern = "*{os}_amd64.tar.gz"
 github = "numtide/treefmt"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -143,7 +143,7 @@ pkg_type = "archive"
 tag_pattern = "*.*.*"
 
 [packages.yq]
-asset_pattern = "yq_{os}_{arch}"
+asset_pattern = "yq_{os}_amd64"
 github = "mikefarah/yq"
 pkg_type = "static"
 tag_pattern = "v*.*.*"

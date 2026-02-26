@@ -8,6 +8,7 @@ dnf5:
     - pamu2fcfg
     - sane-backends
     - steam
+    - gh
     - syncthingplasmoid-qt6
     - syncthingtray-qt6
     - system-config-printer

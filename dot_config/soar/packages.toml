@@ -9,7 +9,8 @@ pkg_type = "static"
 tag_pattern = "*.*.*"
 
 [packages.bat]
-asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
+asset_pattern = "bat-*-{arch}-unknown-{os}-musl.tar.gz"
+extract_root = "bat-*-{arch}-unknown-{os}-musl"
 github = "sharkdp/bat"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -22,6 +23,7 @@ tag_pattern = "v*.*.*"
 
 [packages.bun]
 asset_pattern = "bun-{os}-x64-musl.zip"
+extract_root = "bun-{os}-x64-musl"
 github = "oven-sh/bun"
 pkg_type = "archive"
 tag_pattern = "bun-v*.*.*"
@@ -33,13 +35,15 @@ pkg_type = "static"
 tag_pattern = "v*.*.*"
 
 [packages.dra]
-asset_pattern = "*{arch}-unknown-{os}-gnu.tar.gz"
+asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"
+extract_root = "dra-*-{arch}-unknown-{os}-gnu"
 github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
 [packages.fastfetch]
 asset_pattern = "fastfetch-{os}-amd64.tar.gz"
+extract_root = "fastfetch-{os}-amd64"
 github = "fastfetch-cli/fastfetch"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
@@ -52,6 +56,7 @@ tag_pattern = "v*.*.*"
 
 [packages.gh]
 asset_pattern = "gh_*_{os}_amd64.tar.gz"
+extract_root = "gh_*_{os}_amd64"
 github = "cli/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -88,6 +93,7 @@ tag_pattern = "v*.*.*"
 
 [packages.rclone]
 asset_pattern = "rclone-*-{os}-amd64.zip"
+extract_root = "rclone-*-{os}-amd64"
 github = "rclone/rclone"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -105,6 +111,7 @@ pkg_type = "appimage"
 
 [packages.shellcheck]
 asset_pattern = "*{os}.{arch}.tar.xz"
+extract_root = "{os}.{arch}"
 github = "koalaman/shellcheck"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -116,11 +123,11 @@ pkg_type = "static"
 tag_pattern = "v*.*.*"
 
 [packages.tldr]
+asset_pattern = "tealdeer-{os}-{arch}-musl"
 github = "tealdeer-rs/tealdeer"
 pkg_type = "static"
 tag_pattern = "v*.*.*"
-asset_pattern = "tealdeer-{os}-{arch}-musl"
-version="v1.8.1"
+version = "v1.8.1"
 
 [packages.topgrade]
 asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
@@ -142,13 +149,11 @@ tag_pattern = "v*.*.*"
 
 [packages.uv]
 asset_pattern = "uv-{arch}-unknown-{os}-musl.tar.gz"
+binaries = [{ source = "uv" }, { source = "uvx" }]
+extract_root = "uv-{arch}-unknown-{os}-musl"
 github = "astral-sh/uv"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
-binaries = [
-  { source = "uv" },
-  { source = "uvx" }
-]
 
 [packages.yq]
 asset_pattern = "yq_{os}_amd64"

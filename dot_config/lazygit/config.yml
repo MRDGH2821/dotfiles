@@ -6,3 +6,5 @@ git:
       pager: delta --dark --side-by-side --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
 gui:
   sidePanelWidth: 0.3 # default is 0.3333, reduce for wider main panel
+os:
+  editPreset: zed

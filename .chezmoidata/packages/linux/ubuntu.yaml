@@ -29,6 +29,7 @@ nala:
     - libqt6gui6
     - libqt6printsupport6
     - libqt6widgets6
+    - meld
     - pamu2fcfg
     - sane-utils
     - syncthingtray

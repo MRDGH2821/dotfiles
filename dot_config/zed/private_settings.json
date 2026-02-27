@@ -1,4 +1,5 @@
 {
+  "$schema": "zed://schemas/settings",
   "agent": {
     "default_model": {
       "model": "claude-sonnet-4.5",
@@ -31,6 +32,25 @@
       ],
       "type": "extension"
     }
+  },
+  "auto_install_extensions": {
+    "basher": true,
+    "cspell": true,
+    "deno": true,
+    "docker-compose": true,
+    "editorconfig": true,
+    "env": true,
+    "git-firefly": true,
+    "gotmpl": true,
+    "ini": true,
+    "json5": true,
+    "just": true,
+    "markdownlint": true,
+    "nix": true,
+    "powershell": true,
+    "tombi": true,
+    "toml": true,
+    "xml": true
   },
   "autosave": {
     "after_delay": {

@@ -2,13 +2,13 @@
 dnf5:
   native:
     - discord
+    - gh
     - gnupg2
     - meld
     - pam-u2f
     - pamu2fcfg
     - sane-backends
     - steam
-    - gh
     - syncthingplasmoid-qt6
     - syncthingtray-qt6
     - system-config-printer
@@ -33,4 +33,5 @@ laptop_only:
     package:
       - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
 terra:
+  - bun-bin
   - espanso-wayland

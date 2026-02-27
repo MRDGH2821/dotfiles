@@ -34,3 +34,7 @@ touchfile() {
 if command -v zeditor >/dev/null 2>&1; then
   alias zed='zeditor'
 fi
+
+# Bun
+
+alias bunx="bun x"

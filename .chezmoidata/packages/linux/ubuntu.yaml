@@ -21,10 +21,11 @@ laptop_only:
 nala:
   native:
     - apparmor-utils
+    - bun
+    - gh
     - gnupg2
     - libpam-u2f
     - libqt6core6
-    - gh
     - libqt6gui6
     - libqt6printsupport6
     - libqt6widgets6

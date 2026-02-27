@@ -10,11 +10,12 @@ aur:
 core:
   - gnupg
 extra:
+  - bun
   - discord
   - docker
   - docker-buildx
-  - github-cli
   - docker-compose
+  - github-cli
   - keepassxc
   - meld
   - pam-u2f

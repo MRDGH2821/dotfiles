@@ -10,7 +10,6 @@ tag_pattern = "*.*.*"
 
 [packages.bat]
 asset_pattern = "bat-*-{arch}-unknown-{os}-musl.tar.gz"
-extract_root = "bat-*-{arch}-unknown-{os}-musl"
 github = "sharkdp/bat"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -29,7 +28,6 @@ tag_pattern = "v*.*.*"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"
-extract_root = "dra-*-{arch}-unknown-{os}-gnu"
 github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
@@ -79,7 +77,6 @@ tag_pattern = "v*.*.*"
 
 [packages.rclone]
 asset_pattern = "rclone-*-{os}-amd64.zip"
-extract_root = "rclone-*-{os}-amd64"
 github = "rclone/rclone"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
@@ -96,8 +93,7 @@ github = "Matteo842/SaveState"
 pkg_type = "appimage"
 
 [packages.shellcheck]
-asset_pattern = "*{os}.{arch}.tar.xz"
-extract_root = "{os}.{arch}"
+asset_pattern = "shellcheck-*{os}.{arch}.tar.xz"
 github = "koalaman/shellcheck"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"

@@ -47,55 +47,8 @@ packages_path = "/home/mihirr/.local/share/soar/packages"
 # If `packages_path` is not set, packages will be stored in `root_path/packages`.
 root_path = "/home/mihirr/.local/share/soar"
 
-# List of configured repositories.
-#
-# Defines a remote repository that provides packages.
-# [[repositories]]
-# name = "appimagehub"
-# url = "https://meta.pkgforge.dev/external/appimagehub/x86_64-Linux.json.zstd"
-# [[repositories]]
-# name = "appimage-github-io"
-# url = "https://meta.pkgforge.dev/external/appimage.github.io/x86_64-Linux.json.zstd"
-# [[repositories]]
-# # Enables desktop integration for packages from this repository.
-# # Default: false
-# desktop_integration = false
-# # Whether the repository is enabled.
-# # Default: true
-# enabled = true
-# # Unique name of the repository.
-# name = "bincache"
-# # URL to the repository's public key (for signature verification).
-# pubkey = "https://meta.pkgforge.dev/bincache/minisign.pub"
-# # Enables signature verification for this repository.
-# # Default is derived based on the existence of `pubkey`
-# signature_verification = true
-# # Optional sync interval (e.g., "1h", "12h", "1d").
-# # Default: "3h"
-# sync_interval = "3h"
-# # URL to the repository's metadata file.
-# url = "https://meta.pkgforge.dev/bincache/x86_64-Linux.sdb.zstd"
-# [[repositories]]
-# desktop_integration = true
-# name = "pkgcache"
-# pubkey = "https://meta.pkgforge.dev/pkgcache/minisign.pub"
-# url = "https://meta.pkgforge.dev/pkgcache/x86_64-Linux.sdb.zstd"
-# [[repositories]]
-# name = "pkgforge-cargo"
-# url = "https://meta.pkgforge.dev/external/pkgforge-cargo/x86_64-Linux.sdb.zstd"
-# [[repositories]]
-# name = "pkgforge-go"
-# url = "https://meta.pkgforge.dev/external/pkgforge-go/x86_64-Linux.sdb.zstd"
-# [[repositories]]
-# name = "cargo-bins"
-# url = "https://meta.pkgforge.dev/external/cargo-bins/x86_64-Linux.json.zstd"
-# [[repositories]]
-# desktop_integration = true
-# name = "ivan-hc-am"
-# url = "https://meta.pkgforge.dev/external/am/x86_64-Linux.json.zstd"
-
 [[repositories]]
-name = "soarpkgs"
-url = "https://github.com/pkgforge/soarpkgs/releases/latest/download/metadata-x86_64-linux.sdb.zstd"
-pubkey = "RWQ109gKujRqohsA7RERlXFfeJi23EcHN3Dz8TxyPAywa5mLw/fbcbU4"
 desktop_integration = true
+name = "soarpkgs"
+pubkey = "RWQ109gKujRqohsA7RERlXFfeJi23EcHN3Dz8TxyPAywa5mLw/fbcbU4"
+url = "https://github.com/pkgforge/soarpkgs/releases/latest/download/metadata-x86_64-linux.sdb.zstd"

@@ -1,8 +1,16 @@
 ---
 binstall:
+  - bat
+  - btop
   - cargo-update
   - llmfit
+  - ludusavi
+  - mcfly
+  - tealdeer
+  - topgrade
+  - treefmt
   - typstyle
+  - zoxide
 git:
   - https://github.com/antonWetzel/prettypst
   - https://github.com/cocogitto/cocogitto

@@ -8,18 +8,6 @@ github = "kamadorueda/alejandra"
 pkg_type = "static"
 tag_pattern = "*.*.*"
 
-[packages.bat]
-asset_pattern = "bat-*-{arch}-unknown-{os}-musl.tar.gz"
-github = "sharkdp/bat"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
-[packages.btop]
-asset_pattern = "btop-{arch}-unknown-{os}-musl.tbz"
-github = "aristocratos/btop"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
 [packages.direnv]
 asset_pattern = "direnv.{os}-amd64"
 github = "direnv/direnv"
@@ -48,18 +36,6 @@ tag_pattern = "v*.*.*"
 [packages.lazygit]
 asset_pattern = "*{os}_{arch}.tar.gz"
 github = "jesseduffield/lazygit"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
-[packages.ludusavi]
-asset_pattern = "*{os}.tar.gz"
-github = "mtkennerly/ludusavi"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
-[packages.mcfly]
-asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
-github = "cantino/mcfly"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
@@ -104,25 +80,6 @@ github = "mvdan/sh"
 pkg_type = "static"
 tag_pattern = "v*.*.*"
 
-[packages.tldr]
-asset_pattern = "tealdeer-{os}-{arch}-musl"
-github = "tealdeer-rs/tealdeer"
-pkg_type = "static"
-tag_pattern = "v*.*.*"
-version = "v1.8.1"
-
-[packages.topgrade]
-asset_pattern = "*{arch}-unknown-{os}-musl.tar.gz"
-github = "topgrade-rs/topgrade"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
-[packages.treefmt]
-asset_pattern = "*{os}_amd64.tar.gz"
-github = "numtide/treefmt"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-
 [packages.use_via]
 asset_pattern = "*{os}.AppImage"
 github = "the-via/releases"
@@ -133,10 +90,4 @@ tag_pattern = "v*.*.*"
 asset_pattern = "yq_{os}_amd64"
 github = "mikefarah/yq"
 pkg_type = "static"
-tag_pattern = "v*.*.*"
-
-[packages.zoxide]
-asset_pattern = "zoxide-*-{arch}-unknown-{os}-musl.tar.gz"
-github = "ajeetdsouza/zoxide"
-pkg_type = "archive"
 tag_pattern = "v*.*.*"

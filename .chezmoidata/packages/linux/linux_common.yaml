@@ -35,6 +35,7 @@ packages:
   - mangohud
   - rustup
   - syncthing
+  - uv
   - vlc
   - zsh
 tablet_only:

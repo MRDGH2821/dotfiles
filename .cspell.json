@@ -117,6 +117,7 @@
     "libgexiv",
     "libopengl",
     "libqt",
+    "llmfit",
     "localip",
     "lsign",
     "ludusavi",
@@ -144,6 +145,7 @@
     "nyae",
     "oderwat",
     "ohmyposh",
+    "ollama",
     "onchange",
     "openh",
     "osid",
@@ -219,8 +221,6 @@
     "zmodload",
     "zmodule",
     "zoxide",
-    "zstyle",
-    "ollama",
-    "llmfit"
+    "zstyle"
   ]
 }

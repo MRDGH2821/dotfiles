@@ -21,6 +21,9 @@ kde:
   - partitionmanager
   - skanlite
   - skanpage
+laptop_only:
+  installer_url:
+    - if ! command -v ollama >/dev/null 2>&1; then curl -s https://ollama.ai/install.sh | sh; fi
 packages:
   - firefox
   - flatpak
@@ -38,7 +41,3 @@ tablet_only:
   - iio-sensor-proxy
   - waydroid
   - waydroid-helper
-
-laptop_only:
-  installer_url:
-     - if ! command -v ollama >/dev/null 2>&1; then curl -s https://ollama.ai/install.sh | sh; fi

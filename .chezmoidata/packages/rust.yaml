@@ -1,8 +1,8 @@
 ---
 binstall:
   - cargo-update
-  - typstyle
   - llmfit
+  - typstyle
 git:
   - https://github.com/antonWetzel/prettypst
   - https://github.com/cocogitto/cocogitto

@@ -11,6 +11,7 @@ binstall:
   - treefmt
   - typstyle
   - zoxide
+  - cargo-cache
 git:
   - https://github.com/antonWetzel/prettypst
   - https://github.com/cocogitto/cocogitto

@@ -2,12 +2,13 @@
   "$schema": "zed://schemas/settings",
   "agent": {
     "default_model": {
-      "model": "claude-sonnet-4.5",
+      "model": "claude-sonnet-4.6",
       "provider": "copilot_chat"
     },
     "favorite_models": [
       {
-        "model": "claude-sonnet-4.5",
+        "enable_thinking": false,
+        "model": "claude-sonnet-4.6",
         "provider": "copilot_chat"
       }
     ],
@@ -22,7 +23,7 @@
   },
   "agent_servers": {
     "github-copilot": {
-      "favorite_models": ["claude-sonnet-4.6"],
+      "favorite_models": ["claude-sonnet-4.6", "auto"],
       "type": "registry"
     },
     "opencode": {

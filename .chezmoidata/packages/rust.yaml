@@ -8,7 +8,6 @@ binstall:
   - mcfly
   - tealdeer
   - topgrade
-  - treefmt
   - typstyle
   - zoxide
   - cargo-cache

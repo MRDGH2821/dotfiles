@@ -23,3 +23,7 @@ formatting.enabled = true
 [[schemas]]
 path = "https://docs.cocogitto.io/cog-schema.json"
 include = ["cog.toml"]
+
+[[schemas]]
+path = "https://gist.githubusercontent.com/MRDGH2821/d61a45f6d91c94d1c9d3d1307036d361/raw/48ecf6440582706aa85b856f2c4c3539bc5d03a5/treefmt-schma.json"
+include = ["treefmt.toml", ".treefmt.toml"]

@@ -220,6 +220,7 @@
     "zmodule",
     "zoxide",
     "zstyle",
-    "ollama"
+    "ollama",
+    "llmfit"
   ]
 }

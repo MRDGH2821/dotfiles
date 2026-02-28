@@ -4,13 +4,15 @@
     "args": ["apply"],
     "command": "chezmoi",
     "hide": "on_success",
-    "label": "Apply chezmoi"
+    "label": "Apply chezmoi",
+    "reveal_target": "center"
   },
   {
     "args": ["execute-template", "-f", "$ZED_FILE"],
     "command": "chezmoi",
     "hide": "never",
-    "label": "Execute Chezmoi template"
+    "label": "Execute Chezmoi template",
+    "reveal_target": "center"
   },
   {
     "args": ["./.zed/repology-filter.sh"],

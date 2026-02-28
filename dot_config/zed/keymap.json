@@ -34,5 +34,17 @@
       ]
     },
     "context": "Workspace"
+  },
+  {
+    "bindings": {
+      "super-shift-f": [
+        "task::Spawn",
+        {
+          "reveal_target": "center",
+          "task_name": "Format with treefmt"
+        }
+      ]
+    },
+    "context": "Workspace"
   }
 ]

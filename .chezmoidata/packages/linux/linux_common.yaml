@@ -34,7 +34,7 @@ packages:
   - kleopatra
   - mangohud
   - rustup
-  - sscache
+  - sccache
   - syncthing
   - uv
   - vlc

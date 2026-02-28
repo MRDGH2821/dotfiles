@@ -17,6 +17,14 @@
 {{- end -}}
 {{- println $line -}}
 
+{{- if eq .devicetype "laptop" -}}
+  {{- /* Self installing packages */ -}}
+  {{- range $common.laptop_only.installer_url -}}
+    {{- println "bash -c " ( . | quote) -}}
+  {{- end -}}
+  {{- println $line -}}
+{{- end -}}
+
 {{- /* Python3 CLI tools */ -}}
 {{- range $python.cli -}}
   {{- println "uv tool install" . -}}

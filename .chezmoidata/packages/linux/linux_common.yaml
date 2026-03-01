@@ -23,7 +23,7 @@ kde:
   - skanpage
 laptop_only:
   installer_url:
-    - if ! command -v ollama >/dev/null 2>&1; then curl -s https://ollama.ai/install.sh | sh; fi
+    - if ! command -v ollama >/dev/null 2>&1; then curl -fsSL https://ollama.ai/install.sh | sh; fi
 packages:
   - firefox
   - flatpak

@@ -12,10 +12,7 @@ tag_pattern = "*.*.*"
 pkg_id = "aristocratos.btop"
 
 [packages.direnv]
-asset_pattern = "direnv.{os}-amd64"
-github = "direnv/direnv"
-pkg_type = "static"
-tag_pattern = "v*.*.*"
+pkg_id = "direnv.direnv"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"
@@ -31,16 +28,10 @@ pkg_type = "archive"
 tag_pattern = "*.*.*"
 
 [packages.fzf]
-asset_pattern = "*{os}_amd64.tar.gz"
-github = "junegunn/fzf"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
+pkg_id = "junegunn.fzf"
 
 [packages.lazygit]
-asset_pattern = "*{os}_{arch}.tar.gz"
-github = "jesseduffield/lazygit"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
+pkg_id = "jesseduffield.lazygit"
 
 [packages.pcloud]
 pkg_id = "pcloud"
@@ -55,10 +46,7 @@ pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
 [packages.rclone]
-asset_pattern = "rclone-*-{os}-amd64.zip"
-github = "rclone/rclone"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
+pkg_id = "rclone.rclone"
 
 [packages.rclone_browser]
 asset_pattern = "*{os}-{arch}.AppImage"
@@ -72,16 +60,10 @@ github = "Matteo842/SaveState"
 pkg_type = "appimage"
 
 [packages.shellcheck]
-asset_pattern = "shellcheck-*{os}.{arch}.tar.xz"
-github = "koalaman/shellcheck"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
+pkg_id = "koalaman.shellcheck"
 
 [packages.shfmt]
-asset_pattern = "shfmt_*_{os}_amd64"
-github = "mvdan/sh"
-pkg_type = "static"
-tag_pattern = "v*.*.*"
+pkg_id = "mvdan.shfmt"
 
 [packages.treefmt]
 asset_pattern = "treefmt_*_{os}_amd64.tar.gz"
@@ -96,7 +78,4 @@ pkg_type = "appimage"
 tag_pattern = "v*.*.*"
 
 [packages.yq]
-asset_pattern = "yq_{os}_amd64"
-github = "mikefarah/yq"
-pkg_type = "static"
-tag_pattern = "v*.*.*"
+pkg_id = "mikefarah.yq"

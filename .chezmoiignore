@@ -18,6 +18,7 @@
 .yamlfix.toml
 .zed
 AGENTS.md
+bun.lock
 cog.toml
 dot_git-templates
 megalinter-reports

@@ -2,6 +2,7 @@
 binstall:
   - bat
   - btop
+  - cargo-cache
   - cargo-update
   - llmfit
   - ludusavi
@@ -10,7 +11,6 @@ binstall:
   - topgrade
   - typstyle
   - zoxide
-  - cargo-cache
 git:
   - https://github.com/antonWetzel/prettypst
   - https://github.com/cocogitto/cocogitto

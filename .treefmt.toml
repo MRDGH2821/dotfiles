@@ -115,12 +115,13 @@ priority = 0
 command = "bash"
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
+  ".chezmoidata/distros.yaml",
+  ".chezmoidata/packages/**/*.json",
+  ".chezmoidata/packages/**/*.yaml",
+  ".chezmoidata/packages/**/*.yml",
   ".chezmoidata/packages/*.json",
   ".chezmoidata/packages/*.yaml",
-  ".chezmoidata/packages/*.yml",
-  ".chezmoidata/packages/*/*.json",
-  ".chezmoidata/packages/*/*.yaml",
-  ".chezmoidata/packages/*/*.yml"
+  ".chezmoidata/packages/*.yml"
 ]
 options = [
   "-c",

@@ -83,7 +83,7 @@ tag_pattern = "v*.*.*"
 [packages.treefmt]
 asset_pattern = "treefmt_*_{os}_amd64.tar.gz"
 github = "numtide/treefmt"
-pkg_type = "static"
+pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.use_via]

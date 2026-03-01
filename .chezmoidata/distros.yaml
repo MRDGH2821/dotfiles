@@ -19,9 +19,9 @@ fedora:
   - nobara
 ubuntu:
   - linuxmint
+  - neon
   - pop
   - ubuntu
-  - neon
 ubuntu_codes:
   - jammy
   - noble

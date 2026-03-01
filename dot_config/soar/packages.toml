@@ -8,6 +8,9 @@ github = "kamadorueda/alejandra"
 pkg_type = "static"
 tag_pattern = "*.*.*"
 
+[packages.btop]
+pkg_id = "aristocratos.btop"
+
 [packages.direnv]
 asset_pattern = "direnv.{os}-amd64"
 github = "direnv/direnv"

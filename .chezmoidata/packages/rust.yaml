@@ -1,7 +1,6 @@
 ---
 binstall:
   - bat
-  - btop
   - cargo-cache
   - cargo-update
   - llmfit

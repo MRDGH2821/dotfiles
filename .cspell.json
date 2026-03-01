@@ -175,6 +175,7 @@
     "saber",
     "sapples",
     "SBUILD",
+    "sccache",
     "schinagl",
     "schniz",
     "sharkdp",
@@ -221,7 +222,6 @@
     "zmodload",
     "zmodule",
     "zoxide",
-    "zstyle",
-    "sccache"
+    "zstyle"
   ]
 }

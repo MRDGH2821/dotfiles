@@ -3,7 +3,6 @@ binstall:
   - bat
   - cargo-cache
   - cargo-update
-  - llmfit
   - ludusavi
   - mcfly
   - tealdeer

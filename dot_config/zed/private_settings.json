@@ -27,11 +27,15 @@
       "type": "registry"
     },
     "opencode": {
+      "args": ["acp"],
+      "command": "opencode",
       "favorite_models": [
         "github-copilot/claude-sonnet-4.6/thinking",
-        "github-copilot/claude-sonnet-4.6"
+        "github-copilot/claude-sonnet-4.6",
+        "github-copilot/claude-opus-4.6/thinking",
+        "github-copilot/claude-opus-4.6"
       ],
-      "type": "extension"
+      "type": "custom"
     }
   },
   "auto_install_extensions": {
@@ -74,7 +78,8 @@
     "provider": "zed"
   },
   "file_types": {
-    "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"]
+    "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],
+    "ini": ["private_dolphinrc", "private_konsolerc"]
   },
   "format_on_save": "off",
   "git_panel": {

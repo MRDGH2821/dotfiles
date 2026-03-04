@@ -16,7 +16,8 @@
 
 [git]
 max_concurrency = 1
-repos = ["~/Source-Codes/*/*"]
+# tombi: format.rules.array-values-order = "ascending"
+repos = ["~/Source-Codes/*/*", "~/Source-Codes/*/*/*"]
 
 [include]
 

@@ -1,13 +1,5 @@
 MenuBar=Disabled
 
-[ExtractDialog]
-2226x1391 screen: Height=696
-2226x1391 screen: Width=1409
-
-[FileDialogSize]
-2 screens: Height=584
-2 screens: Width=913
-
 [General]
 BrowseThroughArchives=true
 OpenExternallyCalledFolderInNewTab=true

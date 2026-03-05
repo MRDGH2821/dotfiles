@@ -3,6 +3,7 @@ binstall:
   - bat
   - cargo-cache
   - cargo-update
+  - cocogitto
   - ludusavi
   - mcfly
   - tealdeer
@@ -11,7 +12,6 @@ binstall:
   - zoxide
 git:
   - https://github.com/antonWetzel/prettypst
-  - https://github.com/cocogitto/cocogitto
   - https://github.com/vlaci/git-agecrypt
 install:
   - cargo-binstall

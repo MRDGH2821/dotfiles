@@ -1,3 +1,5 @@
+# :schema https://gist.githubusercontent.com/MRDGH2821/d61a45f6d91c94d1c9d3d1307036d361/raw/48ecf6440582706aa85b856f2c4c3539bc5d03a5/treefmt-schma.json
+
 [formatter.alejandra]
 command = "alejandra"
 includes = ["*.nix"]

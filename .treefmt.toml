@@ -10,7 +10,25 @@ priority = 10
 
 [formatter.cspell-sort]
 command = "bash"
-includes = [".cspell.json"]
+# tombi: format.rules.array-values-order = "ascending"
+includes = [
+  ".cSpell.json",
+  ".cspell.config.json",
+  ".cspell.config.jsonc",
+  ".cspell.config.yaml",
+  ".cspell.config.yml",
+  ".cspell.jsonc",
+  ".cspell.yaml",
+  ".cspell.yml",
+  "cSpell.json",
+  "cspell.config.json",
+  "cspell.config.jsonc",
+  "cspell.config.yaml",
+  "cspell.config.yml",
+  "cspell.jsonc",
+  "cspell.yaml",
+  "cspell.yml"
+]
 options = [
   "-c",
   "for file in \"$@\"; do yq -i '.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)' \"$file\"; done",
@@ -44,13 +62,13 @@ priority = 100
 command = "prettypst"
 includes = ["*.typ"]
 options = ["-s", "default"]
-priority = 1
+priority = 2
 
 [formatter.prettypst-otbs]
 command = "prettypst"
 includes = ["*.typ"]
 options = ["-s", "otbs"]
-priority = 2
+priority = 3
 
 [formatter.ruff-format]
 command = "uvx"
@@ -96,6 +114,12 @@ command = "uvx"
 includes = ["*.toml"]
 options = ["toml-sort", "-i", "--sort-table-keys", "--sort-inline-tables"]
 priority = 0
+
+[formatter.typstyle]
+command = "typstyle"
+includes = ["*.typ"]
+options = ["-i"]
+priority = 1
 
 [formatter.xmllint]
 command = "xmllint"

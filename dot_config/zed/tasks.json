@@ -4,6 +4,7 @@
     "command": "treefmt",
     "hide": "on_success",
     "label": "Format with treefmt",
+    "reveal_target": "center",
     "show_command": true,
     "tags": ["format"]
   },

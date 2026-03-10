@@ -17,6 +17,13 @@
       "tools": {
         "fetch": {
           "default": "allow"
+        },
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^date\\b"
+            }
+          ]
         }
       }
     }

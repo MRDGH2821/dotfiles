@@ -1,6 +1,7 @@
 ---
-_commit: v0.7.1
+_commit: v0.8.1
 _src_path: gh:MRDGH2821/copier-mr-minimal
 ci: github
 project_name: dotfiles
 use_agents: false
+use_flake: false

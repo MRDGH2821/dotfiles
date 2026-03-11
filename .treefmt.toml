@@ -12,22 +12,14 @@ priority = 10
 command = "bash"
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
-  ".cSpell.json",
-  ".cspell.config.json",
-  ".cspell.config.jsonc",
-  ".cspell.config.yaml",
-  ".cspell.config.yml",
-  ".cspell.jsonc",
-  ".cspell.yaml",
-  ".cspell.yml",
-  "cSpell.json",
-  "cspell.config.json",
-  "cspell.config.jsonc",
-  "cspell.config.yaml",
-  "cspell.config.yml",
-  "cspell.jsonc",
-  "cspell.yaml",
-  "cspell.yml"
+  "**/.cSpell*",
+  "**/.cspell*",
+  "**/cSpell*",
+  "**/cspell*",
+  ".cSpell*",
+  ".cspell*",
+  "cSpell*",
+  "cspell*"
 ]
 options = [
   "-c",

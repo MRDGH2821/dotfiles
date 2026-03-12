@@ -28,18 +28,23 @@
     "label": "Meld dir diff"
   },
   {
-    "args": ["difftool", "$ZED_FILE", "-y"],
+    "args": ["difftool", "\"$ZED_FILE\"", "-y"],
     "command": "git",
     "hide": "on_success",
     "label": "Meld file diff"
   },
   {
-    "command": "lazygit -p $ZED_WORKTREE_ROOT",
+    "args": ["-p", "\"$ZED_WORKTREE_ROOT\""],
+    "command": "lazygit",
     "hide": "on_success",
     "label": "Start Lazygit"
   },
   {
-    "args": ["copy", "gh:MRDGH2821/copier-mr-minimal"],
+    "args": [
+      "copy",
+      "gh:MRDGH2822/copier-mr-minimal",
+      "\"$ZED_WORKTREE_ROOT\""
+    ],
     "command": "copier",
     "hide": "on_success",
     "label": "Initialise with copier template"

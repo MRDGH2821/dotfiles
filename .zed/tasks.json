@@ -15,8 +15,8 @@
     "reveal_target": "center"
   },
   {
-    "args": ["./.zed/repology-filter.sh"],
-    "command": "bash",
+    "args": ["run", "./.zed/repology-filter.py"],
+    "command": "uv",
     "hide": "never",
     "label": "Search Repology"
   }

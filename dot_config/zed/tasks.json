@@ -65,6 +65,7 @@
     "command": "bunx",
     "hide": "on_success",
     "label": "Run Mega Linter",
+    "reveal_target": "center",
     "tags": ["lint"]
   }
 ]

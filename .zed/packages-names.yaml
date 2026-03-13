@@ -1,0 +1,176 @@
+---
+# Mapping file for gen-packages-table.py
+#
+# aliases: maps any install-file package ID -> canonical display name.
+#   Keys are exact IDs as they appear in install files (case-sensitive).
+#   Values are the display names used in the Packages.md table.
+#   Only needed when the ID is NOT the display name (i.e., ambiguous,
+#   distro-specific variant, flatpak reverse-domain, winget publisher.app, etc.)
+#
+# static: packages that appear in the table but have NO entry in any install
+#   file. These are managed outside the standard install pipeline.
+#   Each entry must list all five distro columns explicitly.
+aliases:
+  # --- Winget publisher.app IDs ---
+  7zip.7zip: 7 Zip
+  AndrewCantino.McFly: McFly
+  Axosoft.GitKraken: Gitkraken
+  CosimoMatteini.DRA: Dra
+  Discord.Discord: Discord
+  Docker.DockerDesktop: Docker Desktop
+  EpicGames.EpicGamesLauncher: Epic games launcher
+  Espanso.Espanso: Espanso
+  Fastfetch-cli.Fastfetch: Fastfetch
+  Git.Git: Git
+  GitHub.cli: GitHub cli
+  GnuPG.GnuPG: Gnupg
+  GnuPG.Gpg4win: Gpg4win
+  Gramps.Gramps: Gramps
+  HermannSchinagl.LinkShellExtension: Link Shell Extension
+  HeroicGamesLauncher: Heroic Games Launcher # dra GitHub repo name
+  JanDeDobbeleer.OhMyPosh: Oh My Posh
+  JesseDuffield.lazygit: Lazygit
+  KeePassXCTeam.KeePassXC: Keepassxc
+  Klocman.BulkCrapUninstaller: Bulk Crap uninstaller
+  Martchus.syncthingtray: Syncthing Tray
+  MartiCliment.UniGetUI: UnigetUI
+  Meld.Meld: Meld
+  Microsoft.OneDrive: OneDrive
+  Microsoft.PowerToys: Powertoys
+  Microsoft.WindowsTerminal: Windows terminal
+  MikeFarah.yq: go-yq
+  Mozilla.Firefox: Firefox
+  OBSProject.OBSStudio: OBS Studio
+  ONLYOFFICE.DesktopEditors: Only Office
+  Oven-sh.Bun: Bun
+  Rustlang.Rustup: Rustup
+  Valve.Steam: Steam
+  VideoLAN.VLC: VLC
+  WeMod.WeMod: WeMod
+  ZedIndustries.Zed: Zed
+  ajeetdsouza.zoxide: Zoxide
+  # --- Soar package keys (soar key -> display name) ---
+  alejandra: Alejandra
+  # --- Flatpak reverse-domain IDs ---
+  app.grayjay.Grayjay: GrayJay
+  aristocratos.btop4win: Btop
+  astral-sh.uv: uv
+  # --- KDE packages (linux_common kde:) that appear in the table ---
+  # These are intentionally NOT aliased - they show their raw package names
+  # because they are low-level KDE dependencies, not user-facing apps.
+  # Exception: discover, filelight, kcalc, kclock, partitionmanager,
+  # skanlite, skanpage are KDE apps but kept as-is since not in old table.
+
+  # --- rust.yaml package IDs (cargo binstall/install/git) ---
+  bat: Bat # cargo binstall
+  btop: Btop
+  # --- Distro-specific package name variants ---
+  bun: Bun # Arch extra, Debian/Ubuntu native (lowercase)
+  bun-bin: Bun # Fedora terra
+  # --- linux_common packages that need case/display name normalization ---
+  calibre: Calibre # installer_url command name
+  calibre.calibre: Calibre
+  cargo-binstall: cargo-binstall # keep as-is (bootstrap tool)
+  cargo-cache: cargo-cache # dev tool, keep as-is
+  cargo-update: cargo-update # dev tool, keep as-is
+  cocogitto: Cocogitto # cargo binstall
+  com.github.tchx84.Flatseal: Flatseal
+  com.jeffser.Alpaca: Alpaca
+  dandavison.delta: Delta
+  direnv: direnv
+  direnv.direnv: direnv
+  discord: Discord # Arch extra, Fedora native (lowercase)
+  dra: Dra
+  ente-io.auth-desktop: Ente Auth
+  espanso: Espanso # dra repo name (Debian/Ubuntu)
+  espanso-wayland: Espanso # Arch AUR, Fedora terra
+  fastfetch: Fastfetch
+  # --- linux_common packages: list (lowercase package ID -> display name) ---
+  firefox: Firefox
+  flatpak: flatpak
+  futo-org.Grayjay.Desktop: GrayJay
+  fzf: Fzf
+  gh: GitHub cli # Debian/Ubuntu/Fedora native
+  git: Git
+  git-agecrypt: git-agecrypt # cargo git (repo name)
+  git-credential-oauth: git-credential-oauth
+  git-delta: Delta
+  git-sync: git-sync # internal tool, keep as-is
+  github-cli: GitHub cli # Arch extra
+  gitkraken: Gitkraken # Arch AUR (lowercase)
+  gnupg: Gnupg # Arch core
+  gnupg2: Gnupg # Debian/Ubuntu/Fedora native
+  heroic-games-launcher-bin: Heroic Games Launcher # Arch AUR
+  hickford.git-credential-oauth: git-credential-oauth
+  iio-sensor-proxy: iio-sensor-proxy # tablet_only, keep as-is
+  io.ente.auth: Ente Auth
+  io.github.alainm23.planify: Planify
+  io.github.flattool.Warehouse: Warehouse
+  io.github.radiolamp.mangojuice: Mangojuice
+  junegunn.fzf: Fzf
+  keepassxc: Keepassxc
+  kleopatra: Kleopatra
+  koalaman.shellcheck: Shellcheck
+  lazygit: Lazygit
+  lib32-mangohud: MangoHUD # Arch multilib (32-bit companion)
+  libpam-u2f: pam-u2f # Debian/Ubuntu native
+  llmfit: llmfit # internal tool, keep as-is
+  ludusavi: Ludusavi # cargo binstall (also Windows winget via mtkennerly.ludusavi)
+  mangohud: MangoHUD
+  mangojuice: Mangojuice # Arch AUR
+  mcfly: McFly # cargo binstall (also Windows winget via AndrewCantino.McFly)
+  meld: Meld # lowercase in distro files
+  mtkennerly.ludusavi: Ludusavi
+  mvdan.shfmt: Shfmt
+  nix: nix # keep as-is (package manager itself)
+  obs-studio: OBS Studio # laptop_only on Debian/Ubuntu/Fedora
+  obs-studio-plugin-vkcapture: OBS Studio # Fedora plugin (merged)
+  obs-studio-plugin-vlc-video: OBS Studio # Fedora plugin (merged)
+  obs-studio-plugin-webkitgtk: OBS Studio # Fedora plugin (merged)
+  obs-studio-stable: OBS Studio # Arch AUR laptop_only
+  oh-my-posh: Oh My Posh # installer_url command name
+  ollama: ollama # laptop_only, keep as-is
+  onlyoffice-bin: Only Office # Arch AUR
+  org.gnome.Firmware: GNOME Firmware
+  org.gnome.Snapshot: GNOME Camera
+  org.gramps_project.Gramps: Gramps
+  org.onlyoffice.desktopeditors: Only Office
+  pCloudAG.pCloudDrive: pCloud
+  pcloud: pCloud # keep as-is
+  pince: PINCE
+  planify: Planify # Arch AUR
+  prettypst: prettypst # cargo git (repo name)
+  rclone: Rclone
+  rclone_browser: Rclone browser
+  rustup: Rustup
+  sane-backends: sane # Fedora native
+  sane-utils: sane # Debian/Ubuntu native
+  savestate: Save State
+  sccache: sccache # dev tool, keep as-is
+  sharkdp.bat: Bat
+  shellcheck: Shellcheck
+  shfmt: Shfmt
+  steam: Steam # Arch multilib, Fedora native (lowercase)
+  syncthing: Syncthing
+  syncthingplasmoid-qt6: Syncthing Tray # Fedora KDE plasmoid
+  syncthingtray: Syncthing Tray # Debian/Ubuntu native
+  syncthingtray-kde-plasma: Syncthing Tray # Debian/Ubuntu KDE variant
+  syncthingtray-qt6: Syncthing Tray # Arch extra, Fedora native
+  tealdeer: tealdeer # cargo binstall
+  topgrade: Topgrade # cargo binstall (also Windows winget via topgrade-rs.topgrade)
+  topgrade-rs.topgrade: Topgrade
+  treefmt: Treefmt
+  typstyle: typstyle # cargo binstall, keep as-is
+  universal.input-overlay: OBS input overlay
+  use_via: Use VIA
+  uv: uv
+  vlc: VLC
+  voidtools.Everything: Everything
+  waydroid: Waydroid # tablet_only
+  waydroid-helper: Waydroid Helper # tablet_only
+  winboat: Winboat # dra repo name (Debian/Ubuntu/Fedora laptop_only)
+  winboat-bin: Winboat # Arch AUR laptop_only
+  yq: go-yq # mikefarah/yq, displayed as go-yq to avoid ambiguity
+  zed: Zed # installer_url command name
+  zoxide: Zoxide # cargo binstall (also Windows winget via ajeetdsouza.zoxide)
+  zsh: Zsh

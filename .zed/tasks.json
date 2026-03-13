@@ -19,5 +19,11 @@
     "command": "uv",
     "hide": "never",
     "label": "Search Repology"
+  },
+  {
+    "args": ["run", "./.zed/gen-packages-table.py"],
+    "command": "uv",
+    "hide": "on_success",
+    "label": "Generate packages table"
   }
 ]

@@ -20,24 +20,24 @@
 | 7 Zip                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Alejandra             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Alpaca                | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Bat                   | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
-| Btop                  | 👍     | 👍     | 👍     | 👍     | 👍      |
+| Bat                   | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
+| Btop                  | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Bulk Crap uninstaller | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Bun                   | 👍     | 💻🔗   | 👍     | 💻🔗   | 👍      |
+| Bun                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Calibre               | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
+| Cocogitto             | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | Delta                 | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Discord               | 👍     | 👍🔗   | 👍     | 👍🔗   | 👍      |
-| Docker                | 👍     | 👍🔗   | 👍🔗   | 👍🔗   | 🚫      |
 | Docker Desktop        | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Dra                   | 👍     | 👍📥   | 🪽🔗   | 👍📥   | 👍      |
+| Dra                   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Ente Auth             | 📦     | 📦     | 📦     | 📦     | 👍      |
 | Epic games launcher   | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Espanso               | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
 | Everything            | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Fastfetch             | 👍     | 👍🔗   | 👍     | 👍     | 👍      |
+| Fastfetch             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Firefox               | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Flatseal              | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Fzf                   | 👍     | 👍     | 👍     | 👍     | 👍      |
+| Fzf                   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | GNOME Camera          | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | GNOME Firmware        | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Git                   | 👍     | 👍     | 👍     | 👍     | 👍      |
@@ -50,13 +50,12 @@
 | Heroic Games Launcher | 👍     | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | Keepassxc             | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Kleopatra             | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| Klevernotes           | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Lazygit               | 👍     | 👍     | 👍     | 🪽🔗   | 👍      |
+| Lazygit               | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Link Shell Extension  | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Ludusavi              | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Ludusavi              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | MangoHUD              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Mangojuice            | 👍     | 📦     | 📦     | 📦     | 🚫      |
-| McFly                 | 👍     | 🪽     | 🪽     | 🪽     | 👍      |
+| McFly                 | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Meld                  | 👍     | 👍     | 👍     | 👍     | 👍      |
 | OBS Studio            | 👍     | 👍     | 👍     | 👍     | 👍      |
 | OBS input overlay     | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
@@ -64,45 +63,73 @@
 | OneDrive              | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Only Office           | 👍     | 📦     | 📦     | 📦     | 👍      |
 | PINCE                 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
-| Parui                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | Planify               | 👍     | 📦     | 📦     | 📦     | 🚫      |
 | Powertoys             | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Rclone                | 👍     | 👍📥   | 👍     | 👍📥   | 🚫      |
 | Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
+| Rclone                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Rustup                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Save State            | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
-| Shellcheck            | 👍     | 👍     | 👍     | 👍     | 👍      |
-| Shfmt                 | 👍     | 👍     | 👍     | 👍     | 👍      |
+| Shellcheck            | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Shfmt                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Steam                 | 👍     | 👍🔗   | 👍     | 👍🔗   | 👍      |
-| Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Syncthing Tray        | 👍     | 👍     | 👍     | 👍     | 👍      |
-| Topgrade              | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
-| Treefmt               | 👍     | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| Topgrade              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
+| Treefmt               | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | UnigetUI              | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Use VIA               | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | VLC                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Warehouse             | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Waydroid              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Waydroid Helper       | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| Waydroid              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | WeMod                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Winboat               | 👍     | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | Windows terminal      | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Zed                   | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
-| Zoxide                | 👍     | 👍     | 👍     | 👍     | 👍      |
+| Zoxide                | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Zsh                   | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | apparmor-utils        | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
-| containerd.io         | 🚫     | 👍🔗   | 👍🔗   | 👍🔗   | 🚫      |
-| direnv                | 👍     | 👍     | 👍     | 👍     | 👍      |
-| docker-buildx         | 👍     | 👍🔗   | 👍🔗   | 👍🔗   | 🚫      |
-| docker-compose        | 👍     | 👍🔗   | 👍🔗   | 👍🔗   | 🚫      |
+| cargo-binstall        | 🦀     | 🦀     | 🦀     | 🦀     | 🚫      |
+| cargo-cache           | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| cargo-update          | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| direnv                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| discover              | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| docker                | 👍     | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
+| docker-buildx         | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| docker-compose        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| ffmpeg                | 🚫     | 👍     | 🚫     | 🚫     | 🚫      |
+| filelight             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | flatpak               | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| git-agecrypt          | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
 | git-credential-oauth  | 👍     | 👍     | 👍     | 👍     | 👍      |
-| go-yq                 | 👍     | 🪽🔗   | 👍     | 🪽🔗   | 👍      |
+| git-sync              | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| go-yq                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | iio-sensor-proxy      | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| kcalc                 | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| kclock                | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| libqt6core6           | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
+| libqt6gui6            | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
+| libqt6printsupport6   | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
+| libqt6widgets6        | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
+| llmfit                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| nix                   | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| ollama                | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
+| pCloud                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | pam-u2f               | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| pamu2fcfg             | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| pamu2fcfg             | 🚫     | 👍     | 👍     | 👍     | 🚫      |
+| partitionmanager      | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| parui                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| prettypst             | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
+| qt5-graphicaleffects  | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| qt5-quickcontrols2    | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | sane                  | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| sccache               | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| skanlite              | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| skanpage              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | system-config-printer | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| tealdeer              | 👍     | 🪽     | 👍     | 🪽     | 🚫      |
+| tealdeer              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| tesseract-data-eng    | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | ttf-liberation        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
-| uv                    | 👍     | 👍     | 👍     | 👍🔗   | 👍      |
+| typstyle              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| unzip                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| uv                    | 👍     | 👍     | 👍     | 👍     | 👍      |

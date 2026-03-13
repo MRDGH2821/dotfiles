@@ -65,23 +65,23 @@
 | PINCE                 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Planify               | 👍     | 📦     | 📦     | 📦     | 🚫      |
 | Powertoys             | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Rclone                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Rustup                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Save State            | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Shellcheck            | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Shfmt                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Steam                 | 👍     | 👍🔗   | 👍     | 👍🔗   | 👍      |
-| Syncthing Tray        | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| Syncthing Tray        | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Topgrade              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Treefmt               | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | UnigetUI              | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Use VIA               | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | VLC                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Warehouse             | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Waydroid Helper       | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | Waydroid              | 👍     | 👍     | 👍     | 👍     | 🚫      |
+| Waydroid Helper       | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | WeMod                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Winboat               | 👍     | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | Windows terminal      | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |

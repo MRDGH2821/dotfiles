@@ -25,19 +25,22 @@
     "args": ["difftool", "--dir-diff"],
     "command": "git",
     "hide": "on_success",
-    "label": "Meld dir diff"
+    "label": "Meld dir diff",
+    "tags": ["git"]
   },
   {
     "args": ["difftool", "\"$ZED_FILE\"", "-y"],
     "command": "git",
     "hide": "on_success",
-    "label": "Meld file diff"
+    "label": "Meld file diff",
+    "tags": ["git"]
   },
   {
     "args": ["-p", "\"$ZED_WORKTREE_ROOT\""],
     "command": "lazygit",
     "hide": "on_success",
-    "label": "Start Lazygit"
+    "label": "Start Lazygit",
+    "tags": ["git"]
   },
   {
     "args": [
@@ -47,12 +50,21 @@
     ],
     "command": "copier",
     "hide": "on_success",
-    "label": "Initialise with copier template"
+    "label": "Initialise with copier template",
+    "tags": ["git"]
   },
   {
     "args": ["update"],
     "command": "copier",
     "hide": "on_success",
-    "label": "Update copier template"
+    "label": "Update copier template",
+    "tags": ["git"]
+  },
+  {
+    "args": ["mega-linter-runner"],
+    "command": "bunx",
+    "hide": "on_success",
+    "label": "Run Mega Linter",
+    "tags": ["lint"]
   }
 ]

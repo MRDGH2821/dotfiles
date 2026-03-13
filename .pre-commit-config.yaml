@@ -56,3 +56,14 @@ repos:
           - commit-msg
         verbose: true
     repo: local
+  - hooks:
+      - args:
+          - run
+        entry: gga
+        id: gga
+        language: unsupported
+        name: Gentle Guardian Angel
+        stages:
+          - pre-commit
+        verbose: true
+    repo: local

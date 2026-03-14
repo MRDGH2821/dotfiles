@@ -7,11 +7,11 @@ IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
-    # cwd: root
+    cwd: root
     # secured_env: true
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
-    # cwd: root
+    cwd: root
     # secured_env: true

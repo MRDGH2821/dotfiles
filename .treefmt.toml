@@ -41,6 +41,7 @@ includes = [
   "*.js",
   "*.json",
   "*.md",
+  "*.ps1",
   "*.tmpl",
   "*.toml",
   "*.ts",

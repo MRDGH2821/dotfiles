@@ -202,6 +202,26 @@
       "settings": {
         "preview.invertColors": "auto"
       }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemas": {
+            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json": [
+              ".mega-linter.yml",
+              ".mega-linter.yaml"
+            ],
+            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-custom-flavor.jsonschema.json": [
+              ".mega-linter.yml",
+              ".mega-linter.yaml"
+            ],
+            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json": [
+              ".mega-linter.yml",
+              ".mega-linter.yaml"
+            ]
+          }
+        }
+      }
     }
   },
   "prettier": {

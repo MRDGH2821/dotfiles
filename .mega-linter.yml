@@ -9,6 +9,11 @@ JSON_PRETTIER_PRE_COMMANDS:
     continue_if_failed: true
     cwd: root
     # secured_env: true
+PYTHON_PYLINT_PRE_COMMANDS:
+  - command: uv sync
+    continue_if_failed: true
+    cwd: root
+    # secured_env: true
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i

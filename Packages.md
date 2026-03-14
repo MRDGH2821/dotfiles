@@ -97,6 +97,7 @@
 | docker                | 👍     | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | docker-buildx         | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | docker-compose        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| engram                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | ffmpeg                | 🚫     | 👍     | 🚫     | 🚫     | 🚫      |
 | filelight             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | flatpak               | 👍     | 👍     | 👍     | 👍     | 🚫      |

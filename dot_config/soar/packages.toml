@@ -24,6 +24,11 @@ github = "devmatteini/dra"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
 
+[packages.engram]
+asset_pattern = "engram_*_{os}_amd64.tar.gz"
+github = "Gentleman-Programming/engram"
+pkg_type = "archive"
+
 [packages.fastfetch]
 asset_pattern = "fastfetch-{os}-amd64.tar.gz"
 extract_root = "fastfetch-{os}-amd64"

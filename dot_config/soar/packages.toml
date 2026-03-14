@@ -36,6 +36,11 @@ asset_pattern = "fzf-*-{os}_amd64.tar.gz"
 github = "junegunn/fzf"
 pkg_id = "junegunn.fzf"
 
+[packages.gentle-ai]
+asset_pattern = "gentle-ai_*_{os}_amd64.tar.gz"
+github = "Gentleman-Programming/gentle-ai"
+pkg_type = "archive"
+
 [packages.git-sync]
 asset_pattern = "git-sync_*_{os}_amd64.tar.gz"
 github = "AkashRajpurohit/git-sync"

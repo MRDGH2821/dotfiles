@@ -21,9 +21,9 @@ import sys
 import urllib.request
 from urllib.error import HTTPError, URLError
 
+from rich import box
 from rich.console import Console
 from rich.table import Table
-from rich import box
 
 # ---------------------------------------------------------------------------
 # Repos to filter for

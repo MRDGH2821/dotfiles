@@ -11,21 +11,25 @@
 .pre-commit-config.yaml
 .prettierignore
 .prettierrc.json
+.ruff_cache
 .treefmt.toml
 .trunk
 .v8rignore
+.venv
 .vscode
 .yamlfix.toml
 .zed
 AGENTS.md
 bun.lock
 cog.toml
-dot_git-templates
 megalinter-reports
 node_modules
 package*.json
+package.json
 Packages.md
+pyproject.toml
 README.md
+uv.lock
 
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 

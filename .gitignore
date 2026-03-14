@@ -2,4 +2,5 @@
 bun.lock
 megalinter-reports/
 node_modules/
-package*.json
+package-lock.json
+uv.lock

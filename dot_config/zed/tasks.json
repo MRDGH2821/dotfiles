@@ -45,7 +45,7 @@
   {
     "args": [
       "copy",
-      "gh:MRDGH2822/copier-mr-minimal",
+      "gh:MRDGH2821/copier-mr-minimal",
       "\"$ZED_WORKTREE_ROOT\""
     ],
     "command": "copier",

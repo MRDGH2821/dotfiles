@@ -38,6 +38,8 @@ command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
+  "**/private_dolphinrc",
+  "**/private_konsolerc",
   "*.js",
   "*.json",
   "*.md",
@@ -46,7 +48,8 @@ includes = [
   "*.toml",
   "*.ts",
   "*.yaml",
-  "*.yml"
+  "*.yml",
+  ".editorconfig"
 ]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100

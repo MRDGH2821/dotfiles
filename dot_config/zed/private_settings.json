@@ -86,7 +86,7 @@
   },
   "file_types": {
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],
-    "ini": ["private_dolphinrc", "private_konsolerc"]
+    "ini": ["private_dolphinrc", "private_konsolerc", ".editorconfig"]
   },
   "format_on_save": "off",
   "git_panel": {

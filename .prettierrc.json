@@ -7,12 +7,19 @@
         "parser": "json",
         "trailingComma": "none"
       }
+    },
+    {
+      "files": ["private_konsolerc", "private_dolphinrc", ".editorconfig"],
+      "options": {
+        "parser": "ini"
+      }
     }
   ],
   "plugins": [
     "prettier-plugin-go-template",
     "prettier-plugin-powershell",
-    "prettier-plugin-toml"
+    "prettier-plugin-toml",
+    "prettier-plugin-ini"
   ],
   "powershellIndentSize": 2,
   "powershellRewriteAliases": true,

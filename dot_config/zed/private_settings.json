@@ -117,15 +117,6 @@
         }
       }
     },
-    "TOML": {
-      "enable_language_server": true,
-      "format_on_save": "off",
-      "formatter": ["prettier", "language_server"],
-      "language_servers": ["tombi"],
-      "prettier": {
-        "allowed": true
-      }
-    },
     "Typst": {
       "formatter": [
         {
@@ -210,14 +201,6 @@
       },
       "settings": {
         "preview.invertColors": "auto"
-      }
-    },
-    "tombi": {
-      "binary": {
-        "arguments": ["lsp", "-vv"],
-        "env": {
-          "NO_COLOR": "true"
-        }
       }
     }
   },

@@ -3,26 +3,5 @@
     "Go Text Template": ["tmpl", ".chezmoiignore"],
     "JSON": ["**/.zed/*.json"],
     "ini": ["*.profile", "private_konsolerc", "private_dolphinrc"]
-  },
-  "languages": {
-    "TOML": {
-      "enable_language_server": true,
-      "format_on_save": "off",
-      "formatter": "language_server",
-      "language_servers": ["tombi"],
-      "prettier": {
-        "allowed": false
-      }
-    }
-  },
-  "lsp": {
-    "tombi": {
-      "binary": {
-        "arguments": ["lsp", "-vv"],
-        "env": {
-          "NO_COLOR": "true"
-        }
-      }
-    }
   }
 }

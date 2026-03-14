@@ -206,6 +206,9 @@
     "yaml-language-server": {
       "settings": {
         "yaml": {
+          "schemaStore": {
+            "enable": true
+          },
           "schemas": {
             "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json": [
               ".mega-linter.yml",

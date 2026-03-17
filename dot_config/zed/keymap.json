@@ -7,6 +7,14 @@
   },
   {
     "bindings": {
+      "ctrl-p": ["terminal::SendKeystroke", "ctrl-p"],
+      "ctrl-t": ["terminal::SendKeystroke", "ctrl-t"],
+      "ctrl-x": ["terminal::SendKeystroke", "ctrl-x"]
+    },
+    "context": "Terminal"
+  },
+  {
+    "bindings": {
       "alt-z": "editor::ToggleSoftWrap"
     },
     "context": "(Editor && mode == full)"
@@ -42,6 +50,18 @@
         {
           "reveal_target": "center",
           "task_name": "Format with treefmt"
+        }
+      ]
+    },
+    "context": "Workspace"
+  },
+  {
+    "bindings": {
+      "alt-o": [
+        "task::Spawn",
+        {
+          "reveal_target": "center",
+          "task_name": "Start OpenCode"
         }
       ]
     },

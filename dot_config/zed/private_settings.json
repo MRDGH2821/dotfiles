@@ -2,7 +2,7 @@
   "$schema": "zed://schemas/settings",
   "agent": {
     "default_model": {
-      "model": "claude-sonnet-4.6",
+      "model": "gpt-5-mini",
       "provider": "copilot_chat"
     },
     "favorite_models": [
@@ -40,7 +40,8 @@
         "github-copilot/claude-sonnet-4.6/thinking",
         "github-copilot/claude-sonnet-4.6",
         "github-copilot/claude-opus-4.6/thinking",
-        "github-copilot/claude-opus-4.6"
+        "github-copilot/claude-opus-4.6",
+        "github-copilot/claude-haiku-4.5/thinking"
       ],
       "type": "custom"
     }

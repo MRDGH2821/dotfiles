@@ -1,5 +1,6 @@
 [
   {
+    "allow_concurrent_runs": false,
     "args": ["-vv"],
     "command": "treefmt",
     "hide": "on_success",
@@ -40,7 +41,16 @@
     "command": "lazygit",
     "hide": "on_success",
     "label": "Start Lazygit",
+    "reveal_target": "center",
     "tags": ["git"]
+  },
+  {
+    "allow_concurrent_runs": false,
+    "command": "opencode",
+    "hide": "on_success",
+    "label": "Start OpenCode",
+    "reveal": "always",
+    "reveal_target": "center"
   },
   {
     "args": [

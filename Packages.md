@@ -13,7 +13,7 @@
 | 🪽    | Soar package          |
 | 📥    | Downloaded with DRA   |
 
-<!-- sort-table -->
+<!-- smt -->
 
 | Name                  | Arch   | Debian | Fedora | Ubuntu | Windows |
 | --------------------- | ------ | ------ | ------ | ------ | ------- |

@@ -1,0 +1,6 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"model": "opencode/big-pickle",
+	"small_model": "opencode/gpt-5-nano",
+	"plugin": ["oh-my-opencode@latest","@simonwjackson/opencode-direnv"],
+}

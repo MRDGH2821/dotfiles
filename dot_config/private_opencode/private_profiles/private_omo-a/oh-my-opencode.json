@@ -58,6 +58,9 @@
       "model": "google/gemini-3.1-pro-preview",
       "variant": "high"
     },
+    "deep": {
+      "model": "zai-coding-plan/glm-5.1"
+    },
     "quick": {
       "model": "google/gemini-3-flash-preview"
     },

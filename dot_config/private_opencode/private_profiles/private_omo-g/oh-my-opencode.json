@@ -55,6 +55,9 @@
       "model": "google/gemini-3.1-pro-preview",
       "variant": "high"
     },
+    "deep": {
+      "model": "google/gemini-3.1-pro-preview"
+    },
     "quick": {
       "model": "google/gemini-3-flash-preview"
     },

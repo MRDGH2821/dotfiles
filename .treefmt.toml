@@ -30,11 +30,11 @@ priority = 9
 
 [formatter.ignore-files-formatter]
 command = "uvx"
+excludes = [".chezmoiignore"]
 # tombi: format.rules.array-values-order = "ascending"
 includes = ["**/.*ignore", ".*ignore"]
 options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"]
 priority = 1
-excludes = [".chezmoiignore"]
 
 [formatter.nixfmt]
 command = "nixfmt"
@@ -52,7 +52,7 @@ includes = [
   "*.json",
   "*.md",
   "*.ps1",
-  "*.tmpl",
+  # "*.tmpl",
   "*.toml",
   "*.ts",
   "*.yaml",

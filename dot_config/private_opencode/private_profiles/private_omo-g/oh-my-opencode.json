@@ -28,56 +28,52 @@
     },
     "momus": {
       "category": "writing",
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
     "multimodal-looker": {
-      "category": "visual-engineering",
-      "model": "zai-coding-plan/glm-4.6v"
+      "model": "opencode/gpt-5-nano"
     },
     "oracle": {
       "category": "ultrabrain",
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
     "plan": {
       "category": "ultrabrain"
     },
     "prometheus": {
       "category": "ultrabrain",
-      "model": "opencode/gpt-5-nano"
-    },
-    "sisyphus": {
-      "category": "ultrabrain",
-      "model": "zai-coding-plan/glm-5"
+      "model": "google/gemini-3.1-pro-preview"
     },
     "sisyphus-junior": {
-      "category": "ultrabrain",
       "model": "opencode/gpt-5-nano"
     }
   },
   "categories": {
     "artistry": {
-      "model": "zai-coding-plan/glm-5"
-    },
-    "deep": {
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
     "quick": {
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3-flash-preview"
     },
     "ultrabrain": {
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
     "unspecified-high": {
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3-flash-preview"
     },
     "unspecified-low": {
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3-flash-preview"
     },
     "visual-engineering": {
-      "model": "zai-coding-plan/glm-5"
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
     "writing": {
-      "model": "opencode/gpt-5-nano"
+      "model": "google/gemini-3-flash-preview"
     }
   },
   "git_master": {

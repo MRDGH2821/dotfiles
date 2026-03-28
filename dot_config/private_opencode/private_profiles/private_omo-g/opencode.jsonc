@@ -2,5 +2,9 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "opencode/big-pickle",
   "small_model": "opencode/gpt-5-nano",
-  "plugin": ["oh-my-opencode@latest", "@simonwjackson/opencode-direnv","opencode-antigravity-auth@latest"]
+  "plugin": [
+    "oh-my-openagent@latest",
+    "@simonwjackson/opencode-direnv",
+    "opencode-antigravity-auth@latest",
+  ],
 }

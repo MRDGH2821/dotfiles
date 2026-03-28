@@ -83,5 +83,6 @@
     "commit_footer": true,
     "git_env_prefix": "GIT_MASTER=1",
     "include_co_authored_by": true
-  }
+  },
+  "google_auth": false
 }

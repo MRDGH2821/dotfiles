@@ -53,6 +53,14 @@
     "reveal_target": "center"
   },
   {
+    "allow_concurrent_runs": false,
+    "command": "ocx oc -p omo-a",
+    "hide": "on_success",
+    "label": "Start OpenCode Premium",
+    "reveal": "always",
+    "reveal_target": "center"
+  },
+  {
     "args": [
       "copy",
       "gh:MRDGH2821/copier-mr-minimal",

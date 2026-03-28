@@ -28,6 +28,14 @@ options = [
 ]
 priority = 9
 
+[formatter.ignore-files-formatter]
+command = "uvx"
+# tombi: format.rules.array-values-order = "ascending"
+includes = ["**/.*ignore", ".*ignore"]
+options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"]
+priority = 1
+excludes = [".chezmoiignore"]
+
 [formatter.nixfmt]
 command = "nixfmt"
 includes = ["*.nix"]
@@ -88,9 +96,9 @@ options = ["--indent", "2"]
 priority = 1
 
 [formatter.sort-markdown-tables]
-command = "bunx"
+command = "smt"
 includes = ["*.md"]
-options = ["@fmma-npm/sort-markdown-tables", "-i"]
+options = ["-i"]
 priority = 2
 
 [formatter.sort-package-json]

@@ -10,7 +10,7 @@ repos:
         stages:
           - pre-commit
     repo: https://github.com/gitguardian/ggshield
-    rev: v1.46.0
+    rev: v1.48.0
   - hooks:
       - args:
           - --config .cspell.json
@@ -28,14 +28,14 @@ repos:
         stages:
           - commit-msg
     repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.4.0
+    rev: v9.7.0
   - hooks:
       # Prevent committing inline conflict markers
       - args:
           - --assume-in-merge
         id: check-merge-conflict
     repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v6.0.0
   - hooks:
       # Prevent committing .rej files
       - entry: found Copier update rejection files; review and remove them before merging.

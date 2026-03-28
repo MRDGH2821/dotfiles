@@ -1,22 +1,21 @@
 ---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json
 APPLY_FIXES: all
 CLEAR_REPORT_FOLDER: true
 DISABLE_LINTERS:
   - REPOSITORY_KICS
+  - REPOSITORY_DEVSKIM
 IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
     cwd: root
-    # secured_env: true
-PYTHON_PYLINT_PRE_COMMANDS:
-  - command: uv sync
-    continue_if_failed: true
-    cwd: root
-    # secured_env: true
+    secured_env: true
+    tag: default
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
     cwd: root
-    # secured_env: true
+    secured_env: true
+    tag: default

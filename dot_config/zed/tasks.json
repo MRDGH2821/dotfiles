@@ -46,7 +46,7 @@
   },
   {
     "allow_concurrent_runs": false,
-    "command": "opencode",
+    "command": "ocx oc",
     "hide": "on_success",
     "label": "Start OpenCode",
     "reveal": "always",

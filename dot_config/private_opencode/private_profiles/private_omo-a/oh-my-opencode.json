@@ -20,7 +20,7 @@
     },
     "librarian": {
       "category": "writing",
-      "model": "opencode/gpt-5-nano"
+      "model": "zai-coding-plan/glm-4.7"
     },
     "metis": {
       "category": "writing",
@@ -32,7 +32,7 @@
       "variant": "high"
     },
     "multimodal-looker": {
-      "model": "opencode/gpt-5-nano"
+      "model": "zai-coding-plan/glm-4.6v"
     },
     "oracle": {
       "category": "ultrabrain",
@@ -45,6 +45,9 @@
     "prometheus": {
       "category": "ultrabrain",
       "model": "google/gemini-3.1-pro-preview"
+    },
+    "sisyphus": {
+      "model": "zai-coding-plan/glm-5"
     },
     "sisyphus-junior": {
       "model": "opencode/gpt-5-nano"

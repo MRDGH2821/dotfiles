@@ -70,6 +70,7 @@ version = "0.8.5"
 asset_pattern = "ocx-{os}-x64"
 github = "kdcokenny/ocx"
 pkg_id = "kdcokenny/ocx"
+version = "2.0.4"
 
 [packages.pcloud]
 pkg_id = "pcloud"

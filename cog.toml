@@ -28,6 +28,7 @@ scopes = [
   "jscpd",
   "kde",
   "megalinter",
+  "opencode",
   "package",
   "pre-commit",
   "prettier",

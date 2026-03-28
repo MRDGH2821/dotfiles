@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "OpenCode-Builder": {
+      "category": "deep"
+    },
+    "atlas": {
+      "category": "ultrabrain",
+      "model": "opencode/gpt-5-nano"
+    },
+    "build": {
+      "category": "deep"
+    },
+    "explore": {
+      "category": "quick",
+      "model": "opencode/gpt-5-nano"
+    },
+    "hephaestus": {
+      "category": "deep"
+    },
+    "librarian": {
+      "category": "writing",
+      "model": "opencode/gpt-5-nano"
+    },
+    "metis": {
+      "category": "writing",
+      "model": "opencode/gpt-5-nano"
+    },
+    "momus": {
+      "category": "writing",
+      "model": "opencode/gpt-5-nano"
+    },
+    "multimodal-looker": {
+      "category": "visual-engineering",
+      "model": "zai-coding-plan/glm-4.6v"
+    },
+    "oracle": {
+      "category": "ultrabrain",
+      "model": "opencode/gpt-5-nano"
+    },
+    "plan": {
+      "category": "ultrabrain"
+    },
+    "prometheus": {
+      "category": "ultrabrain",
+      "model": "opencode/gpt-5-nano"
+    },
+    "sisyphus": {
+      "category": "ultrabrain",
+      "model": "zai-coding-plan/glm-5"
+    },
+    "sisyphus-junior": {
+      "category": "ultrabrain",
+      "model": "opencode/gpt-5-nano"
+    }
+  },
+  "categories": {
+    "artistry": {
+      "model": "zai-coding-plan/glm-5"
+    },
+    "deep": {
+      "model": "zai-coding-plan/glm-5.1"
+    },
+    "quick": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "ultrabrain": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "unspecified-high": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "unspecified-low": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "visual-engineering": {
+      "model": "zai-coding-plan/glm-5"
+    },
+    "writing": {
+      "model": "opencode/gpt-5-nano"
+    }
+  },
+  "git_master": {
+    "commit_footer": true,
+    "git_env_prefix": "GIT_MASTER=1",
+    "include_co_authored_by": true
+  }
+}

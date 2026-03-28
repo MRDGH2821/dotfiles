@@ -28,6 +28,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "engram_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/engram"
 pkg_type = "archive"
+version = "1.10.9"
 
 [packages.fastfetch]
 asset_pattern = "fastfetch-{os}-amd64.tar.gz"
@@ -45,6 +46,7 @@ pkg_id = "junegunn.fzf"
 asset_pattern = "gentle-ai_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/gentle-ai"
 pkg_type = "archive"
+version = "1.12.1"
 
 [packages.git-sync]
 asset_pattern = "git-sync_*_{os}_amd64.tar.gz"
@@ -62,6 +64,12 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
+version = "0.8.5"
+
+[packages.ocx]
+asset_pattern = "ocx-{os}-x64"
+github = "kdcokenny/ocx"
+pkg_id = "kdcokenny/ocx"
 
 [packages.pcloud]
 pkg_id = "pcloud"
@@ -79,6 +87,7 @@ tag_pattern = "v*.*.*"
 asset_pattern = "rclone-*-{os}-amd64.zip"
 github = "rclone/rclone"
 pkg_id = "rclone.rclone"
+version = "1.73.3"
 
 [packages.rclone_browser]
 asset_pattern = "*{os}-{arch}.AppImage"
@@ -90,6 +99,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "*.AppImage"
 github = "Matteo842/SaveState"
 pkg_type = "appimage"
+version = "2.6.b"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"
@@ -117,3 +127,4 @@ tag_pattern = "v*.*.*"
 asset_pattern = "yq_{os}_amd64"
 github = "mikefarah/yq"
 pkg_id = "mikefarah.yq"
+version = "4.52.5"

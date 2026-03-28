@@ -36,13 +36,7 @@
     "opencode": {
       "args": ["acp"],
       "command": "opencode",
-      "favorite_models": [
-        "github-copilot/claude-sonnet-4.6/thinking",
-        "github-copilot/claude-sonnet-4.6",
-        "github-copilot/claude-opus-4.6/thinking",
-        "github-copilot/claude-opus-4.6",
-        "github-copilot/claude-haiku-4.5/thinking"
-      ],
+      "favorite_models": ["github-copilot/claude-haiku-4.5/thinking"],
       "type": "custom"
     }
   },
@@ -144,6 +138,7 @@
       }
     }
   },
+  "load_direnv": "direct",
   "lsp": {
     "json-language-server": {
       "settings": {
@@ -209,20 +204,6 @@
         "yaml": {
           "schemaStore": {
             "enable": true
-          },
-          "schemas": {
-            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json": [
-              ".mega-linter.yml",
-              ".mega-linter.yaml"
-            ],
-            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-custom-flavor.jsonschema.json": [
-              ".mega-linter.yml",
-              ".mega-linter.yaml"
-            ],
-            "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json": [
-              ".mega-linter.yml",
-              ".mega-linter.yaml"
-            ]
           }
         }
       }

@@ -50,6 +50,7 @@ includes = [
   "**/private_konsolerc",
   "*.js",
   "*.json",
+  "*.jsonc",
   "*.md",
   "*.ps1",
   # "*.tmpl",

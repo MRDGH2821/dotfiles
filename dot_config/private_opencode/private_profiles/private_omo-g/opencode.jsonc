@@ -5,6 +5,13 @@
   "plugin": [
     "oh-my-openagent@latest",
     "@simonwjackson/opencode-direnv",
-    "opencode-antigravity-auth@latest",
+    "opencode-antigravity-auth@latest"
   ],
+  "mcp": {
+    "SiteMCP (Devenv)": {
+      "command": ["bunx", "sitemcp", "https://devenv.sh/"],
+      "enabled": true,
+      "type": "local"
+    }
+  }
 }

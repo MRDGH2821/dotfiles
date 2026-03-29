@@ -12,6 +12,11 @@
       "command": ["bunx", "sitemcp", "https://devenv.sh/"],
       "enabled": true,
       "type": "local"
+    },
+    "Devenv": {
+      "command": ["devenv", "mcp"],
+      "enabled": true,
+      "type": "local"
     }
   }
 }

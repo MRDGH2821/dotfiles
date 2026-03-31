@@ -9,14 +9,14 @@
 
 {{- println $cfg "commit.gpgsign true" -}}
 {{- println $cfg "core.autocrlf false" -}}
-{{- println $cfg "core.editor = \"zed -n --wait\"" -}}
-{{- println $cfg "core.pager = \"delta --side-by-side --dark\"" -}}
+{{- println $cfg "core.editor \"zed -n --wait\"" -}}
+{{- println $cfg "core.pager \"delta --side-by-side --dark\"" -}}
 {{- println $cfg "init.defaultBranch main" -}}
 {{- println $cfg "init.templatedir '~/.git-templates'" -}}
 {{- println $cfg "merge.ff only" -}}
 {{- println $cfg "tag.forceSignAnnotated true" -}}
 {{- println $cfg "tag.gpgsign true" -}}
-{{- println $cfg "interactive.diffFilter = \"delta --color-only\"" -}}
+{{- println $cfg "interactive.diffFilter \"delta --color-only\"" -}}
 {{- println $cfg "delta.side-by-side true" -}}
 {{- println $cfg "delta.line-numbers true" -}}
 {{- println $cfg "delta.syntax-theme dracula" -}}

@@ -1,4 +1,5 @@
 .venv/
+/.devenv
 bun.lock
 megalinter-reports/
 node_modules/

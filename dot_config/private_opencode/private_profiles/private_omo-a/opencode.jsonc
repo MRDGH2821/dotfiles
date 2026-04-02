@@ -16,7 +16,13 @@
   "plugin": [
     "oh-my-openagent@latest",
     "@simonwjackson/opencode-direnv",
-    "opencode-antigravity-auth@latest"
+    "opencode-antigravity-auth@latest",
+    "opencode-cursor-proxy@latest"
   ],
+  "provider": {
+    "cursor": {
+      "name": "Cursor"
+    }
+  },
   "small_model": "opencode/gpt-5-nano"
 }

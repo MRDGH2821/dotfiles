@@ -36,6 +36,13 @@ includes = ["**/.*ignore", ".*ignore"]
 options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"]
 priority = 1
 
+[formatter.jsonc-key-sort]
+command = "bunx"
+# tombi: format.rules.array-values-order = "ascending"
+includes = ["*.jsonc"]
+options = ["sort-jsonc-cli"]
+priority = 0
+
 [formatter.nixfmt]
 command = "nixfmt"
 includes = ["*.nix"]

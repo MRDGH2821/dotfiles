@@ -1,13 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode/big-pickle",
-  "small_model": "opencode/gpt-5-nano",
-  "plugin": ["oh-my-openagent@latest", "@simonwjackson/opencode-direnv"],
   "mcp": {
     "SiteMCP (Devenv)": {
       "command": ["bunx", "sitemcp", "https://devenv.sh/"],
       "enabled": true,
       "type": "local"
     }
-  }
+  },
+  "model": "opencode/big-pickle",
+  "plugin": ["oh-my-openagent@latest", "@simonwjackson/opencode-direnv"],
+  "small_model": "opencode/gpt-5-nano"
 }

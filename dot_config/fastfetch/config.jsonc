@@ -3,31 +3,31 @@
 // See *.jsonc in https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples for more examples
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {
-    // "source": "~/.config/fastfetch/logos/arch-logo-circle-1.png",
-    "type": "auto",
-    "position": "right",
-    "height": 25,
-    "width": 35,
-    "padding": {
-      "top": 1
-    }
-  },
   "display": {
     "separator": " ",
     "size": {
       "binaryPrefix": "jedec"
     }
   },
+  "logo": {
+    "height": 25,
+    "padding": {
+      "top": 1
+    },
+    "position": "right",
+    // "source": "~/.config/fastfetch/logos/arch-logo-circle-1.png",
+    "type": "auto",
+    "width": 35
+  },
   "modules": [
     {
-      "type": "custom",
-      "format": "{#1}\u001b[39m┌────────────────────────────────────────────────────────────┐"
+      "format": "{#1}\u001b[39m┌────────────────────────────────────────────────────────────┐",
+      "type": "custom"
     },
     {
-      "type": "title",
+      "format": "{#1}                       -::] WELCOME [::-",
       "keyWidth": 25,
-      "format": "{#1}                       -::] WELCOME [::-"
+      "type": "title"
     },
     // {
     //   "type": "title",
@@ -35,214 +35,213 @@
     //   "format": "                    {6}{7}{8}"
     // },
     {
-      "type": "custom",
-      "format": "{#1}\u001b[37m└────────────────────────────────────────────────────────────┘"
+      "format": "{#1}\u001b[37m└────────────────────────────────────────────────────────────┘",
+      "type": "custom"
     },
     {
-      "type": "custom",
-      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m "
+      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m ",
+      "type": "custom"
     },
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[32m┌────────────────────────────────────────────────────────────┐"
+      "format": "\u001b[32m┌────────────────────────────────────────────────────────────┐",
+      "type": "custom"
     },
     {
-      "type": "os",
+      "format": "\u001b[36m{#1}{#7} {3} ({11}) ",
       "key": "{#7} 󰣇 DISTRO ",
       "keyColor": "cyan",
-      "format": "\u001b[36m{#1}{#7} {3} ({11}) "
+      "type": "os"
     },
     {
-      "type": "kernel",
+      "format": "{2}",
       "key": "│ ├ KERNEL",
       "keyColor": "36",
-      "format": "{2}"
+      "type": "kernel"
     },
     {
-      "type": "packages",
       "key": "│ ├󰏖 PACKAGES",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "packages"
     },
     {
-      "type": "shell",
       "key": "│ ├ SHELL",
-      "keyColor": "36"
+      "keyColor": "36",
+      "type": "shell"
     },
     {
-      "type": "command",
       "key": "│ ├󰅐 OS-AGE",
       "keyColor": "cyan",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "type": "command"
     },
     {
-      "type": "uptime",
       "key": "│ └󰅐 UPTIME",
-      "keyColor": "36"
+      "keyColor": "36",
+      "type": "uptime"
     },
     {
-      "type": "custom",
-      "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────"
+      "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────",
+      "type": "custom"
     },
     "break",
     {
-      "type": "DE",
+      "format": "\u001b[36m{#1}{#7} {2} ({3}) ",
       "key": "{#7}  DE/WM ",
       "keyColor": "36",
-      "format": "\u001b[36m{#1}{#7} {2} ({3}) "
+      "type": "DE"
     },
     {
-      "type": "wm",
       "key": "│ ├󰧨  WM",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "wm"
     },
     {
-      "type": "wmtheme",
       "key": "│ ├󰉼 THEME",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "wmtheme"
     },
     {
-      "type": "icons",
       "key": "│ ├󰀻 ICONS",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "icons"
     },
     {
-      "type": "terminal",
       "key": "│ ├ TERMINAL",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "terminal"
     },
     {
-      "type": "terminalfont",
       "key": "│ └ FONT",
-      "keyColor": "cyan"
+      "keyColor": "cyan",
+      "type": "terminalfont"
     },
     {
-      "type": "wallpaper",
+      "format": "{1} {2}",
       "key": "│ └󰸉 WALLPAPER",
       "keyColor": "cyan",
-      "format": "{1} {2}"
+      "type": "wallpaper"
     },
     {
-      "type": "custom",
-      "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────"
+      "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────",
+      "type": "custom"
     },
     // "break",
     {
-      "type": "board",
+      "format": "\u001b[31m{#1} {1}",
       "key": "{#7}  HARDWARE ",
       "keyColor": "31",
-      "format": "\u001b[31m{#1} {1}"
+      "type": "board"
     },
     {
-      "type": "cpu",
       "key": "│ ├ CPU",
-      "keyColor": "red"
+      "keyColor": "red",
+      "type": "cpu"
     },
     {
-      "type": "gpu",
       "key": "│ ├󰍛 GPU",
-      "keyColor": "red"
+      "keyColor": "red",
+      "type": "gpu"
     },
     {
-      "type": "memory",
       "key": "│ ├󰑭 RAM",
-      "keyColor": "red"
+      "keyColor": "red",
+      "type": "memory"
     },
     {
-      "type": "swap",
       "key": "│ └󰓡 SWAP",
-      "keyColor": "red"
+      "keyColor": "red",
+      "type": "swap"
     },
     {
-      "type": "btrfs",
+      "folders": "/",
+      "format": "{5} / {7} ({8}, {9} allocated) - {1}",
       "key": "{#7}  DISKS ",
       "keyColor": "red",
-      "format": "{5} / {7} ({8}, {9} allocated) - {1}",
-      "folders": "/"
+      "type": "btrfs"
     },
     {
-      "type": "disk",
+      "folders": "/boot/efi",
+      "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ EFI ",
       "keyColor": "red",
-      "format": "{13} {1} / {2} ({3}) - {20}",
-      "folders": "/boot/efi"
+      "type": "disk"
     },
     {
-      "type": "disk",
+      "folders": "/boot",
+      "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ BOOT",
       "keyColor": "red",
-      "format": "{13} {1} / {2} ({3}) - {20}",
-      "folders": "/boot"
+      "type": "disk"
     },
     {
-      "type": "disk",
+      "folders": "/",
+      "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ ROOT",
       "keyColor": "red",
-      "format": "{13} {1} / {2} ({3}) - {20}",
-      "folders": "/"
+      "type": "disk"
     },
     {
-      "type": "disk",
+      "folders": "/home",
+      "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ HOME",
       "keyColor": "red",
-      "format": "{13} {1} / {2} ({3}) - {20}",
-      "folders": "/home"
+      "type": "disk"
     },
     {
-      "type": "disk",
+      "folders": "/mnt/ISOz",
+      "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ └ ISOz",
       "keyColor": "red",
-      "format": "{13} {1} / {2} ({3}) - {20}",
-      "folders": "/mnt/ISOz"
+      "type": "disk"
     },
     {
-      "type": "custom",
-      "format": "{#1}\u001b[31m└─────────────────────────────────────────────────────────────"
+      "format": "{#1}\u001b[31m└─────────────────────────────────────────────────────────────",
+      "type": "custom"
     },
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[37m┌────────────────────────────────────────────────────────────┐"
+      "format": "\u001b[37m┌────────────────────────────────────────────────────────────┐",
+      "type": "custom"
     },
-
     {
-      "type": "display",
+      "format": "{#1}{#7} {6} {1}x{2} @{3}Hz ({7}) ",
       "key": "{#7} 󰍹 DISPLAY ",
       "keyColor": "38",
-      "format": "{#1}{#7} {6} {1}x{2} @{3}Hz ({7}) "
+      "type": "display"
     },
     {
-      "type": "media",
+      "format": "{3} - {1} ({5})",
       "key": "│ ├󰝚  TRACK",
       "keyColor": "37",
-      "format": "{3} - {1} ({5})"
+      "type": "media"
     },
     {
-      "type": "player",
+      "format": "\u001b[34m{4}",
       "key": "│ ├󰥠   URL:",
       "keyColor": "37",
-      "format": "\u001b[34m{4}"
+      "type": "player"
     },
     {
-      "type": "sound",
-      "key": "│ ├ VOLUME",
       "format": "{#1}{5} ({#1}{3})",
-      "keyColor": "37"
+      "key": "│ ├ VOLUME",
+      "keyColor": "37",
+      "type": "sound"
     },
     {
-      "type": "command",
       "key": "│ └WEATHER",
       "keyColor": "37",
-      "text": "/home/arch/.config/fastfetch/weather.sh --fastfetch-mode"
+      "text": "/home/arch/.config/fastfetch/weather.sh --fastfetch-mode",
+      "type": "command"
     },
     {
-      "type": "custom",
-      "format": "{#1}\u001b[37m└─────────────────────────────────────────────────────────────"
+      "format": "{#1}\u001b[37m└─────────────────────────────────────────────────────────────",
+      "type": "custom"
     },
     "break",
     {
-      "type": "custom",
-      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m"
+      "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m",
+      "type": "custom"
     }
   ]
 }

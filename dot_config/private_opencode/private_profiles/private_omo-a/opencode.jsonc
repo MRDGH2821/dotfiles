@@ -1,22 +1,22 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "Devenv": {
+      "command": ["devenv", "mcp"],
+      "enabled": true,
+      "type": "local"
+    },
+    "SiteMCP (Devenv)": {
+      "command": ["bunx", "sitemcp", "https://devenv.sh/"],
+      "enabled": true,
+      "type": "local"
+    }
+  },
   "model": "opencode/big-pickle",
-  "small_model": "opencode/gpt-5-nano",
   "plugin": [
     "oh-my-openagent@latest",
     "@simonwjackson/opencode-direnv",
     "opencode-antigravity-auth@latest"
   ],
-  "mcp": {
-    "SiteMCP (Devenv)": {
-      "command": ["bunx", "sitemcp", "https://devenv.sh/"],
-      "enabled": true,
-      "type": "local"
-    },
-    "Devenv": {
-      "command": ["devenv", "mcp"],
-      "enabled": true,
-      "type": "local"
-    }
-  }
+  "small_model": "opencode/gpt-5-nano"
 }

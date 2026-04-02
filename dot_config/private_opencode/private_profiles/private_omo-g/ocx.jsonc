@@ -1,11 +1,5 @@
 {
   "$schema": "https://ocx.kdco.dev/schemas/profile.json",
-  "registries": {
-    "kdco": {
-      "url": "https://registry.kdco.dev"
-    }
-  },
-  "renameWindow": true,
   "exclude": [
     // "**/AGENTS.md" — Commented out = project AGENTS.md files are INCLUDED.
     // Uncomment this line to exclude all project instruction files.
@@ -14,5 +8,11 @@
     "**/.opencode/**",
     "**/opencode.jsonc",
     "**/opencode.json"
-  ]
+  ],
+  "registries": {
+    "kdco": {
+      "url": "https://registry.kdco.dev"
+    }
+  },
+  "renameWindow": true
 }

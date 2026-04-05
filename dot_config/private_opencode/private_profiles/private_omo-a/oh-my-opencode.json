@@ -1,91 +1,162 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
   "agents": {
-    "OpenCode-Builder": {
-      "category": "deep"
-    },
     "atlas": {
-      "category": "ultrabrain",
-      "model": "opencode/gpt-5-nano"
+      "fallback_models": ["zai-coding-plan/glm-4.7", "opencode/big-pickle"],
+      "model": "github-copilot/claude-sonnet-4.5"
     },
     "build": {
-      "category": "deep"
+      "fallback_models": ["opencode/big-pickle"],
+      "model": "opencode/gpt-5-nano"
     },
     "explore": {
-      "category": "quick",
-      "model": "opencode/gpt-5-nano"
+      "fallback_models": ["opencode/big-pickle"],
+      "model": "github-copilot/grok-code-fast-1"
     },
     "hephaestus": {
-      "category": "deep"
+      "fallback_models": ["github-copilot/gpt-5.3-codex"],
+      "model": "cursor/gpt-5.4",
+      "variant": "medium"
     },
     "librarian": {
-      "category": "writing",
-      "model": "zai-coding-plan/glm-4.7"
+      "fallback_models": ["opencode/big-pickle"],
+      "model": "github-copilot/grok-code-fast-1"
     },
     "metis": {
-      "category": "writing",
-      "model": "opencode/gpt-5-nano"
+      "fallback_models": ["zai-coding-plan/glm-5"],
+      "model": "github-copilot/claude-opus-4.5",
+      "variant": "max"
     },
     "momus": {
-      "category": "writing",
-      "model": "google/gemini-3.1-pro-preview",
-      "variant": "high"
+      "fallback_models": [
+        {
+          "model": "cursor/gpt-5.4",
+          "variant": "xhigh"
+        },
+        "zai-coding-plan/glm-5"
+      ],
+      "model": "github-copilot/gpt-5.3-codex",
+      "variant": "xhigh"
     },
     "multimodal-looker": {
+      "fallback_models": ["cursor/gemini-3.1-pro"],
       "model": "zai-coding-plan/glm-4.6v"
     },
     "oracle": {
-      "category": "ultrabrain",
-      "model": "google/gemini-3.1-pro-preview",
+      "fallback_models": [
+        {
+          "model": "cursor/gpt-5.4",
+          "variant": "high"
+        },
+        "zai-coding-plan/glm-5"
+      ],
+      "model": "github-copilot/gpt-5.3-codex",
       "variant": "high"
     },
-    "plan": {
-      "category": "ultrabrain"
-    },
     "prometheus": {
-      "category": "ultrabrain",
-      "model": "google/gemini-3.1-pro-preview"
+      "model": "github-copilot/claude-opus-4.5",
+      "prompt_append": "Leverage deep & quick agents heavily, always in parallel. Focus on decision completeness - leave zero decisions to implementer.",
+      "variant": "max"
     },
     "sisyphus": {
-      "model": "zai-coding-plan/glm-5"
-    },
-    "sisyphus-junior": {
-      "model": "opencode/gpt-5-nano"
+      "fallback_models": [
+        "zai-coding-plan/glm-5",
+        "cursor/claude-4.6-opus",
+        "opencode/big-pickle"
+      ],
+      "model": "github-copilot/claude-opus-4.5",
+      "variant": "max"
     }
+  },
+  "background_task": {
+    "defaultConcurrency": 8,
+    "modelConcurrency": {
+      "cursor/claude-4.6-opus": 2,
+      "cursor/gpt-5.4": 2,
+      "github-copilot/claude-opus-4.5": 2,
+      "github-copilot/grok-code-fast-1": 10,
+      "opencode/big-pickle": 20
+    },
+    "providerConcurrency": {
+      "cursor": 3,
+      "github-copilot": 5,
+      "opencode": 15,
+      "zai-coding-plan": 8
+    },
+    "staleTimeoutMs": 180000
   },
   "categories": {
     "artistry": {
-      "model": "google/gemini-3.1-pro-preview",
+      "fallback_models": ["github-copilot/claude-opus-4.5"],
+      "model": "cursor/gemini-3.1-pro",
       "variant": "high"
     },
     "deep": {
-      "model": "zai-coding-plan/glm-5.1"
+      "fallback_models": ["zai-coding-plan/glm-5", "opencode/big-pickle"],
+      "model": "github-copilot/gpt-5.3-codex",
+      "variant": "medium"
     },
     "quick": {
-      "model": "google/gemini-3-flash-preview"
+      "fallback_models": ["opencode/big-pickle"],
+      "model": "opencode/gpt-5-nano"
     },
     "ultrabrain": {
-      "model": "google/gemini-3.1-pro-preview",
-      "variant": "high"
+      "fallback_models": [
+        {
+          "model": "cursor/gpt-5.4",
+          "variant": "xhigh"
+        },
+        "github-copilot/claude-opus-4.5"
+      ],
+      "model": "github-copilot/gpt-5.3-codex",
+      "variant": "xhigh"
     },
     "unspecified-high": {
-      "model": "google/gemini-3-flash-preview"
+      "fallback_models": ["zai-coding-plan/glm-5", "cursor/claude-4.6-opus"],
+      "model": "github-copilot/claude-opus-4.5",
+      "variant": "max"
     },
     "unspecified-low": {
-      "model": "google/gemini-3-flash-preview"
+      "fallback_models": ["zai-coding-plan/glm-4.7", "opencode/big-pickle"],
+      "model": "github-copilot/claude-sonnet-4.5"
     },
     "visual-engineering": {
-      "model": "google/gemini-3.1-pro-preview",
+      "fallback_models": ["zai-coding-plan/glm-5"],
+      "model": "cursor/gemini-3.1-pro",
       "variant": "high"
     },
     "writing": {
-      "model": "google/gemini-3-flash-preview"
+      "fallback_models": ["opencode/big-pickle"],
+      "model": "github-copilot/gemini-2.5-pro"
     }
+  },
+  "experimental": {
+    "aggressive_truncation": true,
+    "auto_resume": true,
+    "task_system": true
   },
   "git_master": {
     "commit_footer": true,
     "git_env_prefix": "GIT_MASTER=1",
     "include_co_authored_by": true
   },
-  "google_auth": false
+  "google_auth": false,
+  "hashline_edit": true,
+  "runtime_fallback": {
+    "cooldown_seconds": 60,
+    "enabled": true,
+    "max_fallback_attempts": 3,
+    "notify_on_fallback": true,
+    "retry_on_errors": [400, 429, 503, 529],
+    "timeout_seconds": 30
+  },
+  "sisyphus_agent": {
+    "default_builder_enabled": false,
+    "disabled": false,
+    "planner_enabled": true,
+    "replace_plan": true
+  },
+  "tmux": {
+    "enabled": false
+  }
 }

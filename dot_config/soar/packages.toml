@@ -28,7 +28,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "engram_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/engram"
 pkg_type = "archive"
-version = "1.10.9"
+version = "1.11.0"
 
 [packages.fastfetch]
 asset_pattern = "fastfetch-{os}-amd64.tar.gz"
@@ -36,17 +36,19 @@ extract_root = "fastfetch-{os}-amd64"
 github = "fastfetch-cli/fastfetch"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
+version = "2.61.0"
 
 [packages.fzf]
 asset_pattern = "fzf-*-{os}_amd64.tar.gz"
 github = "junegunn/fzf"
 pkg_id = "junegunn.fzf"
+version = "0.71.0"
 
 [packages.gentle-ai]
 asset_pattern = "gentle-ai_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/gentle-ai"
 pkg_type = "archive"
-version = "1.12.1"
+version = "1.18.2"
 
 [packages.git-sync]
 asset_pattern = "git-sync_*_{os}_amd64.tar.gz"
@@ -64,13 +66,13 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.8.5"
+version = "0.8.9"
 
 [packages.ocx]
 asset_pattern = "ocx-{os}-x64"
 github = "kdcokenny/ocx"
 pkg_id = "kdcokenny/ocx"
-version = "2.0.4"
+version = "2.0.5"
 
 [packages.pcloud]
 pkg_id = "pcloud"

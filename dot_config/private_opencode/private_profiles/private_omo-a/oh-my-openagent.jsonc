@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
 
   // ============================================================
-  // oh-my-openagent optimised config by Mihir Rabade
+  // oh-my-openagent optimised config
   //
   // Provider coverage:
   //   opencode       – free/nano tier: big-pickle, gpt-5-nano,

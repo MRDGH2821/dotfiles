@@ -203,10 +203,16 @@
       }
     },
     "yaml-language-server": {
+      "binary": {
+        "arguments": ["--stdio"],
+        "path": "~/.cache/.bun/bin/yaml-language-server"
+      },
       "settings": {
         "yaml": {
           "schemaStore": {
-            "enable": true
+            "completion": true,
+            "enable": true,
+            "hover": true
           }
         }
       }

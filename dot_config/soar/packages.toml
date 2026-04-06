@@ -60,6 +60,7 @@ tag_pattern = "v*.*.*"
 asset_pattern = "lazygit_*_{os}_{arch}.tar.gz"
 github = "jesseduffield/lazygit"
 pkg_id = "jesseduffield.lazygit"
+version = "0.61.0"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"

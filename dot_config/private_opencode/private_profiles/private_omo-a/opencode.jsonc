@@ -22,11 +22,15 @@
     "oh-my-openagent@latest",
     "@simonwjackson/opencode-direnv",
     "opencode-antigravity-auth@latest",
-    "opencode-cursor-proxy@latest"
+    "@rama_nigg/open-cursor@latest"
   ],
   "provider": {
-    "cursor": {
-      "name": "Cursor"
+    "cursor-acp": {
+      "name": "Cursor ACP",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:32124/v1"
+      }
     }
   },
   "small_model": "opencode/gpt-5-nano"

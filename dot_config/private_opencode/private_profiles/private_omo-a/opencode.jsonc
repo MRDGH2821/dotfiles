@@ -18,18 +18,13 @@
     }
   },
   "model": "opencode/big-pickle",
-  "plugin": [
-    "oh-my-openagent@latest",
-    "@simonwjackson/opencode-direnv",
-    "opencode-antigravity-auth@latest",
-    "@rama_nigg/open-cursor@latest"
-  ],
+  "plugin": ["oh-my-openagent@latest", "@simonwjackson/opencode-direnv"],
   "provider": {
-    "cursor-acp": {
-      "name": "Cursor ACP",
+    "ollama": {
+      "name": "Ollama",
       "npm": "@ai-sdk/openai-compatible",
       "options": {
-        "baseURL": "http://127.0.0.1:32124/v1"
+        "baseURL": "http://localhost:11434/v1"
       }
     }
   },

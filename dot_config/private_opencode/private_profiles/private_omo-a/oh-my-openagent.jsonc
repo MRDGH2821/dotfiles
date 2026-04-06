@@ -198,17 +198,7 @@
     // big-pickle handles extreme fallback (Copilot down / rate-limited).
     "sisyphus": {
       "fallback_models": [
-        // Codex variant for when orchestration hits code-heavy planning
-        {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "medium"
-        },
-        // GLM-5 is the top ZAI coding tier — strong orchestrator fallback
-        {
-          "model": "zai-coding-plan/glm-5.1",
-          "temperature": 0.3
-        },
-        // GLM-5.1 as refined secondary ZAI fallback
+        // GLM-5 as refined secondary ZAI fallback
         "zai-coding-plan/glm-5",
         // big-pickle is the catch-all free fallback
         "opencode/big-pickle",
@@ -218,11 +208,10 @@
           "reasoningEffort": "medium"
         }
       ],
-      "model": "github-copilot/gpt-5.2",
+      "model": "zai-coding-plan/glm-5.1",
       "prompt_append": "Delegate implementation to hephaestus. Parallelize oracle + explore. Keep planning concise.",
       "ultrawork": {
-        "model": "github-copilot/gpt-5.1",
-        "reasoningEffort": "high"
+        "model": "zai-coding-plan/glm-5.1"
       }
     },
 

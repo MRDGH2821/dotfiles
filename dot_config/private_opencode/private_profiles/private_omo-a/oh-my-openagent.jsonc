@@ -1,0 +1,551 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+
+  // ─────────────────────────────────────────────────────────
+  // AGENTS
+  // ─────────────────────────────────────────────────────────
+  "agents": {
+    // ── ATLAS (General Sub-agent) ─────────────────────────
+    "atlas": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-sonnet-4.6"
+        },
+        {
+          "model": "cursor-acp/claude-4.5-sonnet"
+        },
+        {
+          "model": "github-copilot/claude-sonnet-4.5"
+        },
+        "cursor-acp/kimi-k2.5",
+        {
+          "model": "cursor-acp/gpt-5.4-medium"
+        },
+        {
+          "model": "github-copilot/gpt-5.4"
+        },
+        "zai-coding-plan/glm-5-turbo"
+      ],
+      "model": "cursor-acp/claude-4.6-sonnet-medium"
+    },
+
+    // ── EXPLORE (Fast Codebase Grep) ──────────────────────
+    // Grok-code-fast-1 is purpose-built for this
+    "explore": {
+      "fallback_models": [
+        "cursor-acp/gemini-3-flash",
+        "github-copilot/gemini-3-flash-preview",
+        "cursor-acp/gpt-5-mini",
+        "github-copilot/gpt-5-mini",
+        "zai-coding-plan/glm-4.7-flashx",
+        "opencode/gpt-5-nano"
+      ],
+      "model": "github-copilot/grok-code-fast-1"
+    },
+
+    // ── HEPHAESTUS (Autonomous Deep Worker) ──────────────
+    // Codex-xhigh for max autonomous coding depth
+    "hephaestus": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.3-codex-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.2-codex-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.2-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-high",
+          "variant": "high"
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        }
+      ],
+      "model": "cursor-acp/gpt-5.4-xhigh",
+      "reasoningEffort": "xhigh"
+    },
+
+    // ── LIBRARIAN (Docs / Code Search) ───────────────────
+    // Fast flash-tier models
+    "librarian": {
+      "fallback_models": [
+        "github-copilot/gemini-3-flash-preview",
+        "cursor-acp/gpt-5-mini",
+        "github-copilot/gpt-5-mini",
+        "zai-coding-plan/glm-4.7-flash",
+        "zai-coding-plan/glm-4.7-flashx",
+        "zai-coding-plan/glm-4.5-flash",
+        "opencode/nemotron-3-super-free"
+      ],
+      "model": "cursor-acp/gemini-3-flash"
+    },
+
+    // ── METIS (Plan Consultant) ───────────────────────────
+    "metis": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "cursor-acp/kimi-k2.5",
+        {
+          "model": "cursor-acp/gpt-5.4-high",
+          "reasoningEffort": "high"
+        },
+        "zai-coding-plan/glm-5"
+      ],
+      "model": "cursor-acp/claude-4.6-opus-max",
+      "variant": "max"
+    },
+
+    // ── MOMUS (Quality Critic) ────────────────────────────
+    "momus": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-max",
+          "variant": "max"
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        {
+          "model": "cursor-acp/gemini-3.1-pro",
+          "variant": "high"
+        },
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
+          "variant": "high"
+        }
+      ],
+      "model": "cursor-acp/gpt-5.4-xhigh",
+      "reasoningEffort": "xhigh"
+    },
+
+    // ── MULTIMODAL-LOOKER ────────────────────────────────
+    // Vision-capable models + ZAI v-series
+    "multimodal-looker": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.4"
+        },
+        "cursor-acp/kimi-k2.5",
+        "zai-coding-plan/glm-4.6v",
+        "zai-coding-plan/glm-4.5v",
+        "zai-coding-plan/glm-5v-turbo"
+      ],
+      "model": "cursor-acp/gpt-5.4-medium"
+    },
+
+    // ── ORACLE (Architecture / Hard Debugging) ────────────
+    // Highest reasoning; codex + thinking fallbacks
+    "oracle": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.4-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-max-thinking",
+          "thinking": {
+            "budgetTokens": 200000,
+            "type": "enabled"
+          }
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6",
+          "thinking": {
+            "budgetTokens": 100000,
+            "type": "enabled"
+          }
+        },
+        "zai-coding-plan/glm-5"
+      ],
+      "model": "cursor-acp/gpt-5.3-codex-xhigh",
+      "reasoningEffort": "xhigh"
+    },
+
+    // ── PROMETHEUS (Strategic Planner) ───────────────────
+    "prometheus": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "cursor-acp/kimi-k2.5",
+        {
+          "model": "cursor-acp/gpt-5.4-high",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        "zai-coding-plan/glm-5.1"
+      ],
+      "model": "cursor-acp/claude-4.6-opus-max",
+      "prompt_append": "Always leverage deep & quick agents heavily, always in parallel. Identify scope ambiguities early.",
+      "variant": "max"
+    },
+
+    // ── SISYPHUS (Main Orchestrator) ──────────────────────
+    // Primary: cursor-acp claude-4.6-opus-max (best available)
+    // Fallback chain: github-copilot duplicate → kimi-k2.5 → gpt-5.4-xhigh → glm-5 → big-pickle
+    "sisyphus": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-opus-4.6",
+          "variant": "max"
+        },
+        "cursor-acp/kimi-k2.5",
+        {
+          "model": "cursor-acp/gpt-5.4-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        "zai-coding-plan/glm-5.1",
+        "zai-coding-plan/glm-5-turbo",
+        "opencode/big-pickle"
+      ],
+      "model": "cursor-acp/claude-4.6-opus-max",
+      "ultrawork": {
+        "model": "cursor-acp/claude-4.6-opus-max",
+        "variant": "max"
+      },
+      "variant": "max"
+    }
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // BACKGROUND TASK CONCURRENCY
+  // ─────────────────────────────────────────────────────────
+  "background_task": {
+    "defaultConcurrency": 8,
+    "modelConcurrency": {
+      "cursor-acp/claude-4.6-opus-max": 2,
+      "cursor-acp/gpt-5.3-codex-xhigh": 3,
+      "cursor-acp/gpt-5.4-xhigh": 3,
+      "github-copilot/claude-opus-4.6": 2,
+      "opencode/gpt-5-nano": 30,
+      "zai-coding-plan/glm-4.7-flashx": 30
+    },
+    "providerConcurrency": {
+      "cursor-acp": 5,
+      "github-copilot": 5,
+      "opencode": 20,
+      "zai-coding-plan": 20
+    },
+    "staleTimeoutMs": 180000
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // CATEGORIES
+  // ─────────────────────────────────────────────────────────
+  "categories": {
+    // creative / unconventional
+    "artistry": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-high"
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "zai-coding-plan/glm-5.1"
+      ],
+      "is_unstable_agent": true,
+      "model": "cursor-acp/gemini-3.1-pro",
+      "variant": "high"
+    },
+
+    // backend / business logic
+    "business-logic": {
+      "description": "Backend logic, APIs, database queries, business rules",
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.2-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.5-sonnet"
+        },
+        {
+          "model": "github-copilot/claude-sonnet-4.5"
+        },
+        "zai-coding-plan/glm-4.7",
+        "cursor-acp/kimi-k2.5"
+      ],
+      "model": "cursor-acp/gpt-5.2-codex-high",
+      "reasoningEffort": "high"
+    },
+
+    // autonomous deep problem-solving
+    "deep": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.2-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.3-codex-high",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-high"
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "zai-coding-plan/glm-5-turbo"
+      ],
+      "model": "cursor-acp/gpt-5.2-codex-xhigh",
+      "reasoningEffort": "xhigh"
+    },
+
+    // git operations
+    "git": {
+      "description": "All git operations — commits, branches, rebases",
+      "fallback_models": [
+        "cursor-acp/gpt-5-mini",
+        "github-copilot/gpt-5-mini",
+        "zai-coding-plan/glm-4.5-flash"
+      ],
+      "model": "opencode/gpt-5-nano",
+      "prompt_append": "Focus on atomic commits, clear conventional messages, and safe operations."
+    },
+
+    // trivial tasks — nano / flash, near-free
+    "quick": {
+      "fallback_models": [
+        "cursor-acp/gpt-5-mini",
+        "github-copilot/gpt-5-mini",
+        "zai-coding-plan/glm-4.7-flashx",
+        "zai-coding-plan/glm-4.5-flash",
+        "opencode/minimax-m2.5-free"
+      ],
+      "model": "opencode/gpt-5-nano"
+    },
+
+    // deep logical reasoning / hard architecture
+    "ultrabrain": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.4-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-max-thinking",
+          "thinking": {
+            "budgetTokens": 200000,
+            "type": "enabled"
+          }
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "zai-coding-plan/glm-5.1"
+      ],
+      "model": "cursor-acp/gpt-5.3-codex-xhigh",
+      "reasoningEffort": "xhigh"
+    },
+
+    // general high-effort
+    "unspecified-high": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-opus-4.6",
+          "variant": "max"
+        },
+        {
+          "model": "cursor-acp/gpt-5.4-xhigh",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "github-copilot/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        "cursor-acp/kimi-k2.5",
+        "zai-coding-plan/glm-5",
+        "opencode/big-pickle"
+      ],
+      "model": "cursor-acp/claude-4.6-opus-max",
+      "variant": "max"
+    },
+
+    // general low-effort
+    "unspecified-low": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/claude-sonnet-4.5"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-sonnet-medium"
+        },
+        {
+          "model": "github-copilot/claude-sonnet-4.6"
+        },
+        {
+          "model": "cursor-acp/gpt-5.2-medium"
+        },
+        {
+          "model": "github-copilot/gpt-5.2"
+        },
+        "cursor-acp/kimi-k2.5",
+        "zai-coding-plan/glm-4.7"
+      ],
+      "model": "cursor-acp/claude-4.6-sonnet"
+    },
+
+    // frontend / UI / CSS / animations
+    "visual-engineering": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-high"
+        },
+        {
+          "model": "github-copilot/claude-opus-4.6"
+        },
+        "zai-coding-plan/glm-5.1",
+        "zai-coding-plan/glm-4.6v"
+      ],
+      "is_unstable_agent": true,
+      "model": "cursor-acp/gemini-3.1-pro",
+      "variant": "high"
+    },
+
+    // documentation / prose
+    "writing": {
+      "fallback_models": [
+        "github-copilot/gemini-3-flash-preview",
+        "cursor-acp/kimi-k2.5",
+        {
+          "model": "cursor-acp/claude-4.5-sonnet"
+        },
+        {
+          "model": "github-copilot/claude-sonnet-4.5"
+        },
+        "zai-coding-plan/glm-4.7",
+        "opencode/qwen3.6-plus-free"
+      ],
+      "model": "cursor-acp/gemini-3-flash"
+    }
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // EXPERIMENTAL
+  // ─────────────────────────────────────────────────────────
+  "experimental": {
+    "aggressive_truncation": true,
+    "auto_resume": true,
+    "dynamic_context_pruning": {
+      "enabled": true,
+      "notification": "minimal",
+      "strategies": {
+        "deduplication": {
+          "enabled": true
+        },
+        "purge_errors": {
+          "enabled": true,
+          "turns": 5
+        },
+        "supersede_writes": {
+          "aggressive": false,
+          "enabled": true
+        }
+      },
+      "turn_protection": {
+        "enabled": true,
+        "turns": 3
+      }
+    },
+    "task_system": true
+  },
+  "git_master": {
+    "commit_footer": true,
+    "include_co_authored_by": true
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // FEATURES
+  // ─────────────────────────────────────────────────────────
+  "hashline_edit": true,
+
+  // ─────────────────────────────────────────────────────────
+  // MODEL CAPABILITIES CACHE
+  // ─────────────────────────────────────────────────────────
+  "model_capabilities": {
+    "auto_refresh_on_start": true,
+    "enabled": true,
+    "refresh_timeout_ms": 5000
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // RUNTIME FALLBACK
+  // ─────────────────────────────────────────────────────────
+  "runtime_fallback": {
+    "cooldown_seconds": 30,
+    "enabled": true,
+    "max_fallback_attempts": 5,
+    "notify_on_fallback": true,
+    "retry_on_errors": [400, 429, 503, 529],
+    "timeout_seconds": 45
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // SISYPHUS ORCHESTRATION
+  // ─────────────────────────────────────────────────────────
+  "sisyphus_agent": {
+    "disabled": false,
+    "planner_enabled": true,
+    "replace_plan": true
+  },
+  "tmux": {
+    "enabled": false
+  }
+}

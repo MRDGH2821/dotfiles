@@ -18,7 +18,11 @@
     }
   },
   "model": "opencode/big-pickle",
-  "plugin": ["oh-my-openagent@latest", "@simonwjackson/opencode-direnv"],
+  "plugin": [
+    "@simonwjackson/opencode-direnv",
+    "oh-my-openagent@latest",
+    "opencode-with-claude@latest"
+  ],
   "provider": {
     "ollama": {
       "name": "Ollama",

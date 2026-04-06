@@ -8,6 +8,14 @@
     "reveal_target": "center"
   },
   {
+    "allow_concurrent_runs": false,
+    "args": ["re-add"],
+    "command": "chezmoi",
+    "hide": "on_success",
+    "label": "Re-add files",
+    "reveal_target": "center"
+  },
+  {
     "args": ["execute-template", "-f", "$ZED_FILE"],
     "command": "chezmoi",
     "hide": "never",

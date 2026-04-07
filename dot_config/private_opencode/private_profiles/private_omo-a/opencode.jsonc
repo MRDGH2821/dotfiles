@@ -47,11 +47,14 @@
             }
           }
         },
-        "claude-4.5-opus-high": {
+        "claude-4.5-opus": {
           "name": "Opus 4.5",
           "variants": {
-            "thinking": {
-              "name": "Thinking"
+            "high": {
+              "name": "High"
+            },
+            "high-thinking": {
+              "name": "High Thinking"
             }
           }
         },
@@ -63,19 +66,20 @@
             }
           }
         },
-        "claude-4.6-opus-high": {
-          "name": "Opus 4.6 1M",
+        "claude-4.6-opus": {
+          "name": "Opus 4.6",
           "variants": {
-            "thinking": {
-              "name": "Thinking"
-            }
-          }
-        },
-        "claude-4.6-opus-max": {
-          "name": "Opus 4.6 1M Max",
-          "variants": {
-            "thinking": {
-              "name": "Thinking"
+            "high": {
+              "name": "1M High"
+            },
+            "high-thinking": {
+              "name": "1M High Thinking"
+            },
+            "max": {
+              "name": "1M Max"
+            },
+            "max-thinking": {
+              "name": "1M Max Thinking"
             }
           }
         },

@@ -5,47 +5,55 @@
   // oh-my-openagent optimised config
   //
   // Provider coverage:
-  //   opencode       – free/nano tier: big-pickle, gpt-5-nano,
-  //                    minimax-m2.5-free, nemotron-3-super-free,
-  //                    qwen3.6-plus-free
-  //   github-copilot – Copilot subscription models
+  //   cursor-acp      – Cursor subscription models (Claude, GPT, Gemini, Kimi, Grok)
+  //   opencode        – free/nano tier: big-pickle, gpt-5-nano,
+  //                     minimax-m2.5-free, nemotron-3-super-free,
+  //                     qwen3.6-plus-free
+  //   github-copilot  – Copilot subscription models
   //   zai-coding-plan – ZhipuAI GLM Coding Plan models
   //
   // Design principles:
-  //   1. Best available model per role (based on benchmarks)
+  //   1. Best available model per role (Claude/Kimi/GLM for communicators,
+  //      GPT for deep specialists, Gemini for visual/writing)
   //   2. Fallback chains cross providers for resilience
-  //   3. Duplicate models across providers added as fallbacks
-  //   4. Free / cheap models used where quality allows
-  //   5. Reasoning effort tuned per use-case
+  //   3. Free / cheap models used where quality allows
+  //   4. Reasoning effort tuned per use-case
+  //   5. No invalid model IDs — all entries verified against provider lists
   // ============================================================
 
   // ─── AGENTS ─────────────────────────────────────────────────
 
   "agents": {
-    // ── Atlas (long-running autonomous sessions) ───────────────
-    // Needs sustained quality over many turns. GLM-5 handles long ctx well.
+    // ── Atlas (todo orchestrator / long sessions) ──────────────
+    // Dual-prompt agent. Claude Sonnet 4.6 preferred for sustained long-ctx
+    // orchestration. Kimi K2.5 is near-identical in behaviour at lower cost.
+    // GPT-5.4 medium is the GPT prompt path.
     "atlas": {
       "fallback_models": [
-        "zai-coding-plan/glm-5",
+        "cursor-acp/kimi-k2.5",
         {
-          "model": "github-copilot/gpt-5.2",
+          "model": "cursor-acp/gpt-5.4",
           "reasoningEffort": "medium"
         },
+        "zai-coding-plan/glm-5.1",
         "opencode/big-pickle",
         "opencode/nemotron-3-super-free"
       ],
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "cursor-acp/claude-4.6-sonnet-medium"
     },
 
-    // ── Explore (fast codebase navigation) ────────────────────
-    // Same profile as Librarian but focused on grepping source trees.
-    // Haiku-4.5 is ultra-fast Anthropic; GLM flash models are free.
+    // ── Explore (fast codebase grep) ──────────────────────────
+    // Utility runner — speed over intelligence. Grok-code-fast-1 is the
+    // guide's recommended primary for Explore. Haiku 4.5 as Anthropic fast
+    // fallback. GLM flash / GPT nano as free ultra-cheap options.
+    // NEVER use Opus here — massive cost waste.
     "explore": {
       "fallback_models": [
         "github-copilot/claude-haiku-4.5",
-        "zai-coding-plan/glm-4.5-flash",
-        "opencode/gpt-5-nano",
-        "opencode/minimax-m2.5-free"
+        "zai-coding-plan/glm-4.7-flash",
+        "zai-coding-plan/glm-4.7-flashx",
+        "opencode/minimax-m2.5-free",
+        "opencode/gpt-5-nano"
       ],
       "model": "github-copilot/grok-code-fast-1",
       "permission": {
@@ -55,17 +63,31 @@
     },
 
     // ── Hephaestus (deep autonomous coder) ────────────────────
-    // GPT-5.3-codex is the best pure-coding model in the list.
-    // Falls back to GPT-5.2-codex (same lineage), then GLM-5.1.
+    // Deep specialist: GPT principle-driven style only — do NOT override to
+    // Claude. GPT-5.3 Codex is the top pick; Spark preview and 5.2-codex
+    // are same-family fallbacks. GLM-5.1 / big-pickle as last resort.
     "hephaestus": {
       "fallback_models": [
+        "cursor-acp/gpt-5.3-codex-spark-preview",
+        {
+          "model": "cursor-acp/gpt-5.2-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
         {
           "model": "github-copilot/gpt-5.2-codex",
           "reasoningEffort": "high"
         },
         {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "medium"
+          "model": "cursor-acp/gpt-5.1-codex-max",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.2",
+          "reasoningEffort": "high"
         },
         {
           "model": "zai-coding-plan/glm-5.1",
@@ -74,7 +96,7 @@
         "zai-coding-plan/glm-5",
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.3-codex",
+      "model": "cursor-acp/gpt-5.4",
       "permission": {
         "bash": {
           "bun": "allow",
@@ -89,8 +111,8 @@
     },
 
     // ── Librarian (docs & code search) ────────────────────────
-    // Speed matters most here. Grok-code-fast-1 is the fastest in the list.
-    // GLM-4.7-flash / minimax-m2.5-free are free fast fallbacks.
+    // Utility runner — same speed-first profile as Explore.
+    // Grok-code-fast-1 primary; GLM flash / minimax free fallbacks.
     "librarian": {
       "fallback_models": [
         "zai-coding-plan/glm-4.7-flash",
@@ -102,55 +124,85 @@
       "model": "github-copilot/grok-code-fast-1"
     },
 
-    // ── Metis (plan consultant) ────────────────────────────────
-    // Quick plan review; moderate quality is fine.
+    // ── Metis (plan gap analyzer) ──────────────────────────────
+    // Plan review needs strong instruction-following. Opus max handles the
+    // analytical depth required. Falls back down the Claude/GLM family.
     "metis": {
       "fallback_models": [
+        "cursor-acp/claude-4.6-opus-high",
+        "cursor-acp/claude-4.5-opus-high",
+        "zai-coding-plan/glm-5.1",
         "github-copilot/gpt-5-mini",
-        "github-copilot/gpt-5.4-mini",
         "opencode/gpt-5-nano"
       ],
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "cursor-acp/claude-4.6-opus-max"
     },
 
-    // ── Momus (code reviewer) ──────────────────────────────────
-    // Code review benefits from codex-grade reasoning.
+    // ── Momus (ruthless reviewer) ──────────────────────────────
+    // Deep specialist: GPT xhigh. Guide says xhigh variant for Momus.
+    // GPT-5.3 Codex primary; GPT-5.2-codex / GPT-5.4 as GPT-family fallbacks.
     "momus": {
       "fallback_models": [
         {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "medium"
+          "model": "cursor-acp/gpt-5.2-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-max"
         },
         "zai-coding-plan/glm-5.1",
         "zai-coding-plan/glm-5",
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.3-codex",
+      "model": "cursor-acp/gpt-5.4",
       "prompt_append": "Focus on correctness, edge cases, security, test coverage, and naming clarity.",
-      "reasoningEffort": "high"
+      "reasoningEffort": "xhigh"
     },
 
-    // ── Multimodal Looker (visual / UI review) ─────────────────
-    // Gemini-3.1-pro-preview is the best vision model in the list.
-    // GLM-5v-turbo and GLM-4.6v are vision-capable fallbacks.
+    // ── Multimodal Looker (vision / UI review) ─────────────────
+    // Gemini 3.1 Pro has the best vision capability in the available list.
+    // Guide recommends Gemini for visual/frontend. GLM-v models (vision-
+    // capable) serve as fallbacks. GPT-4o retained as a strong vision backup.
     "multimodal-looker": {
       "fallback_models": [
+        "github-copilot/gemini-3.1-pro-preview",
         "github-copilot/gemini-2.5-pro",
         "zai-coding-plan/glm-5v-turbo",
         "zai-coding-plan/glm-4.6v",
         "zai-coding-plan/glm-4.5v",
         "github-copilot/gpt-4o"
       ],
-      "model": "github-copilot/gemini-3.1-pro-preview"
+      "model": "cursor-acp/gemini-3.1-pro"
     },
 
-    // ── Oracle (architecture & debugging) ─────────────────────
-    // Hard logical reasoning. GPT-5.2 + xhigh effort is ideal.
-    // Nemotron-3 is NVIDIA's free reasoning model — strong fallback.
+    // ── Oracle (architecture consultant) ──────────────────────
+    // Deep specialist: GPT xhigh reasoning. GPT-5.4 is the guide default;
+    // using cursor-acp variant as primary. Gemini 3.1 Pro is a strong
+    // architectural reasoner. GLM-5 / Nemotron as free fallbacks.
     "oracle": {
       "fallback_models": [
         {
-          "model": "github-copilot/gpt-5.3-codex",
+          "model": "github-copilot/gpt-5.2",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "cursor-acp/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gemini-3.1-pro",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
           "reasoningEffort": "high"
         },
         {
@@ -167,15 +219,24 @@
         },
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.2",
+      "model": "cursor-acp/gpt-5.4",
       "reasoningEffort": "xhigh"
     },
 
     // ── Prometheus (strategic planner) ────────────────────────
-    // Planning needs strong reasoning but not max throughput.
-    // GPT-5.1 reasoning is ideal. Falls back to GLM-5 / Qwen3.
+    // Dual-prompt agent — auto-switches between Claude and GPT prompts at
+    // runtime. Claude Opus high preferred; GPT-5.4 high is the GPT path.
+    // Falls back to GLM-5.1, then Qwen3 (free reasoning).
     "prometheus": {
       "fallback_models": [
+        {
+          "model": "cursor-acp/gpt-5.4",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gemini-3.1-pro",
+          "reasoningEffort": "high"
+        },
         {
           "model": "zai-coding-plan/glm-5.1",
           "temperature": 0.4
@@ -187,37 +248,47 @@
         },
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.1",
+      "model": "cursor-acp/claude-4.6-opus-high",
       "prompt_append": "Interview the user thoroughly. Identify scope ambiguities. Build a step-by-step, file-level plan before any execution.",
       "reasoningEffort": "medium"
     },
 
     // ── Sisyphus (main orchestrator) ──────────────────────────
-    // Best orchestrator: needs strong reasoning + long context.
-    // GPT-5.2 from Copilot is the top pick from the allowed list.
-    // big-pickle handles extreme fallback (Copilot down / rate-limited).
+    // Communicator role: needs Claude-family instruction-following for its
+    // ~1,100-line orchestration prompt. Claude Opus 4.6 max is the ideal fit.
+    // Fallback chain: Kimi K2.5 (Claude-like) → Cursor Claude Sonnet →
+    // GLM-5 (Claude-like orchestration) → Composer-2 → GPT-5.4 medium →
+    // big-pickle (catch-all free).
     "sisyphus": {
       "fallback_models": [
-        // GLM-5 as refined secondary ZAI fallback
+        "cursor-acp/kimi-k2.5",
+        "cursor-acp/claude-4.6-sonnet-medium",
+        "cursor-acp/composer-2",
         "zai-coding-plan/glm-5",
-        // big-pickle is the catch-all free fallback
+        {
+          "model": "cursor-acp/gpt-5.4",
+          "reasoningEffort": "medium"
+        },
+        "zai-coding-plan/glm-5.1",
         "opencode/big-pickle",
-        // Qwen reasoning as last resort
         {
           "model": "opencode/qwen3.6-plus-free",
           "reasoningEffort": "medium"
         }
       ],
-      "model": "zai-coding-plan/glm-5.1",
+      "model": "cursor-acp/claude-4.6-opus-max",
       "prompt_append": "Delegate implementation to hephaestus. Parallelize oracle + explore. Keep planning concise.",
       "ultrawork": {
-        "model": "zai-coding-plan/glm-5.1"
+        "model": "cursor-acp/claude-4.6-opus-max"
       }
     },
 
-    // ── Sisyphus Junior (trivial / quick-fix tasks) ────────────
+    // ── Sisyphus Junior (category executor / quick tasks) ──────
+    // Lightweight orchestrator for trivial subtasks.
+    // gpt-5-nano as cheapest primary; escalates to Sonnet if needed.
     "sisyphus-junior": {
       "fallback_models": [
+        "cursor-acp/claude-4.6-sonnet-medium",
         "github-copilot/gpt-5.4-mini",
         "github-copilot/gpt-5-mini",
         "zai-coding-plan/glm-4.5-flash",
@@ -233,6 +304,10 @@
   "background_task": {
     "defaultConcurrency": 6,
     "modelConcurrency": {
+      "cursor-acp/claude-4.6-opus-high": 2,
+      "cursor-acp/claude-4.6-opus-max": 2,
+      "cursor-acp/gpt-5.3-codex": 3,
+      "cursor-acp/gpt-5.4": 3,
       "github-copilot/gpt-5.2": 3,
       "github-copilot/gpt-5.3-codex": 3,
       "github-copilot/grok-code-fast-1": 10,
@@ -244,6 +319,7 @@
       "zai-coding-plan/glm-5.1": 6
     },
     "providerConcurrency": {
+      "cursor-acp": 5, // Cursor has generous per-model limits but throttle provider-wide
       "github-copilot": 8, // Copilot has generous limits
       "opencode": 20, // Free/nano models can run wide
       "zai-coding-plan": 10 // ZAI coding plan is subscription-based
@@ -256,28 +332,39 @@
 
   "categories": {
     // ── artistry: creative / unconventional problem solving ────
+    // Guide: Gemini 3.1 Pro high → Claude Opus max → GPT-5.4
     "artistry": {
       "description": "Creative solutions, lateral thinking, unconventional approaches",
       "fallback_models": [
         "github-copilot/gemini-3.1-pro-preview",
+        "cursor-acp/claude-4.6-opus-high",
+        "cursor-acp/gpt-5.4",
         "zai-coding-plan/glm-4.6",
         "zai-coding-plan/glm-4.7",
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gemini-2.5-pro"
+      "model": "cursor-acp/gemini-3.1-pro"
     },
 
-    // ── deep: autonomous research + end-to-end execution ──────
+    // ── deep: multi-file refactors, autonomous deep-dives ──────
+    // Guide: GPT-5.4 medium → Claude Opus max → Gemini 3.1 Pro high
     "deep": {
       "description": "Multi-file refactors, autonomous deep-dives, research tasks",
       "fallback_models": [
         {
-          "model": "github-copilot/gpt-5.2-codex",
+          "model": "cursor-acp/gpt-5.2-codex",
           "reasoningEffort": "high"
         },
         {
-          "model": "github-copilot/gpt-5.1",
+          "model": "github-copilot/gpt-5.3-codex",
+          "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/gpt-5.4",
           "reasoningEffort": "medium"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-high"
         },
         {
           "model": "zai-coding-plan/glm-5.1",
@@ -285,7 +372,7 @@
         },
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.3-codex",
+      "model": "cursor-acp/gpt-5.3-codex",
       "reasoningEffort": "high"
     },
 
@@ -293,17 +380,21 @@
     "git": {
       "description": "Git operations — commits, rebases, diff summaries",
       "fallback_models": [
+        "cursor-acp/gpt-5.4-nano",
         "zai-coding-plan/glm-4.5-flash",
-        "github-copilot/gpt-5.4-mini"
+        "cursor-acp/gpt-5.4-mini"
       ],
       "model": "opencode/gpt-5-nano",
       "prompt_append": "Atomic commits, conventional commit format, safe operations only."
     },
 
     // ── quick: typo fixes, single-line changes ─────────────────
+    // Guide: GPT-5.4-mini → Haiku 4.5 → Gemini 3 Flash → GPT-5-nano
     "quick": {
       "description": "Trivial single-line fixes, typos, boilerplate",
       "fallback_models": [
+        "cursor-acp/gpt-5.4-nano",
+        "cursor-acp/gpt-5.4-mini",
         "github-copilot/gpt-5.4-mini",
         "github-copilot/gpt-5-mini",
         "zai-coding-plan/glm-4.5-flash"
@@ -311,13 +402,21 @@
       "model": "opencode/gpt-5-nano"
     },
 
-    // ── ultrabrain: architecture, hard logic decisions ─────────
+    // ── ultrabrain: architecture, hard logic, algorithm design ─
+    // Guide: GPT-5.4 xhigh → Gemini 3.1 Pro high → Claude Opus max → GLM-5
     "ultrabrain": {
       "description": "Architecture decisions, algorithm design, complex debugging",
       "fallback_models": [
         {
-          "model": "github-copilot/gpt-5.3-codex",
+          "model": "github-copilot/gpt-5.2",
+          "reasoningEffort": "xhigh"
+        },
+        {
+          "model": "cursor-acp/gemini-3.1-pro",
           "reasoningEffort": "high"
+        },
+        {
+          "model": "cursor-acp/claude-4.6-opus-max"
         },
         {
           "model": "opencode/nemotron-3-super-free",
@@ -329,13 +428,18 @@
         },
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.2",
+      "model": "cursor-acp/gpt-5.4",
       "reasoningEffort": "xhigh"
     },
 
     // ── unspecified-high: complex general tasks ────────────────
+    // Guide: Claude Opus max → GPT-5.4 high → GLM-5 → Kimi K2.5
     "unspecified-high": {
       "fallback_models": [
+        {
+          "model": "cursor-acp/gpt-5.4",
+          "reasoningEffort": "high"
+        },
         {
           "model": "github-copilot/gpt-5.1",
           "reasoningEffort": "high"
@@ -344,54 +448,62 @@
           "model": "zai-coding-plan/glm-5.1",
           "temperature": 0.2
         },
+        "cursor-acp/kimi-k2.5",
         {
           "model": "opencode/nemotron-3-super-free",
           "reasoningEffort": "high"
         },
         "opencode/big-pickle"
       ],
-      "model": "github-copilot/gpt-5.2",
-      "reasoningEffort": "high"
+      "model": "cursor-acp/claude-4.6-opus-high"
     },
 
     // ── unspecified-low: general moderate-effort tasks ─────────
+    // Guide: Claude Sonnet 4.6 → GPT-5.3 Codex medium → Kimi K2.5 → Gemini Flash
     "unspecified-low": {
       "fallback_models": [
+        "cursor-acp/kimi-k2.5",
         "zai-coding-plan/glm-5",
+        "zai-coding-plan/glm-5.1",
         {
-          "model": "github-copilot/gpt-5.2",
+          "model": "cursor-acp/gpt-5.2",
           "reasoningEffort": "low"
         },
-        "github-copilot/gpt-5.1",
+        "cursor-acp/gemini-3-flash",
         "opencode/big-pickle"
       ],
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "cursor-acp/claude-4.6-sonnet-medium"
     },
 
-    // ── visual-engineering: frontend, UI/UX, design ────────────
-    // Gemini family excels at visual tasks; GLM-v models as backup.
+    // ── visual-engineering: frontend, UI/UX, CSS, design ──────
+    // Guide: Gemini 3.1 Pro is the default for visual-engineering.
+    // GLM-v vision models as fallbacks; GPT-4o for layout understanding.
     "visual-engineering": {
       "description": "Frontend, UI/UX, CSS, animations, visual debugging",
       "fallback_models": [
+        "github-copilot/gemini-3.1-pro-preview",
         "github-copilot/gemini-2.5-pro",
         "github-copilot/gemini-3-flash-preview",
         "zai-coding-plan/glm-5v-turbo",
         "zai-coding-plan/glm-4.6v",
         "github-copilot/gpt-4o"
       ],
-      "model": "github-copilot/gemini-3.1-pro-preview"
+      "model": "cursor-acp/gemini-3.1-pro"
     },
 
     // ── writing: docs, changelogs, technical prose ─────────────
+    // Guide: Gemini 3 Flash → Kimi K2.5 → Claude Sonnet → GLM
     "writing": {
       "description": "Docs, READMEs, changelogs, commit messages, technical writing",
       "fallback_models": [
+        "github-copilot/gemini-3-flash-preview",
+        "cursor-acp/kimi-k2.5",
+        "cursor-acp/claude-4.6-sonnet-medium",
         "github-copilot/gemini-2.5-pro",
         "zai-coding-plan/glm-5.1",
-        "github-copilot/gpt-5-mini",
         "opencode/gpt-5-nano"
       ],
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "cursor-acp/gemini-3-flash"
     }
   },
 
@@ -429,7 +541,6 @@
   },
 
   // ─── HASHLINE EDIT ───────────────────────────────────────────
-  // Hash-anchored edits prevent stale-line errors — always on.
   "hashline_edit": true,
 
   // ─── MODEL CAPABILITIES (auto-refresh) ───────────────────────
@@ -457,7 +568,7 @@
     "replace_plan": true
   },
 
-  // ─── TMUX (disabled by default — enable if in tmux) ──────────
+  // ─── TMUX ────────────────────────────────────────────────────
   "tmux": {
     "enabled": false
   }

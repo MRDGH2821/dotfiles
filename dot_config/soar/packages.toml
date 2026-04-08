@@ -114,12 +114,14 @@ pkg_id = "koalaman.shellcheck"
 asset_pattern = "shfmt_*_{os}_amd64"
 github = "mvdan/sh"
 pkg_id = "mvdan.shfmt"
+version = "3.13.1"
 
 [packages.treefmt]
 asset_pattern = "treefmt_*_{os}_amd64.tar.gz"
 github = "numtide/treefmt"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
+version = "2.5.0"
 
 [packages.use_via]
 asset_pattern = "*{os}.AppImage"

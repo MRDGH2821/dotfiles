@@ -1,656 +1,257 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
-
-  // ============================================================
-  // oh-my-openagent optimised config
-  //
-  // Provider coverage:
-  //   github-copilot  – Copilot subscription (GPT, Gemini, Claude Haiku, Grok)
-  //   zai-coding-plan – ZhipuAI GLM Coding Plan
-  //   opencode        – Free/nano tier
-  //
-  // Model family hierarchy:
-  //   GLM    : glm-5.1 > glm-5-turbo ≈ glm-5 > glm-4.7 > glm-4.6 > glm-4.5
-  //   GPT    : gpt-5.3-codex > gpt-5.2-codex > gpt-5.2 > gpt-5.4-mini > gpt-5.1 > gpt-5-mini > gpt-4.1 > gpt-4o
-  //   Gemini : gemini-3.1-pro-preview > gemini-3-flash-preview > gemini-2.5-pro
-  //   GLM-v  : glm-5v-turbo > glm-4.6v > glm-4.5v
-  //
-  // Fallback placement strategy (within each family):
-  //   1. newer model + best capability/variant
-  //   2. newer model
-  //   3. older model + best capability/variant
-  //   4. older model
-  //
-  // Agent-model matching (from guide):
-  //   Communicators  (Sisyphus, Metis, Atlas)      → GLM (Claude-like mechanics-driven)
-  //   Dual-prompt    (Prometheus, Atlas)            → GLM preferred; GPT supported
-  //   Deep spec.     (Hephaestus, Oracle, Momus)   → GPT Codex (principle-driven)
-  //   Utility        (Explore, Librarian, Sisy-Jr) → fastest/cheapest available
-  //   Visual         (Multimodal Looker)            → Gemini / GLM-v
-  // ============================================================
-
   "agents": {
-    // ── Atlas (todo orchestrator / long sessions — dual-prompt) ─
     "atlas": {
       "fallback_models": [
-        // GLM 5.x — newer + best → standard
-        "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5",
-        // GPT path (newer + capable → lighter)
         {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "medium"
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
         },
-        "github-copilot/gpt-5.4-mini",
-        // GLM 4.x — older + best → lighter
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.6",
-        // Free
-        "opencode/big-pickle",
-        "opencode/nemotron-3-super-free"
+        "opencode-go/kimi-k2.5",
+        "opencode/gpt-5-nano"
       ],
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "anthropic/claude-sonnet-4-6"
     },
-
-    // ── Explore (fast codebase grep) ──────────────────────────
-    // Speed over intelligence — NEVER use heavy models here.
     "explore": {
       "fallback_models": [
-        // Newer mini/fast (best speed first)
-        "github-copilot/gpt-5.4-mini",
-        "github-copilot/claude-haiku-4.5",
-        // GLM flash — newer + fast → older
-        "zai-coding-plan/glm-4.7-flashx",
-        "zai-coding-plan/glm-4.7-flash",
-        "zai-coding-plan/glm-4.5-flash",
-        // Free ultra-cheap
-        "opencode/minimax-m2.5-free",
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
+        },
+        "github-copilot/gpt-5-mini",
+        "opencode-go/minimax-m2.7",
         "opencode/gpt-5-nano"
       ],
-      "model": "github-copilot/grok-code-fast-1",
-      "permission": {
-        "bash": "ask",
-        "edit": "deny"
-      }
+      "model": "anthropic/claude-haiku-4-5"
     },
-
-    // ── Hephaestus (deep autonomous coder) ────────────────────
-    // GPT-principle-driven ONLY — do NOT override to Claude or GLM
-    // (GLM entries are emergency-only last resort).
     "hephaestus": {
-      "fallback_models": [
-        // 5.2-codex — older codex + best
-        {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "high"
-        },
-        // 5.2 non-codex — older + high effort
-        {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "high"
-        },
-        // 5.4 mini (newer gen, non-codex)
-        {
-          "model": "github-copilot/gpt-5.4-mini",
-          "reasoningEffort": "high"
-        },
-        // 5.1 — older
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
-        },
-        // 5-mini and legacy
-        "github-copilot/gpt-5-mini",
-        {
-          "model": "github-copilot/gpt-4.1",
-          "reasoningEffort": "high"
-        },
-        // GLM emergency fallbacks only
-        {
-          "model": "zai-coding-plan/glm-5.1",
-          "temperature": 0.2
-        },
-        "zai-coding-plan/glm-5",
-        "opencode/big-pickle"
-      ],
-      "model": "github-copilot/gpt-5.3-codex",
-      "permission": {
-        "bash": {
-          "bun": "allow",
-          "git": "allow",
-          "npm": "allow",
-          "test": "allow"
-        },
-        "edit": "allow"
-      },
-      "prompt_append": "You own the implementation. Use LSP, AST-grep, and hashline aggressively. Own the codebase end-to-end.",
-      "reasoningEffort": "high"
+      "model": "openai/gpt-5.4",
+      "variant": "medium"
     },
-
-    // ── Librarian (docs & code search) ────────────────────────
     "librarian": {
       "fallback_models": [
-        "github-copilot/gpt-5.4-mini",
-        // GLM flash — newer + fast → older
-        "zai-coding-plan/glm-4.7-flashx",
-        "zai-coding-plan/glm-4.7-flash",
-        "zai-coding-plan/glm-4.5-flash",
-        // Free
-        "opencode/minimax-m2.5-free",
-        "opencode/gpt-5-nano",
-        "github-copilot/claude-haiku-4.5"
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
+        },
+        "opencode-go/minimax-m2.7"
       ],
-      "model": "github-copilot/grok-code-fast-1"
+      "model": "zai-coding-plan/glm-4.7"
     },
-
-    // ── Metis (plan gap analyzer) ──────────────────────────────
     "metis": {
       "fallback_models": [
-        // GLM 5.x — newer + best → standard
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
+        },
+        "kimi-for-coding/k2p5",
+        "zai-coding-plan/glm-5.1",
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5",
-        // GLM 4.x — older + best → lighter
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.6",
-        "zai-coding-plan/glm-4.5",
-        // Light GPT fallback
-        "github-copilot/gpt-5-mini",
         "opencode/gpt-5-nano"
       ],
-      "model": "zai-coding-plan/glm-5.1"
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
-
-    // ── Momus (ruthless reviewer) ──────────────────────────────
     "momus": {
       "fallback_models": [
-        // Newer non-codex GPT (high effort)
         {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "xhigh"
-        },
-        // Older codex (best → standard)
-        {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "high"
-        },
-        // Older GPT
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
+          "model": "anthropic/claude-opus-4-6",
+          "variant": "max"
         },
         {
-          "model": "github-copilot/gpt-5.4-mini",
-          "reasoningEffort": "high"
+          "model": "google/gemini-3.1-pro-preview",
+          "variant": "high"
         },
-        // GLM (newer + best → older)
         "zai-coding-plan/glm-5.1",
-        "zai-coding-plan/glm-5",
-        "opencode/big-pickle"
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
       ],
-      "model": "github-copilot/gpt-5.3-codex",
-      "prompt_append": "Focus on correctness, edge cases, security, test coverage, and naming clarity.",
-      "reasoningEffort": "xhigh"
+      "model": "openai/gpt-5.4",
+      "variant": "xhigh"
     },
-
-    // ── Multimodal Looker (vision / UI review) ─────────────────
     "multimodal-looker": {
       "fallback_models": [
-        // Gemini 3.x — newer flash → older pro
-        "github-copilot/gemini-3-flash-preview",
-        "github-copilot/gemini-2.5-pro",
-        // GLM vision — newer + best → older
         "zai-coding-plan/glm-5v-turbo",
+        "opencode-go/kimi-k2.5",
         "zai-coding-plan/glm-4.6v",
-        "zai-coding-plan/glm-4.5v",
-        // GPT vision fallback
-        "github-copilot/gpt-4o"
+        "opencode/gpt-5-nano",
+        "github-copilot/gpt-5-nano"
       ],
-      "model": "github-copilot/gemini-3.1-pro-preview"
+      "model": "openai/gpt-5.4",
+      "variant": "medium"
     },
-
-    // ── Oracle (architecture consultant) ──────────────────────
     "oracle": {
       "fallback_models": [
-        // Newer GPT codex (best → standard)
         {
-          "model": "github-copilot/gpt-5.3-codex",
-          "reasoningEffort": "high"
+          "model": "anthropic/claude-opus-4-6",
+          "variant": "max"
         },
         {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "high"
+          "model": "google/gemini-3.1-pro-preview",
+          "variant": "high"
         },
-        // Gemini (newer + pro → older pro)
-        {
-          "model": "github-copilot/gemini-3.1-pro-preview",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gemini-2.5-pro",
-          "reasoningEffort": "high"
-        },
-        // Older GPT
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gpt-4.1",
-          "reasoningEffort": "high"
-        },
-        // GLM (newer + best → older)
-        {
-          "model": "zai-coding-plan/glm-5.1",
-          "temperature": 0.2
-        },
-        "zai-coding-plan/glm-5",
-        // Free reasoning
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "opencode/qwen3.6-plus-free",
-          "reasoningEffort": "high"
-        },
-        "opencode/big-pickle"
+        "zai-coding-plan/glm-5.1",
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
       ],
-      "model": "github-copilot/gpt-5.2",
-      "reasoningEffort": "xhigh"
+      "model": "openai/gpt-5.4",
+      "variant": "high"
     },
-
-    // ── Prometheus (strategic planner — dual-prompt) ───────────
-    // No Claude Opus available → GPT-5.2 becomes primary (GPT prompt path).
-    // GLM covers the Claude-like path in fallbacks.
     "prometheus": {
       "fallback_models": [
-        // Newer GPT codex (best → lighter)
         {
-          "model": "github-copilot/gpt-5.3-codex",
-          "reasoningEffort": "high"
+          "model": "openai/gpt-5.4",
+          "variant": "high"
         },
-        // Gemini (newer + pro → older pro)
-        {
-          "model": "github-copilot/gemini-3.1-pro-preview",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gemini-2.5-pro",
-          "reasoningEffort": "high"
-        },
-        // Older GPT
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "medium"
-        },
-        // GLM (newer + best → older)
-        {
-          "model": "zai-coding-plan/glm-5.1",
-          "temperature": 0.4
-        },
-        "zai-coding-plan/glm-5",
-        // Free
-        {
-          "model": "opencode/qwen3.6-plus-free",
-          "reasoningEffort": "low"
-        },
-        "opencode/big-pickle"
+        "google/gemini-3.1-pro-preview",
+        "zai-coding-plan/glm-5.1",
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
       ],
-      "model": "github-copilot/gpt-5.2",
-      "prompt_append": "Interview the user thoroughly. Identify scope ambiguities. Build a step-by-step, file-level plan before any execution.",
-      "reasoningEffort": "medium"
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
-
-    // ── Sisyphus (main orchestrator) ──────────────────────────
-    // Best available communicator without Claude: GLM-5.1 (Claude-like,
-    // handles long mechanics-driven prompts). GPT is a last resort only.
     "sisyphus": {
       "fallback_models": [
-        // GLM 5.x — newer + best → standard
-        "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5",
-        // GLM 4.x — older + best → lighter
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.7-flashx",
-        "zai-coding-plan/glm-4.6",
-        // GPT path (guide-approved fallback for Sisyphus)
         {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "medium"
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
         },
-        "github-copilot/gpt-5.4-mini",
-        // Only Claude available: Haiku (fast, light)
-        "github-copilot/claude-haiku-4.5",
-        // Free catch-all
-        "opencode/big-pickle",
-        {
-          "model": "opencode/qwen3.6-plus-free",
-          "reasoningEffort": "medium"
-        }
+        "zai-coding-plan/glm-5.1",
+        "opencode-go/kimi-k2.5",
+        "kimi-for-coding/k2p5",
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
       ],
-      "model": "zai-coding-plan/glm-5.1",
-      "prompt_append": "Delegate implementation to hephaestus. Parallelize oracle + explore. Keep planning concise.",
-      "ultrawork": {
-        "model": "zai-coding-plan/glm-5.1"
-      }
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     },
-
-    // ── Sisyphus Junior (trivial tasks / category executor) ─────
     "sisyphus-junior": {
       "fallback_models": [
-        // Newer mini (best → standard)
-        "github-copilot/gpt-5.4-mini",
-        "github-copilot/gpt-5-mini",
-        // GLM flash — newer → older
-        "zai-coding-plan/glm-4.7-flash",
-        "zai-coding-plan/glm-4.5-flash",
-        // Free
-        "opencode/minimax-m2.5-free"
-      ],
-      "model": "opencode/gpt-5-nano"
-    }
-  },
-
-  // ─── BACKGROUND TASKS ───────────────────────────────────────
-
-  "background_task": {
-    "defaultConcurrency": 6,
-    "modelConcurrency": {
-      "github-copilot/gpt-5.2": 3,
-      "github-copilot/gpt-5.3-codex": 3,
-      "github-copilot/grok-code-fast-1": 10,
-      "opencode/gpt-5-nano": 25,
-      "opencode/minimax-m2.5-free": 15,
-      "opencode/nemotron-3-super-free": 5,
-      "opencode/qwen3.6-plus-free": 5,
-      "zai-coding-plan/glm-5": 6,
-      "zai-coding-plan/glm-5.1": 6
-    },
-    "providerConcurrency": {
-      "github-copilot": 8,
-      "opencode": 20,
-      "zai-coding-plan": 10
-    },
-    "staleTimeoutMs": 180000
-  },
-
-  // ─── CATEGORIES ─────────────────────────────────────────────
-
-  "categories": {
-    // ── artistry ───────────────────────────────────────────────
-    "artistry": {
-      "description": "Creative solutions, lateral thinking, unconventional approaches",
-      "fallback_models": [
-        // Gemini (newer flash → older pro)
-        "github-copilot/gemini-3-flash-preview",
-        "github-copilot/gemini-2.5-pro",
-        // GLM (newer + best → older)
-        "zai-coding-plan/glm-5.1",
-        "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5",
-        // GPT creative
-        "github-copilot/gpt-5.2",
-        // GLM older
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.6",
-        "opencode/big-pickle"
-      ],
-      "model": "github-copilot/gemini-3.1-pro-preview"
-    },
-
-    // ── deep ───────────────────────────────────────────────────
-    "deep": {
-      "description": "Multi-file refactors, autonomous deep-dives, research tasks",
-      "fallback_models": [
-        // Older codex (best → standard)
         {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "high"
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
         },
-        // Non-codex GPT (newer + high effort → older)
-        {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gpt-5.4-mini",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
-        },
-        // Legacy GPT
-        {
-          "model": "github-copilot/gpt-4.1",
-          "reasoningEffort": "high"
-        },
-        // GLM
-        {
-          "model": "zai-coding-plan/glm-5.1",
-          "temperature": 0.2
-        },
-        "opencode/big-pickle"
-      ],
-      "model": "github-copilot/gpt-5.3-codex",
-      "reasoningEffort": "high"
-    },
-
-    // ── git ────────────────────────────────────────────────────
-    "git": {
-      "description": "Git operations — commits, rebases, diff summaries",
-      "fallback_models": [
-        "github-copilot/gpt-5.4-mini",
-        "github-copilot/gpt-5-mini",
-        "zai-coding-plan/glm-4.7-flash",
-        "zai-coding-plan/glm-4.5-flash"
-      ],
-      "model": "opencode/gpt-5-nano",
-      "prompt_append": "Atomic commits, conventional commit format, safe operations only."
-    },
-
-    // ── quick ──────────────────────────────────────────────────
-    "quick": {
-      "description": "Trivial single-line fixes, typos, boilerplate",
-      "fallback_models": [
-        // Newer mini (best → standard)
-        "github-copilot/gpt-5.4-mini",
-        "github-copilot/gpt-5-mini",
-        // GLM flash — newer + fast → older
-        "zai-coding-plan/glm-4.7-flashx",
-        "zai-coding-plan/glm-4.7-flash",
-        "zai-coding-plan/glm-4.5-flash",
-        // Free
-        "opencode/minimax-m2.5-free"
-      ],
-      "model": "opencode/gpt-5-nano"
-    },
-
-    // ── ultrabrain ─────────────────────────────────────────────
-    "ultrabrain": {
-      "description": "Architecture decisions, algorithm design, complex debugging",
-      "fallback_models": [
-        // Newer GPT codex (best → standard)
-        {
-          "model": "github-copilot/gpt-5.3-codex",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gpt-5.2-codex",
-          "reasoningEffort": "high"
-        },
-        // Gemini (newer + pro → older pro)
-        {
-          "model": "github-copilot/gemini-3.1-pro-preview",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gemini-2.5-pro",
-          "reasoningEffort": "high"
-        },
-        // Older GPT
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
-        },
-        // GLM + free
-        "zai-coding-plan/glm-5.1",
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "opencode/qwen3.6-plus-free",
-          "reasoningEffort": "high"
-        },
-        "opencode/big-pickle"
-      ],
-      "model": "github-copilot/gpt-5.2",
-      "reasoningEffort": "xhigh"
-    },
-
-    // ── unspecified-high ───────────────────────────────────────
-    "unspecified-high": {
-      "fallback_models": [
-        // GLM 5.x — newer + best → standard
-        "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5",
-        // GPT (newer + high effort → older)
-        {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "high"
-        },
-        {
-          "model": "github-copilot/gpt-5.3-codex",
-          "reasoningEffort": "high"
-        },
-        // GLM 4.x — older + best → lighter
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.6",
-        // Older GPT
-        {
-          "model": "github-copilot/gpt-5.1",
-          "reasoningEffort": "high"
-        },
-        // Free reasoning
-        {
-          "model": "opencode/nemotron-3-super-free",
-          "reasoningEffort": "high"
-        },
-        "opencode/big-pickle"
-      ],
-      "model": "zai-coding-plan/glm-5.1"
-    },
-
-    // ── unspecified-low ────────────────────────────────────────
-    "unspecified-low": {
-      "fallback_models": [
-        // GLM 5.x — newer + best → standard
-        "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5",
-        // GLM 4.x — older + best → lighter
-        "zai-coding-plan/glm-4.7",
-        "zai-coding-plan/glm-4.6",
-        "zai-coding-plan/glm-4.5",
-        // Light GPT
-        {
-          "model": "github-copilot/gpt-5.2",
-          "reasoningEffort": "low"
-        },
-        "github-copilot/gemini-3-flash-preview",
-        "opencode/big-pickle"
-      ],
-      "model": "zai-coding-plan/glm-5.1"
-    },
-
-    // ── visual-engineering ─────────────────────────────────────
-    "visual-engineering": {
-      "description": "Frontend, UI/UX, CSS, animations, visual debugging",
-      "fallback_models": [
-        // Gemini 3.x — newer flash → older pro
-        "github-copilot/gemini-3-flash-preview",
-        "github-copilot/gemini-2.5-pro",
-        // GLM vision — newer + best → older
-        "zai-coding-plan/glm-5v-turbo",
-        "zai-coding-plan/glm-4.6v",
-        "zai-coding-plan/glm-4.5v",
-        "github-copilot/gpt-4o"
-      ],
-      "model": "github-copilot/gemini-3.1-pro-preview"
-    },
-
-    // ── writing ────────────────────────────────────────────────
-    "writing": {
-      "description": "Docs, READMEs, changelogs, commit messages, technical writing",
-      "fallback_models": [
-        // Gemini (newer pro → older pro)
-        "github-copilot/gemini-3.1-pro-preview",
-        "github-copilot/gemini-2.5-pro",
-        // GLM (newer + best → older)
-        "zai-coding-plan/glm-5.1",
-        "zai-coding-plan/glm-5",
-        "zai-coding-plan/glm-4.7",
-        // Cheap
-        "github-copilot/gpt-5-mini",
+        "opencode-go/kimi-k2.5",
         "opencode/gpt-5-nano"
       ],
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "anthropic/claude-sonnet-4-6"
     }
   },
-
-  // ─── EXPERIMENTAL ────────────────────────────────────────────
-  "experimental": {
-    "aggressive_truncation": true,
-    "auto_resume": true,
-    "dynamic_context_pruning": {
-      "enabled": true,
-      "notification": "minimal",
-      "strategies": {
-        "deduplication": {
-          "enabled": true
+  "categories": {
+    "artistry": {
+      "fallback_models": [
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
+          "variant": "high"
         },
-        "purge_errors": {
-          "enabled": true,
-          "turns": 5
-        },
-        "supersede_writes": {
-          "aggressive": false,
-          "enabled": true
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "xhigh"
         }
-      },
-      "turn_protection": {
-        "enabled": true,
-        "turns": 4
-      }
+      ],
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
     },
-    "task_system": true
-  },
-  "git_master": {
-    "commit_footer": true,
-    "git_env_prefix": "GIT_MASTER=1",
-    "include_co_authored_by": true
-  },
-  "hashline_edit": true,
-  "model_capabilities": {
-    "auto_refresh_on_start": true,
-    "enabled": true,
-    "refresh_timeout_ms": 5000
-  },
-  "runtime_fallback": {
-    "cooldown_seconds": 45,
-    "enabled": true,
-    "max_fallback_attempts": 4,
-    "notify_on_fallback": true,
-    "retry_on_errors": [400, 429, 503, 529],
-    "timeout_seconds": 30
-  },
-  "sisyphus_agent": {
-    "default_builder_enabled": true,
-    "disabled": false,
-    "planner_enabled": true,
-    "replace_plan": true
-  },
-  "tmux": {
-    "enabled": false
+    "deep": {
+      "fallback_models": [
+        {
+          "model": "anthropic/claude-opus-4-6",
+          "variant": "max"
+        },
+        {
+          "model": "google/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        "opencode/gpt-5-nano"
+      ],
+      "model": "openai/gpt-5.4",
+      "variant": "medium"
+    },
+    "quick": {
+      "fallback_models": [
+        "github-copilot/gpt-5.4-mini",
+        "anthropic/claude-haiku-4-5",
+        "google/gemini-3-flash-preview",
+        "opencode-go/minimax-m2.7"
+      ],
+      "model": "openai/gpt-5.4-mini"
+    },
+    "ultrabrain": {
+      "fallback_models": [
+        {
+          "model": "anthropic/claude-opus-4-6",
+          "variant": "max"
+        },
+        {
+          "model": "google/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        {
+          "model": "github-copilot/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        "zai-coding-plan/glm-5.1",
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
+      ],
+      "model": "openai/gpt-5.4",
+      "variant": "xhigh"
+    },
+    "unspecified-high": {
+      "fallback_models": [
+        "anthropic/claude-sonnet-4-6",
+        {
+          "model": "openai/gpt-5.3-codex",
+          "variant": "medium"
+        },
+        {
+          "model": "google/gemini-3.1-pro-preview",
+          "variant": "high"
+        },
+        "opencode-go/kimi-k2.5"
+      ],
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
+    },
+    "unspecified-low": {
+      "fallback_models": [
+        {
+          "model": "openai/gpt-5.3-codex",
+          "variant": "medium"
+        },
+        "google/gemini-3-flash-preview",
+        "opencode-go/kimi-k2.5"
+      ],
+      "model": "anthropic/claude-sonnet-4-6"
+    },
+    "visual-engineering": {
+      "fallback_models": [
+        {
+          "model": "anthropic/claude-opus-4-6",
+          "variant": "max"
+        },
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "high"
+        },
+        "zai-coding-plan/glm-5.1",
+        "kimi-for-coding/k2p5"
+      ],
+      "model": "google/gemini-3.1-pro-preview",
+      "variant": "high"
+    },
+    "writing": {
+      "fallback_models": [
+        "anthropic/claude-sonnet-4-6",
+        {
+          "model": "openai/gpt-5.4",
+          "variant": "medium"
+        },
+        "opencode-go/kimi-k2.5"
+      ],
+      "model": "google/gemini-3-flash-preview"
+    }
   }
 }

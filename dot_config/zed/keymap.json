@@ -64,7 +64,7 @@
           "task_name": "Start OpenCode"
         }
       ],
-      "alt-shift-o": [
+      "super-o": [
         "task::Spawn",
         {
           "reveal_target": "center",

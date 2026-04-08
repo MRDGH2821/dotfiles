@@ -3,88 +3,56 @@
   "agents": {
     "atlas": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/claude-4.6-sonnet-medium",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
         "cursor/composer-2",
         "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5",
         "opencode/gpt-5-nano"
       ],
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "cursor/claude-4.6-sonnet-medium-thinking"
     },
     "explore": {
       "fallback_models": [
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "github-copilot/gpt-5-mini",
-        "opencode-go/minimax-m2.7",
         "opencode/gpt-5-nano"
       ],
-      "model": "anthropic/claude-haiku-4-5"
+      "model": "github-copilot/claude-haiku-4.5"
     },
     "hephaestus": {
-      "fallback_models": [
-        "cursor/gpt-5.4-medium-fast",
-        "cursor/gpt-5.4-medium"
-      ],
-      "model": "openai/gpt-5.4",
-      "variant": "medium"
+      "fallback_models": ["cursor/gpt-5.4-medium"],
+      "model": "cursor/gpt-5.4-medium-fast"
     },
     "librarian": {
       "fallback_models": [
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
-        "cursor/gpt-5.4-medium",
-        "opencode-go/minimax-m2.7"
+        "cursor/gpt-5.4-medium"
       ],
       "model": "zai-coding-plan/glm-4.7"
     },
     "metis": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
         "cursor/composer-2",
         "cursor/kimi-k2.5",
-        "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5.1",
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5",
         "opencode/gpt-5-nano"
       ],
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "cursor/claude-4.6-opus-max-thinking"
     },
     "momus": {
       "fallback_models": [
-        "cursor/gpt-5.4-xhigh-fast",
         "cursor/gpt-5.4-xhigh",
-        {
-          "model": "anthropic/claude-opus-4-6",
-          "variant": "max"
-        },
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -98,33 +66,24 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "openai/gpt-5.4",
-      "variant": "xhigh"
+      "model": "cursor/gpt-5.4-xhigh-fast"
     },
     "multimodal-looker": {
       "fallback_models": [
-        "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "zai-coding-plan/glm-5v-turbo",
         "cursor/composer-2-fast",
         "cursor/composer-2",
         "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5",
         "zai-coding-plan/glm-4.6v",
         "opencode/gpt-5-nano",
         "github-copilot/gpt-5-nano"
       ],
-      "model": "openai/gpt-5.4",
-      "variant": "medium"
+      "model": "cursor/gpt-5.4-medium-fast"
     },
     "oracle": {
       "fallback_models": [
-        "cursor/gpt-5.4-high-fast",
         "cursor/gpt-5.4-high",
-        {
-          "model": "anthropic/claude-opus-4-6",
-          "variant": "max"
-        },
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -138,19 +97,13 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "openai/gpt-5.4",
-      "variant": "high"
+      "model": "cursor/gpt-5.4-high-fast"
     },
     "prometheus": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "high"
-        },
         "cursor/gpt-5.4-high-fast",
         "cursor/gpt-5.4-high",
         "google/gemini-3.1-pro-preview",
@@ -159,82 +112,54 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "cursor/claude-4.6-opus-max-thinking"
     },
     "sisyphus": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "zai-coding-plan/glm-5.1",
         "cursor/composer-2-fast",
         "cursor/composer-2",
         "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5",
-        "kimi-for-coding/k2p5",
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "cursor/claude-4.6-opus-max-thinking"
     },
     "sisyphus-junior": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/claude-4.6-sonnet-medium",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
         "cursor/composer-2",
         "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5",
         "opencode/gpt-5-nano"
       ],
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "cursor/claude-4.6-sonnet-medium-thinking"
     }
   },
   "categories": {
     "artistry": {
       "fallback_models": [
-        {
-          "model": "github-copilot/gemini-3.1-pro-preview",
-          "variant": "high"
-        },
         "cursor/gemini-3.1-pro",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "xhigh"
-        },
         "cursor/gpt-5.4-xhigh-fast",
         "cursor/gpt-5.4-xhigh"
       ],
-      "model": "google/gemini-3.1-pro-preview",
+      "model": "github-copilot/gemini-3.1-pro-preview",
       "variant": "high"
     },
     "deep": {
       "fallback_models": [
-        "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "anthropic/claude-opus-4-6",
-          "variant": "max"
-        },
         {
           "model": "google/gemini-3.1-pro-preview",
           "variant": "high"
@@ -242,29 +167,23 @@
         "cursor/gemini-3.1-pro",
         "opencode/gpt-5-nano"
       ],
-      "model": "openai/gpt-5.4",
-      "variant": "medium"
+      "model": "cursor/gpt-5.4-medium-fast"
     },
     "quick": {
       "fallback_models": [
-        "github-copilot/gpt-5.4-mini",
-        "anthropic/claude-haiku-4-5",
+        "github-copilot/claude-haiku-4-5",
         "cursor/gemini-3-flash",
-        "google/gemini-3-flash-preview",
-        "opencode-go/minimax-m2.7"
+        "google/gemini-3-flash-preview"
       ],
-      "model": "openai/gpt-5.4-mini"
+      "model": "github-copilot/gpt-5.4-mini"
     },
     "ultrabrain": {
       "fallback_models": [
+        "cursor/gpt-5.4-xhigh",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "anthropic/claude-opus-4-6",
-          "variant": "max"
-        },
         {
           "model": "google/gemini-3.1-pro-preview",
           "variant": "high"
@@ -278,22 +197,25 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "openai/gpt-5.4",
-      "variant": "xhigh"
+      "model": "cursor/gpt-5.4-xhigh-fast"
     },
     "unspecified-high": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        "anthropic/claude-sonnet-4-6",
         "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/claude-4.6-sonnet-medium",
         {
-          "model": "openai/gpt-5.3-codex",
+          "model": "github-copilot/gpt-5.3-codex",
           "variant": "medium"
         },
+        "cursor/gpt-5.3-codex-xhigh-fast",
+        "cursor/gpt-5.3-codex-xhigh",
+        "cursor/gpt-5.3-codex-spark-preview-xhigh",
+        "cursor/gpt-5.3-codex-spark-preview-low",
+        "cursor/gpt-5.3-codex-spark-preview-high",
+        "cursor/gpt-5.3-codex-spark-preview",
         {
           "model": "google/gemini-3.1-pro-preview",
           "variant": "high"
@@ -301,28 +223,30 @@
         "cursor/gemini-3.1-pro",
         "cursor/composer-2-fast",
         "cursor/composer-2",
-        "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5"
+        "cursor/kimi-k2.5"
       ],
-      "model": "anthropic/claude-opus-4-6",
-      "variant": "max"
+      "model": "cursor/claude-4.6-opus-max-thinking"
     },
     "unspecified-low": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/claude-4.6-sonnet-medium",
         {
-          "model": "openai/gpt-5.3-codex",
+          "model": "github-copilot/gpt-5.3-codex",
           "variant": "medium"
         },
+        "cursor/gpt-5.3-codex-xhigh-fast",
+        "cursor/gpt-5.3-codex-xhigh",
+        "cursor/gpt-5.3-codex-spark-preview-xhigh",
+        "cursor/gpt-5.3-codex-spark-preview-low",
+        "cursor/gpt-5.3-codex-spark-preview-high",
+        "cursor/gpt-5.3-codex-spark-preview",
         "cursor/gemini-3-flash",
         "google/gemini-3-flash-preview",
         "cursor/composer-2-fast",
         "cursor/composer-2",
-        "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5"
+        "cursor/kimi-k2.5"
       ],
-      "model": "anthropic/claude-sonnet-4-6"
+      "model": "cursor/claude-4.6-sonnet-medium-thinking"
     },
     "visual-engineering": {
       "fallback_models": [
@@ -331,43 +255,28 @@
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
-        {
-          "model": "anthropic/claude-opus-4-6",
-          "variant": "max"
-        },
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "high"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "zai-coding-plan/glm-5.1",
         "cursor/composer-2-fast",
         "cursor/composer-2",
-        "cursor/kimi-k2.5",
-        "kimi-for-coding/k2p5"
+        "cursor/kimi-k2.5"
       ],
-      "model": "google/gemini-3.1-pro-preview",
+      "model": "github-copilot/gemini-3.1-pro-preview",
       "variant": "high"
     },
     "writing": {
       "fallback_models": [
         "cursor/gemini-3-flash",
-        "anthropic/claude-sonnet-4-6",
         "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/claude-4.6-sonnet-medium",
-        {
-          "model": "openai/gpt-5.4",
-          "variant": "medium"
-        },
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
         "cursor/composer-2",
-        "cursor/kimi-k2.5",
-        "opencode-go/kimi-k2.5"
+        "cursor/kimi-k2.5"
       ],
-      "model": "google/gemini-3-flash-preview"
+      "model": "github-copilot/gemini-3-flash-preview"
     }
   }
 }

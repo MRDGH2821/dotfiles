@@ -32,6 +32,9 @@
     "cursor": {
       "type": "registry"
     },
+    "gemini": {
+      "type": "registry"
+    },
     "github-copilot": {
       "favorite_models": ["claude-sonnet-4.6", "auto"],
       "type": "registry"

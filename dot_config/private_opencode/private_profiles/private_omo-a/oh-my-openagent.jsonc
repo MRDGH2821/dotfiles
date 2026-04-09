@@ -278,5 +278,12 @@
       ],
       "model": "github-copilot/gemini-3-flash-preview"
     }
+  },
+  "git_master": {
+    "commit_footer": true,
+    "include_co_authored_by": true
+  },
+  "tmux": {
+    "enabled": true
   }
 }

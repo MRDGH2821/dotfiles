@@ -54,7 +54,8 @@
   },
   {
     "allow_concurrent_runs": false,
-    "command": "ocx oc -p omo-a",
+    "args": ["oc", "-p", "omo-a"],
+    "command": "ocx",
     "hide": "on_success",
     "label": "Start OpenCode Premium",
     "reveal": "always",

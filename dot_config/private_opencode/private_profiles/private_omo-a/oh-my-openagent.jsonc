@@ -3,7 +3,7 @@
   "agents": {
     "atlas": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium",
+        "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
@@ -11,7 +11,7 @@
         "cursor/kimi-k2.5",
         "opencode/gpt-5-nano"
       ],
-      "model": "cursor/claude-4.6-sonnet-medium-thinking"
+      "model": "cursor/claude-4.6-sonnet-medium"
     },
     "explore": {
       "fallback_models": [
@@ -23,8 +23,8 @@
       "model": "github-copilot/claude-haiku-4.5"
     },
     "hephaestus": {
-      "fallback_models": ["cursor/gpt-5.4-medium"],
-      "model": "cursor/gpt-5.4-medium-fast"
+      "fallback_models": ["cursor/gpt-5.4-medium-fast"],
+      "model": "cursor/gpt-5.4-medium"
     },
     "librarian": {
       "fallback_models": [
@@ -35,7 +35,7 @@
     },
     "metis": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max",
+        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
         "cursor/gpt-5.4-medium-fast",
@@ -48,11 +48,11 @@
         "zai-coding-plan/glm-5",
         "opencode/gpt-5-nano"
       ],
-      "model": "cursor/claude-4.6-opus-max-thinking"
+      "model": "cursor/claude-4.6-opus-max"
     },
     "momus": {
       "fallback_models": [
-        "cursor/gpt-5.4-xhigh",
+        "cursor/gpt-5.4-xhigh-fast",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -66,11 +66,11 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "cursor/gpt-5.4-xhigh-fast"
+      "model": "cursor/gpt-5.4-xhigh"
     },
     "multimodal-looker": {
       "fallback_models": [
-        "cursor/gpt-5.4-medium",
+        "cursor/gpt-5.4-medium-fast",
         "zai-coding-plan/glm-5v-turbo",
         "cursor/composer-2-fast",
         "cursor/composer-2",
@@ -79,11 +79,11 @@
         "opencode/gpt-5-nano",
         "github-copilot/gpt-5-nano"
       ],
-      "model": "cursor/gpt-5.4-medium-fast"
+      "model": "cursor/gpt-5.4-medium"
     },
     "oracle": {
       "fallback_models": [
-        "cursor/gpt-5.4-high",
+        "cursor/gpt-5.4-high-fast",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -97,11 +97,11 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "cursor/gpt-5.4-high-fast"
+      "model": "cursor/gpt-5.4-high"
     },
     "prometheus": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max",
+        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
         "cursor/gpt-5.4-high-fast",
@@ -112,11 +112,11 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "cursor/claude-4.6-opus-max-thinking"
+      "model": "cursor/claude-4.6-opus-max"
     },
     "sisyphus": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max",
+        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
         "cursor/gpt-5.4-medium-fast",
@@ -128,11 +128,11 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "cursor/claude-4.6-opus-max-thinking"
+      "model": "cursor/claude-4.6-opus-max"
     },
     "sisyphus-junior": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium",
+        "cursor/claude-4.6-sonnet-medium-thinking",
         "cursor/gpt-5.4-medium-fast",
         "cursor/gpt-5.4-medium",
         "cursor/composer-2-fast",
@@ -140,9 +140,10 @@
         "cursor/kimi-k2.5",
         "opencode/gpt-5-nano"
       ],
-      "model": "cursor/claude-4.6-sonnet-medium-thinking"
+      "model": "cursor/claude-4.6-sonnet-medium"
     }
   },
+  "auto_update": true,
   "categories": {
     "artistry": {
       "fallback_models": [
@@ -155,7 +156,7 @@
     },
     "deep": {
       "fallback_models": [
-        "cursor/gpt-5.4-medium",
+        "cursor/gpt-5.4-medium-fast",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -167,19 +168,19 @@
         "cursor/gemini-3.1-pro",
         "opencode/gpt-5-nano"
       ],
-      "model": "cursor/gpt-5.4-medium-fast"
+      "model": "cursor/gpt-5.4-medium"
     },
     "quick": {
       "fallback_models": [
-        "github-copilot/claude-haiku-4-5",
+        "github-copilot/claude-haiku-4-5-mini",
         "cursor/gemini-3-flash",
         "google/gemini-3-flash-preview"
       ],
-      "model": "github-copilot/gpt-5.4-mini"
+      "model": "github-copilot/gpt-5.4"
     },
     "ultrabrain": {
       "fallback_models": [
-        "cursor/gpt-5.4-xhigh",
+        "cursor/gpt-5.4-xhigh-fast",
         "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-max",
         "cursor/claude-4.6-opus-high-thinking",
@@ -197,11 +198,11 @@
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "cursor/gpt-5.4-xhigh-fast"
+      "model": "cursor/gpt-5.4-xhigh"
     },
     "unspecified-high": {
       "fallback_models": [
-        "cursor/claude-4.6-opus-max",
+        "cursor/claude-4.6-opus-max-thinking",
         "cursor/claude-4.6-opus-high-thinking",
         "cursor/claude-4.6-opus-high",
         "cursor/claude-4.6-sonnet-medium-thinking",
@@ -225,11 +226,11 @@
         "cursor/composer-2",
         "cursor/kimi-k2.5"
       ],
-      "model": "cursor/claude-4.6-opus-max-thinking"
+      "model": "cursor/claude-4.6-opus-max"
     },
     "unspecified-low": {
       "fallback_models": [
-        "cursor/claude-4.6-sonnet-medium",
+        "cursor/claude-4.6-sonnet-medium-thinking",
         {
           "model": "github-copilot/gpt-5.3-codex",
           "variant": "medium"
@@ -246,7 +247,7 @@
         "cursor/composer-2",
         "cursor/kimi-k2.5"
       ],
-      "model": "cursor/claude-4.6-sonnet-medium-thinking"
+      "model": "cursor/claude-4.6-sonnet-medium"
     },
     "visual-engineering": {
       "fallback_models": [
@@ -282,8 +283,5 @@
   "git_master": {
     "commit_footer": true,
     "include_co_authored_by": true
-  },
-  "tmux": {
-    "enabled": true
   }
 }

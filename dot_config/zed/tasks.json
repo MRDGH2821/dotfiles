@@ -46,18 +46,9 @@
   },
   {
     "allow_concurrent_runs": false,
-    "command": "ocx oc",
+    "command": "opencode",
     "hide": "on_success",
     "label": "Start OpenCode",
-    "reveal": "always",
-    "reveal_target": "center"
-  },
-  {
-    "allow_concurrent_runs": false,
-    "args": ["oc", "-p", "omo-a"],
-    "command": "ocx",
-    "hide": "on_success",
-    "label": "Start OpenCode Premium",
     "reveal": "always",
     "reveal_target": "center"
   },

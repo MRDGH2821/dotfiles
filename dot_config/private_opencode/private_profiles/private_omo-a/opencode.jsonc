@@ -21,7 +21,8 @@
   "plugin": [
     "@simonwjackson/opencode-direnv",
     "oh-my-openagent@latest",
-    "opencode-cursor-oauth@latest"
+    "@playwo/opencode-cursor-oauth@latest",
+    "opencode-plugin-openspec@latest"
     // "opencode-with-claude@latest"
   ],
   "provider": {

@@ -38,7 +38,7 @@ import yaml
 REPO_ROOT = Path(__file__).parent.parent
 PACKAGES_MD = REPO_ROOT / "Packages.md"
 NAMES_FILE = REPO_ROOT / ".zed" / "packages-names.yaml"
-TABLE_MARKER = "<!-- sort-table -->"
+TABLE_MARKER = "<!-- smt -->"
 
 LINUX_DIR = REPO_ROOT / ".chezmoidata" / "packages" / "linux"
 WINDOWS_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "windows.yaml"

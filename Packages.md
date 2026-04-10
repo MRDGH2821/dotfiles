@@ -101,7 +101,6 @@
 | ffmpeg                | 🚫     | 👍     | 🚫     | 🚫     | 🚫      |
 | filelight             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | flatpak               | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| gentle-ai             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | git-agecrypt          | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
 | git-credential-oauth  | 👍     | 👍     | 👍     | 👍     | 👍      |
 | git-sync              | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |

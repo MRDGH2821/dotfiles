@@ -19,16 +19,10 @@
   },
   "model": "opencode/big-pickle",
   "plugin": [
+    "@playwo/opencode-cursor-oauth",
     "@simonwjackson/opencode-direnv",
-    "oh-my-openagent@latest",
-    "@playwo/opencode-cursor-oauth@latest",
-    "opencode-plugin-openspec@latest"
-    // "opencode-with-claude@latest"
+    "oh-my-opencode",
+    "opencode-plugin-openspec"
   ],
-  "provider": {
-    "cursor": {
-      "name": "Cursor"
-    }
-  },
   "small_model": "opencode/gpt-5-nano"
 }

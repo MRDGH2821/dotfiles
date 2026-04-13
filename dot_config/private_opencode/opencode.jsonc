@@ -19,9 +19,8 @@
   },
   "model": "opencode/big-pickle",
   "plugin": [
-    "@playwo/opencode-cursor-oauth",
     "@simonwjackson/opencode-direnv",
-    "oh-my-opencode",
+    "oh-my-openagent",
     "opencode-plugin-openspec"
   ],
   "small_model": "opencode/gpt-5-nano"

@@ -283,5 +283,10 @@
   "git_master": {
     "commit_footer": true,
     "include_co_authored_by": true
+  },
+  "sisyphus_agent": {
+    "default_builder_enabled": true,
+    "planner_enabled": true,
+    "replace_plan": false
   }
 }

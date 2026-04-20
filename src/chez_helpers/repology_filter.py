@@ -8,8 +8,9 @@
 """Query Repology for a project and filter results to known repos.
 
 Usage:
-    uv run repology-filter.py <project>
-    uv run repology-filter.py           # prompts interactively
+    uv run src/chez_helpers/repology_filter.py <project>
+    uv run src/chez_helpers/repology_filter.py           # prompts interactively
+    uv run repology-filter <project>
 
 Check exact repo IDs at https://repology.org/repository/<id>.
 """

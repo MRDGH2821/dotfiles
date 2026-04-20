@@ -23,13 +23,13 @@
     "reveal_target": "center"
   },
   {
-    "args": ["run", "./.zed/repology-filter.py"],
+    "args": ["run", "repology-filter"],
     "command": "uv",
     "hide": "never",
     "label": "Search Repology"
   },
   {
-    "args": ["run", "./.zed/gen-packages-table.py"],
+    "args": ["run", "gen-packages-table"],
     "command": "uv",
     "hide": "on_success",
     "label": "Generate packages table"

@@ -14,13 +14,14 @@ Sources of truth (read-only):
   dot_config/soar/packages.toml
 
 Mapping layer (edit to add display names / cross-distro aliases):
-  scripts/packages-names.yaml
+  src/chez_helpers/packages-names.yaml
 
 After running this script, treefmt will sort rows and align columns via
 sort-markdown-tables and prettier.
 
 Usage:
-    uv run scripts/gen-packages-table.py
+    uv run src/chez_helpers/gen_packages_table.py
+    uv run gen-packages-table
 """
 
 from __future__ import annotations

@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "This is my dotfiles repo managed using chezmoi."
 readme = "README.md"
 requires-python = ">=3.13"
+dependencies = ["pyyaml>=6.0.3", "rich>=15.0.0"]
 
-[dependency-groups]
-dev = ["pyyaml>=6.0.3", "rich>=14.3.3"]
+[project.scripts]
+gen-packages-table = "chez_helpers.gen_packages_table:main"
+repology-filter = "chez_helpers.repology_filter:main"

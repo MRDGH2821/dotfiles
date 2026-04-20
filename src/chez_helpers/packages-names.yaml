@@ -1,5 +1,5 @@
 ---
-# Mapping file for gen-packages-table.py
+# Mapping file for gen_packages_table.py
 #
 # aliases: maps any install-file package ID -> canonical display name.
 #   Keys are exact IDs as they appear in install files (case-sensitive).

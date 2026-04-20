@@ -137,6 +137,7 @@ aliases:
   org.onlyoffice.desktopeditors: Only Office
   pCloudAG.pCloudDrive: pCloud
   pcloud: pCloud # keep as-is
+  pcloud-drive: pCloud # Arch AUR
   pince: PINCE
   planify: Planify # Arch AUR
   prettypst: prettypst # cargo git (repo name)

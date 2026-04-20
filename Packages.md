@@ -115,7 +115,7 @@
 | llmfit                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | nix                   | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | ollama                | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
-| pCloud                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| pCloud                | 👍     | 🚫     | 🚫     | 🚫     | 👍      |
 | pam-u2f               | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | pamu2fcfg             | 🚫     | 👍     | 👍     | 👍     | 🚫      |
 | partitionmanager      | 👍     | 👍     | 👍     | 👍     | 🚫      |

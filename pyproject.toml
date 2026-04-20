@@ -9,3 +9,6 @@ dependencies = ["pyyaml>=6.0.3", "rich>=15.0.0"]
 [project.scripts]
 gen-packages-table = "chez_helpers.gen_packages_table:main"
 repology-filter = "chez_helpers.repology_filter:main"
+
+[tool.uv]
+package = true

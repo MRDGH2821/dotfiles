@@ -36,9 +36,9 @@ import yaml
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PACKAGES_MD = REPO_ROOT / "Packages.md"
-NAMES_FILE = REPO_ROOT / ".zed" / "packages-names.yaml"
+NAMES_FILE = Path(__file__).resolve().with_name("packages-names.yaml")
 TABLE_MARKER = "<!-- smt -->"
 
 LINUX_DIR = REPO_ROOT / ".chezmoidata" / "packages" / "linux"

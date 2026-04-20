@@ -6,6 +6,7 @@ DISABLE_LINTERS:
   - REPOSITORY_KICS
   - REPOSITORY_DEVSKIM
 IGNORE_GITIGNORED_FILES: true
+JSON_PRETTIER_CLI_LINT_MODE: project
 JSON_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
@@ -13,6 +14,7 @@ JSON_PRETTIER_PRE_COMMANDS:
     secured_env: true
     tag: default
 SHOW_ELAPSED_TIME: true
+YAML_PRETTIER_CLI_LINT_MODE: project
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true

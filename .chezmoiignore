@@ -29,6 +29,7 @@ package.json
 Packages.md
 pyproject.toml
 README.md
+src/*
 uv.lock
 
 {{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}

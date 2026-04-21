@@ -21,6 +21,7 @@
   "plugin": [
     "@simonwjackson/opencode-direnv",
     "oh-my-openagent@latest",
+    "oh-my-opencode-slim",
     "opencode-plugin-openspec"
   ],
   "small_model": "opencode/gpt-5-nano"

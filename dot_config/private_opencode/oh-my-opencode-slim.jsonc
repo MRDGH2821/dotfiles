@@ -1,0 +1,78 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "fallback": {
+    "chains": {
+      "designer": ["zai-coding-plan/glm-4.6v", "opencode/gpt-5-nano"],
+      "explorer": ["opencode/gpt-5-nano"],
+      "fixer": [
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5",
+        "opencode/big-pickle"
+      ],
+      "librarian": ["opencode/gpt-5-nano"],
+      "oracle": [
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5",
+        "opencode/gpt-5-nano"
+      ],
+      "orchestrator": [
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5",
+        "opencode/big-pickle"
+      ]
+    },
+    "enabled": true
+  },
+  "preset": "glm-stack",
+  "presets": {
+    "glm-stack": {
+      // Multimodal-looker & visual-engineering use glm-5v-turbo
+      "designer": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-5v-turbo",
+        "skills": ["*"],
+        "variant": "medium"
+      },
+
+      // Explore is your cheap scout; keep it fast on a Flash‑style GLM
+      "explorer": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-4.7-flashx",
+        "skills": ["*"],
+        "variant": "low"
+      },
+
+      // Momus / builder / executor roles on glm-5.1 + turbo → worker
+      "fixer": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-5-turbo",
+        "skills": ["*"],
+        "variant": "low"
+      },
+
+      // Librarian and sisyphus-junior use glm-4.7
+      "librarian": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-4.7",
+        "skills": ["*"],
+        "variant": "low"
+      },
+
+      // Oracle in your config also uses glm-5.1
+      "oracle": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-5.1",
+        "skills": ["*"],
+        "variant": "high"
+      },
+      // Sisyphus / atlas / metis / prometheus core → main orchestrator
+      "orchestrator": {
+        "mcps": ["*"],
+        "model": "zai-coding-plan/glm-5.1",
+        "skills": ["*"],
+        "variant": "high"
+      }
+    }
+  },
+  "showStartupToast": true
+}

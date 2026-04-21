@@ -6,11 +6,7 @@
       "model": "zai-coding-plan/glm-5.1"
     },
     "explore": {
-      "fallback_models": ["github-copilot/gpt-5-mini", "opencode/gpt-5-nano"],
-      "model": "github-copilot/claude-haiku-4.5"
-    },
-    "hephaestus": {
-      "model": "github-copilot/gpt-5.3"
+      "model": "opencode/gpt-5-nano"
     },
     "librarian": {
       "model": "zai-coding-plan/glm-4.7"
@@ -25,35 +21,28 @@
     },
     "momus": {
       "fallback_models": [
-        "zai-coding-plan/glm-5.1",
         "zai-coding-plan/glm-5-turbo",
         "zai-coding-plan/glm-5"
       ],
-      "model": "google/gemini-3.1-pro-preview",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5.1"
     },
     "multimodal-looker": {
-      "fallback_models": [
-        "zai-coding-plan/glm-4.6v",
-        "opencode/gpt-5-nano",
-        "github-copilot/gpt-5-nano"
-      ],
+      "fallback_models": ["zai-coding-plan/glm-4.6v", "opencode/gpt-5-nano"],
       "model": "zai-coding-plan/glm-5v-turbo"
     },
     "oracle": {
       "fallback_models": [
-        "zai-coding-plan/glm-5.1",
         "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5"
+        "zai-coding-plan/glm-5",
+        "opencode/gpt-5-nano"
       ],
-      "model": "google/gemini-3.1-pro-preview",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5.1"
     },
     "prometheus": {
       "fallback_models": [
-        "google/gemini-3.1-pro-preview",
         "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5"
+        "zai-coding-plan/glm-5",
+        "opencode/gpt-5-nano"
       ],
       "model": "zai-coding-plan/glm-5.1"
     },
@@ -77,66 +66,39 @@
     },
     "deep": {
       "fallback_models": [
-        {
-          "model": "google/gemini-3.1-pro-preview",
-          "variant": "high"
-        },
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5",
         "opencode/gpt-5-nano"
       ],
-      "model": "cursor/gpt-5.4-medium"
+      "model": "zai-coding-plan/glm-5.1"
     },
     "quick": {
-      "fallback_models": [
-        "github-copilot/claude-haiku-4-5-mini",
-        "github-copilot/gemini-3-flash-preview"
-      ],
-      "model": "github-copilot/gpt-5-mini"
+      "model": "opencode/gpt-5-nano"
     },
     "ultrabrain": {
       "fallback_models": [
-        {
-          "model": "google/gemini-3.1-pro-preview",
-          "variant": "high"
-        },
-        {
-          "model": "github-copilot/gemini-3.1-pro-preview",
-          "variant": "high"
-        },
         "zai-coding-plan/glm-5-turbo",
-        "zai-coding-plan/glm-5"
+        "zai-coding-plan/glm-5",
+        "opencode/gpt-5-nano"
       ],
       "model": "zai-coding-plan/glm-5.1"
     },
     "unspecified-high": {
       "fallback_models": [
-        {
-          "model": "github-copilot/gpt-5.3-codex",
-          "variant": "medium"
-        },
-        {
-          "model": "google/gemini-3.1-pro-preview",
-          "variant": "high"
-        }
+        "zai-coding-plan/glm-5-turbo",
+        "zai-coding-plan/glm-5"
       ],
       "model": "zai-coding-plan/glm-5.1"
     },
     "unspecified-low": {
-      "fallback_models": [
-        {
-          "model": "github-copilot/gpt-5.3-codex",
-          "variant": "medium"
-        },
-        "github-copilot/gemini-3-flash-preview"
-      ],
-      "model": "zai-coding-plan/glm-4.7"
+      "model": "opencode/gpt-5-nano"
     },
     "visual-engineering": {
       "fallback_models": ["zai-coding-plan/glm-5.1"],
-      "model": "github-copilot/gemini-3.1-pro-preview",
-      "variant": "high"
+      "model": "zai-coding-plan/glm-5v-turbo"
     },
     "writing": {
-      "model": "github-copilot/gemini-3-flash-preview"
+      "model": "opencode/gpt-5-nano"
     }
   },
   "git_master": {

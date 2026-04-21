@@ -20,7 +20,7 @@
   "model": "opencode/big-pickle",
   "plugin": [
     "@simonwjackson/opencode-direnv",
-    "oh-my-openagent",
+    "oh-my-openagent@latest",
     "opencode-plugin-openspec"
   ],
   "small_model": "opencode/gpt-5-nano"

@@ -20,7 +20,7 @@
   "model": "opencode/big-pickle",
   "plugin": [
     "@simonwjackson/opencode-direnv",
-    "oh-my-openagent@latest",
+    // "oh-my-openagent@latest",
     "oh-my-opencode-slim",
     "opencode-plugin-openspec"
   ],

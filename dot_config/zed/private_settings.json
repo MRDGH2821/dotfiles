@@ -1,7 +1,9 @@
 {
   "$schema": "zed://schemas/settings",
   "agent": {
+    "dock": "right",
     "model_parameters": [],
+    "sidebar_side": "right",
     "tool_permissions": {
       "tools": {
         "fetch": {
@@ -65,6 +67,9 @@
   "calls": {
     "mute_on_join": true
   },
+  "collaboration_panel": {
+    "dock": "left"
+  },
   "colorize_brackets": true,
   "diagnostics": {
     "inline": {
@@ -80,6 +85,7 @@
   },
   "format_on_save": "off",
   "git_panel": {
+    "dock": "left",
     "tree_view": false
   },
   "icon_theme": {
@@ -206,11 +212,15 @@
       }
     }
   },
+  "outline_panel": {
+    "dock": "left"
+  },
   "prettier": {
     "allowed": true,
     "plugins": ["prettier-plugin-packagejson"]
   },
   "project_panel": {
+    "dock": "left",
     "hide_gitignore": false
   },
   "redact_private_values": false,
@@ -228,7 +238,7 @@
     "mode": "system"
   },
   "title_bar": {
-    "show_branch_icon": true,
+    "show_branch_status_icon": true,
     "show_menus": true
   },
   "toolbar": {

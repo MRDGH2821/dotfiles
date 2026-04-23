@@ -67,6 +67,7 @@
   "calls": {
     "mute_on_join": true
   },
+  "cli_default_open_behavior": "new_window",
   "collaboration_panel": {
     "dock": "left"
   },

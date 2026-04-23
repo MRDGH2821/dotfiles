@@ -5,8 +5,8 @@ SHELL_NAME=$(basename "${SHELL_PATH}")
 # Provide path to oh-my-posh installed themes
 omp_themes_dir="${HOME}/.cache/oh-my-posh/themes"
 
-# Get a list of all JSON theme files in the directory
-omp_themes=("$(ls "${omp_themes_dir}"/*.json)")
+# Get a list of all JSON theme files in the directory (one array element per file)
+omp_themes=("${omp_themes_dir}"/*.json)
 
 #  Get the number of JSON theme files
 num_files=${#omp_themes[@]}

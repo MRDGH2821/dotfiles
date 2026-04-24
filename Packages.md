@@ -121,8 +121,10 @@
 | partitionmanager      | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | parui                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | prettypst             | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
+| psmux                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | qt5-graphicaleffects  | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | qt5-quickcontrols2    | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| ripgrep               | 👍     | 👍     | 👍     | 👍     | 👍      |
 | sane                  | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | sccache               | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | skanlite              | 👍     | 👍     | 👍     | 👍     | 🚫      |
@@ -130,6 +132,7 @@
 | system-config-printer | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | tealdeer              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | tesseract-data-eng    | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
+| tmux                  | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | ttf-liberation        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | typstyle              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | unzip                 | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |

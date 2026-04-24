@@ -15,6 +15,7 @@ aliases:
   7zip.7zip: 7 Zip
   AndrewCantino.McFly: McFly
   Axosoft.GitKraken: Gitkraken
+  BurntSushi.ripgrep.MSVC: ripgrep
   CosimoMatteini.DRA: Dra
   Discord.Discord: Discord
   Docker.DockerDesktop: Docker Desktop
@@ -118,6 +119,7 @@ aliases:
   ludusavi: Ludusavi # cargo binstall (also Windows winget via mtkennerly.ludusavi)
   mangohud: MangoHUD
   mangojuice: Mangojuice # Arch AUR
+  marlocarlo.psmux: psmux
   mcfly: McFly # cargo binstall (also Windows winget via AndrewCantino.McFly)
   meld: Meld # lowercase in distro files
   mtkennerly.ludusavi: Ludusavi

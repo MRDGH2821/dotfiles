@@ -6,6 +6,7 @@ winget:
   - aristocratos.btop4win
   - astral-sh.uv
   - Axosoft.GitKraken
+  - BurntSushi.ripgrep.MSVC
   - calibre.calibre
   - CosimoMatteini.DRA
   - dandavison.delta
@@ -30,6 +31,7 @@ winget:
   - KeePassXCTeam.KeePassXC
   - Klocman.BulkCrapUninstaller
   - koalaman.shellcheck
+  - marlocarlo.psmux
   - Martchus.syncthingtray
   - MartiCliment.UniGetUI
   - Meld.Meld

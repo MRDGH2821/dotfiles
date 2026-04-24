@@ -33,9 +33,11 @@ packages:
   - kleopatra
   - mangohud
   - nix
+  - ripgrep
   - rustup
   - sccache
   - syncthing
+  - tmux
   - uv
   - vlc
   - zsh

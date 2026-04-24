@@ -28,6 +28,12 @@ options = [
 ]
 priority = 9
 
+[formatter.generate-package-table]
+command = "uv"
+includes = ["Packages.md"]
+options = ["run", "gen-packages-table"]
+priority = 1
+
 [formatter.ignore-files-formatter]
 command = "uvx"
 excludes = [".chezmoiignore"]

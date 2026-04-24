@@ -28,7 +28,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "engram_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/engram"
 pkg_type = "archive"
-version = "1.12.0"
+version = "1.13.1"
 
 [packages.fastfetch]
 asset_pattern = "fastfetch-{os}-amd64.tar.gz"
@@ -36,7 +36,7 @@ extract_root = "fastfetch-{os}-amd64"
 github = "fastfetch-cli/fastfetch"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
-version = "2.61.0"
+version = "2.62.1"
 
 [packages.fzf]
 asset_pattern = "fzf-*-{os}_amd64.tar.gz"
@@ -49,6 +49,7 @@ asset_pattern = "gentle-ai_*_{os}_amd64.tar.gz"
 github = "Gentleman-Programming/gentle-ai"
 pkg_type = "archive"
 tag_pattern = "*.*.*"
+version = "1.23.0"
 
 [packages.git-sync]
 asset_pattern = "git-sync_*_{os}_amd64.tar.gz"
@@ -67,7 +68,7 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.9.11"
+version = "0.9.14"
 
 [packages.pince]
 asset_pattern = "*.AppImage"
@@ -91,7 +92,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "*.AppImage"
 github = "Matteo842/SaveState"
 pkg_type = "appimage"
-version = "2.6c"
+version = "2.7b"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"

@@ -4,7 +4,23 @@
     "args": ["apply"],
     "command": "chezmoi",
     "hide": "on_success",
-    "label": "Apply chezmoi",
+    "label": "Apply Chezmoi",
+    "reveal_target": "center"
+  },
+  {
+    "allow_concurrent_runs": false,
+    "args": ["apply", "--prune", "-y"],
+    "command": "soar",
+    "hide": "on_success",
+    "label": "Apply Soar",
+    "reveal_target": "center"
+  },
+  {
+    "allow_concurrent_runs": false,
+    "args": ["update"],
+    "command": "soar",
+    "hide": "on_success",
+    "label": "Update Soar",
     "reveal_target": "center"
   },
   {

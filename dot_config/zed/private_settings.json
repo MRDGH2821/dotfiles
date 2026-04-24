@@ -231,13 +231,7 @@
     "git_status": true
   },
   "terminal": {
-    "copy_on_select": true,
-    "shell": {
-      "with_arguments": {
-        "args": ["-c", "tmux new-session -A -s \"$(basename \"$PWD\")\""],
-        "program": "zsh"
-      }
-    }
+    "copy_on_select": true
   },
   "theme": {
     "dark": "Ayu Dark",

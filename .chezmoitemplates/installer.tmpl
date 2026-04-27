@@ -3,7 +3,7 @@
 {{- $bun := include ".chezmoidata/packages/bun.yaml" | fromYaml -}}
 
 {{- /* Python3 CLI tools */ -}}
-{{- range $python.cli -}}
+{{- range $python3.cli -}}
   {{- println "uv tool install" . -}}
   {{- println $line -}}
 {{- end -}}

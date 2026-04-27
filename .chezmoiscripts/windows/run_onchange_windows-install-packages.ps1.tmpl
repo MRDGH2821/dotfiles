@@ -1,6 +1,6 @@
-{{- $python3 := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
-{{- $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml -}}
 {{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
+{{- $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml -}}
+
 
 {{- /* Winget Packages */ -}}
 {{- range $windows.winget -}}
@@ -10,18 +10,4 @@
 {{- end -}}
 {{- println "$Env:Path = [System.Environment]::GetEnvironmentVariable(\"Path\",\"Machine\") + \";\" + [System.Environment]::GetEnvironmentVariable(\"Path\",\"User\")" -}}
 
-{{- /* Python3 CLI tools */ -}}
-{{- range $python.cli -}}
-  {{- println "uv tool install" . -}}
-  {{- println $line -}}
-{{- end -}}
-
-{{- /* Rust CLI tools */ -}}
-{{- println "rustup default stable" -}}
-{{- println "cargo install" (join " " $rust.install) -}}
-{{- range $rust.git -}}
-  {{- println "cargo install --git" . -}}
-  {{- println $line -}}
-{{- end -}}
-{{- println "cargo binstall" (join " " $rust.binstall) -}}
-{{- println $line -}}
+{{- template "installer.tmpl" . -}}

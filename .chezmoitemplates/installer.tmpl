@@ -3,11 +3,11 @@
 {{- $bun := include ".chezmoidata/packages/bun.yaml" | fromYaml -}}
 {{- $line := "" -}}
 {{- if eq .chezmoi.os "linux" }}
-{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+  {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 {{ end }}
 
 {{- if eq .chezmoi.os "windows" }}
-{{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
+  {{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
 {{ end }}
 
 {{- /* Python3 CLI tools */ -}}

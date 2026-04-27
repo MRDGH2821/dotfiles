@@ -1,5 +1,6 @@
 {{- $python3 := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
 {{- $rust := include ".chezmoidata/packages/rust.yaml" | fromYaml -}}
+{{- $bun := include ".chezmoidata/packages/bun.yaml" | fromYaml -}}
 
 {{- /* Python3 CLI tools */ -}}
 {{- range $python.cli -}}
@@ -15,4 +16,8 @@
   {{- println $line -}}
 {{- end -}}
 {{- println "cargo binstall" (join " " $rust.binstall) -}}
+{{- println $line -}}
+
+{{- /* Bun CLI Tools */ -}}
+{{- println "bun install -g" (join " " $bun.global) -}}
 {{- println $line -}}

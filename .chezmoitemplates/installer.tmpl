@@ -1,6 +1,14 @@
 {{- $python3 := include ".chezmoidata/packages/python3.yaml" | fromYaml -}}
 {{- $rust := include ".chezmoidata/packages/rust.yaml" | fromYaml -}}
 {{- $bun := include ".chezmoidata/packages/bun.yaml" | fromYaml -}}
+{{- $line := "" -}}
+{{- if eq .chezmoi.os "linux" }}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+{{ end }}
+
+{{- if eq .chezmoi.os "windows" }}
+{{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
+{{ end }}
 
 {{- /* Python3 CLI tools */ -}}
 {{- range $python3.cli -}}

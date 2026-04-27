@@ -2,5 +2,5 @@
 cli:
   - copier
   - ggshield
-  - nadirclaw
   - prek
+  - uv-upx

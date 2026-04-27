@@ -14,11 +14,6 @@
       "enabled": true,
       "type": "local"
     },
-    "SiteMCP (Devenv)": {
-      "command": ["bunx", "sitemcp", "https://devenv.sh/"],
-      "enabled": true,
-      "type": "local"
-    },
     "engram": {
       "command": ["engram", "mcp", "--tools=agent"],
       "enabled": true,

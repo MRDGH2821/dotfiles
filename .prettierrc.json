@@ -16,9 +16,10 @@
     }
   ],
   "plugins": [
+    "prettier-plugin-go-template",
+    "prettier-plugin-ini",
     "prettier-plugin-powershell",
-    "prettier-plugin-toml",
-    "prettier-plugin-ini"
+    "prettier-plugin-toml"
   ],
   "powershellIndentSize": 2,
   "powershellRewriteAliases": true,

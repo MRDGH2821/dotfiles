@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "prettier": "^3.8.1",
+    "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-ini": "^1.3.0",
     "prettier-plugin-powershell": "^2.0.11",
     "prettier-plugin-toml": "^2.0.6"

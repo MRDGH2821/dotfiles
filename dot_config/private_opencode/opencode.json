@@ -30,7 +30,7 @@
     "@simonwjackson/opencode-direnv",
     "caveman-opencode-plugin",
     "oh-my-opencode-slim",
-    "opencode-plugin-openspec",
+    "opencode-plugin-openspec"
   ],
   "small_model": "opencode/gpt-5-nano"
 }

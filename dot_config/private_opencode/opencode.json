@@ -1,5 +1,13 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
   "mcp": {
     "Devenv": {
       "command": ["devenv", "mcp"],
@@ -20,8 +28,9 @@
   "model": "opencode/big-pickle",
   "plugin": [
     "@simonwjackson/opencode-direnv",
+    "caveman-opencode-plugin",
+    "oh-my-opencode-slim",
     "opencode-plugin-openspec",
-    "oh-my-opencode-slim"
   ],
   "small_model": "opencode/gpt-5-nano"
 }

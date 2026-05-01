@@ -42,7 +42,12 @@
 
 {{- println $line -}}
 
-{{- /* Configuring git credential-oauth */ -}}
+{{- /* Configuring git credential helpers */ -}}
+
+{{- println "git-credential-keepassxc configure" -}}
+{{- println $cfg "--replace-all credential.helper 'keepassxc --git-groups'" -}}
+{{- println "echo \"Git credential keepassxc is Configured!\" " -}}
+
 {{- println "git credential-oauth configure" -}}
 {{- println "echo \"Git credential oauth is Configured!\" " -}}
 

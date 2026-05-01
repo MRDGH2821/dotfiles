@@ -1,6 +1,11 @@
 {
   "$schema": "zed://schemas/settings",
   "agent": {
+    "default_model": {
+      "enable_thinking": true,
+      "model": "claude-haiku-4.5",
+      "provider": "copilot_chat"
+    },
     "dock": "right",
     "model_parameters": [],
     "sidebar_side": "right",

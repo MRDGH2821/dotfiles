@@ -1,5 +1,7 @@
 **.egg-info
 **/__pycache__/**
+.devenv
+.direnv
 .venv/
 /.devenv
 bun.lock

@@ -1,4 +1,4 @@
-# :schema https://gist.githubusercontent.com/MRDGH2821/d61a45f6d91c94d1c9d3d1307036d361/raw/48ecf6440582706aa85b856f2c4c3539bc5d03a5/treefmt-schma.json
+# :schema https://gist.githubusercontent.com/MRDGH2821/d61a45f6d91c94d1c9d3d1307036d361/raw/fe5c99a3237fa12ee6e0c247999832857d97d353/treefmt-schema.json
 
 allow-missing-formatter = true
 
@@ -9,7 +9,7 @@ options = ["-q"]
 priority = 10
 
 [formatter.cspell-sort]
-command = "bash"
+command = "yq"
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
   "**/.cSpell*",
@@ -21,11 +21,8 @@ includes = [
   "cSpell*",
   "cspell*"
 ]
-options = [
-  "-c",
-  "for file in \"$@\"; do yq -i '.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)' \"$file\"; done",
-  "--"
-]
+no-positional-arg-support = true
+options = ["-i", ".words|= sort_by(downcase)|.ignorePaths|=sort_by(downcase)"]
 priority = 9
 
 [formatter.generate-package-table]
@@ -61,15 +58,29 @@ excludes = []
 includes = [
   "**/private_dolphinrc",
   "**/private_konsolerc",
+  "*.cjs",
+  "*.cts",
+  "*.js",
   "*.js",
   "*.json",
+  "*.json",
   "*.jsonc",
+  "*.jsonc",
+  "*.jsx",
   "*.md",
+  "*.md",
+  "*.mjs",
+  "*.mts",
   "*.ps1",
   "*.tmpl",
   "*.toml",
+  "*.toml",
   "*.ts",
+  "*.ts",
+  "*.tsx",
   "*.yaml",
+  "*.yaml",
+  "*.yml",
   "*.yml",
   ".editorconfig"
 ]
@@ -79,12 +90,14 @@ priority = 100
 [formatter.prettypst-default]
 command = "prettypst"
 includes = ["*.typ"]
+no-positional-arg-support = true
 options = ["-s", "default"]
 priority = 2
 
 [formatter.prettypst-otbs]
 command = "prettypst"
 includes = ["*.typ"]
+no-positional-arg-support = true
 options = ["-s", "otbs"]
 priority = 3
 
@@ -153,14 +166,11 @@ options = ["yamlfix"]
 priority = 8
 
 [formatter.yq-key-sort]
-command = "bash"
+command = "yq"
 # tombi: format.rules.array-values-order = "ascending"
 includes = ["*.json", "*.yaml", "*.yml"]
-options = [
-  "-c",
-  "for file in \"$@\"; do yq -i -P 'sort_keys(..)' \"$file\"; done",
-  "--"
-]
+no-positional-arg-support = true
+options = ["-i", "-P", "sort_keys(..)"]
 priority = 0
 
 [formatter.yq-packages-sort]

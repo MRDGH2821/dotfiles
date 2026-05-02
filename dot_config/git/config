@@ -6,7 +6,6 @@
 	pager = delta --side-by-side --dark
 [init]
 	defaultBranch = main
-	templatedir = ~/.git-templates
 [merge]
 	ff = only
 [tag]

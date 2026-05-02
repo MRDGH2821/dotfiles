@@ -7,33 +7,6 @@
   {{- $line = "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 {{- end -}}
 
-{{- println $cfg "commit.gpgsign true" -}}
-{{- println $cfg "core.autocrlf false" -}}
-{{- println $cfg "core.editor \"zed -n --wait\"" -}}
-{{- println $cfg "core.pager \"delta --side-by-side --dark\"" -}}
-{{- println $cfg "init.defaultBranch main" -}}
-{{- println $cfg "merge.ff only" -}}
-{{- println $cfg "tag.forceSignAnnotated true" -}}
-{{- println $cfg "tag.gpgsign true" -}}
-{{- println $cfg "interactive.diffFilter \"delta --color-only\"" -}}
-{{- println $cfg "delta.side-by-side true" -}}
-{{- println $cfg "delta.line-numbers true" -}}
-{{- println $cfg "delta.syntax-theme Dracula" -}}
-{{- println $cfg "user.email" .email -}}
-{{- println $cfg "user.name" .username -}}
-
-{{- if eq .profile "personal" }}
-  {{- println $cfg "user.signingkey 1915CBA05A598D01" -}}
-{{- end }}
-
-{{- if eq .chezmoi.os "windows" }}
-  {{- println $cfg "gpg.program" "C:\\Program Files\\GnuPG\\bin\\gpg.exe" -}}
-{{- end }}
-
-{{- println "echo \"Git is Configured!\" " -}}
-
-{{- println $line -}}
-
 {{- /* Configuring gh */ -}}
 {{- println "gh auth login -p https -h github.com -w" -}}
 {{- println "gh auth setup-git" -}}
@@ -44,10 +17,6 @@
 {{- /* Configuring git credential helpers */ -}}
 
 {{- println "git-credential-keepassxc configure" -}}
-{{- println $cfg "--replace-all credential.helper 'keepassxc --git-groups'" -}}
 {{- println "echo \"Git credential keepassxc is Configured!\" " -}}
-
-{{- println "git credential-oauth configure" -}}
-{{- println "echo \"Git credential oauth is Configured!\" " -}}
 
 {{- println $line -}}

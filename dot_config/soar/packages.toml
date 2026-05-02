@@ -8,6 +8,12 @@ github = "kamadorueda/alejandra"
 pkg_type = "static"
 tag_pattern = "*.*.*"
 
+[packages.antidot]
+asset_pattern = "antidot_*_{os}_{arch}.tar.gz"
+github = "doron-cohen/antidot"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [packages.btop]
 asset_pattern = "btop-{arch}-unknown-{os}-musl.tbz"
 github = "aristocratos/btop"

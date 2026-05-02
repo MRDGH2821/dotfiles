@@ -1,18 +1,35 @@
 # shellcheck shell=bash
+
+# XDG Base dirs
+eval "$(antidot init)"
+
+export XDG_STATE_HOME="${HOME}/.local/state"
+
+
+# XDG folders
+export HISTFILE="$XDG_STATE_HOME"/shell/history
+
 # bin
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # soar
-export PATH="${HOME}/.local/share/soar/bin:${PATH}"
+export PATH="${XDG_DATA_HOME}/soar/bin:${PATH}"
 
 # fnm
-FNM_PATH="${HOME}/.local/share/fnm"
+FNM_PATH="${XDG_DATA_HOME}/fnm"
 if [[ -d ${FNM_PATH} ]]; then
   export PATH="${FNM_PATH}:${PATH}"
 fi
 
 # cargo
-export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="${CARGO_HOME}/.cargo/bin:${PATH}"
 
 # bun
 export PATH="${HOME}/.cache/.bun/bin:${PATH}"
+
+
+
+# Default Apps
+export EDITOR="zed"
+export VISUAL="zed"
+export PAGER="less"

@@ -1,13 +1,13 @@
 # shellcheck shell=bash
 
 # XDG Base dirs
-eval "$(antidot init)"
+eval "$(antidot init)" || true
 
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 
 # XDG folders
-export HISTFILE="$XDG_STATE_HOME"/shell/history
+export HISTFILE="${XDG_STATE_HOME}"/shell/history
 
 # bin
 export PATH="${HOME}/.local/bin:${PATH}"

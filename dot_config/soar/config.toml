@@ -47,8 +47,24 @@ packages_path = "/home/mihirr/.local/share/soar/packages"
 # If `packages_path` is not set, packages will be stored in `root_path/packages`.
 root_path = "/home/mihirr/.local/share/soar"
 
+# List of configured repositories.
+#
+# Defines a remote repository that provides packages.
 [[repositories]]
+# Enables desktop integration for packages from this repository.
+# Default: true
 desktop_integration = true
+# Whether the repository is enabled.
+# Default: true
+enabled = true
+# Unique name of the repository.
 name = "soarpkgs"
+# Base64-encoded public key for signature verification (minisign format).
 pubkey = "RWQ109gKujRqohsA7RERlXFfeJi23EcHN3Dz8TxyPAywa5mLw/fbcbU4"
+# URL to the repository's metadata file.
 url = "https://github.com/pkgforge/soarpkgs/releases/latest/download/metadata-x86_64-linux.sdb.zstd"
+
+[[repositories]]
+enabled = true
+name = "antidot"
+url = "https://github.com/doron-cohen/antidot"

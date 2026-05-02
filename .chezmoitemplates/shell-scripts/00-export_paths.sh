@@ -22,7 +22,7 @@ if [[ -d ${FNM_PATH} ]]; then
 fi
 
 # cargo
-export PATH="${CARGO_HOME}/.cargo/bin:${PATH}"
+export PATH="${CARGO_HOME}/bin:${PATH}"
 
 # bun
 export PATH="${HOME}/.cache/.bun/bin:${PATH}"

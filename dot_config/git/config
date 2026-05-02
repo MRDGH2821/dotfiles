@@ -1,0 +1,34 @@
+[commit]
+	gpgsign = true
+[core]
+	autocrlf = false
+	editor = zed -n --wait
+	pager = delta --side-by-side --dark
+[init]
+	defaultBranch = main
+	templatedir = ~/.git-templates
+[merge]
+	ff = only
+[tag]
+	forceSignAnnotated = true
+	gpgsign = true
+[delta]
+	side-by-side = true
+	line-numbers = true
+	syntax-theme = Dracula
+[user]
+	email = ask.mrdgh2821@outlook.com
+	name = MRDGH2821
+	signingkey = 1915CBA05A598D01
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = cache --timeout 21600
+	helper = keepassxc --git-groups
+	helper = oauth
+[interactive]
+	diffFilter = delta --color-only

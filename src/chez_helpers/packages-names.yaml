@@ -22,6 +22,7 @@ aliases:
   EpicGames.EpicGamesLauncher: Epic games launcher
   Espanso.Espanso: Espanso
   Fastfetch-cli.Fastfetch: Fastfetch
+  GLab.GLab: GitLab cli
   Git.Git: Git
   GitHub.cli: GitHub cli
   GnuPG.GnuPG: Gnupg
@@ -99,6 +100,7 @@ aliases:
   git-sync: git-sync # internal tool, keep as-is
   github-cli: GitHub cli # Arch extra
   gitkraken: Gitkraken # Arch AUR (lowercase)
+  glab: GitLab cli
   gnupg: Gnupg # Arch core
   gnupg2: Gnupg # Debian/Ubuntu/Fedora native
   heroic-games-launcher-bin: Heroic Games Launcher # Arch AUR

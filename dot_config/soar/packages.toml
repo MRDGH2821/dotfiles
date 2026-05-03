@@ -61,6 +61,7 @@ asset_pattern = "glab_1.93.0_{os}_amd64.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
+version = "1.93.0"
 
 [packages.lazygit]
 asset_pattern = "lazygit_*_{os}_{arch}.tar.gz"

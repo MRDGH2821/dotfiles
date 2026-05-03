@@ -27,7 +27,6 @@
 	helper = !/usr/bin/gh auth git-credential
 [credential]
 	helper = cache --timeout 21600
-	helper = keepassxc --git-groups
 	helper = oauth
 [interactive]
 	diffFilter = delta --color-only

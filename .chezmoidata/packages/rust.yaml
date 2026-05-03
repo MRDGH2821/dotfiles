@@ -4,7 +4,6 @@ binstall:
   - cargo-cache
   - cargo-update
   - cocogitto
-  - git-credential-keepassxc
   - ludusavi
   - mcfly
   - tealdeer

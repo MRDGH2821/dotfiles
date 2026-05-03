@@ -1,11 +1,6 @@
 {
   "$schema": "zed://schemas/settings",
   "agent": {
-    "default_model": {
-      "enable_thinking": true,
-      "model": "claude-haiku-4.5",
-      "provider": "copilot_chat"
-    },
     "dock": "right",
     "model_parameters": [],
     "sidebar_side": "right",
@@ -28,18 +23,8 @@
     "cursor": {
       "type": "registry"
     },
-    "gemini": {
-      "type": "registry"
-    },
-    "github-copilot": {
-      "favorite_models": ["claude-sonnet-4.6", "auto"],
-      "type": "registry"
-    },
     "opencode": {
-      "args": ["acp"],
-      "command": "opencode",
-      "favorite_models": ["github-copilot/claude-haiku-4.5/thinking"],
-      "type": "custom"
+      "type": "registry"
     }
   },
   "auto_install_extensions": {

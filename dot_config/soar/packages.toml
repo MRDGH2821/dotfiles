@@ -56,6 +56,12 @@ github = "AkashRajpurohit/git-sync"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
+[packages.glab]
+asset_pattern = "glab_1.93.0_{os}_amd64.tar.gz"
+gitlab = "gitlab-org/cli"
+pkg_type = "archive"
+tag_pattern = "v*.*.*"
+
 [packages.lazygit]
 asset_pattern = "lazygit_*_{os}_{arch}.tar.gz"
 github = "jesseduffield/lazygit"

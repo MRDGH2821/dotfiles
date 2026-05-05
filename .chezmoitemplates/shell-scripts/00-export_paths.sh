@@ -30,6 +30,6 @@ export PATH="${HOME}/.cache/.bun/bin:${PATH}"
 
 
 # Default Apps
-export EDITOR="zed"
+export EDITOR="nano"
 export VISUAL="zed"
 export PAGER="less"

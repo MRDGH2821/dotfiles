@@ -27,6 +27,6 @@ export PATH="${CARGO_HOME}/bin:${PATH}"
 export PATH="${HOME}/.cache/.bun/bin:${PATH}"
 
 # Default Apps
-export EDITOR="nano"
-export VISUAL="zed"
+export EDITOR="zed --wait"
+export VISUAL="zed --wait"
 export PAGER="less"

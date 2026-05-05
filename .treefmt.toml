@@ -119,7 +119,8 @@ priority = 8
 command = "shfmt"
 # tombi: format.rules.array-values-order = "ascending"
 includes = ["*.sh", ".envrc"]
-options = ["--indent", "2"]
+no-positional-arg-support = true
+options = ["--indent", "2", "-w"]
 priority = 1
 
 [formatter.sort-markdown-tables]

@@ -5,7 +5,6 @@ eval "$(antidot init)" || true
 
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-
 # XDG folders
 export HISTFILE="${XDG_STATE_HOME}"/shell/history
 
@@ -26,8 +25,6 @@ export PATH="${CARGO_HOME}/bin:${PATH}"
 
 # bun
 export PATH="${HOME}/.cache/.bun/bin:${PATH}"
-
-
 
 # Default Apps
 export EDITOR="nano"

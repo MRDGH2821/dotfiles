@@ -56,8 +56,8 @@ command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
-  "**/private_dolphinrc",
-  "**/private_konsolerc",
+  "**/dolphinrc",
+  "**/konsolerc",
   "*.cjs",
   "*.cts",
   "*.js",

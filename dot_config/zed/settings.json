@@ -21,10 +21,14 @@
   },
   "agent_servers": {
     "cursor": {
-      "type": "registry"
+      "args": ["acp"],
+      "command": "cursor-agent",
+      "type": "custom"
     },
     "opencode": {
-      "type": "registry"
+      "args": ["acp"],
+      "command": "opencode",
+      "type": "custom"
     }
   },
   "auto_install_extensions": {

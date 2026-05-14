@@ -107,6 +107,7 @@
 | git-credential-oauth  | 👍     | 👍     | 👍     | 👍     | 👍      |
 | git-sync              | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | go-yq                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| hermes                | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | iio-sensor-proxy      | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | kcalc                 | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | kclock                | 👍     | 👍     | 👍     | 👍     | 🚫      |

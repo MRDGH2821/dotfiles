@@ -25,6 +25,11 @@
       "command": "cursor-agent",
       "type": "custom"
     },
+    "gemini": {
+      "args": ["--acp"],
+      "command": "gemini",
+      "type": "custom"
+    },
     "opencode": {
       "args": ["acp"],
       "command": "opencode",

@@ -30,3 +30,9 @@
 	helper = oauth
 [interactive]
 	diffFilter = delta --color-only
+
+[includeIf "hasconfig:remote.*.url:https://gitlab.com/axisnexa/**"]
+path = ~/.config/git/config-axisnexa
+
+[includeIf "gitdir:Axis-Nexa"]
+path = ~/.config/git/config-axisnexa

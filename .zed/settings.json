@@ -1,5 +1,6 @@
 {
   "file_types": {
+    "Git Config": ["**/git/config"],
     "Go Text Template": ["tmpl", ".chezmoiignore"],
     "JSON": ["**/.zed/*.json"],
     "ini": ["*.profile", "private_konsolerc", "private_dolphinrc"]

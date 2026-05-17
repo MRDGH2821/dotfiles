@@ -6,7 +6,6 @@ binstall:
   - cocogitto
   - ludusavi
   - mcfly
-  - tealdeer
   - topgrade
   - typstyle
   - zoxide

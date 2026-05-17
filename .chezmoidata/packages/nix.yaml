@@ -1,0 +1,4 @@
+---
+profile:
+  - github:kamadorueda/alejandra/4.0.0
+  - nixpkgs#devenv

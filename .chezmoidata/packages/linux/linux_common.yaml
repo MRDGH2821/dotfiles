@@ -25,19 +25,26 @@ laptop_only:
   installer_url:
     - if ! command -v ollama >/dev/null 2>&1; then curl -fsSL https://ollama.ai/install.sh | sh; fi
 packages:
+  - btop
+  - direnv
+  - fastfetch
   - firefox
   - flatpak
+  - fzf
   - git
   - git-credential-oauth
   - git-delta
   - keepassxc
   - kleopatra
+  - lazygit
   - mangohud
   - nix
   - ripgrep
   - rustup
   - sccache
+  - shellcheck
   - syncthing
+  - tealdeer
   - tmux
   - uv
   - vlc

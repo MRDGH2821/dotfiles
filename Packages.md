@@ -18,10 +18,9 @@
 | Name                  | Arch   | Debian | Fedora | Ubuntu | Windows |
 | --------------------- | ------ | ------ | ------ | ------ | ------- |
 | 7 Zip                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Alejandra             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Alpaca                | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Bat                   | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
-| Btop                  | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Btop                  | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Bulk Crap uninstaller | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Bun                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Calibre               | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
@@ -34,10 +33,10 @@
 | Epic games launcher   | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Espanso               | 👍     | 👍📥   | 👍     | 👍📥   | 👍      |
 | Everything            | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
-| Fastfetch             | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Fastfetch             | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Firefox               | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Flatseal              | 📦     | 📦     | 📦     | 📦     | 🚫      |
-| Fzf                   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Fzf                   | 👍     | 👍     | 👍     | 👍     | 👍      |
 | GNOME Camera          | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | GNOME Firmware        | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Git                   | 👍     | 👍     | 👍     | 👍     | 👍      |
@@ -51,7 +50,7 @@
 | Heroic Games Launcher | 👍     | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | Keepassxc             | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Kleopatra             | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| Lazygit               | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Lazygit               | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Link Shell Extension  | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
 | Ludusavi              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | MangoHUD              | 👍     | 👍     | 👍     | 👍     | 🚫      |
@@ -70,7 +69,7 @@
 | Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Rustup                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Save State            | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
-| Shellcheck            | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| Shellcheck            | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Shfmt                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Steam                 | 👍     | 👍🔗   | 👍     | 👍🔗   | 👍      |
 | Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |
@@ -94,12 +93,11 @@
 | cargo-binstall        | 🦀     | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache           | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update          | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
-| direnv                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
+| direnv                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | discover              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | docker                | 👍     | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | docker-buildx         | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | docker-compose        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
-| engram                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | ffmpeg                | 🚫     | 👍     | 🚫     | 🚫     | 🚫      |
 | filelight             | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | flatpak               | 👍     | 👍     | 👍     | 👍     | 🚫      |
@@ -133,7 +131,7 @@
 | skanlite              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | skanpage              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | system-config-printer | 👍     | 👍     | 👍     | 👍     | 🚫      |
-| tealdeer              | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| tealdeer              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | tesseract-data-eng    | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |
 | tmux                  | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | ttf-liberation        | 👍     | 🚫     | 🚫     | 🚫     | 🚫      |

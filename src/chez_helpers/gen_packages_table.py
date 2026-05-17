@@ -44,6 +44,7 @@ TABLE_MARKER = "<!-- smt -->"
 LINUX_DIR = REPO_ROOT / ".chezmoidata" / "packages" / "linux"
 WINDOWS_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "windows.yaml"
 RUST_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "rust.yaml"
+NIX_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "nix.yaml"
 SOAR_TOML = REPO_ROOT / "dot_config" / "soar" / "packages.toml"
 
 # Column keys → header labels (alphabetical = matches yq-key-sort + treefmt)
@@ -71,6 +72,7 @@ DRA_BARE = "📥"  # dra: [...] (bare dra list, no asset selection)
 CARGO = "🦀"  # cargo install (from crates.io source)
 CARGO_BINSTALL = "🦀💻"  # cargo binstall (downloads precompiled binary)
 CARGO_GIT = "🦀🔗"  # cargo install --git (from a git repo)
+NIX = "❄️"  # nix profile install (from nixpkgs or flakes)
 
 # These packages are installed via URL on the given distro, keyed by URL fragment
 # Maps (URL fragment substring) → display name
@@ -265,6 +267,44 @@ def _parse_windows_yaml(
 
 
 # ---------------------------------------------------------------------------
+# Nix YAML parser
+# ---------------------------------------------------------------------------
+
+
+def _parse_nix_yaml(
+    path: Path,
+    aliases: dict[str, str],
+    packages: dict[str, dict[str, str]],
+) -> None:
+    """Parse nix.yaml and set packages[display][distro] for all Linux distros.
+
+    Items are typically 'nixpkgs#name' or 'github:owner/repo/version'.
+    """
+    data = _load_yaml(path)
+    for item in data.get("profile", []):
+        if not isinstance(item, str):
+            continue
+
+        # Extract package ID
+        if "#" in item:
+            # nixpkgs#devenv -> devenv
+            pkg_id = item.split("#")[-1]
+        elif "/" in item:
+            # github:kamadorueda/alejandra/4.0.0 -> alejandra
+            parts = item.split("/")
+            if len(parts) >= 2:
+                pkg_id = parts[-2]
+            else:
+                pkg_id = parts[-1]
+        else:
+            pkg_id = item
+
+        display = _resolve(pkg_id, aliases)
+        for d in _ALL_LINUX:
+            _set_if_better(packages, display, d, NIX)
+
+
+# ---------------------------------------------------------------------------
 # Soar TOML parser
 # ---------------------------------------------------------------------------
 
@@ -346,7 +386,11 @@ def main() -> None:
     if RUST_YAML.exists():
         _parse_rust_yaml(RUST_YAML, aliases, packages)
 
-    # 6. Parse soar (FALLBACK — fills slots not already set by install files)
+    # 6. Parse nix.yaml — applies to all Linux distros
+    if NIX_YAML.exists():
+        _parse_nix_yaml(NIX_YAML, aliases, packages)
+
+    # 7. Parse soar (FALLBACK — fills slots not already set by install files)
     if SOAR_TOML.exists():
         _parse_soar_toml(SOAR_TOML, aliases, packages)
 

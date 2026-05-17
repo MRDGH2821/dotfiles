@@ -12,12 +12,14 @@
 | 🚫    | Skipped               |
 | 🪽    | Soar package          |
 | 📥    | Downloaded with DRA   |
+| ❄️    | Nix package           |
 
 <!-- smt -->
 
 | Name                  | Arch   | Debian | Fedora | Ubuntu | Windows |
 | --------------------- | ------ | ------ | ------ | ------ | ------- |
 | 7 Zip                 | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |
+| Alejandra             | ❄️     | ❄️     | ❄️     | ❄️     | 🚫      |
 | Alpaca                | 📦     | 📦     | 📦     | 📦     | 🚫      |
 | Bat                   | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Btop                  | 👍     | 👍     | 👍     | 👍     | 👍      |
@@ -93,6 +95,7 @@
 | cargo-binstall        | 🦀     | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache           | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update          | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| devenv                | ❄️     | ❄️     | ❄️     | ❄️     | 🚫      |
 | direnv                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | discover              | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | docker                | 👍     | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |

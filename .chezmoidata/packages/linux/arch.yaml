@@ -16,7 +16,6 @@ extra:
   - docker-buildx
   - docker-compose
   - github-cli
-  - keepassxc
   - meld
   - pam-u2f
   - sane

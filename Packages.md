@@ -71,7 +71,7 @@
 | Rclone browser        | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
 | Rustup                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | Save State            | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🖼️🪽🔗 | 🚫      |
-| Shellcheck            | 👍     | 👍     | 👍     | 👍     | 👍      |
+| Shellcheck            | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Shfmt                 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Steam                 | 👍     | 👍🔗   | 👍     | 👍🔗   | 👍      |
 | Syncthing             | 👍     | 👍     | 👍     | 👍     | 🚫      |

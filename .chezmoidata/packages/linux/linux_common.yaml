@@ -42,7 +42,6 @@ packages:
   - ripgrep
   - rustup
   - sccache
-  - shellcheck
   - syncthing
   - tealdeer
   - tmux

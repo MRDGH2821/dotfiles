@@ -7,6 +7,7 @@ asset_pattern = "antidot_*_Linux_{arch}.tar.gz"
 github = "doron-cohen/antidot"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
+version = "0.6.3"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"

@@ -21,7 +21,7 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 
 [packages.glab]
-asset_pattern = "glab_1.93.0_{os}_amd64.tar.gz"
+asset_pattern = "glab_*_{os}_amd64.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"

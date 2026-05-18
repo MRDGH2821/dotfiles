@@ -3,7 +3,7 @@ binary_only = false
 profile = "default"
 
 [packages.antidot]
-asset_pattern = "antidot_*_{os}_{arch}.tar.gz"
+asset_pattern = "antidot_*_Linux_{arch}.tar.gz"
 github = "doron-cohen/antidot"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"

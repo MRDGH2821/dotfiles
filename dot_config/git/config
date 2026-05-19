@@ -34,5 +34,5 @@
 [includeIf "hasconfig:remote.*.url:https://gitlab.com/axisnexa/**"]
 path = ~/.config/git/config-axisnexa
 
-[includeIf "gitdir:Axis-Nexa"]
+[includeIf "gitdir:AxisNexa"]
 path = ~/.config/git/config-axisnexa

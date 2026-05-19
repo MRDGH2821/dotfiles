@@ -30,6 +30,11 @@
       "command": "gemini",
       "type": "custom"
     },
+    "hermes": {
+      "args": ["acp"],
+      "command": "hermes",
+      "type": "custom"
+    },
     "opencode": {
       "args": ["acp"],
       "command": "opencode",

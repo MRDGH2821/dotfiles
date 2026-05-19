@@ -6,6 +6,7 @@
 	pager = delta --side-by-side --dark
 [init]
 	defaultBranch = main
+	templateDir = /home/mihirr/.config/git/templates
 [merge]
 	ff = only
 [tag]

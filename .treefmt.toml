@@ -118,7 +118,7 @@ priority = 8
 [formatter.shfmt]
 command = "shfmt"
 # tombi: format.rules.array-values-order = "ascending"
-includes = ["*.sh", ".envrc"]
+includes = ["**/git/templates/hooks/**", "*.sh", ".envrc"]
 no-positional-arg-support = true
 options = ["--indent", "2", "-w"]
 priority = 1

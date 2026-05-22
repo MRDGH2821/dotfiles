@@ -14,7 +14,8 @@ pre = "alpha.*"
 pre_bump_hooks = [
   "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'",
   "bun pm version {{version}} --no-git-tag-version",
-  "bunx git-cliff -o CHANGELOG.md --tag {{version_tag}}"
+  "bunx git-cliff -o CHANGELOG.md --tag {{version_tag}}",
+  "treefmt CHANGELOG.md"
 ]
 pre_package_bump_hooks = []
 # tombi: format.rules.array-values-order = "ascending"

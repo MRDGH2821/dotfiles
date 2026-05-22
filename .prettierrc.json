@@ -19,13 +19,27 @@
       "options": {
         "parser": "ini"
       }
+    },
+    {
+      "files": ["*.sh", "**/.envrc"],
+      "options": {
+        "parser": "sh"
+      }
+    },
+    {
+      "files": ["*.xml", "**/dolphinui.rc"],
+      "options": {
+        "parser": "xml"
+      }
     }
   ],
   "plugins": [
     "prettier-plugin-go-template",
     "prettier-plugin-ini",
     "prettier-plugin-powershell",
-    "prettier-plugin-toml"
+    "prettier-plugin-toml",
+    "@prettier/plugin-xml",
+    "prettier-plugin-sh"
   ],
   "powershellIndentSize": 2,
   "powershellRewriteAliases": true,

@@ -10,7 +10,18 @@ repos:
         stages:
           - pre-commit
     repo: https://github.com/gitguardian/ggshield
-    rev: v1.48.0
+    rev: v1.50.4
+  - hooks:
+      - args:
+          - --fail-on-change
+        entry: treefmt
+        id: treefmt-check
+        language: unsupported
+        name: Treefmt check
+        priority: 3
+        stages:
+          - pre-commit
+    repo: local
   - hooks:
       - args:
           - --config .cspell.json
@@ -28,7 +39,7 @@ repos:
         stages:
           - commit-msg
     repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.7.0
+    rev: v10.0.0
   - hooks:
       # Prevent committing inline conflict markers
       - args:

@@ -53,32 +53,19 @@ priority = 1
 
 [formatter.prettier]
 command = "bunx"
-excludes = []
 # tombi: format.rules.array-values-order = "ascending"
-includes = [
-  "**/dolphinrc",
-  "**/git/config",
-  "**/konsolerc",
-  "*.cjs",
-  "*.cts",
-  "*.ini",
-  "*.js",
-  "*.json",
-  "*.jsonc",
-  "*.jsx",
-  "*.md",
-  "*.mjs",
-  "*.mts",
-  "*.ps1",
-  "*.tmpl",
-  "*.toml",
-  "*.ts",
-  "*.tsx",
-  "*.yaml",
-  "*.yml",
-  ".editorconfig"
+excludes = [
+  "**/dot_zshrc",
+  "*.*ignore",
+  "*.conf",
+  "*.jinja",
+  "*.lock",
+  "*.nix",
+  "*.py",
+  "dot_shellcheckrc"
 ]
-options = ["prettier", "--log-level", "debug", "--write"]
+includes = ["*"]
+options = ["prettier", "--log-level", "error", "--write"]
 priority = 100
 
 [formatter.prettypst-default]
@@ -109,14 +96,6 @@ includes = ["*.py"]
 options = ["ruff", "check", "--fix"]
 priority = 8
 
-[formatter.shfmt]
-command = "shfmt"
-# tombi: format.rules.array-values-order = "ascending"
-includes = ["**/git/templates/hooks/**", "*.sh", ".envrc"]
-no-positional-arg-support = true
-options = ["--indent", "2", "-w"]
-priority = 1
-
 [formatter.sort-markdown-tables]
 command = "smt"
 includes = ["*.md"]
@@ -146,12 +125,6 @@ command = "typstyle"
 includes = ["*.typ"]
 options = ["-i"]
 priority = 1
-
-[formatter.xmllint]
-command = "xmllint"
-includes = ["*.xml"]
-options = ["--format"]
-priority = 0
 
 [formatter.yamlfix]
 command = "uvx"

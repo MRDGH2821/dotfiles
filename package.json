@@ -7,11 +7,14 @@
     "name": "MRDGH2821",
     "url": "https://github.com/MRDGH2821"
   },
+  "dependencies": {},
   "devDependencies": {
-    "prettier": "^3.8.1",
+    "@prettier/plugin-xml": "^3.4.2",
+    "prettier": "^3.8.3",
     "prettier-plugin-go-template": "^0.0.15",
     "prettier-plugin-ini": "^1.3.0",
     "prettier-plugin-powershell": "^2.0.11",
+    "prettier-plugin-sh": "^0.18.1",
     "prettier-plugin-toml": "^2.0.6"
   }
 }

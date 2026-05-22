@@ -9,7 +9,13 @@
       }
     },
     {
-      "files": ["konsolerc", "dolphinrc", ".editorconfig", "**/git/config"],
+      "files": [
+        "konsolerc",
+        "dolphinrc",
+        ".editorconfig",
+        "**/git/config",
+        "**/konsole/*.profile"
+      ],
       "options": {
         "parser": "ini"
       }

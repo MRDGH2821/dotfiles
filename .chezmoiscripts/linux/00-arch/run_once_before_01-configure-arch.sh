@@ -4,7 +4,7 @@ LINE="-------------------------------------------"
 
 export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
-if ! command -v pacman &>/dev/null; then
+if ! command -v pacman &> /dev/null; then
   echo "This script is only for Arch based systems. Exiting..."
   echo "${LINE}"
   exit 1

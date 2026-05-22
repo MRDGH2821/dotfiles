@@ -31,7 +31,7 @@ touchfile() {
 
 # Conditional aliases
 
-if command -v zeditor >/dev/null 2>&1; then
+if command -v zeditor > /dev/null 2>&1; then
   alias zed='zeditor'
 fi
 

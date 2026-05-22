@@ -1,39 +1,50 @@
 [commit]
-	gpgsign = true
+gpgsign=true
+
 [core]
-	autocrlf = false
-	editor = zed -n --wait
-	pager = delta --side-by-side --dark
+autocrlf=false
+editor=zed -n --wait
+pager=delta --side-by-side --dark
+
 [init]
-	defaultBranch = main
-	templateDir = /home/mihirr/.config/git/templates
+defaultBranch=main
+templateDir=/home/mihirr/.config/git/templates
+
 [merge]
-	ff = only
+ff=only
+
 [tag]
-	forceSignAnnotated = true
-	gpgsign = true
+forceSignAnnotated=true
+gpgsign=true
+
 [delta]
-	side-by-side = true
-	line-numbers = true
-	syntax-theme = Dracula
+side-by-side=true
+line-numbers=true
+syntax-theme=Dracula
+
 [user]
-	email = ask.mrdgh2821@outlook.com
-	name = MRDGH2821
-	signingkey = 1915CBA05A598D01
+email=ask.mrdgh2821@outlook.com
+name=MRDGH2821
+signingkey=1915CBA05A598D01
+
 [credential "https://github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
+helper=!/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper =
-	helper = !/usr/bin/gh auth git-credential
+helper=!/usr/bin/gh auth git-credential
+
 [credential]
-	helper = cache --timeout 21600
-	helper = oauth
+helper=cache --timeout 21600
+helper=oauth
+
 [interactive]
-	diffFilter = delta --color-only
+diffFilter=delta --color-only
 
 [includeIf "hasconfig:remote.*.url:https://gitlab.com/axisnexa/**"]
-path = ~/.config/git/config-axisnexa
+path=~/.config/git/config-axisnexa
 
 [includeIf "gitdir:AxisNexa"]
-path = ~/.config/git/config-axisnexa
+path=~/.config/git/config-axisnexa
+
+[push]
+followTags=true

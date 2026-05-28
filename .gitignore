@@ -3,6 +3,7 @@
 .devenv
 .direnv
 .venv/
+.worktrees/
 /.devenv
 bun.lock
 megalinter-reports/

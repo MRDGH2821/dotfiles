@@ -1,5 +1,7 @@
 # shellcheck shell=bash
 
+source 00-env.sh
+
 # XDG Base dirs
 eval "$(antidot init)" || true
 

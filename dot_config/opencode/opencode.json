@@ -28,7 +28,7 @@
       "npm": "@ai-sdk/openai-compatible",
       "options": {
         "apiKey": "{env:CURSOR_API_KEY}",
-        "baseURL": "https://cursor-api.standardagents.ai/opencode/v1"
+        "baseURL": "https://cursor-api.standardagents.ai/opencodev2/v1"
       }
     }
   },

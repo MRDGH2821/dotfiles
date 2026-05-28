@@ -57,10 +57,17 @@ command = "bunx"
 excludes = [
   "**/dot_zshrc",
   "*.*ignore",
+  "*.aac",
   "*.conf",
+  "*.docx",
   "*.jinja",
+  "*.jpg",
   "*.lock",
+  "*.mp4",
   "*.nix",
+  "*.pdf",
+  "*.png",
+  "*.pptx",
   "*.py",
   "dot_shellcheckrc"
 ]

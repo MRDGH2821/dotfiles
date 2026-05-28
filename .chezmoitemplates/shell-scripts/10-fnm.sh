@@ -6,11 +6,12 @@ FNM_PATH="${HOME}/.local/share/fnm"
 
 if [[ -d ${FNM_PATH} ]]; then
   export PATH="${FNM_PATH}:${PATH}"
-  eval "$(fnm env)" || true
 fi
 
-eval "$(fnm env --use-on-cd --shell "${SHELL_NAME}")" || true
+if (($ + commands[fnm])); then
+  eval "$(fnm env --use-on-cd --shell "${SHELL_NAME}")" || true
 
-if [[ -f .node-version ]] || [[ -f .nvmrc ]]; then
-  fnm use || true
+  if [[ -f .node-version ]] || [[ -f .nvmrc ]]; then
+    fnm use || true
+  fi
 fi

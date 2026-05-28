@@ -22,5 +22,15 @@
     "oh-my-opencode-slim",
     "opencode-plugin-openspec"
   ],
+  "provider": {
+    "cursor": {
+      "name": "Cursor API via Standard Agents",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "{env:CURSOR_API_KEY}",
+        "baseURL": "https://cursor-api.standardagents.ai/opencode/v1"
+      }
+    }
+  },
   "small_model": "opencode/gpt-5-nano"
 }

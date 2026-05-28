@@ -25,11 +25,6 @@
       "command": "cursor-agent",
       "type": "custom"
     },
-    "gemini": {
-      "args": ["--acp"],
-      "command": "gemini",
-      "type": "custom"
-    },
     "hermes": {
       "args": ["acp"],
       "command": "hermes",

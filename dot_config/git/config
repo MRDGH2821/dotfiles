@@ -35,6 +35,7 @@ helper=!/usr/bin/gh auth git-credential
 
 [credential]
 helper=cache --timeout 21600
+helper=libsecret
 helper=oauth
 
 [interactive]

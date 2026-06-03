@@ -27,7 +27,7 @@ asset_pattern = "glab_*_{os}_amd64.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.100.0"
+version = "1.101.0"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"

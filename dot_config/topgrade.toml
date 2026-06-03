@@ -1,6 +1,6 @@
 [commands]
-"Hermes Update" = "hermes update"
-"Soar Update" = "soar update"
+"Hermes Agent" = "hermes update"
+"Soar Package Manager" = "soar update"
 
 [firmware]
 upgrade = true

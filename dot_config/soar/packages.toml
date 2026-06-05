@@ -27,7 +27,7 @@ asset_pattern = "glab_*_{os}_amd64.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.101.0"
+version = "1.102.0"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
@@ -47,7 +47,7 @@ version = "0.6.1"
 asset_pattern = "rclone-*-{os}-amd64.zip"
 github = "rclone/rclone"
 pkg_id = "rclone.rclone"
-version = "1.74.2"
+version = "1.74.3"
 
 [packages.rclone_browser]
 asset_pattern = "*{os}-{arch}.AppImage"

@@ -1,5 +1,8 @@
 # shellcheck shell=bash
 
+# AppImages
+export PATH="${HOME}/AppImages:${PATH}"
+
 # XDG Base dirs
 eval "$(antidot init)" || true
 

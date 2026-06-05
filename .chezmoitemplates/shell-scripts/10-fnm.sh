@@ -8,7 +8,7 @@ if [[ -d ${FNM_PATH} ]]; then
   export PATH="${FNM_PATH}:${PATH}"
 fi
 
-if (($ + commands[fnm])); then
+if command -v fnm > /dev/null 2>&1; then
   eval "$(fnm env --use-on-cd --shell "${SHELL_NAME}")" || true
 
   if [[ -f .node-version ]] || [[ -f .nvmrc ]]; then

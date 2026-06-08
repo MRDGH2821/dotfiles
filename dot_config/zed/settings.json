@@ -21,9 +21,7 @@
   },
   "agent_servers": {
     "cursor": {
-      "args": ["acp"],
-      "command": "cursor-agent",
-      "type": "custom"
+      "type": "registry"
     },
     "hermes": {
       "args": ["acp"],

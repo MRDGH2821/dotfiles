@@ -7,7 +7,9 @@ CLEAR_REPORT_FOLDER: true
 IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_CLI_LINT_MODE: project
 PRE_COMMANDS:
-  - command: npm install
+  - command: |
+      npm install -g bun
+      bun i
     continue_if_failed: false
     cwd: workspace
     run_before_linters: true

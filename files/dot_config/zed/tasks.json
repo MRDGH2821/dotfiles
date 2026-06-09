@@ -10,19 +10,6 @@
     "tags": ["format"]
   },
   {
-    "allow_concurrent_runs": false,
-    "command": "xdg-open http://127.0.0.1:23635/",
-    "hide": "always",
-    "label": "Open Typst Preview",
-    "reveal": "never",
-    "reveal_target": "dock",
-    "shell": "system",
-    "show_command": true,
-    "show_summary": true,
-    "tags": ["build"],
-    "use_new_terminal": true
-  },
-  {
     "args": ["difftool", "--dir-diff"],
     "command": "git",
     "hide": "on_success",

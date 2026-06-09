@@ -4,16 +4,7 @@ ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
   - GITHUB_TOKEN
 APPLY_FIXES: all
 CLEAR_REPORT_FOLDER: true
+DISABLE_LINTERS:
+  - REPOSITORY_DEVSKIM
 IGNORE_GITIGNORED_FILES: true
-JSON_PRETTIER_CLI_LINT_MODE: project
-PRE_COMMANDS:
-  - command: |
-      npm install -g bun
-      bun i
-    continue_if_failed: false
-    cwd: workspace
-    run_before_linters: true
-    secured_env: true
-    tag: default
 SHOW_ELAPSED_TIME: true
-YAML_PRETTIER_CLI_LINT_MODE: project

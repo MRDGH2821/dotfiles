@@ -1,4 +1,5 @@
 [commands]
+"Antidote rules" = "antidote update"
 "Hermes Agent" = "hermes update"
 "Soar Package Manager" = "soar update"
 

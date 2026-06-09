@@ -14,6 +14,7 @@
         "dolphinrc",
         ".editorconfig",
         "**/git/config",
+        "dot_shellcheckrc",
         "**/konsole/*.profile"
       ],
       "options": {
@@ -21,9 +22,10 @@
       }
     },
     {
-      "files": ["*.sh", "**/.envrc"],
+      "files": ["*.sh", "**/.envrc", "dot_zshrc", "dot_bashrc", "dot_zshenv"],
       "options": {
-        "parser": "sh"
+        "parser": "sh",
+        "spaceRedirects": false
       }
     },
     {

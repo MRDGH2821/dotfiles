@@ -55,7 +55,6 @@ priority = 1
 command = "bunx"
 # tombi: format.rules.array-values-order = "ascending"
 excludes = [
-  "**/dot_zshrc",
   "*.*ignore",
   "*.aac",
   "*.conf",
@@ -71,7 +70,6 @@ excludes = [
   "*.py",
   "*.txt",
   "*.typ",
-  "dot_shellcheckrc",
   "justfile"
 ]
 includes = ["*"]

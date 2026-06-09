@@ -1,6 +1,5 @@
 *.*ignore
 .chezmoiignore
 .chezmoiroot
-dot_shellcheckrc
 dot_zshrc
 private_spectaclerc.tmpl

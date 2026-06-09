@@ -10,7 +10,8 @@ if [[ "${SHELL_NAME}" == "zsh" ]] && command -v rustc >/dev/null 2>&1; then
   # completion function`. Instead, register it for autoload on fpath.
   RUST_ZSH_FUNCTIONS="$(rustc --print sysroot)/share/zsh/site-functions"
   if [[ -d "${RUST_ZSH_FUNCTIONS}" ]]; then
-    fpath=("${RUST_ZSH_FUNCTIONS}" "${fpath}")
+    # shellcheck disable=SC2206
+    fpath=("${RUST_ZSH_FUNCTIONS}" ${fpath})
     autoload -Uz _cargo
     compdef _cargo cargo
   fi

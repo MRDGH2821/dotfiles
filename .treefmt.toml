@@ -69,7 +69,10 @@ excludes = [
   "*.png",
   "*.pptx",
   "*.py",
-  "dot_shellcheckrc"
+  "*.txt",
+  "*.typ",
+  "dot_shellcheckrc",
+  "justfile"
 ]
 includes = ["*"]
 options = ["prettier", "--log-level", "error", "--write"]

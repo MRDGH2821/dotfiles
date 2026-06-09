@@ -5,7 +5,7 @@ LINE="-------------------------------------------"
 
 export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
-if ! command -v apt &> /dev/null; then
+if ! command -v apt &>/dev/null; then
   echo "This script is only for Debian based systems. Exiting..."
   echo "${LINE}"
   exit 1
@@ -38,7 +38,7 @@ fi
 echo "${LINE}"
 
 # Install Nala
-if command -v nala &> /dev/null; then
+if command -v nala &>/dev/null; then
   echo "Nala is already installed. Skipping"
 
 else
@@ -67,11 +67,11 @@ sudo mkdir -p -m 755 /etc/apt/keyrings
 out=$(mktemp)
 wget -nv -O"${out}" https://cli.github.com/packages/githubcli-archive-keyring.gpg
 # shellcheck disable=SC2312,SC2002
-cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
 sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
 sudo mkdir -p -m 755 /etc/apt/sources.list.d
 # shellcheck disable=SC2312
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
 echo "${LINE}"
 
@@ -80,7 +80,7 @@ if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "13" ]]; then
   echo "Setting up Waydroid Helper repository for Debian 13..."
   echo 'deb https://download.opensuse.org/repositories/home:/CuteNeko:/waydroid-helper/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/home:CuteNeko:waydroid-helper.list
   # shellcheck disable=SC2312
-  curl -fsSL https://download.opensuse.org/repositories/home:CuteNeko:waydroid-helper/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_CuteNeko_waydroid-helper.gpg > /dev/null
+  curl -fsSL https://download.opensuse.org/repositories/home:CuteNeko:waydroid-helper/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_CuteNeko_waydroid-helper.gpg >/dev/null
   echo -e "Package: python3-pywayland\nPin: origin \"download.opensuse.org\"\nPin-Priority: 1001" | sudo tee /etc/apt/preferences.d/99-pywayland.pref
 fi
 echo "${LINE}"
@@ -89,13 +89,13 @@ echo "${LINE}"
 # shellcheck disable=SC2312
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
 # shellcheck disable=SC2312
-echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2> /dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
+echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
 
 ## Firefox
 sudo install -d -m 0755 /etc/apt/keyrings
-wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc >/dev/null
 
-cat << EOF | sudo tee /etc/apt/sources.list.d/mozilla.sources
+cat <<EOF | sudo tee /etc/apt/sources.list.d/mozilla.sources
 Types: deb
 URIs: https://packages.mozilla.org/apt
 Suites: mozilla

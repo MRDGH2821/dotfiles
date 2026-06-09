@@ -4,7 +4,7 @@ LINE="-------------------------------------------"
 
 export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
-if ! command -v dnf &> /dev/null; then
+if ! command -v dnf &>/dev/null; then
   echo "dnf not found. This script is only for Fedora based systems. Exiting..."
   echo "${LINE}"
   exit 1
@@ -59,7 +59,7 @@ fi
 echo "${LINE}"
 
 ## Terra repo
-if ! dnf repolist terra > /dev/null 2>&1; then
+if ! dnf repolist terra >/dev/null 2>&1; then
   sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 else
   echo "Terra repo already exists. Skipping..."

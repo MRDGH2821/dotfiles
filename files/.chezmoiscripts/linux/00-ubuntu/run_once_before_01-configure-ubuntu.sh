@@ -5,7 +5,7 @@ LINE="-------------------------------------------"
 
 export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
 
-if ! command -v apt &> /dev/null; then
+if ! command -v apt &>/dev/null; then
   echo "This script is only for Ubuntu based systems. Exiting..."
   echo "${LINE}"
   exit 1
@@ -33,7 +33,7 @@ fi
 echo "${LINE}"
 
 # Install Nala
-if command -v nala &> /dev/null; then
+if command -v nala &>/dev/null; then
   echo "Nala is already installed. Skipping"
 else
   # shellcheck disable=SC2312
@@ -69,11 +69,11 @@ sudo mkdir -p -m 755 /etc/apt/keyrings
 out=$(mktemp)
 wget -nv -O"${out}" https://cli.github.com/packages/githubcli-archive-keyring.gpg
 # shellcheck disable=SC2312,SC2002
-cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
 sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
 sudo mkdir -p -m 755 /etc/apt/sources.list.d
 # shellcheck disable=SC2312
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
 
 echo "${LINE}"
 
@@ -92,7 +92,7 @@ echo "${LINE}"
 # shellcheck disable=SC2312
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
 # shellcheck disable=SC2312
-echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2> /dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
+echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
 
 # Install Soar
 # shellcheck disable=SC2312

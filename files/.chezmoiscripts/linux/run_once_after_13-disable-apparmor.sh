@@ -3,7 +3,7 @@ set -e
 
 export PATH="${HOME}/.local/bin:${PATH}"
 
-if ! command -v aa-status &> /dev/null; then
+if ! command -v aa-status &>/dev/null; then
   echo "AppArmor is not installed."
   exit 0
 fi

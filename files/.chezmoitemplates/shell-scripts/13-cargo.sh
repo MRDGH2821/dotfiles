@@ -3,7 +3,7 @@
 SHELL_PATH=$(ps -p $$ -o comm=)
 SHELL_NAME=$(basename "${SHELL_PATH}")
 
-if [[ "${SHELL_NAME}" == "zsh" ]] && command -v rustc > /dev/null 2>&1; then
+if [[ "${SHELL_NAME}" == "zsh" ]] && command -v rustc >/dev/null 2>&1; then
   # zsh: don't `source` the rustup _cargo file — it ends with a bare
   # `_cargo` call that runs `_arguments` outside a completion context
   # and triggers `_arguments:comparguments:327: can only be called from

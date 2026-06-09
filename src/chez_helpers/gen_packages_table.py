@@ -37,15 +37,16 @@ import yaml
 # Paths
 # ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parents[2]
+FILES_ROOT = REPO_ROOT / "files"
 PACKAGES_MD = REPO_ROOT / "Packages.md"
 NAMES_FILE = Path(__file__).resolve().with_name("packages-names.yaml")
 TABLE_MARKER = "<!-- smt -->"
 
-LINUX_DIR = REPO_ROOT / ".chezmoidata" / "packages" / "linux"
-WINDOWS_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "windows.yaml"
-RUST_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "rust.yaml"
-NIX_YAML = REPO_ROOT / ".chezmoidata" / "packages" / "nix.yaml"
-SOAR_TOML = REPO_ROOT / "dot_config" / "soar" / "packages.toml"
+LINUX_DIR = FILES_ROOT / ".chezmoidata" / "packages" / "linux"
+WINDOWS_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "windows.yaml"
+RUST_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "rust.yaml"
+NIX_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "nix.yaml"
+SOAR_TOML = FILES_ROOT / "dot_config" / "soar" / "packages.toml"
 
 # Column keys → header labels (alphabetical = matches yq-key-sort + treefmt)
 COLUMNS: list[tuple[str, str]] = [

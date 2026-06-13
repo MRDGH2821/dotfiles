@@ -34,7 +34,7 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.9.30"
+version = "0.9.31"
 
 [packages.pince]
 asset_pattern = "*.AppImage"
@@ -59,7 +59,7 @@ tag_pattern = "*.*.*"
 asset_pattern = "*.AppImage"
 github = "Matteo842/SaveState"
 pkg_type = "appimage"
-version = "2.7d"
+version = "2.7.1"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"

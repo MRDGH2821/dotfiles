@@ -95,6 +95,7 @@
 | cargo-binstall        | 🦀     | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache           | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update          | 🦀💻   | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| ccu                   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | devenv                | ❄️     | ❄️     | ❄️     | ❄️     | 🚫      |
 | direnv                | 👍     | 👍     | 👍     | 👍     | 👍      |
 | discover              | 👍     | 👍     | 👍     | 👍     | 🚫      |

@@ -29,6 +29,18 @@ touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }
 
+line() {
+  printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'""
+}
+
+update-repo() {
+  line
+  git -C "$(dirname "$1")" pull
+  line
+  copier update
+  line
+}
+
 # Conditional aliases
 
 if command -v zeditor >/dev/null 2>&1; then

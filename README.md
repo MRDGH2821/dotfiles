@@ -125,3 +125,7 @@ cursor/gpt-5.4-xhigh-fast
 cursor/grok-4-20
 cursor/grok-4-20-thinking
 cursor/kimi-k2.5
+
+## Licence
+
+[MIT](./LICENSE)

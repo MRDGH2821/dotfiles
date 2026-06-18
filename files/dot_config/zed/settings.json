@@ -21,6 +21,10 @@
   },
   "agent_servers": {
     "cursor": {
+      "default_config_options": {
+        "mode": "agent",
+        "model": "default[]"
+      },
       "type": "registry"
     },
     "hermes": {

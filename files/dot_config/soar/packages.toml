@@ -15,6 +15,7 @@ asset_pattern = "ccu-{os}-{arch}"
 github = "p-arndt/compose-check-updates"
 pkg_type = "binary"
 tag_pattern = "*.*.*"
+version = "0.4.1"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"
@@ -36,7 +37,7 @@ asset_pattern = "glab_*_{os}_{arch}.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.102.0"
+version = "1.103.0"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"

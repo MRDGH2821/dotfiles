@@ -85,6 +85,13 @@ update-repo() {
     (cd "$repo_dir" && nix flake update)
   fi
 
+  # Skills (agent skills update)
+  if command -v bun >/dev/null 2>&1; then
+    line
+    echo "• Skills update..."
+    (cd "$repo_dir" && bun x skills update -p -y)
+  fi
+
   line
   echo "✓ Repo update complete"
   line

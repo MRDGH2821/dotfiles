@@ -1,7 +1,7 @@
 ---
 cli:
-  - apm-cli
   - copier
   - ggshield
+  - lic-cli
   - prek
   - uv-upx

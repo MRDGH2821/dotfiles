@@ -30,7 +30,7 @@ touchfile() {
 }
 
 line() {
-  printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'""
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '-'
 }
 
 update-repo() {
@@ -100,7 +100,7 @@ update-repo() {
   fi
 
   # GitHub Actions updater
-  if [[ -f "${repo_dir}/.github/workflows/" ]]; then
+  if [[ -d "${repo_dir}/.github/workflows/" ]]; then
     line
     echo "• GitHub Actions updater..."
     (cd "${repo_dir}" && bunx actions-up@latest -r)

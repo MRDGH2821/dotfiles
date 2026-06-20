@@ -54,7 +54,7 @@ update-repo() {
   if [[ -f "$repo_dir/uv.lock" ]]; then
     line
     echo "• Python dependencies (uv)..."
-    (cd "$repo_dir" && uv-upx)
+    (cd "$repo_dir" && uv-upx upgrade run)
   fi
 
   # Rust dependencies (cargo)
@@ -90,6 +90,20 @@ update-repo() {
     line
     echo "• Skills update..."
     (cd "$repo_dir" && bun x skills update -p -y)
+  fi
+
+  # Compose updater
+  if command -v ccu >/dev/null 2>&1; then
+    line
+    echo "• Compose updater..."
+    (cd "$repo_dir" && ccu -f -u)
+  fi
+
+  # GitHub Actions updater
+  if [[ -f "$repo_dir/.github/workflows/" ]]; then
+    line
+    echo "• GitHub Actions updater..."
+    (cd "$repo_dir" && bunx actions-up@latest -r)
   fi
 
   line

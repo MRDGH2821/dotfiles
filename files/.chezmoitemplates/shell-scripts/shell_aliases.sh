@@ -72,38 +72,38 @@ update-repo() {
   fi
 
   # Go dependencies
-  if [[ -f "$repo_dir/go.sum" ]]; then
+  if [[ -f "${repo_dir}/go.sum" ]]; then
     line
     echo "• Go dependencies..."
-    (cd "$repo_dir" && go get -u ./... && go mod tidy)
+    (cd "${repo_dir}" && go get -u ./... && go mod tidy)
   fi
 
   # Nix flake updates
-  if [[ -f "$repo_dir/flake.lock" ]]; then
+  if [[ -f "${repo_dir}/flake.lock" ]]; then
     line
     echo "• Nix flake updates..."
-    (cd "$repo_dir" && nix flake update)
+    (cd "${repo_dir}" && nix flake update)
   fi
 
   # Skills (agent skills update)
   if command -v bun >/dev/null 2>&1; then
     line
     echo "• Skills update..."
-    (cd "$repo_dir" && bun x skills update -p -y)
+    (cd "${repo_dir}" && bun x skills update -p -y)
   fi
 
   # Compose updater
   if command -v ccu >/dev/null 2>&1; then
     line
     echo "• Compose updater..."
-    (cd "$repo_dir" && ccu -f -u)
+    (cd "${repo_dir}" && ccu -f -u)
   fi
 
   # GitHub Actions updater
-  if [[ -f "$repo_dir/.github/workflows/" ]]; then
+  if [[ -f "${repo_dir}/.github/workflows/" ]]; then
     line
     echo "• GitHub Actions updater..."
-    (cd "$repo_dir" && bunx actions-up@latest -r)
+    (cd "${repo_dir}" && bunx actions-up@latest -r)
   fi
 
   line

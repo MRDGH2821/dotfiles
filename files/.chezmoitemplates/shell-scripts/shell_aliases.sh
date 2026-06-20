@@ -37,38 +37,38 @@ update-repo() {
   local repo_dir="${1:-.}"
 
   line
-  echo "→ Updating repo: $(basename "$repo_dir")"
+  echo "→ Updating repo: $(basename "${repo_dir}")"
   line
 
   # Git pull
-  git -C "$repo_dir" pull
+  git -C "${repo_dir}" pull
 
   # Copier template update
-  if [[ -f "$repo_dir/.copier-answers.yml" ]] || [[ -f "$repo_dir/.copier-answers.yaml" ]]; then
+  if [[ -f "${repo_dir}/.copier-answers.yml" ]] || [[ -f "${repo_dir}/.copier-answers.yaml" ]]; then
     line
     echo "• Copier template..."
-    (cd "$repo_dir" && copier update)
+    (cd "${repo_dir}" && copier update)
   fi
 
   # Python dependencies (uv)
-  if [[ -f "$repo_dir/uv.lock" ]]; then
+  if [[ -f "${repo_dir}/uv.lock" ]]; then
     line
     echo "• Python dependencies (uv)..."
-    (cd "$repo_dir" && uv-upx upgrade run)
+    (cd "${repo_dir}" && uv-upx upgrade run)
   fi
 
   # Rust dependencies (cargo)
-  if [[ -f "$repo_dir/Cargo.lock" ]]; then
+  if [[ -f "${repo_dir}/Cargo.lock" ]]; then
     line
     echo "• Rust dependencies (cargo)..."
-    (cd "$repo_dir" && cargo update)
+    (cd "${repo_dir}" && cargo update)
   fi
 
   # JS/TS dependencies (bun)
-  if [[ -f "$repo_dir/bun.lock" ]] || [[ -f "$repo_dir/bun.lockb" ]]; then
+  if [[ -f "${repo_dir}/bun.lock" ]] || [[ -f "${repo_dir}/bun.lockb" ]]; then
     line
     echo "• JS dependencies (bun)..."
-    (cd "$repo_dir" && bun update)
+    (cd "${repo_dir}" && bun update)
   fi
 
   # Go dependencies

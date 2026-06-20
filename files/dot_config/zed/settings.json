@@ -1,6 +1,10 @@
 {
-  "$schema": "zed://schemas/settings",
   "agent": {
+    "default_model": {
+      "enable_thinking": true,
+      "model": "gemma3n:e4b",
+      "provider": "ollama"
+    },
     "dock": "right",
     "model_parameters": [],
     "sidebar_side": "right",

@@ -86,7 +86,7 @@ update-repo() {
   fi
 
   # Skills (agent skills update)
-  if command -v bun >/dev/null 2>&1; then
+  if [[ -f "${repo_dir}/skills-lock.json" ]]; then
     line
     echo "• Skills update..."
     (cd "${repo_dir}" && bun x skills update -p -y)

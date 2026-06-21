@@ -47,7 +47,7 @@ update-repo() {
   if [[ -f "${repo_dir}/.copier-answers.yml" ]] || [[ -f "${repo_dir}/.copier-answers.yaml" ]]; then
     line
     echo "• Copier template..."
-    (cd "${repo_dir}" && copier check-update)
+    (cd "${repo_dir}" && (copier check-update -q || copier update))
   fi
 
   # Python dependencies (uv)

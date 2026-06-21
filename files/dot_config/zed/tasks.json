@@ -51,8 +51,8 @@
     "tags": ["git"]
   },
   {
-    "args": ["check-update"],
-    "command": "copier",
+    "args": ["-c", "copier check-update -q || copier update"],
+    "command": "sh",
     "hide": "on_success",
     "label": "Update copier template",
     "tags": ["git"]

@@ -118,6 +118,7 @@
 | libqt6printsupport6   | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
 | libqt6widgets6        | 🚫     | 👍     | 🚫     | 👍     | 🚫      |
 | llmfit                | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| ls-lint               | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | nix                   | 👍     | 👍     | 👍     | 👍     | 🚫      |
 | ollama                | 💻🔗   | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | pCloud                | 🚫     | 🚫     | 🚫     | 🚫     | 👍      |

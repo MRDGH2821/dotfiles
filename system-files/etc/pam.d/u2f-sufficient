@@ -1,0 +1,17 @@
+#%PAM-1.0
+# Make sure to include this file in /etc/pam.d/sudo & /usr/lib/pam.d/polkit-1
+# Add following lines in the above mentioned file:
+# auth include u2f-sufficient
+
+# Configure using pamu2fcfg in debian based system using
+# https://support.yubico.com/hc/en-us/articles/360016649099-Ubuntu-Linux-Login-Guide-U2F
+
+# Configure using pamu2fcfg in fedora based system using
+# https://fedoramagazine.org/use-fido-u2f-security-keys-with-fedora-linux/
+
+# Below are the configuration steps common to both above mentioned URLs and should work with any linux distro
+# mkdir -p ~/.config/Yubico
+# pamu2fcfg > ~/.config/Yubico/u2f_keys
+# pamu2fcfg --nouser >> ~/.config/Yubico/u2f_keys
+
+auth sufficient pam_u2f.so debug_file=/var/log/pam-u2f.log cue [cue_prompt=[sudo\] Touch your Yubikey!]

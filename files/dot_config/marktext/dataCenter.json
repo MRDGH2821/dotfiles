@@ -8,7 +8,7 @@
       "repo": ""
     }
   },
-  "imageFolderPath": "/media/nvme-2280/pcloud-local/Pictures/MarkText-Images",
-  "screenshotFolderPath": "/home/mihirr/.config/marktext/screenshot",
+  "imageFolderPath": "/mnt/nvme-2280/pcloud-local/Pictures/MarkText-Images",
+  "screenshotFolderPath": "~/.config/marktext/screenshot",
   "webImages": []
 }

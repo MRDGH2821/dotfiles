@@ -11,7 +11,7 @@
   "codeBlockLineNumbers": true,
   "codeFontFamily": "DejaVu Sans Mono",
   "codeFontSize": 14,
-  "defaultDirectoryToOpen": "/media/nvme-2280/pcloud-local/Documents/Notes",
+  "defaultDirectoryToOpen": "/mnt/nvme-2280/pcloud-local/Documents/Notes",
   "defaultEncoding": "utf8",
   "editorFontFamily": "Open Sans",
   "editorLineWidth": "",

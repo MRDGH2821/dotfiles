@@ -2,16 +2,16 @@
 
 # Directory where binary symlinks are placed.
 # Default: $SOAR_ROOT/bin
-bin_path = "/home/mihirr/.local/share/soar/bin"
+bin_path = "~/.local/share/soar/bin"
 # Path to the local cache directory.
 # Default: $SOAR_ROOT/cache
-cache_path = "/home/mihirr/.local/share/soar/cache"
+cache_path = "~/.local/share/soar/cache"
 # Allows packages to be updated across different repositories.
 # NOTE: This is not yet implemented
 cross_repo_updates = false
 # Path where the Soar package database is stored.
 # Default: $SOAR_ROOT/db
-db_path = "/home/mihirr/.local/share/soar/db"
+db_path = "~/.local/share/soar/db"
 # The name of the default profile to use.
 default_profile = "default"
 # Maximum number of concurrent requests for GHCR (GitHub Container Registry).
@@ -28,10 +28,10 @@ parallel = true
 parallel_limit = 4
 # Portable dirs path
 # Default: $SOAR_ROOT/portable-dirs
-portable_dirs = "/home/mihirr/.local/share/soar/portable-dirs"
+portable_dirs = "~/.local/share/soar/portable-dirs"
 # Path to the local clone of all repositories.
 # Default: $SOAR_ROOT/repos
-repositories_path = "/home/mihirr/.local/share/soar/repos"
+repositories_path = "~/.local/share/soar/repos"
 # Limits the number of results returned by a search.
 # Default: 20
 search_limit = 20
@@ -41,11 +41,11 @@ search_limit = 20
 # Optional path where packages are stored.
 #
 # If unset, defaults to `root_path/packages`.
-packages_path = "/home/mihirr/.local/share/soar/packages"
+packages_path = "~/.local/share/soar/packages"
 # Root directory for this profile’s data and packages.
 #
 # If `packages_path` is not set, packages will be stored in `root_path/packages`.
-root_path = "/home/mihirr/.local/share/soar"
+root_path = "~/.local/share/soar"
 
 # List of configured repositories.
 #

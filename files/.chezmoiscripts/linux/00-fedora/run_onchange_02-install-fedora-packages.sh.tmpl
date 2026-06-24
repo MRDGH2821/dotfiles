@@ -9,7 +9,7 @@
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Fedora Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra ($fedora.dnf5.url | quoteList) $common.packages -}}
+  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra $common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
@@ -36,11 +36,10 @@
   {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
-  {{- range $fedora.installer_url -}}
-    {{- println "bash -c " ( . | quote) -}}
-    {{- println $line -}}
-  {{- end -}}
-
+  {{- /* range $fedora.installer_url */ -}}
+  {{- /* println "bash -c " ( . | quote) */ -}}
+  {{- /* println $line */ -}}
+  {{- /* end */ -}}
 {{- else -}}
   {{- fail "This script is only for Fedora based systems." -}}
 {{- end -}}

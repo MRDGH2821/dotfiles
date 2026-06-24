@@ -8,7 +8,16 @@
 {{- end -}}
 
 {{- /* Configuring gh */ -}}
-{{- println "gh auth login -p https -h github.com -w" -}}
+
+{{- println "if ! gh auth status >/dev/null 2>&1" -}}
+{{- println "  echo \"gh: not authenticated. Logging in...\"" -}}
+{{- println "  gh auth login -p https -h github.com -w" -}}
+{{- println "else" -}}
+{{- println "  echo \"gh: already authenticated.\"" -}}
+{{- println "fi" -}}
+
+{{- println $line -}}
+
 {{- println "gh auth setup-git" -}}
 {{- println "echo \"gh cli is Configured!\" " -}}
 

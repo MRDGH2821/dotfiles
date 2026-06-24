@@ -12,7 +12,7 @@ fi
 
 echo "Fedora based system found!"
 # Install dnf5 for faster downloads, flatpak & gh cli
-sudo dnf install dnf5 flatpak gh -y
+sudo dnf install dnf5 flatpak gh gcc rustup -y
 echo "${LINE}"
 
 # modify dnf settings for faster downloads
@@ -59,15 +59,22 @@ fi
 echo "${LINE}"
 
 ## Terra repo
-if ! dnf repolist terra >/dev/null 2>&1; then
-  sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+
+if ! (dnf5 repolist | grep -i 'terra' >/dev/null 2>&1); then
+  sudo dnf5 install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 else
   echo "Terra repo already exists. Skipping..."
 fi
 echo "${LINE}"
 
 ## Login to gh cli
-gh auth login -p https -h github.com -w
+
+if ! gh auth status >/dev/null 2>&1; then
+  echo "gh: not authenticated. Logging in..."
+  gh auth login -p https -h github.com -w
+else
+  echo "gh: already authenticated."
+fi
 echo "${LINE}"
 
 # Install Soar
@@ -76,3 +83,6 @@ echo "${LINE}"
 
 ## Install dra
 soar add https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz --pkg-type archive --name dra --version 0.10.1
+
+## Initialise rustup
+rustup-init

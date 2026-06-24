@@ -14,12 +14,12 @@
   {{- $draPackages = concat $draPackages $fedora.dra.package -}}
 
   {{- /* Conditionally add Laptop only packages */ -}}
-  {{- if eq .devicetype "laptop" -}}
-    {{- $draPackages = concat $draPackages $fedora.laptop_only.dra.package -}}
-  {{- end -}}
+  {{- /* if eq .devicetype "laptop" */ -}}
+  {{- /* $draPackages = concat $draPackages $fedora.laptop_only.dra.package */ -}}
+  {{- /* end */ -}}
 
   {{- range $draPackages -}}
-    {{- println "sudo dra download -i " . -}}
+    {{- println "dra download -i " . -}}
     {{- println $line -}}
   {{- end -}}
 

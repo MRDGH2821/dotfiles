@@ -6,7 +6,10 @@ export PATH="${HOME}/AppImages:${PATH}"
 # XDG Base dirs
 eval "$(antidot init)" || true
 
-export XDG_STATE_HOME="${HOME}/.local/state"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-${HOME}/.local/state}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
 
 # XDG folders
 export HISTFILE="${XDG_STATE_HOME}"/shell/history
@@ -15,7 +18,7 @@ export HISTFILE="${XDG_STATE_HOME}"/shell/history
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # soar
-export PATH="${XDG_DATA_HOME}/soar/bin:${PATH}"
+export PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/soar/bin:${PATH}"
 
 # fnm
 FNM_PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/fnm"

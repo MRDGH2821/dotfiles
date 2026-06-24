@@ -12,8 +12,6 @@ dnf5:
     - syncthingplasmoid-qt6
     - syncthingtray-qt6
     - system-config-printer
-  url:
-    - https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 dra:
   package:
     - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
@@ -21,17 +19,14 @@ flatpak:
   - io.github.alainm23.planify
   - io.github.radiolamp.mangojuice
   - org.onlyoffice.desktopeditors
-installer_url:
-  - if ! command -v docker >/dev/null 2>&1; then curl -fsSL https://get.docker.com | sudo sh; fi
+kde:
+  - plasma6-print-manager
 laptop_only:
   dnf5:
     - obs-studio
     - obs-studio-plugin-vkcapture
     - obs-studio-plugin-vlc-video
     - obs-studio-plugin-webkitgtk
-  dra:
-    package:
-      - TibixDev/winboat --select winboat-{tag}-x86_64.rpm
 terra:
   - bun-bin
   - espanso-wayland

@@ -1,7 +1,6 @@
 ---
 aur:
   - espanso-wayland
-  - gitkraken
   - heroic-games-launcher-bin
   - mangojuice
   - onlyoffice-bin
@@ -12,25 +11,16 @@ core:
 extra:
   - bun
   - discord
-  - docker
-  - docker-buildx
-  - docker-compose
   - github-cli
   - meld
   - pam-u2f
   - sane
   - syncthingtray-qt6
   - system-config-printer
-  - ttf-liberation
   - unzip
-kde:
-  - qt5-graphicaleffects
-  - qt5-quickcontrols2
-  - tesseract-data-eng
 laptop_only:
   aur:
     - obs-studio-stable
-    - winboat-bin
 multilib:
   - lib32-mangohud
   - steam

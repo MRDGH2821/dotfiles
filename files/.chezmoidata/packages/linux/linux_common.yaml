@@ -19,6 +19,7 @@ kde:
   - kcalc
   - kclock
   - partitionmanager
+  - print-manager
   - skanlite
   - skanpage
 laptop_only:
@@ -39,6 +40,7 @@ packages:
   - lazygit
   - mangohud
   - nix
+  - podman
   - ripgrep
   - rustup
   - sccache

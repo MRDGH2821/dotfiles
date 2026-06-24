@@ -13,7 +13,7 @@
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
-    {{- $allPackages = concat $allPackages $common.kde -}}
+    {{- $allPackages = concat $allPackages $common.kde $fedora.kde -}}
   {{- end -}}
 
   {{- /* Conditionally add Tablet only packages */ -}}
@@ -26,7 +26,7 @@
     {{- $allPackages = concat $allPackages $fedora.laptop_only.dnf5 -}}
   {{- end -}}
 
-  {{- println "sudo dnf5 install " (join " " $allPackages) -}}
+  {{- println "sudo dnf5 install --skip-unavailable " (join " " $allPackages) -}}
   {{- println $line -}}
 
   {{- /* Flatpaks */ -}}

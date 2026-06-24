@@ -54,31 +54,12 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 version = "2.3.1"
 
-[packages.pince]
-asset_pattern = "*.AppImage"
-github = "korcankaraokcu/PINCE"
-pkg_type = "appimage"
-tag_pattern = "v*.*.*"
-version = "0.6.1"
-
 [packages.rclone]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
 asset_pattern = "rclone-*-{os}-{arch}.zip"
 github = "rclone/rclone"
 pkg_id = "rclone.rclone"
 version = "1.74.3"
-
-[packages.rclone_browser]
-asset_pattern = "*{os}-{arch}.AppImage"
-github = "kapitainsky/RcloneBrowser"
-pkg_type = "appimage"
-tag_pattern = "*.*.*"
-
-[packages.savestate]
-asset_pattern = "*.AppImage"
-github = "Matteo842/SaveState"
-pkg_type = "appimage"
-version = "2.7.1"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"
@@ -101,12 +82,6 @@ github = "numtide/treefmt"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
 version = "2.5.0"
-
-[packages.use_via]
-asset_pattern = "*{os}.AppImage"
-github = "the-via/releases"
-pkg_type = "appimage"
-tag_pattern = "v*.*.*"
 
 [packages.yq]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }

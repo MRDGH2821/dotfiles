@@ -2,8 +2,8 @@
   "agent": {
     "default_model": {
       "enable_thinking": true,
-      "model": "gemma3n:e4b",
-      "provider": "ollama"
+      "model": "claude-haiku-4.5",
+      "provider": "copilot_chat"
     },
     "dock": "right",
     "model_parameters": [],
@@ -26,7 +26,7 @@
   "agent_servers": {
     "cursor": {
       "default_config_options": {
-        "mode": "agent",
+        "mode": "plan",
         "model": "default[]"
       },
       "type": "registry"
@@ -44,9 +44,11 @@
   },
   "auto_install_extensions": {
     "basher": true,
+    "cargo-appraiser": true,
+    "colored-zed-icons-theme": true,
     "cspell": true,
-    "deno": true,
     "docker-compose": true,
+    "dockerfile": true,
     "editorconfig": true,
     "env": true,
     "git-firefly": true,
@@ -54,11 +56,13 @@
     "ini": true,
     "json5": true,
     "just": true,
+    "log": true,
     "markdownlint": true,
     "nix": true,
     "powershell": true,
     "tombi": true,
     "toml": true,
+    "typst": true,
     "xml": true
   },
   "autosave": {

@@ -33,6 +33,7 @@ packages:
   - flatpak
   - fzf
   - git
+  - git-credential-libsecret
   - git-credential-oauth
   - git-delta
   - keepassxc

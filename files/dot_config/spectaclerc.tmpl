@@ -11,7 +11,7 @@
 
 {{- println "[ImageSave]" -}}
 {{- println "imageFilenameTemplate=<yyyy>-<MM>/<yyyy>-<MM>-<dd>/<title>_<yyyy>-<MM>-<dd>_<HH>:<mm>:<ss>" -}}
-{{- $imgPath := (joinPath .pcloudfolder "Pictures/Screenshots") -}}
+{{- $imgPath := (joinPath .chezmoi.homeDir "Pictures/Screenshots") -}}
 {{- println (printf "imageSaveLocation=file:///%s" ($imgPath | trimPrefix "/")) -}}
 {{- println "translatedScreenshotsFolder=Screenshots" -}}
 
@@ -19,5 +19,5 @@
 {{- println "preferredVideoFormat=2" -}}
 {{- println "translatedScreencastsFolder=Screencasts" -}}
 {{- println "videoFilenameTemplate=<yyyy>-<MM>/<yyyy>-<MM>-<dd>/<title>_<yyyy>-<MM>-<dd>_<HH>:<mm>:<ss>" -}}
-{{- $vidPath := (joinPath .pcloudfolder "Videos/Screencasts") -}}
+{{- $vidPath := (joinPath .chezmoi.homeDir "Videos/Screencasts") -}}
 {{- println (printf "videoSaveLocation=file:///%s" ($vidPath | trimPrefix "/")) -}}

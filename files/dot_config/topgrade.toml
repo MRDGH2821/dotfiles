@@ -9,7 +9,7 @@ upgrade = true
 [git]
 max_concurrency = 1
 # tombi: format.rules.array-values-order = "ascending"
-repos = ["~/Source-Codes/*/*", "~/Source-Codes/*/*/*"]
+repos = ["~/Projects/*/*"]
 
 [misc]
 cleanup = true

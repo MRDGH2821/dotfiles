@@ -19,4 +19,3 @@ else
   # bash: rustup's bash completion is eager-safe
   eval "$(rustup completions "${SHELL_NAME}" cargo)" || true
 fi
-export PATH="${HOME}/.cargo/bin:${PATH}"

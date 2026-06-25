@@ -21,7 +21,7 @@
   {{- end -}}
 
   {{- range $draPackages -}}
-    {{- println "sudo dra download -i " . -}}
+    {{- println "sudo ~/.local/share/soar/bin/dra download -i " . -}}
     {{- println $line -}}
   {{- end -}}
 

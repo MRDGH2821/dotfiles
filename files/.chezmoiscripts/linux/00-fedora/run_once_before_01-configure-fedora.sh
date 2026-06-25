@@ -81,8 +81,5 @@ echo "${LINE}"
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"
 
-## Install dra
-soar add https://github.com/devmatteini/dra/releases/download/0.10.1/dra-0.10.1-x86_64-unknown-linux-gnu.tar.gz --pkg-type archive --name dra --version 0.10.1
-
 ## Initialise rustup
 rustup-init

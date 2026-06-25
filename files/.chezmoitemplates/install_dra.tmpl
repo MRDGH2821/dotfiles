@@ -1,0 +1,5 @@
+{{- if (ne (lookPath "dra") "") -}}
+  {{- println "soar add " (gitHubLatestReleaseAssetURL "devmatteini/dra" "dra-*-x86_64-unknown-linux-gnu.tar.gz") " --pkg-type archive --name dra" -}}
+{{- else -}}
+  {{- println "\necho \"dra found, skipping installation\"" -}}
+{{- end -}}

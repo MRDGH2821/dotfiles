@@ -27,7 +27,7 @@ priority = 9
 
 [formatter.generate-package-table]
 command = "uv"
-includes = ["Packages.md"]
+includes = ["Packages.md", "**/packages/**"]
 options = ["run", "gen-packages-table"]
 priority = 1
 

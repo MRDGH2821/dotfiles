@@ -7,6 +7,7 @@ dnf5:
     - meld
     - pam-u2f
     - pamu2fcfg
+    - podman-docker
     - sane-backends
     - steam
     - syncthingplasmoid-qt6

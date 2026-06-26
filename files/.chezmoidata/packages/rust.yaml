@@ -4,6 +4,7 @@ binstall:
   - cargo-cache
   - cargo-update
   - cocogitto
+  - fnm
   - ludusavi
   - mcfly
   - topgrade

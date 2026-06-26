@@ -21,6 +21,7 @@ import json
 import sys
 import urllib.request
 from urllib.error import HTTPError, URLError
+from urllib.parse import quote
 
 from rich import box
 from rich.console import Console
@@ -106,14 +107,16 @@ def main() -> None:
         status = pkg.get("status") or "-"
         rows.append((repo, name, version, status))
 
-    if not rows:
-        print(
-            f"No results found for [bold]{project}[/bold] in the configured repos.",
-            file=sys.stderr,
-        )
-        sys.exit(0)
-
     console = Console()
+    search_link = f"https://repology.org/projects/?search={quote(project)}"
+
+    if not rows:
+        console.print(
+            f"No results found for [bold]{project}[/bold] in the configured repos.",
+            style="yellow",
+        )
+        console.print(search_link)
+        sys.exit(0)
 
     table = Table(
         title=f"Repology — [bold cyan]{project}[/bold cyan]",
@@ -133,6 +136,7 @@ def main() -> None:
         )
 
     console.print(table)
+    console.print(search_link)
 
 
 if __name__ == "__main__":

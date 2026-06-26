@@ -26,8 +26,8 @@
   "agent_servers": {
     "cursor": {
       "default_config_options": {
-        "mode": "plan",
-        "model": "default[]"
+        "mode": "agent",
+        "model": "default"
       },
       "type": "registry"
     },

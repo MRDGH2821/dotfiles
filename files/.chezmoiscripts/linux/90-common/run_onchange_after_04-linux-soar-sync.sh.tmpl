@@ -1,6 +1,8 @@
 {{- println "#!/usr/bin/env bash" -}}
 
-{{- println "# Trigger hash:" (include "dot_config/soar/packages.toml" | sha256sum) -}}
+{{- println "# Trigger hash 1:" (include "dot_config/soar/packages.toml" | sha256sum) -}}
+{{- println "# Trigger hash 2:" (include (joinPath .chezmoi.sourceDir "dot_config/soar/packages.toml") | sha256sum) -}}
+{{- println "# Trigger hash 3:" (include (joinPath .chezmoi.homeDir ".config/soar/packages.toml") | sha256sum) -}}
 {{- println "# Soar" -}}
 
 {{- println "soar sync" -}}

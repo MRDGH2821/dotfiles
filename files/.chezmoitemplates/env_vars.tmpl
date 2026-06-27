@@ -1,0 +1,3 @@
+{{- println "source" (joinPath .chezmoi.sourceDir "dot_local/share/antidot/alias.sh" | quote) -}}
+{{- println "source" (joinPath .chezmoi.sourceDir "dot_local/share/antidot/env.sh" | quote) -}}
+{{- template "shell-scripts/00-export_paths.sh" . -}}

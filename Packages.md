@@ -85,6 +85,7 @@
 | Zoxide                   | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Zsh                      | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | antidot                  | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| betterleaks              | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | cargo-binstall           | 🦀   | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache              | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update             | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
@@ -100,7 +101,6 @@
 | git-credential-libsecret | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | git-credential-oauth     | 👍   | 👍     | 👍     | 👍     | 👍      |
 | git-sync                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
-| gitleaks                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | go-yq                    | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | hermes                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | iio-sensor-proxy         | 👍   | 👍     | 👍     | 👍     | 🚫      |
@@ -122,6 +122,7 @@
 | print-manager            | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | psmux                    | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | ripgrep                  | 👍   | 👍     | 👍     | 👍     | 👍      |
+| rtk                      | 🦀🔗 | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
 | sane                     | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | sccache                  | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | skanlite                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
@@ -129,7 +130,6 @@
 | system-config-printer    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tealdeer                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tmux                     | 👍   | 👍     | 👍     | 👍     | 🚫      |
-| trufflehog               | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | typstyle                 | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | unzip                    | 👍   | 🚫     | 🚫     | 🚫     | 🚫      |
 | uv                       | 👍   | 👍     | 👍     | 👍     | 👍      |

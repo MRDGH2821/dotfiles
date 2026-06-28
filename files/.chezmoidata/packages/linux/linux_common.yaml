@@ -36,7 +36,6 @@ packages:
   - git-credential-libsecret
   - git-credential-oauth
   - git-delta
-  - gitleaks
   - keepassxc
   - kleopatra
   - lazygit
@@ -49,7 +48,6 @@ packages:
   - syncthing
   - tealdeer
   - tmux
-  - trufflehog
   - uv
   - vlc
   - zsh

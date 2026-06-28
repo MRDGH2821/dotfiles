@@ -100,6 +100,7 @@
 | git-credential-libsecret | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | git-credential-oauth     | 👍   | 👍     | 👍     | 👍     | 👍      |
 | git-sync                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| gitleaks                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | go-yq                    | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | hermes                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | iio-sensor-proxy         | 👍   | 👍     | 👍     | 👍     | 🚫      |
@@ -128,6 +129,7 @@
 | system-config-printer    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tealdeer                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tmux                     | 👍   | 👍     | 👍     | 👍     | 🚫      |
+| trufflehog               | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | typstyle                 | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | unzip                    | 👍   | 🚫     | 🚫     | 🚫     | 🚫      |
 | uv                       | 👍   | 👍     | 👍     | 👍     | 👍      |

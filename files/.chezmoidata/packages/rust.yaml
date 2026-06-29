@@ -4,9 +4,11 @@ binstall:
   - cargo-cache
   - cargo-update
   - cocogitto
+  - fd-find
   - fnm
   - ludusavi
   - mcfly
+  - repgrep
   - topgrade
   - typstyle
   - zoxide

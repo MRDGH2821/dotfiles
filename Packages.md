@@ -110,6 +110,7 @@
 | llmfit                   | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | ls-lint                  | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | nix                      | 👍   | 👍     | 👍     | 👍     | 🚫      |
+| nvtop                    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | ollama                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | pCloud                   | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | pam-u2f                  | 👍   | 👍     | 👍     | 👍     | 🚫      |
@@ -130,6 +131,7 @@
 | skanlite                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | skanpage                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | system-config-printer    | 👍   | 👍     | 👍     | 👍     | 🚫      |
+| tailscale                | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | tealdeer                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tmux                     | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | typstyle                 | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |

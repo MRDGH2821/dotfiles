@@ -11,6 +11,7 @@ debian:
   - kali
   - linuxmint
 debian_codes:
+  - forky
   - gigi
   - kali-rolling
   - trixie
@@ -25,3 +26,7 @@ ubuntu:
 ubuntu_codes:
   - jammy
   - noble
+  - oracular
+  - plucky
+  - questing
+  - resolute

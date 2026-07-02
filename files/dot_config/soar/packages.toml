@@ -14,7 +14,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "x64" }
 asset_pattern = "betterleaks_*_{os}_{arch}.tar.gz"
 github = "betterleaks/betterleaks"
 tag_pattern = "v*.*.*"
-version = "1.6.0"
+version = "1.6.1"
 
 [packages.ccu]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -44,14 +44,14 @@ asset_pattern = "glab_*_{os}_{arch}.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.105.0"
+version = "1.106.0"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.9.33"
+version = "0.9.34"
 
 [packages.ls-lint]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }

@@ -87,7 +87,7 @@
     }
   },
   "edit_predictions": {
-    "provider": "zed"
+    "provider": "copilot"
   },
   "file_types": {
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],

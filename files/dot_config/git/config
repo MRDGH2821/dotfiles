@@ -52,3 +52,6 @@ path=~/.config/git/config-axisnexa
 
 [push]
 followTags=true
+
+[log]
+showSignature=true

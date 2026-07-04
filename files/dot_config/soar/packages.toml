@@ -51,7 +51,7 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.9.34"
+version = "0.9.37"
 
 [packages.ls-lint]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }

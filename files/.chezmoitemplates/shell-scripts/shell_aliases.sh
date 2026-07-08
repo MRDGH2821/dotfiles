@@ -27,15 +27,31 @@ alias l='ls -CF'
 
 # functions
 
+line() {
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '-'
+}
+
 rmedirs() {
   local dir="${1:-.}"
-  echo "Dry run: empty directories that would be removed:"
-  find "${dir}" -depth -type d -empty -print
 
-  read -r -p "Remove these empty directories? [y/N] "
+  if [[ ! -d "${dir}" ]]; then
+    echo "Error: '${dir}' is not a valid directory."
+    return 1
+  fi
+
+  echo "Dry run: empty directories that would be removed:"
+  line
+  find "${dir}" -mindepth 1 -depth -type d -empty -print
+  line
+
+  read -r -p "Remove these empty directories? [y/N]: " answer
+
   case "${answer}" in
     [yY] | [yY][eE][sS])
-      find "${dir}" -depth -type d -empty -delete
+      echo "Deleting..."
+
+      find "${dir}" -mindepth 1 -depth -type d -empty -delete
+      echo "Done."
       ;;
     *)
       echo "Aborted."
@@ -45,10 +61,6 @@ rmedirs() {
 
 touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
-}
-
-line() {
-  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '-'
 }
 
 update-repo() {

@@ -25,6 +25,24 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# functions
+
+rmedirs() {
+  local dir="${1:-.}"
+  echo "Dry run: empty directories that would be removed:"
+  find "${dir}" -depth -type d -empty -print
+
+  read -r -p "Remove these empty directories? [y/N] "
+  case "${answer}" in
+    [yY] | [yY][eE][sS])
+      find "${dir}" -depth -type d -empty -delete
+      ;;
+    *)
+      echo "Aborted."
+      ;;
+  esac
+}
+
 touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }

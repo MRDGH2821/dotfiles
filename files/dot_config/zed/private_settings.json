@@ -91,6 +91,8 @@
   },
   "file_types": {
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],
+    "Shell Script": [".envrc", ".envrc.local"],
+    "env": [".env", ".env.*"],
     "ini": ["private_dolphinrc", "private_konsolerc", ".editorconfig"]
   },
   "format_on_save": "off",

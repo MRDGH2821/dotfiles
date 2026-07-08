@@ -33,6 +33,7 @@ line() {
 
 rmedirs() {
   local dir="${1:-.}"
+  local answer
 
   if [[ ! -d "${dir}" ]]; then
     echo "Error: '${dir}' is not a valid directory."
@@ -44,7 +45,8 @@ rmedirs() {
   find "${dir}" -mindepth 1 -depth -type d -empty -print
   line
 
-  read -r -p "Remove these empty directories? [y/N]: " answer
+  printf "Remove these empty directories? [y/N]: "
+  read -r answer
 
   case "${answer}" in
     [yY] | [yY][eE][sS])

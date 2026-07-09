@@ -9,7 +9,9 @@ flatpak:
   - org.gnome.Snapshot
   - org.gramps_project.Gramps
 installer_url:
+  - if ! command -v agy >/dev/null 2>&1; then curl -fsSL https://antigravity.google/cli/install.sh | bash; fi
   - if ! command -v calibre >/dev/null 2>&1; then sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin; fi
+  - if ! command -v cursor-agent >/dev/null 2>&1; then curl -fsSL https://cursor.com/install -fsS | bash; fi
   - if ! command -v hermes >/dev/null 2>&1; then curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash; fi
   - if ! command -v oh-my-posh >/dev/null 2>&1; then curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin ; else oh-my-posh upgrade --force; fi
   - if ! command -v tailscale >/dev/null 2>&1; then curl -fsSL https://tailscale.com/install.sh | sh; fi

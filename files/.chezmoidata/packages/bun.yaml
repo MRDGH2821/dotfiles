@@ -1,3 +1,4 @@
 ---
 global:
+  - "@github/copilot"
   - sitemcp

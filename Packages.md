@@ -84,14 +84,12 @@
 | Zed                      | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
 | Zoxide                   | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 👍      |
 | Zsh                      | 👍   | 👍     | 👍     | 👍     | 🚫      |
-| agy                      | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | antidot                  | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | betterleaks              | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | cargo-binstall           | 🦀   | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache              | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update             | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | ccu                      | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
-| cursor-agent             | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | devenv                   | ❄️   | ❄️     | ❄️     | ❄️     | 🚫      |
 | direnv                   | 👍   | 👍     | 👍     | 👍     | 👍      |
 | discover                 | 👍   | 👍     | 👍     | 👍     | 🚫      |

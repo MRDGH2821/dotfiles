@@ -2,5 +2,5 @@
 trust:
   - https://github.com/MRDGH2821/copier-mr-minimal.git
   - gh:MRDGH2821/copier-mr-minimal
-  - https://gitlab.com/axisnexa/an-dotfiles.git
+  - https://gitlab.com/axisnexa/an-repo-template.git
   - gl:axisnexa/an-repo-template

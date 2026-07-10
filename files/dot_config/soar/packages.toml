@@ -51,7 +51,7 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "0.9.38"
+version = "1.0.1"
 
 [packages.ls-lint]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -66,7 +66,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
 asset_pattern = "rclone-*-{os}-{arch}.zip"
 github = "rclone/rclone"
 pkg_id = "rclone.rclone"
-version = "1.74.3"
+version = "1.74.4"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"

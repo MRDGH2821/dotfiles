@@ -1,13 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "agent": {
-    "explore": {
-      "disable": true
-    },
-    "general": {
-      "disable": true
-    }
-  },
   "mcp": {
     "Devenv": {
       "command": ["devenv", "mcp"],
@@ -18,19 +10,7 @@
   "model": "opencode/big-pickle",
   "plugin": [
     "@simonwjackson/opencode-direnv",
-    "caveman-opencode-plugin",
-    "oh-my-opencode-slim",
-    "opencode-plugin-openspec"
+    "superpowers@git+https://github.com/obra/superpowers.git"
   ],
-  "provider": {
-    "cursor": {
-      "name": "Cursor API via Standard Agents",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "apiKey": "{env:CURSOR_API_KEY}",
-        "baseURL": "https://cursor-api.standardagents.ai/opencodev2/v1"
-      }
-    }
-  },
   "small_model": "opencode/gpt-5-nano"
 }

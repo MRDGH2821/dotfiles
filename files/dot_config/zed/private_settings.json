@@ -1,10 +1,12 @@
 {
   "agent": {
     "default_model": {
+      "effort": "xhigh",
       "enable_thinking": true,
-      "model": "claude-haiku-4.5",
-      "provider": "copilot_chat"
+      "model": "claude-sonnet-5",
+      "provider": "zed.dev"
     },
+    "default_profile": "write",
     "dock": "right",
     "model_parameters": [],
     "sidebar_side": "right",
@@ -13,17 +15,16 @@
         "fetch": {
           "default": "allow"
         },
-        "terminal": {
-          "always_allow": [
-            {
-              "pattern": "^date\\b"
-            }
-          ]
+        "mcp:NixOS MCP:nix": {
+          "default": "allow"
         }
       }
     }
   },
   "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
     "cursor": {
       "default_config_options": {
         "mode": "agent",
@@ -81,13 +82,21 @@
     "dock": "left"
   },
   "colorize_brackets": true,
+  "context_servers": {
+    "NixOS MCP": {
+      "args": ["mcp-nixos"],
+      "command": "uvx",
+      "enabled": true,
+      "remote": false
+    }
+  },
   "diagnostics": {
     "inline": {
       "enabled": true
     }
   },
   "edit_predictions": {
-    "provider": "copilot"
+    "provider": "zed"
   },
   "file_types": {
     "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],

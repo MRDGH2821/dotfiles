@@ -35,6 +35,9 @@ export PATH="${CARGO_HOME}/bin:${PATH}"
 # bun
 export PATH="${HOME}/.cache/.bun/bin:${PATH}"
 
+# opencode
+export PATH="${HOME}/.opencode/bin:${PATH}"
+
 # Default Apps
 export EDITOR="zed --wait"
 export VISUAL="zed --wait"

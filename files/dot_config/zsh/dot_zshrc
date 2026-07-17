@@ -134,7 +134,7 @@ unset key
 # }}} End configuration added by Zim install
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE="${XDG_DATA_HOME}/shell/history"
 HISTSIZE=1000
 SAVEHIST=1000
 setopt beep extendedglob nomatch notify

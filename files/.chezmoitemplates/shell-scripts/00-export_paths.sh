@@ -14,7 +14,6 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
 export PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/soar/bin:${PATH}"
 
 # antidot
-
 eval "$(antidot init)" || true
 
 # XDG folders
@@ -42,3 +41,6 @@ export PATH="${HOME}/.opencode/bin:${PATH}"
 export EDITOR="zed --wait"
 export VISUAL="zed --wait"
 export PAGER="less"
+
+# Other variables
+export SELINUX_MODE="${SELINUX_MODE:-$(getenforce)}"

@@ -22,7 +22,7 @@ asset_pattern = "ccu-{os}-{arch}"
 github = "p-arndt/compose-check-updates"
 pkg_type = "binary"
 tag_pattern = "*.*.*"
-version = "0.4.1"
+version = "0.6.0"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"

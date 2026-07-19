@@ -23,6 +23,9 @@
   },
   "agent_servers": {
     "claude-acp": {
+      "default_config_options": {
+        "mode": "acceptEdits"
+      },
       "type": "registry"
     },
     "cursor": {

@@ -1,5 +1,7 @@
 ---
 git:
+  merging:
+    manualCommit: true
   overrideGpg: true
   pagers:
     - colorArg: always

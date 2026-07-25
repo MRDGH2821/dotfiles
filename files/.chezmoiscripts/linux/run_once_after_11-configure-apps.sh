@@ -15,3 +15,11 @@ gh auth setup-git
 # Add espanso capabilities
 ESPANSO_PATH=$(command -v espanso)
 sudo setcap "cap_dac_override+p" "${ESPANSO_PATH}"
+
+# RTK
+
+rtk init -g --opencode
+rtk init -g --gemini
+rtk init -g --copilot
+rtk init -g --agent cursor
+rtk init -g --agent hermes

@@ -14,7 +14,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "x64" }
 asset_pattern = "betterleaks_*_{os}_{arch}.tar.gz"
 github = "betterleaks/betterleaks"
 tag_pattern = "v*.*.*"
-version = "1.6.1"
+version = "1.7.0"
 
 [packages.ccu]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -22,7 +22,7 @@ asset_pattern = "ccu-{os}-{arch}"
 github = "p-arndt/compose-check-updates"
 pkg_type = "binary"
 tag_pattern = "*.*.*"
-version = "0.6.0"
+version = "0.7.0"
 
 [packages.dra]
 asset_pattern = "dra-*-{arch}-unknown-{os}-gnu.tar.gz"

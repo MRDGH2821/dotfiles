@@ -2,6 +2,7 @@
 binstall:
   - bat
   - cargo-cache
+  - cargo-edit
   - cargo-update
   - cocogitto
   - fd-find

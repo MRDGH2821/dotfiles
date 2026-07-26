@@ -88,6 +88,7 @@
 | betterleaks              | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | cargo-binstall           | 🦀   | 🦀     | 🦀     | 🦀     | 🚫      |
 | cargo-cache              | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
+| cargo-edit               | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | cargo-update             | 🦀💻 | 🦀💻   | 🦀💻   | 🦀💻   | 🚫      |
 | ccu                      | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | devenv                   | ❄️   | ❄️     | ❄️     | ❄️     | 🚫      |

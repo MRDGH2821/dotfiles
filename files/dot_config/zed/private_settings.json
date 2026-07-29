@@ -57,6 +57,7 @@
     "log": true,
     "markdownlint": true,
     "nix": true,
+    "path-server-lsp": true,
     "powershell": true,
     "tombi": true,
     "toml": true,

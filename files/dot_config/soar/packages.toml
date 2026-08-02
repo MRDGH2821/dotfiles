@@ -14,7 +14,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "x64" }
 asset_pattern = "betterleaks_*_{os}_{arch}.tar.gz"
 github = "betterleaks/betterleaks"
 tag_pattern = "v*.*.*"
-version = "1.7.2"
+version = "1.7.3"
 
 [packages.ccu]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -72,7 +72,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
 asset_pattern = "rclone-*-{os}-{arch}.zip"
 github = "rclone/rclone"
 pkg_id = "rclone.rclone"
-version = "1.74.4"
+version = "1.75.0"
 
 [packages.shellcheck]
 asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"

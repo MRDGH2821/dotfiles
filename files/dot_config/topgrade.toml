@@ -1,7 +1,6 @@
 [commands]
 "Antidot rules" = "antidot update"
 "Hermes Agent" = "hermes update"
-"Soar Package Manager" = "soar update"
 
 [firmware]
 upgrade = true

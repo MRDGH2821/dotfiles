@@ -10,7 +10,6 @@
     "dock": "right",
     "model_parameters": [],
     "sidebar_side": "right",
-    "terminal_init_command": "herdr",
     "tool_permissions": {
       "tools": {
         "fetch": {

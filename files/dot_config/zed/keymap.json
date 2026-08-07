@@ -34,6 +34,12 @@
           "task_name": "Meld file diff"
         }
       ],
+      "alt-shift-g": [
+        "task::Spawn",
+        {
+          "task_name": "Open Sourcegit"
+        }
+      ],
       "alt-shift-m": [
         "task::Spawn",
         {

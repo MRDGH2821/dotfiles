@@ -32,6 +32,13 @@
     "tags": ["git"]
   },
   {
+    "args": ["\"$ZED_WORKTREE_ROOT\""],
+    "command": "sourcegit",
+    "hide": "always",
+    "label": "Open Sourcegit",
+    "tags": ["git"]
+  },
+  {
     "allow_concurrent_runs": false,
     "command": "opencode",
     "hide": "on_success",

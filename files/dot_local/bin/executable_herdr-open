@@ -60,23 +60,34 @@ done
 if [ -n "$matched_workspace_id" ]; then
   echo "Found existing Herdr workspace: $matched_workspace_id ($dir)"
   herdr workspace focus "$matched_workspace_id"
-  exit 0
+  exec herdr
 fi
 
 # Decide whether we can create a git worktree.
 if git -C "$dir" rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-  branch="$(git -C "$dir" branch --show-current 2> /dev/null || echo main)"
-  echo "Creating Git worktree workspace for $dir..."
-  # --path uses the directory itself as the checkout path.
-  herdr worktree create \
-    --path "$dir" \
-    --branch "$branch" \
-    --label "$(basename "$dir")" \
-    --focus
+  if [ -d "$dir/.git" ] || [ -f "$dir/.git" ]; then
+    echo "Directory already contains a Git checkout. Creating plain Herdr workspace for $dir..."
+    herdr workspace create \
+      --cwd "$dir" \
+      --label "$(basename "$dir")" \
+      --focus
+    exec herdr
+  else
+    branch="$(git -C "$dir" branch --show-current 2> /dev/null || echo main)"
+    echo "Creating Git worktree workspace for $dir..."
+    # --path uses the directory itself as the checkout path.
+    herdr worktree create \
+      --path "$dir" \
+      --branch "$branch" \
+      --label "$(basename "$dir")" \
+      --focus
+    exec herdr
+  fi
 else
   echo "Directory is not a Git repo. Creating plain Herdr workspace for $dir..."
   herdr workspace create \
     --cwd "$dir" \
     --label "$(basename "$dir")" \
     --focus
+  exec herdr
 fi

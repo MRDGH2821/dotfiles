@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat << 'EOF'
+Usage: herdr-open [DIR]
+
+Opens or creates a Herdr workspace for the given directory.
+Default: current directory.
+EOF
+  exit "${1:-0}"
+}
+
+dir="${1:-.}"
+dir="$(cd "$dir" 2> /dev/null && pwd)" || {
+  echo >&2 "Directory does not exist: ${1:-.}"
+  exit 1
+}
+
+herdr workspace list --format json > /dev/null 2>&1 || true
+
+# If this shell is not inside Herdr, launch Herdr first.
+if [ "${HERDR_ENV:-}" != "1" ]; then
+  echo "Launched Herdr session..."
+  exec herdr session attach default -- "$0" "$dir"
+fi
+
+# Find an existing workspace bound to this directory (worktree source or plain cwd).
+find_workspace() {
+  local target="$1"
+  herdr workspace list > /dev/null 2>&1 || true
+}
+
+# Collect workspace IDs whose root path matches $dir.
+candidate_ids=$(
+  herdr workspace list 2> /dev/null \
+    | yq -r '.result.workspaces[].workspace_id' || true
+)
+
+matched_workspace_id=""
+for ws_id in $candidate_ids; do
+  info=$(herdr workspace get "$ws_id" 2> /dev/null || true)
+  # Check worktree list first.
+  wt=$(herdr worktree list 2> /dev/null || true)
+  if [ -n "$wt" ]; then
+    open_id=$(printf '%s' "$wt" | yq -r --arg dir "$dir" '
+      .result.worktrees[]
+      | select(.path == $dir)
+      | .open_workspace_id // ""
+    ' 2> /dev/null || true)
+    if [ "$open_id" = "$ws_id" ]; then
+      matched_workspace_id="$ws_id"
+      break
+    fi
+  fi
+  # Fallback: match workspace label against basename of dir.
+  label=$(printf '%s' "$info" | yq -r '
+    .result.workspace.label // ""
+  ' 2> /dev/null || true)
+  if [ "${label}" = "$(basename "$dir")" ]; then
+    matched_workspace_id="$ws_id"
+    break
+  fi
+done
+
+if [ -n "$matched_workspace_id" ]; then
+  echo "Found existing Herdr workspace: $matched_workspace_id ($dir)"
+  herdr workspace focus "$matched_workspace_id"
+  exit 0
+fi
+
+# Decide whether we can create a git worktree.
+if git -C "$dir" rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+  branch="$(git -C "$dir" branch --show-current 2> /dev/null || echo main)"
+  echo "Creating Git worktree workspace for $dir..."
+  # --path uses the directory itself as the checkout path.
+  herdr worktree create \
+    --path "$dir" \
+    --branch "$branch" \
+    --label "$(basename "$dir")" \
+    --focus
+else
+  echo "Directory is not a Git repo. Creating plain Herdr workspace for $dir..."
+  herdr workspace create \
+    --cwd "$dir" \
+    --label "$(basename "$dir")" \
+    --focus
+fi

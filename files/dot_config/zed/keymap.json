@@ -49,7 +49,7 @@
         "task::Spawn",
         {
           "reveal_target": "center",
-          "task_name": "Format with treefmt"
+          "task_name": "Format files"
         }
       ]
     },

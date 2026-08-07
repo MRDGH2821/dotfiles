@@ -39,14 +39,6 @@
     "tags": ["git"]
   },
   {
-    "allow_concurrent_runs": false,
-    "command": "opencode",
-    "hide": "on_success",
-    "label": "Start OpenCode",
-    "reveal": "always",
-    "reveal_target": "center"
-  },
-  {
     "args": [
       "copy",
       "gh:MRDGH2821/copier-mr-minimal",

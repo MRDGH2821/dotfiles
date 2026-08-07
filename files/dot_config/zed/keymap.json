@@ -60,17 +60,5 @@
       ]
     },
     "context": "Workspace"
-  },
-  {
-    "bindings": {
-      "alt-o": [
-        "task::Spawn",
-        {
-          "reveal_target": "center",
-          "task_name": "Start OpenCode"
-        }
-      ]
-    },
-    "context": "Workspace"
   }
 ]

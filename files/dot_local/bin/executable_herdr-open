@@ -19,12 +19,6 @@ dir="$(cd "$dir" 2> /dev/null && pwd)" || {
 
 herdr workspace list --format json > /dev/null 2>&1 || true
 
-# If this shell is not inside Herdr, launch Herdr first.
-if [ "${HERDR_ENV:-}" != "1" ]; then
-  echo "Launched Herdr session..."
-  exec herdr session attach default -- "$0" "$dir"
-fi
-
 # Find an existing workspace bound to this directory (worktree source or plain cwd).
 find_workspace() {
   local target="$1"

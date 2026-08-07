@@ -14,7 +14,7 @@ auto_switch = false
 name = "gruvbox"
 
 [ui]
-agent_panel_sort = "spaces"
+agent_panel_sort = "priority"
 show_agent_labels_on_pane_borders = true
 
 [ui.toast]

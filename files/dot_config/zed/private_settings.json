@@ -1,7 +1,7 @@
 {
   "agent": {
     "default_model": {
-      "effort": "xhigh",
+      "effort": "medium",
       "enable_thinking": true,
       "model": "claude-sonnet-5",
       "provider": "zed.dev"

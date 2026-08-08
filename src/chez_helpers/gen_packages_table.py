@@ -152,6 +152,10 @@ def _parse_linux_yaml(
     files it's a single-element tuple; for linux_common it's all four.
     """
     data = _load_yaml(path)
+    for key in ("arch", "debian", "fedora", "ubuntu", "common"):
+        if key in data and len(data) == 1:
+            data = data[key]
+            break
 
     def _emit(raw_id: str, emoji: str) -> None:
         display = _resolve(raw_id, aliases)
@@ -233,6 +237,7 @@ def _parse_rust_yaml(
       git:      → 🦀🔗  (cargo install --git — from a git repo URL)
     """
     data = _load_yaml(path)
+    data = data.get("rust", data)
 
     def _emit_rust(raw_id: str, emoji: str) -> None:
         display = _resolve(raw_id, aliases)
@@ -262,6 +267,7 @@ def _parse_windows_yaml(
     packages: dict[str, dict[str, str]],
 ) -> None:
     data = _load_yaml(path)
+    data = data.get("windows", data)
     for pkg_id in data.get("winget", []):
         display = _resolve(pkg_id, aliases)
         _set_if_better(packages, display, "windows", NATIVE)
@@ -282,6 +288,7 @@ def _parse_nix_yaml(
     Items are typically 'nixpkgs#name' or 'github:owner/repo/version'.
     """
     data = _load_yaml(path)
+    data = data.get("nix", data)
     for item in data.get("profile", []):
         if not isinstance(item, str):
             continue

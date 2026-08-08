@@ -1,26 +1,27 @@
 ---
-aur:
-  - espanso-wayland
-  - heroic-games-launcher-bin
-  - mangojuice
-  - onlyoffice-bin
-  - parui
-  - planify
-core:
-  - gnupg
-extra:
-  - bun
-  - discord
-  - github-cli
-  - meld
-  - pam-u2f
-  - sane
-  - syncthingtray-qt6
-  - system-config-printer
-  - unzip
-laptop_only:
+arch:
   aur:
-    - obs-studio-stable
-multilib:
-  - lib32-mangohud
-  - steam
+    - espanso-wayland
+    - heroic-games-launcher-bin
+    - mangojuice
+    - onlyoffice-bin
+    - parui
+    - planify
+  core:
+    - gnupg
+  extra:
+    - bun
+    - discord
+    - github-cli
+    - meld
+    - pam-u2f
+    - sane
+    - syncthingtray-qt6
+    - system-config-printer
+    - unzip
+  laptop_only:
+    aur:
+      - obs-studio-stable
+  multilib:
+    - lib32-mangohud
+    - steam

@@ -1,29 +1,26 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $debian := include ".chezmoidata/packages/linux/debian.yaml" | fromYaml -}}
-{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
-{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename $distros.debian_codes) -}}
+{{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename .distros.debian_codes) -}}
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Debian Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $debian.nala.native ($debian.nala.url | quoteList) $common.packages -}}
+  {{- $allPackages = concat $allPackages .debian.nala.native (.debian.nala.url | quoteList) .common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
-    {{- $allPackages = concat $allPackages $debian.kde $common.kde -}}
+    {{- $allPackages = concat $allPackages .debian.kde .common.kde -}}
   {{- end -}}
 
   {{- /* Conditionally add Tablet only packages */ -}}
   {{- if eq .devicetype "tablet" -}}
-    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+    {{- $allPackages = concat $allPackages .common.tablet_only -}}
   {{- end -}}
 
   {{- /* Conditionally add Laptop only packages */ -}}
   {{- if eq .devicetype "laptop" -}}
-    {{- $allPackages = concat $allPackages $debian.laptop_only.nala.native -}}
+    {{- $allPackages = concat $allPackages .debian.laptop_only.nala.native -}}
   {{- end -}}
 
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
@@ -32,11 +29,11 @@
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
-  {{- println "flatpak install -y flathub" (join " " $debian.flatpak) -}}
+  {{- println "flatpak install -y flathub" (join " " .debian.flatpak) -}}
   {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
-  {{ range $debian.installer_url }}
+  {{ range .debian.installer_url }}
     {{- println "bash -c " ( . | quote) -}}
     {{- println $line -}}
   {{ end }}

@@ -1,7 +1,8 @@
 ---
-cli:
-  - apm-cli
-  - copier
-  - ggshield
-  - prek
-  - uv-upx
+python3:
+  cli:
+    - apm-cli
+    - copier
+    - ggshield
+    - prek
+    - uv-upx

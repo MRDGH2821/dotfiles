@@ -1,29 +1,26 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $arch := include ".chezmoidata/packages/linux/arch.yaml" | fromYaml -}}
-{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
-{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.arch) -}}
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id .distros.arch) -}}
   {{- $allPackages := list -}}
   {{- println "echo \"Installing Arch Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $arch.extra $arch.core $arch.multilib $arch.aur $common.packages -}}
+  {{- $allPackages = concat $allPackages .arch.extra .arch.core .arch.multilib .arch.aur .common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
-    {{- $allPackages = concat $allPackages $arch.kde $common.kde -}}
+    {{- $allPackages = concat $allPackages .arch.kde .common.kde -}}
   {{- end -}}
 
   {{- /* Conditionally add tablet packages */ -}}
   {{- if eq .devicetype "tablet" -}}
-    {{- $allPackages = concat $allPackages $common.tablet_only $arch.tablet_only.aur $arch.tablet_only.extra -}}
+    {{- $allPackages = concat $allPackages .common.tablet_only .arch.tablet_only.aur .arch.tablet_only.extra -}}
   {{- end -}}
 
   {{- /* Conditionally add laptop packages */ -}}
   {{- if eq .devicetype "laptop" -}}
-    {{- $allPackages = concat $allPackages $arch.laptop_only.aur -}}
+    {{- $allPackages = concat $allPackages .arch.laptop_only.aur -}}
   {{- end -}}
 
   {{- $aurHelper := "" -}}

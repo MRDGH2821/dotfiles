@@ -1,29 +1,26 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $ubuntu := include ".chezmoidata/packages/linux/ubuntu.yaml" | fromYaml -}}
-{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
-{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename $distros.ubuntu_codes) -}}
+{{- if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename .distros.ubuntu_codes) -}}
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Ubuntu Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $ubuntu.nala.native ($ubuntu.nala.url | quoteList) $common.packages -}}
+  {{- $allPackages = concat $allPackages .ubuntu.nala.native (.ubuntu.nala.url | quoteList) .common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
-    {{- $allPackages = concat $allPackages $ubuntu.kde $common.kde -}}
+    {{- $allPackages = concat $allPackages .ubuntu.kde .common.kde -}}
   {{- end -}}
 
   {{- /* Conditionally add Tablet only packages */ -}}
   {{- if eq .devicetype "tablet" -}}
-    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+    {{- $allPackages = concat $allPackages .common.tablet_only -}}
   {{- end -}}
 
   {{- /* Conditionally add Laptop only packages */ -}}
   {{- if eq .devicetype "laptop" -}}
-    {{- $allPackages = concat $allPackages $ubuntu.laptop_only.nala.native -}}
+    {{- $allPackages = concat $allPackages .ubuntu.laptop_only.nala.native -}}
   {{- end -}}
 
   {{- println "sudo nala install --update -y -o APT::Get::AllowUnauthenticated=true " (join " " $allPackages) -}}
@@ -32,11 +29,11 @@
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
-  {{- println "flatpak install -y flathub" (join " " $ubuntu.flatpak) -}}
+  {{- println "flatpak install -y flathub" (join " " .ubuntu.flatpak) -}}
   {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
-  {{- range $ubuntu.installer_url -}}
+  {{- range .ubuntu.installer_url -}}
     {{- println "bash -c " ( . | quote) -}}
     {{- println $line -}}
   {{- end -}}

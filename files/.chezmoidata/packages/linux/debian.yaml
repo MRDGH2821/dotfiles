@@ -1,30 +1,31 @@
 ---
-dra:
-  package:
-    - espanso/espanso --select espanso-debian-wayland-amd64.deb
-    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-amd64.deb
-flatpak:
-  - io.github.alainm23.planify
-  - io.github.radiolamp.mangojuice
-  - org.onlyoffice.desktopeditors
-kde:
-  - syncthingtray-kde-plasma
-laptop_only:
+debian:
+  dra:
+    package:
+      - espanso/espanso --select espanso-debian-wayland-amd64.deb
+      - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-amd64.deb
+  flatpak:
+    - io.github.alainm23.planify
+    - io.github.radiolamp.mangojuice
+    - org.onlyoffice.desktopeditors
+  kde:
+    - syncthingtray-kde-plasma
+  laptop_only:
+    nala:
+      native:
+        - ffmpeg
+        - obs-studio
   nala:
     native:
-      - ffmpeg
-      - obs-studio
-nala:
-  native:
-    - bun
-    - gh
-    - gnupg2
-    - libpam-u2f
-    - meld
-    - pamu2fcfg
-    - sane-utils
-    - syncthingtray
-    - system-config-printer
-  url:
-    - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-    - https://discord.com/api/download?platform=linux&format=deb
+      - bun
+      - gh
+      - gnupg2
+      - libpam-u2f
+      - meld
+      - pamu2fcfg
+      - sane-utils
+      - syncthingtray
+      - system-config-printer
+    url:
+      - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+      - https://discord.com/api/download?platform=linux&format=deb

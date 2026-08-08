@@ -1,8 +1,7 @@
 {{- $line := "Write-Output ('-' * (Get-Host).UI.RawUI.WindowSize.Width)" -}}
-{{- $windows := include ".chezmoidata/packages/windows.yaml" | fromYaml -}}
 
 {{- /* Winget Packages */ -}}
-{{- range $windows.winget -}}
+{{- range .windows.winget -}}
   {{- println "echo \"Installing\"" . -}}
   {{- println "winget install -e --disable-interactivity --silent --accept-source-agreements --accept-package-agreements --id" (. | quote) -}}
   {{- println $line -}}

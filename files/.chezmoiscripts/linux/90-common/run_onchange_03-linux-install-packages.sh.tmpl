@@ -1,23 +1,22 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- /* Flatpaks */ -}}
 {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
 {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
-{{- println "flatpak install -y flathub" (join " " $common.flatpak) -}}
+{{- println "flatpak install -y flathub" (join " " .common.flatpak) -}}
 {{- println $line -}}
 
 {{- /* Self installing packages */ -}}
-{{- range $common.installer_url -}}
+{{- range .common.installer_url -}}
   {{- println "bash -c " ( . | quote) -}}
 {{- end -}}
 {{- println $line -}}
 
 {{- if eq .devicetype "laptop" -}}
   {{- /* Self installing packages */ -}}
-  {{- range $common.laptop_only.installer_url -}}
+  {{- range .common.laptop_only.installer_url -}}
     {{- println "bash -c " ( . | quote) -}}
   {{- end -}}
   {{- println $line -}}

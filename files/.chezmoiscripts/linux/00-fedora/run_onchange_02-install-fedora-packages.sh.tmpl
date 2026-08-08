@@ -1,29 +1,26 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $fedora := include ".chezmoidata/packages/linux/fedora.yaml" | fromYaml -}}
-{{- $common := include ".chezmoidata/packages/linux/linux_common.yaml" | fromYaml -}}
-{{- $distros := include ".chezmoidata/distros.yaml" | fromYaml -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id $distros.fedora) -}}
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id .distros.fedora) -}}
   {{- $allPackages := list -}}
   {{- println "\necho \"Installing Fedora Packages\"" -}}
   {{- /* Add packages */ -}}
-  {{- $allPackages = concat $allPackages $fedora.dnf5.native $fedora.terra $common.packages -}}
+  {{- $allPackages = concat $allPackages .fedora.dnf5.native .fedora.terra .common.packages -}}
 
   {{- /* Conditionally add KDE packages */ -}}
   {{- if eq (env "XDG_SESSION_DESKTOP") "KDE" -}}
-    {{- $allPackages = concat $allPackages $common.kde $fedora.kde -}}
+    {{- $allPackages = concat $allPackages .common.kde .fedora.kde -}}
   {{- end -}}
 
   {{- /* Conditionally add Tablet only packages */ -}}
   {{- if eq .devicetype "tablet" -}}
-    {{- $allPackages = concat $allPackages $common.tablet_only -}}
+    {{- $allPackages = concat $allPackages .common.tablet_only -}}
   {{- end -}}
 
   {{- /* Conditionally add Laptop only packages */ -}}
   {{- if eq .devicetype "laptop" -}}
-    {{- $allPackages = concat $allPackages $fedora.laptop_only.dnf5 -}}
+    {{- $allPackages = concat $allPackages .fedora.laptop_only.dnf5 -}}
   {{- end -}}
 
   {{- println "sudo dnf5 install --skip-unavailable " (join " " $allPackages) -}}
@@ -32,11 +29,11 @@
   {{- /* Flatpaks */ -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
   {{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
-  {{- println "flatpak install -y flathub" (join " " $fedora.flatpak) -}}
+  {{- println "flatpak install -y flathub" (join " " .fedora.flatpak) -}}
   {{- println $line -}}
 
   {{- /* Self installing packages */ -}}
-  {{- /* range $fedora.installer_url */ -}}
+  {{- /* range .fedora.installer_url */ -}}
   {{- /* println "bash -c " ( . | quote) */ -}}
   {{- /* println $line */ -}}
   {{- /* end */ -}}

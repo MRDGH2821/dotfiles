@@ -1,33 +1,34 @@
 ---
-dnf5:
-  native:
-    - discord
-    - gh
-    - gnupg2
-    - meld
-    - pam-u2f
-    - pamu2fcfg
-    - podman-docker
-    - sane-backends
-    - steam
-    - syncthingplasmoid-qt6
-    - syncthingtray-qt6
-    - system-config-printer
-dra:
-  package:
-    - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
-flatpak:
-  - io.github.alainm23.planify
-  - io.github.radiolamp.mangojuice
-  - org.onlyoffice.desktopeditors
-kde:
-  - plasma6-print-manager
-laptop_only:
+fedora:
   dnf5:
-    - obs-studio
-    - obs-studio-plugin-vkcapture
-    - obs-studio-plugin-vlc-video
-    - obs-studio-plugin-webkitgtk
-terra:
-  - bun-bin
-  - espanso-wayland
+    native:
+      - discord
+      - gh
+      - gnupg2
+      - meld
+      - pam-u2f
+      - pamu2fcfg
+      - podman-docker
+      - sane-backends
+      - steam
+      - syncthingplasmoid-qt6
+      - syncthingtray-qt6
+      - system-config-printer
+  dra:
+    package:
+      - Heroic-Games-Launcher/HeroicGamesLauncher --select Heroic-{tag}-linux-x86_64.rpm
+  flatpak:
+    - io.github.alainm23.planify
+    - io.github.radiolamp.mangojuice
+    - org.onlyoffice.desktopeditors
+  kde:
+    - plasma6-print-manager
+  laptop_only:
+    dnf5:
+      - obs-studio
+      - obs-studio-plugin-vkcapture
+      - obs-studio-plugin-vlc-video
+      - obs-studio-plugin-webkitgtk
+  terra:
+    - bun-bin
+    - espanso-wayland

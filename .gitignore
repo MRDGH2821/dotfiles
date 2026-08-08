@@ -14,10 +14,8 @@
 /.devenv
 __MACOSX
 __pycache__
-bun.lock
 dist/
 megalinter-reports/
 node_modules/
 package-lock.json
 target/
-uv.lock

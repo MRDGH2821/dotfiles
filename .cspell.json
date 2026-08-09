@@ -169,6 +169,7 @@
     "Rclone",
     "rignore",
     "rmedirs",
+    "rumdl",
     "rustc",
     "SBUILD",
     "sccache",

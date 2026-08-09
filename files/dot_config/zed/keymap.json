@@ -7,7 +7,9 @@
   },
   {
     "bindings": {
+      "ctrl-enter": ["terminal::SendKeystroke", "ctrl-enter"],
       "ctrl-p": ["terminal::SendKeystroke", "ctrl-p"],
+      "ctrl-s": ["terminal::SendKeystroke", "ctrl-s"],
       "ctrl-t": ["terminal::SendKeystroke", "ctrl-t"],
       "ctrl-x": ["terminal::SendKeystroke", "ctrl-x"]
     },

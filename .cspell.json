@@ -104,6 +104,7 @@
     "kpartgui",
     "kwriteconfig",
     "kxmlgui",
+    "libavcodec",
     "libqt",
     "llmfit",
     "lsign",

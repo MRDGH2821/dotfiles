@@ -109,6 +109,7 @@
 | iio-sensor-proxy         | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | kcalc                    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | kclock                   | 👍   | 👍     | 👍     | 👍     | 🚫      |
+| libavcodec-freeworld     | 🚫   | 🚫     | 👍     | 🚫     | 🚫      |
 | llmfit                   | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | ls-lint                  | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | nix                      | 👍   | 👍     | 👍     | 👍     | 🚫      |

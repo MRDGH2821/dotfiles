@@ -5,6 +5,7 @@ fedora:
       - discord
       - gh
       - gnupg2
+      - libavcodec-freeworld
       - meld
       - pam-u2f
       - pamu2fcfg

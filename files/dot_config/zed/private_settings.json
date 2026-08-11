@@ -210,6 +210,14 @@
         }
       }
     },
+    "nil": {
+      "nix": {
+        "flake": {
+          "autoArchive": true,
+          "autoEvalInputs": true
+        }
+      }
+    },
     "tinymist": {
       "initialization_options": {
         "preview": {

@@ -211,10 +211,12 @@
       }
     },
     "nil": {
-      "nix": {
-        "flake": {
-          "autoArchive": true,
-          "autoEvalInputs": true
+      "settings": {
+        "nix": {
+          "flake": {
+            "autoArchive": true,
+            "autoEvalInputs": true
+          }
         }
       }
     },

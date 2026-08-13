@@ -1,6 +1,17 @@
 [
   {
     "allow_concurrent_runs": false,
+    "command": "yq -i -oj --indent 2 '.words = []' .cspell.json && raw=$(bunx cspell . --dot --words-only --quiet || true) && if [ -n \"$raw\" ]; then words=$(printf '%s\\n' \"$raw\" | sed '/^$/d; s/^/- /' | yq -o=json 'unique_by(. | downcase) | sort_by(. | downcase)'); else words='[]'; fi && WORDS=\"$words\" yq -i -oj --indent 2 '.words = env(WORDS)' .cspell.json && echo \"Updated .cspell.json with $(yq '.words | length' .cspell.json) words\"",
+    "hide": "never",
+    "label": "cspell: refresh words",
+    "reveal": "always",
+    "save": "all",
+    "show_command": true,
+    "show_summary": true,
+    "use_new_terminal": false
+  },
+  {
+    "allow_concurrent_runs": false,
     "args": ["-c", "'nix fmt || treefmt -vv'"],
     "command": "sh",
     "hide": "on_success",

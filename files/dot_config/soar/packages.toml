@@ -57,6 +57,7 @@ version = "0.8.0"
 asset_pattern = "irminsul-{os}-{arch}.*"
 github = "jontyab/irminsul-taioiislop"
 tag_pattern = "v*.*.*"
+version = "0.2.0-T-1"
 
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"

@@ -59,6 +59,9 @@ github = "jontyab/irminsul-taioiislop"
 tag_pattern = "v*.*.*"
 version = "0.2.0-T-1"
 
+[packages.irminsul.hooks]
+post_install = "sudo setcap cap_net_raw=ep '$INSTALL_DIR/irminsul'"
+
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"

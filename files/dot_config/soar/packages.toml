@@ -53,6 +53,11 @@ github = "herdrdev/herdr"
 tag_pattern = "v*.*.*"
 version = "0.8.0"
 
+[packages.irminsul]
+asset_pattern = "irminsul-{os}-{arch}.*"
+github = "jontyab/irminsul-taioiislop"
+tag_pattern = "v*.*.*"
+
 [packages.llmfit]
 asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"

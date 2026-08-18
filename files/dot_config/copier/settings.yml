@@ -6,3 +6,5 @@ trust:
   - gl:axisnexa/an-repo-template
   - https://gitlab.com/AxisNexa/an-repo-template.git
   - gl:AxisNexa/an-repo-template
+  - https://github.com/MRDGH2821/copier-mr-mise.git
+  - gh:MRDGH2821/copier-mr-mise

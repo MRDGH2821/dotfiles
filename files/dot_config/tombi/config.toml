@@ -5,3 +5,11 @@ include = ["cog.toml"]
 [[schemas]]
 path = "https://gist.githubusercontent.com/MRDGH2821/d61a45f6d91c94d1c9d3d1307036d361/raw/fe5c99a3237fa12ee6e0c247999832857d97d353/treefmt-schema.json"
 include = ["treefmt.toml", ".treefmt.toml"]
+
+[[schemas]]
+path = "https://mise.jdx.dev/schema/mise.json"
+include = ["mise.toml"]
+
+[[schemas]]
+path = "https://www.schemastore.org/git-cliff.json"
+include = ["cliff.toml"]

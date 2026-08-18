@@ -1,3 +1,5 @@
 [tools]
 cspell = "latest"
+"npm:sort-package-json" = "4.0.0"
 rumdl = "0.2.55"
+tombi = "1.4.0"

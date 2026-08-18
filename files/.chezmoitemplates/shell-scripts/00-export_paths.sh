@@ -37,6 +37,9 @@ export PATH="${HOME}/.cache/.bun/bin:${PATH}"
 # opencode
 export PATH="${HOME}/.opencode/bin:${PATH}"
 
+# mise
+export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+
 # Default Apps
 export EDITOR="zed --wait"
 export VISUAL="zed --wait"

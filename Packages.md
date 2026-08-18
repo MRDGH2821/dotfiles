@@ -107,6 +107,7 @@
 | herdr                    | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | hermes                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | iio-sensor-proxy         | 👍   | 👍     | 👍     | 👍     | 🚫      |
+| irminsul                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | kcalc                    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | kclock                   | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | libavcodec-freeworld     | 🚫   | 🚫     | 👍     | 🚫     | 🚫      |

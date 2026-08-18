@@ -50,6 +50,9 @@ path=~/.config/git/config-axisnexa
 [includeIf "gitdir/i:**/AxisNexa/"]
 path=~/.config/git/config-axisnexa
 
+[includeIf "gitdir/i:**/UniMelb/"]
+path=~/.config/git/config-unimelb
+
 [push]
 followTags=true
 

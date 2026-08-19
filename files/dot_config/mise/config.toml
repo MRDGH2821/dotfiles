@@ -1,5 +1,7 @@
 [tools]
+"aqua:google/keep-sorted" = "latest"
 cspell = "latest"
 "npm:sort-package-json" = "4.0.0"
+prettier = "latest"
 rumdl = "0.2.55"
 tombi = "1.4.0"

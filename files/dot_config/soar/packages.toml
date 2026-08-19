@@ -2,6 +2,10 @@
 binary_only = false
 profile = "default"
 
+[packages.PINCE]
+asset_pattern = "PINCE-{arch}.*"
+github = "korcankaraokcu/PINCE"
+
 [packages.antidot]
 asset_pattern = "antidot_*_Linux_{arch}.tar.gz"
 github = "doron-cohen/antidot"
@@ -14,7 +18,7 @@ arch_map = { aarch64 = "arm64", x86_64 = "x64" }
 asset_pattern = "betterleaks_*_{os}_{arch}.tar.gz"
 github = "betterleaks/betterleaks"
 tag_pattern = "v*.*.*"
-version = "1.7.4"
+version = "1.8.1"
 
 [packages.ccu]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -31,6 +35,10 @@ pkg_type = "archive"
 tag_pattern = "*.*.*"
 version = "0.10.2"
 
+[packages.escrcpy]
+asset_pattern = "Escrcpy-*-{os}-{arch}.*"
+github = "viarotel-org/escrcpy"
+
 [packages.git-sync]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
 asset_pattern = "git-sync_*_{os}_{arch}.tar.gz"
@@ -45,17 +53,17 @@ asset_pattern = "glab_*_{os}_{arch}.tar.gz"
 gitlab = "gitlab-org/cli"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.113.0"
+version = "1.114.0"
 
 [packages.herdr]
 asset_pattern = "herdr-{os}-{arch}"
 github = "herdrdev/herdr"
 tag_pattern = "v*.*.*"
-version = "0.8.0"
+version = "0.8.2"
 
 [packages.irminsul]
 asset_pattern = "irminsul-{os}-{arch}.*"
-github = "jontyab/irminsul-taioiislop"
+github = "escalonn/irminsul-taioiislop"
 tag_pattern = "v*.*.*"
 version = "0.2.0-T-1"
 
@@ -77,26 +85,24 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 version = "2.3.1"
 
+[packages.marktext]
+asset_pattern = "marktext-{os}-*"
+github = "marktext/marktext"
+tag_pattern = "v*.*.*"
+version = "0.19.1"
+
 [packages.rclone]
-arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
-asset_pattern = "rclone-*-{os}-{arch}.zip"
-github = "rclone/rclone"
-pkg_id = "rclone.rclone"
 version = "1.75.0"
 
 [packages.shellcheck]
-asset_pattern = "shellcheck-*.{os}.{arch}.tar.gz"
-github = "koalaman/shellcheck"
-pkg_type = "archive"
-tag_pattern = "*.*.*"
 version = "0.11.0"
 
 [packages.shfmt]
-arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
-asset_pattern = "shfmt_*_{os}_{arch}"
-github = "mvdan/sh"
-pkg_id = "mvdan.shfmt"
 version = "3.13.1"
+
+[packages.sourcegit]
+asset_pattern = "sourcegit-*"
+github = "sourcegit-scm/sourcegit"
 
 [packages.treefmt]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
@@ -111,4 +117,4 @@ arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
 asset_pattern = "yq_{os}_{arch}"
 github = "mikefarah/yq"
 pkg_id = "mikefarah.yq"
-version = "4.53.3"
+version = "4.53.4"

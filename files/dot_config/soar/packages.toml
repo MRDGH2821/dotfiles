@@ -38,6 +38,7 @@ version = "0.10.2"
 [packages.escrcpy]
 asset_pattern = "Escrcpy-*-{os}-{arch}.*"
 github = "viarotel-org/escrcpy"
+version = "3.0.8"
 
 [packages.git-sync]
 arch_map = { aarch64 = "arm64", x86_64 = "amd64" }

@@ -37,6 +37,10 @@ pkg_type = "archive"
 tag_pattern = "v*.*.*"
 version = "0.21.0"
 
+[packages.ir]
+asset_pattern = "install-release-{os}-{arch}"
+github = "Rishang/install-release"
+
 [packages.irminsul]
 asset_pattern = "irminsul-{os}-{arch}.*"
 github = "escalonn/irminsul-taioiislop"

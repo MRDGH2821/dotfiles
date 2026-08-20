@@ -154,6 +154,8 @@ aliases:
   sharkdp.bat: Bat
   shellcheck: Shellcheck
   shfmt: Shfmt
+  sourcegit: SourceGit
+  sourcegit-bin: SourceGit # Arch AUR
   steam: Steam # Arch multilib, Fedora native (lowercase)
   syncthing: Syncthing
   syncthingplasmoid-qt6: Syncthing Tray # Fedora KDE plasmoid

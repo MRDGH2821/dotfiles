@@ -12,6 +12,7 @@ Sources of truth (read-only):
   .chezmoidata/packages/windows.yaml
   .chezmoidata/packages/rust.yaml
   dot_config/soar/packages.toml
+  dot_config/mise/config.toml
 
 Mapping layer (edit to add display names / cross-distro aliases):
   src/chez_helpers/packages-names.yaml
@@ -47,6 +48,7 @@ WINDOWS_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "windows.yaml"
 RUST_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "rust.yaml"
 NIX_YAML = FILES_ROOT / ".chezmoidata" / "packages" / "nix.yaml"
 SOAR_TOML = FILES_ROOT / "dot_config" / "soar" / "packages.toml"
+MISE_TOML = FILES_ROOT / "dot_config" / "mise" / "config.toml"
 
 # Column keys → header labels (alphabetical = matches yq-key-sort + treefmt)
 COLUMNS: list[tuple[str, str]] = [
@@ -75,6 +77,7 @@ CARGO = "🦀"  # cargo install (from crates.io source)
 CARGO_BINSTALL = "🦀💻"  # cargo binstall (downloads precompiled binary)
 CARGO_GIT = "🦀🔗"  # cargo install --git (from a git repo)
 NIX = "❄️"  # nix profile install (from nixpkgs or flakes)
+MISE = "🧰"  # mise tools.* (version-managed dev tool, same on all Linux distros)
 
 # These packages are installed via URL on the given distro, keyed by URL fragment
 # Maps (URL fragment substring) → display name
@@ -253,6 +256,41 @@ def _parse_rust_yaml(
 
 
 # ---------------------------------------------------------------------------
+# Mise TOML parser
+# ---------------------------------------------------------------------------
+
+
+def _extract_mise_tool_name(key: str) -> str:
+    """Extract a bare tool name from a mise `[tools]` key.
+
+    'aqua:owner/repo' -> 'repo'
+    'npm:package-name' -> 'package-name'
+    'toolname' -> 'toolname'
+    """
+    spec = key.split(":", 1)[-1]
+    return spec.rstrip("/").split("/")[-1]
+
+
+def _parse_mise_toml(
+    path: Path,
+    aliases: dict[str, str],
+    packages: dict[str, dict[str, str]],
+) -> None:
+    """Parse mise's config.toml `[tools]` table.
+
+    mise-managed tools are installed identically on every Linux distro
+    (arch/debian/fedora/ubuntu) via the shared shell config; mise is not
+    used on Windows.
+    """
+    data = tomllib.loads(path.read_text(encoding="utf-8"))
+    for key in data.get("tools", {}):
+        raw = _extract_mise_tool_name(key)
+        display = _resolve(raw, aliases)
+        for d in _ALL_LINUX:
+            _set_if_better(packages, display, d, MISE)
+
+
+# ---------------------------------------------------------------------------
 # Windows YAML parser
 # ---------------------------------------------------------------------------
 
@@ -394,7 +432,11 @@ def main() -> None:
     if NIX_YAML.exists():
         _parse_nix_yaml(NIX_YAML, aliases, packages)
 
-    # 7. Parse soar (FALLBACK — fills slots not already set by install files)
+    # 7. Parse mise's config.toml [tools] — applies to all Linux distros
+    if MISE_TOML.exists():
+        _parse_mise_toml(MISE_TOML, aliases, packages)
+
+    # 8. Parse soar (FALLBACK — fills slots not already set by install files)
     if SOAR_TOML.exists():
         _parse_soar_toml(SOAR_TOML, aliases, packages)
 

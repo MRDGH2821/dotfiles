@@ -22,7 +22,3 @@
 {{- end -}}
 {{- println "cargo binstall" (join " " .rust.binstall) -}}
 {{- println $line -}}
-
-{{- /* Bun CLI Tools */ -}}
-{{- println "bun install -g" (join " " .bun.global) -}}
-{{- println $line -}}

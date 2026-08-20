@@ -3,7 +3,6 @@ fedora:
   dnf5:
     native:
       - discord
-      - gh
       - gnupg2
       - libavcodec-freeworld
       - meld
@@ -31,5 +30,4 @@ fedora:
       - obs-studio-plugin-vlc-video
       - obs-studio-plugin-webkitgtk
   terra:
-    - bun-bin
     - espanso-wayland

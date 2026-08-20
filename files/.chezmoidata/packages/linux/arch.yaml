@@ -10,9 +10,7 @@ arch:
   core:
     - gnupg
   extra:
-    - bun
     - discord
-    - github-cli
     - meld
     - pam-u2f
     - sane

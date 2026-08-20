@@ -1,22 +1,12 @@
 ---
 rust:
   binstall:
-    - bat
     - cargo-cache
     - cargo-edit
     - cargo-update
-    - cocogitto
-    - fd-find
-    - fnm
     - ludusavi
-    - mcfly
-    - repgrep
-    - topgrade
-    - typstyle
-    - zoxide
   git:
     - https://github.com/antonWetzel/prettypst
-    - https://github.com/rtk-ai/rtk
     - https://github.com/vlaci/git-agecrypt
   install:
     - cargo-binstall

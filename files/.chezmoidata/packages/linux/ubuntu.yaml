@@ -16,8 +16,6 @@ ubuntu:
         - obs-studio
   nala:
     native:
-      - bun
-      - gh
       - gnupg2
       - libpam-u2f
       - meld

@@ -65,6 +65,23 @@ touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }
 
+export-gh() {
+  local token
+
+  if ! command -v gh >/dev/null 2>&1; then
+    echo "Error: 'gh' is not installed." >&2
+    return 1
+  fi
+
+  if ! token="$(gh auth token)"; then
+    echo "Error: failed to get GitHub token (are you logged in? try 'gh auth login')." >&2
+    return 1
+  fi
+
+  export GITHUB_TOKEN="${token}"
+  echo "GITHUB_TOKEN exported."
+}
+
 update-repo() {
   local repo_dir="${1:-.}"
 

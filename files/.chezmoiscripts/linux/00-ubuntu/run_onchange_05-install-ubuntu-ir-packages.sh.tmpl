@@ -1,0 +1,22 @@
+{{- println "#!/usr/bin/env bash" -}}
+{{- template "env_vars.tmpl" . -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+
+{{- template "install_ir.tmpl" . -}}
+
+{{- if and (hasKey .chezmoi.osRelease "ubuntuCodename") (has .chezmoi.osRelease.ubuntuCodename .distros.ubuntu_codes) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Ubuntu Packages from GitHub/GitLab\"" -}}
+
+  {{- /* ir Packages */ -}}
+  {{- $irPackages := list -}}
+  {{- $irPackages = concat $irPackages .ubuntu.install_release -}}
+
+  {{- range $irPackages -}}
+    {{- println "sudo ~/.local/share/soar/bin/ir get " . -}}
+    {{- println $line -}}
+  {{- end -}}
+
+{{- else -}}
+  {{- fail "This script is only for Ubuntu based systems." -}}
+{{- end -}}

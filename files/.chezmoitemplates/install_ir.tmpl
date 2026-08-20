@@ -1,0 +1,5 @@
+{{- if (eq (lookPath "ir") "") -}}
+  {{- println "soar add " (gitHubLatestReleaseAssetURL "Rishang/install-release" "install-release-linux-x86_64") " --name ir" -}}
+{{- else -}}
+  {{- println "\necho \"ir found, skipping installation\"" -}}
+{{- end -}}

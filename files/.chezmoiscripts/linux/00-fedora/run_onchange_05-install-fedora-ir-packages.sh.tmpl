@@ -1,0 +1,22 @@
+{{- println "#!/usr/bin/env bash" -}}
+{{- template "env_vars.tmpl" . -}}
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+
+{{- template "install_ir.tmpl" . -}}
+
+{{- if and (hasKey .chezmoi.osRelease "id") (has .chezmoi.osRelease.id .distros.fedora) -}}
+  {{- $allPackages := list -}}
+  {{- println "\necho \"Installing Fedora Packages from GitHub/GitLab\"" -}}
+
+  {{- /* ir Packages */ -}}
+  {{- $irPackages := list -}}
+  {{- $irPackages = concat $irPackages .fedora.install_release -}}
+
+  {{- range $irPackages -}}
+    {{- println "sudo ~/.local/share/soar/bin/ir get " . -}}
+    {{- println $line -}}
+  {{- end -}}
+
+{{- else -}}
+  {{- fail "This script is only for Fedora based systems." -}}
+{{- end -}}

@@ -68,8 +68,9 @@ NATIVE_URL = "👍🔗"
 APPIMAGE_SOAR = "🖼️🪽🔗"
 SOAR = "🪽🔗"
 SOAR_BARE = "🪽"  # soar entry that has a pkg_id (uses system store, no direct URL)
-DRA = "👍📥"  # dra: package: [...] (GitHub release download, selects asset)
-DRA_BARE = "📥"  # dra: [...] (bare dra list, no asset selection)
+INSTALL_RELEASE = (
+    "👍📥"  # install_release: [...] (GitHub/GitLab release download via ir)
+)
 CARGO = "🦀"  # cargo install (from crates.io source)
 CARGO_BINSTALL = "🦀💻"  # cargo binstall (downloads precompiled binary)
 CARGO_GIT = "🦀🔗"  # cargo install --git (from a git repo)
@@ -103,9 +104,9 @@ def _extract_installer_url_name(cmd: str) -> str | None:
     return m.group(1) if m else None
 
 
-def _extract_dra_repo_name(spec: str) -> str:
-    """'owner/RepoName --select ...' → 'RepoName'."""
-    return spec.split("/")[1].split()[0]
+def _extract_install_release_repo_name(url: str) -> str:
+    """'https://github.com/owner/RepoName' → 'RepoName'."""
+    return url.rstrip("/").split("/")[-1]
 
 
 def _set_if_better(
@@ -115,9 +116,9 @@ def _set_if_better(
     emoji: str,
 ) -> None:
     """Set packages[display][distro] = emoji only if not already set by a
-    higher-priority source.  Priority: native/flatpak/dra/installer > soar.
-    Soar entries are treated as fallback; they must NOT overwrite an explicit
-    distro-file entry.
+    higher-priority source.  Priority: native/flatpak/install_release/installer
+    > soar. Soar entries are treated as fallback; they must NOT overwrite an
+    explicit distro-file entry.
     """
     packages.setdefault(display, {})[distro] = emoji
 
@@ -182,15 +183,10 @@ def _parse_linux_yaml(
                     _emit(name, BINARY_URL)
                 continue
 
-            # ---- dra.package --------------------------------------------------
-            if "dra" in key_path and "package" in key_path:
-                raw = _extract_dra_repo_name(item)
-                _emit(raw, DRA)
-                continue
-
-            # ---- bare dra list ------------------------------------------------
-            if "dra" in key_path:
-                _emit(item, DRA_BARE)
+            # ---- install_release ------------------------------------------------
+            if "install_release" in key_path:
+                raw = _extract_install_release_repo_name(item)
+                _emit(raw, INSTALL_RELEASE)
                 continue
 
             # ---- url sublists (nala.url, dnf5.url) ----------------------------
@@ -332,7 +328,7 @@ def _parse_soar_toml(
         emoji = APPIMAGE_SOAR if is_appimage else SOAR
         for distro in _ALL_LINUX:
             # Soar is a fallback: only fills slots not already covered by a
-            # per-distro native/flatpak/dra/installer entry.
+            # per-distro native/flatpak/install_release/installer entry.
             _set_soar_fallback(packages, display, distro, emoji)
 
 

@@ -2,17 +2,17 @@
 
 ## Notation
 
-| Emoji | Meaning               |
-| ----- | --------------------- |
-| 👍    | Native/Distro package |
-| 💻    | Binary executable     |
-| 📦    | Flatpak               |
-| 🔗    | Url                   |
-| 🖼️    | AppImage              |
-| 🚫    | Skipped               |
-| 🪽    | Soar package          |
-| 📥    | Downloaded with DRA   |
-| ❄️    | Nix package           |
+| Emoji | Meaning                              |
+| ----- | ------------------------------------ |
+| 👍    | Native/Distro package                |
+| 💻    | Binary executable                    |
+| 📦    | Flatpak                              |
+| 🔗    | Url                                  |
+| 🖼️    | AppImage                             |
+| 🚫    | Skipped                              |
+| 🪽    | Soar package                         |
+| 📥    | Downloaded with ir (install-release) |
+| ❄️    | Nix package                          |
 
 <!-- smt -->
 
@@ -28,7 +28,6 @@
 | Delta                    | 👍   | 👍     | 👍     | 👍     | 👍      |
 | Discord                  | 👍   | 👍🔗   | 👍     | 👍🔗   | 👍      |
 | Docker Desktop           | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
-| Dra                      | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 👍      |
 | Ente Auth                | 📦   | 📦     | 📦     | 📦     | 👍      |
 | Epic games launcher      | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Espanso                  | 👍   | 👍📥   | 👍     | 👍📥   | 👍      |
@@ -47,6 +46,7 @@
 | Gramps                   | 📦   | 📦     | 📦     | 📦     | 👍      |
 | GrayJay                  | 📦   | 📦     | 📦     | 📦     | 👍      |
 | Heroic Games Launcher    | 👍   | 👍📥   | 👍📥   | 👍📥   | 🚫      |
+| Install Release          | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Keepassxc                | 👍   | 👍     | 👍     | 👍     | 👍      |
 | Kleopatra                | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | Lazygit                  | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
@@ -105,7 +105,7 @@
 | kclock                   | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | libavcodec-freeworld     | 🚫   | 🚫     | 👍     | 🚫     | 🚫      |
 | llmfit                   | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
-| marktext                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| marktext                 | 🪽🔗 | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | nix                      | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | nvtop                    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | ollama                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
@@ -125,7 +125,7 @@
 | sccache                  | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | skanlite                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | skanpage                 | 👍   | 👍     | 👍     | 👍     | 🚫      |
-| sourcegit                | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
+| sourcegit                | 🚫   | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | system-config-printer    | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | tailscale                | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | tealdeer                 | 👍   | 👍     | 👍     | 👍     | 🚫      |

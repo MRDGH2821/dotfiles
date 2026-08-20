@@ -16,7 +16,6 @@ aliases:
   AndrewCantino.McFly: McFly
   Axosoft.GitKraken: Gitkraken
   BurntSushi.ripgrep.MSVC: ripgrep
-  CosimoMatteini.DRA: Dra
   Discord.Discord: Discord
   Docker.DockerDesktop: Docker Desktop
   EpicGames.EpicGamesLauncher: Epic games launcher
@@ -29,7 +28,7 @@ aliases:
   GnuPG.Gpg4win: Gpg4win
   Gramps.Gramps: Gramps
   HermannSchinagl.LinkShellExtension: Link Shell Extension
-  HeroicGamesLauncher: Heroic Games Launcher # dra GitHub repo name
+  HeroicGamesLauncher: Heroic Games Launcher # install_release GitHub repo name
   JanDeDobbeleer.OhMyPosh: Oh My Posh
   JesseDuffield.lazygit: Lazygit
   KeePassXCTeam.KeePassXC: Keepassxc
@@ -82,9 +81,8 @@ aliases:
   direnv: direnv
   direnv.direnv: direnv
   discord: Discord # Arch extra, Fedora native (lowercase)
-  dra: Dra
   ente-io.auth-desktop: Ente Auth
-  espanso: Espanso # dra repo name (Debian/Ubuntu)
+  espanso: Espanso # install_release repo name (Debian/Ubuntu)
   espanso-wayland: Espanso # Arch AUR, Fedora terra
   fastfetch: Fastfetch
   # --- linux_common packages: list (lowercase package ID -> display name) ---
@@ -110,6 +108,7 @@ aliases:
   io.github.alainm23.planify: Planify
   io.github.flattool.Warehouse: Warehouse
   io.github.radiolamp.mangojuice: Mangojuice
+  ir: Install Release # soar key -> display name
   junegunn.fzf: Fzf
   keepassxc: Keepassxc
   kleopatra: Kleopatra
@@ -173,7 +172,7 @@ aliases:
   voidtools.Everything: Everything
   waydroid: Waydroid # tablet_only
   waydroid-helper: Waydroid Helper # tablet_only
-  winboat: Winboat # dra repo name (Debian/Ubuntu/Fedora laptop_only)
+  winboat: Winboat # install_release repo name (Debian/Ubuntu/Fedora laptop_only)
   winboat-bin: Winboat # Arch AUR laptop_only
   yq: go-yq # mikefarah/yq, displayed as go-yq to avoid ambiguity
   zed: Zed # installer_url command name

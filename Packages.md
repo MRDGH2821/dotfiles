@@ -105,12 +105,14 @@
 | filelight                | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | flatpak                  | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | git-agecrypt             | 🦀🔗 | 🦀🔗   | 🦀🔗   | 🦀🔗   | 🚫      |
+| git-cliff                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | git-credential-libsecret | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | git-credential-oauth     | 👍   | 👍     | 👍     | 👍     | 👍      |
 | git-sync                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | go-yq                    | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | herdr                    | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | hermes                   | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
+| hk                       | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | iio-sensor-proxy         | 👍   | 👍     | 👍     | 👍     | 🚫      |
 | irminsul                 | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | kcalc                    | 👍   | 👍     | 👍     | 👍     | 🚫      |

@@ -33,12 +33,13 @@ version = "0.21.0"
 [packages.ir]
 asset_pattern = "install-release-{os}-{arch}"
 github = "Rishang/install-release"
+version = "8.4"
 
 [packages.irminsul]
 asset_pattern = "irminsul-{os}-{arch}.*"
 github = "escalonn/irminsul-taioiislop"
 tag_pattern = "v*.*.*"
-version = "0.2.0-T-1"
+version = "0.2.1-T-1"
 
 [packages.irminsul.hooks]
 post_install = "sudo setcap cap_net_raw=ep '$INSTALL_DIR/irminsul'"

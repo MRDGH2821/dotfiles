@@ -50,9 +50,6 @@
 {{- println "  Import-Module \"$ChocolateyProfile\"" -}}
 {{- println "}" -}}
 
-{{- /* Fast node Manager */ -}}
-{{- println "fnm env --use-on-cd --shell power-shell | Out-String | Invoke-Expression" -}}
-
 {{- /* Zoxide */ -}}
 {{- println "Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })" -}}
 

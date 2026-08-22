@@ -22,12 +22,6 @@ export HISTFILE="${XDG_STATE_HOME}"/shell/history
 # bin
 export PATH="${HOME}/.local/bin:${PATH}"
 
-# fnm
-FNM_PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/fnm"
-if [[ -d ${FNM_PATH} ]]; then
-  export PATH="${FNM_PATH}:${PATH}"
-fi
-
 # cargo
 export PATH="${CARGO_HOME}/bin:${PATH}"
 

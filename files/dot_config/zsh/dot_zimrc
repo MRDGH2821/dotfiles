@@ -47,8 +47,6 @@ zmodule ohmyzsh/ohmyzsh --root plugins/docker
 
 zmodule ohmyzsh/ohmyzsh --root plugins/docker-compose
 
-zmodule ohmyzsh/ohmyzsh --root plugins/fnm
-
 zmodule ohmyzsh/ohmyzsh --root plugins/gh
 
 zmodule ohmyzsh/ohmyzsh --root plugins/systemd

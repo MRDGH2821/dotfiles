@@ -12,7 +12,7 @@
   },
   {
     "allow_concurrent_runs": false,
-    "args": ["-c", "'nix fmt || treefmt -vv'"],
+    "args": ["-c", "'nix fmt || treefmt -vv || mise run fmt || hk fix'"],
     "command": "sh",
     "hide": "on_success",
     "label": "Format files",

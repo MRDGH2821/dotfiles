@@ -12,6 +12,7 @@ templateDir=~/.config/git/templates
 
 [merge]
 ff=only
+guitool=meld
 
 [tag]
 forceSignAnnotated=true

@@ -87,7 +87,7 @@
   },
   "colorize_brackets": true,
   "context_servers": {
-    "NixOS MCP": {
+    "mcp-nixos": {
       "args": ["mcp-nixos"],
       "command": "uvx",
       "enabled": true,

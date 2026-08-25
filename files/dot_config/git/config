@@ -4,7 +4,7 @@ gpgsign=true
 [core]
 autocrlf=false
 editor=zed -n --wait
-pager=delta --side-by-side --dark
+pager=/usr/bin/delta --side-by-side --dark
 
 [init]
 defaultBranch=main

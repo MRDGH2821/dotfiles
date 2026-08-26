@@ -82,6 +82,27 @@ export-gh() {
   echo "GITHUB_TOKEN exported."
 }
 
+export-glab() {
+  local token
+
+  if ! command -v glab >/dev/null 2>&1; then
+    echo "Error: 'glab' is not installed." >&2
+    return 1
+  fi
+
+  # glab has no 'auth token' subcommand; parse the token off the
+  # "Token ...: <value>" line printed by 'auth status --show-token'.
+  token="$(glab auth status --show-token 2>&1 | sed -n 's/.*[Tt]oken.*: \([^[:space:]]*\)$/\1/p' | head -n 1)"
+
+  if [[ -z "${token}" || "${token}" == *'*'* ]]; then
+    echo "Error: failed to get GitLab token (are you logged in? try 'glab auth login')." >&2
+    return 1
+  fi
+
+  export GITLAB_TOKEN="${token}"
+  echo "GITLAB_TOKEN exported."
+}
+
 update-repo() {
   local repo_dir="${1:-.}"
 

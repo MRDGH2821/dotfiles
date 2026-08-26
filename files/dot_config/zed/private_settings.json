@@ -1,7 +1,7 @@
 {
   "agent": {
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "enable_thinking": true,
       "model": "claude-sonnet-5",
       "provider": "zed.dev"
@@ -9,6 +9,9 @@
     "default_profile": "write",
     "dock": "right",
     "model_parameters": [],
+    "sandbox_permissions": {
+      "allow_unsandboxed": true
+    },
     "sidebar_side": "right",
     "terminal_init_command": "herdr-open",
     "tool_permissions": {
@@ -18,6 +21,58 @@
         },
         "mcp:NixOS MCP:nix": {
           "default": "allow"
+        },
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cat\\b"
+            },
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^head\\b"
+            },
+            {
+              "pattern": "^sed\\b"
+            },
+            {
+              "pattern": "^git\\s+check-ignore(\\s|$)"
+            },
+            {
+              "pattern": "^echo\\s+===(\\s|$)"
+            },
+            {
+              "pattern": "^echo\\b"
+            },
+            {
+              "pattern": "^grep\\s+\\^-(\\s|$)"
+            },
+            {
+              "pattern": "^sort\\b"
+            },
+            {
+              "pattern": "^uniq\\b"
+            },
+            {
+              "pattern": "^wc\\b"
+            },
+            {
+              "pattern": "^git\\s+ls-files(\\s|$)"
+            },
+            {
+              "pattern": "^ls\\s+nix/checks/(\\s|$)"
+            },
+            {
+              "pattern": "^git\\s+ls-tree(\\s|$)"
+            },
+            {
+              "pattern": "^awk\\s+\\{print(\\s|$)"
+            },
+            {
+              "pattern": "^ls\\b"
+            }
+          ]
         }
       }
     }
@@ -263,6 +318,11 @@
   "tabs": {
     "file_icons": true,
     "git_status": true
+  },
+  "telemetry": {
+    "anthropic_retention": true,
+    "diagnostics": true,
+    "metrics": true
   },
   "terminal": {
     "copy_on_select": true

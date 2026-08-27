@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Base names of cspell's JSON/YAML config files (the subset yq can edit in
+# place) before the .config/ prefix is applied. See
+# https://cspell.org/docs/getting-started#1-create-a-configuration-file.
+cspell_config_basenames() {
+  local formats=(json jsonc yaml yml) fmt
+  printf '%s\n' .cSpell.json cSpell.json
+  for fmt in "${formats[@]}"; do
+    printf '.cspell.%s\ncspell.%s\n' "$fmt" "$fmt"
+  done
+  for fmt in "${formats[@]}"; do
+    printf '.cspell.config.%s\ncspell.config.%s\n' "$fmt" "$fmt"
+  done
+}
+
+# Any of the base names above may also live under a .config/ subfolder
+# (e.g. .config/cspell.json, .config/cspell.config.yaml).
+find_cspell_config() {
+  local base dir candidate
+  while IFS= read -r base; do
+    for dir in '' '.config/'; do
+      candidate="$dir$base"
+      if [ -f "$candidate" ]; then
+        printf '%s\n' "$candidate"
+        return 0
+      fi
+    done
+  done < <(cspell_config_basenames)
+  return 1
+}
+
+cspell_config="${1:-}"
+if [ -z "$cspell_config" ]; then
+  cspell_config="$(find_cspell_config)" || {
+    echo >&2 "No cspell config file found (looked for .cspell.json, cspell.yaml, and similar). Pass a path explicitly."
+    exit 1
+  }
+fi
+
+case "$cspell_config" in
+  *.yaml | *.yml) yq_format=(-oy) ;;
+  *) yq_format=(-oj) ;;
+esac
+
+yq -i "${yq_format[@]}" --indent 2 '.words = []' "$cspell_config"
+
+raw=$(bunx cspell . --dot --words-only --quiet || true)
+
+if [ -n "$raw" ]; then
+  words=$(
+    printf '%s\n' "$raw" \
+      | sed '/^$/d; s/^/- /' \
+      | yq -o=json 'unique_by(. | downcase) | sort_by(. | downcase)'
+  )
+else
+  words='[]'
+fi
+
+WORDS="$words" yq -i "${yq_format[@]}" --indent 2 '.words = env(WORDS)' "$cspell_config"
+
+echo "Updated $cspell_config with $(yq '.words | length' "$cspell_config") words"

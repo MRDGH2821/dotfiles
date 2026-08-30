@@ -15,7 +15,7 @@ asset_pattern = "ccu-{os}-{arch}"
 github = "p-arndt/compose-check-updates"
 pkg_type = "binary"
 tag_pattern = "*.*.*"
-version = "0.9.0"
+version = "0.10.0"
 
 [packages.escrcpy]
 asset_pattern = "Escrcpy-*-{os}-{arch}.*"
@@ -49,7 +49,7 @@ asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
 github = "AlexsJones/llmfit"
 pkg_type = "archive"
 tag_pattern = "v*.*.*"
-version = "1.1.11"
+version = "1.1.12"
 
 [packages.marktext]
 asset_pattern = "marktext-{os}-*"

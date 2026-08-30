@@ -1,0 +1,3347 @@
+---
+apm_version: 0.28.0
+dependencies:
+  - content_hash: sha256:e0ef2c6c5ed2a412ba2199f4d0ba05efe981e7f6df6bb6995dbc45f601fbc2ff
+    host: github.com
+    materialization_repo_url: MRDGH2821/copier-mr-nix
+    name: copier-mr-nix
+    package_type: apm_package
+    repo_url: mrdgh2821/copier-mr-nix
+    resolved_commit: 2086ec02ea3ca2856b5528fa0b2be5f5cb3a43dc
+    version: 1.3.0
+  - content_hash: sha256:0e8b20973ccae6fba4fa504cb76620d5c94426f77d44748a4d26b3ad34774d4a
+    deployed_file_hashes:
+      .agents/skills/git-commit/SKILL.md: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
+      .claude/skills/git-commit/SKILL.md: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
+    deployed_files:
+      - .agents/skills/git-commit
+      - .agents/skills/git-commit/SKILL.md
+      - .claude/skills/git-commit
+      - .claude/skills/git-commit/SKILL.md
+    depth: 2
+    host: github.com
+    name: awesome-copilot
+    package_type: skill_bundle
+    repo_url: github/awesome-copilot
+    resolved_by: MRDGH2821/copier-mr-nix
+    resolved_commit: f11a4e441c5ff061b4f8ae37952be8c602e4034e
+    skill_subset:
+      - git-commit
+    version: unknown
+  - constraint: 10.0.0
+    content_hash: sha256:cf4f72cc16faf5fb73f6b78d34a6c27ef82a7881e2bf0c82982bc5fa6543ceda
+    deployed_file_hashes:
+      .agents/skills/megalinter-check/SKILL.md: sha256:bb8e475961a2e57eb45687a8f138ea8039c7c5ee29f68cd165632d702097dad4
+      .agents/skills/megalinter-check/container-engine.md: sha256:fc41766272b76416835e4500860d66027ef40a117cf4fb541307db2540ba3864
+      .agents/skills/megalinter-check/performance.md: sha256:72f9c7a8fcffa9d798f16c2dfb66b80f6d8d03b67932dca78b7c1eef8b6928f7
+      .agents/skills/megalinter-check/providers/azure.md: sha256:6d17944bcd59270be15d0031eba8f0d71d445a447dacf5f0a5f0ad539da2d357
+      .agents/skills/megalinter-check/providers/bitbucket.md: sha256:d7ca106ce472ba83100059401dde8a9ecaaf9b3709c1b2c3784522c3eef79e81
+      .agents/skills/megalinter-check/providers/github.md: sha256:9358e71318dd90e2e0d55116d1b95a3e5e57ac2bd4c7d6ae2bc6cbef45340dff
+      .agents/skills/megalinter-check/providers/gitlab.md: sha256:bb1040ba02e315075b49b4ea59076dad57ede2b038d14d98ed23beef45385b15
+      .agents/skills/megalinter-fix/SKILL.md: sha256:fff5202aaa55441d1b0c19a63d7daf5c34757f6a5f6ddb8624450a15f2bee0ca
+      .agents/skills/megalinter-fix/linters/README.md: sha256:7beef671b7f2a2ef42bba1ca2d0f870465b68d341cb725543e6f14d0a67908a6
+      .agents/skills/megalinter-fix/linters/action_actionlint.md: sha256:ab1fabd471c001ae963f79433f7d244c42242167c6fb716c769e87372bc7d5d4
+      .agents/skills/megalinter-fix/linters/action_zizmor.md: sha256:dcdc478f36ca09fc7b67f637087b8d0ffeedb378f44f00e9bb3da767cb6188c6
+      .agents/skills/megalinter-fix/linters/ansible_ansible_lint.md: sha256:fcb006800ce9f07f87db438d42a735c3a671a9f0a7f0d8e8b1e713d4797df798
+      .agents/skills/megalinter-fix/linters/arm_arm_ttk.md: sha256:09c9fb3807cc596c8018e7f289a00b8c2761b34f5ac3a1166deddac3e2d37f0b
+      .agents/skills/megalinter-fix/linters/bash_exec.md: sha256:1827a1933fcc93f30b57b92bda75d741e342400a27582679474dcf56f00b207c
+      .agents/skills/megalinter-fix/linters/bash_shellcheck.md: sha256:d1efa1f54f22408deadb6d9d5f464395c754d3a0a838f71b802c25f1b99fbffa
+      .agents/skills/megalinter-fix/linters/bash_shfmt.md: sha256:5b8995281b132586191bc94ba92f2827d20693f8e627111ef14d3ea410a4c32e
+      .agents/skills/megalinter-fix/linters/bicep_bicep_linter.md: sha256:4308ac2e71c1781b7ac12bd9b1b1cf7dca40964d39327db167c08680a3adea71
+      .agents/skills/megalinter-fix/linters/c_clang_format.md: sha256:ee4013f091cfbb1d731078e90b279e85b912c0908ed9c2592c7df7172d9e0415
+      .agents/skills/megalinter-fix/linters/c_cppcheck.md: sha256:c315d053ebd265f660d053f823cd2ef3240559746e485772498e7381c7fa1e39
+      .agents/skills/megalinter-fix/linters/c_cpplint.md: sha256:58c74a086fc1f270501afe195452c2af99f43db791d89fe03848c580af44f582
+      .agents/skills/megalinter-fix/linters/clojure_clj_kondo.md: sha256:64210a83f3c81e3e6b80ee040121509fc28dcb973c56dfdbfcc21636f2b87475
+      .agents/skills/megalinter-fix/linters/clojure_cljstyle.md: sha256:03f26ad649be02715cdf7889c90ba44f6d08f2f4cd39e6f3e4a07e6bf9e8188a
+      .agents/skills/megalinter-fix/linters/cloudformation_cfn_lint.md: sha256:d8a79f0e2d0642a004d8039ab1f2e639774d09e7bb07a85c7d09f0c7b2d5a604
+      .agents/skills/megalinter-fix/linters/coffee_coffeelint.md: sha256:790c438c3c9c8a360cddf4e788002b633c636594ef039b751e35340a36d72030
+      .agents/skills/megalinter-fix/linters/copypaste_jscpd.md: sha256:860b1625da1a3547eebf1f17d8a14bd29fc3947308003c08720e68a2c45e3868
+      .agents/skills/megalinter-fix/linters/cpp_clang_format.md: sha256:aae54d28779dc453cae49002851e259c2cd36872e7b3df0c806138651116b84f
+      .agents/skills/megalinter-fix/linters/cpp_cppcheck.md: sha256:9345e0b2da6f3833f542792eba20e9f80f4ad75bfda89dd799fa617dd71d3d81
+      .agents/skills/megalinter-fix/linters/cpp_cpplint.md: sha256:a8afa138f29dbe26c9f6bd52d2ea6534e6e97d028587baf54ba2682324e60228
+      .agents/skills/megalinter-fix/linters/csharp_csharpier.md: sha256:6d8b1dc8046f0738a1cd42cc8a03cceb8e3cdf9eb8b783ce0af4905deed1c670
+      .agents/skills/megalinter-fix/linters/csharp_dotnet_format.md: sha256:c3ec4b6466bb1effeb1f144b210706b63d875f1c1afc28e431f575af342d25e7
+      .agents/skills/megalinter-fix/linters/csharp_roslynator.md: sha256:110f6eb45cc8f9edc8bb8f4a1d83620593024b182c30b086331af20745bfdc71
+      .agents/skills/megalinter-fix/linters/css_stylelint.md: sha256:69439bb77ee98672d146e0ab50192b7033fb9a1244a59735cecdd6c341538430
+      .agents/skills/megalinter-fix/linters/dart_dartanalyzer.md: sha256:578e93da8981917d310935565c0d2b436f1d87540afbe017f54ee148e68e1453
+      .agents/skills/megalinter-fix/linters/dockerfile_hadolint.md: sha256:d298343819e0cccbdd109d92a507b6a105849098bffd667e7e3600340d330c6d
+      .agents/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md: sha256:8317fcbde952ad1f2bb3b87f953517a269b8d7afbe535e0e055fe7a93c5db78e
+      .agents/skills/megalinter-fix/linters/env_dotenv_linter.md: sha256:b10a13d97cb45c42ce3b21fdd381953556777bf8bbe5facd60b74a55406b6f87
+      .agents/skills/megalinter-fix/linters/gherkin_gherkin_lint.md: sha256:d4c968be3c139a438d36f93101c4b0fe9eeeb8ccaf85184cc86678adad5f0531
+      .agents/skills/megalinter-fix/linters/go_golangci_lint.md: sha256:b30c603c38df54eefca45d5be87d1dbf494ce5714e2e8d89d4d9d2a878f6ae33
+      .agents/skills/megalinter-fix/linters/go_revive.md: sha256:e993f081e35e669ad181579c4e42a50a2f961ded2e15f5f82a4631009ace6967
+      .agents/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md: sha256:fd2ea1d3023cac24f2926d8379f548c8c47742e6062d2f2b1df08d3d7130fc37
+      .agents/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md: sha256:a6c8a52e12696affe41d0e1649bc3659c83624d4992e2225aeeadef2352cf04b
+      .agents/skills/megalinter-fix/linters/html_djlint.md: sha256:e40301a82411bc97fdb4a5f0853d38cc0733396f5978cc35a700a933a4d2b2d9
+      .agents/skills/megalinter-fix/linters/html_htmlhint.md: sha256:b09feab917b07c132fcbac958908f92eef4f11542385a98c724a0383f5e1f81e
+      .agents/skills/megalinter-fix/linters/java_checkstyle.md: sha256:087633ef644aead0847471f170d067d36d8167a761324444b7e93da61b6351e0
+      .agents/skills/megalinter-fix/linters/java_pmd.md: sha256:39e7cb52df143532852eba103778633f8ee7587f52964473c23fee7a01203ba2
+      .agents/skills/megalinter-fix/linters/javascript_es.md: sha256:f9e9533baba8db6d5239551a93f8d70c2b5b7f9e3d43643e53b4154b312ec2f6
+      .agents/skills/megalinter-fix/linters/javascript_prettier.md: sha256:6eb52e04c0e2acf047589b8a3f867137357f2de07e336cd04bd6cc2763a82f41
+      .agents/skills/megalinter-fix/linters/javascript_standard.md: sha256:e9b233b1b2d21928d772284510fcda3828c14884a78b2960b5ecce7cdd0a866a
+      .agents/skills/megalinter-fix/linters/json_jsonlint.md: sha256:c58ed6fd23061159927f1881b954a08fcc73d005cc1124e5ca3ffa8abec4cf07
+      .agents/skills/megalinter-fix/linters/json_npm_package_json_lint.md: sha256:07a392d510904d62050bd663b83b621ef68be34846c50d5be366e7ed406b2c86
+      .agents/skills/megalinter-fix/linters/json_prettier.md: sha256:dc5abd5518a7ba07b3a7a1dcf3c421631a3d7a94c40ae55ccec570571e2d57a9
+      .agents/skills/megalinter-fix/linters/json_v8r.md: sha256:9115a4835bc292bb7f12ac2612925d7ed5db2abacd06628c102923366f4e11e6
+      .agents/skills/megalinter-fix/linters/jsx_eslint.md: sha256:7ffc229ec2eee919168954193dec61aa1dbb8ceb059e2c69fe5984d12308c1b4
+      .agents/skills/megalinter-fix/linters/kotlin_detekt.md: sha256:ec259fe94bc742fc89b1d7aef7fd4c8c3a39ca6afd067d4e1b54abbe7571c607
+      .agents/skills/megalinter-fix/linters/kotlin_ktlint.md: sha256:c942dfacaf7951c2e8d65a512388d1b0cf44927a201114ca5b9d79c99599e907
+      .agents/skills/megalinter-fix/linters/kubernetes_helm.md: sha256:42efe27faf8b5b9765146e4497d91cd4c65e1ca6f81102b94b01b4d16c944979
+      .agents/skills/megalinter-fix/linters/kubernetes_kubeconform.md: sha256:605e6ef84e5fc572216873ecc5d1ff8936264cbeafe0756f0b1ff2d396016b17
+      .agents/skills/megalinter-fix/linters/kubernetes_kubescape.md: sha256:771c14f672d21bae99e49bef87844f0159eb31c550d4c6e0c2f9c28500649b23
+      .agents/skills/megalinter-fix/linters/latex_chktex.md: sha256:3d53ebbd9c15a943cc3ac9bce44e7b1dc25ee9114af7aedb98e32cc314970057
+      .agents/skills/megalinter-fix/linters/lua_luacheck.md: sha256:6843340549444eaa5d549b7fae3dbbbc92fac890d6a6e1c1c09606ac3dbd1cad
+      .agents/skills/megalinter-fix/linters/lua_stylua.md: sha256:25e65f1f0d1aa3ef6077748775e5b639fc7493b27ba4f4ef2405ad16baa3fd4a
+      .agents/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md: sha256:dc1231be2a52a1780a0c875b58c4c9105b2633d78786fbc4be38647616834a2d
+      .agents/skills/megalinter-fix/linters/markdown_markdownlint.md: sha256:913a7d2a72dbf6d3ea229c616878e1bca6c8be0569a7ae9a50e4b9730e05aa40
+      .agents/skills/megalinter-fix/linters/markdown_rumdl.md: sha256:69af5d9c3eff6db9583351cf8adb4c48972917b3bdee0880531980e6acf4c10d
+      .agents/skills/megalinter-fix/linters/perl_perlcritic.md: sha256:0fb1d8be351ee599a4ce548b4173e34ba718b762f7457fc6f61df6a0f0ee1d45
+      .agents/skills/megalinter-fix/linters/php_phpcs.md: sha256:ec6aafdf35b7f06b8f6802c9c5ab4469888e7b3ac18cf4af1afc1bc00e69cf7d
+      .agents/skills/megalinter-fix/linters/php_phpcsfixer.md: sha256:c01a792d5010da1211e7c2a2510e1064714e8a2d7f714de5f97470c9b20d9a3f
+      .agents/skills/megalinter-fix/linters/php_phplint.md: sha256:f35dd494de6ac6c73c396c2883da37727871712a035d63dce11e82eb877ec69c
+      .agents/skills/megalinter-fix/linters/php_phpstan.md: sha256:c663b4c9973464dec921dd37c9219ed4550c9e9471b942deb76a753455a542b0
+      .agents/skills/megalinter-fix/linters/php_psalm.md: sha256:2f015a30baa0eaa6bcbb5050592e8cc6251f5a801574d110516a192b74d63d82
+      .agents/skills/megalinter-fix/linters/powershell_powershell.md: sha256:34199a942a42afe17d9199ae5ea13711649581c30d241d042802c828dd2a1524
+      .agents/skills/megalinter-fix/linters/powershell_powershell_formatter.md: sha256:0166d1a571158e283c5ce8f372e71ac00307eccb07e84d5c21e9059e3f979c4b
+      .agents/skills/megalinter-fix/linters/protobuf_protolint.md: sha256:c8a7e5728e201e1556b48c3f23f87d256d1a3b1b1a7afd89b60aa80efa47ee76
+      .agents/skills/megalinter-fix/linters/python_bandit.md: sha256:93f6955111f2aace229b5d4bdac0eea5fa0897161467aed4af7926b3fca210a2
+      .agents/skills/megalinter-fix/linters/python_black.md: sha256:09b971c599eaa8821136f00f9b44e8dfe226f687e843fc31258a2f5132c31357
+      .agents/skills/megalinter-fix/linters/python_flake8.md: sha256:0f8edff82980be702ae7616873626a6741ae052ba5b44d64802d1edbff0bb95c
+      .agents/skills/megalinter-fix/linters/python_isort.md: sha256:9989ead0e4fd98e79ca2adf0519ae966f251c2c99b9953c62a67bcf833dd018e
+      .agents/skills/megalinter-fix/linters/python_mypy.md: sha256:0d1229ac46909d65a798dfd82ea4816f5dff1b6d7bafe4cc7b842ef6455f7ac0
+      .agents/skills/megalinter-fix/linters/python_nbqa_mypy.md: sha256:1cd7c97e6d5ecebc4acc60d752f664e080b971288561828b00b7acb35cdaefbe
+      .agents/skills/megalinter-fix/linters/python_pylint.md: sha256:626458b1402443e8e1fd7791302f72d83e23340b60997d2a08b00bcd279b478a
+      .agents/skills/megalinter-fix/linters/python_pyright.md: sha256:6b1bec76ce651deb7ca8a55a949f0be96d1c797f4f8d3812446f2d5eb490d517
+      .agents/skills/megalinter-fix/linters/python_ruff.md: sha256:7282db1f45df0a4c1195cae101adbf2dd0d0038afeb5eb7c4ebe99694bcf6dda
+      .agents/skills/megalinter-fix/linters/python_ruff_format.md: sha256:38eeaf114aa781bfa7f2352ff524b9d0c392ef348f3f90440c6c28b9b2847c02
+      .agents/skills/megalinter-fix/linters/r_lintr.md: sha256:34109a7db82c19b4289719d602501f091cfe51b121bd8c5e1cec9a89ced5f03c
+      .agents/skills/megalinter-fix/linters/raku_raku.md: sha256:9e373e745f36eed058f231d95777473ff72e03ada7c2a840a3d1f5119c772818
+      .agents/skills/megalinter-fix/linters/repository_betterleaks.md: sha256:9528a95844765652aac31c442f857e168440391f79b2d786e3dc030ed363945a
+      .agents/skills/megalinter-fix/linters/repository_checkov.md: sha256:d1eb5dcf592b08b1c32a562b0fb6f592a140cc0dce7cdde04416e260c295bbd4
+      .agents/skills/megalinter-fix/linters/repository_devskim.md: sha256:93da88fb8e66af491e71aaed1648d48408c7fdd5ca0740f4408842ad7336e15d
+      .agents/skills/megalinter-fix/linters/repository_dustilock.md: sha256:6e2584e46188be7240ee29e9c47ab39e94033350998d636f797ac86b8810ff87
+      .agents/skills/megalinter-fix/linters/repository_git_diff.md: sha256:e1b037befc7ef27739c81a3bda538793fd296db2816ef39e55158a4c138f1904
+      .agents/skills/megalinter-fix/linters/repository_grype.md: sha256:fd8da29fc79e7047e99706ad3bda80e73a27b069b522bd5779134ec234a72963
+      .agents/skills/megalinter-fix/linters/repository_kingfisher.md: sha256:ca3e0d065832867059d3b59a048117157340083d377d29d5de58cb2d24567a06
+      .agents/skills/megalinter-fix/linters/repository_ls_lint.md: sha256:4290af7604356278ee58d9d1befc0b9ced2b4d33ecca82352ca38e3c4ce39cf3
+      .agents/skills/megalinter-fix/linters/repository_osv_scanner.md: sha256:35095d7380278239b260d510ede9f510f0590c98db1a08380bf187cd66ec452d
+      .agents/skills/megalinter-fix/linters/repository_secretlint.md: sha256:355dde05538c2097f9f65c07454583ad6b4b91510b412e0395fd7a3c628788da
+      .agents/skills/megalinter-fix/linters/repository_semgrep.md: sha256:8cab35c83452644f1cf96dc6ff8c8b8767736b215fcbb5c4acba758f8cd3d974
+      .agents/skills/megalinter-fix/linters/repository_syft.md: sha256:db486ec4fdda91917ed99c5cde82e63cd79cda712bd0b7c84fd2aa7b172f939a
+      .agents/skills/megalinter-fix/linters/repository_trivy.md: sha256:5862576d65d12e7129a11adcdfc3d4edd42785603b27fa2e2c613ee6cce66267
+      .agents/skills/megalinter-fix/linters/repository_trivy_sbom.md: sha256:937936f7784bd4718f21a0ccdc75f774269fdd06a9f1073810e4bb7213091acb
+      .agents/skills/megalinter-fix/linters/repository_trufflehog.md: sha256:d2316117fef3492a374d8534d33ab429e7ba824bdabd5d7a96cea577e68c72b1
+      .agents/skills/megalinter-fix/linters/robotframework_robocop.md: sha256:7218c2005d03d44b00a1e9d757c63bcf971adc1296e965decb4f10e48b601a6c
+      .agents/skills/megalinter-fix/linters/rst_rst_lint.md: sha256:605cc3aeef5a5902241a64e31c083685d674562152e6e0922f20e95613a748a3
+      .agents/skills/megalinter-fix/linters/rst_rstcheck.md: sha256:64ded9ed98d46774c1792568048bf0751effd4fc21b16f76d37d716ac3cc31ba
+      .agents/skills/megalinter-fix/linters/rst_rstfmt.md: sha256:c09b640e6e5f38ee41d94cc205bae11d8b8d90098419e92c7478659f846f4ade
+      .agents/skills/megalinter-fix/linters/ruby_rubocop.md: sha256:ade85a7830b04fb33e5cdce5cbd4a4d86f1b3fca1dccb4456504e8bd5c7483ff
+      .agents/skills/megalinter-fix/linters/rust_clippy.md: sha256:a7d3dce00906c93fe69bac39d29754da2ebe075e16f7a67a27370cb75d79b0ef
+      .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md: sha256:ffb65e1bde1076ebf0ff3aa6a0fbb129fb4c7ff098b7c405e5cabae7aac075ca
+      .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md: sha256:81ed8dc8f1bbdbea751b92ff8458b96d04053fe59b3a1809b0c335db118e8b08
+      .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md: sha256:91f91f30d83b7c121d234ddb0af24d7fb52cfe01422fe2a4fda5575dbb3e75ad
+      .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md: sha256:f05f9bf68a8fb16dc81dc50260903f66555cef016eed9aa2382e7ef9aaa23e48
+      .agents/skills/megalinter-fix/linters/scala_scalafix.md: sha256:3e5ec0f0c3823b615e1cd50c1f6e3f526cc4865a17111beeba144acbf8d814b7
+      .agents/skills/megalinter-fix/linters/snakemake_lint.md: sha256:9b7167422764b8fb4f895974e6fa03e79ea1a796ce0ef31f4b547cc2dbadf355
+      .agents/skills/megalinter-fix/linters/snakemake_snakefmt.md: sha256:e396f21013ea28b2ee1d1e78215de41d14f4e205f8bdd07a225a392393b9ff1d
+      .agents/skills/megalinter-fix/linters/spell_codespell.md: sha256:07b4b314f0f765aeac028bdf12d56fe6a879e5c3e6e10b48a4b46f38283c247c
+      .agents/skills/megalinter-fix/linters/spell_cspell.md: sha256:0ac178e050e6ae19a924684ddbe7d8bb282eec318487899ada89a88b5d096b2c
+      .agents/skills/megalinter-fix/linters/spell_lychee.md: sha256:2df0b4a1d85e17a3808791ce29ecb971b4fdbead76c91ece945b909dd5252295
+      .agents/skills/megalinter-fix/linters/spell_proselint.md: sha256:0ace4608a981ee0b2a81a29336fe689198a3e4142e55aa1c96d328bad893cdd2
+      .agents/skills/megalinter-fix/linters/spell_vale.md: sha256:49d60a9a2fd4983232a61876e725294aa0d7ce09d6f4413efae4c700fecbdd6f
+      .agents/skills/megalinter-fix/linters/sql_sqlfluff.md: sha256:0f72b05e8d8ce1da13e4665c52add1b16ad191dfa096063f1c49cd2d76522630
+      .agents/skills/megalinter-fix/linters/swift_swiftlint.md: sha256:66cba049bba443695d9b42dccc473be7e9d9a2ee44302c3a85ebd18a4429a52e
+      .agents/skills/megalinter-fix/linters/tekton_tekton_lint.md: sha256:b31ad784191c7d437f594eafc70e353f02c91a4732d4b0793e56ce10116eac48
+      .agents/skills/megalinter-fix/linters/terraform_terraform_fmt.md: sha256:ecd7cafaa50f0c168b99fd6711c78be6fa3b213a63715e1e95a666ee8662c38f
+      .agents/skills/megalinter-fix/linters/terraform_terragrunt.md: sha256:0ee29f17c7e384284fd66bbd336d59eeddec2906179423d2d0ad2feefb0b57dd
+      .agents/skills/megalinter-fix/linters/terraform_tflint.md: sha256:2af6cbd43105699db087e037b27c90ae80570fd0ca053f1f838e30c732eee16a
+      .agents/skills/megalinter-fix/linters/tsx_eslint.md: sha256:848d352a511c869b3d4af998706dbba0b7b2a90ca05d037736d19e10a8d2cf69
+      .agents/skills/megalinter-fix/linters/typescript_es.md: sha256:5ae544baadce823113fe02bc7871ce86b131ff792ff8d25618784f0d0a42a3f0
+      .agents/skills/megalinter-fix/linters/typescript_prettier.md: sha256:3ff341406abbf249d4cafe499a66f878c853f346e314d54ffc9bdf7378ee508d
+      .agents/skills/megalinter-fix/linters/typescript_standard.md: sha256:d25fc6282adf9e37313183695aa00343b9e253fdd9ffde754af433c6315471da
+      .agents/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md: sha256:243b1d712b1ad73e908b27d4171019e42db12af2c0a29ae642320e1fb5d1fdff
+      .agents/skills/megalinter-fix/linters/xml_xmllint.md: sha256:2f6e1350c543aefd0dfe1afe13a08e29467f46cd0762aae295553ae7e3b948e0
+      .agents/skills/megalinter-fix/linters/yaml_prettier.md: sha256:46f33ee366ed63559fd31b8130340217b18d8f1f29ae4f0049d1e2a5d877a4a7
+      .agents/skills/megalinter-fix/linters/yaml_v8r.md: sha256:9a278e5f83afffee47e6575fd97fe4154777d96d4b3343b50f844a0e403fb20d
+      .agents/skills/megalinter-fix/linters/yaml_yamllint.md: sha256:25d61d3183bd8a2cc10521046c3e73b8483fb43b7d3f916a81678f1f96efc2aa
+      .agents/skills/megalinter-setup/SKILL.md: sha256:b1cba3934bbb096ca21988ccd0d0042271d83975c3d3bbbbdf6b44d628daddb1
+      .agents/skills/megalinter-setup/agents/INSTALL.md: sha256:2160d4438c93aa8f7879f0cbab7a496db5637ebe3d7c4da298708d33719eefe3
+      .agents/skills/megalinter-setup/agents/megalinter-fixer.md: sha256:a9787c97e872b041fbbf6be874d9be9218f950c416e11a4597a628f7258fae8c
+      .agents/skills/megalinter-setup/agents/megalinter-runner.md: sha256:41cf3c2308c89f41f9b098fde9d0f2fc50c4c74964401c50fa35e742a346367a
+      .agents/skills/megalinter-setup/agents/megalinter-watcher.md: sha256:3c62222f9b20f62715b4c4c24e914181796247831ce476cf5044fff5481bb672
+      .agents/skills/megalinter/SKILL.md: sha256:ffd79b1c0c831f206b0b39fa35c463e976c37eeef85218320342348eaed9ffc9
+      .claude/skills/megalinter-check/SKILL.md: sha256:bb8e475961a2e57eb45687a8f138ea8039c7c5ee29f68cd165632d702097dad4
+      .claude/skills/megalinter-check/container-engine.md: sha256:fc41766272b76416835e4500860d66027ef40a117cf4fb541307db2540ba3864
+      .claude/skills/megalinter-check/performance.md: sha256:72f9c7a8fcffa9d798f16c2dfb66b80f6d8d03b67932dca78b7c1eef8b6928f7
+      .claude/skills/megalinter-check/providers/azure.md: sha256:6d17944bcd59270be15d0031eba8f0d71d445a447dacf5f0a5f0ad539da2d357
+      .claude/skills/megalinter-check/providers/bitbucket.md: sha256:d7ca106ce472ba83100059401dde8a9ecaaf9b3709c1b2c3784522c3eef79e81
+      .claude/skills/megalinter-check/providers/github.md: sha256:9358e71318dd90e2e0d55116d1b95a3e5e57ac2bd4c7d6ae2bc6cbef45340dff
+      .claude/skills/megalinter-check/providers/gitlab.md: sha256:bb1040ba02e315075b49b4ea59076dad57ede2b038d14d98ed23beef45385b15
+      .claude/skills/megalinter-fix/SKILL.md: sha256:fff5202aaa55441d1b0c19a63d7daf5c34757f6a5f6ddb8624450a15f2bee0ca
+      .claude/skills/megalinter-fix/linters/README.md: sha256:7beef671b7f2a2ef42bba1ca2d0f870465b68d341cb725543e6f14d0a67908a6
+      .claude/skills/megalinter-fix/linters/action_actionlint.md: sha256:ab1fabd471c001ae963f79433f7d244c42242167c6fb716c769e87372bc7d5d4
+      .claude/skills/megalinter-fix/linters/action_zizmor.md: sha256:dcdc478f36ca09fc7b67f637087b8d0ffeedb378f44f00e9bb3da767cb6188c6
+      .claude/skills/megalinter-fix/linters/ansible_ansible_lint.md: sha256:fcb006800ce9f07f87db438d42a735c3a671a9f0a7f0d8e8b1e713d4797df798
+      .claude/skills/megalinter-fix/linters/arm_arm_ttk.md: sha256:09c9fb3807cc596c8018e7f289a00b8c2761b34f5ac3a1166deddac3e2d37f0b
+      .claude/skills/megalinter-fix/linters/bash_exec.md: sha256:1827a1933fcc93f30b57b92bda75d741e342400a27582679474dcf56f00b207c
+      .claude/skills/megalinter-fix/linters/bash_shellcheck.md: sha256:d1efa1f54f22408deadb6d9d5f464395c754d3a0a838f71b802c25f1b99fbffa
+      .claude/skills/megalinter-fix/linters/bash_shfmt.md: sha256:5b8995281b132586191bc94ba92f2827d20693f8e627111ef14d3ea410a4c32e
+      .claude/skills/megalinter-fix/linters/bicep_bicep_linter.md: sha256:4308ac2e71c1781b7ac12bd9b1b1cf7dca40964d39327db167c08680a3adea71
+      .claude/skills/megalinter-fix/linters/c_clang_format.md: sha256:ee4013f091cfbb1d731078e90b279e85b912c0908ed9c2592c7df7172d9e0415
+      .claude/skills/megalinter-fix/linters/c_cppcheck.md: sha256:c315d053ebd265f660d053f823cd2ef3240559746e485772498e7381c7fa1e39
+      .claude/skills/megalinter-fix/linters/c_cpplint.md: sha256:58c74a086fc1f270501afe195452c2af99f43db791d89fe03848c580af44f582
+      .claude/skills/megalinter-fix/linters/clojure_clj_kondo.md: sha256:64210a83f3c81e3e6b80ee040121509fc28dcb973c56dfdbfcc21636f2b87475
+      .claude/skills/megalinter-fix/linters/clojure_cljstyle.md: sha256:03f26ad649be02715cdf7889c90ba44f6d08f2f4cd39e6f3e4a07e6bf9e8188a
+      .claude/skills/megalinter-fix/linters/cloudformation_cfn_lint.md: sha256:d8a79f0e2d0642a004d8039ab1f2e639774d09e7bb07a85c7d09f0c7b2d5a604
+      .claude/skills/megalinter-fix/linters/coffee_coffeelint.md: sha256:790c438c3c9c8a360cddf4e788002b633c636594ef039b751e35340a36d72030
+      .claude/skills/megalinter-fix/linters/copypaste_jscpd.md: sha256:860b1625da1a3547eebf1f17d8a14bd29fc3947308003c08720e68a2c45e3868
+      .claude/skills/megalinter-fix/linters/cpp_clang_format.md: sha256:aae54d28779dc453cae49002851e259c2cd36872e7b3df0c806138651116b84f
+      .claude/skills/megalinter-fix/linters/cpp_cppcheck.md: sha256:9345e0b2da6f3833f542792eba20e9f80f4ad75bfda89dd799fa617dd71d3d81
+      .claude/skills/megalinter-fix/linters/cpp_cpplint.md: sha256:a8afa138f29dbe26c9f6bd52d2ea6534e6e97d028587baf54ba2682324e60228
+      .claude/skills/megalinter-fix/linters/csharp_csharpier.md: sha256:6d8b1dc8046f0738a1cd42cc8a03cceb8e3cdf9eb8b783ce0af4905deed1c670
+      .claude/skills/megalinter-fix/linters/csharp_dotnet_format.md: sha256:c3ec4b6466bb1effeb1f144b210706b63d875f1c1afc28e431f575af342d25e7
+      .claude/skills/megalinter-fix/linters/csharp_roslynator.md: sha256:110f6eb45cc8f9edc8bb8f4a1d83620593024b182c30b086331af20745bfdc71
+      .claude/skills/megalinter-fix/linters/css_stylelint.md: sha256:69439bb77ee98672d146e0ab50192b7033fb9a1244a59735cecdd6c341538430
+      .claude/skills/megalinter-fix/linters/dart_dartanalyzer.md: sha256:578e93da8981917d310935565c0d2b436f1d87540afbe017f54ee148e68e1453
+      .claude/skills/megalinter-fix/linters/dockerfile_hadolint.md: sha256:d298343819e0cccbdd109d92a507b6a105849098bffd667e7e3600340d330c6d
+      .claude/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md: sha256:8317fcbde952ad1f2bb3b87f953517a269b8d7afbe535e0e055fe7a93c5db78e
+      .claude/skills/megalinter-fix/linters/env_dotenv_linter.md: sha256:b10a13d97cb45c42ce3b21fdd381953556777bf8bbe5facd60b74a55406b6f87
+      .claude/skills/megalinter-fix/linters/gherkin_gherkin_lint.md: sha256:d4c968be3c139a438d36f93101c4b0fe9eeeb8ccaf85184cc86678adad5f0531
+      .claude/skills/megalinter-fix/linters/go_golangci_lint.md: sha256:b30c603c38df54eefca45d5be87d1dbf494ce5714e2e8d89d4d9d2a878f6ae33
+      .claude/skills/megalinter-fix/linters/go_revive.md: sha256:e993f081e35e669ad181579c4e42a50a2f961ded2e15f5f82a4631009ace6967
+      .claude/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md: sha256:fd2ea1d3023cac24f2926d8379f548c8c47742e6062d2f2b1df08d3d7130fc37
+      .claude/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md: sha256:a6c8a52e12696affe41d0e1649bc3659c83624d4992e2225aeeadef2352cf04b
+      .claude/skills/megalinter-fix/linters/html_djlint.md: sha256:e40301a82411bc97fdb4a5f0853d38cc0733396f5978cc35a700a933a4d2b2d9
+      .claude/skills/megalinter-fix/linters/html_htmlhint.md: sha256:b09feab917b07c132fcbac958908f92eef4f11542385a98c724a0383f5e1f81e
+      .claude/skills/megalinter-fix/linters/java_checkstyle.md: sha256:087633ef644aead0847471f170d067d36d8167a761324444b7e93da61b6351e0
+      .claude/skills/megalinter-fix/linters/java_pmd.md: sha256:39e7cb52df143532852eba103778633f8ee7587f52964473c23fee7a01203ba2
+      .claude/skills/megalinter-fix/linters/javascript_es.md: sha256:f9e9533baba8db6d5239551a93f8d70c2b5b7f9e3d43643e53b4154b312ec2f6
+      .claude/skills/megalinter-fix/linters/javascript_prettier.md: sha256:6eb52e04c0e2acf047589b8a3f867137357f2de07e336cd04bd6cc2763a82f41
+      .claude/skills/megalinter-fix/linters/javascript_standard.md: sha256:e9b233b1b2d21928d772284510fcda3828c14884a78b2960b5ecce7cdd0a866a
+      .claude/skills/megalinter-fix/linters/json_jsonlint.md: sha256:c58ed6fd23061159927f1881b954a08fcc73d005cc1124e5ca3ffa8abec4cf07
+      .claude/skills/megalinter-fix/linters/json_npm_package_json_lint.md: sha256:07a392d510904d62050bd663b83b621ef68be34846c50d5be366e7ed406b2c86
+      .claude/skills/megalinter-fix/linters/json_prettier.md: sha256:dc5abd5518a7ba07b3a7a1dcf3c421631a3d7a94c40ae55ccec570571e2d57a9
+      .claude/skills/megalinter-fix/linters/json_v8r.md: sha256:9115a4835bc292bb7f12ac2612925d7ed5db2abacd06628c102923366f4e11e6
+      .claude/skills/megalinter-fix/linters/jsx_eslint.md: sha256:7ffc229ec2eee919168954193dec61aa1dbb8ceb059e2c69fe5984d12308c1b4
+      .claude/skills/megalinter-fix/linters/kotlin_detekt.md: sha256:ec259fe94bc742fc89b1d7aef7fd4c8c3a39ca6afd067d4e1b54abbe7571c607
+      .claude/skills/megalinter-fix/linters/kotlin_ktlint.md: sha256:c942dfacaf7951c2e8d65a512388d1b0cf44927a201114ca5b9d79c99599e907
+      .claude/skills/megalinter-fix/linters/kubernetes_helm.md: sha256:42efe27faf8b5b9765146e4497d91cd4c65e1ca6f81102b94b01b4d16c944979
+      .claude/skills/megalinter-fix/linters/kubernetes_kubeconform.md: sha256:605e6ef84e5fc572216873ecc5d1ff8936264cbeafe0756f0b1ff2d396016b17
+      .claude/skills/megalinter-fix/linters/kubernetes_kubescape.md: sha256:771c14f672d21bae99e49bef87844f0159eb31c550d4c6e0c2f9c28500649b23
+      .claude/skills/megalinter-fix/linters/latex_chktex.md: sha256:3d53ebbd9c15a943cc3ac9bce44e7b1dc25ee9114af7aedb98e32cc314970057
+      .claude/skills/megalinter-fix/linters/lua_luacheck.md: sha256:6843340549444eaa5d549b7fae3dbbbc92fac890d6a6e1c1c09606ac3dbd1cad
+      .claude/skills/megalinter-fix/linters/lua_stylua.md: sha256:25e65f1f0d1aa3ef6077748775e5b639fc7493b27ba4f4ef2405ad16baa3fd4a
+      .claude/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md: sha256:dc1231be2a52a1780a0c875b58c4c9105b2633d78786fbc4be38647616834a2d
+      .claude/skills/megalinter-fix/linters/markdown_markdownlint.md: sha256:913a7d2a72dbf6d3ea229c616878e1bca6c8be0569a7ae9a50e4b9730e05aa40
+      .claude/skills/megalinter-fix/linters/markdown_rumdl.md: sha256:69af5d9c3eff6db9583351cf8adb4c48972917b3bdee0880531980e6acf4c10d
+      .claude/skills/megalinter-fix/linters/perl_perlcritic.md: sha256:0fb1d8be351ee599a4ce548b4173e34ba718b762f7457fc6f61df6a0f0ee1d45
+      .claude/skills/megalinter-fix/linters/php_phpcs.md: sha256:ec6aafdf35b7f06b8f6802c9c5ab4469888e7b3ac18cf4af1afc1bc00e69cf7d
+      .claude/skills/megalinter-fix/linters/php_phpcsfixer.md: sha256:c01a792d5010da1211e7c2a2510e1064714e8a2d7f714de5f97470c9b20d9a3f
+      .claude/skills/megalinter-fix/linters/php_phplint.md: sha256:f35dd494de6ac6c73c396c2883da37727871712a035d63dce11e82eb877ec69c
+      .claude/skills/megalinter-fix/linters/php_phpstan.md: sha256:c663b4c9973464dec921dd37c9219ed4550c9e9471b942deb76a753455a542b0
+      .claude/skills/megalinter-fix/linters/php_psalm.md: sha256:2f015a30baa0eaa6bcbb5050592e8cc6251f5a801574d110516a192b74d63d82
+      .claude/skills/megalinter-fix/linters/powershell_powershell.md: sha256:34199a942a42afe17d9199ae5ea13711649581c30d241d042802c828dd2a1524
+      .claude/skills/megalinter-fix/linters/powershell_powershell_formatter.md: sha256:0166d1a571158e283c5ce8f372e71ac00307eccb07e84d5c21e9059e3f979c4b
+      .claude/skills/megalinter-fix/linters/protobuf_protolint.md: sha256:c8a7e5728e201e1556b48c3f23f87d256d1a3b1b1a7afd89b60aa80efa47ee76
+      .claude/skills/megalinter-fix/linters/python_bandit.md: sha256:93f6955111f2aace229b5d4bdac0eea5fa0897161467aed4af7926b3fca210a2
+      .claude/skills/megalinter-fix/linters/python_black.md: sha256:09b971c599eaa8821136f00f9b44e8dfe226f687e843fc31258a2f5132c31357
+      .claude/skills/megalinter-fix/linters/python_flake8.md: sha256:0f8edff82980be702ae7616873626a6741ae052ba5b44d64802d1edbff0bb95c
+      .claude/skills/megalinter-fix/linters/python_isort.md: sha256:9989ead0e4fd98e79ca2adf0519ae966f251c2c99b9953c62a67bcf833dd018e
+      .claude/skills/megalinter-fix/linters/python_mypy.md: sha256:0d1229ac46909d65a798dfd82ea4816f5dff1b6d7bafe4cc7b842ef6455f7ac0
+      .claude/skills/megalinter-fix/linters/python_nbqa_mypy.md: sha256:1cd7c97e6d5ecebc4acc60d752f664e080b971288561828b00b7acb35cdaefbe
+      .claude/skills/megalinter-fix/linters/python_pylint.md: sha256:626458b1402443e8e1fd7791302f72d83e23340b60997d2a08b00bcd279b478a
+      .claude/skills/megalinter-fix/linters/python_pyright.md: sha256:6b1bec76ce651deb7ca8a55a949f0be96d1c797f4f8d3812446f2d5eb490d517
+      .claude/skills/megalinter-fix/linters/python_ruff.md: sha256:7282db1f45df0a4c1195cae101adbf2dd0d0038afeb5eb7c4ebe99694bcf6dda
+      .claude/skills/megalinter-fix/linters/python_ruff_format.md: sha256:38eeaf114aa781bfa7f2352ff524b9d0c392ef348f3f90440c6c28b9b2847c02
+      .claude/skills/megalinter-fix/linters/r_lintr.md: sha256:34109a7db82c19b4289719d602501f091cfe51b121bd8c5e1cec9a89ced5f03c
+      .claude/skills/megalinter-fix/linters/raku_raku.md: sha256:9e373e745f36eed058f231d95777473ff72e03ada7c2a840a3d1f5119c772818
+      .claude/skills/megalinter-fix/linters/repository_betterleaks.md: sha256:9528a95844765652aac31c442f857e168440391f79b2d786e3dc030ed363945a
+      .claude/skills/megalinter-fix/linters/repository_checkov.md: sha256:d1eb5dcf592b08b1c32a562b0fb6f592a140cc0dce7cdde04416e260c295bbd4
+      .claude/skills/megalinter-fix/linters/repository_devskim.md: sha256:93da88fb8e66af491e71aaed1648d48408c7fdd5ca0740f4408842ad7336e15d
+      .claude/skills/megalinter-fix/linters/repository_dustilock.md: sha256:6e2584e46188be7240ee29e9c47ab39e94033350998d636f797ac86b8810ff87
+      .claude/skills/megalinter-fix/linters/repository_git_diff.md: sha256:e1b037befc7ef27739c81a3bda538793fd296db2816ef39e55158a4c138f1904
+      .claude/skills/megalinter-fix/linters/repository_grype.md: sha256:fd8da29fc79e7047e99706ad3bda80e73a27b069b522bd5779134ec234a72963
+      .claude/skills/megalinter-fix/linters/repository_kingfisher.md: sha256:ca3e0d065832867059d3b59a048117157340083d377d29d5de58cb2d24567a06
+      .claude/skills/megalinter-fix/linters/repository_ls_lint.md: sha256:4290af7604356278ee58d9d1befc0b9ced2b4d33ecca82352ca38e3c4ce39cf3
+      .claude/skills/megalinter-fix/linters/repository_osv_scanner.md: sha256:35095d7380278239b260d510ede9f510f0590c98db1a08380bf187cd66ec452d
+      .claude/skills/megalinter-fix/linters/repository_secretlint.md: sha256:355dde05538c2097f9f65c07454583ad6b4b91510b412e0395fd7a3c628788da
+      .claude/skills/megalinter-fix/linters/repository_semgrep.md: sha256:8cab35c83452644f1cf96dc6ff8c8b8767736b215fcbb5c4acba758f8cd3d974
+      .claude/skills/megalinter-fix/linters/repository_syft.md: sha256:db486ec4fdda91917ed99c5cde82e63cd79cda712bd0b7c84fd2aa7b172f939a
+      .claude/skills/megalinter-fix/linters/repository_trivy.md: sha256:5862576d65d12e7129a11adcdfc3d4edd42785603b27fa2e2c613ee6cce66267
+      .claude/skills/megalinter-fix/linters/repository_trivy_sbom.md: sha256:937936f7784bd4718f21a0ccdc75f774269fdd06a9f1073810e4bb7213091acb
+      .claude/skills/megalinter-fix/linters/repository_trufflehog.md: sha256:d2316117fef3492a374d8534d33ab429e7ba824bdabd5d7a96cea577e68c72b1
+      .claude/skills/megalinter-fix/linters/robotframework_robocop.md: sha256:7218c2005d03d44b00a1e9d757c63bcf971adc1296e965decb4f10e48b601a6c
+      .claude/skills/megalinter-fix/linters/rst_rst_lint.md: sha256:605cc3aeef5a5902241a64e31c083685d674562152e6e0922f20e95613a748a3
+      .claude/skills/megalinter-fix/linters/rst_rstcheck.md: sha256:64ded9ed98d46774c1792568048bf0751effd4fc21b16f76d37d716ac3cc31ba
+      .claude/skills/megalinter-fix/linters/rst_rstfmt.md: sha256:c09b640e6e5f38ee41d94cc205bae11d8b8d90098419e92c7478659f846f4ade
+      .claude/skills/megalinter-fix/linters/ruby_rubocop.md: sha256:ade85a7830b04fb33e5cdce5cbd4a4d86f1b3fca1dccb4456504e8bd5c7483ff
+      .claude/skills/megalinter-fix/linters/rust_clippy.md: sha256:a7d3dce00906c93fe69bac39d29754da2ebe075e16f7a67a27370cb75d79b0ef
+      .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md: sha256:ffb65e1bde1076ebf0ff3aa6a0fbb129fb4c7ff098b7c405e5cabae7aac075ca
+      .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md: sha256:81ed8dc8f1bbdbea751b92ff8458b96d04053fe59b3a1809b0c335db118e8b08
+      .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md: sha256:91f91f30d83b7c121d234ddb0af24d7fb52cfe01422fe2a4fda5575dbb3e75ad
+      .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md: sha256:f05f9bf68a8fb16dc81dc50260903f66555cef016eed9aa2382e7ef9aaa23e48
+      .claude/skills/megalinter-fix/linters/scala_scalafix.md: sha256:3e5ec0f0c3823b615e1cd50c1f6e3f526cc4865a17111beeba144acbf8d814b7
+      .claude/skills/megalinter-fix/linters/snakemake_lint.md: sha256:9b7167422764b8fb4f895974e6fa03e79ea1a796ce0ef31f4b547cc2dbadf355
+      .claude/skills/megalinter-fix/linters/snakemake_snakefmt.md: sha256:e396f21013ea28b2ee1d1e78215de41d14f4e205f8bdd07a225a392393b9ff1d
+      .claude/skills/megalinter-fix/linters/spell_codespell.md: sha256:07b4b314f0f765aeac028bdf12d56fe6a879e5c3e6e10b48a4b46f38283c247c
+      .claude/skills/megalinter-fix/linters/spell_cspell.md: sha256:0ac178e050e6ae19a924684ddbe7d8bb282eec318487899ada89a88b5d096b2c
+      .claude/skills/megalinter-fix/linters/spell_lychee.md: sha256:2df0b4a1d85e17a3808791ce29ecb971b4fdbead76c91ece945b909dd5252295
+      .claude/skills/megalinter-fix/linters/spell_proselint.md: sha256:0ace4608a981ee0b2a81a29336fe689198a3e4142e55aa1c96d328bad893cdd2
+      .claude/skills/megalinter-fix/linters/spell_vale.md: sha256:49d60a9a2fd4983232a61876e725294aa0d7ce09d6f4413efae4c700fecbdd6f
+      .claude/skills/megalinter-fix/linters/sql_sqlfluff.md: sha256:0f72b05e8d8ce1da13e4665c52add1b16ad191dfa096063f1c49cd2d76522630
+      .claude/skills/megalinter-fix/linters/swift_swiftlint.md: sha256:66cba049bba443695d9b42dccc473be7e9d9a2ee44302c3a85ebd18a4429a52e
+      .claude/skills/megalinter-fix/linters/tekton_tekton_lint.md: sha256:b31ad784191c7d437f594eafc70e353f02c91a4732d4b0793e56ce10116eac48
+      .claude/skills/megalinter-fix/linters/terraform_terraform_fmt.md: sha256:ecd7cafaa50f0c168b99fd6711c78be6fa3b213a63715e1e95a666ee8662c38f
+      .claude/skills/megalinter-fix/linters/terraform_terragrunt.md: sha256:0ee29f17c7e384284fd66bbd336d59eeddec2906179423d2d0ad2feefb0b57dd
+      .claude/skills/megalinter-fix/linters/terraform_tflint.md: sha256:2af6cbd43105699db087e037b27c90ae80570fd0ca053f1f838e30c732eee16a
+      .claude/skills/megalinter-fix/linters/tsx_eslint.md: sha256:848d352a511c869b3d4af998706dbba0b7b2a90ca05d037736d19e10a8d2cf69
+      .claude/skills/megalinter-fix/linters/typescript_es.md: sha256:5ae544baadce823113fe02bc7871ce86b131ff792ff8d25618784f0d0a42a3f0
+      .claude/skills/megalinter-fix/linters/typescript_prettier.md: sha256:3ff341406abbf249d4cafe499a66f878c853f346e314d54ffc9bdf7378ee508d
+      .claude/skills/megalinter-fix/linters/typescript_standard.md: sha256:d25fc6282adf9e37313183695aa00343b9e253fdd9ffde754af433c6315471da
+      .claude/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md: sha256:243b1d712b1ad73e908b27d4171019e42db12af2c0a29ae642320e1fb5d1fdff
+      .claude/skills/megalinter-fix/linters/xml_xmllint.md: sha256:2f6e1350c543aefd0dfe1afe13a08e29467f46cd0762aae295553ae7e3b948e0
+      .claude/skills/megalinter-fix/linters/yaml_prettier.md: sha256:46f33ee366ed63559fd31b8130340217b18d8f1f29ae4f0049d1e2a5d877a4a7
+      .claude/skills/megalinter-fix/linters/yaml_v8r.md: sha256:9a278e5f83afffee47e6575fd97fe4154777d96d4b3343b50f844a0e403fb20d
+      .claude/skills/megalinter-fix/linters/yaml_yamllint.md: sha256:25d61d3183bd8a2cc10521046c3e73b8483fb43b7d3f916a81678f1f96efc2aa
+      .claude/skills/megalinter-setup/SKILL.md: sha256:b1cba3934bbb096ca21988ccd0d0042271d83975c3d3bbbbdf6b44d628daddb1
+      .claude/skills/megalinter-setup/agents/INSTALL.md: sha256:2160d4438c93aa8f7879f0cbab7a496db5637ebe3d7c4da298708d33719eefe3
+      .claude/skills/megalinter-setup/agents/megalinter-fixer.md: sha256:a9787c97e872b041fbbf6be874d9be9218f950c416e11a4597a628f7258fae8c
+      .claude/skills/megalinter-setup/agents/megalinter-runner.md: sha256:41cf3c2308c89f41f9b098fde9d0f2fc50c4c74964401c50fa35e742a346367a
+      .claude/skills/megalinter-setup/agents/megalinter-watcher.md: sha256:3c62222f9b20f62715b4c4c24e914181796247831ce476cf5044fff5481bb672
+      .claude/skills/megalinter/SKILL.md: sha256:ffd79b1c0c831f206b0b39fa35c463e976c37eeef85218320342348eaed9ffc9
+    deployed_files:
+      - .agents/skills/megalinter
+      - .agents/skills/megalinter-check
+      - .agents/skills/megalinter-check/SKILL.md
+      - .agents/skills/megalinter-check/container-engine.md
+      - .agents/skills/megalinter-check/performance.md
+      - .agents/skills/megalinter-check/providers/azure.md
+      - .agents/skills/megalinter-check/providers/bitbucket.md
+      - .agents/skills/megalinter-check/providers/github.md
+      - .agents/skills/megalinter-check/providers/gitlab.md
+      - .agents/skills/megalinter-fix
+      - .agents/skills/megalinter-fix/SKILL.md
+      - .agents/skills/megalinter-fix/linters/README.md
+      - .agents/skills/megalinter-fix/linters/action_actionlint.md
+      - .agents/skills/megalinter-fix/linters/action_zizmor.md
+      - .agents/skills/megalinter-fix/linters/ansible_ansible_lint.md
+      - .agents/skills/megalinter-fix/linters/arm_arm_ttk.md
+      - .agents/skills/megalinter-fix/linters/bash_exec.md
+      - .agents/skills/megalinter-fix/linters/bash_shellcheck.md
+      - .agents/skills/megalinter-fix/linters/bash_shfmt.md
+      - .agents/skills/megalinter-fix/linters/bicep_bicep_linter.md
+      - .agents/skills/megalinter-fix/linters/c_clang_format.md
+      - .agents/skills/megalinter-fix/linters/c_cppcheck.md
+      - .agents/skills/megalinter-fix/linters/c_cpplint.md
+      - .agents/skills/megalinter-fix/linters/clojure_clj_kondo.md
+      - .agents/skills/megalinter-fix/linters/clojure_cljstyle.md
+      - .agents/skills/megalinter-fix/linters/cloudformation_cfn_lint.md
+      - .agents/skills/megalinter-fix/linters/coffee_coffeelint.md
+      - .agents/skills/megalinter-fix/linters/copypaste_jscpd.md
+      - .agents/skills/megalinter-fix/linters/cpp_clang_format.md
+      - .agents/skills/megalinter-fix/linters/cpp_cppcheck.md
+      - .agents/skills/megalinter-fix/linters/cpp_cpplint.md
+      - .agents/skills/megalinter-fix/linters/csharp_csharpier.md
+      - .agents/skills/megalinter-fix/linters/csharp_dotnet_format.md
+      - .agents/skills/megalinter-fix/linters/csharp_roslynator.md
+      - .agents/skills/megalinter-fix/linters/css_stylelint.md
+      - .agents/skills/megalinter-fix/linters/dart_dartanalyzer.md
+      - .agents/skills/megalinter-fix/linters/dockerfile_hadolint.md
+      - .agents/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md
+      - .agents/skills/megalinter-fix/linters/env_dotenv_linter.md
+      - .agents/skills/megalinter-fix/linters/gherkin_gherkin_lint.md
+      - .agents/skills/megalinter-fix/linters/go_golangci_lint.md
+      - .agents/skills/megalinter-fix/linters/go_revive.md
+      - .agents/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md
+      - .agents/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md
+      - .agents/skills/megalinter-fix/linters/html_djlint.md
+      - .agents/skills/megalinter-fix/linters/html_htmlhint.md
+      - .agents/skills/megalinter-fix/linters/java_checkstyle.md
+      - .agents/skills/megalinter-fix/linters/java_pmd.md
+      - .agents/skills/megalinter-fix/linters/javascript_es.md
+      - .agents/skills/megalinter-fix/linters/javascript_prettier.md
+      - .agents/skills/megalinter-fix/linters/javascript_standard.md
+      - .agents/skills/megalinter-fix/linters/json_jsonlint.md
+      - .agents/skills/megalinter-fix/linters/json_npm_package_json_lint.md
+      - .agents/skills/megalinter-fix/linters/json_prettier.md
+      - .agents/skills/megalinter-fix/linters/json_v8r.md
+      - .agents/skills/megalinter-fix/linters/jsx_eslint.md
+      - .agents/skills/megalinter-fix/linters/kotlin_detekt.md
+      - .agents/skills/megalinter-fix/linters/kotlin_ktlint.md
+      - .agents/skills/megalinter-fix/linters/kubernetes_helm.md
+      - .agents/skills/megalinter-fix/linters/kubernetes_kubeconform.md
+      - .agents/skills/megalinter-fix/linters/kubernetes_kubescape.md
+      - .agents/skills/megalinter-fix/linters/latex_chktex.md
+      - .agents/skills/megalinter-fix/linters/lua_luacheck.md
+      - .agents/skills/megalinter-fix/linters/lua_stylua.md
+      - .agents/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md
+      - .agents/skills/megalinter-fix/linters/markdown_markdownlint.md
+      - .agents/skills/megalinter-fix/linters/markdown_rumdl.md
+      - .agents/skills/megalinter-fix/linters/perl_perlcritic.md
+      - .agents/skills/megalinter-fix/linters/php_phpcs.md
+      - .agents/skills/megalinter-fix/linters/php_phpcsfixer.md
+      - .agents/skills/megalinter-fix/linters/php_phplint.md
+      - .agents/skills/megalinter-fix/linters/php_phpstan.md
+      - .agents/skills/megalinter-fix/linters/php_psalm.md
+      - .agents/skills/megalinter-fix/linters/powershell_powershell.md
+      - .agents/skills/megalinter-fix/linters/powershell_powershell_formatter.md
+      - .agents/skills/megalinter-fix/linters/protobuf_protolint.md
+      - .agents/skills/megalinter-fix/linters/python_bandit.md
+      - .agents/skills/megalinter-fix/linters/python_black.md
+      - .agents/skills/megalinter-fix/linters/python_flake8.md
+      - .agents/skills/megalinter-fix/linters/python_isort.md
+      - .agents/skills/megalinter-fix/linters/python_mypy.md
+      - .agents/skills/megalinter-fix/linters/python_nbqa_mypy.md
+      - .agents/skills/megalinter-fix/linters/python_pylint.md
+      - .agents/skills/megalinter-fix/linters/python_pyright.md
+      - .agents/skills/megalinter-fix/linters/python_ruff.md
+      - .agents/skills/megalinter-fix/linters/python_ruff_format.md
+      - .agents/skills/megalinter-fix/linters/r_lintr.md
+      - .agents/skills/megalinter-fix/linters/raku_raku.md
+      - .agents/skills/megalinter-fix/linters/repository_betterleaks.md
+      - .agents/skills/megalinter-fix/linters/repository_checkov.md
+      - .agents/skills/megalinter-fix/linters/repository_devskim.md
+      - .agents/skills/megalinter-fix/linters/repository_dustilock.md
+      - .agents/skills/megalinter-fix/linters/repository_git_diff.md
+      - .agents/skills/megalinter-fix/linters/repository_grype.md
+      - .agents/skills/megalinter-fix/linters/repository_kingfisher.md
+      - .agents/skills/megalinter-fix/linters/repository_ls_lint.md
+      - .agents/skills/megalinter-fix/linters/repository_osv_scanner.md
+      - .agents/skills/megalinter-fix/linters/repository_secretlint.md
+      - .agents/skills/megalinter-fix/linters/repository_semgrep.md
+      - .agents/skills/megalinter-fix/linters/repository_syft.md
+      - .agents/skills/megalinter-fix/linters/repository_trivy.md
+      - .agents/skills/megalinter-fix/linters/repository_trivy_sbom.md
+      - .agents/skills/megalinter-fix/linters/repository_trufflehog.md
+      - .agents/skills/megalinter-fix/linters/robotframework_robocop.md
+      - .agents/skills/megalinter-fix/linters/rst_rst_lint.md
+      - .agents/skills/megalinter-fix/linters/rst_rstcheck.md
+      - .agents/skills/megalinter-fix/linters/rst_rstfmt.md
+      - .agents/skills/megalinter-fix/linters/ruby_rubocop.md
+      - .agents/skills/megalinter-fix/linters/rust_clippy.md
+      - .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md
+      - .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md
+      - .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md
+      - .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md
+      - .agents/skills/megalinter-fix/linters/scala_scalafix.md
+      - .agents/skills/megalinter-fix/linters/snakemake_lint.md
+      - .agents/skills/megalinter-fix/linters/snakemake_snakefmt.md
+      - .agents/skills/megalinter-fix/linters/spell_codespell.md
+      - .agents/skills/megalinter-fix/linters/spell_cspell.md
+      - .agents/skills/megalinter-fix/linters/spell_lychee.md
+      - .agents/skills/megalinter-fix/linters/spell_proselint.md
+      - .agents/skills/megalinter-fix/linters/spell_vale.md
+      - .agents/skills/megalinter-fix/linters/sql_sqlfluff.md
+      - .agents/skills/megalinter-fix/linters/swift_swiftlint.md
+      - .agents/skills/megalinter-fix/linters/tekton_tekton_lint.md
+      - .agents/skills/megalinter-fix/linters/terraform_terraform_fmt.md
+      - .agents/skills/megalinter-fix/linters/terraform_terragrunt.md
+      - .agents/skills/megalinter-fix/linters/terraform_tflint.md
+      - .agents/skills/megalinter-fix/linters/tsx_eslint.md
+      - .agents/skills/megalinter-fix/linters/typescript_es.md
+      - .agents/skills/megalinter-fix/linters/typescript_prettier.md
+      - .agents/skills/megalinter-fix/linters/typescript_standard.md
+      - .agents/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md
+      - .agents/skills/megalinter-fix/linters/xml_xmllint.md
+      - .agents/skills/megalinter-fix/linters/yaml_prettier.md
+      - .agents/skills/megalinter-fix/linters/yaml_v8r.md
+      - .agents/skills/megalinter-fix/linters/yaml_yamllint.md
+      - .agents/skills/megalinter-setup
+      - .agents/skills/megalinter-setup/SKILL.md
+      - .agents/skills/megalinter-setup/agents/INSTALL.md
+      - .agents/skills/megalinter-setup/agents/megalinter-fixer.md
+      - .agents/skills/megalinter-setup/agents/megalinter-runner.md
+      - .agents/skills/megalinter-setup/agents/megalinter-watcher.md
+      - .agents/skills/megalinter/SKILL.md
+      - .claude/skills/megalinter
+      - .claude/skills/megalinter-check
+      - .claude/skills/megalinter-check/SKILL.md
+      - .claude/skills/megalinter-check/container-engine.md
+      - .claude/skills/megalinter-check/performance.md
+      - .claude/skills/megalinter-check/providers/azure.md
+      - .claude/skills/megalinter-check/providers/bitbucket.md
+      - .claude/skills/megalinter-check/providers/github.md
+      - .claude/skills/megalinter-check/providers/gitlab.md
+      - .claude/skills/megalinter-fix
+      - .claude/skills/megalinter-fix/SKILL.md
+      - .claude/skills/megalinter-fix/linters/README.md
+      - .claude/skills/megalinter-fix/linters/action_actionlint.md
+      - .claude/skills/megalinter-fix/linters/action_zizmor.md
+      - .claude/skills/megalinter-fix/linters/ansible_ansible_lint.md
+      - .claude/skills/megalinter-fix/linters/arm_arm_ttk.md
+      - .claude/skills/megalinter-fix/linters/bash_exec.md
+      - .claude/skills/megalinter-fix/linters/bash_shellcheck.md
+      - .claude/skills/megalinter-fix/linters/bash_shfmt.md
+      - .claude/skills/megalinter-fix/linters/bicep_bicep_linter.md
+      - .claude/skills/megalinter-fix/linters/c_clang_format.md
+      - .claude/skills/megalinter-fix/linters/c_cppcheck.md
+      - .claude/skills/megalinter-fix/linters/c_cpplint.md
+      - .claude/skills/megalinter-fix/linters/clojure_clj_kondo.md
+      - .claude/skills/megalinter-fix/linters/clojure_cljstyle.md
+      - .claude/skills/megalinter-fix/linters/cloudformation_cfn_lint.md
+      - .claude/skills/megalinter-fix/linters/coffee_coffeelint.md
+      - .claude/skills/megalinter-fix/linters/copypaste_jscpd.md
+      - .claude/skills/megalinter-fix/linters/cpp_clang_format.md
+      - .claude/skills/megalinter-fix/linters/cpp_cppcheck.md
+      - .claude/skills/megalinter-fix/linters/cpp_cpplint.md
+      - .claude/skills/megalinter-fix/linters/csharp_csharpier.md
+      - .claude/skills/megalinter-fix/linters/csharp_dotnet_format.md
+      - .claude/skills/megalinter-fix/linters/csharp_roslynator.md
+      - .claude/skills/megalinter-fix/linters/css_stylelint.md
+      - .claude/skills/megalinter-fix/linters/dart_dartanalyzer.md
+      - .claude/skills/megalinter-fix/linters/dockerfile_hadolint.md
+      - .claude/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md
+      - .claude/skills/megalinter-fix/linters/env_dotenv_linter.md
+      - .claude/skills/megalinter-fix/linters/gherkin_gherkin_lint.md
+      - .claude/skills/megalinter-fix/linters/go_golangci_lint.md
+      - .claude/skills/megalinter-fix/linters/go_revive.md
+      - .claude/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md
+      - .claude/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md
+      - .claude/skills/megalinter-fix/linters/html_djlint.md
+      - .claude/skills/megalinter-fix/linters/html_htmlhint.md
+      - .claude/skills/megalinter-fix/linters/java_checkstyle.md
+      - .claude/skills/megalinter-fix/linters/java_pmd.md
+      - .claude/skills/megalinter-fix/linters/javascript_es.md
+      - .claude/skills/megalinter-fix/linters/javascript_prettier.md
+      - .claude/skills/megalinter-fix/linters/javascript_standard.md
+      - .claude/skills/megalinter-fix/linters/json_jsonlint.md
+      - .claude/skills/megalinter-fix/linters/json_npm_package_json_lint.md
+      - .claude/skills/megalinter-fix/linters/json_prettier.md
+      - .claude/skills/megalinter-fix/linters/json_v8r.md
+      - .claude/skills/megalinter-fix/linters/jsx_eslint.md
+      - .claude/skills/megalinter-fix/linters/kotlin_detekt.md
+      - .claude/skills/megalinter-fix/linters/kotlin_ktlint.md
+      - .claude/skills/megalinter-fix/linters/kubernetes_helm.md
+      - .claude/skills/megalinter-fix/linters/kubernetes_kubeconform.md
+      - .claude/skills/megalinter-fix/linters/kubernetes_kubescape.md
+      - .claude/skills/megalinter-fix/linters/latex_chktex.md
+      - .claude/skills/megalinter-fix/linters/lua_luacheck.md
+      - .claude/skills/megalinter-fix/linters/lua_stylua.md
+      - .claude/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md
+      - .claude/skills/megalinter-fix/linters/markdown_markdownlint.md
+      - .claude/skills/megalinter-fix/linters/markdown_rumdl.md
+      - .claude/skills/megalinter-fix/linters/perl_perlcritic.md
+      - .claude/skills/megalinter-fix/linters/php_phpcs.md
+      - .claude/skills/megalinter-fix/linters/php_phpcsfixer.md
+      - .claude/skills/megalinter-fix/linters/php_phplint.md
+      - .claude/skills/megalinter-fix/linters/php_phpstan.md
+      - .claude/skills/megalinter-fix/linters/php_psalm.md
+      - .claude/skills/megalinter-fix/linters/powershell_powershell.md
+      - .claude/skills/megalinter-fix/linters/powershell_powershell_formatter.md
+      - .claude/skills/megalinter-fix/linters/protobuf_protolint.md
+      - .claude/skills/megalinter-fix/linters/python_bandit.md
+      - .claude/skills/megalinter-fix/linters/python_black.md
+      - .claude/skills/megalinter-fix/linters/python_flake8.md
+      - .claude/skills/megalinter-fix/linters/python_isort.md
+      - .claude/skills/megalinter-fix/linters/python_mypy.md
+      - .claude/skills/megalinter-fix/linters/python_nbqa_mypy.md
+      - .claude/skills/megalinter-fix/linters/python_pylint.md
+      - .claude/skills/megalinter-fix/linters/python_pyright.md
+      - .claude/skills/megalinter-fix/linters/python_ruff.md
+      - .claude/skills/megalinter-fix/linters/python_ruff_format.md
+      - .claude/skills/megalinter-fix/linters/r_lintr.md
+      - .claude/skills/megalinter-fix/linters/raku_raku.md
+      - .claude/skills/megalinter-fix/linters/repository_betterleaks.md
+      - .claude/skills/megalinter-fix/linters/repository_checkov.md
+      - .claude/skills/megalinter-fix/linters/repository_devskim.md
+      - .claude/skills/megalinter-fix/linters/repository_dustilock.md
+      - .claude/skills/megalinter-fix/linters/repository_git_diff.md
+      - .claude/skills/megalinter-fix/linters/repository_grype.md
+      - .claude/skills/megalinter-fix/linters/repository_kingfisher.md
+      - .claude/skills/megalinter-fix/linters/repository_ls_lint.md
+      - .claude/skills/megalinter-fix/linters/repository_osv_scanner.md
+      - .claude/skills/megalinter-fix/linters/repository_secretlint.md
+      - .claude/skills/megalinter-fix/linters/repository_semgrep.md
+      - .claude/skills/megalinter-fix/linters/repository_syft.md
+      - .claude/skills/megalinter-fix/linters/repository_trivy.md
+      - .claude/skills/megalinter-fix/linters/repository_trivy_sbom.md
+      - .claude/skills/megalinter-fix/linters/repository_trufflehog.md
+      - .claude/skills/megalinter-fix/linters/robotframework_robocop.md
+      - .claude/skills/megalinter-fix/linters/rst_rst_lint.md
+      - .claude/skills/megalinter-fix/linters/rst_rstcheck.md
+      - .claude/skills/megalinter-fix/linters/rst_rstfmt.md
+      - .claude/skills/megalinter-fix/linters/ruby_rubocop.md
+      - .claude/skills/megalinter-fix/linters/rust_clippy.md
+      - .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md
+      - .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md
+      - .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md
+      - .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md
+      - .claude/skills/megalinter-fix/linters/scala_scalafix.md
+      - .claude/skills/megalinter-fix/linters/snakemake_lint.md
+      - .claude/skills/megalinter-fix/linters/snakemake_snakefmt.md
+      - .claude/skills/megalinter-fix/linters/spell_codespell.md
+      - .claude/skills/megalinter-fix/linters/spell_cspell.md
+      - .claude/skills/megalinter-fix/linters/spell_lychee.md
+      - .claude/skills/megalinter-fix/linters/spell_proselint.md
+      - .claude/skills/megalinter-fix/linters/spell_vale.md
+      - .claude/skills/megalinter-fix/linters/sql_sqlfluff.md
+      - .claude/skills/megalinter-fix/linters/swift_swiftlint.md
+      - .claude/skills/megalinter-fix/linters/tekton_tekton_lint.md
+      - .claude/skills/megalinter-fix/linters/terraform_terraform_fmt.md
+      - .claude/skills/megalinter-fix/linters/terraform_terragrunt.md
+      - .claude/skills/megalinter-fix/linters/terraform_tflint.md
+      - .claude/skills/megalinter-fix/linters/tsx_eslint.md
+      - .claude/skills/megalinter-fix/linters/typescript_es.md
+      - .claude/skills/megalinter-fix/linters/typescript_prettier.md
+      - .claude/skills/megalinter-fix/linters/typescript_standard.md
+      - .claude/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md
+      - .claude/skills/megalinter-fix/linters/xml_xmllint.md
+      - .claude/skills/megalinter-fix/linters/yaml_prettier.md
+      - .claude/skills/megalinter-fix/linters/yaml_v8r.md
+      - .claude/skills/megalinter-fix/linters/yaml_yamllint.md
+      - .claude/skills/megalinter-setup
+      - .claude/skills/megalinter-setup/SKILL.md
+      - .claude/skills/megalinter-setup/agents/INSTALL.md
+      - .claude/skills/megalinter-setup/agents/megalinter-fixer.md
+      - .claude/skills/megalinter-setup/agents/megalinter-runner.md
+      - .claude/skills/megalinter-setup/agents/megalinter-watcher.md
+      - .claude/skills/megalinter/SKILL.md
+    depth: 2
+    host: github.com
+    name: megalinter
+    package_type: skill_bundle
+    repo_url: oxsecurity/megalinter
+    resolved_at: "2026-08-30T07:41:29+00:00"
+    resolved_by: MRDGH2821/copier-mr-nix
+    resolved_commit: 15e5b45552097e318c93de385779ce3b1084052c
+    resolved_ref: v10.0.0
+    resolved_tag: v10.0.0
+    version: 10.0.0
+  - constraint: 1.5.23
+    content_hash: sha256:7530862c97988f22ac8b8117e104a829bce5692c5869e467c027471243ccb201
+    deployed_file_hashes:
+      .agents/skills/find-skills/SKILL.md: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
+      .claude/skills/find-skills/SKILL.md: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
+    deployed_files:
+      - .agents/skills/find-skills
+      - .agents/skills/find-skills/SKILL.md
+      - .claude/skills/find-skills
+      - .claude/skills/find-skills/SKILL.md
+    depth: 2
+    host: github.com
+    name: skills
+    package_type: skill_bundle
+    repo_url: vercel-labs/skills
+    resolved_at: "2026-08-30T07:41:29+00:00"
+    resolved_by: MRDGH2821/copier-mr-nix
+    resolved_commit: 435076e78988e1e6ec40d00b0b1d76bdbbc5419a
+    resolved_ref: v1.5.23
+    resolved_tag: v1.5.23
+    skill_subset:
+      - find-skills
+    version: 1.5.23
+deployments:
+  - active_owner: vercel-labs/skills
+    content_hash:
+    kind: project-relative
+    owners:
+      - vercel-labs/skills
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/find-skills
+  - active_owner: vercel-labs/skills
+    content_hash: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
+    kind: project-relative
+    owners:
+      - vercel-labs/skills
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/find-skills/SKILL.md
+  - active_owner: github/awesome-copilot
+    content_hash:
+    kind: project-relative
+    owners:
+      - github/awesome-copilot
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/git-commit
+  - active_owner: github/awesome-copilot
+    content_hash: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
+    kind: project-relative
+    owners:
+      - github/awesome-copilot
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/git-commit/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:bb8e475961a2e57eb45687a8f138ea8039c7c5ee29f68cd165632d702097dad4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fc41766272b76416835e4500860d66027ef40a117cf4fb541307db2540ba3864
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/container-engine.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:72f9c7a8fcffa9d798f16c2dfb66b80f6d8d03b67932dca78b7c1eef8b6928f7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/performance.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6d17944bcd59270be15d0031eba8f0d71d445a447dacf5f0a5f0ad539da2d357
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/providers/azure.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d7ca106ce472ba83100059401dde8a9ecaaf9b3709c1b2c3784522c3eef79e81
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/providers/bitbucket.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9358e71318dd90e2e0d55116d1b95a3e5e57ac2bd4c7d6ae2bc6cbef45340dff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/providers/github.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:bb1040ba02e315075b49b4ea59076dad57ede2b038d14d98ed23beef45385b15
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-check/providers/gitlab.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fff5202aaa55441d1b0c19a63d7daf5c34757f6a5f6ddb8624450a15f2bee0ca
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7beef671b7f2a2ef42bba1ca2d0f870465b68d341cb725543e6f14d0a67908a6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/README.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ab1fabd471c001ae963f79433f7d244c42242167c6fb716c769e87372bc7d5d4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/action_actionlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dcdc478f36ca09fc7b67f637087b8d0ffeedb378f44f00e9bb3da767cb6188c6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/action_zizmor.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fcb006800ce9f07f87db438d42a735c3a671a9f0a7f0d8e8b1e713d4797df798
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/ansible_ansible_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:09c9fb3807cc596c8018e7f289a00b8c2761b34f5ac3a1166deddac3e2d37f0b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/arm_arm_ttk.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:1827a1933fcc93f30b57b92bda75d741e342400a27582679474dcf56f00b207c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/bash_exec.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d1efa1f54f22408deadb6d9d5f464395c754d3a0a838f71b802c25f1b99fbffa
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/bash_shellcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5b8995281b132586191bc94ba92f2827d20693f8e627111ef14d3ea410a4c32e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/bash_shfmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:4308ac2e71c1781b7ac12bd9b1b1cf7dca40964d39327db167c08680a3adea71
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/bicep_bicep_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ee4013f091cfbb1d731078e90b279e85b912c0908ed9c2592c7df7172d9e0415
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/c_clang_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c315d053ebd265f660d053f823cd2ef3240559746e485772498e7381c7fa1e39
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/c_cppcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:58c74a086fc1f270501afe195452c2af99f43db791d89fe03848c580af44f582
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/c_cpplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:64210a83f3c81e3e6b80ee040121509fc28dcb973c56dfdbfcc21636f2b87475
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/clojure_clj_kondo.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:03f26ad649be02715cdf7889c90ba44f6d08f2f4cd39e6f3e4a07e6bf9e8188a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/clojure_cljstyle.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d8a79f0e2d0642a004d8039ab1f2e639774d09e7bb07a85c7d09f0c7b2d5a604
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/cloudformation_cfn_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:790c438c3c9c8a360cddf4e788002b633c636594ef039b751e35340a36d72030
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/coffee_coffeelint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:860b1625da1a3547eebf1f17d8a14bd29fc3947308003c08720e68a2c45e3868
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/copypaste_jscpd.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:aae54d28779dc453cae49002851e259c2cd36872e7b3df0c806138651116b84f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/cpp_clang_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9345e0b2da6f3833f542792eba20e9f80f4ad75bfda89dd799fa617dd71d3d81
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/cpp_cppcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a8afa138f29dbe26c9f6bd52d2ea6534e6e97d028587baf54ba2682324e60228
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/cpp_cpplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6d8b1dc8046f0738a1cd42cc8a03cceb8e3cdf9eb8b783ce0af4905deed1c670
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/csharp_csharpier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c3ec4b6466bb1effeb1f144b210706b63d875f1c1afc28e431f575af342d25e7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/csharp_dotnet_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:110f6eb45cc8f9edc8bb8f4a1d83620593024b182c30b086331af20745bfdc71
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/csharp_roslynator.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:69439bb77ee98672d146e0ab50192b7033fb9a1244a59735cecdd6c341538430
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/css_stylelint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:578e93da8981917d310935565c0d2b436f1d87540afbe017f54ee148e68e1453
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/dart_dartanalyzer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d298343819e0cccbdd109d92a507b6a105849098bffd667e7e3600340d330c6d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/dockerfile_hadolint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:8317fcbde952ad1f2bb3b87f953517a269b8d7afbe535e0e055fe7a93c5db78e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b10a13d97cb45c42ce3b21fdd381953556777bf8bbe5facd60b74a55406b6f87
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/env_dotenv_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d4c968be3c139a438d36f93101c4b0fe9eeeb8ccaf85184cc86678adad5f0531
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/gherkin_gherkin_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b30c603c38df54eefca45d5be87d1dbf494ce5714e2e8d89d4d9d2a878f6ae33
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/go_golangci_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e993f081e35e669ad181579c4e42a50a2f961ded2e15f5f82a4631009ace6967
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/go_revive.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fd2ea1d3023cac24f2926d8379f548c8c47742e6062d2f2b1df08d3d7130fc37
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a6c8a52e12696affe41d0e1649bc3659c83624d4992e2225aeeadef2352cf04b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e40301a82411bc97fdb4a5f0853d38cc0733396f5978cc35a700a933a4d2b2d9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/html_djlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b09feab917b07c132fcbac958908f92eef4f11542385a98c724a0383f5e1f81e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/html_htmlhint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:087633ef644aead0847471f170d067d36d8167a761324444b7e93da61b6351e0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/java_checkstyle.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:39e7cb52df143532852eba103778633f8ee7587f52964473c23fee7a01203ba2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/java_pmd.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f9e9533baba8db6d5239551a93f8d70c2b5b7f9e3d43643e53b4154b312ec2f6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/javascript_es.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6eb52e04c0e2acf047589b8a3f867137357f2de07e336cd04bd6cc2763a82f41
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/javascript_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e9b233b1b2d21928d772284510fcda3828c14884a78b2960b5ecce7cdd0a866a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/javascript_standard.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c58ed6fd23061159927f1881b954a08fcc73d005cc1124e5ca3ffa8abec4cf07
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/json_jsonlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:07a392d510904d62050bd663b83b621ef68be34846c50d5be366e7ed406b2c86
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/json_npm_package_json_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dc5abd5518a7ba07b3a7a1dcf3c421631a3d7a94c40ae55ccec570571e2d57a9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/json_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9115a4835bc292bb7f12ac2612925d7ed5db2abacd06628c102923366f4e11e6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/json_v8r.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7ffc229ec2eee919168954193dec61aa1dbb8ceb059e2c69fe5984d12308c1b4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/jsx_eslint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ec259fe94bc742fc89b1d7aef7fd4c8c3a39ca6afd067d4e1b54abbe7571c607
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/kotlin_detekt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c942dfacaf7951c2e8d65a512388d1b0cf44927a201114ca5b9d79c99599e907
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/kotlin_ktlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:42efe27faf8b5b9765146e4497d91cd4c65e1ca6f81102b94b01b4d16c944979
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/kubernetes_helm.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:605e6ef84e5fc572216873ecc5d1ff8936264cbeafe0756f0b1ff2d396016b17
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/kubernetes_kubeconform.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:771c14f672d21bae99e49bef87844f0159eb31c550d4c6e0c2f9c28500649b23
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/kubernetes_kubescape.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3d53ebbd9c15a943cc3ac9bce44e7b1dc25ee9114af7aedb98e32cc314970057
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/latex_chktex.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6843340549444eaa5d549b7fae3dbbbc92fac890d6a6e1c1c09606ac3dbd1cad
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/lua_luacheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:25e65f1f0d1aa3ef6077748775e5b639fc7493b27ba4f4ef2405ad16baa3fd4a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/lua_stylua.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dc1231be2a52a1780a0c875b58c4c9105b2633d78786fbc4be38647616834a2d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:913a7d2a72dbf6d3ea229c616878e1bca6c8be0569a7ae9a50e4b9730e05aa40
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/markdown_markdownlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:69af5d9c3eff6db9583351cf8adb4c48972917b3bdee0880531980e6acf4c10d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/markdown_rumdl.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0fb1d8be351ee599a4ce548b4173e34ba718b762f7457fc6f61df6a0f0ee1d45
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/perl_perlcritic.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ec6aafdf35b7f06b8f6802c9c5ab4469888e7b3ac18cf4af1afc1bc00e69cf7d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/php_phpcs.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c01a792d5010da1211e7c2a2510e1064714e8a2d7f714de5f97470c9b20d9a3f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/php_phpcsfixer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f35dd494de6ac6c73c396c2883da37727871712a035d63dce11e82eb877ec69c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/php_phplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c663b4c9973464dec921dd37c9219ed4550c9e9471b942deb76a753455a542b0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/php_phpstan.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2f015a30baa0eaa6bcbb5050592e8cc6251f5a801574d110516a192b74d63d82
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/php_psalm.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:34199a942a42afe17d9199ae5ea13711649581c30d241d042802c828dd2a1524
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/powershell_powershell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0166d1a571158e283c5ce8f372e71ac00307eccb07e84d5c21e9059e3f979c4b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/powershell_powershell_formatter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c8a7e5728e201e1556b48c3f23f87d256d1a3b1b1a7afd89b60aa80efa47ee76
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/protobuf_protolint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:93f6955111f2aace229b5d4bdac0eea5fa0897161467aed4af7926b3fca210a2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_bandit.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:09b971c599eaa8821136f00f9b44e8dfe226f687e843fc31258a2f5132c31357
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_black.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0f8edff82980be702ae7616873626a6741ae052ba5b44d64802d1edbff0bb95c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_flake8.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9989ead0e4fd98e79ca2adf0519ae966f251c2c99b9953c62a67bcf833dd018e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_isort.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0d1229ac46909d65a798dfd82ea4816f5dff1b6d7bafe4cc7b842ef6455f7ac0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_mypy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:1cd7c97e6d5ecebc4acc60d752f664e080b971288561828b00b7acb35cdaefbe
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_nbqa_mypy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:626458b1402443e8e1fd7791302f72d83e23340b60997d2a08b00bcd279b478a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_pylint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6b1bec76ce651deb7ca8a55a949f0be96d1c797f4f8d3812446f2d5eb490d517
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_pyright.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7282db1f45df0a4c1195cae101adbf2dd0d0038afeb5eb7c4ebe99694bcf6dda
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_ruff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:38eeaf114aa781bfa7f2352ff524b9d0c392ef348f3f90440c6c28b9b2847c02
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/python_ruff_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:34109a7db82c19b4289719d602501f091cfe51b121bd8c5e1cec9a89ced5f03c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/r_lintr.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9e373e745f36eed058f231d95777473ff72e03ada7c2a840a3d1f5119c772818
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/raku_raku.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9528a95844765652aac31c442f857e168440391f79b2d786e3dc030ed363945a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_betterleaks.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d1eb5dcf592b08b1c32a562b0fb6f592a140cc0dce7cdde04416e260c295bbd4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_checkov.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:93da88fb8e66af491e71aaed1648d48408c7fdd5ca0740f4408842ad7336e15d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_devskim.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6e2584e46188be7240ee29e9c47ab39e94033350998d636f797ac86b8810ff87
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_dustilock.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e1b037befc7ef27739c81a3bda538793fd296db2816ef39e55158a4c138f1904
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_git_diff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fd8da29fc79e7047e99706ad3bda80e73a27b069b522bd5779134ec234a72963
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_grype.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ca3e0d065832867059d3b59a048117157340083d377d29d5de58cb2d24567a06
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_kingfisher.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:4290af7604356278ee58d9d1befc0b9ced2b4d33ecca82352ca38e3c4ce39cf3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_ls_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:35095d7380278239b260d510ede9f510f0590c98db1a08380bf187cd66ec452d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_osv_scanner.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:355dde05538c2097f9f65c07454583ad6b4b91510b412e0395fd7a3c628788da
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_secretlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:8cab35c83452644f1cf96dc6ff8c8b8767736b215fcbb5c4acba758f8cd3d974
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_semgrep.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:db486ec4fdda91917ed99c5cde82e63cd79cda712bd0b7c84fd2aa7b172f939a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_syft.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5862576d65d12e7129a11adcdfc3d4edd42785603b27fa2e2c613ee6cce66267
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_trivy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:937936f7784bd4718f21a0ccdc75f774269fdd06a9f1073810e4bb7213091acb
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_trivy_sbom.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d2316117fef3492a374d8534d33ab429e7ba824bdabd5d7a96cea577e68c72b1
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/repository_trufflehog.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7218c2005d03d44b00a1e9d757c63bcf971adc1296e965decb4f10e48b601a6c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/robotframework_robocop.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:605cc3aeef5a5902241a64e31c083685d674562152e6e0922f20e95613a748a3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/rst_rst_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:64ded9ed98d46774c1792568048bf0751effd4fc21b16f76d37d716ac3cc31ba
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/rst_rstcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c09b640e6e5f38ee41d94cc205bae11d8b8d90098419e92c7478659f846f4ade
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/rst_rstfmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ade85a7830b04fb33e5cdce5cbd4a4d86f1b3fca1dccb4456504e8bd5c7483ff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/ruby_rubocop.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a7d3dce00906c93fe69bac39d29754da2ebe075e16f7a67a27370cb75d79b0ef
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/rust_clippy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ffb65e1bde1076ebf0ff3aa6a0fbb129fb4c7ff098b7c405e5cabae7aac075ca
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:81ed8dc8f1bbdbea751b92ff8458b96d04053fe59b3a1809b0c335db118e8b08
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:91f91f30d83b7c121d234ddb0af24d7fb52cfe01422fe2a4fda5575dbb3e75ad
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f05f9bf68a8fb16dc81dc50260903f66555cef016eed9aa2382e7ef9aaa23e48
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3e5ec0f0c3823b615e1cd50c1f6e3f526cc4865a17111beeba144acbf8d814b7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/scala_scalafix.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9b7167422764b8fb4f895974e6fa03e79ea1a796ce0ef31f4b547cc2dbadf355
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/snakemake_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e396f21013ea28b2ee1d1e78215de41d14f4e205f8bdd07a225a392393b9ff1d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/snakemake_snakefmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:07b4b314f0f765aeac028bdf12d56fe6a879e5c3e6e10b48a4b46f38283c247c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/spell_codespell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ac178e050e6ae19a924684ddbe7d8bb282eec318487899ada89a88b5d096b2c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/spell_cspell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2df0b4a1d85e17a3808791ce29ecb971b4fdbead76c91ece945b909dd5252295
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/spell_lychee.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ace4608a981ee0b2a81a29336fe689198a3e4142e55aa1c96d328bad893cdd2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/spell_proselint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:49d60a9a2fd4983232a61876e725294aa0d7ce09d6f4413efae4c700fecbdd6f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/spell_vale.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0f72b05e8d8ce1da13e4665c52add1b16ad191dfa096063f1c49cd2d76522630
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/sql_sqlfluff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:66cba049bba443695d9b42dccc473be7e9d9a2ee44302c3a85ebd18a4429a52e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/swift_swiftlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b31ad784191c7d437f594eafc70e353f02c91a4732d4b0793e56ce10116eac48
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/tekton_tekton_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ecd7cafaa50f0c168b99fd6711c78be6fa3b213a63715e1e95a666ee8662c38f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/terraform_terraform_fmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ee29f17c7e384284fd66bbd336d59eeddec2906179423d2d0ad2feefb0b57dd
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/terraform_terragrunt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2af6cbd43105699db087e037b27c90ae80570fd0ca053f1f838e30c732eee16a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/terraform_tflint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:848d352a511c869b3d4af998706dbba0b7b2a90ca05d037736d19e10a8d2cf69
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/tsx_eslint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5ae544baadce823113fe02bc7871ce86b131ff792ff8d25618784f0d0a42a3f0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/typescript_es.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3ff341406abbf249d4cafe499a66f878c853f346e314d54ffc9bdf7378ee508d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/typescript_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d25fc6282adf9e37313183695aa00343b9e253fdd9ffde754af433c6315471da
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/typescript_standard.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:243b1d712b1ad73e908b27d4171019e42db12af2c0a29ae642320e1fb5d1fdff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2f6e1350c543aefd0dfe1afe13a08e29467f46cd0762aae295553ae7e3b948e0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/xml_xmllint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:46f33ee366ed63559fd31b8130340217b18d8f1f29ae4f0049d1e2a5d877a4a7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/yaml_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9a278e5f83afffee47e6575fd97fe4154777d96d4b3343b50f844a0e403fb20d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/yaml_v8r.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:25d61d3183bd8a2cc10521046c3e73b8483fb43b7d3f916a81678f1f96efc2aa
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-fix/linters/yaml_yamllint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b1cba3934bbb096ca21988ccd0d0042271d83975c3d3bbbbdf6b44d628daddb1
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2160d4438c93aa8f7879f0cbab7a496db5637ebe3d7c4da298708d33719eefe3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup/agents/INSTALL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a9787c97e872b041fbbf6be874d9be9218f950c416e11a4597a628f7258fae8c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup/agents/megalinter-fixer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:41cf3c2308c89f41f9b098fde9d0f2fc50c4c74964401c50fa35e742a346367a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup/agents/megalinter-runner.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3c62222f9b20f62715b4c4c24e914181796247831ce476cf5044fff5481bb672
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter-setup/agents/megalinter-watcher.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ffd79b1c0c831f206b0b39fa35c463e976c37eeef85218320342348eaed9ffc9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/megalinter/SKILL.md
+  - active_owner: vercel-labs/skills
+    content_hash:
+    kind: project-relative
+    owners:
+      - vercel-labs/skills
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/find-skills
+  - active_owner: vercel-labs/skills
+    content_hash: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
+    kind: project-relative
+    owners:
+      - vercel-labs/skills
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/find-skills/SKILL.md
+  - active_owner: github/awesome-copilot
+    content_hash:
+    kind: project-relative
+    owners:
+      - github/awesome-copilot
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/git-commit
+  - active_owner: github/awesome-copilot
+    content_hash: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
+    kind: project-relative
+    owners:
+      - github/awesome-copilot
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/git-commit/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:bb8e475961a2e57eb45687a8f138ea8039c7c5ee29f68cd165632d702097dad4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fc41766272b76416835e4500860d66027ef40a117cf4fb541307db2540ba3864
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/container-engine.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:72f9c7a8fcffa9d798f16c2dfb66b80f6d8d03b67932dca78b7c1eef8b6928f7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/performance.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6d17944bcd59270be15d0031eba8f0d71d445a447dacf5f0a5f0ad539da2d357
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/providers/azure.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d7ca106ce472ba83100059401dde8a9ecaaf9b3709c1b2c3784522c3eef79e81
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/providers/bitbucket.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9358e71318dd90e2e0d55116d1b95a3e5e57ac2bd4c7d6ae2bc6cbef45340dff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/providers/github.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:bb1040ba02e315075b49b4ea59076dad57ede2b038d14d98ed23beef45385b15
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-check/providers/gitlab.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fff5202aaa55441d1b0c19a63d7daf5c34757f6a5f6ddb8624450a15f2bee0ca
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7beef671b7f2a2ef42bba1ca2d0f870465b68d341cb725543e6f14d0a67908a6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/README.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ab1fabd471c001ae963f79433f7d244c42242167c6fb716c769e87372bc7d5d4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/action_actionlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dcdc478f36ca09fc7b67f637087b8d0ffeedb378f44f00e9bb3da767cb6188c6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/action_zizmor.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fcb006800ce9f07f87db438d42a735c3a671a9f0a7f0d8e8b1e713d4797df798
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/ansible_ansible_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:09c9fb3807cc596c8018e7f289a00b8c2761b34f5ac3a1166deddac3e2d37f0b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/arm_arm_ttk.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:1827a1933fcc93f30b57b92bda75d741e342400a27582679474dcf56f00b207c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/bash_exec.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d1efa1f54f22408deadb6d9d5f464395c754d3a0a838f71b802c25f1b99fbffa
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/bash_shellcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5b8995281b132586191bc94ba92f2827d20693f8e627111ef14d3ea410a4c32e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/bash_shfmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:4308ac2e71c1781b7ac12bd9b1b1cf7dca40964d39327db167c08680a3adea71
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/bicep_bicep_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ee4013f091cfbb1d731078e90b279e85b912c0908ed9c2592c7df7172d9e0415
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/c_clang_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c315d053ebd265f660d053f823cd2ef3240559746e485772498e7381c7fa1e39
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/c_cppcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:58c74a086fc1f270501afe195452c2af99f43db791d89fe03848c580af44f582
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/c_cpplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:64210a83f3c81e3e6b80ee040121509fc28dcb973c56dfdbfcc21636f2b87475
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/clojure_clj_kondo.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:03f26ad649be02715cdf7889c90ba44f6d08f2f4cd39e6f3e4a07e6bf9e8188a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/clojure_cljstyle.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d8a79f0e2d0642a004d8039ab1f2e639774d09e7bb07a85c7d09f0c7b2d5a604
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/cloudformation_cfn_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:790c438c3c9c8a360cddf4e788002b633c636594ef039b751e35340a36d72030
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/coffee_coffeelint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:860b1625da1a3547eebf1f17d8a14bd29fc3947308003c08720e68a2c45e3868
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/copypaste_jscpd.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:aae54d28779dc453cae49002851e259c2cd36872e7b3df0c806138651116b84f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/cpp_clang_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9345e0b2da6f3833f542792eba20e9f80f4ad75bfda89dd799fa617dd71d3d81
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/cpp_cppcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a8afa138f29dbe26c9f6bd52d2ea6534e6e97d028587baf54ba2682324e60228
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/cpp_cpplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6d8b1dc8046f0738a1cd42cc8a03cceb8e3cdf9eb8b783ce0af4905deed1c670
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/csharp_csharpier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c3ec4b6466bb1effeb1f144b210706b63d875f1c1afc28e431f575af342d25e7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/csharp_dotnet_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:110f6eb45cc8f9edc8bb8f4a1d83620593024b182c30b086331af20745bfdc71
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/csharp_roslynator.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:69439bb77ee98672d146e0ab50192b7033fb9a1244a59735cecdd6c341538430
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/css_stylelint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:578e93da8981917d310935565c0d2b436f1d87540afbe017f54ee148e68e1453
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/dart_dartanalyzer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d298343819e0cccbdd109d92a507b6a105849098bffd667e7e3600340d330c6d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/dockerfile_hadolint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:8317fcbde952ad1f2bb3b87f953517a269b8d7afbe535e0e055fe7a93c5db78e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/editorconfig_editorconfig_checker.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b10a13d97cb45c42ce3b21fdd381953556777bf8bbe5facd60b74a55406b6f87
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/env_dotenv_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d4c968be3c139a438d36f93101c4b0fe9eeeb8ccaf85184cc86678adad5f0531
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/gherkin_gherkin_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b30c603c38df54eefca45d5be87d1dbf494ce5714e2e8d89d4d9d2a878f6ae33
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/go_golangci_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e993f081e35e669ad181579c4e42a50a2f961ded2e15f5f82a4631009ace6967
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/go_revive.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fd2ea1d3023cac24f2926d8379f548c8c47742e6062d2f2b1df08d3d7130fc37
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/graphql_graphql_schema_linter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a6c8a52e12696affe41d0e1649bc3659c83624d4992e2225aeeadef2352cf04b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/groovy_npm_groovy_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e40301a82411bc97fdb4a5f0853d38cc0733396f5978cc35a700a933a4d2b2d9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/html_djlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b09feab917b07c132fcbac958908f92eef4f11542385a98c724a0383f5e1f81e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/html_htmlhint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:087633ef644aead0847471f170d067d36d8167a761324444b7e93da61b6351e0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/java_checkstyle.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:39e7cb52df143532852eba103778633f8ee7587f52964473c23fee7a01203ba2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/java_pmd.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f9e9533baba8db6d5239551a93f8d70c2b5b7f9e3d43643e53b4154b312ec2f6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/javascript_es.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6eb52e04c0e2acf047589b8a3f867137357f2de07e336cd04bd6cc2763a82f41
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/javascript_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e9b233b1b2d21928d772284510fcda3828c14884a78b2960b5ecce7cdd0a866a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/javascript_standard.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c58ed6fd23061159927f1881b954a08fcc73d005cc1124e5ca3ffa8abec4cf07
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/json_jsonlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:07a392d510904d62050bd663b83b621ef68be34846c50d5be366e7ed406b2c86
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/json_npm_package_json_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dc5abd5518a7ba07b3a7a1dcf3c421631a3d7a94c40ae55ccec570571e2d57a9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/json_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9115a4835bc292bb7f12ac2612925d7ed5db2abacd06628c102923366f4e11e6
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/json_v8r.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7ffc229ec2eee919168954193dec61aa1dbb8ceb059e2c69fe5984d12308c1b4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/jsx_eslint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ec259fe94bc742fc89b1d7aef7fd4c8c3a39ca6afd067d4e1b54abbe7571c607
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/kotlin_detekt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c942dfacaf7951c2e8d65a512388d1b0cf44927a201114ca5b9d79c99599e907
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/kotlin_ktlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:42efe27faf8b5b9765146e4497d91cd4c65e1ca6f81102b94b01b4d16c944979
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/kubernetes_helm.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:605e6ef84e5fc572216873ecc5d1ff8936264cbeafe0756f0b1ff2d396016b17
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/kubernetes_kubeconform.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:771c14f672d21bae99e49bef87844f0159eb31c550d4c6e0c2f9c28500649b23
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/kubernetes_kubescape.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3d53ebbd9c15a943cc3ac9bce44e7b1dc25ee9114af7aedb98e32cc314970057
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/latex_chktex.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6843340549444eaa5d549b7fae3dbbbc92fac890d6a6e1c1c09606ac3dbd1cad
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/lua_luacheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:25e65f1f0d1aa3ef6077748775e5b639fc7493b27ba4f4ef2405ad16baa3fd4a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/lua_stylua.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:dc1231be2a52a1780a0c875b58c4c9105b2633d78786fbc4be38647616834a2d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/markdown_markdown_table_formatter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:913a7d2a72dbf6d3ea229c616878e1bca6c8be0569a7ae9a50e4b9730e05aa40
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/markdown_markdownlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:69af5d9c3eff6db9583351cf8adb4c48972917b3bdee0880531980e6acf4c10d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/markdown_rumdl.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0fb1d8be351ee599a4ce548b4173e34ba718b762f7457fc6f61df6a0f0ee1d45
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/perl_perlcritic.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ec6aafdf35b7f06b8f6802c9c5ab4469888e7b3ac18cf4af1afc1bc00e69cf7d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/php_phpcs.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c01a792d5010da1211e7c2a2510e1064714e8a2d7f714de5f97470c9b20d9a3f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/php_phpcsfixer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f35dd494de6ac6c73c396c2883da37727871712a035d63dce11e82eb877ec69c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/php_phplint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c663b4c9973464dec921dd37c9219ed4550c9e9471b942deb76a753455a542b0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/php_phpstan.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2f015a30baa0eaa6bcbb5050592e8cc6251f5a801574d110516a192b74d63d82
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/php_psalm.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:34199a942a42afe17d9199ae5ea13711649581c30d241d042802c828dd2a1524
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/powershell_powershell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0166d1a571158e283c5ce8f372e71ac00307eccb07e84d5c21e9059e3f979c4b
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/powershell_powershell_formatter.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c8a7e5728e201e1556b48c3f23f87d256d1a3b1b1a7afd89b60aa80efa47ee76
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/protobuf_protolint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:93f6955111f2aace229b5d4bdac0eea5fa0897161467aed4af7926b3fca210a2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_bandit.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:09b971c599eaa8821136f00f9b44e8dfe226f687e843fc31258a2f5132c31357
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_black.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0f8edff82980be702ae7616873626a6741ae052ba5b44d64802d1edbff0bb95c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_flake8.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9989ead0e4fd98e79ca2adf0519ae966f251c2c99b9953c62a67bcf833dd018e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_isort.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0d1229ac46909d65a798dfd82ea4816f5dff1b6d7bafe4cc7b842ef6455f7ac0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_mypy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:1cd7c97e6d5ecebc4acc60d752f664e080b971288561828b00b7acb35cdaefbe
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_nbqa_mypy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:626458b1402443e8e1fd7791302f72d83e23340b60997d2a08b00bcd279b478a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_pylint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6b1bec76ce651deb7ca8a55a949f0be96d1c797f4f8d3812446f2d5eb490d517
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_pyright.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7282db1f45df0a4c1195cae101adbf2dd0d0038afeb5eb7c4ebe99694bcf6dda
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_ruff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:38eeaf114aa781bfa7f2352ff524b9d0c392ef348f3f90440c6c28b9b2847c02
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/python_ruff_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:34109a7db82c19b4289719d602501f091cfe51b121bd8c5e1cec9a89ced5f03c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/r_lintr.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9e373e745f36eed058f231d95777473ff72e03ada7c2a840a3d1f5119c772818
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/raku_raku.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9528a95844765652aac31c442f857e168440391f79b2d786e3dc030ed363945a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_betterleaks.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d1eb5dcf592b08b1c32a562b0fb6f592a140cc0dce7cdde04416e260c295bbd4
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_checkov.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:93da88fb8e66af491e71aaed1648d48408c7fdd5ca0740f4408842ad7336e15d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_devskim.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:6e2584e46188be7240ee29e9c47ab39e94033350998d636f797ac86b8810ff87
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_dustilock.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e1b037befc7ef27739c81a3bda538793fd296db2816ef39e55158a4c138f1904
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_git_diff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:fd8da29fc79e7047e99706ad3bda80e73a27b069b522bd5779134ec234a72963
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_grype.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ca3e0d065832867059d3b59a048117157340083d377d29d5de58cb2d24567a06
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_kingfisher.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:4290af7604356278ee58d9d1befc0b9ced2b4d33ecca82352ca38e3c4ce39cf3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_ls_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:35095d7380278239b260d510ede9f510f0590c98db1a08380bf187cd66ec452d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_osv_scanner.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:355dde05538c2097f9f65c07454583ad6b4b91510b412e0395fd7a3c628788da
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_secretlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:8cab35c83452644f1cf96dc6ff8c8b8767736b215fcbb5c4acba758f8cd3d974
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_semgrep.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:db486ec4fdda91917ed99c5cde82e63cd79cda712bd0b7c84fd2aa7b172f939a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_syft.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5862576d65d12e7129a11adcdfc3d4edd42785603b27fa2e2c613ee6cce66267
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_trivy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:937936f7784bd4718f21a0ccdc75f774269fdd06a9f1073810e4bb7213091acb
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_trivy_sbom.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d2316117fef3492a374d8534d33ab429e7ba824bdabd5d7a96cea577e68c72b1
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/repository_trufflehog.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:7218c2005d03d44b00a1e9d757c63bcf971adc1296e965decb4f10e48b601a6c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/robotframework_robocop.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:605cc3aeef5a5902241a64e31c083685d674562152e6e0922f20e95613a748a3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/rst_rst_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:64ded9ed98d46774c1792568048bf0751effd4fc21b16f76d37d716ac3cc31ba
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/rst_rstcheck.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:c09b640e6e5f38ee41d94cc205bae11d8b8d90098419e92c7478659f846f4ade
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/rst_rstfmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ade85a7830b04fb33e5cdce5cbd4a4d86f1b3fca1dccb4456504e8bd5c7483ff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/ruby_rubocop.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a7d3dce00906c93fe69bac39d29754da2ebe075e16f7a67a27370cb75d79b0ef
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/rust_clippy.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ffb65e1bde1076ebf0ff3aa6a0fbb129fb4c7ff098b7c405e5cabae7aac075ca
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_apex.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:81ed8dc8f1bbdbea751b92ff8458b96d04053fe59b3a1809b0c335db118e8b08
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_aura.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:91f91f30d83b7c121d234ddb0af24d7fb52cfe01422fe2a4fda5575dbb3e75ad
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_flow.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:f05f9bf68a8fb16dc81dc50260903f66555cef016eed9aa2382e7ef9aaa23e48
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/salesforce_code_analyzer_lwc.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3e5ec0f0c3823b615e1cd50c1f6e3f526cc4865a17111beeba144acbf8d814b7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/scala_scalafix.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9b7167422764b8fb4f895974e6fa03e79ea1a796ce0ef31f4b547cc2dbadf355
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/snakemake_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:e396f21013ea28b2ee1d1e78215de41d14f4e205f8bdd07a225a392393b9ff1d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/snakemake_snakefmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:07b4b314f0f765aeac028bdf12d56fe6a879e5c3e6e10b48a4b46f38283c247c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/spell_codespell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ac178e050e6ae19a924684ddbe7d8bb282eec318487899ada89a88b5d096b2c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/spell_cspell.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2df0b4a1d85e17a3808791ce29ecb971b4fdbead76c91ece945b909dd5252295
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/spell_lychee.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ace4608a981ee0b2a81a29336fe689198a3e4142e55aa1c96d328bad893cdd2
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/spell_proselint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:49d60a9a2fd4983232a61876e725294aa0d7ce09d6f4413efae4c700fecbdd6f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/spell_vale.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0f72b05e8d8ce1da13e4665c52add1b16ad191dfa096063f1c49cd2d76522630
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/sql_sqlfluff.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:66cba049bba443695d9b42dccc473be7e9d9a2ee44302c3a85ebd18a4429a52e
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/swift_swiftlint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b31ad784191c7d437f594eafc70e353f02c91a4732d4b0793e56ce10116eac48
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/tekton_tekton_lint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ecd7cafaa50f0c168b99fd6711c78be6fa3b213a63715e1e95a666ee8662c38f
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/terraform_terraform_fmt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:0ee29f17c7e384284fd66bbd336d59eeddec2906179423d2d0ad2feefb0b57dd
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/terraform_terragrunt.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2af6cbd43105699db087e037b27c90ae80570fd0ca053f1f838e30c732eee16a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/terraform_tflint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:848d352a511c869b3d4af998706dbba0b7b2a90ca05d037736d19e10a8d2cf69
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/tsx_eslint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:5ae544baadce823113fe02bc7871ce86b131ff792ff8d25618784f0d0a42a3f0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/typescript_es.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3ff341406abbf249d4cafe499a66f878c853f346e314d54ffc9bdf7378ee508d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/typescript_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:d25fc6282adf9e37313183695aa00343b9e253fdd9ffde754af433c6315471da
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/typescript_standard.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:243b1d712b1ad73e908b27d4171019e42db12af2c0a29ae642320e1fb5d1fdff
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/vbdotnet_dotnet_format.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2f6e1350c543aefd0dfe1afe13a08e29467f46cd0762aae295553ae7e3b948e0
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/xml_xmllint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:46f33ee366ed63559fd31b8130340217b18d8f1f29ae4f0049d1e2a5d877a4a7
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/yaml_prettier.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:9a278e5f83afffee47e6575fd97fe4154777d96d4b3343b50f844a0e403fb20d
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/yaml_v8r.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:25d61d3183bd8a2cc10521046c3e73b8483fb43b7d3f916a81678f1f96efc2aa
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-fix/linters/yaml_yamllint.md
+  - active_owner: oxsecurity/megalinter
+    content_hash:
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:b1cba3934bbb096ca21988ccd0d0042271d83975c3d3bbbbdf6b44d628daddb1
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup/SKILL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:2160d4438c93aa8f7879f0cbab7a496db5637ebe3d7c4da298708d33719eefe3
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup/agents/INSTALL.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:a9787c97e872b041fbbf6be874d9be9218f950c416e11a4597a628f7258fae8c
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup/agents/megalinter-fixer.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:41cf3c2308c89f41f9b098fde9d0f2fc50c4c74964401c50fa35e742a346367a
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup/agents/megalinter-runner.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:3c62222f9b20f62715b4c4c24e914181796247831ce476cf5044fff5481bb672
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter-setup/agents/megalinter-watcher.md
+  - active_owner: oxsecurity/megalinter
+    content_hash: sha256:ffd79b1c0c831f206b0b39fa35c463e976c37eeef85218320342348eaed9ffc9
+    kind: project-relative
+    owners:
+      - oxsecurity/megalinter
+    runtime:
+    scope: project
+    target: claude
+    value: .claude/skills/megalinter/SKILL.md
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: antigravity
+    scope: project
+    target: mcp
+    value: mcp-nixos
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: claude
+    scope: project
+    target: mcp
+    value: mcp-nixos
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: codex
+    scope: project
+    target: mcp
+    value: mcp-nixos
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: cursor
+    scope: project
+    target: mcp
+    value: mcp-nixos
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: opencode
+    scope: project
+    target: mcp
+    value: mcp-nixos
+generated_at: "2026-08-30T07:41:43.217904+00:00"
+lockfile_version: "2"
+mcp_configs:
+  mcp-nixos:
+    args:
+      - mcp-nixos
+    command: uvx
+    name: mcp-nixos
+    registry: false
+    transport: stdio
+mcp_servers:
+  - mcp-nixos
+mcp_target_servers:
+  antigravity:
+    - mcp-nixos
+  claude:
+    - mcp-nixos
+  codex:
+    - mcp-nixos
+  cursor:
+    - mcp-nixos
+  opencode:
+    - mcp-nixos

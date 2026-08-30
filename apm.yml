@@ -1,0 +1,33 @@
+---
+author: MRDGH2821
+dependencies:
+  apm:
+    - git: https://github.com/MRDGH2821/copier-mr-nix
+    
+  mcp:
+    - args:
+        - mcp-nixos
+      command: uvx
+      name: mcp-nixos
+      registry: false
+      transport: stdio
+description: Project generated from copier-mr-nix
+includes: auto
+name: dotfiles
+scripts:
+  antigravity: agy plugin install https://github.com/obra/superpowers
+  claude: |
+    claude plugin marketplace add obra/superpowers-marketplace
+    claude plugin install superpowers@superpowers-marketplace
+  codex: codex plugin add superpowers@openai-curated
+  cursor: cursor-agent plugin marketplace add https://github.com/obra/superpowers
+  opencode: opencode plugin superpowers@git+https://github.com/obra/superpowers.git -g
+targets:
+  # keep-sorted start
+  - antigravity
+  - claude
+  - codex
+  - cursor
+  - opencode
+  # keep-sorted end
+version: 0.0.0

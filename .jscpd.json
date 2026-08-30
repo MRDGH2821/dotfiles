@@ -5,13 +5,15 @@
     "**/*cache*/**",
     "**/.chezmoidata/**",
     "**/.chezmoiscripts/**",
+    "**/.agents/**",
     "**/.git/**",
     "**/.github/**",
     "**/.idea/**",
     "**/.rbenv/**",
     "**/.venv/**",
     "**/node_modules/**",
-    "**/report/**"
+    "**/report/**",
+    "template/**"
   ],
   "reporters": ["html", "markdown"],
   "threshold": 0

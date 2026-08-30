@@ -1,21 +1,43 @@
-**.egg-info
-**/__pycache__/**
+# AI
+# keep-sorted start
+.agents/mcp_config.json
+.agents/skills/
+.claude/skills/
+.cursor/mcp.json
+.cursor/skills
+.gemini/settings.json
+.github/skills
+.mcp.json
+.opencode/skills
+.vscode/mcp.json
+apm_modules/
+opencode.json
+# keep-sorted end
+
+# Env
+.env
+.env.*
+!.env.sample
+
+# Others
 *.local
 .DS_Store
 .devenv
 .direnv
-.env
-.env.*
-!.env.sample
 .git
+.pre-commit-config.yaml
 .svn
 .venv/
 .worktrees/
 /.devenv
+.worktrees
 __MACOSX
 __pycache__
 dist/
 megalinter-reports/
 node_modules/
 package-lock.json
+report/
 target/
+**.egg-info
+**/__pycache__/**

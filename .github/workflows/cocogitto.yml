@@ -1,0 +1,25 @@
+---
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.ref }}-${{ github.workflow }}
+jobs:
+  cog_check_job:
+    name: Conventional Commits Check
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Conventional commits check
+        uses: cocogitto/cocogitto-action@52d0023b4396897f1815648e553db2ab8d782f3a # v4.2.0
+        with:
+          command: check
+name: Conventional Commits Check
+on: # yamllint disable-line rule:truthy
+  pull_request:
+  push:
+permissions: {}

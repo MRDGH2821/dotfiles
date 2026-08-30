@@ -14,7 +14,7 @@ eval "$(direnv hook "${SHELL_NAME}")" || true
 # we can detect if we're running inside the VS Code terminal or not.
 # This solution works in combination with setting the PATH_BACKUP_FOR_VSCODE within the .envrc file after `use flake`
 
-if [[ -n "${VSCODE_INJECTION}" && -n "${PATH_BACKUP_FOR_VSCODE}" && -z "${VSCODE_TERMINAL_DIRENV_LOADED}" && -f .envrc ]]; then
+if [[ -n ${VSCODE_INJECTION} && -n ${PATH_BACKUP_FOR_VSCODE} && -z ${VSCODE_TERMINAL_DIRENV_LOADED} && -f .envrc ]]; then
   export PATH=${PATH_BACKUP_FOR_VSCODE}
   export VSCODE_TERMINAL_DIRENV_LOADED=1
 fi

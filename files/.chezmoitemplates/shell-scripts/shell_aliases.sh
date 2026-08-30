@@ -35,7 +35,7 @@ rmedirs() {
   local dir="${1:-.}"
   local answer
 
-  if [[ ! -d "${dir}" ]]; then
+  if [[ ! -d ${dir} ]]; then
     echo "Error: '${dir}' is not a valid directory."
     return 1
   fi
@@ -49,15 +49,15 @@ rmedirs() {
   read -r answer
 
   case "${answer}" in
-    [yY] | [yY][eE][sS])
-      echo "Deleting..."
+  [yY] | [yY][eE][sS])
+    echo "Deleting..."
 
-      find "${dir}" -mindepth 1 -depth -type d -empty -delete
-      echo "Done."
-      ;;
-    *)
-      echo "Aborted."
-      ;;
+    find "${dir}" -mindepth 1 -depth -type d -empty -delete
+    echo "Done."
+    ;;
+  *)
+    echo "Aborted."
+    ;;
   esac
 }
 
@@ -94,7 +94,7 @@ export-glab() {
   # "Token ...: <value>" line printed by 'auth status --show-token'.
   token="$(glab auth status --show-token 2>&1 | sed -n 's/.*[Tt]oken.*: \([^[:space:]]*\)$/\1/p' | head -n 1)"
 
-  if [[ -z "${token}" || "${token}" == *'*'* ]]; then
+  if [[ -z ${token} || ${token} == *'*'* ]]; then
     echo "Error: failed to get GitLab token (are you logged in? try 'glab auth login')." >&2
     return 1
   fi

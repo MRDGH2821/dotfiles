@@ -131,12 +131,18 @@
         ];
         priority = 9;
       };
-    generate-package-table = {
-      command = "uv";
-      includes = ["Packages.md", "**/packages/**"];
-      options = ["run", "gen-packages-table"];
-      priority = 1;
-    };
+      generate-package-table = {
+        command = "uv";
+        includes = [
+          "Packages.md"
+          "**/packages/**"
+        ];
+        options = [
+          "run"
+          "gen-packages-table"
+        ];
+        priority = 1;
+      };
       djlint.options = ["--single-attribute-per-line"];
       prettypst-default = {
         command = "${lib.getExe pkgs.prettypst}";
@@ -186,19 +192,19 @@
         no-positional-arg-support = true;
         includes = [
           # keep-sorted start
-          "**/.chezmoidata/distros.yaml",
-          "**/.chezmoidata/packages/**/*.json",
-          "**/.chezmoidata/packages/**/*.yaml",
-          "**/.chezmoidata/packages/**/*.yml",
-          "**/.chezmoidata/packages/*.json",
-          "**/.chezmoidata/packages/*.yaml",
+          "**/.chezmoidata/distros.yaml"
+          "**/.chezmoidata/packages/**/*.json"
+          "**/.chezmoidata/packages/**/*.yaml"
+          "**/.chezmoidata/packages/**/*.yml"
+          "**/.chezmoidata/packages/*.json"
+          "**/.chezmoidata/packages/*.yaml"
           "**/.chezmoidata/packages/*.yml"
           # keep-sorted end
         ];
         options = [
           "eval"
           "-i"
-          "'(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))'"
+          "(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))"
         ];
         priority = 0;
       };

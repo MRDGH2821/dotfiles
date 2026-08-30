@@ -10,11 +10,11 @@ if command -v apt &>/dev/null; then
   sudo add-apt-repository ppa:phoerious/keepassxc --yes
   sudo apt update
   sudo apt install -y keepassxc
-# Fedora-based
+  # Fedora-based
 elif command -v dnf &>/dev/null; then
   echo "Installing KeepassXC on Fedora..."
   sudo dnf install -y keepassxc
-# Arch Linux-based
+  # Arch Linux-based
 elif command -v pacman &>/dev/null; then
   echo "Installing KeepassXC on Arch Linux..."
   sudo pacman -S --noconfirm --needed keepassxc

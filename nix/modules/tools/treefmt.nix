@@ -131,6 +131,7 @@
         ];
         priority = 9;
       };
+      djlint.options = ["--single-attribute-per-line"];
       generate-package-table = {
         command = "uv";
         includes = [
@@ -143,7 +144,6 @@
         ];
         priority = 1;
       };
-      djlint.options = ["--single-attribute-per-line"];
       prettypst-default = {
         command = "${lib.getExe pkgs.prettypst}";
         includes = ["*.typ"];
@@ -187,27 +187,6 @@
         ];
         priority = 8;
       };
-      yq-packages-sort = {
-        command = "${lib.getExe pkgs.yq-go}";
-        no-positional-arg-support = true;
-        includes = [
-          # keep-sorted start
-          "**/.chezmoidata/distros.yaml"
-          "**/.chezmoidata/packages/**/*.json"
-          "**/.chezmoidata/packages/**/*.yaml"
-          "**/.chezmoidata/packages/**/*.yml"
-          "**/.chezmoidata/packages/*.json"
-          "**/.chezmoidata/packages/*.yaml"
-          "**/.chezmoidata/packages/*.yml"
-          # keep-sorted end
-        ];
-        options = [
-          "eval"
-          "-i"
-          "(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))"
-        ];
-        priority = 0;
-      };
       yq-key-sort = {
         command = "${lib.getExe pkgs.yq-go}";
         includes = [
@@ -222,6 +201,27 @@
           "-P"
           "-i"
           "sort_keys(..)"
+        ];
+        priority = 0;
+      };
+      yq-packages-sort = {
+        command = "${lib.getExe pkgs.yq-go}";
+        includes = [
+          # keep-sorted start
+          "**/.chezmoidata/distros.yaml"
+          "**/.chezmoidata/packages/**/*.json"
+          "**/.chezmoidata/packages/**/*.yaml"
+          "**/.chezmoidata/packages/**/*.yml"
+          "**/.chezmoidata/packages/*.json"
+          "**/.chezmoidata/packages/*.yaml"
+          "**/.chezmoidata/packages/*.yml"
+          # keep-sorted end
+        ];
+        no-positional-arg-support = true;
+        options = [
+          "eval"
+          "-i"
+          "(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))"
         ];
         priority = 0;
       };

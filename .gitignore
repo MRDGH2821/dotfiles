@@ -3,6 +3,7 @@
 .agents/mcp_config.json
 .agents/skills/
 .claude/skills/
+.codex/config.toml
 .cursor/mcp.json
 .cursor/skills
 .gemini/settings.json

@@ -6,28 +6,28 @@
   "display": {
     "separator": " ",
     "size": {
-      "binaryPrefix": "jedec"
-    }
+      "binaryPrefix": "jedec",
+    },
   },
   "logo": {
     "height": 25,
     "padding": {
-      "top": 1
+      "top": 1,
     },
     "position": "right",
     // "source": "~/.config/fastfetch/logos/arch-logo-circle-1.png",
     "type": "auto",
-    "width": 35
+    "width": 35,
   },
   "modules": [
     {
       "format": "{#1}\u001b[39m┌────────────────────────────────────────────────────────────┐",
-      "type": "custom"
+      "type": "custom",
     },
     {
       "format": "{#1}                       -::] WELCOME [::-",
       "keyWidth": 25,
-      "type": "title"
+      "type": "title",
     },
     // {
     //   "type": "title",
@@ -36,212 +36,212 @@
     // },
     {
       "format": "{#1}\u001b[37m└────────────────────────────────────────────────────────────┘",
-      "type": "custom"
+      "type": "custom",
     },
     {
       "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m ",
-      "type": "custom"
+      "type": "custom",
     },
     "break",
     {
       "format": "\u001b[32m┌────────────────────────────────────────────────────────────┐",
-      "type": "custom"
+      "type": "custom",
     },
     {
       "format": "\u001b[36m{#1}{#7} {3} ({11}) ",
       "key": "{#7} 󰣇 DISTRO ",
       "keyColor": "cyan",
-      "type": "os"
+      "type": "os",
     },
     {
       "format": "{2}",
       "key": "│ ├ KERNEL",
       "keyColor": "36",
-      "type": "kernel"
+      "type": "kernel",
     },
     {
       "key": "│ ├󰏖 PACKAGES",
       "keyColor": "cyan",
-      "type": "packages"
+      "type": "packages",
     },
     {
       "key": "│ ├ SHELL",
       "keyColor": "36",
-      "type": "shell"
+      "type": "shell",
     },
     {
       "key": "│ ├󰅐 OS-AGE",
       "keyColor": "cyan",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-      "type": "command"
+      "type": "command",
     },
     {
       "key": "│ └󰅐 UPTIME",
       "keyColor": "36",
-      "type": "uptime"
+      "type": "uptime",
     },
     {
       "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────",
-      "type": "custom"
+      "type": "custom",
     },
     "break",
     {
       "format": "\u001b[36m{#1}{#7} {2} ({3}) ",
       "key": "{#7}  DE/WM ",
       "keyColor": "36",
-      "type": "DE"
+      "type": "DE",
     },
     {
       "key": "│ ├󰧨  WM",
       "keyColor": "cyan",
-      "type": "wm"
+      "type": "wm",
     },
     {
       "key": "│ ├󰉼 THEME",
       "keyColor": "cyan",
-      "type": "wmtheme"
+      "type": "wmtheme",
     },
     {
       "key": "│ ├󰀻 ICONS",
       "keyColor": "cyan",
-      "type": "icons"
+      "type": "icons",
     },
     {
       "key": "│ ├ TERMINAL",
       "keyColor": "cyan",
-      "type": "terminal"
+      "type": "terminal",
     },
     {
       "key": "│ └ FONT",
       "keyColor": "cyan",
-      "type": "terminalfont"
+      "type": "terminalfont",
     },
     {
       "format": "{1} {2}",
       "key": "│ └󰸉 WALLPAPER",
       "keyColor": "cyan",
-      "type": "wallpaper"
+      "type": "wallpaper",
     },
     {
       "format": "{#1}\u001b[36m└─────────────────────────────────────────────────────────────",
-      "type": "custom"
+      "type": "custom",
     },
     // "break",
     {
       "format": "\u001b[31m{#1} {1}",
       "key": "{#7}  HARDWARE ",
       "keyColor": "31",
-      "type": "board"
+      "type": "board",
     },
     {
       "key": "│ ├ CPU",
       "keyColor": "red",
-      "type": "cpu"
+      "type": "cpu",
     },
     {
       "key": "│ ├󰍛 GPU",
       "keyColor": "red",
-      "type": "gpu"
+      "type": "gpu",
     },
     {
       "key": "│ ├󰑭 RAM",
       "keyColor": "red",
-      "type": "memory"
+      "type": "memory",
     },
     {
       "key": "│ └󰓡 SWAP",
       "keyColor": "red",
-      "type": "swap"
+      "type": "swap",
     },
     {
       "folders": "/",
       "format": "{5} / {7} ({8}, {9} allocated) - {1}",
       "key": "{#7}  DISKS ",
       "keyColor": "red",
-      "type": "btrfs"
+      "type": "btrfs",
     },
     {
       "folders": "/boot/efi",
       "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ EFI ",
       "keyColor": "red",
-      "type": "disk"
+      "type": "disk",
     },
     {
       "folders": "/boot",
       "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ BOOT",
       "keyColor": "red",
-      "type": "disk"
+      "type": "disk",
     },
     {
       "folders": "/",
       "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ ROOT",
       "keyColor": "red",
-      "type": "disk"
+      "type": "disk",
     },
     {
       "folders": "/home",
       "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ ├ HOME",
       "keyColor": "red",
-      "type": "disk"
+      "type": "disk",
     },
     {
       "folders": "/mnt/ISOz",
       "format": "{13} {1} / {2} ({3}) - {20}",
       "key": "│ └ ISOz",
       "keyColor": "red",
-      "type": "disk"
+      "type": "disk",
     },
     {
       "format": "{#1}\u001b[31m└─────────────────────────────────────────────────────────────",
-      "type": "custom"
+      "type": "custom",
     },
     "break",
     {
       "format": "\u001b[37m┌────────────────────────────────────────────────────────────┐",
-      "type": "custom"
+      "type": "custom",
     },
     {
       "format": "{#1}{#7} {6} {1}x{2} @{3}Hz ({7}) ",
       "key": "{#7} 󰍹 DISPLAY ",
       "keyColor": "38",
-      "type": "display"
+      "type": "display",
     },
     {
       "format": "{3} - {1} ({5})",
       "key": "│ ├󰝚  TRACK",
       "keyColor": "37",
-      "type": "media"
+      "type": "media",
     },
     {
       "format": "\u001b[34m{4}",
       "key": "│ ├󰥠   URL:",
       "keyColor": "37",
-      "type": "player"
+      "type": "player",
     },
     {
       "format": "{#1}{5} ({#1}{3})",
       "key": "│ ├ VOLUME",
       "keyColor": "37",
-      "type": "sound"
+      "type": "sound",
     },
     {
       "key": "│ └WEATHER",
       "keyColor": "37",
       "text": "/home/arch/.config/fastfetch/weather.sh --fastfetch-mode",
-      "type": "command"
+      "type": "command",
     },
     {
       "format": "{#1}\u001b[37m└─────────────────────────────────────────────────────────────",
-      "type": "custom"
+      "type": "custom",
     },
     "break",
     {
       "format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m       \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m",
-      "type": "custom"
-    }
-  ]
+      "type": "custom",
+    },
+  ],
 }

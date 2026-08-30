@@ -7,5 +7,5 @@ sudo groupadd docker -f
 sudo usermod -aG docker "${USER}"
 sudo systemctl enable docker.socket
 
-echo "Docker is now managable by ${USER}"
+echo "Docker is now manageable by ${USER}"
 echo "Please reboot once for changes to take effect"

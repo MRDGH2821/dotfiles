@@ -46,7 +46,7 @@ esac
 
 yq -i "${yq_format[@]}" --indent 2 '.words = []' "$cspell_config"
 
-raw=$(bunx cspell . --dot --words-only --quiet || true)
+raw=$(bunx cspell .* --dot --words-only --quiet || true)
 
 if [ -n "$raw" ]; then
   words=$(

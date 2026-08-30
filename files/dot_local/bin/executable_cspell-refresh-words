@@ -31,6 +31,47 @@ find_cspell_config() {
   return 1
 }
 
+# Pick which cspell to run. `bunx cspell` fetches the latest published
+# release, whose bundled dictionaries are usually newer than the cspell a
+# repo actually gates commits with -- so a word list refreshed with it can
+# still trip pre-commit/CI. Prefer, in order: an explicit $CSPELL override,
+# a repo-local node_modules install, the cspell wired into a pre-commit
+# config, then fall back to `bunx cspell`.
+resolve_cspell() {
+  if [ -n "${CSPELL:-}" ]; then
+    printf '%s' "$CSPELL"
+    return 0
+  fi
+
+  if [ -x node_modules/.bin/cspell ]; then
+    printf '%s' node_modules/.bin/cspell
+    return 0
+  fi
+
+  local cfg bin ver
+  for cfg in .pre-commit-config.yaml .pre-commit-config.yml; do
+    [ -e "$cfg" ] || continue
+
+    # Nix setups (git-hooks.nix) bake an absolute path to the binary.
+    bin=$(grep -oE '/[[:alnum:]/._-]*cspell[[:alnum:]/._-]*/bin/cspell' "$cfg" | head -n1 || true)
+    if [ -n "$bin" ] && [ -x "$bin" ]; then
+      printf '%s' "$bin"
+      return 0
+    fi
+
+    # Otherwise take a pinned version near a cspell hook/repo reference.
+    ver=$(grep -iE -B2 -A2 'cspell' "$cfg" \
+      | grep -oiE 'v?[0-9]+\.[0-9]+\.[0-9]+' \
+      | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1 || true)
+    if [ -n "$ver" ]; then
+      printf 'bunx cspell@%s' "$ver"
+      return 0
+    fi
+  done
+
+  printf 'bunx cspell'
+}
+
 cspell_config="${1:-}"
 if [ -z "$cspell_config" ]; then
   cspell_config="$(find_cspell_config)" || {
@@ -44,9 +85,13 @@ case "$cspell_config" in
   *) yq_format=(-oj) ;;
 esac
 
+cspell_cmd=$(resolve_cspell)
+echo >&2 "Using cspell: $cspell_cmd"
+
 yq -i "${yq_format[@]}" --indent 2 '.words = []' "$cspell_config"
 
-raw=$(bunx cspell .* --dot --words-only --quiet || true)
+# shellcheck disable=SC2086 # cspell_cmd may be "bunx cspell@x"; word-split intended
+raw=$($cspell_cmd . --dot --words-only --quiet || true)
 
 if [ -n "$raw" ]; then
   words=$(

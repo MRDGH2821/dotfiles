@@ -15,7 +15,7 @@ asset_pattern = "ccu-{os}-{arch}"
 github = "p-arndt/compose-check-updates"
 pkg_type = "binary"
 tag_pattern = "*.*.*"
-version = "0.10.0"
+version = "0.11.0"
 
 [packages.escrcpy]
 asset_pattern = "Escrcpy-*-{os}-{arch}.*"

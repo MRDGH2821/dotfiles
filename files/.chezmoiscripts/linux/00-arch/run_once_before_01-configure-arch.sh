@@ -34,6 +34,7 @@ echo "${LINE}"
 sudo pacman -S --noconfirm yay paru flatpak --needed
 
 # Install Soar
+# shellcheck disable=SC2312
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 
 echo "${LINE}"

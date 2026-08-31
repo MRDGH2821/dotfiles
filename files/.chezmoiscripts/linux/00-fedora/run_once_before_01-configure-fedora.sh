@@ -60,6 +60,7 @@ echo "${LINE}"
 
 ## Terra repo
 
+# shellcheck disable=SC2312
 if ! (dnf5 repolist | grep -i 'terra' >/dev/null 2>&1); then
   sudo dnf5 install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 else
@@ -78,6 +79,7 @@ fi
 echo "${LINE}"
 
 # Install Soar
+# shellcheck disable=SC2312
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"
 

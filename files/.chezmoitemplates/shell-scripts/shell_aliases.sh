@@ -28,6 +28,7 @@ alias l='ls -CF'
 # functions
 
 line() {
+  # shellcheck disable=SC2312
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '-'
 }
 
@@ -92,6 +93,7 @@ export-glab() {
 
   # glab has no 'auth token' subcommand; parse the token off the
   # "Token ...: <value>" line printed by 'auth status --show-token'.
+  # shellcheck disable=SC2312
   token="$(glab auth status --show-token 2>&1 | sed -n 's/.*[Tt]oken.*: \([^[:space:]]*\)$/\1/p' | head -n 1)"
 
   if [[ -z ${token} || ${token} == *'*'* ]]; then

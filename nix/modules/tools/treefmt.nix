@@ -133,7 +133,7 @@
       };
       djlint.options = ["--single-attribute-per-line"];
       generate-package-table = {
-        command = "uv";
+        command = "${lib.getExe pkgs.uv}";
         includes = [
           "Packages.md"
           "**/packages/**"

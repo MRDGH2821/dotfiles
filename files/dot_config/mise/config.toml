@@ -1,4 +1,5 @@
 [tools]
+age = "latest"
 apm = "latest"
 "aqua:acheronfail/repgrep" = "latest"
 "aqua:cantino/mcfly" = "latest"

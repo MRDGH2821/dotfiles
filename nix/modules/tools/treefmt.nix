@@ -50,7 +50,23 @@
     };
     prettier = {
       enable = true;
+      includes = [
+        "*.ini"
+        "konsolerc"
+        "*.tmpl"
+        "dolphinrc"
+        ".editorconfig"
+        "**/git/config"
+        "dot_shellcheckrc"
+        "**/konsole/*.profile"
+        "*.ps1"
+      ];
       priority = 100;
+      settings.plugins = [
+        "prettier-plugin-go-template"
+        "prettier-plugin-powershell"
+        "prettier-plugin-ini"
+      ];
     };
     ruff-check = {
       enable = true;

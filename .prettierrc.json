@@ -25,7 +25,7 @@
   "plugins": [
     "prettier-plugin-go-template",
     "prettier-plugin-powershell",
-    "prettier-plugin-sh"
+    "prettier-plugin-ini"
   ],
   "powershellIndentSize": 2,
   "powershellRewriteAliases": true,

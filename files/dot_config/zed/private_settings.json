@@ -71,6 +71,18 @@
             },
             {
               "pattern": "^ls\\b"
+            },
+            {
+              "pattern": "^diff\\b"
+            },
+            {
+              "pattern": "^ls\\s+template/\\.github/workflows(\\s|$)"
+            },
+            {
+              "pattern": "^ls\\s+\\.github/workflows(\\s|$)"
+            },
+            {
+              "pattern": "^tail\\b"
             }
           ]
         }

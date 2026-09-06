@@ -78,7 +78,7 @@ rmignored() {
 
   echo "Dry run: files/folders matching .gitignore that would be removed:"
   line
-  git -C "${dir}" clean -andX
+  git -C "${dir}" clean -ndX
   line
 
   printf "Remove these files/folders? [y/N]: "

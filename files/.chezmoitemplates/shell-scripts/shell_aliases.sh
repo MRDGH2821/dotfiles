@@ -62,6 +62,40 @@ rmedirs() {
   esac
 }
 
+rmignored() {
+  local dir="${1:-.}"
+  local answer
+
+  if [[ ! -d ${dir} ]]; then
+    echo "Error: '${dir}' is not a valid directory."
+    return 1
+  fi
+
+  if ! git -C "${dir}" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "Error: '${dir}' is not inside a git repository." >&2
+    return 1
+  fi
+
+  echo "Dry run: files/folders matching .gitignore that would be removed:"
+  line
+  git -C "${dir}" clean -andX
+  line
+
+  printf "Remove these files/folders? [y/N]: "
+  read -r answer
+
+  case "${answer}" in
+  [yY] | [yY][eE][sS])
+    echo "Deleting..."
+    git -C "${dir}" clean -fdX
+    echo "Done."
+    ;;
+  *)
+    echo "Aborted."
+    ;;
+  esac
+}
+
 touchfile() {
   mkdir -p "$(dirname "$1")" && touch "$1" && echo "$1"
 }

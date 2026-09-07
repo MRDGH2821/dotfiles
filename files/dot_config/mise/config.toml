@@ -1,3 +1,22 @@
+[hooks]
+postinstall = ["ai-setup-global"]
+
+[tasks]
+# tombi: format.rules.array-values-order = "ascending"
+ai-setup-global = [
+  "memorix setup --agent all --global",
+  "rtk init --agent hermes",
+  "rtk init -g",
+  "rtk init -g --agent cursor",
+  "rtk init -g --agent cursor",
+  "rtk init -g --codex",
+  "rtk init -g --copilot",
+  "rtk init -g --gemini",
+  "rtk init -g --opencode"
+]
+# tombi: format.rules.array-values-order = "ascending"
+ai-setup-local = ["rtk init -g --agent antigravity"]
+
 [tools]
 age = "latest"
 apm = "latest"

@@ -4,6 +4,13 @@ postinstall = ["ai-setup-global"]
 [tasks]
 # tombi: format.rules.array-values-order = "ascending"
 ai-setup-global = [
+  "agy plugin install https://github.com/obra/superpowers",
+  "claude plugin install paad@paad",
+  "claude plugin install superpowers@superpowers-marketplace",
+  "claude plugin marketplace add Ovid/paad",
+  "claude plugin marketplace add obra/superpowers-marketplace",
+  "codex plugin add superpowers@openai-curated",
+  "cursor-agent plugin marketplace add https://github.com/obra/superpowers",
   "herdr integration install antigravity-cli",
   "herdr integration install claude",
   "herdr integration install codex",
@@ -12,6 +19,7 @@ ai-setup-global = [
   "herdr integration install hermes",
   "herdr integration install opencode",
   "memorix setup --agent all --global",
+  "opencode plugin superpowers@git+https://github.com/obra/superpowers.git -g",
   "rtk init --agent hermes",
   "rtk init -g",
   "rtk init -g --agent cursor",

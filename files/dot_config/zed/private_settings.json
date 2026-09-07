@@ -154,6 +154,12 @@
   },
   "colorize_brackets": true,
   "context_servers": {
+    "Memorix": {
+      "args": ["serve"],
+      "command": "memorix",
+      "enabled": true,
+      "remote": false
+    },
     "mcp-nixos": {
       "args": ["mcp-nixos"],
       "command": "uvx",

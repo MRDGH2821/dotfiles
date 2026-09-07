@@ -1,0 +1,5 @@
+{{- $srcDir := joinPath .chezmoi.sourceDir ".chezmoitemplates" "shell-scripts" -}}
+{{- $scripts := glob (printf "%s/*.sh" $srcDir) -}}
+{{- range $script := $scripts }}
+  {{ println "source" (quote $script) }}
+{{- end }}

@@ -4,6 +4,13 @@ postinstall = ["ai-setup-global"]
 [tasks]
 # tombi: format.rules.array-values-order = "ascending"
 ai-setup-global = [
+  "herdr integration install antigravity-cli",
+  "herdr integration install claude",
+  "herdr integration install codex",
+  "herdr integration install copilot",
+  "herdr integration install cursor",
+  "herdr integration install hermes",
+  "herdr integration install opencode",
   "memorix setup --agent all --global",
   "rtk init --agent hermes",
   "rtk init -g",

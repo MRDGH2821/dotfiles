@@ -1,5 +1,5 @@
 [hooks]
-postinstall = ["ai-setup-global"]
+postinstall = [{ task = "ai-setup-global" }]
 
 [tasks]
 # tombi: format.rules.array-values-order = "ascending"
@@ -50,6 +50,7 @@ cspell = "latest"
 direnv = "latest"
 fastfetch = "latest"
 fd = "latest"
+fnox = "latest"
 fzf = "latest"
 gh = "latest"
 git-cliff = "latest"

@@ -1,36 +1,97 @@
 [hooks]
 postinstall = [{ task = "ai-setup-global" }]
 
-[tasks]
+[tasks.ai-setup-global]
 # tombi: format.rules.array-values-order = "ascending"
-ai-setup-global = [
-  "agy plugin install https://github.com/obra/superpowers",
-  "claude plugin install paad@paad",
-  "claude plugin install superpowers@superpowers-marketplace",
-  "claude plugin marketplace add Ovid/paad",
-  "claude plugin marketplace add obra/superpowers-marketplace",
-  "codex plugin add superpowers@openai-curated",
-  "cursor-agent plugin marketplace add https://github.com/obra/superpowers",
-  "herdr integration install antigravity-cli",
-  "herdr integration install claude",
-  "herdr integration install codex",
-  "herdr integration install copilot",
-  "herdr integration install cursor",
-  "herdr integration install hermes",
-  "herdr integration install opencode",
+run = [
   "memorix setup --agent all --global",
+  { task = "antigravity" },
+  { task = "claude-code" },
+  { task = "codex" },
+  { task = "cursor" },
+  { task = "hermes" },
+  { task = "opencode" }
+]
+
+[tasks.ai-setup-local]
+# tombi: format.rules.array-values-order = "ascending"
+run = ["rtk init --agent antigravity"]
+
+[tasks.antigravity]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "agy plugin install https://github.com/DietrichGebert/ponytail",
+  "agy plugin install https://github.com/obra/superpowers",
+  "agy plugin install https://github.com/ovid/paad",
+  "herdr integration install antigravity-cli"
+]
+
+[tasks.claude-code]
+depends = [{ task = "claude-marketplace" }]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "claude plugin install paad@paad",
+  "claude plugin install ponytail@ponytail",
+  "claude plugin install superpowers@superpowers-marketplace",
+  "herdr integration install claude",
+  "rtk init -g"
+]
+
+[tasks.claude-marketplace]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "claude plugin marketplace add DietrichGebert/ponytail",
+  "claude plugin marketplace add Ovid/paad",
+  "claude plugin marketplace add obra/superpowers-marketplace"
+]
+
+[tasks.codex]
+depends = [{ task = "codex-marketplace" }]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "codex plugin add paad@paad",
+  "codex plugin add ponytail@ponytail",
+  "codex plugin add superpowers@openai-curated",
+  "herdr integration install codex",
+  "rtk init -g --codex"
+]
+
+[tasks.codex-marketplace]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "codex plugin marketplace add https://github.com/DietrichGebert/ponytail",
+  "codex plugin marketplace add https://github.com/ovid/paad"
+]
+
+[tasks.cursor]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "cursor-agent plugin marketplace add https://github.com/DietrichGebert/ponytail",
+  "cursor-agent plugin marketplace add https://github.com/obra/superpowers",
+  "cursor-agent plugin marketplace add https://github.com/ovid/paad",
+  "herdr integration install cursor",
+  "rtk init -g --agent cursor"
+]
+
+[tasks.hermes]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "herdr integration install hermes",
+  "hermes plugins install DietrichGebert/ponytail --enable",
+  # no paad
+  "hermes plugins install obra/superpowers --enable",
+  "rtk init --agent hermes"
+]
+
+[tasks.opencode]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  # no paad
+  "herdr integration install opencode",
+  "opencode plugin @dietrichgebert/ponytail -g",
   "opencode plugin superpowers@git+https://github.com/obra/superpowers.git -g",
-  "rtk init --agent hermes",
-  "rtk init -g",
-  "rtk init -g --agent cursor",
-  "rtk init -g --agent cursor",
-  "rtk init -g --codex",
-  "rtk init -g --copilot",
-  "rtk init -g --gemini",
   "rtk init -g --opencode"
 ]
-# tombi: format.rules.array-values-order = "ascending"
-ai-setup-local = ["rtk init -g --agent antigravity"]
 
 [tools]
 age = "latest"
@@ -67,6 +128,7 @@ prettier = "latest"
 rclone = "latest"
 ripgrep = "latest"
 rtk = "latest"
+ruff = "latest"
 rumdl = "latest"
 shellcheck = "latest"
 shfmt = "latest"

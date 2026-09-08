@@ -77,7 +77,7 @@ run = [
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "herdr integration install hermes",
-  "hermes plugins install DietrichGebert/ponytail --enable",
+  # "hermes plugins install DietrichGebert/ponytail --enable", # this got security issue
   # no paad
   "hermes plugins install obra/superpowers --enable",
   "rtk init --agent hermes"

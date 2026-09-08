@@ -1,6 +1,3 @@
-[hooks]
-postinstall = [{ task = "ai-setup-global" }]
-
 [tasks.ai-setup-global]
 # tombi: format.rules.array-values-order = "ascending"
 run = [

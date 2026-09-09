@@ -8,6 +8,7 @@ run = [
   { task = "copilot" },
   { task = "cursor" },
   { task = "hermes" },
+  { task = "omp" },
   { task = "opencode" }
 ]
 
@@ -100,6 +101,16 @@ run = [
   "rtk init --agent hermes"
 ]
 
+[tasks.omp]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "herdr integration install omp",
+  "omp install git:github.com/DietrichGebert/ponytail",
+  "omp install git:github.com/obra/superpowers",
+  "omp install https://github.com/ovid/paad",
+  "rtk init -g --agent pi"
+]
+
 [tasks.opencode]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
@@ -133,6 +144,7 @@ fnox = "latest"
 fzf = "latest"
 gh = "latest"
 git-cliff = "latest"
+"github:can1357/oh-my-pi" = "latest"
 glab = "latest"
 herdr = "latest"
 hk = "latest"

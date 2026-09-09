@@ -5,6 +5,7 @@ run = [
   { task = "antigravity" },
   { task = "claude-code" },
   { task = "codex" },
+  { task = "copilot" },
   { task = "cursor" },
   { task = "hermes" },
   { task = "opencode" }
@@ -60,6 +61,25 @@ run = [
   "codex plugin marketplace add https://github.com/ovid/paad"
 ]
 
+[tasks.copilot]
+depends = [{ task = "copilot-marketplace" }]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "copilot plugin install paad@paad",
+  "copilot plugin install ponytail@ponytail",
+  "copilot plugin install superpowers@superpowers-marketplace",
+  "herdr integration install copilot",
+  "rtk init -g --copilot"
+]
+
+[tasks.copilot-marketplace]
+# tombi: format.rules.array-values-order = "ascending"
+run = [
+  "copilot plugin marketplace add https://github.com/DietrichGebert/ponytail",
+  "copilot plugin marketplace add https://github.com/obra/superpowers-marketplace",
+  "copilot plugin marketplace add https://github.com/ovid/paad"
+]
+
 [tasks.cursor]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
@@ -104,6 +124,7 @@ btop = "latest"
 bun = "latest"
 cocogitto = "latest"
 copier = "latest"
+copilot = "latest"
 cspell = "latest"
 direnv = "latest"
 fastfetch = "latest"

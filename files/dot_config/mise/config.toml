@@ -62,7 +62,7 @@ run = [
 ]
 
 [tasks.copilot]
-depends = [{ task = "copilot-marketplace" }]
+# depends = [{ task = "copilot-marketplace" }]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "copilot plugin install paad@paad",

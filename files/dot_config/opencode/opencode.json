@@ -3,6 +3,7 @@
   "mcp": {
     "memorix": {
       "command": ["memorix", "serve", "--mode", "lite"],
+      "enabled": true,
       "type": "local"
     }
   },

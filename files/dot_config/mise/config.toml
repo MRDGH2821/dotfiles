@@ -2,6 +2,7 @@
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "memorix setup --agent all --global",
+  "hcom hooks add",
   { task = "antigravity" },
   { task = "claude-code" },
   { task = "codex" },
@@ -153,6 +154,7 @@ ls-lint = "latest"
 node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
+"pipx:hcom" = "latest"
 prek = "latest"
 prettier = "latest"
 rclone = "latest"

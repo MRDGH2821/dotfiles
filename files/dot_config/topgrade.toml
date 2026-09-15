@@ -1,7 +1,7 @@
 [commands]
 "Antidot rules" = "antidot update"
-"Hermes Agent" = "hermes update"
-"Install-Release Upgrade" = "ir upgrade"
+"Install-Release Pkgs Upgrade" = "ir upgrade --pkg -y"
+"Install-Release Upgrade" = "ir upgrade -y"
 
 [firmware]
 upgrade = true

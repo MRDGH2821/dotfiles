@@ -10,7 +10,8 @@
   "model": "opencode/big-pickle",
   "plugin": [
     "@simonwjackson/opencode-direnv",
-    "superpowers@git+https://github.com/obra/superpowers.git"
+    "superpowers@git+https://github.com/obra/superpowers.git",
+    "@dietrichgebert/ponytail"
   ],
   "small_model": "opencode/gpt-5-nano"
 }

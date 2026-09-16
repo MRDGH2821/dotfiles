@@ -43,7 +43,8 @@ run = [
 run = [
   "claude plugin marketplace add DietrichGebert/ponytail",
   "claude plugin marketplace add Ovid/paad",
-  "claude plugin marketplace add obra/superpowers-marketplace"
+  "claude plugin marketplace add obra/superpowers-marketplace",
+  "claude plugin marketplace add xhluca/agent-talk"
 ]
 
 [tasks.codex]
@@ -61,6 +62,7 @@ run = [
 [tasks.codex-marketplace]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
+  # superpowers plugin is official, no need for separate marketplace entry
   "codex plugin marketplace add https://github.com/DietrichGebert/ponytail",
   "codex plugin marketplace add https://github.com/ovid/paad",
   "codex plugin marketplace add xhluca/agent-talk"
@@ -70,6 +72,7 @@ run = [
 # depends = [{ task = "copilot-marketplace" }]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
+  "copilot plugin install agent-talk@agent-talk",
   "copilot plugin install paad@paad",
   "copilot plugin install ponytail@ponytail",
   "copilot plugin install superpowers@superpowers-marketplace",
@@ -82,7 +85,8 @@ run = [
 run = [
   "copilot plugin marketplace add https://github.com/DietrichGebert/ponytail",
   "copilot plugin marketplace add https://github.com/obra/superpowers-marketplace",
-  "copilot plugin marketplace add https://github.com/ovid/paad"
+  "copilot plugin marketplace add https://github.com/ovid/paad",
+  "copilot plugin marketplace add https://github.com/xhluca/agent-talk"
 ]
 
 [tasks.cursor]
@@ -91,6 +95,7 @@ run = [
   "cursor-agent plugin marketplace add https://github.com/DietrichGebert/ponytail",
   "cursor-agent plugin marketplace add https://github.com/obra/superpowers",
   "cursor-agent plugin marketplace add https://github.com/ovid/paad",
+  "cursor-agent plugin marketplace add https://github.com/xhluca/agent-talk",
   "herdr integration install cursor",
   "rtk init -g --agent cursor"
 ]
@@ -101,6 +106,7 @@ run = [
   "herdr integration install hermes",
   # "hermes plugins install DietrichGebert/ponytail --enable", # this got security issue
   # no paad
+  # no agent-talk
   "hermes plugins install obra/superpowers --enable --force",
   "rtk init --agent hermes"
 ]
@@ -120,6 +126,7 @@ run = [
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   # no paad
+  # no agent-talk
   "herdr integration install opencode",
   "opencode plugin @dietrichgebert/ponytail -g",
   "opencode plugin superpowers@git+https://github.com/obra/superpowers.git -g",

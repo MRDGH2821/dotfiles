@@ -2,7 +2,6 @@
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "memorix setup --agent all --global",
-  "hcom hooks add",
   { task = "antigravity" },
   { task = "claude-code" },
   { task = "codex" },
@@ -23,6 +22,7 @@ run = [
   "agy plugin install https://github.com/DietrichGebert/ponytail",
   "agy plugin install https://github.com/obra/superpowers",
   "agy plugin install https://github.com/ovid/paad",
+  "agy plugin install https://github.com/xhluca/agent-talk",
   "herdr integration install antigravity-cli"
 ]
 
@@ -30,6 +30,7 @@ run = [
 depends = [{ task = "claude-marketplace" }]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
+  "claude plugin install agent-talk@agent-talk",
   "claude plugin install paad@paad",
   "claude plugin install ponytail@ponytail",
   "claude plugin install superpowers@superpowers-marketplace",
@@ -49,6 +50,7 @@ run = [
 depends = [{ task = "codex-marketplace" }]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
+  "codex plugin add agent-talk@agent-talk",
   "codex plugin add paad@paad",
   "codex plugin add ponytail@ponytail",
   "codex plugin add superpowers@openai-curated",
@@ -60,7 +62,8 @@ run = [
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "codex plugin marketplace add https://github.com/DietrichGebert/ponytail",
-  "codex plugin marketplace add https://github.com/ovid/paad"
+  "codex plugin marketplace add https://github.com/ovid/paad",
+  "codex plugin marketplace add xhluca/agent-talk"
 ]
 
 [tasks.copilot]
@@ -98,7 +101,7 @@ run = [
   "herdr integration install hermes",
   # "hermes plugins install DietrichGebert/ponytail --enable", # this got security issue
   # no paad
-  "hermes plugins install obra/superpowers --enable --force",
+  "hermes plugins install obra/superpowers --enable",
   "rtk init --agent hermes"
 ]
 
@@ -108,6 +111,7 @@ run = [
   "herdr integration install omp",
   "omp install git:github.com/DietrichGebert/ponytail",
   "omp install git:github.com/obra/superpowers",
+  "omp install git:github.com/xhluca/agent-talk",
   "omp install https://github.com/ovid/paad",
   "rtk init -g --agent pi"
 ]
@@ -155,6 +159,7 @@ node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
 "pipx:hcom" = "latest"
+"pipx:retalk" = "latest"
 prek = "latest"
 prettier = "latest"
 rclone = "latest"

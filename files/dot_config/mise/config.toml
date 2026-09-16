@@ -1,3 +1,7 @@
+[settings.cargo]
+binstall = true
+binstall_quickinstall = true
+
 [tasks.ai-setup-global]
 # tombi: format.rules.array-values-order = "ascending"
 run = [

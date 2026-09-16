@@ -30,6 +30,7 @@ scopes = [
   "jscpd",
   "kde",
   "megalinter",
+  "mise",
   "nix",
   "opencode",
   "package",

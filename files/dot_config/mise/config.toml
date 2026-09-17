@@ -2,6 +2,9 @@
 binstall = true
 binstall_quickinstall = true
 
+[settings.github]
+use_git_credentials = true
+
 [tasks.ai-setup-global]
 # tombi: format.rules.array-values-order = "ascending"
 run = [

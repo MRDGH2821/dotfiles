@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 
 # AppImages
-export PATH="${HOME}/AppImages:${PATH}"
+export PATH="${HOME}/AppImages:${HOME}/Applications:${PATH}"
 
 # XDG Base dirs
 

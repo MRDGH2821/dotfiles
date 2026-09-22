@@ -2,54 +2,10 @@
 binary_only = false
 profile = "default"
 
-[packages.antidot]
-asset_pattern = "antidot_*_Linux_{arch}.tar.gz"
-github = "doron-cohen/antidot"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-version = "0.6.3"
-
-[packages.ccu]
-arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
-asset_pattern = "ccu-{os}-{arch}"
-github = "p-arndt/compose-check-updates"
-pkg_type = "binary"
-tag_pattern = "*.*.*"
-version = "0.13.0"
-
 [packages.escrcpy]
 asset_pattern = "Escrcpy-*-{os}-{arch}.*"
 github = "viarotel-org/escrcpy"
 version = "3.2.0"
-
-[packages.git-sync]
-arch_map = { aarch64 = "arm64", x86_64 = "amd64" }
-asset_pattern = "git-sync_*_{os}_{arch}.tar.gz"
-github = "AkashRajpurohit/git-sync"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-version = "0.21.0"
-
-[packages.ir]
-asset_pattern = "install-release-{os}-{arch}"
-github = "Rishang/install-release"
-version = "8.9"
-
-[packages.irminsul]
-asset_pattern = "irminsul-{os}-{arch}.*"
-github = "escalonn/irminsul-taioiislop"
-tag_pattern = "v*.*.*"
-version = "0.2.1-T-1"
-
-[packages.irminsul.hooks]
-post_install = "sudo setcap cap_net_raw=ep '$INSTALL_DIR/irminsul'"
-
-[packages.llmfit]
-asset_pattern = "llmfit-*-{arch}-unknown-{os}-gnu.tar.gz"
-github = "AlexsJones/llmfit"
-pkg_type = "archive"
-tag_pattern = "v*.*.*"
-version = "1.1.16"
 
 [packages.marktext]
 asset_pattern = "marktext-{os}-*"

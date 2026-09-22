@@ -143,7 +143,10 @@
     }
   },
   "base_keymap": "Atom",
-  "buffer_font_family": "MesloLGM Nerd Font Mono",
+  "buffer_font_family": ".ZedMono",
+  "buffer_font_features": {
+    "calt": true
+  },
   "buffer_font_size": 16,
   "calls": {
     "mute_on_join": true
@@ -357,6 +360,5 @@
   "toolbar": {
     "code_actions": true
   },
-  "ui_font_family": "MesloLGM Nerd Font Mono",
   "ui_font_size": 16
 }

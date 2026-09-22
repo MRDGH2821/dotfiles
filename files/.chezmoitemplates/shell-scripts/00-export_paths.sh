@@ -10,6 +10,9 @@ export XDG_DATA_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
 
+# mise (must come before antidot: antidot is a mise-installed tool)
+export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+
 # soar
 export PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/soar/bin:${PATH}"
 
@@ -30,9 +33,6 @@ export PATH="${HOME}/.cache/.bun/bin:${PATH}"
 
 # opencode
 export PATH="${HOME}/.opencode/bin:${PATH}"
-
-# mise
-export PATH="${HOME}/.local/share/mise/shims:${PATH}"
 
 # Default Apps
 export EDITOR="zed --wait"

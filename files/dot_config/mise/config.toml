@@ -185,6 +185,7 @@ node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
 "pipx:retalk" = "latest"
+"pipx:vllm" = { uvx_args = "--extra-index-url https://wheels.vllm.ai/rocm/0.30.0/rocm723", version = "0.30.0" }
 prek = "latest"
 prettier = "latest"
 rclone = "latest"

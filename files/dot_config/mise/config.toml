@@ -186,13 +186,6 @@ node = "latest"
 "pipx:retalk" = "latest"
 prek = "latest"
 prettier = "latest"
-"pypi:vllm" = { install_env = { UV_PYTHON_DOWNLOADS = "automatic" }, uvx_args = [
-  "--python 3.12",
-  "--extra-index-url https://wheels.vllm.ai/rocm/0.30.0/rocm723",
-  "--extra-index-url https://wheels.vllm.ai/rocm/",
-  "--find-links https://wheels.vllm.ai/rocm/flash-attn/",
-  "--index-strategy unsafe-best-match"
-], version = "0.30.0+rocm723" }
 rclone = "latest"
 ripgrep = "latest"
 rtk = "latest"

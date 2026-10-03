@@ -7,12 +7,6 @@ asset_pattern = "Escrcpy-*-{os}-{arch}.*"
 github = "viarotel-org/escrcpy"
 version = "3.2.0"
 
-[packages.marktext]
-asset_pattern = "marktext-{os}-*"
-github = "marktext/marktext"
-tag_pattern = "v*.*.*"
-version = "0.19.1"
-
 [packages.pince]
 asset_pattern = "PINCE-{arch}.*"
 github = "korcankaraokcu/PINCE"

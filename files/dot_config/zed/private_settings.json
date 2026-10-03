@@ -12,8 +12,10 @@
     "sandbox_permissions": {
       "allow_unsandboxed": true
     },
-    "sidebar_side": "right",
     "terminal_init_command": "herdr-open",
+    "threads_sidebar": {
+      "position": "right"
+    },
     "tool_permissions": {
       "tools": {
         "fetch": {

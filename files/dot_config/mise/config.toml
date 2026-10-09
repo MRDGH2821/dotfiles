@@ -205,7 +205,7 @@ version_prefix = "b"
 
 [tools.oh-my-pi]
 rename_exe = "omp"
-version = "18.8.4"
+version = "18.8.7"
 
 [tools.packslip]
 identity_prefix = "https://github.com/jdx/packslip/.github/workflows/release.yml@"

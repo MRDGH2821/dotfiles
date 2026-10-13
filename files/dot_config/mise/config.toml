@@ -198,14 +198,9 @@ version = "latest"
 version_list_url = "https://cursor.com/install"
 version_regex = 'downloads\.cursor\.com/lab/([0-9]{4}\.[0-9]{2}\.[0-9]{2}-[0-9a-f]+)/'
 
-[tools."llama.cpp"]
-prerelease = true
-version = "latest"
-version_prefix = "b"
-
 [tools.oh-my-pi]
 rename_exe = "omp"
-version = "18.8.7"
+version = "18.8.9"
 
 [tools.packslip]
 identity_prefix = "https://github.com/jdx/packslip/.github/workflows/release.yml@"

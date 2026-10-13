@@ -5,7 +5,7 @@ profile = "default"
 [packages.escrcpy]
 asset_pattern = "Escrcpy-*-{os}-{arch}.*"
 github = "viarotel-org/escrcpy"
-version = "3.2.0"
+version = "3.3.1"
 
 [packages.pince]
 asset_pattern = "PINCE-{arch}.*"

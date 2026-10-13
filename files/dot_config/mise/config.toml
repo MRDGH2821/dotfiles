@@ -157,7 +157,7 @@ git-cliff = "latest"
 "github:Rishang/install-release" = "latest"
 "github:aannoo/hcom" = "latest"
 "github:doron-cohen/antidot" = "latest"
-"github:infragate/capa" = "2.2.4"
+"github:infragate/capa" = "2.3.0"
 "github:juliuskreutz/stardb-exporter" = "latest"
 "github:konkers/irminsul" = "0.2.2"
 "github:p-arndt/compose-check-updates" = "latest"
@@ -167,6 +167,7 @@ hk = "latest"
 lazygit = "latest"
 llmfit = "latest"
 ls-lint = "latest"
+mr-boxington = { version = "latest", workflow = "release.yml@refs/heads/main" }
 node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
@@ -178,7 +179,7 @@ ripgrep = "latest"
 rtk = "latest"
 ruff = "latest"
 rumdl = "latest"
-rust = "latest"
+rust = { mr_boxington = true, version = "latest" }
 shellcheck = "latest"
 shfmt = "latest"
 tmux = "latest"
@@ -200,7 +201,7 @@ version_regex = 'downloads\.cursor\.com/lab/([0-9]{4}\.[0-9]{2}\.[0-9]{2}-[0-9a-
 
 [tools.oh-my-pi]
 rename_exe = "omp"
-version = "18.8.9"
+version = "18.10.3"
 
 [tools.packslip]
 identity_prefix = "https://github.com/jdx/packslip/.github/workflows/release.yml@"

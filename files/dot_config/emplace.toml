@@ -1,0 +1,6 @@
+repo_directory = "/home/mr-fw16/.local/share/emplace"
+
+[repo]
+branch = "master"
+file = ".emplace"
+url = "https://github.com/MRDGH2821/dotfiles"

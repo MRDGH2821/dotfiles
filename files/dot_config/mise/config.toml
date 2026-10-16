@@ -116,8 +116,8 @@ run = [
 # tombi: format.rules.array-values-order = "ascending"
 run = [
   "herdr integration install omp",
-  "omp install git:github.com/DietrichGebert/ponytail",
-  "omp install git:github.com/obra/superpowers",
+  "omp install https://github.com/DietrichGebert/ponytail",
+  "omp install https://github.com/obra/superpowers",
   "omp install https://github.com/ovid/paad",
   "rtk init -g --agent pi"
 ]

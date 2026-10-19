@@ -13,4 +13,4 @@ skills:
   - https://github.com/shadcn/improve --skill improve
   - https://github.com/stablyai/orca --skill computer-use --skill linear-tickets --skill orca-cli --skill orca-emulator --skill orca-emulator-android --skill orca-linear --skill orca-per-workspace-env --skill orchestration
   - https://github.com/vercel-labs/skills --skill find-skills
-  - https://gitlab.com/gitlab-org/ai/skills --skill adr-create --skill adr-review --skill bug-burndown --skill bugfix --skill gitlab-agent-plan --skill gitlab-babysit-mr --skill gitlab-mr-description --skill gitlab-pipeline-watch --skill gitlab-stacked-mrs --skill glab --skill glab-glql --skill smart-rebase --skill stack-changes --skill story-creator --skill story-reviewer
+  - https://gitlab.com/gitlab-org/ai/skills --skill bug-burndown --skill bugfix --skill gitlab-agent-plan --skill gitlab-pipeline-watch --skill gitlab-stacked-mrs --skill glab --skill glab-glql --skill smart-rebase --skill stack-changes --skill story-creator --skill story-reviewer

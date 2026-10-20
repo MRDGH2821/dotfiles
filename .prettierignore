@@ -1,6 +1,0 @@
-**/pam.d/**
-*.*ignore
-.chezmoiignore
-.chezmoiroot
-dot_zshrc
-private_spectaclerc.tmpl

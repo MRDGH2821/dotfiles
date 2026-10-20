@@ -1,0 +1,58 @@
+[env]
+HK_MISE = 1
+
+[hooks]
+# Automatically install/update hooks when tools are installed
+postinstall = ["hk install --mise"]
+
+[settings]
+lockfile = true
+
+[settings.github]
+use_git_credentials = true
+
+[tasks]
+ai-setup = "capa install --yes"
+check = ["hk check --all", "cog check"]
+prepare-ci = ["bun ci"]
+
+[tasks.format]
+alias = "fmt"
+run = ["hk fix --all"]
+
+[tasks.prepare]
+interactive = true
+run = ["bun install", { task = "ai-setup" }]
+
+[tools]
+"aqua:google/keep-sorted" = "0.10.0"
+"aqua:owenlamont/ryl" = "0.25.1"
+betterleaks = "1.9.0"
+bun = "1.4.3"
+cocogitto = "7.0.0"
+cspell = "10.4.0"
+editorconfig-checker = "4.0.2"
+
+
+gh = "2.102.0"
+
+git-cliff = "2.14.2"
+
+"github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
+"github:infragate/capa" = "2.3.0"
+hk = { version = "2.7.0", workflow = "release.yml" }
+ls-lint = "2.3.2"
+oxfmt = "0.73.0"
+"pipx:lorenzwalthert/gitignore-tidy" = "latest"
+"pipx:toml-sort" = "0.25.0"
+pkl = "0.32.1"
+ruff = "0.17.1"
+rumdl = "0.3.0"
+tombi = "1.8.7"
+typos = "1.51.1"
+uv = "0.13.1"
+yq = "4.54.1"
+
+[[watch_files]]
+patterns = ["capabilities.yaml"]
+task = "ai-setup"

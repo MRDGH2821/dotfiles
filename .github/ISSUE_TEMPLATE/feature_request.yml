@@ -1,0 +1,31 @@
+---
+body:
+  - attributes:
+      label: What problem does this solve?
+    id: problem
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      label: Proposed solution
+    id: solution
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      label: Alternatives considered
+    id: alternatives
+    type: textarea
+    validations:
+      required: false
+  - attributes:
+      label: Additional context
+    id: context
+    type: textarea
+    validations:
+      required: false
+description: Suggest an idea
+labels:
+  - enhancement
+name: Feature Request
+title: "[REQUEST]: "

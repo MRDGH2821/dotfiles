@@ -1,0 +1,65 @@
+# tombi: format.rules.array-values-order = "ascending"
+exclude = [
+  "**/*.lock",
+  "**/.mise/**",
+  "**/go.sum",
+  "**/locks/**",
+  "**/npm-shrinkwrap.json",
+  "**/package-lock.json",
+  "**/pnpm-lock.yaml"
+]
+line-length = 800
+
+[files]
+yaml = ["*.yaml", "*.yml"]
+
+[format]
+comment-spacing = 1
+mapping-style = "block"
+quote-style = "preserve"
+sequence-style = "block"
+
+[lint.rules]
+anchors = "enable"
+brackets = "enable"
+colons = "enable"
+commas = "enable"
+document-end = "disable"
+empty-lines = "enable"
+empty-values = "disable"
+float-values = "disable"
+hyphens = "enable"
+indentation = "enable"
+key-duplicates = "enable"
+key-ordering = "enable"
+new-line-at-end-of-file = "enable"
+octal-values = "disable"
+trailing-spaces = "enable"
+
+[lint.rules.braces]
+max-spaces-inside = 1
+
+[lint.rules.comments]
+level = "warning"
+min-spaces-from-content = 1
+
+[lint.rules.comments-indentation]
+level = "warning"
+
+[lint.rules.document-start]
+level = "warning"
+
+[lint.rules.line-length]
+max = 500
+
+[lint.rules.new-lines]
+level = "warning"
+type = "unix"
+
+[lint.rules.quoted-strings]
+allow-quoted-quotes = true
+quote-type = "double"
+required = false
+
+[lint.rules.truthy]
+level = "warning"

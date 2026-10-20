@@ -1,26 +1,36 @@
-# AI
-# keep-sorted start
+# agents
+.agent-talk/
+.agent/skills
+.agents/hooks.json
 .agents/mcp_config.json
-.agents/skills/
-.claude/skills/
+.agents/skills
+.claude/agents
+.claude/rules
+.claude/settings.json
+.claude/skills
+.codex/agents
 .codex/config.toml
+.cursor/agents
+.cursor/hooks.json
 .cursor/mcp.json
 .cursor/skills
 .gemini/settings.json
 .github/skills
 .mcp.json
+.opencode/agents
 .opencode/skills
+.superpowers
 .vscode/mcp.json
+apm.lock.yaml
 apm_modules/
 opencode.json
-# keep-sorted end
 
-# Env
+# env files
 .env
 .env.*
 !.env.sample
 
-# Others
+# others
 *.local
 .DS_Store
 .devenv
@@ -37,7 +47,6 @@ __pycache__
 dist/
 megalinter-reports/
 node_modules/
-package-lock.json
 report/
 target/
 **.egg-info

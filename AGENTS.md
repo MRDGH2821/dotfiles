@@ -2,122 +2,72 @@
 
 This file provides guidance for AI coding assistants working with this project.
 
-## MANDATORY: Action Logging
+## Andrej Karpathy's Guidelines
 
-> **This is non-negotiable. Log before you start, log as you work, log when you finish.**
+**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
-Every AI session MUST produce a log entry in `.agents/logs/YYYY-MM-DD.md`. This is not optional documentation — it is a **required action**, executed by the agent itself, not left to the human.
+### 1. Think Before Coding
 
-### Procedure
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
 
-**Step 1 — Before touching any file:**
+Before implementing:
 
-```bash
-# Get today's filename
-date '+%Y-%m-%d' # e.g. 2026-03-16
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them - don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
+
+### 2. Simplicity First
+
+**Minimum code that solves the problem. Nothing speculative.**
+
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
+
+Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
+
+### 3. Surgical Changes
+
+**Touch only what you must. Clean up only your own mess.**
+
+When editing existing code:
+
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it - don't delete it.
+
+When your changes create orphans:
+
+- Remove imports/variables/functions that YOUR changes made unused.
+- Don't remove pre-existing dead code unless asked.
+
+The test: Every changed line should trace directly to the user's request.
+
+### 4. Goal-Driven Execution
+
+**Define success criteria. Loop until verified.**
+
+Transform tasks into verifiable goals:
+
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
+
+For multi-step tasks, state a brief plan:
+
+```text
+1. [Step] → verify: [check]
+2. [Step] → verify: [check]
+3. [Step] → verify: [check]
 ```
 
-- If `.agents/logs/YYYY-MM-DD.md` does not exist → create it with the header:
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-  ```markdown
-  # AI Work Log - YYYY-MM-DD
-  ```
-
-- If it already exists → append to it (do NOT overwrite)
-
-**Step 2 — Open your entry immediately:**
-
-Append a new entry header with the current ISO timestamp, the user's prompt, and the prompter's name.
-
-Resolve the prompter name from `git config user.name`. If that is empty or unavailable, ask the user for their name before continuing.
-
-```markdown
-## HH:MM:SS+TZ
-
-### Prompt
-
-> <exact user request, verbatim or faithfully paraphrased>
-
-### Prompter
-
-<name from `git config user.name`, or as provided by the user>
-
-### Model
-
-<model name and version> via <editor/tool> (e.g. Claude Sonnet 4.6 via opencode)
-```
-
-**Step 3 — Log each action as you perform it:**
-
-After every meaningful action, append to the `### Actions` section. Do not batch everything at the end — if the session is interrupted, the log must still reflect what was done.
-
-**Step 4 — Close the entry when done:**
-
-Append the `### Outcome` section:
-
-```markdown
-### Outcome
-
-<✅ / ⚠️ / ❌> <one-line summary of what was achieved or what failed>
-```
-
----
-
-### Log Format (AI-authored)
-
-```markdown
-## 2026-03-16T20:15:00+11:00
-
-### Prompt
-
-> Add tool-runner skill with Bun/Node fallback chains
-
-### Prompter
-
-Jane Doe
-
-### Model
-
-Claude Sonnet 4.6 via opencode
-
-### Actions
-
-- Created `.agents/skills/tool-runner/SKILL.md` — main skill documentation with fallback patterns
-- Created `.agents/skills/tool-runner/assets/tool-runner.sh` — standalone bash script for tool selection
-- Created `.agents/skills/tool-runner/assets/validate-tools.sh` — validation script for tool availability
-- Modified `AGENTS.md` — registered skill in Project Skills table
-- Decision: used `command -v` over `which` for POSIX compliance across Linux/macOS/Windows
-
-### Outcome
-
-✅ Skill created and committed, all pre-commit hooks passed
-```
-
----
-
-### What Counts as a Loggable Action
-
-**Always log:**
-
-- Every file **created** — name, purpose, approximate scope
-- Every file **modified** — name, what changed and why
-- Every **decision** made — especially when choosing between alternatives
-- Every **command run** with a non-trivial outcome (tool installs, test runs, linter results)
-- Anything **rejected or changed** from the original approach, and the reason
-
-**Do NOT log:**
-
-- Trivial auto-fixes by pre-commit hooks (formatting, whitespace)
-- Reading files for context (unless the read revealed something decision-relevant)
-- Intermediate tool calls that produced no output or change
-
----
-
-### Additional Materials
-
-Place any other relevant documents (prompts, examples, references, generated docs) in the `.agents/` folder.
-
----
+**These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
 ## MANDATORY: AI Co-authored-by Trailer
 
@@ -126,10 +76,12 @@ Place any other relevant documents (prompts, examples, references, generated doc
 **Format:**
 
 ```txt
-Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
+Co-authored-by: <Model full Name and version> via <Harness> <noreply@provider-domain>
 ```
 
-**Provider noreply addresses:**
+**Provider attribution addresses:**
+
+Choose the address for the model provider. The harness can come from a different provider.
 
 <!-- smt -->
 
@@ -144,13 +96,14 @@ Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
 | OpenAI (GPT / o-series) | `noreply@openai.com`     |
 | xAI (Grok)              | `noreply@x.ai`           |
 
-If a provider is not listed above, use the provider's official noreply address.
-Multiple co-authors can be listed by repeating the `Co-authored-by` line for each author.
+If the provider is not listed, search its official documentation or public repositories
+for a documented attribution email address. Use that address rather than guessing one
+from the provider's domain.
 
 **Examples:**
 
 ```txt
-feat(precommit): add spell checking to commit messages
+feat(pre-commit): add spell checking to commit messages
 
 Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
 ```
@@ -158,42 +111,68 @@ Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
 ```txt
 fix(cspell): resolve configuration issue
 
-Co-authored-by: Composer via Cursor <cursoragent@cursor.com>
+Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 ```
 
 **Rules:**
 
-- Use the **exact model name and version** you are running as (e.g. `Claude Sonnet 4.6`, not just `Claude`)
-- Use the **tool name** as it is commonly known (e.g. `opencode`, `Cursor`, `Copilot`, `Zed`)
-- If the model version is unknown, use the model family name (e.g. `Claude Sonnet`)
+- Use the **full model name and version** supplied by the current session (e.g. `Claude Sonnet 4.6`, not just `Claude`)
+- Use the **harness name** as it is commonly known (e.g. `Codex`, `opencode`, `Cursor`, `Copilot`, `Zed`). The harness is the application or CLI running the model.
+- If the exact model version is unavailable, use the most specific known model name (e.g. `Claude Sonnet`). Do not guess a version.
 - One trailer per AI model involved
 - **Never omit this trailer** when the commit was AI-assisted — this is how git history stays honest
 
+## AI-Assisted Reviews
+
+When reviewing on behalf of a human, end the review with this footer:
+
+```md
+<!-- Include a 3 line dash -->
+
+---
+
+<!-- Use the rules above. In Markdown, render the footer as subscript when supported.-->
+
+<sub>Co-authored-by: <Model full Name and version> via <Harness> <noreply@provider-domain></sub>
+```
+
 ## Setup: skills and MCP
 
-Before substantive work, ensure project skills and MCP servers are installed.
+Tools and tasks are managed by **mise**. Prefer an existing `mise run <task>`
+over an ad-hoc command. Inspect `mise.toml` and command `--help` output before
+assuming a task or option exists.
 
-1. From the repository root, run either:
+If `capabilities.yaml` exists and project skills or MCP tools are missing or
+stale:
 
-   ```sh
-   apm install
-   ```
+1. From the repository root, run `mise run ai-setup` (or `capa install --yes`).
+2. Reload the agent session so installed skills and MCP servers are picked up.
 
-   or, if `apm` is not on `PATH`:
-
-   ```sh
-   uvx --from apm-cli apm install
-   ```
-
-2. **Reload the agent** (new chat / restart the agent session) so installed skills and MCP servers are picked up.
-
-Configuration lives in `apm.yml`. Do not skip this when skills or MCP tools are missing or stale.
+If the project omits `capabilities.yaml`, use the available tools and instructions.
 
 ## Project Context
 
-- **Project Type**: Project generated from copier-mr-nix
-- **Key Technologies**: Nix flake + [Blueprint](https://numtide.github.io/blueprint/) (`nix/`), git-hooks.nix with `prek`, MegaLinter, treefmt-nix, cocogitto, Copier, direnv
-- **Purpose**: Standardized starting point for new projects with quality checks and a reproducible Nix env
+Read `README.md`, dependency manifests, and relevant source files to learn the
+project's purpose, architecture, and commands. The application language and
+framework depend on the generated project.
+
+- **Project Type**: Project scaffolded from [copier-mr-mise](https://github.com/MRDGH2821/copier-mr-mise)
+- **Key Technologies**: mise, hk, MegaLinter, cspell, capa
+- **Purpose**: Standardized starting point with tool management, git hooks, and quality checks
+- **Template updates**: `copier update` (review scripts in the template's `copier.yml`)
+
+## Layout
+
+| Path                   | Purpose                                             |
+| ---------------------- | --------------------------------------------------- |
+| `mise.toml`            | Tools, tasks, `hk install --mise` postinstall hook  |
+| `.config/hk.pkl`       | hk hook config (pre-commit, commit-msg, fix, check) |
+| `capabilities.yaml`    | Skills, MCP servers, and providers (capa)           |
+| `cog.toml`             | Conventional-commit scopes and version bump hooks   |
+| `.mega-linter.yml`     | MegaLinter config                                   |
+| `.config/treefmt.toml` | Full-tree formatter                                 |
+| `.config/cspell.json`  | Spell-check dictionary                              |
+| `.agents/logs/`        | AI-assisted work logs                               |
 
 ## Recommendations
 
@@ -214,136 +193,97 @@ References:
 
 ## Branch naming strategy
 
-Since many people will be contributing to this repository, we use a branching strategy that allows for parallel development while keeping the main branch stable.
-
-Use the following branching strategy:
-
-`<human first name>/<work type>/<work name>`
-
-For example:
-
-- `john/feat/add-packages`
-- `jane/fix/ui-bugs`
-- `joy/refactor/payment`
-
-`<human first name>` - will be derived from `git config user.name` or the author's first name. Ask the author for their first name if it's not available.
-`<work type>` - the type of work being done (e.g., `feat`, `fix`, `refactor`). Should match commit types from conventional commits.
-`<work name>` - the name of the work being done (e.g., `add-packages`, `ui-bugs`, `payment`)
+Before creating a branch, follow the
+[branch naming strategy in CONTRIBUTING.md](CONTRIBUTING.md#branch-naming-strategy).
 
 ## General Guidelines
 
-### Communication
+- Explain the intended change, state material assumptions, and clarify ambiguous requirements.
+- Read the relevant code and configuration before editing; reuse existing functionality.
+- Inspect the working tree and preserve changes made by the user or other agents.
+- Match existing style and keep every changed line within the requested scope.
+- Define how to verify the change, run the relevant checks, and review the final diff.
+- Report what changed, which checks ran, and any failures or checks you could not run.
 
-- Explain what you're doing and why before making changes
-- Ask for clarification when requirements are ambiguous
-- Provide context for decisions, especially when multiple approaches exist
+### AI-Assisted Work Documentation
 
-### Code Quality
+- Document all AI-assisted changes in the `.agents/logs` folder as markdown files
+- Use the naming format: `YYYY-MM-DD.md` (e.g., `2024-12-15.md`)
+- Each documentation file should include:
+  - The prompt or request that initiated the work
+  - The author of the prompt (can be obtained from `git config user.name` or by asking the user)
+  - Description of what was done
+  - Which AI model was used (e.g., Claude Sonnet 4.5, GPT-4, etc.)
+- If more prompts are provided on the same day, append them to the existing log file with timestamps
+- Use the `date` command to generate timestamps (e.g., `date --iso-8601=seconds` or `date '+%Y-%m-%d %H:%M:%S'`)
+- Place any other relevant documents (prompts, examples, references) in the `.agents` folder
+- This provides transparency and helps track AI contributions to the project
 
-- Follow existing code style and conventions in the project
-- Run linters and formatters before committing changes
-- Ensure all changes pass pre-commit hooks
+## Dev Environment Tips
 
-### File Operations
+- Use `--help` or `help` subcommand to get help on a command. It can even reveal hints on how to proceed ahead or optimize the number of steps.
+- Check tool documentation before asking the user for configuration details
+- Tools are managed by **mise**. Prefer `mise run <task>` over ad-hoc binaries when a task exists.
 
-- Always check if a file exists before attempting to modify it
-- Use appropriate tools to search for files rather than guessing paths
-- Preserve file formatting and structure unless explicitly asked to change it
+## Tooling
 
-## AI Usage and Transparency
+### mise & hk
 
-**IMPORTANT**: This project maintains full transparency about AI assistance.
+Use the configured mise and hk MCP tools when available. If their configuration
+is missing, report it and refer to:
 
-### AI Assistance Guidelines
+- mise: <https://mise.jdx.dev/mcp.html>
+- hk: <https://hk.jdx.dev/agents.html#mcp>
 
-**AI can help with**:
+### Using hk from a coding agent
 
-- Boilerplate code and scaffolding
-- Documentation and comments
-- Test cases and test data
-- Refactoring suggestions
-- Bug fixes and debugging
-- Code review and optimization suggestions
-- Research and best practices
+Inspect the configuration and plan before running. Scope checks to changed files
+with `--files0-from` and use `--cd` to select the project root. Prefer `--safe`,
+review command effects, and require approval for unknown or destructive commands.
+Use `--no-stage` when formatting. Use `--stash none` when checking an explicit
+file list in the working tree without stashing changes.
 
-**Human must**:
-
-- Review all AI-generated code thoroughly
-- Test all functionality comprehensively
-- Make final decisions on architecture and approach
-- Approve all changes before committing
-- Understand the code (never commit code you don't understand)
-
-**Always**:
-
-- Validate AI suggestions against project architecture (if such a document is present)
-- Follow best coding practices and idioms
-- Ensure code passes all tests and linters
-- Document every action in `.agents/logs/` as described above
-
-**Never**:
-
-- Skip testing because "AI wrote it"
-- Forget to write the log entry
-- Rely solely on AI for architectural decisions
-
-## Dev Environment
-
-- Enter the env with **direnv** (`.envrc` uses `use flake` and watches `nix/`) or `nix develop`
-- Prefer Blueprint args in Nix files: `flake` (shorthand for `inputs.self`), `perSystem`, `pkgs`, `system`
-- Consume same-flake packages via `perSystem.self.<name>` (e.g. `perSystem.self.formatter.check`) instead of path-importing Blueprint-loaded files
-- Flake layout lives under `nix/` (`formatter.nix`, `devshell.nix`, `checks/`, `modules/`)
-- Use `--help` or a `help` subcommand before asking the user for tool details
-
-## Linting and Formatting
+Consume JSON or JSONL diagnostics while retaining raw output, and review the
+diff produced by a fix. MCP clients should use `inspect_project`, `plan`, safe
+run tools, paged output, and `get_diff`.
 
 ### MegaLinter
 
-- Configuration is in `.mega-linter.yml`
-- Run locally with: `bunx mega-linter-runner`
-- Check reports in `megalinter-reports/` directory
-- Not all linters need to pass — some are informational
+Read `.mega-linter.yml` and the selected CI configuration to determine which
+checks block CI. Use the installed MegaLinter skill when available. Reports live
+in `megalinter-reports/`; distinguish failures from informational reports.
 
-### CSpell (Spell Checking)
+### CSpell
 
-- Configuration is in `.config/cspell.json`
-- Add project-specific words to the `words` array
-- Don't disable spell checking without good reason
-- Both file content and commit messages are spell-checked
+Use the hk `cspell` step to check affected files. Its command and options live
+in `.config/hk.pkl`. Correct spelling errors and add legitimate project-specific
+terms to the `words` array in `.config/cspell.json` rather than disabling checks.
 
-### treefmt / `nix fmt`
+### Formatting and Hooks (hk)
 
-- Format with `nix fmt` (Blueprint + treefmt-nix wrapper from `nix/formatter.nix`)
-- Verify with `nix flake check` (includes the formatting check)
-- Config modules live under `nix/modules/tools/treefmt.nix` (plus imported pedantix/smt modules)
+Before committing, format affected files with `hk fix --no-stage` and run
+`hk run pre-commit --check` with the same file scope. Resolve failures and retry
+without skipping hooks. The `mise run fmt` task formats the full repository;
+review its scope before using it.
 
 ## Commit Messages
 
-### Format
+Follow Conventional Commits: `<type>(<scope>): <description>`.
+Consult `cog.toml` for valid scopes and release hooks; it is the source of truth.
 
-- Follow Conventional Commits format: `<type>(<scope>): <description>` as given here - <https://www.conventionalcommits.org/en/v1.0.0/>
-- Valid types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`
-- For valid scopes, refer to the `scopes` array in `cog.toml` — it is the source of truth.
-
-### Examples
-
-```txt
-feat(precommit): add spell checking to commit messages
-fix(cspell): resolve configuration issue
-docs: update AGENTS.md with guidelines
-chore(cspell): add technical terms to dictionary
-```
+Version bumps use cocogitto (`cog bump`). Inspect the configured hooks before
+running a release command.
 
 ## Troubleshooting
 
 ### Common Issues
 
-**Pre-commit hooks failing on commit:**
+**Git hooks failing on commit:**
 
 - Read the error message — it usually points directly to the fix
 - Try to fix the issue and retry the commit; do not skip hooks
-- Fix formatting with `nix fmt` first, then spell checking and linting
-- Hooks are managed via git-hooks.nix / `prek` (see `nix/checks/pre-commit-check.nix`)
+- Fix formatting first (`hk fix` or `mise run fmt`)
+- Then address spell checking and linting
 
 **Spell check failures:**
 
@@ -351,20 +291,9 @@ chore(cspell): add technical terms to dictionary
 - Use proper capitalization for proper nouns
 - Don't add obvious typos to the dictionary
 
-**Template / Copier issues:**
-
-- Ensure template syntax is valid before committing
-- Check for missing closing tags or brackets
-- Test template rendering if applicable (`copier copy` / `copier update`)
-
-**Missing skills or MCP tools:**
-
-- Run `apm install` or `uvx --from apm-cli apm install`, then reload the agent
-
 ### Getting Help
 
 - Review existing configuration files for examples
-- Blueprint folder layout: <https://numtide.github.io/blueprint/main/getting-started/folder_structure/>
 
 ## Best Practices
 
@@ -373,20 +302,16 @@ chore(cspell): add technical terms to dictionary
 1. Understand the current state of the project
 2. Check if similar functionality already exists
 3. Review relevant configuration files
-4. Consider impact on users who will use this template
 
 ### When Adding Dependencies
 
-- Prefer tools that don't require heavy installation
+- Prefer tools that don't require heavy installation; add development tools via `mise.toml`
+- Use the project's package manager for application dependencies and keep lockfiles consistent.
 - Document installation steps clearly
 - Consider cross-platform compatibility
-- Update relevant configuration files (flake inputs, `apm.yml`, Copier excludes as needed)
+- Update relevant configuration files
 
 ### Testing Changes
 
-- Verify the project structure is correct
-- Prefer `nix flake check` where Nix is involved
-- Test on a clean environment if possible
+- Run relevant tests and configured checks; if no test command exists, verify the affected behavior directly.
 - Ensure documentation is updated
-
-Project specific instructions will be documented here.

@@ -1,22 +1,19 @@
-# tombi: format.rules.table-keys-order = "ascending"
-
 branch_whitelist = []
 disable_bump_commit = false
 disable_changelog = true
 from_latest_tag = false
-generate_mono_repository_global_tag = false
-generate_mono_repository_package_tags = false
+generate_mono_repository_global_tag = true
+generate_mono_repository_package_tags = true
 ignore_fixup_commits = false
-ignore_merge_commits = false
-post_bump_hooks = []
+ignore_merge_commits = true
+post_bump_hooks = ["git tag {{version_tag}} {{version_tag}}^{} --force --sign"]
 post_package_bump_hooks = []
 pre = "alpha.*"
 pre_bump_hooks = [
   "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'",
   "bun pm version {{version}} --no-git-tag-version",
-  "yq -i '.version = \"{{version}}\"' apm.yml",
   "bunx git-cliff -o CHANGELOG.md --tag {{version_tag}}",
-  "nix fmt -- CHANGELOG.md apm.yml"
+  "hk fix CHANGELOG.md"
 ]
 pre_package_bump_hooks = []
 # tombi: format.rules.array-values-order = "ascending"
@@ -27,6 +24,7 @@ scopes = [
   "cspell",
   "git",
   "github",
+  "hk",
   "jscpd",
   "kde",
   "megalinter",
@@ -48,16 +46,10 @@ skip_ci = "[skip ci]"
 skip_untracked = false
 tag_prefix = "v"
 
-[bump_profiles]
-
 [changelog]
 authors = [{ signature = "ask.mrdgh2821@outlook.com", username = "MRDGH2821" }]
 owner = "MRDGH2821"
 path = "CHANGELOG.md"
+remote = "github.com"
+repository = "dotfiles"
 template = "remote"
-
-[commit_types]
-
-[git_hooks]
-
-[monorepo.packages]

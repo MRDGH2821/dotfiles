@@ -1,2 +1,23 @@
 [format.rules]
 line-width = 80
+
+[[schemas]]
+path = "https://docs.cocogitto.io/cog-schema.json"
+include = ["cog.toml"]
+
+[[schemas]]
+path = "https://schemastore.org/treefmt.json"
+include = ["treefmt.toml"]
+
+[[schemas]]
+path = "https://www.schemastore.org/ryl.json"
+include = ["ryl.toml"]
+
+[[schemas]]
+path = "https://mise.jdx.dev/schema/mise.json"
+include = ["mise.toml", "**/mise.toml", ".mise.toml", "**/.mise.toml"]
+
+[[schemas]]
+root = "tasks"
+path = "https://mise.jdx.dev/schema/mise-task.json"
+include = ["mise.toml", "**/mise.toml", ".mise.toml", "**/.mise.toml"]

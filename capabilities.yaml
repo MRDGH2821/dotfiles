@@ -1,0 +1,82 @@
+---
+options:
+  agentActivity: true
+  requiresCommands: []
+  toolExposure: search
+plugins:
+  - def:
+      description: "Core skills library: TDD, debugging, collaboration patterns, and proven techniques"
+      repo: obra/superpowers
+    id: superpowers
+    type: github
+  - def:
+      description: Architecture analysis, code quality, and development workflow skills by Ovid
+      repo: Ovid/paad::plugins/paad
+    id: paad
+    type: github
+  - def:
+      description: "Set up, run and fix MegaLinter on any repository: 100+ linters for 69+ languages, 23+ formats and 21+ tooling formats, from CI or locally."
+      repo: oxsecurity/megalinter
+    id: megalinter
+    type: github
+  - def:
+      description: Matt Pocock's agent skills for real engineering (grilling, spec/ticket flows, TDD, code review, domain modelling and more).
+      repo: mattpocock/skills
+    id: mattpocock-skills
+    type: github
+
+
+
+
+
+providers:
+  # keep-sorted start
+  - antigravity
+  - claude-code
+  - codex
+  - cursor
+  - opencode
+  # keep-sorted end
+servers:
+  - def:
+      args:
+        - mcp
+      cmd: hk
+    description: hk gives coding agents a narrow, inspectable way to run project checks and fixes.
+    id: hk
+    type: mcp
+  - def:
+      args:
+        - mcp
+      cmd: mise
+      env:
+        MISE_EXPERIMENTAL: "1"
+    description: The mise MCP server lets an AI assistant inspect a project's tools, tasks, environment, and configuration, and run mise tasks.
+    id: mise
+    type: mcp
+skills:
+  - def:
+      description: Guide for managing capabilities with capa CLI
+      repo: infragate/capa@capabilities-manager
+    id: capabilities-manager
+    type: github
+  - def:
+      description: "Capify an existing project: discover skills/rules/hooks/MCP servers across all providers and synthesize capabilities.yaml"
+      repo: infragate/capa@bootstrap
+    id: bootstrap
+    type: github
+  - def:
+      repo: github/awesome-copilot@git-commit
+    id: git-commit
+    type: github
+
+  - def:
+      repo: cli/cli@gh
+    id: gh
+    type: github
+
+  - id: atomic-commits
+    type: github
+    def:
+      repo: nullswan/atomic-commits@atomic-commits
+tools: []

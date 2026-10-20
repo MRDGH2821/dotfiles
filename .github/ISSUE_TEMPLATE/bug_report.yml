@@ -1,0 +1,36 @@
+---
+body:
+  - attributes:
+      description: What did you expect to happen instead?
+      label: What happened?
+    id: what-happened
+    type: textarea
+    validations:
+      required: true
+  - attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    id: reproduce
+    type: textarea
+    validations:
+      required: false
+  - attributes:
+      label: Relevant log output
+      render: shell
+    id: logs
+    type: textarea
+    validations:
+      required: false
+  - attributes:
+      label: Additional context
+    id: context
+    type: textarea
+    validations:
+      required: false
+description: Report a problem
+labels:
+  - bug
+name: Bug Report
+title: "[BUG]: "

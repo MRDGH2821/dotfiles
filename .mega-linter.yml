@@ -3,9 +3,12 @@
 ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
   - GITHUB_TOKEN
 ADDITIONAL_EXCLUDED_DIRECTORIES:
+  - .mise
   - apm_modules
+  - node_modules
 APPLY_FIXES: all
 CLEAR_REPORT_FOLDER: true
+COPYPASTE_JSCPD_CONFIG_FILE: .config/jscpd.json
 DISABLE_LINTERS:
   # keep-sorted start
   - JAVASCRIPT_STANDARD
@@ -14,9 +17,33 @@ DISABLE_LINTERS:
   - REPOSITORY_DEVSKIM
   - TYPESCRIPT_STANDARD
   # keep-sorted end
+FILTER_REGEX_EXCLUDE: (\.mise/|/locks/|\.lock$|(^|/)go\.sum$|(^|/)npm-shrinkwrap\.json$|(^|/)package-lock\.json$|(^|/)pnpm-lock\.yaml$)
 IGNORE_GITIGNORED_FILES: true
 JAVASCRIPT_DEFAULT_STYLE: prettier
+JSON_PRETTIER_PRE_COMMANDS:
+  - command: npm i -g bun
+    continue_if_failed: false
+    cwd: workspace
+    secured_env: true
+    tag: default
+  - command: bun ci
+    continue_if_failed: true
+    cwd: workspace
+    secured_env: true
+    tag: default
 MARKDOWN_DEFAULT_STYLE: rumdl
 PYTHON_DEFAULT_STYLE: ruff
+REPOSITORY_KINGFISHER_ARGUMENTS: --exclude node_modules --exclude apm_modules
 SHOW_ELAPSED_TIME: true
 TYPESCRIPT_DEFAULT_STYLE: prettier
+YAML_PRETTIER_PRE_COMMANDS:
+  - command: npm i -g bun
+    continue_if_failed: false
+    cwd: workspace
+    secured_env: true
+    tag: default
+  - command: bun ci
+    continue_if_failed: true
+    cwd: workspace
+    secured_env: true
+    tag: default

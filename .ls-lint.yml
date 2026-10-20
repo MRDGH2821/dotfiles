@@ -5,15 +5,22 @@
 #   Rust       → snake_case   (Rust RFC 430 / API Guidelines)
 #   Python     → snake_case   (PEP 8)
 #   JavaScript → kebab-case   (eslint-plugin-unicorn default)
-#   TypeScript → snake_case   (Google TypeScript Style Guide)
+#   TypeScript → kebab-case   (align with JavaScript / eslint-plugin-unicorn)
 #   Java       → PascalCase   (Oracle Code Conventions — must match class name)
 # ── Ignored paths ─────────────────────────────────────────────────────────
 ignore:
   # keep-sorted start
+  - "**/.agents/**"
+  - "**/.claude/**"
+  - "**/.codex/**"
+  - "**/.cursor/**"
+  - "**/.opencode/**"
+  - "**/.worktrees/**"
   - .git
   - .gradle
   - .pytest_cache
   - .venv
+  - .worktrees
   - __pycache__
   - apm_modules
   - build
@@ -25,11 +32,11 @@ ignore:
   # keep-sorted end
 ls:
   .cjs: kebab-case
-  .d.ts: snake_case
+  .d.ts: kebab-case
   .java: PascalCase
   .js: kebab-case
   .mjs: kebab-case
   .nix: kebab-case
   .py: snake_case
   .rs: snake_case
-  .ts: snake_case
+  .ts: kebab-case

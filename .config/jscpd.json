@@ -3,6 +3,9 @@
   "ignore": [
     "**/*.svg",
     "**/*cache*/**",
+    "**/.agents/**",
+    "**/.chezmoidata/**",
+    "**/.chezmoiscripts/**",
     "**/.git/**",
     "**/.github/**",
     "**/.idea/**",
@@ -18,20 +21,11 @@
     "npm-shrinkwrap.json",
     "package-lock.json",
     "pnpm-lock.yaml",
-    "template/**",    "**/*.svg",
-    "**/*cache*/**",
-    "**/.chezmoidata/**",
-    "**/.chezmoiscripts/**",
-    "**/.agents/**",
-    "**/.git/**",
-    "**/.github/**",
-    "**/.idea/**",
-    "**/.rbenv/**",
-    "**/.venv/**",
-    "**/node_modules/**",
-    "**/report/**",
     "template/**"
   ],
-  "reporters": ["html", "markdown"],
+  "reporters": [
+    "html",
+    "markdown"
+  ],
   "threshold": 0
 }

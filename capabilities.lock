@@ -1,0 +1,90 @@
+version: 1
+generator: capa@2.3.0
+generatedAt: '2026-10-20T20:41:18.870Z'
+skills:
+  - id: atomic-commits
+    source: github
+    repo: nullswan/atomic-commits
+    skillName: atomic-commits
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: b1428499726d0efd3b2c914e58a7279c707538e0
+    resolvedVersion: null
+  - id: bootstrap
+    source: github
+    repo: infragate/capa
+    skillName: bootstrap
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 2d9105e3970befb756bd82e2cc16b3c1599330b2
+    resolvedVersion: v2.3.0
+  - id: capabilities-manager
+    source: github
+    repo: infragate/capa
+    skillName: capabilities-manager
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 2d9105e3970befb756bd82e2cc16b3c1599330b2
+    resolvedVersion: v2.3.0
+  - id: gh
+    source: github
+    repo: cli/cli
+    skillName: gh
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 89d7dcec017194af1d6f8853176b2dae9c1da762
+    resolvedVersion: v2.102.1
+  - id: git-commit
+    source: github
+    repo: github/awesome-copilot
+    skillName: git-commit
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 613efc8c21d9b3ce642dff361d17006cd9967e28
+    resolvedVersion: null
+plugins:
+  - id: mattpocock-skills
+    source: github
+    repo: mattpocock/skills
+    subpath: null
+    requestedSearchName: null
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 24fe0ef7737efae15c87225755e9f6f5965e4888
+    resolvedVersion: v1.3.1
+    manifestName: mattpocock-skills
+    manifestVersion: 1.3.1
+  - id: megalinter
+    source: github
+    repo: oxsecurity/megalinter
+    subpath: null
+    requestedSearchName: null
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 9949bad031045f366be2467e00e8371a7328a2e2
+    resolvedVersion: v10.1.0
+    manifestName: megalinter
+    manifestVersion: 1.0.5
+  - id: paad
+    source: github
+    repo: Ovid/paad
+    subpath: plugins/paad
+    requestedSearchName: null
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 9ecd17981f58f95e9e149ed7a9c18bac0f6e826c
+    resolvedVersion: null
+    manifestName: paad
+    manifestVersion: 2.0.0
+  - id: superpowers
+    source: github
+    repo: obra/superpowers
+    subpath: null
+    requestedSearchName: null
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: bb92a77741419a4ab5f06e711a283343f1ada0c3
+    resolvedVersion: v7.0.0
+    manifestName: superpowers
+    manifestVersion: 7.0.0
+hooks: []

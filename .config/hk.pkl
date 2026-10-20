@@ -1,6 +1,6 @@
-amends "package://github.com/jdx/hk/releases/download/v2.6.0/hk@2.6.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.6.0/hk@2.6.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Builtins.pkl"
 
 local sorters = new Group {
   steps {
@@ -123,8 +123,10 @@ local linters = new Mapping<String, Step> {
   ["fix_smart_quotes"] = Builtins.fix_smart_quotes
   ["rumdl"] = (Builtins.rumdl) { depends = List("rumdl-format") }
   ["rumdl_format"] = Builtins.rumdl_format
-  ["ryl"] = Builtins.ryl
-  ["ryl_markdown"] = Builtins.ryl_markdown
+  ["ryl_format"] = Builtins.ryl_format
+  ["ryl_markdown_format"] = Builtins.ryl_markdown_format
+  ["ryl"] = (Builtins.ryl) { depends = List("ryl_format") }
+  ["ryl_markdown"] = (Builtins.ryl_markdown) { depends = List("ryl_markdown_format") }
   ["sort-markdown-tables"] {
     check = "smt --check {{files}}"
     fix = "smt --in-place {{files}}"

@@ -8,14 +8,14 @@
 """Generate the packages table in Packages.md from the actual install files.
 
 Sources of truth (read-only):
-  .chezmoidata/packages/linux/{arch,debian,fedora,ubuntu,linux_common}.yaml
-  .chezmoidata/packages/windows.yaml
-  .chezmoidata/packages/rust.yaml
-  dot_config/soar/packages.toml
-  dot_config/mise/config.toml
+    .chezmoidata/packages/linux/{arch,debian,fedora,ubuntu,linux_common}.yaml
+    .chezmoidata/packages/windows.yaml
+    .chezmoidata/packages/rust.yaml
+    dot_config/soar/packages.toml
+    dot_config/mise/config.toml
 
 Mapping layer (edit to add display names / cross-distro aliases):
-  src/chez_helpers/packages-names.yaml
+    src/chez_helpers/packages-names.yaml
 
 After running this script, treefmt will sort rows and align columns via
 sort-markdown-tables and prettier.
@@ -231,9 +231,9 @@ def _parse_rust_yaml(
     """Parse rust.yaml and set packages[display][distro] for all Linux distros.
 
     Sections:
-      binstall: → 🦀💻  (cargo binstall — downloads precompiled binary)
-      install:  → 🦀    (cargo install — compiles from crates.io)
-      git:      → 🦀🔗  (cargo install --git — from a git repo URL)
+        binstall: → 🦀💻  (cargo binstall — downloads precompiled binary)
+        install:  → 🦀    (cargo install — compiles from crates.io)
+        git:      → 🦀🔗  (cargo install --git — from a git repo URL)
     """
     data = _load_yaml(path)
     data = data.get("rust", data)

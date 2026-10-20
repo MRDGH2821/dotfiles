@@ -32,12 +32,8 @@ bun = "1.4.3"
 cocogitto = "7.0.0"
 cspell = "10.4.0"
 editorconfig-checker = "4.0.2"
-
-
 gh = "2.102.0"
-
 git-cliff = "2.14.2"
-
 "github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
 "github:infragate/capa" = "2.3.0"
 hk = { version = "2.7.0", workflow = "release.yml" }

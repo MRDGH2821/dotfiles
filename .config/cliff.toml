@@ -86,7 +86,6 @@ split_commits = false
 # Order releases topologically instead of chronologically.
 topo_order = false
 
-
 [remote.github]
 owner = "MRDGH2821"
 repo = "dotfiles"

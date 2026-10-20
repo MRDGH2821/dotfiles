@@ -31,6 +31,8 @@ opencode.json
 !.env.sample
 
 # others
+**.egg-info
+**/__pycache__/**
 *.local
 .DS_Store
 .devenv
@@ -41,7 +43,6 @@ opencode.json
 .venv/
 .worktrees/
 /.devenv
-.worktrees
 __MACOSX
 __pycache__
 dist/
@@ -49,5 +50,3 @@ megalinter-reports/
 node_modules/
 report/
 target/
-**.egg-info
-**/__pycache__/**

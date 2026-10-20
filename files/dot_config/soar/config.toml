@@ -42,7 +42,7 @@ search_limit = 20
 #
 # If unset, defaults to `root_path/packages`.
 packages_path = "~/.local/share/soar/packages"
-# Root directory for this profile’s data and packages.
+# Root directory for this profile's data and packages.
 #
 # If `packages_path` is not set, packages will be stored in `root_path/packages`.
 root_path = "~/.local/share/soar"

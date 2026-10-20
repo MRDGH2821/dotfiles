@@ -24,11 +24,6 @@ plugins:
       repo: mattpocock/skills
     id: mattpocock-skills
     type: github
-
-
-
-
-
 providers:
   # keep-sorted start
   - antigravity
@@ -69,14 +64,12 @@ skills:
       repo: github/awesome-copilot@git-commit
     id: git-commit
     type: github
-
   - def:
       repo: cli/cli@gh
     id: gh
     type: github
-
-  - id: atomic-commits
-    type: github
-    def:
+  - def:
       repo: nullswan/atomic-commits@atomic-commits
+    id: atomic-commits
+    type: github
 tools: []

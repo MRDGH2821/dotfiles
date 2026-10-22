@@ -1,10 +1,10 @@
 {
   "agent": {
     "default_model": {
-      "effort": "high",
+      "effort": "medium",
       "enable_thinking": true,
-      "model": "claude-sonnet-5",
-      "provider": "zed.dev"
+      "model": "gpt-6-luna",
+      "provider": "openai-subscribed"
     },
     "default_profile": "write",
     "dock": "right",
@@ -19,6 +19,12 @@
     "tool_permissions": {
       "tools": {
         "fetch": {
+          "default": "allow"
+        },
+        "mcp:Memorix:memorix_project_context": {
+          "default": "allow"
+        },
+        "mcp:Memorix:memorix_session_start": {
           "default": "allow"
         },
         "mcp:NixOS MCP:nix": {
@@ -103,12 +109,16 @@
       "type": "registry"
     },
     "hermes": {
-      "args": ["acp"],
+      "args": [
+        "acp"
+      ],
       "command": "hermes",
       "type": "custom"
     },
     "opencode": {
-      "args": ["acp"],
+      "args": [
+        "acp"
+      ],
       "command": "opencode",
       "type": "custom"
     }
@@ -160,13 +170,17 @@
   "colorize_brackets": true,
   "context_servers": {
     "Memorix": {
-      "args": ["serve"],
+      "args": [
+        "serve"
+      ],
       "command": "memorix",
       "enabled": true,
       "remote": false
     },
     "mcp-nixos": {
-      "args": ["mcp-nixos"],
+      "args": [
+        "mcp-nixos"
+      ],
       "command": "uvx",
       "enabled": true,
       "remote": false
@@ -178,13 +192,27 @@
     }
   },
   "edit_predictions": {
-    "provider": "zed"
+    "provider": "copilot"
   },
   "file_types": {
-    "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"],
-    "Shell Script": [".envrc", ".envrc.local"],
-    "env": [".env", ".env.*"],
-    "ini": ["private_dolphinrc", "private_konsolerc", ".editorconfig"]
+    "JSONC": [
+      "**/.zed/**/*.json",
+      "**/zed/**/*.json",
+      "**/Zed/**/*.json"
+    ],
+    "Shell Script": [
+      ".envrc",
+      ".envrc.local"
+    ],
+    "env": [
+      ".env",
+      ".env.*"
+    ],
+    "ini": [
+      "private_dolphinrc",
+      "private_konsolerc",
+      ".editorconfig"
+    ]
   },
   "format_on_save": "off",
   "git_panel": {
@@ -203,7 +231,10 @@
     "Nix": {
       "formatter": {
         "external": {
-          "arguments": ["--quiet", "--"],
+          "arguments": [
+            "--quiet",
+            "--"
+          ],
           "command": "alejandra"
         }
       }
@@ -211,7 +242,12 @@
     "Shell Script": {
       "formatter": {
         "external": {
-          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+          "arguments": [
+            "--filename",
+            "{buffer_path}",
+            "--indent",
+            "2"
+          ],
           "command": "shfmt"
         }
       }
@@ -220,13 +256,23 @@
       "formatter": [
         {
           "external": {
-            "arguments": ["--use-std-in", "-s", "default", "--use-std-out"],
+            "arguments": [
+              "--use-std-in",
+              "-s",
+              "default",
+              "--use-std-out"
+            ],
             "command": "prettypst"
           }
         },
         {
           "external": {
-            "arguments": ["--use-std-in", "-s", "otbs", "--use-std-out"],
+            "arguments": [
+              "--use-std-in",
+              "-s",
+              "otbs",
+              "--use-std-out"
+            ],
             "command": "prettypst"
           }
         },
@@ -236,7 +282,10 @@
     "XML": {
       "formatter": {
         "external": {
-          "arguments": ["--format", "{buffer_path}"],
+          "arguments": [
+            "--format",
+            "{buffer_path}"
+          ],
           "command": "xmllint"
         }
       }
@@ -280,11 +329,15 @@
               "url": "https://raw.githubusercontent.com/chris48s/v8r/main/config-schema.json"
             },
             {
-              "fileMatch": [".jscpd.json"],
+              "fileMatch": [
+                ".jscpd.json"
+              ],
               "url": "https://www.schemastore.org/jscpd.json"
             },
             {
-              "fileMatch": [".markdownlint.json"],
+              "fileMatch": [
+                ".markdownlint.json"
+              ],
               "url": "https://raw.githubusercontent.com/DavidAnson/markdownlint/main/schema/markdownlint-config-schema.json"
             }
           ]
@@ -330,7 +383,9 @@
   },
   "prettier": {
     "allowed": true,
-    "plugins": ["prettier-plugin-packagejson"]
+    "plugins": [
+      "prettier-plugin-packagejson"
+    ]
   },
   "project_panel": {
     "dock": "left",

@@ -105,7 +105,7 @@ fnox = { version = "1.42.0", workflow = "release.yml" }
 fzf = "0.74.5"
 gh = "2.102.1"
 git-cliff = "2.14.2"
-"github:Kirskov/Shapin" = { rename_exe = "shapin", version = "1.7.0" }
+"github:Kirskov/Shapin" = { bin = "shapin", version = "1.7.0" }
 "github:Rishang/install-release" = "9.0"
 "github:aannoo/hcom" = "0.7.30"
 "github:doron-cohen/antidot" = "0.6.3"

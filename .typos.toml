@@ -1,6 +1,7 @@
 [default]
 [default.extend-words]
 nd = "nd"
+shapin = "shapin"
 sheme = "sheme"
 
 [files]

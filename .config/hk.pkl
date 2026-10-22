@@ -64,6 +64,26 @@ local sorters = new Group {
       glob = List("**/.*ignore", ".*ignore")
       exclude = "**/.chezmoiignore"
     }
+    ["packages-sort"] {
+      glob =
+        List(
+          "**/.chezmoidata/distros.yaml",
+          "**/.chezmoidata/packages/**/*.json",
+          "**/.chezmoidata/packages/**/*.yaml",
+          "**/.chezmoidata/packages/**/*.yml",
+          "**/.chezmoidata/packages/*.json",
+          "**/.chezmoidata/packages/*.yaml",
+          "**/.chezmoidata/packages/*.yml",
+        )
+      fix =
+        """
+        failed=0
+        for f in {{ files }}; do
+        yq eval -iP '(.. | select(tag == \"!!seq\")) |= (sort_by(. | downcase))' "$f" || failed=1
+        done
+        exit $failed
+        """
+    }
   }
 }
 

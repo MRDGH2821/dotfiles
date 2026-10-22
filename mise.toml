@@ -20,6 +20,11 @@ prepare-ci = ["bun ci"]
 alias = "fmt"
 run = ["hk fix --all"]
 
+[tasks.generate-package-tables]
+depends_post = [{ task = "format" }]
+run = "uv run gen-packages-table"
+sources = ["**/packages/**"]
+
 [tasks.prepare]
 interactive = true
 run = ["bun install", { task = "ai-setup" }]
@@ -52,3 +57,7 @@ yq = "4.54.1"
 [[watch_files]]
 patterns = ["capabilities.yaml"]
 task = "ai-setup"
+
+[[watch_files]]
+patterns = ["**/packages/**"]
+task = "generate-package-tables"

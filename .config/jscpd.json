@@ -23,9 +23,6 @@
     "pnpm-lock.yaml",
     "template/**"
   ],
-  "reporters": [
-    "html",
-    "markdown"
-  ],
+  "reporters": ["html", "markdown"],
   "threshold": 0
 }

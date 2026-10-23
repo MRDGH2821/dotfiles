@@ -131,4 +131,4 @@ Include the following information:
 
 Review the final diff and keep unrelated changes out of the request.
 Respond to review feedback and fix failed CI checks.
-The configured GitHub or GitLab pipeline runs mise checks and MegaLinter.
+The configured GitHub, GitLab, or Forgejo pipeline runs mise checks and MegaLinter.

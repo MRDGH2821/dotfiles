@@ -3,6 +3,7 @@
 .agent/skills
 .agents/hooks.json
 .agents/mcp_config.json
+.agents/rules
 .agents/skills
 .claude/agents
 .claude/rules
@@ -13,6 +14,7 @@
 .cursor/agents
 .cursor/hooks.json
 .cursor/mcp.json
+.cursor/rules
 .cursor/skills
 .gemini/settings.json
 .github/skills

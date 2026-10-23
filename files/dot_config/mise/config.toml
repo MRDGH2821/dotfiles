@@ -1,3 +1,6 @@
+[settings]
+lockfile_auto_prune = true
+
 [settings.cargo]
 binstall = true
 binstall_quickinstall = true

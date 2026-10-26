@@ -1,4 +1,5 @@
 [settings]
+experimental = true
 lockfile_auto_prune = true
 
 [settings.cargo]
@@ -117,6 +118,7 @@ git-cliff = "latest"
 "github:juliuskreutz/stardb-exporter" = "latest"
 "github:konkers/irminsul" = "latest"
 "github:p-arndt/compose-check-updates" = "latest"
+"github:sshine/hashpinner" = "latest"
 glab = "latest"
 herdr = "latest"
 hk = { version = "latest", workflow = "release.yml" }
@@ -127,6 +129,7 @@ mr-boxington = { version = "latest", workflow = "release.yml@refs/heads/main" }
 node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
+"packslip:sweepies/count-patchula" = "latest"
 pitchfork = { version = "latest", workflow = "release.yml@refs/heads/main" }
 prek = "latest"
 prettier = "latest"

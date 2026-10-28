@@ -39,7 +39,6 @@ cspell = "10.4.0"
 editorconfig-checker = "4.0.2"
 gh = "2.103.2"
 git-cliff = "2.14.2"
-"github:Kirskov/Shapin" = { bin = "shapin", version = "latest" }
 "github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
 "github:infragate/capa" = "2.4.0"
 hk = { version = "2.8.1", workflow = "release.yml" }

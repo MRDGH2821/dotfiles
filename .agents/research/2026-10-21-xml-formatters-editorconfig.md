@@ -4,7 +4,8 @@ Researched on 2026-10-21 against primary project documentation/source.
 
 ## Repository baseline
 
-The root [`.editorconfig`](../../.editorconfig) applies UTF-8, LF, final newline, two-space indentation, and trailing-whitespace trimming to XML files. `quote_type = double` is a project-specific key, not a standard EditorConfig property. The project uses Oxfmt 0.73.0 ([`mise.toml`](../../mise.toml), [`.oxfmtrc.json`](../../.oxfmtrc.json)), but its documented file formats do not include XML. [EditorConfig supported pairs](https://spec.editorconfig.org/index.html#supported-pairs); [Oxfmt formats](https://oxc.rs/docs/guide/usage/formatter/language-support)
+The root [`.editorconfig`](../../.editorconfig) applies UTF-8, LF, final newline, two-space indentation, and trailing-whitespace trimming to XML files. `quote_type = double` is a project-specific key, not a standard EditorConfig property.
+The project uses Oxfmt 0.73.0 ([`mise.toml`](../../mise.toml), [`.oxfmtrc.json`](../../.oxfmtrc.json)), but its documented file formats do not include XML. [EditorConfig supported pairs](https://spec.editorconfig.org/index.html#supported-pairs); [Oxfmt formats](https://oxc.rs/docs/guide/usage/formatter/language-support) <!-- rumdl-disable-line existing-relative-links -->
 
 ## Options
 

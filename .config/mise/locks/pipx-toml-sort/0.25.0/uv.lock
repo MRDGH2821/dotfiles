@@ -7,7 +7,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-10-19T20:36:37.633184627Z"
+exclude-newer = "2026-10-28T06:12:45.321702392Z"
 
 [[package]]
 name = "mise-pypi-tool-environment"
@@ -26,7 +26,7 @@ version = "0.25.0"
 source = { registry = "https://pypi.org/simple/" }
 dependencies = [
     { name = "tomlrt", version = "2.2.14", source = { registry = "https://pypi.org/simple/" }, marker = "python_full_version < '3.11'" },
-    { name = "tomlrt", version = "2.3.1", source = { registry = "https://pypi.org/simple/" }, marker = "python_full_version >= '3.11'" },
+    { name = "tomlrt", version = "2.3.2", source = { registry = "https://pypi.org/simple/" }, marker = "python_full_version >= '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1f/f4/7221164c2984af53c18dd9f1d267ca7da660b40bc6b9a436b67ae17fc3ff/toml_sort-0.25.0.tar.gz", hash = "sha256:08ffe893feba7dc1773c61046b76f63561a6204e0162cd067c4a0d681d9198c7", size = 13197, upload-time = "2026-09-12T21:58:05.097Z" }
 wheels = [
@@ -50,7 +50,7 @@ wheels = [
 
 [[package]]
 name = "tomlrt"
-version = "2.3.1"
+version = "2.3.2"
 source = { registry = "https://pypi.org/simple/" }
 resolution-markers = [
     "python_full_version >= '3.11'",
@@ -58,9 +58,9 @@ resolution-markers = [
 dependencies = [
     { name = "typing-extensions", marker = "python_full_version < '3.12'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/24/c9/20d73d14ad95e5644adcad09ce5cbccb6273e7d07ef72261c2eb648bf9c4/tomlrt-2.3.1.tar.gz", hash = "sha256:0be2fdc2fe920be471452a2d01acc9e7e24eedbdd850c8e1d9f5abf9f998df44", size = 135478, upload-time = "2026-10-17T13:26:03.084Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2b/5a/b01046f70b8710f917b1356c4eac3226be39acfb741e967946c7dd3b168c/tomlrt-2.3.2.tar.gz", hash = "sha256:9dfc540e68693c24077e3f64dc1f738fc4e819ced42de0376a07000b3fdbf4c8", size = 135493, upload-time = "2026-10-23T17:17:32.031Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b5/5b/ead54c3d76df9ddc358d4bd063a2619911623f76b08ed9f9bccbf80c7813/tomlrt-2.3.1-py3-none-any.whl", hash = "sha256:2dbec2aaf1e953b5a45749c0575c6cd1c8b8215ca3c2fc71c194b32789bc6f0c", size = 149315, upload-time = "2026-10-17T13:26:01.665Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/e8/2d230a7ed9db2544fbd1adfb460b10fa0b77503ac8f829738a592dae5d94/tomlrt-2.3.2-py3-none-any.whl", hash = "sha256:fb00cde5c3422770c171f4768cefe6e48c6d4f6260d82e2b869213ca87c326e9", size = 149334, upload-time = "2026-10-23T17:17:30.704Z" },
 ]
 
 [[package]]

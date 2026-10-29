@@ -1,3 +1,21 @@
+[deps.bun]
+auto = true
+
+[deps.capabilities]
+description = "Install Agent plugins"
+outputs = [
+  "capabilities.lock",
+  ".agents/skills/",
+  ".codex/skills/",
+  ".claude/skills/",
+  ".cursor/skills/",
+  ".mcp.json",
+  "opencode.json"
+]
+run = "capa install --yes"
+# tombi: format.rules.array-values-order = "ascending"
+sources = [".config/capabilities/", "capabilities.yaml"]
+
 [env]
 HK_MISE = 1
 
@@ -6,7 +24,9 @@ HK_MISE = 1
 postinstall = ["hk install --mise"]
 
 [settings]
+experimental = true
 lockfile = true
+lockfile_auto_prune = true
 
 [settings.github]
 use_git_credentials = true

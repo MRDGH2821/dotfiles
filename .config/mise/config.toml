@@ -16,6 +16,9 @@ run = "capa install --yes"
 # tombi: format.rules.array-values-order = "ascending"
 sources = [".config/capabilities/", "capabilities.yaml"]
 
+[deps.uv]
+auto = true
+
 [env]
 HK_MISE = 1
 

@@ -8,7 +8,7 @@
     "url": "https://github.com/MRDGH2821"
   },
   "devDependencies": {
-    "@types/bun": "^1.4.3",
-    "oxfmt": "^0.74.0"
+    "@types/bun": "^1.4.4",
+    "oxfmt": "0.75.0"
   }
 }

@@ -3,6 +3,8 @@
   "ignorePatterns": [
     "**/*.lock",
     "**/.mise/**",
+    "**/AGENTS.md",
+    "**/CLAUDE.md",
     "**/go.sum",
     "**/locks/**",
     "**/npm-shrinkwrap.json",

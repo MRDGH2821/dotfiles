@@ -1,6 +1,6 @@
-amends "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.9.0/hk@2.9.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.8.0/hk@2.8.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.9.0/hk@2.9.0#/Builtins.pkl"
 
 local sorters = new Group {
   steps {
@@ -95,8 +95,8 @@ local linters = new Mapping<String, Step> {
   // Config Files
   ["pkl"] = Builtins.pkl
   ["pkl_format"] = Builtins.pkl_format
-  ["tombi"] = Builtins.tombi
-  ["tombi_format"] = (Builtins.tombi_format) { depends = List("sorters") }
+  ["tombi"] = (Builtins.tombi) { depends = "tombi_format" }
+  ["tombi_format"] = Builtins.tombi_format
 
   // Misc
   ["check_merge_conflict"] = Builtins.check_merge_conflict
@@ -141,7 +141,7 @@ local linters = new Mapping<String, Step> {
 
   // Text
   ["fix_smart_quotes"] = Builtins.fix_smart_quotes
-  ["rumdl"] = (Builtins.rumdl) { depends = List("rumdl-format") }
+  ["rumdl"] = (Builtins.rumdl) { depends = List("rumdl_format") }
   ["rumdl_format"] = Builtins.rumdl_format
   ["ryl_format"] = Builtins.ryl_format
   ["ryl_markdown_format"] = Builtins.ryl_markdown_format
@@ -164,6 +164,9 @@ local linters = new Mapping<String, Step> {
     check = "cspell --no-must-find-files --no-progress --no-summary --gitignore --files {{files}}"
   }
   ["typos"] = Builtins.typos
+
+  // Ensure formatting
+  ["oxfmt-format"] = Builtins.oxfmt
 }
 exclude =
   List(
@@ -172,12 +175,16 @@ exclude =
     "**/.mise/**",
     "**/go.sum",
     "**/locks/**",
+    "**/mise/locks/**",
     "**/npm-shrinkwrap.json",
     "**/package-lock.json",
-    "**/pnpm-lock.yaml"
+    "**/pnpm-lock.yaml",
+    "AGENTS.md",
+    "CLAUDE.md"
     // keep-sorted end
   )
-steps {
+
+steps = new Mapping<String, Step | Group> {
   ["sorters"] = sorters
   ...linters
   // AIO

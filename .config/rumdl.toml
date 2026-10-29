@@ -12,7 +12,9 @@ siblings-only = true
 punctuation = ".,;:!。，；:"
 
 [global]
-disable = ["MD029", "MD033", "MD036", "MD004"]
+# tombi: format.rules.array-values-order = "ascending"
+disable = ["MD004", "MD029", "MD033", "MD036"]
 editorconfig = true
-exclude = ["**/.agents/skills/**"]
+# tombi: format.rules.array-values-order = "ascending"
+exclude = ["**/.agents/skills/**", "AGENTS.md", "CLAUDE.md"]
 extend-enable = ["MD047"]

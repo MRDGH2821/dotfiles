@@ -13,15 +13,17 @@
     "**/.rbenv/**",
     "**/.venv/**",
     "**/locks/**",
+    "**/mise/locks/**",
     "**/node_modules/**",
     "**/report/**",
     "*.lock",
-    "apm.lock.yaml",
+    ".agents/research/**",
+    "AGENTS.md",
+    "CLAUDE.md",
     "go.sum",
     "npm-shrinkwrap.json",
     "package-lock.json",
-    "pnpm-lock.yaml",
-    "template/**"
+    "pnpm-lock.yaml"
   ],
   "reporters": ["html", "markdown"],
   "threshold": 0

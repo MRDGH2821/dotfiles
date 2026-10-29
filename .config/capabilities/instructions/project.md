@@ -1,43 +1,29 @@
 ## Agent instruction sources
 
-Edit `.config/capabilities/instructions/project.md` for common guidance and the
-other files in `.config/capabilities/instructions/` for project-specific context.
-Edit `.config/capabilities/rules/` for shared policies.
-Run `mise run ai-setup` to refresh capa-managed provider instructions when
-`capabilities.yaml` is present. Provider instruction files are generated; edit
-their sources instead.
-Keep editable sources outside `.agents/rules/`, which capa prunes as generated output.
+Edit this file for shared guidance. Use other files in
+`.config/capabilities/instructions/` for project-specific context and
+`.config/capabilities/rules/` for shared policies.
 
-### Layout
+After editing these sources, run `mise run ai-setup` when `capabilities.yaml`
+exists. Otherwise, keep corresponding `AGENTS.md` sections in sync. Keep
+editable sources outside `.agents/rules/`; Capa prunes that generated directory.
 
-| Path                   | Purpose                                             |
-| ---------------------- | --------------------------------------------------- |
-| `mise.toml`            | Tools, tasks, `hk install --mise` postinstall hook  |
-| `.config/hk.pkl`       | hk hook config (pre-commit, commit-msg, fix, check) |
-| `capabilities.yaml`    | Skills, MCP servers, and providers (capa)           |
-| `cog.toml`             | Conventional-commit scopes and version bump hooks   |
-| `.mega-linter.yml`     | MegaLinter config                                   |
-| `.config/treefmt.toml` | Full-tree formatter                                 |
-| `.config/cspell.json`  | Spell-check dictionary                              |
-| `.agents/logs/`        | AI-assisted work logs                               |
+### Conditional guidance
 
-### Best Practices
+Read the relevant rule before acting:
 
-#### Before Making Changes
+- Branching or committing: `.config/capabilities/rules/commits.md`.
+- For an AI-assisted commit, also read `.config/capabilities/rules/ai-co-author.md`.
+- Recording AI-assisted work: `.config/capabilities/rules/ai-logs.md`.
+- Reviewing on behalf of a human: `.config/capabilities/rules/ai-reviews.md`.
+- Using mise or hk, or running project checks: `.config/capabilities/rules/tooling.md`.
 
-1. Understand the current state of the project
-2. Check if similar functionality already exists
-3. Review relevant configuration files
+### Dependencies
 
-#### When Adding Dependencies
+Prefer lightweight, cross-platform dependencies. Use the project's package
+manager, update relevant configuration and lockfiles, and document installation.
 
-- Prefer tools that don't require heavy installation; add development tools via `mise.toml`
-- Use the project's package manager for application dependencies and keep lockfiles consistent.
-- Document installation steps clearly
-- Consider cross-platform compatibility
-- Update relevant configuration files
+### Verification and documentation
 
-#### Testing Changes
-
-- Run relevant tests and configured checks; if no test command exists, verify the affected behavior directly.
-- Ensure documentation is updated
+If no relevant test or check exists, verify behavior directly. Update
+documentation when setup or behavior changes.

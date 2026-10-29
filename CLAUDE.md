@@ -4,7 +4,7 @@ See [AGENTS.md](./AGENTS.md) for instructions. It is the source of truth.
 
 @AGENTS.md
 
-If none of the skills or tools specified in `mise.toml` are available, run the following commands and alert the user to reload the agent.
+If none of the skills or tools specified in `.config/mise/config.toml` are available, run the following commands and alert the user to reload the agent.
 
 ```sh
 mise trust

@@ -21,6 +21,8 @@ For a feature request, explain the problem, the proposed solution, and alternati
 
 Fork or clone the repository and create a branch for your change.
 Keep the change focused. Follow the existing code and configuration style.
+
+Prefer atomic commits: each commit should contain one logical change.
 Update documentation when setup or behavior changes.
 
 ## Set up the development environment
@@ -34,7 +36,8 @@ mise install
 mise run prepare
 ```
 
-Read `mise.toml` before trusting it. Installation runs the configured tool hooks.
+Read `.config/mise/config.toml` before trusting it. Installation runs the
+configured tool hooks.
 The `prepare` task installs the package dependencies with Bun.
 The tool installation also configures Git hooks with hk.
 
@@ -78,7 +81,7 @@ mise run check
 
 The `fmt` task formats the repository. Review its diff before committing.
 The `check` task runs hk checks and validates commit history with cocogitto.
-These tasks are defined in `mise.toml`.
+These tasks are defined in `.config/mise/config.toml`.
 
 For a smaller formatting change, pass the affected files to
 `mise exec -- hk fix --no-stage`. Agent-specific guidance for scoped checks
@@ -90,8 +93,9 @@ CI also runs MegaLinter. Read its reports and `.mega-linter.yml` when a check fa
 
 ## Test the affected behavior
 
-Find application test and build commands in `README.md`, `mise.toml`, or the
-project's dependency manifests. Run the commands that cover your change.
+Find application test and build commands in `README.md`,
+`.config/mise/config.toml`, or the project's dependency manifests. Run the
+commands that cover your change.
 The scaffold's `check` task covers shared tooling. It does not define application tests.
 
 For a behavior change, add or update tests when a test suite exists.

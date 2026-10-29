@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/infragate/capa/main/schema/capabilities.schema.json
 agents:
   additional:
     - id: template-context
@@ -12,6 +13,11 @@ options:
   requiresCommands: []
   toolExposure: search
 plugins:
+  - def:
+      description: Matt Pocock's agent skills for real engineering (grilling, spec/ticket flows, TDD, code review, domain modelling and more).
+      repo: mattpocock/skills
+    id: mattpocock-skills
+    type: github
   - def:
       description: "Core skills library: TDD, debugging, collaboration patterns, and proven techniques"
       repo: obra/superpowers
@@ -27,11 +33,6 @@ plugins:
       repo: oxsecurity/megalinter
     id: megalinter
     type: github
-  - def:
-      description: Matt Pocock's agent skills for real engineering (grilling, spec/ticket flows, TDD, code review, domain modelling and more).
-      repo: mattpocock/skills
-    id: mattpocock-skills
-    type: github
 providers:
   # keep-sorted start
   - antigravity
@@ -41,8 +42,7 @@ providers:
   - opencode
   # keep-sorted end
 rules:
-  - alwaysApply: true
-    def:
+  - def:
       repo: multica-ai/andrej-karpathy-skills::.cursor/rules/karpathy-guidelines.mdc
     description: Andrej Karpathy's Guidelines
     id: karpathy-guidelines
@@ -57,24 +57,9 @@ rules:
     path: .config/capabilities/rules/commits.md
     type: local
   - alwaysApply: true
-    description: AI co-author trailers and provider attribution
-    id: ai-co-author
-    path: .config/capabilities/rules/ai-co-author.md
-    type: local
-  - alwaysApply: true
-    description: AI-assisted work logs
-    id: ai-logs
-    path: .config/capabilities/rules/ai-logs.md
-    type: local
-  - alwaysApply: true
-    description: AI-assisted review attribution
-    id: ai-reviews
-    path: .config/capabilities/rules/ai-reviews.md
-    type: local
-  - alwaysApply: true
-    description: mise, hk, linting, and troubleshooting
-    id: tooling
-    path: .config/capabilities/rules/tooling.md
+    description: Where to save AI-generated artifacts
+    id: ai-artifacts
+    path: .config/capabilities/rules/ai-artifacts.md
     type: local
 servers:
   - def:

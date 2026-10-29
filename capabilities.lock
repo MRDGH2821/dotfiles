@@ -1,6 +1,6 @@
 version: 1
-generator: capa@2.3.0
-generatedAt: '2026-10-20T20:41:18.870Z'
+generator: capa@2.4.0
+generatedAt: '2026-10-29T06:45:01.253Z'
 skills:
   - id: atomic-commits
     source: github
@@ -16,31 +16,31 @@ skills:
     skillName: bootstrap
     requestedVersion: null
     requestedRef: null
-    resolvedRef: 2d9105e3970befb756bd82e2cc16b3c1599330b2
-    resolvedVersion: v2.3.0
+    resolvedRef: d7af1197d4214599b8143794212b6094c9096d99
+    resolvedVersion: v2.4.0
   - id: capabilities-manager
     source: github
     repo: infragate/capa
     skillName: capabilities-manager
     requestedVersion: null
     requestedRef: null
-    resolvedRef: 2d9105e3970befb756bd82e2cc16b3c1599330b2
-    resolvedVersion: v2.3.0
+    resolvedRef: d7af1197d4214599b8143794212b6094c9096d99
+    resolvedVersion: v2.4.0
   - id: gh
     source: github
     repo: cli/cli
     skillName: gh
     requestedVersion: null
     requestedRef: null
-    resolvedRef: 89d7dcec017194af1d6f8853176b2dae9c1da762
-    resolvedVersion: v2.102.1
+    resolvedRef: 63837fb778d6a39f02be0ce76ff89f2bc8d74bdc
+    resolvedVersion: v2.103.3
   - id: git-commit
     source: github
     repo: github/awesome-copilot
     skillName: git-commit
     requestedVersion: null
     requestedRef: null
-    resolvedRef: 613efc8c21d9b3ce642dff361d17006cd9967e28
+    resolvedRef: b6483db44fb602654bca6a097185fcaddb305f97
     resolvedVersion: null
 plugins:
   - id: mattpocock-skills
@@ -72,10 +72,10 @@ plugins:
     requestedSearchName: null
     requestedVersion: null
     requestedRef: null
-    resolvedRef: 9ecd17981f58f95e9e149ed7a9c18bac0f6e826c
+    resolvedRef: 7425d7384c3c7813f5e695fc37edf49403208527
     resolvedVersion: null
     manifestName: paad
-    manifestVersion: 2.0.0
+    manifestVersion: 2.0.2
   - id: superpowers
     source: github
     repo: obra/superpowers
@@ -83,8 +83,8 @@ plugins:
     requestedSearchName: null
     requestedVersion: null
     requestedRef: null
-    resolvedRef: bb92a77741419a4ab5f06e711a283343f1ada0c3
-    resolvedVersion: v7.0.0
+    resolvedRef: 2ce8aa15d05bd57213e6f746f953aafb7ded7a8b
+    resolvedVersion: v7.0.1
     manifestName: superpowers
-    manifestVersion: 7.0.0
+    manifestVersion: 7.0.1
 hooks: []

@@ -3,7 +3,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/share/mise/shims:${HOME}/.local/share/soar/bin:${PATH}"
 
 if ! command -v apt &>/dev/null; then
   echo "This script is only for Debian based systems. Exiting..."
@@ -110,6 +110,11 @@ Package: *
 Pin: origin packages.mozilla.org
 Pin-Priority: 1000
 ' | sudo tee /etc/apt/preferences.d/mozilla
+
+# Install mise
+# shellcheck disable=SC2312
+curl https://mise.run | sh
+echo "${LINE}"
 
 # Install Soar
 # shellcheck disable=SC2312

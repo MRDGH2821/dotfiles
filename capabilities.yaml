@@ -39,6 +39,7 @@ providers:
   - claude-code
   - codex
   - cursor
+  - kiro-cli
   - opencode
   # keep-sorted end
 rules:

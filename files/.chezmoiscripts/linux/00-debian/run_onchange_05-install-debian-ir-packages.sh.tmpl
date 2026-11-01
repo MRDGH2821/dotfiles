@@ -2,18 +2,18 @@
 {{- template "env_vars.tmpl" . -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- template "install_ir.tmpl" . -}}
-
 {{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename .distros.debian_codes) -}}
-  {{- $allPackages := list -}}
   {{- println "\necho \"Installing Debian Packages from GitHub/GitLab\"" -}}
+
+  {{- /* Ensure the install-release (ir) tool is available via mise */ -}}
+  {{- println "mise install \"github:Rishang/install-release\"" -}}
 
   {{- /* ir Packages */ -}}
   {{- $irPackages := list -}}
   {{- $irPackages = concat $irPackages .debian.install_release -}}
 
   {{- range $irPackages -}}
-    {{- println "sudo ~/.local/share/soar/bin/ir get " . -}}
+    {{- println "mise exec \"github:Rishang/install-release\" -- ir get " . -}}
     {{- println $line -}}
   {{- end -}}
 {{- else -}}

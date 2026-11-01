@@ -3,7 +3,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/share/mise/shims:${HOME}/.local/share/soar/bin:${PATH}"
 
 if ! command -v apt &>/dev/null; then
   echo "This script is only for Ubuntu based systems. Exiting..."
@@ -93,6 +93,11 @@ echo "${LINE}"
 curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
 # shellcheck disable=SC2312
 echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
+
+# Install mise
+# shellcheck disable=SC2312
+curl https://mise.run | sh
+echo "${LINE}"
 
 # Install Soar
 # shellcheck disable=SC2312

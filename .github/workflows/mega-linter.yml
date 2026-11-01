@@ -92,7 +92,7 @@ jobs:
         name: MegaLinter
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/latest/flavors/
-        uses: oxsecurity/megalinter@9949bad031045f366be2467e00e8371a7328a2e2 # v10.1.0
+        uses: oxsecurity/megalinter@f2fe8c1cba37091848df3e524066c8c23ef353ed # v10.2.0
       # Upload MegaLinter artifacts
       - if: success() || failure()
         name: Archive production artifacts
@@ -117,10 +117,10 @@ jobs:
         name: Create Pull Request with applied fixes
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
-          commit-message: 'chore(megalinter): apply linters automatic fixes'
+          commit-message: "chore(megalinter): apply linters automatic fixes"
           labels: bot
           sign-commits: true
-          title: 'chore(megalinter): apply linters automatic fixes'
+          title: "chore(megalinter): apply linters automatic fixes"
           # SECURITY NOTE: see the warning on the checkout step above —
           # using `secrets.PAT` is NOT recommended for security reasons.
           # Prefer manually re-running the workflow or pushing another
@@ -170,7 +170,7 @@ jobs:
               github.head_ref ||
               github.ref
             }}
-          commit_message: 'chore(megalinter): apply linters fixes'
+          commit_message: "chore(megalinter): apply linters fixes"
           commit_user_email: 129584137+megalinter-bot@users.noreply.github.com
           commit_user_name: megalinter-bot
 name: MegaLinter

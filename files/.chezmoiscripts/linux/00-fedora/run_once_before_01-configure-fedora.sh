@@ -2,7 +2,7 @@
 set -e
 LINE="-------------------------------------------"
 
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/soar/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.local/share/mise/shims:${HOME}/.local/share/soar/bin:${PATH}"
 
 if ! command -v dnf &>/dev/null; then
   echo "dnf not found. This script is only for Fedora based systems. Exiting..."
@@ -76,6 +76,11 @@ if ! gh auth status >/dev/null 2>&1; then
 else
   echo "gh: already authenticated."
 fi
+echo "${LINE}"
+
+# Install mise
+# shellcheck disable=SC2312
+curl https://mise.run | sh
 echo "${LINE}"
 
 # Install Soar

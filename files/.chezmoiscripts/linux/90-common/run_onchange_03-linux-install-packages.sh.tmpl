@@ -14,12 +14,12 @@
 {{- end -}}
 {{- println $line -}}
 
-{{- if eq .devicetype "laptop" -}}
+{{- /* if eq .devicetype "laptop" */ -}}
   {{- /* Self installing packages */ -}}
-  {{- range .common.laptop_only.installer_url -}}
-    {{- println "bash -c " ( . | quote) -}}
-  {{- end -}}
-  {{- println $line -}}
-{{- end -}}
+  {{- /* range .common.laptop_only.installer_url */ -}}
+    {{- /* println "bash -c " ( . | quote) */ -}}
+  {{- /* end */ -}}
+  {{- /* println $line */ -}}
+{{- /* end */ -}}
 
 {{- template "installer.tmpl" . -}}

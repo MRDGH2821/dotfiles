@@ -3,7 +3,6 @@ common:
   flatpak:
     - app.grayjay.Grayjay
     - com.github.tchx84.Flatseal
-    - com.jeffser.Alpaca
     - io.ente.auth
     - io.github.flattool.Warehouse
     - org.gnome.Firmware
@@ -24,9 +23,6 @@ common:
     - print-manager
     - skanlite
     - skanpage
-  laptop_only:
-    installer_url:
-      - if ! command -v ollama >/dev/null 2>&1; then curl -fsSL https://ollama.ai/install.sh | sh; fi
   packages:
     - firefox
     - flatpak

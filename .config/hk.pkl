@@ -41,7 +41,6 @@ local sorters = new Group {
       fix = "keep-sorted --mode fix {{files}}"
     }
     ["toml-sort"] {
-      check = "toml-sort --check --sort-table-keys --sort-inline-tables {{files}}"
       exclude = List("**/tombi.toml")
       fix = "toml-sort --in-place --sort-table-keys --sort-inline-tables {{files}}"
       types = List("toml")

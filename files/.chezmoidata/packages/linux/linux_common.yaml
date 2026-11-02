@@ -36,8 +36,6 @@ common:
     - nix
     - nvtop
     - podman
-    - rustup
-    - sccache
     - syncthing
     - tealdeer
     - vlc

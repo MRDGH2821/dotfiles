@@ -62,19 +62,6 @@ echo "Setting up repositories for ${DISTRO_NAME} ${DISTRO_VERSION}"
 curl https://repo.waydro.id | sudo bash
 echo "${LINE}"
 
-## GitHub CLI
-sudo mkdir -p -m 755 /etc/apt/keyrings
-out=$(mktemp)
-wget -nv -O"${out}" https://cli.github.com/packages/githubcli-archive-keyring.gpg
-# shellcheck disable=SC2312,SC2002
-cat "${out}" | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
-sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
-sudo mkdir -p -m 755 /etc/apt/sources.list.d
-# shellcheck disable=SC2312
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
-
-echo "${LINE}"
-
 ## Waydroid Helper
 if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "13" ]]; then
   echo "Setting up Waydroid Helper repository for Debian 13..."
@@ -85,11 +72,6 @@ if [[ ${DISTRO_NAME} == "debian" ]] && [[ ${DISTRO_VERSION} == "13" ]]; then
 fi
 echo "${LINE}"
 
-## debian.griffo.io - Unofficial Repository for Latest Development Tools
-# shellcheck disable=SC2312
-curl -sS https://debian.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/debian.griffo.io.gpg
-# shellcheck disable=SC2312
-echo "deb https://debian.griffo.io/apt $(lsb_release -sc 2>/dev/null) main" | sudo tee /etc/apt/sources.list.d/debian.griffo.io.list
 
 ## Firefox
 sudo install -d -m 0755 /etc/apt/keyrings

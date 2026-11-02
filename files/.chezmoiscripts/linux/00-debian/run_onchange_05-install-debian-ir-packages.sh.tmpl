@@ -6,7 +6,7 @@
   {{- println "\necho \"Installing Debian Packages from GitHub/GitLab\"" -}}
 
   {{- /* Ensure the install-release (ir) tool is available via mise */ -}}
-  {{- println "mise install \"github:Rishang/install-release\"" -}}
+  {{- println "mise use -g \"github:Rishang/install-release\"" -}}
 
   {{- /* ir Packages */ -}}
   {{- $irPackages := list -}}

@@ -41,4 +41,6 @@ export VISUAL="zed --wait"
 export PAGER="less"
 
 # Other variables
-export SELINUX_MODE="${SELINUX_MODE:-$(getenforce)}"
+if command -v getenforce &>/dev/null; then
+    export SELINUX_MODE="${SELINUX_MODE:-$(getenforce)}"
+fi

@@ -3,6 +3,7 @@ fedora:
   dnf5:
     native:
       - discord
+      - git-credential-libsecret
       - gnupg2
       - libavcodec-freeworld
       - meld

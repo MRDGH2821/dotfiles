@@ -12,6 +12,7 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
 
 # mise (must come before antidot: antidot is a mise-installed tool)
 export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 # soar
 export PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/soar/bin:${PATH}"

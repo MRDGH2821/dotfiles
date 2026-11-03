@@ -22,6 +22,7 @@ fedora:
     - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
     - https://github.com/marktext/marktext
     - https://github.com/sourcegit-scm/sourcegit
+    - https://github.com/stablyai/orca
   kde:
     - plasma6-print-manager
   laptop_only:

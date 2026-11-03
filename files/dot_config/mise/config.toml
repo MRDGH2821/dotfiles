@@ -145,6 +145,7 @@ node = "latest"
 pitchfork = { version = "latest", workflow = "release.yml@refs/heads/main" }
 prek = "latest"
 prettier = "latest"
+"pypi:mcp-nixos" = "latest"
 "pypi:uv-upx" = "latest"
 rclone = "latest"
 ripgrep = "latest"

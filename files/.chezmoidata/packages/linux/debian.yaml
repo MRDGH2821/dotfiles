@@ -5,7 +5,7 @@ debian:
     - io.github.radiolamp.mangojuice
     - org.onlyoffice.desktopeditors
   install_release:
-    - https://github.com/espanso/espanso
+    - https://github.com/espanso/espanso --file wayland
     - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
     - https://github.com/marktext/marktext
     - https://github.com/sourcegit-scm/sourcegit

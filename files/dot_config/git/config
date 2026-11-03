@@ -29,13 +29,13 @@ name=MRDGH2821
 signingkey=1915CBA05A598D01
 
 [credential "https://github.com"]
-helper=gh auth git-credential
+helper=!/usr/bin/env gh auth git-credential
 
 [credential "https://gist.github.com"]
-helper=gh auth git-credential
+helper=!/usr/bin/env gh auth git-credential
 
 [credential "https://gitlab.com"]
-helper=glab auth git-credential
+helper=!/usr/bin/env glab auth git-credential
 
 [credential]
 helper=cache --timeout 21600

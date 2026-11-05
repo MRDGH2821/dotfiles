@@ -70,18 +70,18 @@ gh = "2.103.3"
 git-cliff = "2.14.2"
 "github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
 "github:infragate/capa" = "2.4.0"
-hk = { version = "2.11.0", workflow = "release.yml" }
+hk = { version = "2.11.1", workflow = "release.yml" }
 ls-lint = "2.3.2"
-oxfmt = "0.75.0"
+oxfmt = "0.76.0"
 pkl = "0.32.2"
 "pypi:lorenzwalthert/gitignore-tidy" = "latest"
 "pypi:toml-sort" = "0.25.0"
 python = "latest"
 ruff = "0.17.3"
 rumdl = "0.3.2"
-tombi = "1.9.8"
+tombi = "1.10.0"
 typos = "1.52.0"
-uv = "0.13.6"
+uv = "0.13.7"
 yq = "4.54.1"
 
 [[watch_files]]

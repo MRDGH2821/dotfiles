@@ -43,14 +43,13 @@ echo "${LINE}"
 # Add Repositories
 echo "Setting up repositories"
 sudo dnf -y install dnf-plugins-core
-sudo dnf copr enable cuteneko/waydroid-helper -y
-echo "${LINE}"
 
 ## RPM Fusion Free & Non-free repos
 fedora_version=$(rpm -E %fedora)
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"${fedora_version}".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"${fedora_version}".noarch.rpm -y
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 -y
 
+## Syncthing Tray repo
 if [[ ! -f /etc/yum.repos.d/home:mkittler.repo ]]; then
   sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:mkittler/Fedora_"${fedora_version}"/home:mkittler.repo -y
 else

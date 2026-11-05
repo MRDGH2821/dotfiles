@@ -1,5 +1,126 @@
+[bootstrap.apt.sources.firefox]
+components = "main"
+fingerprint = "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3"
+key = "https://packages.mozilla.org/apt/repo-signing-key.gpg"
+suites = "mozilla"
+uris = "https://packages.mozilla.org/apt"
+
+[bootstrap.dnf.repos]
+waydroid-helper = { copr = "cuteneko/waydroid-helper" }
+
 [bootstrap.packages]
-"brew:git-credential-libsecret" = "latest"
+"apt:discover" = { env = ["kde"], version = "latest" }
+"apt:ffmpeg" = { env = ["laptop"], version = "latest" }
+"apt:filelight" = { env = ["kde"], version = "latest" }
+"apt:firefox" = "latest"
+"apt:flatpak" = "latest"
+"apt:git" = "latest"
+"apt:git-delta" = "latest"
+"apt:gnupg2" = "latest"
+"apt:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
+"apt:kcalc" = { env = ["kde"], version = "latest" }
+"apt:kclock" = { env = ["kde"], version = "latest" }
+"apt:keepassxc" = "latest"
+"apt:kleopatra" = "latest"
+"apt:libpam-u2f" = "latest"
+"apt:mangohud" = "latest"
+"apt:meld" = "latest"
+"apt:nix" = "latest"
+"apt:nvtop" = "latest"
+"apt:obs-studio" = { env = ["laptop"], version = "latest" }
+"apt:pamu2fcfg" = "latest"
+"apt:partitionmanager" = { env = ["kde"], version = "latest" }
+"apt:podman" = "latest"
+"apt:print-manager" = { env = ["kde"], version = "latest" }
+"apt:sane-utils" = "latest"
+"apt:skanlite" = { env = ["kde"], version = "latest" }
+"apt:skanpage" = { env = ["kde"], version = "latest" }
+"apt:syncthing" = "latest"
+"apt:syncthingtray" = "latest"
+"apt:syncthingtray-kde-plasma" = { env = ["kde"], version = "latest" }
+"apt:system-config-printer" = "latest"
+"apt:vlc" = "latest"
+"apt:waydroid" = { env = ["tablet"], version = "latest" }
+"apt:waydroid-helper" = { env = ["tablet"], version = "latest" }
+"apt:zsh" = "latest"
+"dnf:discord" = "latest"
+"dnf:espanso-wayland" = "latest"
+"dnf:filelight" = { env = ["kde"], version = "latest" }
+"dnf:firefox" = "latest"
+"dnf:flatpak" = "latest"
+"dnf:git" = "latest"
+"dnf:git-credential-libsecret" = "latest"
+"dnf:git-delta" = "latest"
+"dnf:gnupg2" = "latest"
+"dnf:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
+"dnf:kcalc" = { env = ["kde"], version = "latest" }
+"dnf:kclock" = { env = ["kde"], version = "latest" }
+"dnf:keepassxc" = "latest"
+"dnf:kleopatra" = "latest"
+"dnf:libavcodec-freeworld" = "latest"
+"dnf:mangohud" = "latest"
+"dnf:meld" = "latest"
+"dnf:nix" = "latest"
+"dnf:nvtop" = "latest"
+"dnf:obs-studio" = { env = ["laptop"], version = "latest" }
+"dnf:obs-studio-plugin-vkcapture" = { env = ["laptop"], version = "latest" }
+"dnf:obs-studio-plugin-vlc-video" = { env = ["laptop"], version = "latest" }
+"dnf:obs-studio-plugin-webkitgtk" = { env = ["laptop"], version = "latest" }
+"dnf:pam-u2f" = "latest"
+"dnf:pamu2fcfg" = "latest"
+"dnf:partitionmanager" = { env = ["kde"], version = "latest" }
+"dnf:plasma-camera" = "latest"
+"dnf:podman" = "latest"
+"dnf:podman-docker" = "latest"
+"dnf:sane-backends" = "latest"
+"dnf:skanlite" = { env = ["kde"], version = "latest" }
+"dnf:skanpage" = { env = ["kde"], version = "latest" }
+"dnf:steam" = "latest"
+"dnf:syncthing" = "latest"
+"dnf:syncthingplasmoid-qt6" = { env = ["kde"], version = "latest" }
+"dnf:syncthingtray-qt6" = "latest"
+"dnf:system-config-printer" = "latest"
+"dnf:vlc" = "latest"
+"dnf:waydroid" = { env = ["tablet"], version = "latest" }
+"dnf:waydroid-helper" = { env = ["tablet"], version = "latest" }
+"dnf:zsh" = "latest"
+"flatpak-user:app.grayjay.Grayjay" = "latest"
+"flatpak-user:com.github.tchx84.Flatseal" = "latest"
+"flatpak-user:io.ente.auth" = "latest"
+"flatpak-user:io.github.alainm23.planify" = "latest"
+"flatpak-user:io.github.flattool.Warehouse" = "latest"
+"flatpak-user:io.github.radiolamp.mangojuice" = "latest"
+"flatpak-user:org.gnome.Firmware" = "latest"
+"flatpak-user:org.gramps_project.Gramps" = "latest"
+"flatpak-user:org.onlyoffice.desktopeditors" = "latest"
+"pacman:discord" = "latest"
+"pacman:discover" = { env = ["kde"], version = "latest" }
+"pacman:filelight" = { env = ["kde"], version = "latest" }
+"pacman:gnupg" = "latest"
+"pacman:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
+"pacman:kcalc" = { env = ["kde"], version = "latest" }
+"pacman:kclock" = { env = ["kde"], version = "latest" }
+"pacman:lib32-mangohud" = "latest"
+"pacman:meld" = "latest"
+"pacman:pam-u2f" = "latest"
+"pacman:partitionmanager" = { env = ["kde"], version = "latest" }
+"pacman:print-manager" = { env = ["kde"], version = "latest" }
+"pacman:sane" = "latest"
+"pacman:skanlite" = { env = ["kde"], version = "latest" }
+"pacman:skanpage" = { env = ["kde"], version = "latest" }
+"pacman:steam" = "latest"
+"pacman:syncthingtray-qt6" = "latest"
+"pacman:system-config-printer" = "latest"
+"pacman:unzip" = "latest"
+"pacman:waydroid" = { env = ["tablet"], version = "latest" }
+"pacman:waydroid-helper" = { env = ["tablet"], version = "latest" }
+"zerobrew:git-credential-libsecret" = "latest"
+
+[bootstrap.plugins]
+"zerobrew" = "https://github.com/kennyg/mise-zerobrew"
+
+[bootstrap.user]
+login_shell = "zsh"
 
 [settings]
 experimental = true
@@ -94,6 +215,7 @@ antigravity-cli = "latest"
 "aqua:acheronfail/repgrep" = "latest"
 "aqua:cantino/mcfly" = "latest"
 "aqua:google/keep-sorted" = "latest"
+"aqua:hickford/git-credential-oauth" = "latest"
 "aqua:iffse/pay-respects" = "latest"
 "aqua:kamadorueda/alejandra" = "latest"
 "aqua:kiro.dev/kiro-cli" = "2.37.0"
@@ -155,6 +277,7 @@ rumdl = "latest"
 rust = { mr_boxington = true, version = "latest" }
 shellcheck = "latest"
 shfmt = "latest"
+tealdeer = "latest"
 tmux = "latest"
 tombi = "latest"
 topgrade = "latest"

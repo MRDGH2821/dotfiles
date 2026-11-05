@@ -1,29 +1,11 @@
 ---
 ubuntu:
-  flatpak:
-    - io.github.alainm23.planify
-    - io.github.radiolamp.mangojuice
-    - org.onlyoffice.desktopeditors
   install_release:
     - https://github.com/espanso/espanso
     - https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
     - https://github.com/marktext/marktext
     - https://github.com/sourcegit-scm/sourcegit
-  kde:
-    - syncthingtray-kde-plasma
-  laptop_only:
-    nala:
-      native:
-        - obs-studio
   nala:
-    native:
-      - gnupg2
-      - libpam-u2f
-      - meld
-      - pamu2fcfg
-      - sane-utils
-      - syncthingtray
-      - system-config-printer
     url:
       - https://cdn.akamai.steamstatic.com/client/installer/steam.deb
       - https://discord.com/api/download?platform=linux&format=deb

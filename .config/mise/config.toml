@@ -3,18 +3,24 @@ auto = true
 
 [deps.capabilities]
 description = "Install Agent plugins"
+# tombi: format.rules.array-values-order = "ascending"
 outputs = [
-  "capabilities.lock",
   ".agents/skills/",
-  ".codex/skills/",
-  ".claude/skills/",
-  ".cursor/skills/",
+  ".claude/",
+  ".codex/",
+  ".cursor/",
+  ".kiro/",
   ".mcp.json",
+  "capabilities.lock",
   "opencode.json"
 ]
 run = "capa install --yes"
 # tombi: format.rules.array-values-order = "ascending"
-sources = [".config/capabilities/", "capabilities.yaml"]
+sources = [
+  ".config/capabilities/",
+  "capabilities.yaml",
+  "template/.config/capabilities/"
+]
 
 [deps.uv]
 auto = true
@@ -54,7 +60,7 @@ run = ["bun install", { task = "ai-setup" }]
 
 [tools]
 "aqua:google/keep-sorted" = "0.10.0"
-"aqua:owenlamont/ryl" = "0.27.0"
+"aqua:owenlamont/ryl" = "0.28.0"
 betterleaks = "1.9.0"
 bun = "1.4.4"
 cocogitto = "7.0.0"
@@ -64,16 +70,17 @@ gh = "2.103.3"
 git-cliff = "2.14.2"
 "github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
 "github:infragate/capa" = "2.4.0"
-hk = { version = "2.10.0", workflow = "release.yml" }
+hk = { version = "2.11.0", workflow = "release.yml" }
 ls-lint = "2.3.2"
 oxfmt = "0.75.0"
 pkl = "0.32.2"
 "pypi:lorenzwalthert/gitignore-tidy" = "latest"
 "pypi:toml-sort" = "0.25.0"
+python = "latest"
 ruff = "0.17.3"
 rumdl = "0.3.2"
 tombi = "1.9.8"
-typos = "1.51.1"
+typos = "1.52.0"
 uv = "0.13.6"
 yq = "4.54.1"
 

@@ -1,21 +1,10 @@
 {{- println "#!/usr/bin/env bash" -}}
 {{- template "env_vars.tmpl" . -}}
-{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
 {{- if and (hasKey .chezmoi.osRelease "versionCodename") (has .chezmoi.osRelease.versionCodename .distros.debian_codes) -}}
   {{- println "\necho \"Installing Debian Packages from GitHub/GitLab\"" -}}
 
-  {{- /* Ensure the install-release (ir) tool is available via mise */ -}}
-  {{- println "mise use -g \"github:Rishang/install-release\"" -}}
-
-  {{- /* ir Packages */ -}}
-  {{- $irPackages := list -}}
-  {{- $irPackages = concat $irPackages .debian.install_release -}}
-
-  {{- range $irPackages -}}
-    {{- println "mise exec \"github:Rishang/install-release\" -- install-release get --pkg -y " . -}}
-    {{- println $line -}}
-  {{- end -}}
+  {{- template "install-releases.tmpl" .debian.install_release -}}
 {{- else -}}
   {{- fail "This script is only for Debian based systems." -}}
 {{- end -}}

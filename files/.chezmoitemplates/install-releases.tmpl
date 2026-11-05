@@ -1,0 +1,9 @@
+{{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
+
+{{- /* Ensure the install-release (ir) tool is available via mise */ -}}
+{{- println "mise use \"github:Rishang/install-release\" -g" -}}
+
+{{- range . -}}
+  {{- println "mise exec \"github:Rishang/install-release\" -- install-release get --pkg -y " . -}}
+  {{- println $line -}}
+{{- end -}}

@@ -225,8 +225,154 @@
     "mode": "system"
   },
   "languages": {
+    "CSS": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "GraphQL": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "HTML": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "Handlebars": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "JSON5": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "JSONC": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        },
+        {
+          "code_action": "source.fixAll.oxc"
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
     "Just": {
       "formatter": "language_server"
+    },
+    "Less": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "MDX": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "Markdown": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
     },
     "Nix": {
       "formatter": {
@@ -237,6 +383,19 @@
           ],
           "command": "alejandra"
         }
+      }
+    },
+    "SCSS": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
       }
     },
     "Shell Script": {
@@ -250,6 +409,32 @@
           ],
           "command": "shfmt"
         }
+      }
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
       }
     },
     "Typst": {
@@ -279,6 +464,19 @@
         "language_server"
       ]
     },
+    "Vue.js": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
     "XML": {
       "formatter": {
         "external": {
@@ -288,6 +486,19 @@
           ],
           "command": "xmllint"
         }
+      }
+    },
+    "YAML": {
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "language_server": {
+            "name": "oxfmt"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
       }
     }
   },
@@ -354,6 +565,25 @@
         }
       }
     },
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          "fmt.configPath": null,
+          "run": "onSave"
+        }
+      }
+    },
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          "configPath": null,
+          "disableNestedConfig": false,
+          "fixKind": "safe_fix",
+          "run": "onType",
+          "unusedDisableDirectives": "deny"
+        }
+      }
+    },
     "tinymist": {
       "initialization_options": {
         "preview": {
@@ -382,10 +612,7 @@
     "dock": "left"
   },
   "prettier": {
-    "allowed": true,
-    "plugins": [
-      "prettier-plugin-packagejson"
-    ]
+    "allowed": true
   },
   "project_panel": {
     "dock": "left",

@@ -8,6 +8,11 @@ uris = "https://packages.mozilla.org/apt"
 [bootstrap.dnf.repos]
 waydroid-helper = { copr = "cuteneko/waydroid-helper" }
 
+[bootstrap.hooks.pre-packages]
+run = [
+  "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo"
+]
+
 [bootstrap.packages]
 "apt:discover" = { env = ["kde"], version = "latest" }
 "apt:ffmpeg" = { env = ["laptop"], version = "latest" }
@@ -285,6 +290,7 @@ typos = "latest"
 typstyle = "latest"
 uv = "latest"
 yq = "latest"
+"zerobrew:git-credential-libsecret" = "latest"
 zoxide = "latest"
 
 [tools.cursor-agent]

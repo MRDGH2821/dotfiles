@@ -11,8 +11,8 @@ if ! command -v dnf &>/dev/null; then
 fi
 
 echo "Fedora based system found!"
-# Install dnf5 for faster downloads, flatpak & gh cli
-sudo dnf install dnf5 flatpak gh gcc rustup -y
+# Install dnf5 for faster downloads & flatpak
+sudo dnf install dnf5 flatpak gcc -y
 echo "${LINE}"
 
 # modify dnf settings for faster downloads
@@ -68,6 +68,13 @@ else
 fi
 echo "${LINE}"
 
+# Install mise
+# shellcheck disable=SC2312
+curl https://mise.run | sh
+echo "${LINE}"
+
+mise use gh -g
+
 ## Login to gh cli
 
 if ! gh auth status >/dev/null 2>&1; then
@@ -78,15 +85,7 @@ else
 fi
 echo "${LINE}"
 
-# Install mise
-# shellcheck disable=SC2312
-curl https://mise.run | sh
-echo "${LINE}"
-
 # Install Soar
 # shellcheck disable=SC2312
 curl -fsSL "https://raw.githubusercontent.com/pkgforge/soar/main/install.sh" | sh
 echo "${LINE}"
-
-## Initialise rustup
-rustup-init

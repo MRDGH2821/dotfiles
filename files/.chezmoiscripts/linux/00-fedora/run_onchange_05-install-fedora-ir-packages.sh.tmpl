@@ -13,7 +13,7 @@
   {{- $irPackages = concat $irPackages .fedora.install_release -}}
 
   {{- range $irPackages -}}
-    {{- println "mise exec \"github:Rishang/install-release\" -- ir get " . -}}
+    {{- println "mise exec \"github:Rishang/install-release\" -- install-release get " . -}}
     {{- println $line -}}
   {{- end -}}
 

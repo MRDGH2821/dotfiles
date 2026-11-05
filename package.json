@@ -1,14 +1,14 @@
 {
+  "name": "dotfiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "This is my dotfiles repo managed using chezmoi.",
   "author": {
     "name": "MRDGH2821",
     "url": "https://github.com/MRDGH2821"
   },
-  "description": "This is my dotfiles repo managed using chezmoi.",
   "devDependencies": {
     "@types/bun": "^1.4.4",
     "oxfmt": "0.76.0"
-  },
-  "name": "dotfiles",
-  "private": true,
-  "version": "0.1.0"
+  }
 }

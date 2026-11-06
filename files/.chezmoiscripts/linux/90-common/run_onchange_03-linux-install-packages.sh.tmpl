@@ -2,11 +2,6 @@
 {{- template "env_vars.tmpl" . -}}
 {{- $line := "printf '%*s\\n' \"${COLUMNS:-$(tput cols)}\" '' | tr ' ' '-'" -}}
 
-{{- /* Flatpaks */ -}}
-{{- println "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" -}}
-{{- println "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo" -}}
-{{- println $line -}}
-
 {{- /* Self installing packages */ -}}
 {{- range .common.installer_url -}}
   {{- println "bash -c " ( . | quote) -}}

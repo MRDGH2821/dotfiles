@@ -61,6 +61,7 @@ run = [
 "dnf:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
 "dnf:kcalc" = { env = ["kde"], version = "latest" }
 "dnf:kclock" = { env = ["kde"], version = "latest" }
+"dnf:kde-partitionmanager" = { env = ["kde"], version = "latest" }
 "dnf:keepassxc" = "latest"
 "dnf:kleopatra" = "latest"
 "dnf:libavcodec-freeworld" = "latest"
@@ -74,7 +75,6 @@ run = [
 "dnf:obs-studio-plugin-webkitgtk" = { env = ["laptop"], version = "latest" }
 "dnf:pam-u2f" = "latest"
 "dnf:pamu2fcfg" = "latest"
-"dnf:partitionmanager" = { env = ["kde"], version = "latest" }
 "dnf:plasma-camera" = "latest"
 "dnf:podman" = "latest"
 "dnf:podman-docker" = "latest"

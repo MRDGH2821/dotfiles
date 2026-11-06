@@ -49,6 +49,7 @@ run = [
 "apt:waydroid" = { env = ["tablet"], version = "latest" }
 "apt:waydroid-helper" = { env = ["tablet"], version = "latest" }
 "apt:zsh" = "latest"
+"brew:git-credential-libsecret" = "latest"
 "dnf:discord" = "latest"
 "dnf:espanso-wayland" = "latest"
 "dnf:filelight" = { env = ["kde"], version = "latest" }
@@ -120,10 +121,6 @@ run = [
 "pacman:unzip" = "latest"
 "pacman:waydroid" = { env = ["tablet"], version = "latest" }
 "pacman:waydroid-helper" = { env = ["tablet"], version = "latest" }
-"zerobrew:git-credential-libsecret" = "latest"
-
-[bootstrap.plugins]
-"zerobrew" = "https://github.com/kennyg/mise-zerobrew"
 
 [bootstrap.user]
 login_shell = "zsh"
@@ -257,7 +254,6 @@ git-cliff = "latest"
 "github:infragate/capa" = "latest"
 "github:juliuskreutz/stardb-exporter" = "latest"
 "github:konkers/irminsul" = "latest"
-"github:lucasgelfond/zerobrew" = { rename_exe = "zb", version = "latest" }
 "github:p-arndt/compose-check-updates" = "latest"
 "github:sshine/hashpinner" = "latest"
 glab = "latest"
@@ -292,7 +288,6 @@ typos = "latest"
 typstyle = "latest"
 uv = "latest"
 yq = "latest"
-"zerobrew:git-credential-libsecret" = "latest"
 zoxide = "latest"
 
 [tools.cursor-agent]

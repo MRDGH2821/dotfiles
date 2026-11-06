@@ -10,7 +10,8 @@ waydroid-helper = { copr = "cuteneko/waydroid-helper" }
 
 [bootstrap.hooks.pre-packages]
 run = [
-  "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo"
+  "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo",
+  "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user"
 ]
 
 [bootstrap.packages]
@@ -256,6 +257,7 @@ git-cliff = "latest"
 "github:infragate/capa" = "latest"
 "github:juliuskreutz/stardb-exporter" = "latest"
 "github:konkers/irminsul" = "latest"
+"github:lucasgelfond/zerobrew" = { rename_exe = "zb", version = "latest" }
 "github:p-arndt/compose-check-updates" = "latest"
 "github:sshine/hashpinner" = "latest"
 glab = "latest"

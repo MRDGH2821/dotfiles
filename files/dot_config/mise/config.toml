@@ -49,7 +49,6 @@ run = [
 "apt:waydroid" = { env = ["tablet"], version = "latest" }
 "apt:waydroid-helper" = { env = ["tablet"], version = "latest" }
 "apt:zsh" = "latest"
-"brew:git-credential-libsecret" = "latest"
 "dnf:discord" = "latest"
 "dnf:espanso-wayland" = "latest"
 "dnf:filelight" = { env = ["kde"], version = "latest" }

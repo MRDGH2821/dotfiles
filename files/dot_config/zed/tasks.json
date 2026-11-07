@@ -14,43 +14,65 @@
     "allow_concurrent_runs": false,
     "args": [
       "-c",
-      "'nix fmt || mise run fmt || hk fix || treefmt -vv || prettier --write .'"
+      "'nix fmt || mise run fmt || hk fix || treefmt -vv || oxfmt --write .'"
     ],
     "command": "sh",
     "hide": "on_success",
     "label": "Format files",
     "reveal_target": "center",
     "show_command": true,
-    "tags": ["format"]
+    "tags": [
+      "format"
+    ]
   },
   {
-    "args": ["difftool", "--dir-diff"],
+    "args": [
+      "difftool",
+      "--dir-diff"
+    ],
     "command": "git",
     "hide": "on_success",
     "label": "Meld dir diff",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
-    "args": ["difftool", "\"$ZED_FILE\"", "-y"],
+    "args": [
+      "difftool",
+      "\"$ZED_FILE\"",
+      "-y"
+    ],
     "command": "git",
     "hide": "on_success",
     "label": "Meld file diff",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
-    "args": ["-p", "\"$ZED_WORKTREE_ROOT\""],
+    "args": [
+      "-p",
+      "\"$ZED_WORKTREE_ROOT\""
+    ],
     "command": "lazygit",
     "hide": "on_success",
     "label": "Start Lazygit",
     "reveal_target": "center",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
-    "args": ["\"$ZED_WORKTREE_ROOT\""],
+    "args": [
+      "\"$ZED_WORKTREE_ROOT\""
+    ],
     "command": "sourcegit",
     "hide": "always",
     "label": "Open Sourcegit",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
     "args": [
@@ -61,21 +83,32 @@
     "command": "copier",
     "hide": "on_success",
     "label": "Initialise with copier template",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
-    "args": ["-c", "'copier check-update -q || copier update'"],
+    "args": [
+      "-c",
+      "'copier check-update -q || copier update'"
+    ],
     "command": "sh",
     "hide": "on_success",
     "label": "Update copier template",
-    "tags": ["git"]
+    "tags": [
+      "git"
+    ]
   },
   {
-    "args": ["mega-linter-runner"],
+    "args": [
+      "mega-linter-runner"
+    ],
     "command": "bunx",
     "hide": "on_success",
     "label": "Run Mega Linter",
     "reveal_target": "center",
-    "tags": ["lint"]
+    "tags": [
+      "lint"
+    ]
   }
 ]

@@ -1,7 +1,5 @@
 [commands]
 "Antidot rules" = "antidot update"
-"Install-Release Pkgs Upgrade" = "ir upgrade --pkg -y"
-"Install-Release Upgrade" = "ir upgrade -y"
 
 [firmware]
 upgrade = true

@@ -255,6 +255,7 @@ git-cliff = "latest"
 "github:konkers/irminsul" = "latest"
 "github:p-arndt/compose-check-updates" = "latest"
 "github:sshine/hashpinner" = "latest"
+"github:tawan475/teyvat.me-capture" = "latest"
 glab = "latest"
 herdr = "latest"
 hk = { version = "latest", workflow = "release.yml" }

@@ -48,6 +48,12 @@ diffFilter=delta --color-only
 [includeIf "hasconfig:remote.*.url:https://gitlab.com/axisnexa/**"]
 path=~/.config/git/config-axisnexa
 
+[includeIf "hasconfig:remote.*.url:https://github.com/axisnexa/**"]
+path=~/.config/git/config-axisnexa
+
+[includeIf "hasconfig:remote.*.url:https://github.com/AxisNexa/**"]
+path=~/.config/git/config-axisnexa
+
 [includeIf "gitdir/i:**/AxisNexa/"]
 path=~/.config/git/config-axisnexa
 

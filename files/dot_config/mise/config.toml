@@ -219,6 +219,7 @@ run = [
 
 [tools]
 age = "latest"
+android-sdk = "latest"
 antigravity-cli = "latest"
 "aqua:acheronfail/repgrep" = "latest"
 "aqua:cantino/mcfly" = "latest"

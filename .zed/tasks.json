@@ -17,6 +17,14 @@
   },
   {
     "allow_concurrent_runs": false,
+    "args": ["bootstrap"],
+    "command": "mise",
+    "hide": "on_success",
+    "label": "Mise bootstrap",
+    "reveal_target": "center"
+  },
+  {
+    "allow_concurrent_runs": false,
     "args": ["update"],
     "command": "soar",
     "hide": "on_success",

@@ -20,6 +20,8 @@ run = [
 "apt:filelight" = { env = ["kde"], version = "latest" }
 "apt:firefox" = "latest"
 "apt:flatpak" = "latest"
+"apt:gamemode" = "latest"
+"apt:gamescope" = "latest"
 "apt:git" = "latest"
 "apt:git-delta" = "latest"
 "apt:gnupg2" = "latest"
@@ -54,6 +56,8 @@ run = [
 "dnf:filelight" = { env = ["kde"], version = "latest" }
 "dnf:firefox" = "latest"
 "dnf:flatpak" = "latest"
+"dnf:gamemode" = "latest"
+"dnf:gamescope" = "latest"
 "dnf:git" = "latest"
 "dnf:git-credential-libsecret" = "latest"
 "dnf:git-delta" = "latest"
@@ -102,6 +106,8 @@ run = [
 "pacman:discord" = "latest"
 "pacman:discover" = { env = ["kde"], version = "latest" }
 "pacman:filelight" = { env = ["kde"], version = "latest" }
+"pacman:gamemode" = "latest"
+"pacman:gamescope" = "latest"
 "pacman:gnupg" = "latest"
 "pacman:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
 "pacman:kcalc" = { env = ["kde"], version = "latest" }

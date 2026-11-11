@@ -239,9 +239,11 @@ cargo-binstall = "latest"
 "cargo:https://github.com/vlaci/git-agecrypt" = "latest"
 "cargo:ludusavi" = "latest"
 chezmoi = "latest"
+claude-code = { minimum_release_age = "0", version = "latest" }
 cocogitto = "latest"
 codex = { minimum_release_age = "0", version = "latest" }
 copier = "latest"
+copilot = { minimum_release_age = "0", version = "latest" }
 cspell = "latest"
 direnv = "latest"
 fastfetch = "latest"
@@ -257,6 +259,7 @@ git-cliff = "latest"
 "github:infragate/capa" = "latest"
 "github:juliuskreutz/stardb-exporter" = "latest"
 "github:konkers/irminsul" = "latest"
+"github:lidge-jun/opencodex" = { minimum_release_age = "0", version = "latest" }
 "github:p-arndt/compose-check-updates" = "latest"
 "github:sshine/hashpinner" = "latest"
 "github:tawan475/teyvat.me-capture" = { minimum_release_age = "0", version = "latest" }

@@ -17,7 +17,7 @@
       "'nix fmt || mise run fmt || hk fix || treefmt -vv || oxfmt --write .'"
     ],
     "command": "sh",
-    "hide": "on_success",
+    "hide": "never",
     "label": "Format files",
     "reveal_target": "center",
     "show_command": true,

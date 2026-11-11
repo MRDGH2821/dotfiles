@@ -217,7 +217,7 @@ run = [
 [tools]
 age = "latest"
 android-sdk = "latest"
-antigravity-cli = "latest"
+antigravity-cli = { minimum_release_age = "0", version = "latest" }
 "aqua:acheronfail/repgrep" = "latest"
 "aqua:cantino/mcfly" = "latest"
 "aqua:google/keep-sorted" = "latest"
@@ -240,7 +240,7 @@ cargo-binstall = "latest"
 "cargo:ludusavi" = "latest"
 chezmoi = "latest"
 cocogitto = "latest"
-codex = "latest"
+codex = { minimum_release_age = "0", version = "latest" }
 copier = "latest"
 cspell = "latest"
 direnv = "latest"
@@ -293,6 +293,7 @@ zoxide = "latest"
 
 [tools.cursor-agent]
 bin_path = "dist-package"
+minimum_release_age = "0"
 strip_components = "0"
 url = 'https://downloads.cursor.com/lab/{{ version }}/{{ os(macos="darwin") }}/{{ arch(arm64="arm64", x64="x64") }}/agent-cli-package.tar.gz'
 version = "latest"
@@ -300,6 +301,7 @@ version_list_url = "https://cursor.com/install"
 version_regex = 'downloads\.cursor\.com/lab/([0-9]{4}\.[0-9]{2}\.[0-9]{2}-[0-9a-f]+)/'
 
 [tools.oh-my-pi]
+minimum_release_age = "0"
 rename_exe = "omp"
 version = "latest"
 

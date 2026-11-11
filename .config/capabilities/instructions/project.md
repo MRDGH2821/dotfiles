@@ -12,7 +12,7 @@ editable sources outside `.agents/rules/`; Capa prunes that generated directory.
 
 Read the relevant rule before acting:
 
-- Branching or committing: `.config/capabilities/rules/commits.md`.
+- Branching, committing, or creating a pull request: `.config/capabilities/rules/commits.md`.
 - For an AI-assisted commit, also read `.config/capabilities/rules/ai-co-author.md`.
 - Recording AI-assisted work: `.config/capabilities/rules/ai-logs.md`.
 - Reviewing on behalf of a human: `.config/capabilities/rules/ai-reviews.md`.

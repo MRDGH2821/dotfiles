@@ -10,7 +10,11 @@ agents:
     type: local
 options:
   agentActivity: true
-  requiresCommands: []
+  requiresCommands:
+    - cli: mise
+      description: Dev tools, env vars, and tasks in one CLI
+    - cli: hk
+      description: Git hooks for linters and formatters
   toolExposure: search
 plugins:
   - def:
@@ -19,9 +23,14 @@ plugins:
     id: mattpocock-skills
     type: github
   - def:
-      description: "Core skills library: TDD, debugging, collaboration patterns, and proven techniques"
-      repo: obra/superpowers
-    id: superpowers
+      description: Forces the laziest solution that works. YAGNI, stdlib first, one line over fifty.
+      repo: DietrichGebert/ponytail
+    id: ponytail
+    type: github
+  - def:
+      description: Talk like caveman. Cut filler. Keep technical details explicit.
+      repo: JuliusBrussee/caveman
+    id: caveman
     type: github
   - def:
       description: Architecture analysis, code quality, and development workflow skills by Ovid
@@ -40,7 +49,6 @@ providers:
   - codex
   - cursor
   - kiro-cli
-  - opencode
   # keep-sorted end
 rules:
   - def:

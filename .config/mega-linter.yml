@@ -32,6 +32,12 @@ JSON_PRETTIER_PRE_COMMANDS:
     secured_env: true
     tag: default
 MARKDOWN_DEFAULT_STYLE: rumdl
+POST_COMMANDS:
+  - command: bun fmt
+    continue_if_failed: true
+    cwd: workspace
+    secured_env: true
+    tag: default
 PYTHON_DEFAULT_STYLE: ruff
 REPOSITORY_KINGFISHER_ARGUMENTS: --exclude node_modules --exclude apm_modules
 SHOW_ELAPSED_TIME: true

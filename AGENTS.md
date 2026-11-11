@@ -2,15 +2,28 @@
 
 This file provides guidance for AI coding assistants working with this project.
 
-If none of the skills or tools specified in `.config/mise/config.toml` are available, run the following commands and alert the user to reload the agent.
+Before starting a task, verify that the skills required for it are available in
+the current session, every tool listed in `.config/mise/config.toml` is
+installed, and the MCP servers required for it are reachable through Capa MCP.
+Configuration alone does not prove availability.
 
-```sh
-mise trust
-mise install
-mise run prepare
-```
+If a required skill or MCP server is unavailable, or any configured mise tool is
+not installed:
 
-Refuse to do anything until `mise run prepare` has run atleast once and the agent is reloaded with the skills & MCP servers as specified in `capabilities.yaml`.
+1. Stop before doing task work and tell the user what is missing.
+2. Offer these recovery commands from the repository root:
+
+   ```sh
+   mise trust
+   mise install
+   mise run prepare
+   ```
+
+3. Wait for the user to complete setup and reload the agent session.
+4. After reload, verify availability again. Continue only when the required
+   skills are visible, every configured mise tool is installed, and the
+   required MCP servers are reachable.
+
 MCP servers should be accessible via Capa MCP.
 
 <!-- capa:start:rule:karpathy-guidelines -->
@@ -105,6 +118,25 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 Before creating a branch, follow the branch naming strategy in the project-root
 `CONTRIBUTING.md` (`#branch-naming-strategy`).
 
+Before creating a pull or merge request, check whether the branch has an open
+request and whether its name follows the branch-naming strategy.
+
+- If an open request already exists, leave the branch name unchanged and notify
+  the user if it does not comply.
+- Treat common names such as `main`, `master`, and release branches as
+  protected. Leave protected branches unchanged and ask the user how to proceed.
+- For other branches, check remote protection. If protection cannot be
+  determined, ask the user rather than assume the branch is unprotected.
+- For an unprotected, non-compliant branch without an open request, propose a
+  compliant name and wait for approval. If declined, stop unless the user
+  explicitly authorizes an exception.
+- For a pushed branch, explain that a native remote rename removes the old
+  remote name and ask for approval before using it. After approval, use a native
+  rename when available and update the local branch and upstream.
+- If native remote rename is unavailable, propose pushing the new name while
+  retaining the old remote branch. Obtain separate approval before deleting the
+  old remote branch.
+
 ### Commit Messages
 
 Every commit MUST be atomic (one logical change), and every commit message MUST use Conventional Commits format: `<type>(<scope>): <description>`.
@@ -137,7 +169,7 @@ editable sources outside `.agents/rules/`; Capa prunes that generated directory.
 
 Read the relevant rule before acting:
 
-- Branching or committing: `.config/capabilities/rules/commits.md`.
+- Branching, committing, or creating a pull request: `.config/capabilities/rules/commits.md`.
 - For an AI-assisted commit, also read `.config/capabilities/rules/ai-co-author.md`.
 - Recording AI-assisted work: `.config/capabilities/rules/ai-logs.md`.
 - Reviewing on behalf of a human: `.config/capabilities/rules/ai-reviews.md`.

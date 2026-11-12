@@ -270,7 +270,6 @@ lazygit = "latest"
 llmfit = "latest"
 ls-lint = "latest"
 mr-boxington = { version = "latest", workflow = "release.yml@refs/heads/main" }
-node = "latest"
 "npm:memorix" = "latest"
 "npm:sort-package-json" = "latest"
 "packslip:sweepies/count-patchula" = "latest"

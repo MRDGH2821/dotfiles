@@ -12,7 +12,7 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME:-${HOME}/.cache}"
 
 # mise (must come before antidot: antidot is a mise-installed tool)
 export PATH="${HOME}/.local/share/mise/shims:${PATH}"
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
 # soar
 export PATH="${XDG_DATA_HOME:-${HOME}/.local/share}/soar/bin:${PATH}"
@@ -44,3 +44,7 @@ export PAGER="less"
 if command -v getenforce &>/dev/null; then
     export SELINUX_MODE="${SELINUX_MODE:-$(getenforce)}"
 fi
+
+# OpenCodex
+# shellcheck source=/dev/null
+. "${HOME}/.opencodex/codex-shell-env.sh"

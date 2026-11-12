@@ -8,7 +8,6 @@ pager=/usr/bin/delta --side-by-side --dark
 
 [init]
 defaultBranch=main
-templateDir=~/.config/git/templates
 
 [merge]
 ff=only

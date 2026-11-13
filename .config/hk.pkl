@@ -99,6 +99,23 @@ local config_linters = new Group {
     ["pkl_format"] = Builtins.pkl_format
     ["tombi"] = (Builtins.tombi) { depends = "tombi_format" }
     ["tombi_format"] = Builtins.tombi_format
+    ["xmllint"] = (Builtins.xmllint) {
+      // shortcut: xmllint can alter mixed-content whitespace; use a preservation-aware formatter when XML text depends on exact spacing.
+      glob = List("**/*.xml", "**/dolphinui.rc") // cspell:ignore dolphinui
+      fix =
+        """
+        for file in {{files}}; do
+        tmp=$(mktemp "${file}.tmp.XXXXXX") || exit 1
+        if XMLLINT_INDENT="  " xmllint --format --encode UTF-8 --output "$tmp" "$file" &&
+          mv "$tmp" "$file"; then
+        :
+        else
+        rm -f "$tmp"
+        exit 1
+        fi
+        done
+        """
+    }
   }
 }
 

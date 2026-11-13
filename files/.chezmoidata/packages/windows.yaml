@@ -46,7 +46,6 @@ windows:
     - ONLYOFFICE.DesktopEditors
     - Oven-sh.Bun
     - pCloudAG.pCloudDrive
-    - Rustlang.Rustup
     - sharkdp.bat
     - topgrade-rs.topgrade
     - universal.input-overlay

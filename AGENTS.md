@@ -2,29 +2,32 @@
 
 This file provides guidance for AI coding assistants working with this project.
 
-Before starting a task, verify that the skills required for it are available in
-the current session, every tool listed in `.config/mise/config.toml` is
-installed, and the MCP servers required for it are reachable through Capa MCP.
-Configuration alone does not prove availability.
+## Check task dependencies
 
-If a required skill or MCP server is unavailable, or any configured mise tool is
-not installed:
+Identify the skills, mise tools, and MCP tools this task needs. Check only those
+dependencies. Missing unrelated tools must not block the task.
 
-1. Stop before doing task work and tell the user what is missing.
-2. Offer these recovery commands from the repository root:
+### Check Capa MCP
 
-   ```sh
-   mise trust
-   mise install
-   mise run prepare
-   ```
+This project uses `toolExposure: search`. Capa exposes `search` and `call_tool`;
+upstream tools are discovered on demand and may not appear by their own names.
 
-3. Wait for the user to complete setup and reload the agent session.
-4. After reload, verify availability again. Continue only when the required
-   skills are visible, every configured mise tool is installed, and the
-   required MCP servers are reachable.
+1. Call Capa `search` with the task, server, or tool name.
+2. If search returns a matching tool, Capa MCP is reachable and the tool is
+   registered. Use `call_tool` to run the task's operation.
+3. If search responds but finds no match, Capa MCP is reachable, but the tool
+   was not found. Search by its configured name or description before reporting
+   it unavailable.
+4. If `search` is missing or fails before returning results, report that Capa
+   MCP is unavailable in this agent session. This does not prove the Capa
+   service is stopped.
+5. If `call_tool` fails, report the tool and exact error. Do not claim the
+   server is down unless the error confirms that.
 
-MCP servers should be accessible via Capa MCP.
+Do not probe the local Capa URL with shell `curl`; the shell may not share the
+agent's network. Continue work that does not need the unavailable capability.
+Recommend `mise trust`, `mise install`, or `mise run prepare` only when setup is
+the confirmed cause of a required dependency being unavailable.
 
 <!-- capa:start:rule:karpathy-guidelines -->
 ---
@@ -118,16 +121,19 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 Before creating a branch, follow the branch naming strategy in the project-root
 `CONTRIBUTING.md` (`#branch-naming-strategy`).
 
+Before committing, treat the repository's default branch, `main`, `master`,
+`dev`, `develop`, `release`, and branches under `release/` as shared branches.
+If the current branch is shared, create a new branch using the naming strategy
+and commit there, preserving existing working-tree changes.
+
 Before creating a pull or merge request, check whether the branch has an open
 request and whether its name follows the branch-naming strategy.
 
 - If an open request already exists, leave the branch name unchanged and notify
   the user if it does not comply.
-- Treat common names such as `main`, `master`, and release branches as
-  protected. Leave protected branches unchanged and ask the user how to proceed.
-- For other branches, check remote protection. If protection cannot be
-  determined, ask the user rather than assume the branch is unprotected.
-- For an unprotected, non-compliant branch without an open request, propose a
+- Use the existing working branch for the request. Do not query remote branch
+  protection solely to check compliance with the naming strategy.
+- For a non-compliant branch without an open request, propose a
   compliant name and wait for approval. If declined, stop unless the user
   explicitly authorizes an exception.
 - For a pushed branch, explain that a native remote rename removes the old
@@ -136,6 +142,8 @@ request and whether its name follows the branch-naming strategy.
 - If native remote rename is unavailable, propose pushing the new name while
   retaining the old remote branch. Obtain separate approval before deleting the
   old remote branch.
+- If a push is rejected because the branch is protected, create a new working
+  branch and push it instead.
 
 ### Commit Messages
 

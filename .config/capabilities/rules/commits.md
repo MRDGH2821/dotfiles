@@ -5,16 +5,19 @@
 Before creating a branch, follow the branch naming strategy in the project-root
 `CONTRIBUTING.md` (`#branch-naming-strategy`).
 
+Before committing, treat the repository's default branch, `main`, `master`,
+`dev`, `develop`, `release`, and branches under `release/` as shared branches.
+If the current branch is shared, create a new branch using the naming strategy
+and commit there, preserving existing working-tree changes.
+
 Before creating a pull or merge request, check whether the branch has an open
 request and whether its name follows the branch-naming strategy.
 
 - If an open request already exists, leave the branch name unchanged and notify
   the user if it does not comply.
-- Treat common names such as `main`, `master`, and release branches as
-  protected. Leave protected branches unchanged and ask the user how to proceed.
-- For other branches, check remote protection. If protection cannot be
-  determined, ask the user rather than assume the branch is unprotected.
-- For an unprotected, non-compliant branch without an open request, propose a
+- Use the existing working branch for the request. Do not query remote branch
+  protection solely to check compliance with the naming strategy.
+- For a non-compliant branch without an open request, propose a
   compliant name and wait for approval. If declined, stop unless the user
   explicitly authorizes an exception.
 - For a pushed branch, explain that a native remote rename removes the old
@@ -23,6 +26,8 @@ request and whether its name follows the branch-naming strategy.
 - If native remote rename is unavailable, propose pushing the new name while
   retaining the old remote branch. Obtain separate approval before deleting the
   old remote branch.
+- If a push is rejected because the branch is protected, create a new working
+  branch and push it instead.
 
 ### Commit Messages
 

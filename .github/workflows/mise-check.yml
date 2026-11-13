@@ -18,7 +18,7 @@ jobs:
       - run: mise run prepare-ci
       - run: mise run check
 name: Mise Check
-on: # yamllint disable-line rule:truthy
+on: # ryl disable-line rule:truthy
   pull_request:
     branches:
       - main

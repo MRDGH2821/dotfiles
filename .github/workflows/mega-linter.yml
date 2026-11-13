@@ -176,7 +176,7 @@ jobs:
 name: MegaLinter
 # Trigger mega-linter at every push. Action will also be visible from
 # Pull Requests to main
-on: # yamllint disable-line rule:truthy
+on: # ryl disable-line rule:truthy
   pull_request:
     branches:
       - main

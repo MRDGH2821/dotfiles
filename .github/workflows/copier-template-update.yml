@@ -83,7 +83,7 @@ jobs:
           name: copier-update-preview
           path: ${{ runner.temp }}/copier-preview.md
 name: Copier Template Update
-on: # yamllint disable-line rule:truthy
+on: # ryl disable-line rule:truthy
   schedule:
     - cron: 0 9 * * 1
   workflow_dispatch:

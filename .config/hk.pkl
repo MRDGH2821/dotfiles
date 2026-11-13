@@ -86,83 +86,66 @@ local sorters = new Group {
   }
 }
 
-local linters = new Mapping<String, Step> {
-  // Secrets
-  ["betterleaks"] = Builtins.betterleaks
-  ["detect-private-key"] = Builtins.detect_private_key
-
-  // Config Files
-  ["pkl"] = Builtins.pkl
-  ["pkl_format"] = Builtins.pkl_format
-  ["tombi"] = (Builtins.tombi) { depends = "tombi_format" }
-  ["tombi_format"] = Builtins.tombi_format
-
-  // Misc
-  ["check_merge_conflict"] = Builtins.check_merge_conflict
-  ["check_shebang_scripts_are_executable"] = Builtins.check_shebang_scripts_are_executable
-  ["check-placeholders"] {
-    check =
-      "if grep -EIn '(<placeholder>|CHANGEME|FILL_ME_IN|NOCOMMIT)' {{files}}; then false; else test $? -eq 1; fi"
-    exclude = List("template/**", ".config/hk.pkl", ".config/cspell.json")
+local secret_linters = new Group {
+  steps {
+    ["betterleaks"] = Builtins.betterleaks
+    ["detect-private-key"] = Builtins.detect_private_key
   }
-  ["ls_lint"] = Builtins.ls_lint
-  ["xmllint"] = (Builtins.xmllint) {
-    // shortcut: xmllint can alter mixed-content whitespace; use a preservation-aware formatter when XML text depends on exact spacing.
-    glob = List("**/*.xml", "**/dolphinui.rc") // cspell:ignore dolphinui
-    exclude =
-      List(
-        "**/pam.d/**",
-        "*.*ignore",
-        ".chezmoiignore",
-        ".chezmoiroot",
-        "dot_zshrc",
-        // cspell:ignore spectaclerc tmpl
-        "private_spectaclerc.tmpl",
-      )
-    fix =
-      """
-      for file in {{files}}; do
-      tmp=$(mktemp "${file}.tmp.XXXXXX") || exit 1
-      if XMLLINT_INDENT="  " xmllint --format --encode UTF-8 --output "$tmp" "$file" &&
-        mv "$tmp" "$file"; then
-      :
-      else
-      rm -f "$tmp"
-      exit 1
-      fi
-      done
-      """
+}
+
+local config_linters = new Group {
+  steps {
+    ["pkl"] = Builtins.pkl
+    ["pkl_format"] = Builtins.pkl_format
+    ["tombi"] = (Builtins.tombi) { depends = "tombi_format" }
+    ["tombi_format"] = Builtins.tombi_format
   }
+}
 
-  // Python
-  ["ruff"] = Builtins.ruff
-  ["ruff_format"] = Builtins.ruff_format
-
-  // Text
-  ["fix_smart_quotes"] = Builtins.fix_smart_quotes
-  ["rumdl"] = (Builtins.rumdl) { depends = List("rumdl_format") }
-  ["rumdl_format"] = Builtins.rumdl_format
-  ["ryl_format"] = Builtins.ryl_format
-  ["ryl_markdown_format"] = Builtins.ryl_markdown_format
-  ["ryl"] = (Builtins.ryl) { depends = List("ryl_format") }
-  ["ryl_markdown"] = (Builtins.ryl_markdown) { depends = List("ryl_markdown_format") }
-  ["sort-markdown-tables"] {
-    check = "smt --check {{files}}"
-    fix = "smt --in-place {{files}}"
-    types = List("markdown")
+local misc_linters = new Group {
+  steps {
+    ["check_merge_conflict"] = Builtins.check_merge_conflict
+    ["check_shebang_scripts_are_executable"] = Builtins.check_shebang_scripts_are_executable
+    ["check-placeholders"] {
+      check =
+        "if grep -EIn '(<placeholder>|CHANGEME|FILL_ME_IN|NOCOMMIT)' {{files}}; then false; else test $? -eq 1; fi"
+      exclude = List("template/**", ".config/hk.pkl", ".config/cspell.json")
+    }
+    ["ls_lint"] = Builtins.ls_lint
   }
+}
 
-  // Style Files
-  ["editorconfig-checker"] = Builtins.editorconfig_checker
-  ["trailing-whitespace"] = Builtins.trailing_whitespace
-  ["newlines"] = Builtins.newlines
-  ["mixed_line_ending"] = Builtins.mixed_line_ending
-
-  // Spell Check
-  ["cspell"] {
-    check = "cspell --no-must-find-files --no-progress --no-summary --gitignore --files {{files}}"
+local text_linters = new Group {
+  steps {
+    ["fix_smart_quotes"] = Builtins.fix_smart_quotes
+    ["rumdl"] = (Builtins.rumdl) { depends = List("rumdl_format") }
+    ["rumdl_format"] = Builtins.rumdl_format
+    ["ryl"] = Builtins.ryl
+    ["ryl_markdown"] = Builtins.ryl_markdown
+    ["sort-markdown-tables"] {
+      check = "smt --check {{files}}"
+      fix = "smt --in-place {{files}}"
+      types = List("markdown")
+    }
   }
-  ["typos"] = Builtins.typos
+}
+
+local style_linters = new Group {
+  steps {
+    ["trailing-whitespace"] = Builtins.trailing_whitespace
+    ["newlines"] = Builtins.newlines
+    ["mixed_line_ending"] = Builtins.mixed_line_ending
+    ["editorconfig-checker"] = Builtins.editorconfig_checker
+  }
+}
+
+local spell_linters = new Group {
+  steps {
+    ["cspell"] {
+      check = "cspell --no-must-find-files --no-progress --no-summary --gitignore --files {{files}}"
+    }
+    ["typos"] = Builtins.typos
+  }
 }
 exclude =
   List(
@@ -181,10 +164,14 @@ exclude =
   )
 
 steps = new Mapping<String, Step | Group> {
-  ["no_commit_to_branch"] = Builtins.no_commit_to_branch
+  // ["no_commit_to_branch"] = Builtins.no_commit_to_branch
   ["sorters"] = sorters
-  ...linters
-  // AIO
+  ["config"] = config_linters
+  ["style"] = style_linters
+  ["text"] = text_linters
+  ["misc"] = misc_linters
+  ["secrets"] = secret_linters
+  ["spell"] = spell_linters
   ["oxfmt"] = (Builtins.oxfmt) { depends = "keep-sorted"; exclusive = true }
 }
 

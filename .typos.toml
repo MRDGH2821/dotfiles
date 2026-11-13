@@ -9,6 +9,7 @@ extend-exclude = [
   "**/.mise/**",
   "**/locks/**",
   "*.lock",
+  ".config/cspell.json",
   "go.sum",
   "npm-shrinkwrap.json",
   "package-lock.json",

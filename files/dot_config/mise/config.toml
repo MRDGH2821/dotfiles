@@ -141,6 +141,9 @@ use_git_credentials = true
 [settings.self_update]
 auto = true
 
+[shell_alias]
+"ir" = "install-release"
+
 [tasks.ai-setup-global]
 # tombi: format.rules.array-values-order = "ascending"
 run = [
@@ -254,7 +257,7 @@ fzf = "latest"
 gh = "latest"
 git-cliff = "latest"
 "github:Kirskov/Shapin" = { rename_exe = "shapin", version = "latest" }
-"github:Rishang/install-release" = { rename_exe = "ir", version = "latest" }
+"github:Rishang/install-release" = "latest"
 "github:doron-cohen/antidot" = "latest"
 "github:infragate/capa" = "latest"
 "github:juliuskreutz/stardb-exporter" = "latest"

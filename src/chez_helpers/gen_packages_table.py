@@ -77,7 +77,7 @@ CARGO = "🦀"  # cargo install (from crates.io source)
 CARGO_BINSTALL = "🦀💻"  # cargo binstall (downloads precompiled binary)
 CARGO_GIT = "🦀🔗"  # cargo install --git (from a git repo)
 NIX = "❄️"  # nix profile install (from nixpkgs or flakes)
-MISE = "🧰"  # mise tools.* (version-managed dev tool, same on all Linux distros)
+MISE = "🧰"  # mise: [tools] entries, and suffix on [bootstrap.packages] entries
 
 # These packages are installed via URL on the given distro, keyed by URL fragment
 # Maps (URL fragment substring) → display name
@@ -291,6 +291,45 @@ def _parse_mise_toml(
 
 
 # ---------------------------------------------------------------------------
+# Mise bootstrap.packages parser
+# ---------------------------------------------------------------------------
+
+# [bootstrap.packages] key prefixes → distro column(s) they install into.
+# 'apt' covers both Debian and Ubuntu; 'flatpak-user' is distro-agnostic.
+_BOOTSTRAP_PREFIX_DISTROS: dict[str, tuple[str, ...]] = {
+    "apt": ("debian", "ubuntu"),
+    "dnf": ("fedora",),
+    "pacman": ("arch",),
+    "flatpak-user": _ALL_LINUX,
+}
+
+
+def _parse_mise_bootstrap(
+    path: Path,
+    aliases: dict[str, str],
+    packages: dict[str, dict[str, str]],
+) -> None:
+    """Parse mise's config.toml [bootstrap.packages] table.
+
+    Keys look like 'apt:git', 'dnf:steam', 'pacman:steam',
+    'flatpak-user:org.gnome.Firmware'. Values may be a version string or a
+    table with 'env' conditions — only presence matters for the table.
+    """
+    data = tomllib.loads(path.read_text(encoding="utf-8"))
+    for key in data.get("bootstrap", {}).get("packages", {}):
+        prefix, _, pkg_id = key.partition(":")
+        if not pkg_id:
+            continue
+        distros = _BOOTSTRAP_PREFIX_DISTROS.get(prefix)
+        if distros is None:
+            continue
+        # Bootstrapped via mise: suffix the mise marker onto the emoji.
+        emoji = (FLATPAK if prefix == "flatpak-user" else NATIVE) + MISE
+        display = _resolve(pkg_id, aliases)
+        for d in distros:
+            _set_if_better(packages, display, d, emoji)
+
+# ---------------------------------------------------------------------------
 # Windows YAML parser
 # ---------------------------------------------------------------------------
 
@@ -435,6 +474,10 @@ def main() -> None:
     # 7. Parse mise's config.toml [tools] — applies to all Linux distros
     if MISE_TOML.exists():
         _parse_mise_toml(MISE_TOML, aliases, packages)
+
+    # 7b. mise [bootstrap.packages]: per-distro native + user-flatpak
+    if MISE_TOML.exists():
+        _parse_mise_bootstrap(MISE_TOML, aliases, packages)
 
     # 8. Parse soar (FALLBACK — fills slots not already set by install files)
     if SOAR_TOML.exists():

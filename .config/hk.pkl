@@ -101,7 +101,7 @@ local config_linters = new Group {
     ["tombi_format"] = Builtins.tombi_format
     ["xmllint"] = (Builtins.xmllint) {
       // shortcut: xmllint can alter mixed-content whitespace; use a preservation-aware formatter when XML text depends on exact spacing.
-      glob = List("**/*.xml", "**/dolphinui.rc") // cspell:ignore dolphinui
+      glob = List("**/*.xml", "**/dolphinui.rc", "**/fontconfig/**/*.conf") // cspell:ignore dolphinui
       fix =
         """
         for file in {{files}}; do

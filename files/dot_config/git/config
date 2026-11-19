@@ -4,7 +4,7 @@ gpgsign=true
 [core]
 autocrlf=false
 editor=zed -n --wait
-pager=/usr/bin/delta --side-by-side --dark
+pager=!/usr/bin/env delta --side-by-side --dark
 
 [init]
 defaultBranch=main
@@ -42,7 +42,7 @@ helper=libsecret
 helper=oauth
 
 [interactive]
-diffFilter=delta --color-only
+diffFilter=!/usr/bin/env delta --color-only
 
 [includeIf "hasconfig:remote.*.url:https://gitlab.com/axisnexa/**"]
 path=~/.config/git/config-axisnexa

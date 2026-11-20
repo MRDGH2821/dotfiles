@@ -14,6 +14,7 @@ ignore:
   - "**/.claude/**"
   - "**/.codex/**"
   - "**/.cursor/**"
+  - "**/.kiro/**"
   - "**/.opencode/**"
   - "**/.worktrees/**"
   - .git

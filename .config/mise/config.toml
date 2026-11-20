@@ -66,29 +66,28 @@ interactive = true
 run = ["bun install", { task = "ai-setup" }]
 
 [tools]
-"aqua:google/keep-sorted" = "0.10.0"
+"aqua:google/keep-sorted" = "0.11.0"
 "aqua:owenlamont/ryl" = "0.29.0"
-betterleaks = "1.10.0"
+betterleaks = "1.10.1"
 bun = "1.4.4"
 cocogitto = "7.0.0"
 cspell = "10.4.1"
 editorconfig-checker = "4.0.2"
-gh = "2.103.3"
+gh = "2.104.0"
 git-cliff = "2.14.2"
 "github:MRDGH2821/Sort-Markdown-Tables" = "0.6.0"
 "github:infragate/capa" = "2.4.0"
 hk = { version = "2.12.0", workflow = "release.yml" }
 ls-lint = "2.3.2"
-oxfmt = "0.78.0"
 pkl = "0.33.0"
 "pypi:lorenzwalthert/gitignore-tidy" = "latest"
 "pypi:toml-sort" = "0.25.0"
 python = "latest"
 ruff = "0.17.4"
-rumdl = "0.3.3"
+rumdl = "0.3.4"
 tombi = "1.11.2"
-typos = "1.52.1"
-uv = "0.13.7"
+typos = "1.52.2"
+uv = "0.13.8"
 yq = "4.54.3"
 
 [[watch_files]]

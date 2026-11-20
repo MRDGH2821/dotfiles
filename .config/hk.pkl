@@ -1,6 +1,6 @@
-amends "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Builtins.pkl"
 
 local sorters = new Group {
   steps {
@@ -37,8 +37,8 @@ local sorters = new Group {
         """
     }
     ["keep-sorted"] {
-      check = "keep-sorted --mode lint {{files}}"
-      fix = "keep-sorted --mode fix {{files}}"
+      check = "keep-sorted --allow-no-files --mode lint {{files}}"
+      fix = "keep-sorted --allow-no-files --mode fix {{files}}"
     }
     ["toml-sort"] {
       exclude = List("**/tombi.toml")
@@ -164,6 +164,85 @@ local spell_linters = new Group {
     ["typos"] = Builtins.typos
   }
 }
+
+local bun_fmt = new Step {
+  check = new Command {
+    argv =
+      List(
+        "bun",
+        "fmt",
+        "--check",
+        "--no-error-on-unmatched-pattern",
+        "--log-level=silent",
+        "{{files}}",
+      )
+  }
+  check_list_files = new Command {
+    argv =
+      List(
+        "bun",
+        "fmt",
+        "--list-different",
+        "--log-level=silent",
+        "{{files}}",
+      )
+  }
+  fix = new Command {
+    argv =
+      List(
+        "bun",
+        "fmt",
+        "--no-error-on-unmatched-pattern",
+        "--log-level=silent",
+        "{{files}}",
+      )
+  }
+  depends = "keep-sorted"
+  exclusive = true
+  glob =
+    List(
+      // JS/TS
+      "**/*.js",
+      "**/*.mjs",
+      "**/*.cjs",
+      "**/*.ts",
+      "**/*.mts",
+      "**/*.cts",
+      // React
+      "**/*.jsx",
+      "**/*.tsx",
+      "**/*.mdx",
+      // Frontend Frameworks
+      "**/*.vue",
+      "**/*.svelte",
+      // JSON
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.json5",
+      // YAML
+      "**/*.yaml",
+      "**/*.yml",
+      // TOML
+      "**/*.toml",
+      // Markdown
+      "**/*.md",
+      "**/*.markdown",
+      // HTML
+      "**/*.html",
+      "**/*.htm",
+      // CSS
+      "**/*.css",
+      "**/*.scss",
+      "**/*.less",
+      // GraphQL
+      "**/*.graphql",
+      "**/*.gql",
+      // Handlebars
+      "**/*.handlebars",
+      "**/*.hbs",
+    )
+}
+
 exclude =
   List(
     // keep-sorted start
@@ -181,7 +260,6 @@ exclude =
   )
 
 steps = new Mapping<String, Step | Group> {
-  // ["no_commit_to_branch"] = Builtins.no_commit_to_branch
   ["sorters"] = sorters
   ["config"] = config_linters
   ["style"] = style_linters
@@ -189,10 +267,20 @@ steps = new Mapping<String, Step | Group> {
   ["misc"] = misc_linters
   ["secrets"] = secret_linters
   ["spell"] = spell_linters
-  ["oxfmt"] = (Builtins.oxfmt) { depends = "keep-sorted"; exclusive = true }
+  ["bun_fmt"] = bun_fmt
 }
 
 hooks {
+  ["pre-commit"] {
+    steps {
+      ["no_commit_to_branch"] = Builtins.no_commit_to_branch
+    }
+  }
+  ["pre-push"] {
+    steps {
+      ["no_commit_to_branch"] = Builtins.no_commit_to_branch
+    }
+  }
   ["commit-msg"] {
     steps {
       ["check_conventional_commit"] = Builtins.check_conventional_commit

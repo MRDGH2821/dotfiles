@@ -1,0 +1,21 @@
+[fmt]
+"ignorePatterns" = [
+  "**/*.lock",
+  "**/.mise/**",
+  "**/AGENTS.md",
+  "**/CLAUDE.md",
+  "**/go.sum",
+  "**/locks/**",
+  "**/npm-shrinkwrap.json",
+  "**/package-lock.json",
+  "**/pnpm-lock.yaml"
+]
+"jsdoc" = true
+"printWidth" = 80
+"singleAttributePerLine" = true
+"singleQuote" = false
+"sortImports" = true
+"sortPackageJson" = true
+"tabWidth" = 2
+"trailingComma" = "none"
+"useTabs" = false

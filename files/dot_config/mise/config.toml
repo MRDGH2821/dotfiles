@@ -22,7 +22,6 @@ run = [
 "apt:flatpak" = "latest"
 "apt:gamescope" = "latest"
 "apt:git" = "latest"
-"apt:git-delta" = "latest"
 "apt:gnupg2" = "latest"
 "apt:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
 "apt:kcalc" = { env = ["kde"], version = "latest" }
@@ -58,7 +57,6 @@ run = [
 "dnf:gamescope" = "latest"
 "dnf:git" = "latest"
 "dnf:git-credential-libsecret" = "latest"
-"dnf:git-delta" = "latest"
 "dnf:gnupg2" = "latest"
 "dnf:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
 "dnf:kcalc" = { env = ["kde"], version = "latest" }
@@ -104,13 +102,20 @@ run = [
 "pacman:discord" = "latest"
 "pacman:discover" = { env = ["kde"], version = "latest" }
 "pacman:filelight" = { env = ["kde"], version = "latest" }
+"pacman:firefox" = "latest"
+"pacman:flatpak" = "latest"
 "pacman:gamescope" = "latest"
+"pacman:git" = "latest"
 "pacman:gnupg" = "latest"
 "pacman:iio-sensor-proxy" = { env = ["tablet"], version = "latest" }
 "pacman:kcalc" = { env = ["kde"], version = "latest" }
 "pacman:kclock" = { env = ["kde"], version = "latest" }
+"pacman:keepassxc" = "latest"
+"pacman:kleopatra" = "latest"
 "pacman:lib32-mangohud" = "latest"
 "pacman:meld" = "latest"
+"pacman:nix" = "latest"
+"pacman:obs-studio" = { env = ["laptop"], version = "latest" }
 "pacman:pam-u2f" = "latest"
 "pacman:partitionmanager" = { env = ["kde"], version = "latest" }
 "pacman:print-manager" = { env = ["kde"], version = "latest" }
@@ -118,11 +123,13 @@ run = [
 "pacman:skanlite" = { env = ["kde"], version = "latest" }
 "pacman:skanpage" = { env = ["kde"], version = "latest" }
 "pacman:steam" = "latest"
+"pacman:syncthing" = "latest"
 "pacman:syncthingtray-qt6" = "latest"
 "pacman:system-config-printer" = "latest"
 "pacman:unzip" = "latest"
 "pacman:waydroid" = { env = ["tablet"], version = "latest" }
 "pacman:waydroid-helper" = { env = ["tablet"], version = "latest" }
+"pacman:zsh" = "latest"
 
 [bootstrap.user]
 login_shell = "zsh"
@@ -223,6 +230,7 @@ codex = { minimum_release_age = "0", version = "latest" }
 copier = "latest"
 copilot = { minimum_release_age = "0", version = "latest" }
 cspell = "latest"
+delta = "latest"
 direnv = "latest"
 fastfetch = "latest"
 fd = "latest"
@@ -250,7 +258,6 @@ mr-boxington = { version = "latest", workflow = "release.yml@refs/heads/main" }
 node = "latest"
 npm = "latest"
 "npm:memorix" = "latest"
-"npm:sort-package-json" = "latest"
 "packslip:sweepies/count-patchula" = "latest"
 pitchfork = { version = "latest", workflow = "release.yml@refs/heads/main" }
 "pypi:mcp-nixos" = "latest"

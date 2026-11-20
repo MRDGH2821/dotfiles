@@ -83,6 +83,7 @@ aliases:
   discord: Discord # Arch extra, Fedora native (lowercase)
   ente-io.auth-desktop: Ente Auth
   espanso: Espanso # install_release repo name (Debian/Ubuntu)
+  espanso --file wayland: Espanso # install_release repo name (Debian/Ubuntu) - wayland selector
   espanso-wayland: Espanso # Arch AUR, Fedora terra
   fastfetch: Fastfetch
   # --- linux_common packages: list (lowercase package ID -> display name) ---
@@ -110,6 +111,7 @@ aliases:
   io.github.radiolamp.mangojuice: Mangojuice
   ir: Install Release # soar key -> display name
   junegunn.fzf: Fzf
+  kde-partitionmanager: KDE Partition Manager
   keepassxc: Keepassxc
   kleopatra: Kleopatra
   koalaman.shellcheck: Shellcheck
@@ -139,6 +141,7 @@ aliases:
   org.gramps_project.Gramps: Gramps
   org.onlyoffice.desktopeditors: Only Office
   pCloudAG.pCloudDrive: pCloud
+  partitionmanager: KDE Partition Manager
   pcloud: pCloud # keep as-is
   pcloud-drive: pCloud # Arch AUR
   pince: PINCE

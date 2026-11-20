@@ -6,8 +6,4 @@ arch:
     - mangojuice
     - onlyoffice-bin
     - parui
-    - planify
     - sourcegit-bin
-  laptop_only:
-    aur:
-      - obs-studio-stable

@@ -1,0 +1,1365 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
+
+---
+
+## [0.1.0] - 2026-11-20
+
+### Bug Fixes
+
+- **(chezmoi)** :wrench: remove dashes - ([060c0e5](https://github.com/MRDGH2821/dotfiles/commit/060c0e58bd2c18a56184aa730b9f054b714fe6e4)) - MRDGH2821
+- **(chezmoi)** situationally ignore scripts - ([da7e075](https://github.com/MRDGH2821/dotfiles/commit/da7e075b5ba81d734da884d441a438ac57e54211)) - MRDGH2821
+- **(chezmoi)** add space - ([6ba8035](https://github.com/MRDGH2821/dotfiles/commit/6ba8035764a7af12a9c4e7c1e612148c675b5d2b)) - MRDGH2821
+- **(chezmoi)** fix package name - ([f9810f7](https://github.com/MRDGH2821/dotfiles/commit/f9810f7bc57dda750ffe9c4fa7748fa84e560fcf)) - MRDGH2821
+- **(chezmoi)** allow success exit - ([e1a6368](https://github.com/MRDGH2821/dotfiles/commit/e1a63681ed835348228c841b308887af76570312)) - MRDGH2821
+- **(chezmoi)** add fallback for os derivatives - ([03c3519](https://github.com/MRDGH2821/dotfiles/commit/03c3519ea8a023b71c5db6d7c72646ed575a1717)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: fix ignore logic & ignore new file - ([235cb66](https://github.com/MRDGH2821/dotfiles/commit/235cb6609dfc72c68baab62b2564dbea5a3ba88c)) - MRDGH2821
+- **(chezmoi)** fix code syntax - ([04fcce9](https://github.com/MRDGH2821/dotfiles/commit/04fcce954f2aca78afaeefadcc135626d99b9ace)) - MRDGH2821
+- **(chezmoi)** move encryption key to above all groups - ([0ab853c](https://github.com/MRDGH2821/dotfiles/commit/0ab853c8b1bf77ffa3fa7a6088e5a43263fb2d33)) - MRDGH2821
+- **(chezmoi)** fix syntax - ([8ec8717](https://github.com/MRDGH2821/dotfiles/commit/8ec871732e746ab39b11b3645a209714745c9a48)) - MRDGH2821
+- **(chezmoi)** :adhesive_bandage: use nested if-else instead of loops - ([fdf4e53](https://github.com/MRDGH2821/dotfiles/commit/fdf4e534165c1da28ca6fd56c8a745eff8f0f7d9)) - MRDGH2821
+- **(chezmoi)** :ambulance: fix syntax - ([f432162](https://github.com/MRDGH2821/dotfiles/commit/f43216229dcaef19650b100756b374e7da0de1ab)) - MRDGH2821
+- **(chezmoi)** :fire: remove diff command - ([8af92a5](https://github.com/MRDGH2821/dotfiles/commit/8af92a52d7f8cff017e1ebf643a794650abc6544)) - MRDGH2821
+- **(chezmoi)** :pencil2: update template file references to use `.sh` extension - ([c2a0e13](https://github.com/MRDGH2821/dotfiles/commit/c2a0e130971432992a10be7158dac9d63a632998)) - MRDGH2821
+- **(chezmoi)** :art: fix template resulting format - ([d6f9dba](https://github.com/MRDGH2821/dotfiles/commit/d6f9dba4508af1e228cf1d2a139eeaee3b4e5fa0)) - MRDGH2821
+- **(chezmoi)** :hammer: remove shebang - ([5833ff6](https://github.com/MRDGH2821/dotfiles/commit/5833ff6eb2a68aa443ea77c0ca502caa8fe4de97)) - MRDGH2821
+- **(chezmoi)** :hammer: fix config not being provided correctly - ([1874345](https://github.com/MRDGH2821/dotfiles/commit/1874345bfce8480e41be249d31c03c43d4c1b123)) - MRDGH2821
+- **(chezmoi)** :bug: fix syntax - ([e4b7b48](https://github.com/MRDGH2821/dotfiles/commit/e4b7b481c50bcad50350b338e62f558137bbe94c)) - MRDGH2821
+- **(chezmoi)** :art: remove dashes in go template - ([14992ee](https://github.com/MRDGH2821/dotfiles/commit/14992ee3f430eeed6775ebc1d231e0eb1f07b4a8)) - MRDGH2821
+- **(chezmoi)** :adhesive_bandage: update script paths to include leading zeros for consistency - ([d96dabe](https://github.com/MRDGH2821/dotfiles/commit/d96dabe56748870a021657e50a424a5415b7e03f)) - MRDGH2821
+- **(chezmoi)** use correct property to match - ([7aadae6](https://github.com/MRDGH2821/dotfiles/commit/7aadae61eea7d64dba80a3fcf51aae4a51dadf13)) - MRDGH2821
+- **(chezmoi)** correctly ignore folders - ([76dc235](https://github.com/MRDGH2821/dotfiles/commit/76dc235f2853b3511678ed6fec2004d3d93fd7bd)) - MRDGH2821
+- **(chezmoi)** use negation of conditions used in distro scripts - ([e53e7bc](https://github.com/MRDGH2821/dotfiles/commit/e53e7bc72b532abf8a6675607be87626385ee3b5)) - MRDGH2821
+- **(chezmoi)** fix syntax - ([3dabdba](https://github.com/MRDGH2821/dotfiles/commit/3dabdbaabcc02a505da8fedff5b18954c1c31308)) - MRDGH2821
+- **(chezmoi)** fix shell-script templates for unset XDG vars and missing fnm - ([4278fb6](https://github.com/MRDGH2821/dotfiles/commit/4278fb6260b24a9c1274dce38488b30c173d9c7c)) - MRDGH2821
+- **(chezmoi)** fix syntax - ([20f340b](https://github.com/MRDGH2821/dotfiles/commit/20f340bf17f0d941920ad088451d3d844b95cf1e)) - MRDGH2821
+- **(chezmoi)** fix syntax - ([3ba54c7](https://github.com/MRDGH2821/dotfiles/commit/3ba54c77d89dc070887cd073a56d1e840baa9a6f)) - MRDGH2821
+- **(copier)** fix trusted repo link - ([eb571f7](https://github.com/MRDGH2821/dotfiles/commit/eb571f73fc24b918cc691c25e64712e13bbe1499)) - MRDGH2821
+- **(hk)** run Oxfmt after JSON key sorting - ([db728cb](https://github.com/MRDGH2821/dotfiles/commit/db728cb94f67546d5c01170792b17c40893dcb6f)) - MRDGH2821
+- **(megalinter)** add cwd option for prettier - ([daefadd](https://github.com/MRDGH2821/dotfiles/commit/daefadd74841cd99ddc39dabae74562105bfcb22)) - MRDGH2821
+- **(mise)** use git credentials - ([d6c80ba](https://github.com/MRDGH2821/dotfiles/commit/d6c80ba3864d93603a24a78aeea742dff4ef30f9)) - MRDGH2821
+- **(mise)** fix syntax - ([70814a6](https://github.com/MRDGH2821/dotfiles/commit/70814a672a9883c7877f3d64ee0b927527b73da3)) - MRDGH2821
+- **(mise)** pin vllm to Python 3.12 ROCm wheel - ([64b3cf9](https://github.com/MRDGH2821/dotfiles/commit/64b3cf94145fcc7163c8c18d54d11daac5c5f5ab)) - MRDGH2821
+- **(mise)** rename exe & pin version - ([e5fd0ec](https://github.com/MRDGH2821/dotfiles/commit/e5fd0ec79802b16299a4bf6768df888b50732e00)) - MRDGH2821
+- **(mise)** expose Shapin executable on PATH - ([1fcdf57](https://github.com/MRDGH2821/dotfiles/commit/1fcdf57017d966bb40a536129676719597badbb5)) - MRDGH2821
+- **(mise)** add hooks - ([376cab2](https://github.com/MRDGH2821/dotfiles/commit/376cab2234a75005de811703df55ec7d909dfcb7)) - MRDGH2821
+- **(mise)** add zerobrew - ([754f19b](https://github.com/MRDGH2821/dotfiles/commit/754f19b1d015edc6cac80445a0ffdae993c2b920)) - MRDGH2821
+- **(opencode)** use glm models for sisyphus - ([e51fd48](https://github.com/MRDGH2821/dotfiles/commit/e51fd48951e901dca9ccc1215f4b9836b5f3386f)) - MRDGH2821
+- **(package)** fix package name - ([839ef9f](https://github.com/MRDGH2821/dotfiles/commit/839ef9f0d2388b15332d7b8f3c0f1d37a74100e7)) - MRDGH2821
+- **(package)** fix dra packages - ([975bf89](https://github.com/MRDGH2821/dotfiles/commit/975bf89dc598f307852d8c6188cb23f7a55d0e41)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix syntax - ([6ad9de1](https://github.com/MRDGH2821/dotfiles/commit/6ad9de12823480d278eacdb3ad45e497006e4168)) - MRDGH2821
+- **(package)** :adhesive_bandage: add flathub repo before installation - ([b79a022](https://github.com/MRDGH2821/dotfiles/commit/b79a0222bb60e464ed277c9cb8deab1a892d719b)) - MRDGH2821
+- **(package)** remove sudo access for yay - ([26b77f9](https://github.com/MRDGH2821/dotfiles/commit/26b77f9c5d71277ee63223a460ba370fe98307d9)) - MRDGH2821
+- **(package)** specify file to be installed - ([ff1f71b](https://github.com/MRDGH2821/dotfiles/commit/ff1f71bd6538b997b77c339aa1ecba718ec24cf2)) - MRDGH2821
+- **(package)** remove install flag - ([f271e45](https://github.com/MRDGH2821/dotfiles/commit/f271e454fe0298bef2cec0ee6de46d62b53023d1)) - MRDGH2821
+- **(package)** fix path - ([e48755a](https://github.com/MRDGH2821/dotfiles/commit/e48755ac75b9d8c9cd1888665306b9bd2fbe0727)) - MRDGH2821
+- **(package)** fix conditions - ([66a0b6d](https://github.com/MRDGH2821/dotfiles/commit/66a0b6d48bc4162c7872b46a78079e3eb1d1d8d2)) - MRDGH2821
+- **(package)** fix paths & ensure it exists - ([8c336b1](https://github.com/MRDGH2821/dotfiles/commit/8c336b1060fce99dfc0dac47366589394c7fbfdf)) - MRDGH2821
+- **(package)** add flathub package - ([8c0af1e](https://github.com/MRDGH2821/dotfiles/commit/8c0af1ef3aa5afd5090df648660a2cf163d0984c)) - MRDGH2821
+- **(package)** add missing flathub repo - ([2e72a5f](https://github.com/MRDGH2821/dotfiles/commit/2e72a5fa4728799e307bc7b6f30b5511c5510b8a)) - MRDGH2821
+- **(package)** remove --user option - ([29dee1e](https://github.com/MRDGH2821/dotfiles/commit/29dee1e948fdf2c054fd9ed519d67642844c3864)) - MRDGH2821
+- **(package)** install only when tablet found - ([77f056e](https://github.com/MRDGH2821/dotfiles/commit/77f056e442d0e10c987b17dd8f6505485d4155d4)) - MRDGH2821
+- **(package)** fix package name - ([fa1a181](https://github.com/MRDGH2821/dotfiles/commit/fa1a1814cc3b0db07ff72066c320e936105cf3fa)) - MRDGH2821
+- **(package)** add install flag & remove download path for native packages - ([1833eb9](https://github.com/MRDGH2821/dotfiles/commit/1833eb94e4beac7e00c099ce4ff126cd7651eb57)) - MRDGH2821
+- **(package)** remove install flag - ([2f7fa77](https://github.com/MRDGH2821/dotfiles/commit/2f7fa771b9f114867c73a26e720eb3e9c9ee100c)) - MRDGH2821
+- **(package)** install packages with sudo - ([7c34d60](https://github.com/MRDGH2821/dotfiles/commit/7c34d6000b840706a11a7190940a386c7e8e36dc)) - MRDGH2821
+- **(package)** add packages to allow installation of other packages - ([a8242bd](https://github.com/MRDGH2821/dotfiles/commit/a8242bd5bd5bc654ca76c1dc72f73757c8b41aac)) - MRDGH2821
+- **(package)** :adhesive_bandage: point to correct package asset - ([776353f](https://github.com/MRDGH2821/dotfiles/commit/776353faf3c2a6117e1dd5733cc6c73c5c2630ed)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix package names - ([6ea68a7](https://github.com/MRDGH2821/dotfiles/commit/6ea68a7d42e7923aab95deb8fff34481de7b3cf7)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix package name - ([5fd3d45](https://github.com/MRDGH2821/dotfiles/commit/5fd3d4568dd0a85f3179c1ed4738338dd13c0649)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix go template to access dnf5 packages - ([3232143](https://github.com/MRDGH2821/dotfiles/commit/3232143bc0192925b51e186784f63f68c32d88ed)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix go template to access dnf5 packages - ([bff5864](https://github.com/MRDGH2821/dotfiles/commit/bff58648c396cb40b8613932d56091ca4da44628)) - MRDGH2821
+- **(package)** :adhesive_bandage: always install from flathub - ([4669a9b](https://github.com/MRDGH2821/dotfiles/commit/4669a9b47b3a4df69d505cc70ac7f4fc10014ba6)) - MRDGH2821
+- **(package)** fix command syntax - ([78357a6](https://github.com/MRDGH2821/dotfiles/commit/78357a67dceb89c56d12bf452a0e475414f640dd)) - MRDGH2821
+- **(package)** add missing cli flag - ([426377c](https://github.com/MRDGH2821/dotfiles/commit/426377cb928836927c20e146876143cda61022a7)) - MRDGH2821
+- **(package)** fix command typo - ([623c31f](https://github.com/MRDGH2821/dotfiles/commit/623c31f659c9a5b83f4535e7039eea74b1b40d9e)) - MRDGH2821
+- **(package)** :adhesive_bandage: fix package name - ([ea0b398](https://github.com/MRDGH2821/dotfiles/commit/ea0b3982477c4b3b2cc71b993078c0059d222c56)) - MRDGH2821
+- **(package)** :adhesive_bandage: explicitly specify install path - ([92873bf](https://github.com/MRDGH2821/dotfiles/commit/92873bf2e11bab2be573a8d4ef2e67eecc085ee1)) - MRDGH2821
+- **(package)** :adhesive_bandage: update package name - ([a1f743b](https://github.com/MRDGH2821/dotfiles/commit/a1f743b2fcec87c0e5270bc5937364efdcae26c4)) - MRDGH2821
+- **(package)** :package: update package name - ([a63d613](https://github.com/MRDGH2821/dotfiles/commit/a63d61348318cbfc124662c2e1d70de595464862)) - MRDGH2821
+- **(package)** :adhesive_bandage: correct package selection format for Heroic Games Launcher - ([815c429](https://github.com/MRDGH2821/dotfiles/commit/815c4297fcaaae6453fcd8305ee3c080bb6a3be9)) - MRDGH2821
+- **(package)** :package: fix package name - ([6cc5da8](https://github.com/MRDGH2821/dotfiles/commit/6cc5da8bff8fbc316e4b97b7896de49063e6f40a)) - MRDGH2821
+- **(package)** :package: use qt6 package of syncthingtray - ([f0a845d](https://github.com/MRDGH2821/dotfiles/commit/f0a845d51668d1b21a83f4d31e6a0db21ad31140)) - MRDGH2821
+- **(package)** fix debian package status - ([62ccd13](https://github.com/MRDGH2821/dotfiles/commit/62ccd1308dda7e5a625c2a58245d534e1fa24b93)) - MRDGH2821
+- **(package)** fix package tag - ([41998bd](https://github.com/MRDGH2821/dotfiles/commit/41998bd19da724c18f101ca5c7eb4f0f17bb0661)) - MRDGH2821
+- **(package)** fix url for ludusavi - ([412aa40](https://github.com/MRDGH2821/dotfiles/commit/412aa40d68ce24a47980202322b3a88e4de76936)) - MRDGH2821
+- **(package)** force upgrade oh-my-posh - ([3003043](https://github.com/MRDGH2821/dotfiles/commit/3003043e5d4dff9b3445283da016557c76b66b9c)) - MRDGH2821
+- **(package)** explicitly sync soar pkgs - ([1e04d29](https://github.com/MRDGH2821/dotfiles/commit/1e04d291497186adb345b5b619fb31e73037103a)) - MRDGH2821
+- **(package)** fix package name - ([20924b4](https://github.com/MRDGH2821/dotfiles/commit/20924b40b9ccd13d1c747add8fc5acb6cf43ebc0)) - MRDGH2821
+- **(package)** fix patterns - ([0d850b9](https://github.com/MRDGH2821/dotfiles/commit/0d850b92fb46ef59d48e0478614557ff7c282ba7)) - MRDGH2821
+- **(package)** fix name - ([de780f7](https://github.com/MRDGH2821/dotfiles/commit/de780f75561a8c03f20dcd614131f23f6ec24fbb)) - MRDGH2821
+- **(package)** fix ollama install url - ([3ca1136](https://github.com/MRDGH2821/dotfiles/commit/3ca113612a4c7f8a1219a11df3a3095679fc5df6)) - MRDGH2821
+- **(package)** add github links - ([c3abf19](https://github.com/MRDGH2821/dotfiles/commit/c3abf198417ef6c13b29cdad53359fe5a1136463)) - MRDGH2821
+- **(packages)** tolerate empty winget list in windows.yaml - ([b25352a](https://github.com/MRDGH2821/dotfiles/commit/b25352ab4791cae47bb1e1ca68d5fc84556a8c56)) - MRDGH2821
+- **(pre-commit)** fix syntax & sort scopes - ([a9a5fc6](https://github.com/MRDGH2821/dotfiles/commit/a9a5fc681550fecc6e62a69c0eeafd349e7f1bcf)) - MRDGH2821
+- **(script)** :rotating_light: add brackets in variables - ([35cdcd6](https://github.com/MRDGH2821/dotfiles/commit/35cdcd6237b2e8d58b5f39cb32891624cd4aef55)) - MRDGH2821
+- **(script)** :adhesive_bandage: fix conditionals & inform when done executing - ([17762fa](https://github.com/MRDGH2821/dotfiles/commit/17762faa2b6dc5c92049fcbd12c1c857338f1484)) - MRDGH2821
+- **(script)** remove newgrp line - ([556fd60](https://github.com/MRDGH2821/dotfiles/commit/556fd608483cd89d2affdd4d04917bb5bf85f631)) - MRDGH2821
+- **(script)** move pinentry fix in plasma session folder - ([ed3e8bf](https://github.com/MRDGH2821/dotfiles/commit/ed3e8bfb00aa73431b9f6a188cfa061047e2342c)) - MRDGH2821
+- **(script)** fix directory path syntax - ([c0d8d3b](https://github.com/MRDGH2821/dotfiles/commit/c0d8d3bb50d3d957bc6fec9f42e6be59337e7d2a)) - MRDGH2821
+- **(script)** :adhesive_bandage: fix alias issue in powershell profile - ([2307ba3](https://github.com/MRDGH2821/dotfiles/commit/2307ba316a9ec889d9d4f96f998517395bc88632)) - MRDGH2821
+- **(script)** elevate command privileges - ([b3a802e](https://github.com/MRDGH2821/dotfiles/commit/b3a802ecdb7b1d6ca108ee642c888f443b16edc5)) - MRDGH2821
+- **(script)** :adhesive_bandage: make script executable - ([978b323](https://github.com/MRDGH2821/dotfiles/commit/978b323c4cfd835842a725eeb5c4a117b3f2fb25)) - MRDGH2821
+- **(script)** :adhesive_bandage: skip installing flatpaks on arch - ([d021e3d](https://github.com/MRDGH2821/dotfiles/commit/d021e3d05a9914554f5011c02be7593c4148deb4)) - MRDGH2821
+- **(script)** :adhesive_bandage: skip binary installations using dra - ([7354e1b](https://github.com/MRDGH2821/dotfiles/commit/7354e1b6c5a49735f47651e6b141697e2af6b913)) - MRDGH2821
+- **(script)** :adhesive_bandage: fix command syntax - ([cf55988](https://github.com/MRDGH2821/dotfiles/commit/cf55988444fabdfaabab590d8a2ca7dadff9e434)) - MRDGH2821
+- **(script)** :ambulance: stop espanso before configuring - ([62850e7](https://github.com/MRDGH2821/dotfiles/commit/62850e75739ae3d781215506bbbc18642801a2c7)) - MRDGH2821
+- **(script)** :adhesive_bandage: remove ~/bin path - ([2bc8442](https://github.com/MRDGH2821/dotfiles/commit/2bc8442ccf40c5cb54444c319890b67332c7a585)) - MRDGH2821
+- **(script)** :pencil2: fix variable name - ([ee48bb9](https://github.com/MRDGH2821/dotfiles/commit/ee48bb9341ebe2bd88f2a4273c281a8728a69eb6)) - MRDGH2821
+- **(script)** :bug: move zoxide invocation at the end - ([10c7db3](https://github.com/MRDGH2821/dotfiles/commit/10c7db3ccb49ac78759b0a93a30cc04e52fe7447)) - MRDGH2821
+- **(script)** make script executable by all groups - ([19601c0](https://github.com/MRDGH2821/dotfiles/commit/19601c0a0b4621c707feb8b4844e524bd7f9bf7d)) - MRDGH2821
+- **(script)** :truck: rename incorrect file - ([1bab7f0](https://github.com/MRDGH2821/dotfiles/commit/1bab7f0f6ada83ec66ec0bc634935c1de7c2ef81)) - MRDGH2821
+- **(script)** :rotating_light: fix linter errors & explicitly add shebangs - ([7e08179](https://github.com/MRDGH2821/dotfiles/commit/7e081799978d8c309b455a0ebfdae921245174c4)) - MRDGH2821
+- **(script)** :adhesive_bandage: skip adding shebang if it exists, also skip creating file with only a shebang - ([d37aaa1](https://github.com/MRDGH2821/dotfiles/commit/d37aaa1bd62c60101001adbfd86032750b5df902)) - MRDGH2821
+- **(script)** :ambulance: remove xdg plugin - ([f9f48ed](https://github.com/MRDGH2821/dotfiles/commit/f9f48ed231e9fc45acfbd2f1811866110189da05)) - MRDGH2821
+- **(script)** :rotating_light: put variables in quotes - ([6aba252](https://github.com/MRDGH2821/dotfiles/commit/6aba252c7c81814fbeef426da4329474a45b67d4)) - MRDGH2821
+- **(script)** :bug: install correct set of packages - ([57882fe](https://github.com/MRDGH2821/dotfiles/commit/57882fe20dc9e00f5986589ad4751fb76ab903eb)) - MRDGH2821
+- **(script)** :bug: fix path for espanso config - ([bbfeff8](https://github.com/MRDGH2821/dotfiles/commit/bbfeff84596bcf876640dc6508ff555f0e3f04e6)) - MRDGH2821
+- **(script)** :pencil2: fix file name - ([7e8a5de](https://github.com/MRDGH2821/dotfiles/commit/7e8a5de974c41b3124afff15483caaaa9a72661e)) - MRDGH2821
+- **(script)** :adhesive_bandage: update commands for fedora 43 - ([6eaf59c](https://github.com/MRDGH2821/dotfiles/commit/6eaf59cf97510f0ac6b06bedea6fabffb683990e)) - MRDGH2821
+- **(script)** :adhesive_bandage: comment out code for installing app images - ([95955d9](https://github.com/MRDGH2821/dotfiles/commit/95955d9c3a9fe25b111a7ca96c6881b9f125aa96)) - MRDGH2821
+- **(script)** :adhesive_bandage: update script permissions to make them executable - ([1757f38](https://github.com/MRDGH2821/dotfiles/commit/1757f387da98230bdf03a9f8b097fadec949c8e7)) - MRDGH2821
+- **(script)** :adhesive_bandage: add --skip-unavailable flag to dnf5 install commands - ([d52a154](https://github.com/MRDGH2821/dotfiles/commit/d52a154600f5c6d268f1bdd70612548cd80e68f4)) - MRDGH2821
+- **(script)** :adhesive_bandage: ensure /tmp/dra directory exists before downloading dra executable - ([927da21](https://github.com/MRDGH2821/dotfiles/commit/927da217dc4aae85e8ae09111e85141c94f5aa9c)) - MRDGH2821
+- **(script)** :adhesive_bandage: do not create /tmp/dra directory - ([c13939e](https://github.com/MRDGH2821/dotfiles/commit/c13939eac767f6d6607402e49bb1c87b94b3efbe)) - MRDGH2821
+- **(script)** :adhesive_bandage: update download pattern for dra executable - ([84f857f](https://github.com/MRDGH2821/dotfiles/commit/84f857f48ece10b00d536cbfe94f00090a842579)) - MRDGH2821
+- **(script)** :adhesive_bandage: correct path for copying dra executable - ([2c09e4e](https://github.com/MRDGH2821/dotfiles/commit/2c09e4e6cc4060e2016d473bd5dcc95a53ecf21c)) - MRDGH2821
+- **(script)** :fire: remove gh cli auth setup - ([7fd1e27](https://github.com/MRDGH2821/dotfiles/commit/7fd1e273ec1caf59e541a92964bdbf54aec46a5c)) - MRDGH2821
+- **(script)** add conditional checks to skip adding repos - ([5c12fa6](https://github.com/MRDGH2821/dotfiles/commit/5c12fa6c64d928b0c7b01e7c8bbb37853f37485e)) - MRDGH2821
+- **(script)** fix bat alias - ([0075ed9](https://github.com/MRDGH2821/dotfiles/commit/0075ed97244cd8113fc21766413842ada60cb46b)) - MRDGH2821
+- **(script)** update the conditions - ([62b4d0a](https://github.com/MRDGH2821/dotfiles/commit/62b4d0a4246ad37ec401ab6e7eb6824a0adcf651)) - MRDGH2821
+- **(script)** install laptop-only packages - ([5b4a354](https://github.com/MRDGH2821/dotfiles/commit/5b4a3549e68dd03f87204184718e770f163c8967)) - MRDGH2821
+- **(script)** export path variable & fix echo syntax - ([ab33ea1](https://github.com/MRDGH2821/dotfiles/commit/ab33ea11f9b0d6e549b7786b2a9704715826f752)) - MRDGH2821
+- **(script)** wrap the line with println - ([42275d3](https://github.com/MRDGH2821/dotfiles/commit/42275d3c5b3da0cb5fae510f4a45067e3e3ef4a1)) - MRDGH2821
+- **(script)** fix mcfly syntax - ([fb3b479](https://github.com/MRDGH2821/dotfiles/commit/fb3b479cf7c59d480466a65560519f189d6fa229)) - MRDGH2821
+- **(script)** use https - ([5cfa42b](https://github.com/MRDGH2821/dotfiles/commit/5cfa42b5069a82f0446253c17b5a1e77d16fc3b4)) - MRDGH2821
+- **(script)** use `command -v` instead of `type -P` - ([6407794](https://github.com/MRDGH2821/dotfiles/commit/6407794b4d8d6450b5e1bc794a277c71c66cc259)) - MRDGH2821
+- **(script)** install cli tools one by one - ([9b4b6e3](https://github.com/MRDGH2821/dotfiles/commit/9b4b6e3497c9b97ce81ffc46e2d7f51c916ead1d)) - MRDGH2821
+- **(script)** fix syntax - ([e5c275e](https://github.com/MRDGH2821/dotfiles/commit/e5c275e6d32b575c024c71ee889661c8caf923af)) - MRDGH2821
+- **(script)** fix print output - ([a5cc753](https://github.com/MRDGH2821/dotfiles/commit/a5cc75367dc4fc24f4ff881bb4b4c93953f0639d)) - MRDGH2821
+- **(script)** fix syntax - ([4fad80e](https://github.com/MRDGH2821/dotfiles/commit/4fad80e62f073e55bb5c49d6d7075c45d4b01432)) - MRDGH2821
+- **(script)** add check for dra executable - ([5603f1d](https://github.com/MRDGH2821/dotfiles/commit/5603f1d0bd6e380408f8c8944c8afac60d66e75d)) - MRDGH2821
+- **(script)** ensure the hash is printed in script - ([cb5cb98](https://github.com/MRDGH2821/dotfiles/commit/cb5cb983f099dce455e5f7de2c9ff5c709c11b48)) - MRDGH2821
+- **(script)** fix typo - ([8b32aca](https://github.com/MRDGH2821/dotfiles/commit/8b32acac5c4f6b4aa8537351592bf03ee5fa319f)) - MRDGH2821
+- **(script)** initialise line - ([1929ac1](https://github.com/MRDGH2821/dotfiles/commit/1929ac13f0007a25acbfbb951a02521e847ce004)) - MRDGH2821
+- **(script)** fix syntax - ([264da00](https://github.com/MRDGH2821/dotfiles/commit/264da0095115ff2f9cfb15e77785fbe52f6df235)) - MRDGH2821
+- **(script)** update visual & editor variables - ([b720f82](https://github.com/MRDGH2821/dotfiles/commit/b720f827cbd70f16c6ed9c1c4f197cfa0f9e00bd)) - MRDGH2821
+- **(script)** use portable fnm presence check in shell template - ([29dd2cf](https://github.com/MRDGH2821/dotfiles/commit/29dd2cf9e6cb087c3224e48c81a0612605cf170e)) - MRDGH2821
+- **(script)** register rustup _cargo via autoload+compdef in zsh - ([d2c45e8](https://github.com/MRDGH2821/dotfiles/commit/d2c45e83353095850c7a588f0e6c76bf7a10f91d)) - MRDGH2821
+- **(script)** fix zsh quote issue - ([c607222](https://github.com/MRDGH2821/dotfiles/commit/c607222b61c8097dcacd66ab953087130b507365)) - MRDGH2821
+- **(script)** apply linter fixes - ([e039de4](https://github.com/MRDGH2821/dotfiles/commit/e039de422cd1a3856c9ad29b63d3427fa9074f4c)) - MRDGH2821
+- **(script)** fix skills updater condition - ([2d16c59](https://github.com/MRDGH2821/dotfiles/commit/2d16c59216ab701430fb4206d77c38b16ab43efa)) - MRDGH2821
+- **(script)** fix syntax errors - ([f0eb0ae](https://github.com/MRDGH2821/dotfiles/commit/f0eb0aec86b25a192e69ab349cc18c70fe7900d4)) - MRDGH2821
+- **(script)** fix order of exports - ([7de9fe4](https://github.com/MRDGH2821/dotfiles/commit/7de9fe4af5091d684e280571378241bd554dfd08)) - MRDGH2821
+- **(script)** use proper path to install dra packages - ([0982b89](https://github.com/MRDGH2821/dotfiles/commit/0982b890b792493d138a5cfda8a09a9d0487ecaa)) - MRDGH2821
+- **(script)** fix logic - ([c78d9d1](https://github.com/MRDGH2821/dotfiles/commit/c78d9d1778839d8c70ab40d90c364361f34ff605)) - MRDGH2821
+- **(script)** make it work on both zsh & bash - ([fd76408](https://github.com/MRDGH2821/dotfiles/commit/fd764083ca63a0232c321ac766b5bf949b379fdb)) - MRDGH2821
+- **(script)** launch herdr when workspace is focused - ([16c1953](https://github.com/MRDGH2821/dotfiles/commit/16c1953e6addc8c83acc5feb142495040b6fe9d8)) - MRDGH2821
+- **(script)** handle top-level chezmoidata namespaces in gen_packages_table - ([6c6e1c1](https://github.com/MRDGH2821/dotfiles/commit/6c6e1c11e410cebe5aa4234bdf46b5277dcd2913)) - MRDGH2821
+- **(script)** match cspell-refresh-words to the repo's pinned cspell - ([82c0acf](https://github.com/MRDGH2821/dotfiles/commit/82c0acf298eb6530a27727044a12d8f5b41f688e)) - MRDGH2821
+- **(script)** fix syntax - ([ea4d0e5](https://github.com/MRDGH2821/dotfiles/commit/ea4d0e5ba6962df0ef25a4c312fc44c45c6cc19b)) - MRDGH2821
+- **(script)** fix syntax - ([345d118](https://github.com/MRDGH2821/dotfiles/commit/345d1182f1f14f069887c93f52a0f07a3b26c069)) - MRDGH2821
+- **(script)** replace buggy zim fzf module with direct shell integration - ([f53600e](https://github.com/MRDGH2821/dotfiles/commit/f53600e04bbfb90477fd86e59f0289773baaa406)) - MRDGH2821
+- **(script)** add mise shims to PATH before antidot init - ([504c5b9](https://github.com/MRDGH2821/dotfiles/commit/504c5b93e5c96c36d38f15d1ce71c55fe910a1d0)) - MRDGH2821
+- **(script)** source mise before direnv in shell-importer - ([fb365e6](https://github.com/MRDGH2821/dotfiles/commit/fb365e6761261bcb53cf3a4e044abe67fd11b95b)) - MRDGH2821
+- **(script)** use correct syntax - ([22bee2e](https://github.com/MRDGH2821/dotfiles/commit/22bee2e79018539bf6bb183e7bf1002e8fdea09b)) - MRDGH2821
+- **(script)** fix syntax & allow headless install - ([36ce5ba](https://github.com/MRDGH2821/dotfiles/commit/36ce5ba97594053c3408772893506df3c6c87dda)) - MRDGH2821
+- **(script)** conditionally export the script - ([a99a2ff](https://github.com/MRDGH2821/dotfiles/commit/a99a2ffce3cb61cfbc1addb8c3ab3bb6cf4b250f)) - MRDGH2821
+- **(soar)** use proper toml syntax - ([485d708](https://github.com/MRDGH2821/dotfiles/commit/485d7081db82265578626d771f8fdae50dd4fddb)) - MRDGH2821
+- **(soar)** update repositories - ([6a5912a](https://github.com/MRDGH2821/dotfiles/commit/6a5912a084946d21d2d396c476eccd44152e71b0)) - MRDGH2821
+- **(soar)** remove outdated repositories - ([c884b9d](https://github.com/MRDGH2821/dotfiles/commit/c884b9ddfc79d4bfaec139545757103f757fa85c)) - MRDGH2821
+- **(soar)** update package definitions - ([936e48d](https://github.com/MRDGH2821/dotfiles/commit/936e48d3b1052fddffbf1895d91f3370b72d797b)) - MRDGH2821
+- **(soar)** remove extract root for problematic packages - ([fc01c53](https://github.com/MRDGH2821/dotfiles/commit/fc01c531c14face97e0055a8f134fa0529adfc25)) - MRDGH2821
+- **(soar)** fix package type - ([2f412d4](https://github.com/MRDGH2821/dotfiles/commit/2f412d45ec2d1629bb26a4b941934f1174d1b60a)) - MRDGH2821
+- **(soar)** fix config - ([6f6f307](https://github.com/MRDGH2821/dotfiles/commit/6f6f307e39410821b36f402f8cff4731103cf371)) - MRDGH2821
+- **(soar)** use correct casing - ([32562b7](https://github.com/MRDGH2821/dotfiles/commit/32562b7fa9aca369cae8727808ab839874be4160)) - MRDGH2821
+- **(soar)** add arch map - ([c2a0835](https://github.com/MRDGH2821/dotfiles/commit/c2a08356647212509d691476fa37552eb6e7dd99)) - MRDGH2821
+- **(treefmt)** resolve shellcheck errors and uv binary path - ([d59354e](https://github.com/MRDGH2821/dotfiles/commit/d59354e771151cf51426116a3e7b084e95b970a7)) - MRDGH2821
+- **(zed)** fix task syntax - ([fb47496](https://github.com/MRDGH2821/dotfiles/commit/fb47496511a59768de164e94f93cd51e9cd6a664)) - MRDGH2821
+- **(zed)** add quotes & missing args - ([c3b8118](https://github.com/MRDGH2821/dotfiles/commit/c3b8118e90a57c7748f88a7bc9fed1b5e93d192a)) - MRDGH2821
+- **(zed)** fix repo name - ([10cae89](https://github.com/MRDGH2821/dotfiles/commit/10cae89e3857fbe7429cf54e370c17c54bd13bc6)) - MRDGH2821
+- **(zed)** migrate to smt comment - ([b73ac83](https://github.com/MRDGH2821/dotfiles/commit/b73ac838865f81c9123d21714d85f95204d05f78)) - MRDGH2821
+- **(zed)** fix script syntax - ([b99a1be](https://github.com/MRDGH2821/dotfiles/commit/b99a1be49f49d2191f64de0d0596f493a7976069)) - MRDGH2821
+- rename scripts to prevent chezmoi's inconsistent state - ([f422e85](https://github.com/MRDGH2821/dotfiles/commit/f422e8577415fcb353a49379816e0eeefadc4ce7)) - MRDGH2821
+- fix if else syntax - ([8685d2e](https://github.com/MRDGH2821/dotfiles/commit/8685d2eb3a56dc545a8ac6aced0543e27ab079a1)) - MRDGH2821
+- fix syntax errors - ([0cc1926](https://github.com/MRDGH2821/dotfiles/commit/0cc192641c005bbdae81c8eccbbdbd2768e1feca)) - MRDGH2821
+- fix syntax - ([2fedf53](https://github.com/MRDGH2821/dotfiles/commit/2fedf539b0a00ecc9a64a5b5be1c09168c8117c1)) - MRDGH2821
+- rename script & fix syntax - ([d77e21c](https://github.com/MRDGH2821/dotfiles/commit/d77e21c1ca5cf621152d73d0fb76ba1a2061a61e)) - MRDGH2821
+- :rotating_light: use different syntax to append - ([bc5b4ab](https://github.com/MRDGH2821/dotfiles/commit/bc5b4abfeca513e6ccdd8829188e3a26b502744b)) - MRDGH2821
+- :adhesive_bandage: prepend space instead of append - ([89f3d45](https://github.com/MRDGH2821/dotfiles/commit/89f3d45683d729b397942fc42e09a14e14be2eaa)) - MRDGH2821
+- :rotating_light: fix linter errors - ([741f77b](https://github.com/MRDGH2821/dotfiles/commit/741f77ba69ffb149d64e46b1011644b9881881e3)) - MRDGH2821
+- :adhesive_bandage: prepend space instead of append - ([bbea1f7](https://github.com/MRDGH2821/dotfiles/commit/bbea1f76aade0b6c537159b68d8c85a20cc13040)) - MRDGH2821
+- remove unneeded flag - ([6024f49](https://github.com/MRDGH2821/dotfiles/commit/6024f49fce2f173dcf415e9e91e41d81ce06c182)) - MRDGH2821
+- remove unneeded nala update command - ([ef5c2e2](https://github.com/MRDGH2821/dotfiles/commit/ef5c2e2e4bedfceb44bd9ddfb452995dee49e83a)) - MRDGH2821
+- skip being blocked - ([39263e9](https://github.com/MRDGH2821/dotfiles/commit/39263e926c1da865e20515546b9187a13af5f82f)) - MRDGH2821
+- :rotating_light: close if block - ([1fd8884](https://github.com/MRDGH2821/dotfiles/commit/1fd8884dfd4809d6893775ee2a0dd20641406fc3)) - MRDGH2821
+- export bin paths for scripts - ([95de3b6](https://github.com/MRDGH2821/dotfiles/commit/95de3b65658b068e00ee6d28956691e8157c6018)) - MRDGH2821
+- :adhesive_bandage: fix syntax - ([87c796b](https://github.com/MRDGH2821/dotfiles/commit/87c796b0c040e98d9692a9b2c3b9f2981717d33c)) - MRDGH2821
+- :adhesive_bandage: exit successfully forcefully - ([2f693f8](https://github.com/MRDGH2821/dotfiles/commit/2f693f890dd44891a9b2e3afe6965093177dd412)) - MRDGH2821
+- :adhesive_bandage: fix path - ([f2e1070](https://github.com/MRDGH2821/dotfiles/commit/f2e1070107689bf5c43ffabe0d6dc9160d6bfbef)) - MRDGH2821
+- :adhesive_bandage: fix path - ([d1da472](https://github.com/MRDGH2821/dotfiles/commit/d1da47295d5502ac9635180277def42450215a23)) - MRDGH2821
+- allow clean exit of scripts - ([86a8980](https://github.com/MRDGH2821/dotfiles/commit/86a898003d726f237532aae4c0bf94a1599c3ea3)) - MRDGH2821
+- :adhesive_bandage: fix path - ([8b4073c](https://github.com/MRDGH2821/dotfiles/commit/8b4073c443bde93f6ea906fe0b01368ef027826d)) - MRDGH2821
+- :adhesive_bandage: make scripts executable - ([da169b7](https://github.com/MRDGH2821/dotfiles/commit/da169b7cb04d0811ebfb08fe50ab87bcddce848c)) - MRDGH2821
+- use updated command syntax - ([4e68789](https://github.com/MRDGH2821/dotfiles/commit/4e6878978eee4b2687342b5a715e31fd6879986d)) - MRDGH2821
+- use 64 bit version of gpg - ([1613348](https://github.com/MRDGH2821/dotfiles/commit/16133486b867d49fda7b70f9a42554201d3df50b)) - MRDGH2821
+- use batcat if bat is not available - ([07c854d](https://github.com/MRDGH2821/dotfiles/commit/07c854df5ee66b715e67ddf9c5b442b859e050d4)) - MRDGH2821
+- provide path to cspell config - ([08ab549](https://github.com/MRDGH2821/dotfiles/commit/08ab5496e3c1b6312fc8b233976ece5bcaa197f2)) - MRDGH2821
+- export bun bins - ([187178d](https://github.com/MRDGH2821/dotfiles/commit/187178dee859332c4b3fffeba17e64c29b4856ca)) - MRDGH2821
+- update folder path - ([0804eac](https://github.com/MRDGH2821/dotfiles/commit/0804eac36a68c8ca6689b6796258b115d0a5ff24)) - MRDGH2821
+- fix path for git repos - ([3c645c8](https://github.com/MRDGH2821/dotfiles/commit/3c645c87d10a2abfa89429a4a968bcca98cc1417)) - MRDGH2821
+- use bunx to invoke formatter - ([6140e37](https://github.com/MRDGH2821/dotfiles/commit/6140e370d51eb647a5acdcf30b8a04c3c343462b)) - MRDGH2821
+- explicitly remove make dependencies - ([8cdb903](https://github.com/MRDGH2821/dotfiles/commit/8cdb903efc5db15cf8e9b2707d92a4e5190873fd)) - MRDGH2821
+- fix git script - ([c5299eb](https://github.com/MRDGH2821/dotfiles/commit/c5299ebcb7296f1cae93f035cb90c9cab0f456a7)) - MRDGH2821
+- fix theme name - ([f82663b](https://github.com/MRDGH2821/dotfiles/commit/f82663b52a3daa90e71050b545f1cabd9c83b29d)) - MRDGH2821
+- use custom yaml-language-server - ([d7a1238](https://github.com/MRDGH2821/dotfiles/commit/d7a1238a1eb14e15381141119be47f63bbfc5656)) - MRDGH2821
+- fix paths - ([56f2e9c](https://github.com/MRDGH2821/dotfiles/commit/56f2e9c4a2884dd3bc82939e8dc6075eff2b6fcd)) - MRDGH2821
+- fix scripts not being run - ([b23cf09](https://github.com/MRDGH2821/dotfiles/commit/b23cf095d89d1e9df323602f91a02b4e847005ee)) - MRDGH2821
+- fix oh-my-posh theming - ([855e699](https://github.com/MRDGH2821/dotfiles/commit/855e69927d2664ac74b9eaeec2877ee234b689cd)) - MRDGH2821
+- fix syntax - ([fd86255](https://github.com/MRDGH2821/dotfiles/commit/fd862558bd61193d87ddc66da48a2e8571ae4053)) - MRDGH2821
+- fix cargo bin path - ([750a46f](https://github.com/MRDGH2821/dotfiles/commit/750a46f20a4251d1477935a9b0d6f55eb7f8174e)) - MRDGH2821
+- apply linter fixes - ([007b33a](https://github.com/MRDGH2821/dotfiles/commit/007b33a71dde8588cb6e25f9fbc3de339d4b3558)) - MRDGH2821
+- fix path - ([6837f44](https://github.com/MRDGH2821/dotfiles/commit/6837f44c76e779ce32d4680ff2139b59944efe0d)) - MRDGH2821
+- do shell fixes - ([31be12e](https://github.com/MRDGH2821/dotfiles/commit/31be12eefb14cd59eb1baac6ead1718f475a1068)) - MRDGH2821
+- fix git config syntax - ([fcc9067](https://github.com/MRDGH2821/dotfiles/commit/fcc906785cefa59adc9aac00b765d1402c7dcd4a)) - MRDGH2821
+- fix git config - ([728eeb0](https://github.com/MRDGH2821/dotfiles/commit/728eeb007a4e5e39a5732fb4d7cb028caecf468d)) - MRDGH2821
+- fix paths - ([43f3f14](https://github.com/MRDGH2821/dotfiles/commit/43f3f14c2e773aa54457d5334add49ef702f1b2a)) - MRDGH2821
+- apply shellcheck fixes - ([bac14f2](https://github.com/MRDGH2821/dotfiles/commit/bac14f29c1feafa646dc74e88b3c0071e5c89ea2)) - MRDGH2821
+- fix typo - ([a0715fe](https://github.com/MRDGH2821/dotfiles/commit/a0715fe2ab976cad7177d8b0f88e79338e7b1f2c)) - MRDGH2821
+- apply linter fixes - ([ad99101](https://github.com/MRDGH2821/dotfiles/commit/ad99101f90436666538edcb51b4b7691a433c769)) - MRDGH2821
+- fix paths - ([05e36f7](https://github.com/MRDGH2821/dotfiles/commit/05e36f78e439f971643cd7899eee475c66b2575b)) - MRDGH2821
+- add fixes for fedora - ([35a08ff](https://github.com/MRDGH2821/dotfiles/commit/35a08fff5d680eb6ffd01b5d97324f0a41431162)) - MRDGH2821
+- remove redundant export - ([6749e4e](https://github.com/MRDGH2821/dotfiles/commit/6749e4ede778e27f5cd0e80a64c522cdd6dffac9)) - MRDGH2821
+- add more trigger hashes - ([dd9128f](https://github.com/MRDGH2821/dotfiles/commit/dd9128fac34460a55763e742554592d632c5f33d)) - MRDGH2821
+- apply linter fixes - ([0c9e48a](https://github.com/MRDGH2821/dotfiles/commit/0c9e48a75b41d442347201ae63d002b362b7d2b7)) - MRDGH2821
+- add xdg dirs fix - ([308d235](https://github.com/MRDGH2821/dotfiles/commit/308d235d713f03d058455ea455ba57e2704bfedf)) - MRDGH2821
+- fix config - ([1a1b144](https://github.com/MRDGH2821/dotfiles/commit/1a1b1441379727a4dbab2e384af37fe82dc0f433)) - MRDGH2821
+- fix lazygit config - ([dc8d96f](https://github.com/MRDGH2821/dotfiles/commit/dc8d96f6cc869bd5c48c0c02ba3f3ae45a5c0e8b)) - MRDGH2821
+- scan through all files - ([9de969a](https://github.com/MRDGH2821/dotfiles/commit/9de969a29d7f6128d0c54481bfac38b98c5f0409)) - MRDGH2821
+- fix syntax - ([eb19263](https://github.com/MRDGH2821/dotfiles/commit/eb19263ee8e1a66864811f17599e3d741d8c45f9)) - MRDGH2821
+- remove task dependency - ([ec53b30](https://github.com/MRDGH2821/dotfiles/commit/ec53b3077160791cfdd00bdb73297b9910e67da8)) - MRDGH2821
+- fix syntax - ([7054657](https://github.com/MRDGH2821/dotfiles/commit/705465773a33703fefd00b38e02e0f26367a1b71)) - MRDGH2821
+- fix urls - ([63c5ba2](https://github.com/MRDGH2821/dotfiles/commit/63c5ba27d8f42108c02e230ea9ac6c30bc537357)) - MRDGH2821
+- adjust skills installation - ([873e715](https://github.com/MRDGH2821/dotfiles/commit/873e7151b5aa880e3e3fd494158ecd7b7fb41db0)) - MRDGH2821
+- use env resolved executable - ([8de7e90](https://github.com/MRDGH2821/dotfiles/commit/8de7e905257b12d1fa033d9fb904e607874d73f8)) - MRDGH2821
+- add xdg variables fallback - ([7b89132](https://github.com/MRDGH2821/dotfiles/commit/7b891321b8e26334f7c4a5e39b738a3084a9a995)) - MRDGH2821
+
+### Documentation
+
+- **(mise)** add research on temporary config file override - ([bec1e4a](https://github.com/MRDGH2821/dotfiles/commit/bec1e4a2f2147ec586682fcae620c0525f65a0c9)) - MRDGH2821
+- **(package)** add package tracker - ([3517270](https://github.com/MRDGH2821/dotfiles/commit/35172700feb76894ec3ebc57d4f12d76c7a84e2f)) - MRDGH2821
+- **(package)** :package: update status of fnm on windows - ([089f116](https://github.com/MRDGH2821/dotfiles/commit/089f116f774ef8a616fe0f9ca626978bc69c8aad)) - MRDGH2821
+- **(package)** update meaning of 👍 emoji - ([fda7823](https://github.com/MRDGH2821/dotfiles/commit/fda7823bf34a6cbf93a567a6377a32925d6986c1)) - MRDGH2821
+- **(packages)** update list - ([6fd1eb4](https://github.com/MRDGH2821/dotfiles/commit/6fd1eb45913a11c4e23ef3b125021b4995b78139)) - MRDGH2821
+- **(packages)** update list - ([15ab68d](https://github.com/MRDGH2821/dotfiles/commit/15ab68ddb0cf8118031b1a6cdb058bb0a9baadc6)) - MRDGH2821
+- **(script)** :memo: change wording to reflect actual state of thing - ([244dbe4](https://github.com/MRDGH2821/dotfiles/commit/244dbe4a414b2a8d4816eec7a2cf675f435a4103)) - MRDGH2821
+- update readme - ([753349c](https://github.com/MRDGH2821/dotfiles/commit/753349c77ca53c33ce8fc68b63d9410b435fc14a)) - MRDGH2821
+- add model list - ([820acb8](https://github.com/MRDGH2821/dotfiles/commit/820acb85a18f1be5f2d6dd72e497d72610eeadcf)) - MRDGH2821
+- add cursor models list - ([b6ef088](https://github.com/MRDGH2821/dotfiles/commit/b6ef0889176f45365f4c48a1b52328a03e645ae2)) - MRDGH2821
+- add info - ([25bb469](https://github.com/MRDGH2821/dotfiles/commit/25bb469eb48b89d8d54f7d63baafd0130e9a2253)) - MRDGH2821
+- update package list - ([dbd90e6](https://github.com/MRDGH2821/dotfiles/commit/dbd90e6b26316588bf22b59373e2f264f9df1111)) - MRDGH2821
+- fix comments - ([e8d0fdd](https://github.com/MRDGH2821/dotfiles/commit/e8d0fdd8118892d1236ec5b084cabaa831b8eceb)) - MRDGH2821
+- add ai logs - ([9ece341](https://github.com/MRDGH2821/dotfiles/commit/9ece341598f9b7dea05747a049f00dfb1e7b10d2)) - MRDGH2821
+- add ai research - ([12c516c](https://github.com/MRDGH2821/dotfiles/commit/12c516c37892dda1ca66140dd972f9b043f0aa28)) - MRDGH2821
+- add ai research docs - ([7b153ad](https://github.com/MRDGH2821/dotfiles/commit/7b153ad4271e14e028ac76305f8b90e8a60983d7)) - MRDGH2821
+
+### Features
+
+- **(chezmoi)** :fire: remove other editors - ([b1522ad](https://github.com/MRDGH2821/dotfiles/commit/b1522ad99d41446ad86ae4298c4a3e5ae7d58d90)) - MRDGH2821
+- **(chezmoi)** :wrench: add merge template - ([aeef468](https://github.com/MRDGH2821/dotfiles/commit/aeef4681f503332673df4bfc41ee099b37092fa5)) - MRDGH2821
+- **(chezmoi)** :fire: remove merge config - ([3097aa7](https://github.com/MRDGH2821/dotfiles/commit/3097aa7b2f743ff96e920f4101bdedc8408a4c33)) - MRDGH2821
+- **(chezmoi)** :wrench: add more metadata & hooks - ([4f5f614](https://github.com/MRDGH2821/dotfiles/commit/4f5f614e690b1b234f3456e43ffccad3e14fa7dd)) - MRDGH2821
+- **(chezmoi)** add password manager installer scripts - ([b222c4c](https://github.com/MRDGH2821/dotfiles/commit/b222c4c5038ef54a3aa8aff6b1d8efecfe0f1be7)) - MRDGH2821
+- **(chezmoi)** :wrench: add declarative package installation config - ([8a20dee](https://github.com/MRDGH2821/dotfiles/commit/8a20deea2fb383f3087d5fb69e68b94ef0420f44)) - MRDGH2821
+- **(chezmoi)** :wrench: add more packages to install - ([df06843](https://github.com/MRDGH2821/dotfiles/commit/df0684331358371f626f88aaa5bcbee18bbe7b3d)) - MRDGH2821
+- **(chezmoi)** add prerequisites for dnf based systems - ([67d4307](https://github.com/MRDGH2821/dotfiles/commit/67d430784839dcd3524b713f01b2b10f93694303)) - MRDGH2821
+- **(chezmoi)** add default values - ([c6377a2](https://github.com/MRDGH2821/dotfiles/commit/c6377a2ee31ff5967cc3025c87d245d5ff3cfc1a)) - MRDGH2821
+- **(chezmoi)** install only if absent - ([8ffe082](https://github.com/MRDGH2821/dotfiles/commit/8ffe0824b06ec73c88122cfa355f08d31fd1b850)) - MRDGH2821
+- **(chezmoi)** remove unwanted package - ([795207d](https://github.com/MRDGH2821/dotfiles/commit/795207d35547d0bfb898097bb8460601736b5c5c)) - MRDGH2821
+- **(chezmoi)** :wrench: add dnf packages - ([40a187b](https://github.com/MRDGH2821/dotfiles/commit/40a187b4ae33066abf883c1a74001fbfe51bdbbd)) - MRDGH2821
+- **(chezmoi)** remove gamescope package - ([297bb02](https://github.com/MRDGH2821/dotfiles/commit/297bb023ab91306efc9d4f9f17edae6b47b9e4c4)) - MRDGH2821
+- **(chezmoi)** :package: install python packages - ([1089c70](https://github.com/MRDGH2821/dotfiles/commit/1089c7098e7791531d0a239ec95e82ca30e883c4)) - MRDGH2821
+- **(chezmoi)** add pam-u2f packages - ([52b9d9f](https://github.com/MRDGH2821/dotfiles/commit/52b9d9f09f55f03796fd08db3bf12aec33b4df87)) - MRDGH2821
+- **(chezmoi)** add steam package for fedora - ([ffbdd2d](https://github.com/MRDGH2821/dotfiles/commit/ffbdd2d6f28c40f43182eabc72c5086ffe848c29)) - MRDGH2821
+- **(chezmoi)** remove ludusavi package - ([374b83a](https://github.com/MRDGH2821/dotfiles/commit/374b83aa536d1461480c93d98121b5305dddce6c)) - MRDGH2821
+- **(chezmoi)** streamline packages & installers - ([b850740](https://github.com/MRDGH2821/dotfiles/commit/b850740987ca95f70c8419a94d4a5b69bb4a4cc1)) - MRDGH2821
+- **(chezmoi)** add arch linux packages - ([115a7ce](https://github.com/MRDGH2821/dotfiles/commit/115a7ce9e30b3d9b3fbe57f9f6184c7a3394337c)) - MRDGH2821
+- **(chezmoi)** :wrench: add more data variables - ([d5e7029](https://github.com/MRDGH2821/dotfiles/commit/d5e70299e9361d3b908eae5eea7159bb03b2bbc1)) - MRDGH2821
+- **(chezmoi)** :wrench: auto detect gpu type - ([cd19905](https://github.com/MRDGH2821/dotfiles/commit/cd1990554517e1a666f67d0257207907d6482768)) - MRDGH2821
+- **(chezmoi)** verify paths of keepass db & pcloud folder - ([7e9e50e](https://github.com/MRDGH2821/dotfiles/commit/7e9e50e010266ce716b0c85732ca0fc5122ce7a6)) - MRDGH2821
+- **(chezmoi)** :wrench: add vscode as diff tool - ([1733869](https://github.com/MRDGH2821/dotfiles/commit/1733869a89bbca4cd01eece6aef55eeea3c59c60)) - MRDGH2821
+- **(chezmoi)** add shell templates - ([00ce084](https://github.com/MRDGH2821/dotfiles/commit/00ce08466e82d665e88d74542db1745612d2fdb4)) - MRDGH2821
+- **(chezmoi)** :hammer: setup gh cli in script - ([4bdb8f8](https://github.com/MRDGH2821/dotfiles/commit/4bdb8f8c6bf5d61aef0570ebe4c24bbb47c4b4b6)) - MRDGH2821
+- **(chezmoi)** make zed the default editor - ([901093e](https://github.com/MRDGH2821/dotfiles/commit/901093ef2f1224c6d7be815537589001bcf4ad6e)) - MRDGH2821
+- **(chezmoi)** auto-import shell-scripts into bash & zsh - ([e6a9aa8](https://github.com/MRDGH2821/dotfiles/commit/e6a9aa8901a61827767c072c74d444cd564fd8ad)) - MRDGH2821
+- **(git)** use git commands to generate git config - ([8217b2a](https://github.com/MRDGH2821/dotfiles/commit/8217b2aa2bf7e30491dcab9f903aa07b3f2a894e)) - MRDGH2821
+- **(git)** update git template - ([de0f0f7](https://github.com/MRDGH2821/dotfiles/commit/de0f0f7d93f763ab9513155e51513169aa44011d)) - MRDGH2821
+- **(hk)** add xmllint XML formatting - ([5c1dd9f](https://github.com/MRDGH2821/dotfiles/commit/5c1dd9fcfc9af0639109b4bdbfd2365550e6ad82)) - MRDGH2821
+- **(kde)** :hammer: add kde settings - ([6d910b3](https://github.com/MRDGH2821/dotfiles/commit/6d910b396db2c10a3ff404c2020019e3432b303d)) - MRDGH2821
+- **(kde)** :wrench: update dolphin config - ([a1d3bd6](https://github.com/MRDGH2821/dotfiles/commit/a1d3bd6793780453d9324ade603efcf51eaa9b49)) - MRDGH2821
+- **(mise)** add emplace - ([811d4df](https://github.com/MRDGH2821/dotfiles/commit/811d4df9c085cfa6973c815261f697e295120f96)) - MRDGH2821
+- **(mise)** add bootstrap script - ([1d1eca7](https://github.com/MRDGH2821/dotfiles/commit/1d1eca7121e4c842eb0b45b5897f6c7d73b8bca5)) - MRDGH2821
+- **(mise)** add new package - ([c5f1911](https://github.com/MRDGH2821/dotfiles/commit/c5f191111c44fe4b83966b3766abfb9627c8bec4)) - MRDGH2821
+- **(opencode)** remove omos and add superpowers - ([8cc4cbc](https://github.com/MRDGH2821/dotfiles/commit/8cc4cbcf40bfd89e2aefd38f46615d5ed9d2db5d)) - MRDGH2821
+- **(package)** add dra & cocogitto package - ([d23dcd9](https://github.com/MRDGH2821/dotfiles/commit/d23dcd932325c69528a326532dfb96d78626beb4)) - MRDGH2821
+- **(package)** add dra packages - ([bee6254](https://github.com/MRDGH2821/dotfiles/commit/bee62546852e6a22072aa4ff4f35625cfc3a3eb9)) - MRDGH2821
+- **(package)** add kleopatra package - ([07b51ea](https://github.com/MRDGH2821/dotfiles/commit/07b51eabe183edea9c37dbae35b53f60d08f44a8)) - MRDGH2821
+- **(package)** get binary release of rclone - ([f67c825](https://github.com/MRDGH2821/dotfiles/commit/f67c825474ab0c8ab200e78ba1d8074d466ba635)) - MRDGH2821
+- **(package)** skip installation of password manager if preinstalled - ([9da8c78](https://github.com/MRDGH2821/dotfiles/commit/9da8c78ada9072e30c2d8e8df9df175ab7f2a0a3)) - MRDGH2821
+- **(package)** notify user when installed - ([6de00ec](https://github.com/MRDGH2821/dotfiles/commit/6de00eca176f22f689871cde1eb95e99081629cc)) - MRDGH2821
+- **(package)** skip updating package unless needed - ([b14650c](https://github.com/MRDGH2821/dotfiles/commit/b14650cd7215bbcb700c7df2c1594d749374ceab)) - MRDGH2821
+- **(package)** add pipx package - ([e410ee4](https://github.com/MRDGH2821/dotfiles/commit/e410ee4a71992c78e836203dacd48b1334a1778e)) - MRDGH2821
+- **(package)** update packaging structure & script - ([8a9a105](https://github.com/MRDGH2821/dotfiles/commit/8a9a10508694e262a99c86112cb9e1807b997bfa)) - MRDGH2821
+- **(package)** add packages needed for gramps - ([a9bd432](https://github.com/MRDGH2821/dotfiles/commit/a9bd4325ed385b9f3358895ba04df83a47cf6324)) - MRDGH2821
+- **(package)** add mangohud & goverlay with configs and words - ([6d0598b](https://github.com/MRDGH2821/dotfiles/commit/6d0598b78bcdd31764eefbcded5ee0da2e788534)) - MRDGH2821
+- **(package)** add iio-sensor-proxy package to enable auto rotate - ([65b8657](https://github.com/MRDGH2821/dotfiles/commit/65b86573689d4d7233bd7dd5214d37eb8cbf29e4)) - MRDGH2821
+- **(package)** add new packages - ([b5eda0a](https://github.com/MRDGH2821/dotfiles/commit/b5eda0afb986115d73e9a86c1da6246bc2f7f7d0)) - MRDGH2821
+- **(package)** add vscode extensions - ([c00feea](https://github.com/MRDGH2821/dotfiles/commit/c00feea9b6b5c326870f70400ee22010a73b48ba)) - MRDGH2821
+- **(package)** add bat package in windows - ([3354773](https://github.com/MRDGH2821/dotfiles/commit/3354773b09a262518169b9d672ea501a3db7bc8a)) - MRDGH2821
+- **(package)** adjust package order - ([3134d73](https://github.com/MRDGH2821/dotfiles/commit/3134d7327a587f2b3bfe925b4b7ef41b391b083d)) - MRDGH2821
+- **(package)** :recycle: add raw dra downloads allowing post processing - ([3f220b6](https://github.com/MRDGH2821/dotfiles/commit/3f220b68f4c32133ae012c72fa698043a3b4d42c)) - MRDGH2821
+- **(package)** add kclock package - ([4bd1e44](https://github.com/MRDGH2821/dotfiles/commit/4bd1e44b84d483e9c1b16523281171829b5353fa)) - MRDGH2821
+- **(package)** update package structure & add packages - ([9585fe1](https://github.com/MRDGH2821/dotfiles/commit/9585fe1f3a09f18cadd19b789bb326562c30c8b9)) - MRDGH2821
+- **(package)** add graphviz package - ([7058413](https://github.com/MRDGH2821/dotfiles/commit/705841352e395cac0a40ded6812a809145e76383)) - MRDGH2821
+- **(package)** :package: add pyicu package - ([849bdb1](https://github.com/MRDGH2821/dotfiles/commit/849bdb1fd87eff158c61b44b67c8a42a780ffe0c)) - MRDGH2821
+- **(package)** :package: prefer gramps package as flatpak - ([efd7949](https://github.com/MRDGH2821/dotfiles/commit/efd7949d5b51d5c9b89b421c3b7ea20f54682705)) - MRDGH2821
+- **(package)** :package: remove repository scope - ([51c164c](https://github.com/MRDGH2821/dotfiles/commit/51c164c0b733fe9b23bb6098f1414aea18bda31b)) - MRDGH2821
+- **(package)** update package name - ([c871426](https://github.com/MRDGH2821/dotfiles/commit/c871426c6b6a85b4554bb91c73fb9060977d154a)) - MRDGH2821
+- **(package)** install calibre using official method - ([a8792dc](https://github.com/MRDGH2821/dotfiles/commit/a8792dc21048d1c7ab26b2bb32f8ab1c54591512)) - MRDGH2821
+- **(package)** :package: update package list & status - ([bd324fb](https://github.com/MRDGH2821/dotfiles/commit/bd324fb27c04ad06e91316497103a43ef2cfd6a6)) - MRDGH2821
+- **(package)** :package: add syncthing & syncthing tray packages - ([0a4b2b4](https://github.com/MRDGH2821/dotfiles/commit/0a4b2b43fabc5e588890688c1868a853548e4a4d)) - MRDGH2821
+- **(package)** :package: add printer & scanner packages - ([f5472ee](https://github.com/MRDGH2821/dotfiles/commit/f5472eee8b10c2296bd5aaa457cda8bb462be317)) - MRDGH2821
+- **(package)** :package: update packages list - ([5c8f6f9](https://github.com/MRDGH2821/dotfiles/commit/5c8f6f9d5179791ec8ddac33b86cd01bb58be88f)) - MRDGH2821
+- **(package)** :package: install python cli packages using rye - ([ebdc936](https://github.com/MRDGH2821/dotfiles/commit/ebdc936e810507ade0e0693a70f80b00ef8b6840)) - MRDGH2821
+- **(package)** :package: replace atuin with mcfly - ([53beef1](https://github.com/MRDGH2821/dotfiles/commit/53beef17b454cacda5680d25181dd0d24e5ff472)) - MRDGH2821
+- **(package)** :package: add fnm for windows - ([9ed4f91](https://github.com/MRDGH2821/dotfiles/commit/9ed4f91aea7958f0cd5957e98772712ae305bc82)) - MRDGH2821
+- **(package)** :package: update package lists & scripts - ([83b31ec](https://github.com/MRDGH2821/dotfiles/commit/83b31ec53f6132981919285da31f81d30353ff92)) - MRDGH2821
+- **(package)** :package: add flatpak packages - ([1fd3165](https://github.com/MRDGH2821/dotfiles/commit/1fd3165f529239148e1789e5dd39a6291159d655)) - MRDGH2821
+- **(package)** :package: remove goverlay in favour of mangojuice - ([484f522](https://github.com/MRDGH2821/dotfiles/commit/484f522d9a1928e57ed9e008f3ccf7f50bf4607c)) - MRDGH2821
+- **(package)** :package: add Alpaca - ([b096511](https://github.com/MRDGH2821/dotfiles/commit/b096511287c5e5e763339291880c962139ee8947)) - MRDGH2821
+- **(package)** :package: add new packages - ([83202db](https://github.com/MRDGH2821/dotfiles/commit/83202dbffb4414d45496df6136e5d2b866770e9e)) - MRDGH2821
+- **(package)** :package: add GNOME Firmware app - ([66d0d0e](https://github.com/MRDGH2821/dotfiles/commit/66d0d0ec137bc567b0b1a1f2f66af6cdd2f9a5d5)) - MRDGH2821
+- **(package)** :package: add zsh & config - ([91870c3](https://github.com/MRDGH2821/dotfiles/commit/91870c3ec58fabd333d85928425e01da55feffa3)) - MRDGH2821
+- **(package)** :package: add warehouse flatpak - ([fec3150](https://github.com/MRDGH2821/dotfiles/commit/fec3150ef7e0eba747301500d03d611a892d706a)) - MRDGH2821
+- **(package)** :package: add grayjay package - ([698b506](https://github.com/MRDGH2821/dotfiles/commit/698b506f4bd723b96029434305199da7ca6460fb)) - MRDGH2821
+- **(package)** :package: add topgrade package & config - ([d2da77b](https://github.com/MRDGH2821/dotfiles/commit/d2da77b34497ad51bd9b6520d80e1ba7ee6f735b)) - MRDGH2821
+- **(package)** :package: use a different camera app - ([ff28296](https://github.com/MRDGH2821/dotfiles/commit/ff282965842985c9749e70c5862ae67006420168)) - MRDGH2821
+- **(package)** :package: add tablet only packages & update scripts to install it - ([8f4be07](https://github.com/MRDGH2821/dotfiles/commit/8f4be075ab96d848247e06411bb4bb0d033f0572)) - MRDGH2821
+- **(package)** :package: add new package - ([d97e985](https://github.com/MRDGH2821/dotfiles/commit/d97e9859efa40636b24d6f373e74b8dd364aeaa1)) - MRDGH2821
+- **(package)** :package: add necessary packages for kde on arch - ([fe6372b](https://github.com/MRDGH2821/dotfiles/commit/fe6372b39d176b424340f40c80ebbed63b9ecff6)) - MRDGH2821
+- **(package)** :package: add shellcheck, shfmt & vscode extension bash ide - ([263628b](https://github.com/MRDGH2821/dotfiles/commit/263628bb142561358e0af85f9505e1f40a218633)) - MRDGH2821
+- **(package)** :package: add git-credential-oauth package - ([60d6705](https://github.com/MRDGH2821/dotfiles/commit/60d670507db74d23c2fa854426e8bb62b6e56ac0)) - MRDGH2821
+- **(package)** :package: add direnv - ([6cf72d3](https://github.com/MRDGH2821/dotfiles/commit/6cf72d33deb9c432786ddfb7970f85c807490f33)) - MRDGH2821
+- **(package)** :package: add repo for syncthing tray - ([5280c32](https://github.com/MRDGH2821/dotfiles/commit/5280c32b6aca394087efab628d1da897af2e895a)) - MRDGH2821
+- **(package)** :package: use only office instead of libre office & mangojuice flatpak - ([7b19206](https://github.com/MRDGH2821/dotfiles/commit/7b1920648be077b0d33894dfa723baddae8072e1)) - MRDGH2821
+- **(package)** :package: add syncthing plasmoid package - ([422d85a](https://github.com/MRDGH2821/dotfiles/commit/422d85aa60ea8acb91d4a80accc2e22c53495764)) - MRDGH2821
+- **(package)** :package: use cinny clint instead of other matrix clients - ([0bb5318](https://github.com/MRDGH2821/dotfiles/commit/0bb5318856c5629ed4b0cb40ef83c9ee0a49b038)) - MRDGH2821
+- **(package)** :fire: remove python & fnm packages - ([cb77b95](https://github.com/MRDGH2821/dotfiles/commit/cb77b95cca6253204dd3ea0c6a3a88a639b37348)) - MRDGH2821
+- **(package)** add new packages - ([61498db](https://github.com/MRDGH2821/dotfiles/commit/61498db044b8b21852ecfd76d83a1ac262d629de)) - MRDGH2821
+- **(package)** install zed on windows - ([6cf23b1](https://github.com/MRDGH2821/dotfiles/commit/6cf23b12a3de3a549de59a4da31152337900f71b)) - MRDGH2821
+- **(package)** add terra repository & packages - ([521fe9e](https://github.com/MRDGH2821/dotfiles/commit/521fe9e711b799cc29ae12aa8da8914c10bab200)) - MRDGH2821
+- **(package)** add soar package manager - ([2764610](https://github.com/MRDGH2821/dotfiles/commit/2764610f92c0ca13839382716fc48a0b16f66873)) - MRDGH2821
+- **(package)** install native package of zed - ([6ea9388](https://github.com/MRDGH2821/dotfiles/commit/6ea93881d1fc56ed1c91a254cbe6afeec998b4ec)) - MRDGH2821
+- **(package)** update package list & scripts - ([3e821cd](https://github.com/MRDGH2821/dotfiles/commit/3e821cdef15ae5bc69e4ed506c52993b7c069f97)) - MRDGH2821
+- **(package)** convert into template to allow distro specific config - ([36cbd58](https://github.com/MRDGH2821/dotfiles/commit/36cbd5843288415ac8ec2a38799a171487d564a3)) - MRDGH2821
+- **(package)** update package list & script for arch - ([72a1530](https://github.com/MRDGH2821/dotfiles/commit/72a1530fa3e725b6453b88759954767ec74fd9c1)) - MRDGH2821
+- **(package)** update package list for debian - ([d32a609](https://github.com/MRDGH2821/dotfiles/commit/d32a6098c4e8896b9f289de28dcd90965c8b115f)) - MRDGH2821
+- **(package)** sort & update list - ([c4c0673](https://github.com/MRDGH2821/dotfiles/commit/c4c0673da997e60b99b441830372496a9072e2e4)) - MRDGH2821
+- **(package)** install dra using soar - ([5bd1f15](https://github.com/MRDGH2821/dotfiles/commit/5bd1f15fba8e9aa3fc72009f492ae34d8008995c)) - MRDGH2821
+- **(package)** update fedora package list - ([87668a2](https://github.com/MRDGH2821/dotfiles/commit/87668a238e85dc800b24421297c1b29ffbc5f3e3)) - MRDGH2821
+- **(package)** add winboat & update package list - ([3b77fd8](https://github.com/MRDGH2821/dotfiles/commit/3b77fd8ca21b07437506f58e7809114ae4cb868f)) - MRDGH2821
+- **(package)** remove 32 bit package & gitkraken - ([9a298e5](https://github.com/MRDGH2821/dotfiles/commit/9a298e59c9acc30bc4ab0fa208a114aefcd469cc)) - MRDGH2821
+- **(package)** add ubuntu specifics - ([e631197](https://github.com/MRDGH2821/dotfiles/commit/e63119737f0f5977af9e6546a939f8561add65a5)) - MRDGH2821
+- **(package)** update package list & script - ([8447a67](https://github.com/MRDGH2821/dotfiles/commit/8447a672be843b8b468728c773b67a4485fad0ad)) - MRDGH2821
+- **(package)** add copier package - ([e0d8884](https://github.com/MRDGH2821/dotfiles/commit/e0d88842da9ca80e6dfe6fc14f6af2851e877fff)) - MRDGH2821
+- **(package)** update soar packages - ([fdeb7e5](https://github.com/MRDGH2821/dotfiles/commit/fdeb7e52058555c9966a48f3f83f5d678e4bb43f)) - MRDGH2821
+- **(package)** add prek python package - ([6768821](https://github.com/MRDGH2821/dotfiles/commit/6768821b0af244392ab0108a1a3ad71c1dfb967c)) - MRDGH2821
+- **(package)** add rust packages - ([c435e03](https://github.com/MRDGH2821/dotfiles/commit/c435e03b3d1f694372d425ef593eb759a9d80f94)) - MRDGH2821
+- **(package)** add treefmt package - ([37f37d7](https://github.com/MRDGH2821/dotfiles/commit/37f37d7898de98d9537c27a9dff3e2c02052d2ec)) - MRDGH2821
+- **(package)** add alejandra - ([714b5e6](https://github.com/MRDGH2821/dotfiles/commit/714b5e6544874895b6d0af1f2818e7d329fc284e)) - MRDGH2821
+- **(package)** add meld in ubuntu - ([ac4a773](https://github.com/MRDGH2821/dotfiles/commit/ac4a7737ca51f9e6b4ddba5d812fe148bfae1d86)) - MRDGH2821
+- **(package)** install nix - ([db8aef1](https://github.com/MRDGH2821/dotfiles/commit/db8aef14ee75a4eb147b66484350717d402dee03)) - MRDGH2821
+- **(package)** add ollama - ([58c9127](https://github.com/MRDGH2821/dotfiles/commit/58c9127da12f3b5d8454822155388fffef75d695)) - MRDGH2821
+- **(package)** add cargo package - ([a1649ae](https://github.com/MRDGH2821/dotfiles/commit/a1649ae0a1a76157a2e3e11452262b5f149d6e81)) - MRDGH2821
+- **(package)** add sccache - ([6379805](https://github.com/MRDGH2821/dotfiles/commit/6379805002d31a48a72d76a3cdad71f555bcc3f1)) - MRDGH2821
+- **(package)** add nadir claw - ([d6ec4d9](https://github.com/MRDGH2821/dotfiles/commit/d6ec4d9617000f4ceafc61580b90425959969a5d)) - MRDGH2821
+- **(package)** add cargo-cache - ([10763fe](https://github.com/MRDGH2821/dotfiles/commit/10763fe6f7332428baf74fbed6efa2dd3bb04090)) - MRDGH2821
+- **(package)** add pcloud - ([9795820](https://github.com/MRDGH2821/dotfiles/commit/97958207f05c2f3454cd091bb677c14aa354cb9b)) - MRDGH2821
+- **(package)** create a script to auto generate packages.md - ([a0b5069](https://github.com/MRDGH2821/dotfiles/commit/a0b5069ea3ee70f3482d41039c58a376d7e0567d)) - MRDGH2821
+- **(package)** add gentle-ai - ([091cafc](https://github.com/MRDGH2821/dotfiles/commit/091cafc3fcc0723550ff47e578adf877b6c1a646)) - MRDGH2821
+- **(package)** add engram - ([3a60dc2](https://github.com/MRDGH2821/dotfiles/commit/3a60dc2388ca47004a70782b8732307f67c5d13f)) - MRDGH2821
+- **(package)** add ocx - ([9f95da4](https://github.com/MRDGH2821/dotfiles/commit/9f95da4a3b1808dc51c31f20dd3ba00d5222cf66)) - MRDGH2821
+- **(package)** update package list - ([5887351](https://github.com/MRDGH2821/dotfiles/commit/588735104a505b6ec30969d3750006b2f29462b7)) - MRDGH2821
+- **(package)** add gentle-ai - ([1a6e2fc](https://github.com/MRDGH2821/dotfiles/commit/1a6e2fc3c3a96910cd42d79fcc2ef3b49b60cd7c)) - MRDGH2821
+- **(package)** add bun packages - ([4bea5d9](https://github.com/MRDGH2821/dotfiles/commit/4bea5d976540b757c8ca65d8605439b055a5e246)) - MRDGH2821
+- **(package)** update python package list - ([a94ac76](https://github.com/MRDGH2821/dotfiles/commit/a94ac76ba2a182b88a23ed0cf9dee56c3c66668f)) - MRDGH2821
+- **(package)** add sitemcp - ([90d9e8d](https://github.com/MRDGH2821/dotfiles/commit/90d9e8ddd6ba7ede0dbd7b2dd4ca02ac765adf95)) - MRDGH2821
+- **(package)** add gitlab cli - ([2aa9874](https://github.com/MRDGH2821/dotfiles/commit/2aa9874b8c54ea23e8606c37c686a9c680ea767f)) - MRDGH2821
+- **(package)** add hermes agent - ([b4d5ad4](https://github.com/MRDGH2821/dotfiles/commit/b4d5ad4c046ea5926b24097f509b1063adb6461c)) - MRDGH2821
+- **(package)** add apm-cli - ([e4394ef](https://github.com/MRDGH2821/dotfiles/commit/e4394ef21f8c18a455b8bf05e69ed67b5e317199)) - MRDGH2821
+- **(package)** add ccu - ([8fbf3df](https://github.com/MRDGH2821/dotfiles/commit/8fbf3dffb91d23a49cc5c9e3c58f8ac935fa5de1)) - MRDGH2821
+- **(package)** add ls-lint - ([34b170c](https://github.com/MRDGH2821/dotfiles/commit/34b170cb30ce8043a1df59918f9e17c7b8088666)) - MRDGH2821
+- **(package)** add cargo-edit - ([c7e7b84](https://github.com/MRDGH2821/dotfiles/commit/c7e7b84b713515ff26f89ade0db1e8d9ea0ca08a)) - MRDGH2821
+- **(package)** add herdr - ([23cdee7](https://github.com/MRDGH2821/dotfiles/commit/23cdee78cd4e2f9eed12c69744018167c43df0ac)) - MRDGH2821
+- **(package)** add libavcodec-freeworld - ([88b96ed](https://github.com/MRDGH2821/dotfiles/commit/88b96ed58d5ba092f0d32cf977905b0e2a008c41)) - MRDGH2821
+- **(package)** install determinate nix - ([090229a](https://github.com/MRDGH2821/dotfiles/commit/090229a04cf0577655fda12181d9de06ec80dc8c)) - MRDGH2821
+- **(package)** add irminsul package - ([64650c7](https://github.com/MRDGH2821/dotfiles/commit/64650c730a697cd06d9bc5b10c55540940fbac9d)) - MRDGH2821
+- **(package)** add pay-respects - ([92dadfa](https://github.com/MRDGH2821/dotfiles/commit/92dadfaaf8eb3796bf00b3ef2f3ecce5cb4637f9)) - MRDGH2821
+- **(packages)** update list - ([1753425](https://github.com/MRDGH2821/dotfiles/commit/175342595b824a0c32ffd3e17d35871ac1ba7da8)) - MRDGH2821
+- **(packages)** update python list - ([f67a176](https://github.com/MRDGH2821/dotfiles/commit/f67a1766ac50c5421784202fda0158f8f0beb448)) - MRDGH2821
+- **(packages)** update list & scripts - ([4990a83](https://github.com/MRDGH2821/dotfiles/commit/4990a83c73604301edd599f40f473b7a4d2b1c4d)) - MRDGH2821
+- **(packages)** add new package - ([88f3bed](https://github.com/MRDGH2821/dotfiles/commit/88f3bed0aa26ceb26813798cbf42b4520a02ed97)) - MRDGH2821
+- **(packages)** add packages - ([d1ae003](https://github.com/MRDGH2821/dotfiles/commit/d1ae003b893644a8aa1c33cdadfe2c68b59799aa)) - MRDGH2821
+- **(packages)** add trufflehog & gitleaks - ([18b1448](https://github.com/MRDGH2821/dotfiles/commit/18b14483ef5891d2fc4e93ad70a8672d46036a1b)) - MRDGH2821
+- **(packages)** update packages list - ([9fd97d1](https://github.com/MRDGH2821/dotfiles/commit/9fd97d15767c9ae67aa7cc9dc6bcc9ff26bd82fa)) - MRDGH2821
+- **(packages)** add repgrep & fd - ([d32a73b](https://github.com/MRDGH2821/dotfiles/commit/d32a73b26469618034e2e339ad1c3e6cf34b97fa)) - MRDGH2821
+- **(packages)** add tailscale & apm-cli - ([a9a0b5d](https://github.com/MRDGH2821/dotfiles/commit/a9a0b5db05781433dd715b65fec25a04074b0a62)) - MRDGH2821
+- **(packages)** add cli agents - ([aca600f](https://github.com/MRDGH2821/dotfiles/commit/aca600f37174813ff9ff7eebf26f1fd65abcb39f)) - MRDGH2821
+- **(packages)** add more packages in mise - ([e746c87](https://github.com/MRDGH2821/dotfiles/commit/e746c876b63217d33aff0037dfa318a54f95f7b6)) - MRDGH2821
+- **(packages)** add more packages in soar - ([456f6a4](https://github.com/MRDGH2821/dotfiles/commit/456f6a4f406bf54b0777d174347afc9b247f9f58)) - MRDGH2821
+- **(packages)** add install-release package - ([0d7c97d](https://github.com/MRDGH2821/dotfiles/commit/0d7c97d9417f681386bc06edb5219f3dbf7aad0f)) - MRDGH2821
+- **(packages)** track mise-managed tools in Packages.md - ([683a28b](https://github.com/MRDGH2821/dotfiles/commit/683a28bb751522186156f12e5506143034b1ecc0)) - MRDGH2821
+- **(packages)** update mise config - ([e5ff55f](https://github.com/MRDGH2821/dotfiles/commit/e5ff55fc043ad1c83f583fccbc5c89e474a9de32)) - MRDGH2821
+- **(packages)** add age - ([c8886ed](https://github.com/MRDGH2821/dotfiles/commit/c8886ed2c7f84a8c97c8057b492d8afee46306cc)) - MRDGH2821
+- **(packages)** add memorix - ([f568419](https://github.com/MRDGH2821/dotfiles/commit/f5684193bd00bc9916ec636bc37db86b090438f2)) - MRDGH2821
+- **(packages)** add hcom - ([35f64da](https://github.com/MRDGH2821/dotfiles/commit/35f64da6ac9452343788d858f9cfdf4c60c54887)) - MRDGH2821
+- **(packages)** add orca - ([4f9422a](https://github.com/MRDGH2821/dotfiles/commit/4f9422a2dcdf08f347480403867ff6dac2280e57)) - MRDGH2821
+- **(packages)** include mise bootstrap packages in table - ([ef3d484](https://github.com/MRDGH2821/dotfiles/commit/ef3d484fbf91666f222ffddd144e9e368d7b2807)) - MRDGH2821
+- **(packages)** read winget bootstrap packages and mise tools on windows - ([7304ab2](https://github.com/MRDGH2821/dotfiles/commit/7304ab2e83c9736f9cef57ba1db03463d7e909b4)) - MRDGH2821
+- **(pre-commit)** add gga hook - ([fa8c55b](https://github.com/MRDGH2821/dotfiles/commit/fa8c55bbcab08b2906b1216607928e2c47c21117)) - MRDGH2821
+- **(repology)** print Repology search URL in terminal output - ([ccb34cd](https://github.com/MRDGH2821/dotfiles/commit/ccb34cd85de3939b823d61b5b8a47c33848af636)) - MRDGH2821
+- **(script)** set gh as git credential helper - ([e4f4d58](https://github.com/MRDGH2821/dotfiles/commit/e4f4d58c4409571adb7c3158805fb1a8e319c861)) - MRDGH2821
+- **(script)** add post install ap configuring script for windows - ([331f278](https://github.com/MRDGH2821/dotfiles/commit/331f278273057d61e61d64f030a5d58901aae830)) - MRDGH2821
+- **(script)** add powershell profile script - ([dcef8e3](https://github.com/MRDGH2821/dotfiles/commit/dcef8e3907d770ea755f9c7fd11335a30754560d)) - MRDGH2821
+- **(script)** enable docker socket, not docker itself - ([61ccfcb](https://github.com/MRDGH2821/dotfiles/commit/61ccfcb996c327b6f50466772cf46accf3f58d2d)) - MRDGH2821
+- **(script)** :package: add chaotic aur repo on arch systems - ([d123684](https://github.com/MRDGH2821/dotfiles/commit/d123684a4257c61ff661f3c060440f7f16c75655)) - MRDGH2821
+- **(script)** :package: install flatpaks in arch - ([6d02988](https://github.com/MRDGH2821/dotfiles/commit/6d029880110390e086102588ea7c1aa2249524fb)) - MRDGH2821
+- **(script)** :hammer: add ssh agent fixer script - ([2d3eba8](https://github.com/MRDGH2821/dotfiles/commit/2d3eba8bcec4497dfa22b689eb9e8cc11caedff2)) - MRDGH2821
+- **(script)** add cli tool invocations & python site packages - ([6ab1ff1](https://github.com/MRDGH2821/dotfiles/commit/6ab1ff1a377734860568b4b777023e178014adca)) - MRDGH2821
+- **(script)** :wrench: add powershell 7 profile - ([454f814](https://github.com/MRDGH2821/dotfiles/commit/454f81430a806dcda050775dd0e1cb987bdc6c37)) - MRDGH2821
+- **(script)** :wrench: add cocogitto commit hook config - ([9fd7dd5](https://github.com/MRDGH2821/dotfiles/commit/9fd7dd5efffb7ad55cf4ddeecaf2193f9212cfed)) - MRDGH2821
+- **(script)** :hammer: split scripts based on os type - ([b00a55e](https://github.com/MRDGH2821/dotfiles/commit/b00a55ec13197371f7511803e18f101674c7b66a)) - MRDGH2821
+- **(script)** :hammer: add espanso configuring scripts - ([0977cd3](https://github.com/MRDGH2821/dotfiles/commit/0977cd360232755aa86956d2283b979b615fd2da)) - MRDGH2821
+- **(script)** :hammer: add echo statement to inform user - ([e98cbd7](https://github.com/MRDGH2821/dotfiles/commit/e98cbd75e5ac72837a2bea12484ba1132c59586e)) - MRDGH2821
+- **(script)** :hammer: register espanso service - ([15986a1](https://github.com/MRDGH2821/dotfiles/commit/15986a131bfd0420374b54804826ce87ebd3b62a)) - MRDGH2821
+- **(script)** :hammer: make script executable - ([3a6ede8](https://github.com/MRDGH2821/dotfiles/commit/3a6ede852d22bf62b2114e3617b1b8734b457374)) - MRDGH2821
+- **(script)** :boom: remove ~/bin path - ([9f3c468](https://github.com/MRDGH2821/dotfiles/commit/9f3c468d920265b31f8cd719d0587a6818cd7faf)) - MRDGH2821
+- **(script)** :sparkles: echo file path after creating it - ([f7ad4db](https://github.com/MRDGH2821/dotfiles/commit/f7ad4db7a924903cd6cee77a11a429723c1f7154)) - MRDGH2821
+- **(script)** :sparkles: add self- cleaning logic to move configs to ~/.bashrc.d - ([698c80c](https://github.com/MRDGH2821/dotfiles/commit/698c80c49b78435082a19684222e5642237caf0c)) - MRDGH2821
+- **(script)** :wrench: add aliases in zsh - ([61fd50e](https://github.com/MRDGH2821/dotfiles/commit/61fd50e44f2b8a4696a3a00b12ad5bdf1baecc5b)) - MRDGH2821
+- **(script)** :hammer: add custom scripts sourcing - ([7433758](https://github.com/MRDGH2821/dotfiles/commit/74337586b140acf1cd718df688cbfd95e960d53c)) - MRDGH2821
+- **(script)** :hammer: early exit if AppArmor is not installed. - ([d96c258](https://github.com/MRDGH2821/dotfiles/commit/d96c25865d3c4640522ab16ecadf6f315dc07c15)) - MRDGH2821
+- **(script)** :hammer: add waydroid mount & monitor service scripts - ([fd43013](https://github.com/MRDGH2821/dotfiles/commit/fd430134f46a2010cb40fde10160fb638fe58df6)) - MRDGH2821
+- **(script)** :hammer: add zsh scripts - ([bbb794d](https://github.com/MRDGH2821/dotfiles/commit/bbb794de8bac15229c28d12a9e62812d7ba598da)) - MRDGH2821
+- **(script)** :hammer: bring zsh parity to bash - ([ecf493d](https://github.com/MRDGH2821/dotfiles/commit/ecf493d85cf1ff125e32a8554a1dd6799f935d6d)) - MRDGH2821
+- **(script)** :wrench: update powershell configs - ([8276b6d](https://github.com/MRDGH2821/dotfiles/commit/8276b6d338e0f9e37f37c9356571c968011c7a4f)) - MRDGH2821
+- **(script)** :hammer: add `--wait` parameter on code editors - ([2274880](https://github.com/MRDGH2821/dotfiles/commit/22748809dc51eaec376637c5fa93c45318bf0547)) - MRDGH2821
+- **(script)** :hammer: add cargo shell completion & bin export - ([5d4f1d0](https://github.com/MRDGH2821/dotfiles/commit/5d4f1d09129204c4ff34baa35b29561a6fbb7f3f)) - MRDGH2821
+- **(script)** :triangular_flag_on_post: add more flags to gh cli - ([135727b](https://github.com/MRDGH2821/dotfiles/commit/135727bc4cdeb6bd6ad35b1eefe296879ad92c28)) - MRDGH2821
+- **(script)** add a repository in debian script - ([04822f8](https://github.com/MRDGH2821/dotfiles/commit/04822f8d917903d833243c536e52b22e41224ae7)) - MRDGH2821
+- **(script)** export common paths to env - ([2b009ab](https://github.com/MRDGH2821/dotfiles/commit/2b009ab8972f23d698cdc12802b4d0f48f88bfc1)) - MRDGH2821
+- **(script)** update script for debian 13 - ([538fbcb](https://github.com/MRDGH2821/dotfiles/commit/538fbcb10782634d712b4a257dc995bce0530da6)) - MRDGH2821
+- **(script)** export paths - ([a3256fe](https://github.com/MRDGH2821/dotfiles/commit/a3256feaf20f768c3a6a2302d7a02c7a72e6d10f)) - MRDGH2821
+- **(script)** add script to install soar packages - ([be31dec](https://github.com/MRDGH2821/dotfiles/commit/be31dec93944ec1ee4af2eb5611ab07e6a8c9aec)) - MRDGH2821
+- **(script)** install laptop only packages - ([9fe865c](https://github.com/MRDGH2821/dotfiles/commit/9fe865c8e5a63569037ec0f448f66da58bfa3da5)) - MRDGH2821
+- **(script)** add zed editor symlink - ([fa23b9c](https://github.com/MRDGH2821/dotfiles/commit/fa23b9c5aeba76ca5d5173dcec815f78317d7110)) - MRDGH2821
+- **(script)** add alias to update repo - ([26fd032](https://github.com/MRDGH2821/dotfiles/commit/26fd03245b7b1fa9b32b7cc5402c518d86cb817e)) - MRDGH2821
+- **(script)** add more upgrade commands - ([f81feba](https://github.com/MRDGH2821/dotfiles/commit/f81feba460f7d78598124d0303f2716c4bd63d56)) - MRDGH2821
+- **(script)** add agent skills updater - ([540d5cf](https://github.com/MRDGH2821/dotfiles/commit/540d5cfc1174448b134124d7b0b029463fa16427)) - MRDGH2821
+- **(script)** add new aliases - ([ea9c06e](https://github.com/MRDGH2821/dotfiles/commit/ea9c06e2d0b5549c967ac2ae136a539239c736dd)) - MRDGH2821
+- **(script)** add alias to delete empty dirs - ([bd976c8](https://github.com/MRDGH2821/dotfiles/commit/bd976c860fbfd9da40927c3844ce13a4f067853f)) - MRDGH2821
+- **(script)** add mise activation script - ([87a015c](https://github.com/MRDGH2821/dotfiles/commit/87a015c4dc2d3e1d52e5856cfbe26aaccb17322f)) - MRDGH2821
+- **(script)** add export-gh function to export GITHUB_TOKEN - ([c1388be](https://github.com/MRDGH2821/dotfiles/commit/c1388be60f3d70d6231fb6d7be392caa2d1fdf1a)) - MRDGH2821
+- **(script)** add glab token exporting script - ([37ff8da](https://github.com/MRDGH2821/dotfiles/commit/37ff8da3a9165da4c2e6ba96d1050f1730010827)) - MRDGH2821
+- **(script)** add rmignored to delete files matched by .gitignore - ([48720b7](https://github.com/MRDGH2821/dotfiles/commit/48720b74fd89c6167daef53f8bf1829695b3b702)) - MRDGH2821
+- **(soar)** add tag patterns - ([8b7b13f](https://github.com/MRDGH2821/dotfiles/commit/8b7b13fae825c75e0d2d4907d77705cfd10a143c)) - MRDGH2821
+- **(version)** update pyproject.toml on Cog bumps - ([5218ac8](https://github.com/MRDGH2821/dotfiles/commit/5218ac851d91fca260928da0f8e1741df6fbcccb)) - MRDGH2821
+- **(zed)** add zed editor config - ([feec1ce](https://github.com/MRDGH2821/dotfiles/commit/feec1ce86745870821fe0eaa59731fbcfce665ce)) - MRDGH2821
+- **(zed)** use yq to sort keys - ([abd86c6](https://github.com/MRDGH2821/dotfiles/commit/abd86c63092c6af83cfc0cdd2458cf12c9939656)) - MRDGH2821
+- **(zed)** add global task to view git diff in meld - ([ebce722](https://github.com/MRDGH2821/dotfiles/commit/ebce722100f7309d7ed5ce1174b790b8e053c126)) - MRDGH2821
+- **(zed)** add cspell word sort task - ([57026e3](https://github.com/MRDGH2821/dotfiles/commit/57026e32afccb77136bb2cef7f8206a7983431d9)) - MRDGH2821
+- **(zed)** add herdr open script as terminal init command - ([ff933d4](https://github.com/MRDGH2821/dotfiles/commit/ff933d4a006d8ca09a1ab3790ad6733190fdad16)) - MRDGH2821
+- :wrench: add prettier & editor config - ([276d38a](https://github.com/MRDGH2821/dotfiles/commit/276d38af0a9c633341eac8b88b6a37e3f3cd956a)) - MRDGH2821
+- :camera_flash: add gitconfig - ([1684379](https://github.com/MRDGH2821/dotfiles/commit/1684379a52715063bc0ec8d673ebaf64d5fa8f6c)) - MRDGH2821
+- :wrench: add fastfetch config file - ([aa48396](https://github.com/MRDGH2821/dotfiles/commit/aa4839670d2fbb238669d2ba2384805ca1859873)) - MRDGH2821
+- notify if git is configured - ([2a1b87e](https://github.com/MRDGH2821/dotfiles/commit/2a1b87e54f33cf3487f27ebf368b4e4123f6a08b)) - MRDGH2821
+- :wrench: add spectacle config - ([85e48b1](https://github.com/MRDGH2821/dotfiles/commit/85e48b13edc0cdf0a0a68dfd20d77c1406c8fc13)) - MRDGH2821
+- enable docker service post installation - ([464a417](https://github.com/MRDGH2821/dotfiles/commit/464a41763c863e3a3e848e05ae6c0ebc7157645d)) - MRDGH2821
+- add rpm free & non-free repos - ([c091132](https://github.com/MRDGH2821/dotfiles/commit/c091132a199ea250d03288b0e1b619bc8fd99be1)) - MRDGH2821
+- add bashrc - ([ff65798](https://github.com/MRDGH2821/dotfiles/commit/ff65798517bb8ea8c1f32b5e18874c7316a057e6)) - MRDGH2821
+- combine bashrc from endeavour os, kde neon & fedora - ([1e64d0d](https://github.com/MRDGH2821/dotfiles/commit/1e64d0d7f162a87492261736820cbae43e1ecfca)) - MRDGH2821
+- update system before installing packages - ([374e921](https://github.com/MRDGH2821/dotfiles/commit/374e92134604d698f607fa5929e8d4dea2b6826b)) - MRDGH2821
+- install dra executable in fedora - ([a36728d](https://github.com/MRDGH2821/dotfiles/commit/a36728daf6db7a58f67205cd4a68b117337a332b)) - MRDGH2821
+- add konsole config - ([bb7086c](https://github.com/MRDGH2821/dotfiles/commit/bb7086cd5f5769a801b82fa6812eae17b927020f)) - MRDGH2821
+- install nerd font - ([5338327](https://github.com/MRDGH2821/dotfiles/commit/53383274047638a3f1ad80d1b0bc8f68c50b6e07)) - MRDGH2821
+- on exit delete tmp dir - ([02da8fa](https://github.com/MRDGH2821/dotfiles/commit/02da8fa26b9213b74eb893fd4a0c292dc3dc47a8)) - MRDGH2821
+- :wrench: add dolphin explorer config - ([7843cc8](https://github.com/MRDGH2821/dotfiles/commit/7843cc8b55fa1897fc4bc9d8a8231836341e2b5b)) - MRDGH2821
+- add ggshield global precommit hook - ([044a0a3](https://github.com/MRDGH2821/dotfiles/commit/044a0a35c96de6b5e37e653bc4e8799360398eb6)) - MRDGH2821
+- add chezmoi bash completions - ([6a2deb5](https://github.com/MRDGH2821/dotfiles/commit/6a2deb5e72b0dca81b9e4bbfa70d37f60af8697a)) - MRDGH2821
+- :wrench: add paru config - ([03f7047](https://github.com/MRDGH2821/dotfiles/commit/03f70476ff23f315bb992787c101957aeb5d8fe6)) - MRDGH2821
+- :wrench: update file paths & button locations - ([4804834](https://github.com/MRDGH2821/dotfiles/commit/4804834a844f8cef98b405fb75cecdb5d7966c57)) - MRDGH2821
+- :wrench: update dolphin config - ([6dc2867](https://github.com/MRDGH2821/dotfiles/commit/6dc2867ec269742acae1423d89c77ede97fb69aa)) - MRDGH2821
+- :wrench: update konsole settings - ([049ad83](https://github.com/MRDGH2821/dotfiles/commit/049ad83781da38680e8dd3fc783d2ce3b011744b)) - MRDGH2821
+- :wrench: update knosole profile settings - ([d058a3b](https://github.com/MRDGH2821/dotfiles/commit/d058a3bc800b7d57cee272ab95d1568c97dfb502)) - MRDGH2821
+- :wrench: update config & covert to template - ([0705cec](https://github.com/MRDGH2821/dotfiles/commit/0705cec1f159353e47f936e554601cd37a7836d6)) - MRDGH2821
+- :wrench: update mangohud config - ([19dfe65](https://github.com/MRDGH2821/dotfiles/commit/19dfe65b7b1f5d39f8a82865be601461f5ff552a)) - MRDGH2821
+- :wrench: update dolphin config - ([8c9bef8](https://github.com/MRDGH2821/dotfiles/commit/8c9bef88ac3b470879cf9b98704527c3a09248e0)) - MRDGH2821
+- :wrench: add gallery-dl config - ([6c4801f](https://github.com/MRDGH2821/dotfiles/commit/6c4801fb5a002e08eb6a1a4792222daf814d37ba)) - MRDGH2821
+- :wrench: update paru config - ([e097398](https://github.com/MRDGH2821/dotfiles/commit/e097398f732749aaaeffeb4f2d46520bfb8359ce)) - MRDGH2821
+- :fire: remove starlite page - ([a805ae8](https://github.com/MRDGH2821/dotfiles/commit/a805ae82cd83c61b2916699bad2866bad28f411b)) - MRDGH2821
+- :wrench: add up button in dolphin - ([21a20fa](https://github.com/MRDGH2821/dotfiles/commit/21a20fac80c201a05c022f1a4d6e716216d7ca1c)) - MRDGH2821
+- :wrench: enable auto copy on highlight in konsole - ([67d4425](https://github.com/MRDGH2821/dotfiles/commit/67d44251634837c44ce23a2abb8e2568f78bdef6)) - MRDGH2821
+- :wrench: add Forgejo configuration prompts and update git credential setup - ([a883351](https://github.com/MRDGH2821/dotfiles/commit/a8833518361f3f2395e1de6cd6c229744f86cf87)) - MRDGH2821
+- :fire: remove libreoffice-fresh from Arch package list - ([689d378](https://github.com/MRDGH2821/dotfiles/commit/689d378a3b99f1305c124b921af5034e4ea63a84)) - MRDGH2821
+- update git config - ([0bcad80](https://github.com/MRDGH2821/dotfiles/commit/0bcad804d46cf29ef7a79b1eb07eb35b1825e2a8)) - MRDGH2821
+- add lazygit config - ([27ceef5](https://github.com/MRDGH2821/dotfiles/commit/27ceef5ad15f98eaf1b4ea2d94ebf3aed5b9905e)) - MRDGH2821
+- add tombi config - ([4779409](https://github.com/MRDGH2821/dotfiles/commit/4779409f4de2e93514eccdd157a57d1f1a58064f)) - MRDGH2821
+- add shellcheck config - ([70d0b7b](https://github.com/MRDGH2821/dotfiles/commit/70d0b7b8ac9a8baeb9fcc4ca4d08bcb900a91868)) - MRDGH2821
+- add soar config - ([7fb929f](https://github.com/MRDGH2821/dotfiles/commit/7fb929f3287e1e5ea2dc34e5a5de44699b0ffdc2)) - MRDGH2821
+- allow desktop integration of a soar repo - ([36808c1](https://github.com/MRDGH2821/dotfiles/commit/36808c1f5b8bfc02b0ca53ec715d43b69f9f7bb4)) - MRDGH2821
+- use commit-me to validate commit types - ([5354b2b](https://github.com/MRDGH2821/dotfiles/commit/5354b2b52c62462a2d0505514a9fc12f9d263f40)) - MRDGH2821
+- add cspell hook - ([84513a7](https://github.com/MRDGH2821/dotfiles/commit/84513a7305310b6d75750da1c89157c5485d3f0a)) - MRDGH2821
+- configure git-credential-keepassxc - ([5a7da38](https://github.com/MRDGH2821/dotfiles/commit/5a7da387d9eba98e3852bb546e3e6da32b3c7f2b)) - MRDGH2821
+- add nix packages in list - ([9bf8272](https://github.com/MRDGH2821/dotfiles/commit/9bf8272d5b5ecb7739ad077ab5a19cefe5d8f074)) - MRDGH2821
+- use copier check-update command - ([d56d58d](https://github.com/MRDGH2821/dotfiles/commit/d56d58d22bf2bbcbbd78a7394fd68d929afec0cc)) - MRDGH2821
+- change copier update logic - ([cc6fabc](https://github.com/MRDGH2821/dotfiles/commit/cc6fabc14e6903dac75706a29f9a4a94a7634da9)) - MRDGH2821
+- add dra installer - ([644194d](https://github.com/MRDGH2821/dotfiles/commit/644194ddbdf28e824f128109f5970e2fe0cc0655)) - MRDGH2821
+- add another update command - ([8987960](https://github.com/MRDGH2821/dotfiles/commit/89879606421c8fe1acbced1e24b7a62fa41f3f2d)) - MRDGH2821
+- add copilot package & update ai setup - ([6458099](https://github.com/MRDGH2821/dotfiles/commit/645809911a2da553943e83be06ed9649fb0588ee)) - MRDGH2821
+- add omp & commands - ([c2cbe05](https://github.com/MRDGH2821/dotfiles/commit/c2cbe05d3759dc9df7d35e131d823be5655d2f79)) - MRDGH2821
+- add emplace script & config - ([c5162ec](https://github.com/MRDGH2821/dotfiles/commit/c5162ece8860e2c99efe0770e37b80bef778e676)) - MRDGH2821
+- add skills - ([c11f4aa](https://github.com/MRDGH2821/dotfiles/commit/c11f4aa7a2957e88bcfde9f5da19de11e4d5bd92)) - MRDGH2821
+- update skills list - ([e132a0a](https://github.com/MRDGH2821/dotfiles/commit/e132a0acefa5896c0036dc987ab6193e09b41785)) - MRDGH2821
+- add git-credential-libsecret bootstrap - ([b096433](https://github.com/MRDGH2821/dotfiles/commit/b096433968e1e78f449592134f1d3a6a5aaa659d)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(chezmoi)** :see_no_evil: update ignore list - ([e840752](https://github.com/MRDGH2821/dotfiles/commit/e840752a1186f1789d77e2ec83569a932ffa3191)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: ignore repository files - ([5498ceb](https://github.com/MRDGH2821/dotfiles/commit/5498ceb45939f0e8c0c38c57f2d02235bb34f6dd)) - MRDGH2821
+- **(chezmoi)** ignore node_modules - ([77ddea2](https://github.com/MRDGH2821/dotfiles/commit/77ddea2f3a3a19bc86b4f2ffbef5524f8551e2c1)) - MRDGH2821
+- **(chezmoi)** rename key - ([40a3ac7](https://github.com/MRDGH2821/dotfiles/commit/40a3ac7f7bd41e82c5086f53b9038b9324338f13)) - MRDGH2821
+- **(chezmoi)** add os info variable - ([850ca51](https://github.com/MRDGH2821/dotfiles/commit/850ca5108e5ebe0b64e2a3e61d1b60801edb9593)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: add more thing to ignore - ([d23bdc0](https://github.com/MRDGH2821/dotfiles/commit/d23bdc09e0b35bd4c9b0ce58c504a92e0dd3d0f3)) - MRDGH2821
+- **(chezmoi)** remove blank spaces imposed by go template - ([e0eded6](https://github.com/MRDGH2821/dotfiles/commit/e0eded6f3184292487407f3d89a9b08a615780a0)) - MRDGH2821
+- **(chezmoi)** remove blank spaces imposed by go template - ([da992a6](https://github.com/MRDGH2821/dotfiles/commit/da992a6a0d7b87194fa8d6639c3a6615c76f0ad4)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: fix file name - ([270db5d](https://github.com/MRDGH2821/dotfiles/commit/270db5d953fddda0ff77c2a8becc268ea8288a01)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: explicitly ignore windows powershell profile script - ([84e550a](https://github.com/MRDGH2821/dotfiles/commit/84e550ae4e06ad29677cf379faff4f9b470d14be)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: ignore arch specific folders - ([b79dbec](https://github.com/MRDGH2821/dotfiles/commit/b79dbecfc1ffc2371c485407666c7b0104cbfaaa)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: ignore windows related configs on non-windows os - ([1de062e](https://github.com/MRDGH2821/dotfiles/commit/1de062e5f400a518d51c93bead219df40c1c1c37)) - MRDGH2821
+- **(chezmoi)** :see_no_evil: explicitly ignore windows powershell profiles - ([23aa8f3](https://github.com/MRDGH2821/dotfiles/commit/23aa8f36cb8fb898fb8496d787a22711fbc0a144)) - MRDGH2821
+- **(chezmoi)** ignore non-dot files & sort lines - ([7bc083a](https://github.com/MRDGH2821/dotfiles/commit/7bc083a95ee15b56c8c78731864a3a8df5bcde00)) - MRDGH2821
+- **(chezmoi)** remove forgejo config - ([1daaabb](https://github.com/MRDGH2821/dotfiles/commit/1daaabb6cbd92af4cf43b2721f1a62fab430e298)) - MRDGH2821
+- **(chezmoi)** ignore plasma workspace outside kde - ([1b10f55](https://github.com/MRDGH2821/dotfiles/commit/1b10f55adf8d3b394df2adf08d5f90f40637a081)) - MRDGH2821
+- **(chezmoi)** update ignore list - ([a5d27a1](https://github.com/MRDGH2821/dotfiles/commit/a5d27a1bbc80d7fc7876cb4aea6c60abe3ac2f1e)) - MRDGH2821
+- **(chezmoi)** update ignore list - ([c237a0f](https://github.com/MRDGH2821/dotfiles/commit/c237a0f2afd95aabee1d0f3c2e558b5ed2442530)) - MRDGH2821
+- **(cocogitto)** add config - ([041113e](https://github.com/MRDGH2821/dotfiles/commit/041113e9e674e82733b98aee48eb090a4bac0993)) - MRDGH2821
+- **(cocogitto)** add new scope - ([5acde04](https://github.com/MRDGH2821/dotfiles/commit/5acde04360f0b90cba95697f163974b0afac9877)) - MRDGH2821
+- **(cocogitto)** update scopes - ([ce4d66f](https://github.com/MRDGH2821/dotfiles/commit/ce4d66f9d3c00f3df81dcf4684719d9ebb5519cf)) - MRDGH2821
+- **(copier)** update files & config - ([637c279](https://github.com/MRDGH2821/dotfiles/commit/637c279558fea8557a30c829469b8afa91dfb55d)) - MRDGH2821
+- **(copier)** update configs - ([e02bcd8](https://github.com/MRDGH2821/dotfiles/commit/e02bcd8f457c3b2aa3835e1e4b1db19b2b383de1)) - MRDGH2821
+- **(copier)** apply copier template - ([fc8ba8f](https://github.com/MRDGH2821/dotfiles/commit/fc8ba8f28ea3a3bdbdfea507ff7f6b1585256a05)) - MRDGH2821
+- **(copier)** update copier template - ([f19cc8e](https://github.com/MRDGH2821/dotfiles/commit/f19cc8e5d5e8eaa8cca26c8859f29224b8bc98fd)) - MRDGH2821
+- **(copier)** update template - ([91cfd09](https://github.com/MRDGH2821/dotfiles/commit/91cfd0977ea72e2f40a137dd37e637647d0bafce)) - MRDGH2821
+- **(copier)** update template - ([2ae3976](https://github.com/MRDGH2821/dotfiles/commit/2ae39760251bcbc2d4d7a39b07f544023c4a5730)) - MRDGH2821
+- **(copier)** update copier template - ([ebef3ea](https://github.com/MRDGH2821/dotfiles/commit/ebef3ea45a56c7524e08d4c5a8c3bc82b2ca2390)) - MRDGH2821
+- **(copier)** update template - ([06f822f](https://github.com/MRDGH2821/dotfiles/commit/06f822f59413276806acdd4a24476f45dd40af44)) - MRDGH2821
+- **(copier)** update template - ([6916f58](https://github.com/MRDGH2821/dotfiles/commit/6916f58ec3380ab08e201e371c6c4af5937bf140)) - MRDGH2821
+- **(copier)** update template - ([a514ff0](https://github.com/MRDGH2821/dotfiles/commit/a514ff09dae4e8731dd671e1d1ed55de47b917bc)) - MRDGH2821
+- **(copier)** update template - ([98c41bd](https://github.com/MRDGH2821/dotfiles/commit/98c41bd7e6f62a07b273a7020072d0aa88687b01)) - MRDGH2821
+- **(copier)** update template - ([d9d65c6](https://github.com/MRDGH2821/dotfiles/commit/d9d65c62833fb3f517140746c7bbe648c1f284a5)) - MRDGH2821
+- **(copier)** update template - ([eb524da](https://github.com/MRDGH2821/dotfiles/commit/eb524da04ce912baab0391c3dd20f2ad8865f75d)) - MRDGH2821
+- **(copier)** update template - ([51cde5c](https://github.com/MRDGH2821/dotfiles/commit/51cde5c4393ce60222432208cb901f3c2b6ebff3)) - MRDGH2821
+- **(copier)** add config - ([ffe3d1c](https://github.com/MRDGH2821/dotfiles/commit/ffe3d1c1cc00da773f994937c8e4e4c29b3db76c)) - MRDGH2821
+- **(copier)** add trusted repo - ([12b02d4](https://github.com/MRDGH2821/dotfiles/commit/12b02d4c258d92fe7c2214c0767587ae0c76f17e)) - MRDGH2821
+- **(copier)** update template - ([cab37af](https://github.com/MRDGH2821/dotfiles/commit/cab37af24da6d267a0ec0bef8e25aaaa1d262399)) - MRDGH2821
+- **(copier)** update template - ([814741d](https://github.com/MRDGH2821/dotfiles/commit/814741dfa6fbf80e2d1f7ee8389569fb23843bcc)) - MRDGH2821
+- **(copier)** update template - ([495de0a](https://github.com/MRDGH2821/dotfiles/commit/495de0aaad3031a78711dbd0c79f978515d7884b)) - MRDGH2821
+- **(copier)** update template - ([bca3948](https://github.com/MRDGH2821/dotfiles/commit/bca394841e506315be3f75db7b711cd34b990af7)) - MRDGH2821
+- **(copier)** update template - ([d7e0ec7](https://github.com/MRDGH2821/dotfiles/commit/d7e0ec7ec3694e0d62e2258dc3eabcd8ba975a35)) - MRDGH2821
+- **(copier)** update template - ([a530dfa](https://github.com/MRDGH2821/dotfiles/commit/a530dfabd434f45229dc8275fda5112032fb5c9b)) - MRDGH2821
+- **(copier)** update template - ([8550062](https://github.com/MRDGH2821/dotfiles/commit/85500623eaa999ff0cac62f7a3b58c0c52cc0418)) - MRDGH2821
+- **(copier)** update template - ([ad609b5](https://github.com/MRDGH2821/dotfiles/commit/ad609b5e2fd773669ee853a6ebc028c1b6b9158b)) - MRDGH2821
+- **(copier)** update template - ([97ad2f2](https://github.com/MRDGH2821/dotfiles/commit/97ad2f2a2d6bc078b8ab557764781046e038ef3d)) - MRDGH2821
+- **(copier)** add repo link - ([794bad9](https://github.com/MRDGH2821/dotfiles/commit/794bad9426144c6f760df22aa5aab0a5e0f6d8f9)) - MRDGH2821
+- **(copier)** update template - ([adb5044](https://github.com/MRDGH2821/dotfiles/commit/adb5044e77111ae3f1cc1030769a3dc7fa82db68)) - MRDGH2821
+- **(copier)** trust case sensitive repos - ([01a0a48](https://github.com/MRDGH2821/dotfiles/commit/01a0a4892a4697a5599289d4723d069f1e1ff84d)) - MRDGH2821
+- **(copier)** trust more repos - ([abdcb5a](https://github.com/MRDGH2821/dotfiles/commit/abdcb5a59065bbc8478d267a25f8e706047111c6)) - MRDGH2821
+- **(copier)** update template - ([3c26a95](https://github.com/MRDGH2821/dotfiles/commit/3c26a955dc9f1550140c9f9aa1c3fb60723b9941)) - MRDGH2821
+- **(copier)** change template - ([0f92d77](https://github.com/MRDGH2821/dotfiles/commit/0f92d777eb36de7c9a46276cb2464db6263de370)) - MRDGH2821
+- **(copier)** update template - ([355f276](https://github.com/MRDGH2821/dotfiles/commit/355f276d563655e08922cad51fbbc16c80584264)) - MRDGH2821
+- **(copier)** update template - ([7f46a45](https://github.com/MRDGH2821/dotfiles/commit/7f46a45e70c5399ed4a0663e3953872ab9ab4bb2)) - MRDGH2821
+- **(copier)** update template - ([6123458](https://github.com/MRDGH2821/dotfiles/commit/6123458adb11688d7a8d703ab2acb13383ad3e4b)) - MRDGH2821
+- **(copier)** update template - ([b9a5b0f](https://github.com/MRDGH2821/dotfiles/commit/b9a5b0f0cc67f564f3660a12cc78e3afe8fb6c0c)) - MRDGH2821
+- **(copier)** update template - ([e7c1110](https://github.com/MRDGH2821/dotfiles/commit/e7c1110389eec6406845f3b8ec57daf0d37fddf4)) - MRDGH2821
+- **(copier)** update template - ([7da08bd](https://github.com/MRDGH2821/dotfiles/commit/7da08bdd2647d24912ca111f160da5a6dd76e71a)) - MRDGH2821
+- **(copier)** update template - ([0d3c015](https://github.com/MRDGH2821/dotfiles/commit/0d3c01530c30740495fc848fa64e5e6d06856e9e)) - MRDGH2821
+- **(cspell)** update words - ([59a1668](https://github.com/MRDGH2821/dotfiles/commit/59a16686d14c6939b4675440b2dab12503cb52fd)) - MRDGH2821
+- **(cspell)** update words & ignore paths - ([5932f6f](https://github.com/MRDGH2821/dotfiles/commit/5932f6fd2553477a2dfd746afeb280d050c4a7e9)) - MRDGH2821
+- **(cspell)** add words - ([539552c](https://github.com/MRDGH2821/dotfiles/commit/539552c8ca5abc16062c8a9c30f3034e815f6ce0)) - MRDGH2821
+- **(cspell)** add words - ([47046c5](https://github.com/MRDGH2821/dotfiles/commit/47046c533416f13c0defe93fbb8c95ccc628c8df)) - MRDGH2821
+- **(cspell)** :wrench: add new words - ([cfd5a12](https://github.com/MRDGH2821/dotfiles/commit/cfd5a12999a9058653f2663e750f2f369bd79a65)) - MRDGH2821
+- **(cspell)** :wrench: add words & languages - ([8b920c3](https://github.com/MRDGH2821/dotfiles/commit/8b920c36078e8d2c0deb785ff4b3986619fdea24)) - MRDGH2821
+- **(cspell)** update word list - ([e37aa0a](https://github.com/MRDGH2821/dotfiles/commit/e37aa0a0b6a56a96f1c4280b23f38eaccef92b15)) - MRDGH2821
+- **(cspell)** add words - ([cdd27fc](https://github.com/MRDGH2821/dotfiles/commit/cdd27fc9a705f206be26c300f23d48f5c8d143fe)) - MRDGH2821
+- **(cspell)** update words - ([1e21abe](https://github.com/MRDGH2821/dotfiles/commit/1e21abe9868fd92c1780b638a881872ff2d0616b)) - MRDGH2821
+- **(cspell)** update word list - ([7835ac5](https://github.com/MRDGH2821/dotfiles/commit/7835ac5d5005b3057caee37ef1edcdb3b2806982)) - MRDGH2821
+- **(cspell)** update word list - ([41f72f7](https://github.com/MRDGH2821/dotfiles/commit/41f72f7747e44b4686d0768c66635c91a7d5af0a)) - MRDGH2821
+- **(cspell)** update word list - ([67ce850](https://github.com/MRDGH2821/dotfiles/commit/67ce850adea7f51f55f375bc08457c802434a8e6)) - MRDGH2821
+- **(cspell)** add words - ([fd3f3dc](https://github.com/MRDGH2821/dotfiles/commit/fd3f3dc21925cc053663d8ddbbb84bd7c6844ca3)) - MRDGH2821
+- **(cspell)** update word list - ([3b87580](https://github.com/MRDGH2821/dotfiles/commit/3b875803b4478c99e0c0fe0189d98cfa3c25f976)) - MRDGH2821
+- **(cspell)** add words - ([9fc7aa0](https://github.com/MRDGH2821/dotfiles/commit/9fc7aa05a590ab96d9762bc247b881db865020e9)) - MRDGH2821
+- **(cspell)** update word list - ([aab23cc](https://github.com/MRDGH2821/dotfiles/commit/aab23cc13ac0eb9e93b83291fa8dd68ee1d58759)) - MRDGH2821
+- **(cspell)** update list - ([414afd5](https://github.com/MRDGH2821/dotfiles/commit/414afd5664974e021fdc6acf962d6af43601a586)) - MRDGH2821
+- **(cspell)** add words - ([69e5c1b](https://github.com/MRDGH2821/dotfiles/commit/69e5c1bb1db85f03f4a542371c5d94eb071b77e0)) - MRDGH2821
+- **(cspell)** add words - ([4045435](https://github.com/MRDGH2821/dotfiles/commit/40454356e53b51c1328bb9bb7c179246dc618571)) - MRDGH2821
+- **(cspell)** update word list - ([2c2fcb8](https://github.com/MRDGH2821/dotfiles/commit/2c2fcb8ddcfee94600aedd71c96cabddabde69a5)) - MRDGH2821
+- **(cspell)** update words - ([b8c7ab2](https://github.com/MRDGH2821/dotfiles/commit/b8c7ab28e7600e3a24a8c60375bcbf2f0e3df92b)) - MRDGH2821
+- **(cspell)** update words - ([216351e](https://github.com/MRDGH2821/dotfiles/commit/216351ea3a57f66ec5bad50ff62e7198e55b4519)) - MRDGH2821
+- **(cspell)** update word list - ([e8fd332](https://github.com/MRDGH2821/dotfiles/commit/e8fd332b7f3c3681cbc5b4a70515df0d623a27c2)) - MRDGH2821
+- **(cspell)** update word list - ([9bd9652](https://github.com/MRDGH2821/dotfiles/commit/9bd9652fc95baff050906e9a0926600d5960eef9)) - MRDGH2821
+- **(cspell)** update words - ([669aaca](https://github.com/MRDGH2821/dotfiles/commit/669aacaf0e881d93eda7c54f811a96f285d8b66f)) - MRDGH2821
+- **(cspell)** update words - ([a6bafb1](https://github.com/MRDGH2821/dotfiles/commit/a6bafb191bfefe8ba7ac66c5fc810c7b29aae8fb)) - MRDGH2821
+- **(cspell)** update words - ([17aefd6](https://github.com/MRDGH2821/dotfiles/commit/17aefd6746f3cf2d73b231e616f84551ec7ff8a7)) - MRDGH2821
+- **(cspell)** add new words - ([9ecffb1](https://github.com/MRDGH2821/dotfiles/commit/9ecffb18cb55995c429927a7cda3bbff581e662c)) - MRDGH2821
+- **(cspell)** update list - ([f02d39a](https://github.com/MRDGH2821/dotfiles/commit/f02d39aa3942a5b387af8e473276a7043f5523c2)) - MRDGH2821
+- **(cspell)** update words - ([2b9fdfe](https://github.com/MRDGH2821/dotfiles/commit/2b9fdfe77d98575a367fd4704888d2367aff4d8c)) - MRDGH2821
+- **(git)** delete non hook files - ([538e034](https://github.com/MRDGH2821/dotfiles/commit/538e0343bfbf4defd8186366150c6667842df95b)) - MRDGH2821
+- **(hk)** add ryl formatters - ([0f099dc](https://github.com/MRDGH2821/dotfiles/commit/0f099dc1b146dd51728fcc98b929c3971effa5a8)) - MRDGH2821
+- **(hk)** remove toml-sort check - ([b4d8ccb](https://github.com/MRDGH2821/dotfiles/commit/b4d8ccb19c36abed445c693001ea3cdab3429642)) - MRDGH2821
+- **(hk)** reinstate xmllint - ([5f52397](https://github.com/MRDGH2821/dotfiles/commit/5f5239752bf29768d98d0c30f1929cff4c18d879)) - MRDGH2821
+- **(jscpd)** update ignores - ([31060e8](https://github.com/MRDGH2821/dotfiles/commit/31060e8a5411baa613200ba04a0539c1b3b41002)) - MRDGH2821
+- **(megalinter)** install prettier plugins before executing - ([40044bc](https://github.com/MRDGH2821/dotfiles/commit/40044bc3c8cf22f822252df2fa9a058083a06365)) - MRDGH2821
+- **(megalinter)** apply fixes - ([08130ce](https://github.com/MRDGH2821/dotfiles/commit/08130ced6c01d8217c7541276b05fbd0728ebbeb)) - MRDGH2821
+- **(megalinter)** remove global flag, add another prettier plugin - ([64341b8](https://github.com/MRDGH2821/dotfiles/commit/64341b824a8f79e0a0f7c7b25eed28d2a769cb4d)) - MRDGH2821
+- **(megalinter)** update pre command - ([d578fc7](https://github.com/MRDGH2821/dotfiles/commit/d578fc7aafcbe7148c6b4ec6e341a9aeab747dd3)) - MRDGH2821
+- **(mise)** use binstall - ([1e339a6](https://github.com/MRDGH2821/dotfiles/commit/1e339a671de36108623c2a3ae15777ab7c4cf66a)) - MRDGH2821
+- **(mise)** remove hcom - ([967a619](https://github.com/MRDGH2821/dotfiles/commit/967a619c7dc33642c8f403e17b0a17cbeac0a1d8)) - MRDGH2821
+- **(mise)** add hcom - ([32189bf](https://github.com/MRDGH2821/dotfiles/commit/32189bf36a95103891a9d12271dc192d1d2d56aa)) - MRDGH2821
+- **(mise)** update config - ([4b85711](https://github.com/MRDGH2821/dotfiles/commit/4b857114eae6913e4d11c37a9cbd4f349c0fef78)) - MRDGH2821
+- **(mise)** add vllm - ([1fde741](https://github.com/MRDGH2821/dotfiles/commit/1fde741e920b5e1dd912edf123d38c57b4ac2687)) - MRDGH2821
+- **(mise)** remove vllm - ([5a098e5](https://github.com/MRDGH2821/dotfiles/commit/5a098e54ca4fc9677a87a2ad3e9f60a3427da564)) - MRDGH2821
+- **(mise)** update tool list - ([c2d6c3b](https://github.com/MRDGH2821/dotfiles/commit/c2d6c3b08bbb298d33a34281aac493e084740f7c)) - MRDGH2821
+- **(mise)** remove agent talk - ([10ebae3](https://github.com/MRDGH2821/dotfiles/commit/10ebae308087e8f5afa7e05e1a3a1d1907456941)) - MRDGH2821
+- **(mise)** update packages - ([9b305af](https://github.com/MRDGH2821/dotfiles/commit/9b305af69fbaa6866a8ac8713ad0b4f62093c6ea)) - MRDGH2821
+- **(mise)** update versions - ([6824aaf](https://github.com/MRDGH2821/dotfiles/commit/6824aafb0a25868dd116f9f5160b0ee35cbf208d)) - MRDGH2821
+- **(mise)** add packages & restructure file - ([e8a1455](https://github.com/MRDGH2821/dotfiles/commit/e8a145547969e54a5f2767b016013c104aaa2f89)) - MRDGH2821
+- **(mise)** update versions - ([f8f0013](https://github.com/MRDGH2821/dotfiles/commit/f8f00130a09734295af1299d70a36604be247abd)) - MRDGH2821
+- **(mise)** update versions - ([7ce6fd4](https://github.com/MRDGH2821/dotfiles/commit/7ce6fd4ae6f7e169f2d92f728e4ee1c63a0ce240)) - MRDGH2821
+- **(mise)** update packages - ([ffe4227](https://github.com/MRDGH2821/dotfiles/commit/ffe42273a01150668470c8df9d92df9c8731bcc2)) - MRDGH2821
+- **(mise)** pin tools to resolved versions - ([addb227](https://github.com/MRDGH2821/dotfiles/commit/addb227235b76fe7783c0b91b0d0132b8ccd621c)) - MRDGH2821
+- **(mise)** update versions - ([6a5ebbd](https://github.com/MRDGH2821/dotfiles/commit/6a5ebbdf163973264624bc9dd5b82c90852313ff)) - MRDGH2821
+- **(mise)** update versions - ([a55577b](https://github.com/MRDGH2821/dotfiles/commit/a55577b8667b084e43f5cac58a6b5380d50b698c)) - MRDGH2821
+- **(mise)** remove packages & related configs - ([904f69f](https://github.com/MRDGH2821/dotfiles/commit/904f69f7a3e007e44420f70e25de0eb29eac9790)) - MRDGH2821
+- **(mise)** remove copier - ([10f0aac](https://github.com/MRDGH2821/dotfiles/commit/10f0aacfec008005726fa5695ea37b2f5eb2bc3d)) - MRDGH2821
+- **(mise)** update packages - ([75a1d98](https://github.com/MRDGH2821/dotfiles/commit/75a1d983314558551022faed8c8ed2a0f5ff4bbb)) - MRDGH2821
+- **(mise)** update versions - ([fd673dd](https://github.com/MRDGH2821/dotfiles/commit/fd673dd54369c7e53d5ab3eae419ffefdea721bb)) - MRDGH2821
+- **(mise)** update versions - ([fa21655](https://github.com/MRDGH2821/dotfiles/commit/fa216559832911ed93d89f483a1b246be08cc161)) - MRDGH2821
+- **(mise)** auto prune lockfiles - ([775ca6a](https://github.com/MRDGH2821/dotfiles/commit/775ca6a7378cb856daf205b36928ac8d85610b8c)) - MRDGH2821
+- **(mise)** use latest versions - ([aeab976](https://github.com/MRDGH2821/dotfiles/commit/aeab9764aedb20ecbc62cef7bd7b696509df8632)) - MRDGH2821
+- **(mise)** merge config update - ([05eee0f](https://github.com/MRDGH2821/dotfiles/commit/05eee0fd7f52c90eb504014477cec90db9602fe2)) - MRDGH2821
+- **(mise)** add kiro-cli - ([e183b05](https://github.com/MRDGH2821/dotfiles/commit/e183b05acae1b5fedf759191c3ed4bd0dda769a5)) - MRDGH2821
+- **(mise)** update package list - ([46ee86f](https://github.com/MRDGH2821/dotfiles/commit/46ee86f41897baca129ded76cdf3c8738046de61)) - MRDGH2821
+- **(mise)** update bootstrap - ([cad7698](https://github.com/MRDGH2821/dotfiles/commit/cad769855b30da50983a24260475ac623481fc64)) - MRDGH2821
+- **(mise)** run task on change - ([47bb27e](https://github.com/MRDGH2821/dotfiles/commit/47bb27e0be56bfd70ed102440349a9ec760b9984)) - MRDGH2821
+- **(opencode)** add new profile - ([948f0c5](https://github.com/MRDGH2821/dotfiles/commit/948f0c54a50334ab3398d4a6d74613e299b8b768)) - MRDGH2821
+- **(opencode)** update omo-g profile - ([0fa9038](https://github.com/MRDGH2821/dotfiles/commit/0fa9038d2154f194a23c2134a3561a55cf8b3c43)) - MRDGH2821
+- **(opencode)** add omo-a profile - ([f64bbe7](https://github.com/MRDGH2821/dotfiles/commit/f64bbe7878638c44545a38e609fb9955a8257330)) - MRDGH2821
+- **(opencode)** add zai models in omo-a - ([525996a](https://github.com/MRDGH2821/dotfiles/commit/525996ac1c64f96989c0448932290427f474132c)) - MRDGH2821
+- **(opencode)** add deep category - ([76d4460](https://github.com/MRDGH2821/dotfiles/commit/76d446074923ac7a9852760d97299dde86e9b159)) - MRDGH2821
+- **(opencode)** disable built in google auth - ([7d3698a](https://github.com/MRDGH2821/dotfiles/commit/7d3698a6e30a835706411d9a5a30c5f32f589728)) - MRDGH2821
+- **(opencode)** add sitemcp - ([70ce97e](https://github.com/MRDGH2821/dotfiles/commit/70ce97e33d9fd529841b83bfdbe55994aea95a5d)) - MRDGH2821
+- **(opencode)** add devenv mcp - ([1e9a6c1](https://github.com/MRDGH2821/dotfiles/commit/1e9a6c1f0a22344d422a9ee8f1d6995067eda269)) - MRDGH2821
+- **(opencode)** add cursor - ([395408c](https://github.com/MRDGH2821/dotfiles/commit/395408c9f620689347d3b1b4c3bd0e18551645e4)) - MRDGH2821
+- **(opencode)** add fallback models - ([bbc2e3b](https://github.com/MRDGH2821/dotfiles/commit/bbc2e3b280d396a748f59cf65328a7a52f6f86a6)) - MRDGH2821
+- **(opencode)** add engram mcp - ([b808791](https://github.com/MRDGH2821/dotfiles/commit/b808791e3ee9cc29b4b7906526a940bb396dcf0f)) - MRDGH2821
+- **(opencode)** add more fallback models - ([5f6cba2](https://github.com/MRDGH2821/dotfiles/commit/5f6cba2525c90fc0cfe0faad61bfed1df69cc89d)) - MRDGH2821
+- **(opencode)** update config with best available models - ([b60ad17](https://github.com/MRDGH2821/dotfiles/commit/b60ad1735dcf55fff2844ba20b75176c8f0f0662)) - MRDGH2821
+- **(opencode)** remove google profile - ([c37c933](https://github.com/MRDGH2821/dotfiles/commit/c37c933372395647ed59ffb3b47a96f5132bd5d5)) - MRDGH2821
+- **(opencode)** optimise profile with github student plan, Z.ai coding plan & opencode free models - ([5f723ad](https://github.com/MRDGH2821/dotfiles/commit/5f723ad526ded23ef1a583a75f402afc9dd29d1c)) - MRDGH2821
+- **(opencode)** add claude plugin - ([7fc89b9](https://github.com/MRDGH2821/dotfiles/commit/7fc89b9796ae293db1e86ec97254c062f4b66bca)) - MRDGH2821
+- **(opencode)** add cursor models - ([968b50b](https://github.com/MRDGH2821/dotfiles/commit/968b50bc4ecd58d25cfa0e0c2fbaf5cb7cf3a123)) - MRDGH2821
+- **(opencode)** duplicate omo-a profile as omo-e - ([653411d](https://github.com/MRDGH2821/dotfiles/commit/653411ddaf5088ba5ac2bb93a66ead1cfe7265b3)) - MRDGH2821
+- **(opencode)** merge model variants - ([0a3a263](https://github.com/MRDGH2821/dotfiles/commit/0a3a263cfccc821bd4b6fdfd3186017d43e2bbe5)) - MRDGH2821
+- **(opencode)** remove experimental profile - ([92b296d](https://github.com/MRDGH2821/dotfiles/commit/92b296df047728b9e7e76c0e5ca0d3696780a7c7)) - MRDGH2821
+- **(opencode)** add model optimisations - ([250a027](https://github.com/MRDGH2821/dotfiles/commit/250a027f31507055f80b2279961be228075511c8)) - MRDGH2821
+- **(opencode)** optimise model list even further - ([c0a9a2b](https://github.com/MRDGH2821/dotfiles/commit/c0a9a2baeebead3d7f2a23c4577ebb8f88f6a7cf)) - MRDGH2821
+- **(opencode)** add cursor profile - ([bbc0254](https://github.com/MRDGH2821/dotfiles/commit/bbc0254e96eba8764ac6cdaac2a727790d5fd2be)) - MRDGH2821
+- **(opencode)** remove cursor models - ([419863b](https://github.com/MRDGH2821/dotfiles/commit/419863bc9934a023b3ff7bb9dd3ff6886143da57)) - MRDGH2821
+- **(opencode)** use different cursor plugin - ([b7c70ff](https://github.com/MRDGH2821/dotfiles/commit/b7c70ff7c3dac178d888964e1e51446db54a8151)) - MRDGH2821
+- **(opencode)** delete redundant profiles - ([015d194](https://github.com/MRDGH2821/dotfiles/commit/015d1948032f6fc6baf5660bf415b673690564b8)) - MRDGH2821
+- **(opencode)** refactor list of models - ([8bed5f7](https://github.com/MRDGH2821/dotfiles/commit/8bed5f7c10973ebb5fc65ae6e883b2fb377bf8df)) - MRDGH2821
+- **(opencode)** add cursor models - ([dbcd20a](https://github.com/MRDGH2821/dotfiles/commit/dbcd20a9d24843771fa4445b727486dd2bc22e4e)) - MRDGH2821
+- **(opencode)** duplicate omo-a profile - ([2356264](https://github.com/MRDGH2821/dotfiles/commit/235626427efc1daa75216ef82db907ba85b3782b)) - MRDGH2821
+- **(opencode)** remove invalid models from the list - ([a4711a6](https://github.com/MRDGH2821/dotfiles/commit/a4711a65e699f4a78a312f34dc29efdfcc6558ee)) - MRDGH2821
+- **(opencode)** add git master & tmux config - ([36d9488](https://github.com/MRDGH2821/dotfiles/commit/36d94882db917836f7857df1c5fd017bdb48ce48)) - MRDGH2821
+- **(opencode)** update config - ([453efba](https://github.com/MRDGH2821/dotfiles/commit/453efbae23d2efc595bd4d9afad4115e7fdf8e56)) - MRDGH2821
+- **(opencode)** update plugins - ([979e554](https://github.com/MRDGH2821/dotfiles/commit/979e554fb28fefd144f574a505e5f1008a7f01da)) - MRDGH2821
+- **(opencode)** remove ocx profiles - ([59ddbad](https://github.com/MRDGH2821/dotfiles/commit/59ddbad95a07f585f491f8746278b9fa18fac14b)) - MRDGH2821
+- **(opencode)** update plugins - ([8a08e45](https://github.com/MRDGH2821/dotfiles/commit/8a08e45d0705cd1e2f021a1f3aab0a5d671d3371)) - MRDGH2821
+- **(opencode)** enable built in agents - ([851d395](https://github.com/MRDGH2821/dotfiles/commit/851d395ce449aaebd67339d4c1bdc911a14cb393)) - MRDGH2821
+- **(opencode)** remove cursor plugin & models - ([114ccb6](https://github.com/MRDGH2821/dotfiles/commit/114ccb60316f70d6191780a9ff84254d29903610)) - MRDGH2821
+- **(opencode)** update config - ([8883d05](https://github.com/MRDGH2821/dotfiles/commit/8883d05a39c021f3f2eb9d7c6bcc50c899ebbec6)) - MRDGH2821
+- **(opencode)** add omo-slim config - ([c20f9ba](https://github.com/MRDGH2821/dotfiles/commit/c20f9ba9c2f0286ec3f155298a9d5d980f754d63)) - MRDGH2821
+- **(opencode)** disable oh-my-openagent - ([e77cd10](https://github.com/MRDGH2821/dotfiles/commit/e77cd101b1f611cc63fdb918386fc67cb7ef93e9)) - MRDGH2821
+- **(opencode)** remove oh-my-openagent - ([68143a2](https://github.com/MRDGH2821/dotfiles/commit/68143a2faf1bed424f346652f6f2a2df295b7a5e)) - MRDGH2821
+- **(opencode)** update plugins & config - ([5af2364](https://github.com/MRDGH2821/dotfiles/commit/5af23645bfdbd8dd7d1a4c08feb825d7068d4294)) - MRDGH2821
+- **(opencode)** remove redundant mcp - ([881db1a](https://github.com/MRDGH2821/dotfiles/commit/881db1a2cf889a6d355e24276136cd025eaf2d37)) - MRDGH2821
+- **(opencode)** add cursor plugin - ([c1c825f](https://github.com/MRDGH2821/dotfiles/commit/c1c825f5861850434f671d96d0552d7a9a31d1a1)) - MRDGH2821
+- **(opencode)** remove cursor plugin - ([7da6c48](https://github.com/MRDGH2821/dotfiles/commit/7da6c485b3341a01437d97408acd2c579feba5a2)) - MRDGH2821
+- **(opencode)** remove engram - ([47c0c5e](https://github.com/MRDGH2821/dotfiles/commit/47c0c5e55639c1d517bb639b0971047f9d38f1fa)) - MRDGH2821
+- **(opencode)** add tui config - ([9851f5c](https://github.com/MRDGH2821/dotfiles/commit/9851f5cbde1de3729b4d9528c010acf40d091042)) - MRDGH2821
+- **(opencode)** add cursor api provider - ([1bfce8a](https://github.com/MRDGH2821/dotfiles/commit/1bfce8af6841be6c6e5cbf207ef8a0b7ab1bac45)) - MRDGH2821
+- **(opencode)** update api url - ([c053949](https://github.com/MRDGH2821/dotfiles/commit/c05394971f4a232a3cc15becb7105f101b6d7062)) - MRDGH2821
+- **(opencode)** enable memorix mcp - ([7e6116b](https://github.com/MRDGH2821/dotfiles/commit/7e6116bbb9d9a6f18a1c1f11040a7f7b3f699376)) - MRDGH2821
+- **(opencode)** update config - ([ee555b4](https://github.com/MRDGH2821/dotfiles/commit/ee555b4c8c876875d28ecacdd91f934dd2ca2787)) - MRDGH2821
+- **(package)** add echo at various places to distinguish - ([5d96da3](https://github.com/MRDGH2821/dotfiles/commit/5d96da3c99e21f9dc0ce336c3df23a0acadaf664)) - MRDGH2821
+- **(package)** print package being downloaded by dra - ([9eb7e5a](https://github.com/MRDGH2821/dotfiles/commit/9eb7e5a4e7bc9eef0a9d63db4ae18d3f1dafeae5)) - MRDGH2821
+- **(package)** :package: use native package in arch - ([94e5847](https://github.com/MRDGH2821/dotfiles/commit/94e5847b8be12a693bd127e055fedbe7597f2887)) - MRDGH2821
+- **(package)** :fire: remove unneeded extensions - ([d3c28cc](https://github.com/MRDGH2821/dotfiles/commit/d3c28cc0b2e557e5d0c7e69f83f6919691d9b1db)) - MRDGH2821
+- **(package)** explicitly specify the package type - ([85cf26b](https://github.com/MRDGH2821/dotfiles/commit/85cf26b620c5328f10c482339a0e0810f64bfa7a)) - MRDGH2821
+- **(package)** sort package list - ([b142f57](https://github.com/MRDGH2821/dotfiles/commit/b142f576ae4cd68942528b443f7dea74d666ce80)) - MRDGH2821
+- **(package)** update package list & status - ([a0545e9](https://github.com/MRDGH2821/dotfiles/commit/a0545e91c10b7e8a34dbc0e2f6595618eb0f3ef8)) - MRDGH2821
+- **(package)** explicitly specify which package to install - ([affb7be](https://github.com/MRDGH2821/dotfiles/commit/affb7be522da16e7501deaae4180a764331d3ace)) - MRDGH2821
+- **(package)** remove vscode from fedora list - ([539bc78](https://github.com/MRDGH2821/dotfiles/commit/539bc786db7a731fd0c4f7801c8944c0f263e614)) - MRDGH2821
+- **(package)** centralise soar packages for easier tracking - ([35557e8](https://github.com/MRDGH2821/dotfiles/commit/35557e8a3fed08383f58429f815cf1e284f55513)) - MRDGH2821
+- **(package)** remove vscode and related stuff - ([39c7d27](https://github.com/MRDGH2821/dotfiles/commit/39c7d27fd2e2c7859a422928ed91c08992d3a8cf)) - MRDGH2821
+- **(package)** remove packages - ([7ccb344](https://github.com/MRDGH2821/dotfiles/commit/7ccb34437a34bc126070d09e889581c7bc09ee27)) - MRDGH2821
+- **(package)** remove cocogitto - ([a756a65](https://github.com/MRDGH2821/dotfiles/commit/a756a65da6762f97fed864db0d56092e99015aa8)) - MRDGH2821
+- **(package)** use native bun package - ([86d24db](https://github.com/MRDGH2821/dotfiles/commit/86d24dbb3e39a31b6664f79fd662af49a5aa47f8)) - MRDGH2821
+- **(package)** update package versions in soar - ([11a9787](https://github.com/MRDGH2821/dotfiles/commit/11a9787dcd5a7f0ee33722cf2b43a3f37b48109e)) - MRDGH2821
+- **(package)** add versions in soar - ([b56f90c](https://github.com/MRDGH2821/dotfiles/commit/b56f90c640dce1978da16e9f5d9d86e2fd2622f2)) - MRDGH2821
+- **(package)** add versions - ([9a0428a](https://github.com/MRDGH2821/dotfiles/commit/9a0428a7153f6113c1c93449c355b4be92b5fa18)) - MRDGH2821
+- **(package)** update package list - ([e0e1dd3](https://github.com/MRDGH2821/dotfiles/commit/e0e1dd3085d6758ca000bbb003a576ab0aa5d3c1)) - MRDGH2821
+- **(package)** remove pcloud from soar packages - ([d568667](https://github.com/MRDGH2821/dotfiles/commit/d56866763cc812bafd521a0aa2d227e384b0d1b5)) - MRDGH2821
+- **(package)** add pcloud package in arch list - ([f867513](https://github.com/MRDGH2821/dotfiles/commit/f8675139bded5820e0f8cf2e4d69bf7f1d4fd455)) - MRDGH2821
+- **(package)** remove pcloud - ([90ff5ea](https://github.com/MRDGH2821/dotfiles/commit/90ff5eadc36f9b16b8e9ad40018d085ab4e000d8)) - MRDGH2821
+- **(package)** update versions - ([811e05d](https://github.com/MRDGH2821/dotfiles/commit/811e05d5d96e78f4b2610784907209d76edb986e)) - MRDGH2821
+- **(package)** update versions - ([4d48053](https://github.com/MRDGH2821/dotfiles/commit/4d48053f6457d53859096e10c4ec547692df0165)) - MRDGH2821
+- **(package)** remove gentle-ai - ([48ae006](https://github.com/MRDGH2821/dotfiles/commit/48ae0067fcb18dd72a6cf508153694878f4335e0)) - MRDGH2821
+- **(package)** remove duplicate entry - ([9572e10](https://github.com/MRDGH2821/dotfiles/commit/9572e1081abe94ca9d990c8255e67575a081f262)) - MRDGH2821
+- **(package)** install nix from distro packages - ([2dc42c0](https://github.com/MRDGH2821/dotfiles/commit/2dc42c0db09365217efb909bf7f711f411fb9c77)) - MRDGH2821
+- **(package)** update list - ([2092f42](https://github.com/MRDGH2821/dotfiles/commit/2092f42499f622be5e866e11925aec29b3a837cc)) - MRDGH2821
+- **(packages)** remove appimages - ([eda51d3](https://github.com/MRDGH2821/dotfiles/commit/eda51d3b15b3130648e782adea64a25f6945393a)) - MRDGH2821
+- **(packages)** add node - ([86e140e](https://github.com/MRDGH2821/dotfiles/commit/86e140e0d71f711a4838c32c673cfb0c8b8d6b1b)) - MRDGH2821
+- **(packages)** remove local ai packages - ([d9d2fce](https://github.com/MRDGH2821/dotfiles/commit/d9d2fceb83eeefe0dd4276f34ba6089691703df4)) - MRDGH2821
+- **(packages)** remove rust & sccache - ([64e5524](https://github.com/MRDGH2821/dotfiles/commit/64e5524696365cdc2fe5b827851b763bf99794e1)) - MRDGH2821
+- **(packages)** remove git-credential-libsecret - ([2296b95](https://github.com/MRDGH2821/dotfiles/commit/2296b9516facde1f941418de51da667495384a9a)) - MRDGH2821
+- **(packages)** add mcp-nixos - ([7ca496f](https://github.com/MRDGH2821/dotfiles/commit/7ca496f24e97989cb1992c80b9217054cb2f24b9)) - MRDGH2821
+- **(packages)** remove rustup - ([c77b28a](https://github.com/MRDGH2821/dotfiles/commit/c77b28a250599361429f9af1e4a4cbd2ba5ab9f6)) - MRDGH2821
+- **(pre-commit)** use different hook for conventional commits - ([32f7fa9](https://github.com/MRDGH2821/dotfiles/commit/32f7fa9ebf97bf6397aebd6fb782041f6b4734da)) - MRDGH2821
+- **(pre-commit)** migrate to different conventional pre-commit hook - ([0110089](https://github.com/MRDGH2821/dotfiles/commit/0110089c9776c7917c26502c08830125d99654ab)) - MRDGH2821
+- **(pre-commit)** update config using copier - ([4dfb958](https://github.com/MRDGH2821/dotfiles/commit/4dfb958fa359c45115919d771f19639f4d994d2f)) - MRDGH2821
+- **(pre-commit)** remove hook - ([ebd4f85](https://github.com/MRDGH2821/dotfiles/commit/ebd4f85be828aaf27a7a37defa29164e6a0cb3ed)) - MRDGH2821
+- **(pre-commit)** remove gga hook - ([e2ed635](https://github.com/MRDGH2821/dotfiles/commit/e2ed635d6e282ec777e0c926466113a318988b51)) - MRDGH2821
+- **(prettier)** update file list to format - ([4b5613b](https://github.com/MRDGH2821/dotfiles/commit/4b5613b68ee08501953f1422744c257a2a03f8c9)) - MRDGH2821
+- **(script)** :rotating_light: ignore linter warnings - ([d7c5765](https://github.com/MRDGH2821/dotfiles/commit/d7c57659ba78edac7096c89f184449f866972439)) - MRDGH2821
+- **(script)** :rotating_light: ignore linter warning - ([157b51f](https://github.com/MRDGH2821/dotfiles/commit/157b51f5a248b4842681c59cfc1bb0bed2d23d7b)) - MRDGH2821
+- **(script)** :wrench: enable oh-my-posh auto upgrade - ([d134536](https://github.com/MRDGH2821/dotfiles/commit/d134536c4231aea962e516a5f1b4f3f536e1d814)) - MRDGH2821
+- **(script)** use alternate fix for linter errors - ([471c782](https://github.com/MRDGH2821/dotfiles/commit/471c7821581884f1658fb4f4646f024107f66bc9)) - MRDGH2821
+- **(script)** make scripts executable - ([2bbcccf](https://github.com/MRDGH2821/dotfiles/commit/2bbcccf559668472f01097cab1bd0f1db075f7f0)) - MRDGH2821
+- **(script)** :wrench: remove redundant array item - ([11d1224](https://github.com/MRDGH2821/dotfiles/commit/11d1224dac634cdc6b45e971426008640f0fa3fc)) - MRDGH2821
+- **(script)** :truck: rename script to change order - ([e8a3f86](https://github.com/MRDGH2821/dotfiles/commit/e8a3f8605b3fe4ef53fbd27f0694ec4ea676a546)) - MRDGH2821
+- **(script)** :fire: remove redundant script - ([9e4f12e](https://github.com/MRDGH2821/dotfiles/commit/9e4f12ef150b56490da052577f67f7c5726a132d)) - MRDGH2821
+- **(script)** add workaround for direnv in vscode - ([1020a1d](https://github.com/MRDGH2821/dotfiles/commit/1020a1d8ce1d2164876167cab75468ad2d469b6d)) - MRDGH2821
+- **(script)** update for debian trixie - ([877f15d](https://github.com/MRDGH2821/dotfiles/commit/877f15d8ad4dd9bc6b22c02789a1abfabe744087)) - MRDGH2821
+- **(script)** remove ubuntu specific things - ([b119063](https://github.com/MRDGH2821/dotfiles/commit/b119063abc78557e77b529f42610198726fd7376)) - MRDGH2821
+- **(script)** remove installation ccommands - ([e13d19d](https://github.com/MRDGH2821/dotfiles/commit/e13d19d482435f0e6280ca37f5283429498e392b)) - MRDGH2821
+- **(script)** hide dra installation methods - ([568a43b](https://github.com/MRDGH2821/dotfiles/commit/568a43b219199f56b99b904ef58a305b91d4bbdc)) - MRDGH2821
+- **(script)** make script executable - ([aeab364](https://github.com/MRDGH2821/dotfiles/commit/aeab364054ca1cba3e1596b6128b902b79e5cbbf)) - MRDGH2821
+- **(script)** update gh cli repo instllation - ([fcb78c9](https://github.com/MRDGH2821/dotfiles/commit/fcb78c9a8e808084491fee43d00baa1643c36393)) - MRDGH2821
+- **(script)** remove vscode extension installation section - ([aa2f626](https://github.com/MRDGH2821/dotfiles/commit/aa2f62654ae3f29a68c8c0db2600a74cc8a99dfd)) - MRDGH2821
+- **(script)** make scripts executable - ([f1c383c](https://github.com/MRDGH2821/dotfiles/commit/f1c383c126a8d33d576282a8b17c0d1ded66f62b)) - MRDGH2821
+- **(script)** add alias for zed - ([0aee661](https://github.com/MRDGH2821/dotfiles/commit/0aee661caa0d0dc6584098e7705747c55b85ba6f)) - MRDGH2821
+- **(script)** add helper script to get package names - ([d56bcc0](https://github.com/MRDGH2821/dotfiles/commit/d56bcc09fabab674c5d07c89f12786537740ee12)) - MRDGH2821
+- **(script)** clean up redundant symlink - ([41b3a32](https://github.com/MRDGH2821/dotfiles/commit/41b3a3210cc7559e73a31ebe142b7a3c2c70fd1b)) - MRDGH2821
+- **(script)** source env.sh file - ([5d7e195](https://github.com/MRDGH2821/dotfiles/commit/5d7e19562e6c2433c71b9727f68bb9c8301675c1)) - MRDGH2821
+- **(script)** remove ssh agent script fix - ([c93aed9](https://github.com/MRDGH2821/dotfiles/commit/c93aed9b14cc9f9a399b1798281c33d1554c2c59)) - MRDGH2821
+- **(script)** export opencode path - ([29bdbd0](https://github.com/MRDGH2821/dotfiles/commit/29bdbd0b9ee6a06db378d651148199991486ada2)) - MRDGH2821
+- **(script)** add other variables - ([56f1c1e](https://github.com/MRDGH2821/dotfiles/commit/56f1c1e9c9e9112ee3a4747ff85c1bbe7a7eb81e)) - MRDGH2821
+- **(script)** add rtk init scripts - ([067b6b0](https://github.com/MRDGH2821/dotfiles/commit/067b6b0e18ab062d38627b84a4741bfafdfabd49)) - MRDGH2821
+- **(script)** remove herdr-not-a-shell restriction - ([bfacb40](https://github.com/MRDGH2821/dotfiles/commit/bfacb40d1a1e2e9560326bed27e39b3edd3bc2d1)) - MRDGH2821
+- **(script)** add mise shim export - ([7e741a1](https://github.com/MRDGH2821/dotfiles/commit/7e741a188689346529539ec1b979245ed2b11a23)) - MRDGH2821
+- **(script)** add fnox script - ([d3c179d](https://github.com/MRDGH2821/dotfiles/commit/d3c179de024dc848df4ad372dcf0d67ba0e5630e)) - MRDGH2821
+- **(script)** add pitchfork activation script - ([5e745a6](https://github.com/MRDGH2821/dotfiles/commit/5e745a6531250dc5855f4de3f30f1064580385b1)) - MRDGH2821
+- **(script)** make it executable - ([dbd9d1e](https://github.com/MRDGH2821/dotfiles/commit/dbd9d1e05a248caca22dc574385191216977174e)) - MRDGH2821
+- **(script)** make them executable - ([e292881](https://github.com/MRDGH2821/dotfiles/commit/e292881c825d40795001d95f429014247e046add)) - MRDGH2821
+- **(script)** remove redundant repos - ([a19ff0c](https://github.com/MRDGH2821/dotfiles/commit/a19ff0ccaf14fa4e02f038e9d949f2260b121b60)) - MRDGH2821
+- **(script)** remove debian url installer - ([6ad0d7e](https://github.com/MRDGH2821/dotfiles/commit/6ad0d7e03011b501479975a56b6ed34e43df6d0a)) - MRDGH2821
+- **(script)** remove installer - ([498f679](https://github.com/MRDGH2821/dotfiles/commit/498f6795ac882a3a7143ea66355d44c50c7a9734)) - MRDGH2821
+- **(script)** remove rtk commands - ([8148fb6](https://github.com/MRDGH2821/dotfiles/commit/8148fb612a9e9dca68769b8be5af21b86908f1e3)) - MRDGH2821
+- **(script)** remove ggshield - ([574dbda](https://github.com/MRDGH2821/dotfiles/commit/574dbdab9bf02af6168ddd175a8eb06173431edd)) - MRDGH2821
+- **(script)** remove docker - ([a86035b](https://github.com/MRDGH2821/dotfiles/commit/a86035b01d88fd259c6ae30849ed3c1751aaf8c6)) - MRDGH2821
+- **(script)** update syntax - ([267848a](https://github.com/MRDGH2821/dotfiles/commit/267848a2e81000de9f3e8aecf4ff332fed7ed82a)) - MRDGH2821
+- **(script)** move script to mise bootstrap - ([66373a9](https://github.com/MRDGH2821/dotfiles/commit/66373a90d071d3e3a87528e0a160494d0d7aee07)) - MRDGH2821
+- **(script)** source opencodex script - ([a624b51](https://github.com/MRDGH2821/dotfiles/commit/a624b515e87d3109ff5b94ce0a49ddce070beca5)) - MRDGH2821
+- **(soar)** update properties of packages - ([721c918](https://github.com/MRDGH2821/dotfiles/commit/721c9183d92262738224dfe51ad5ffacb952bce0)) - MRDGH2821
+- **(soar)** remove old repos - ([c97a7a1](https://github.com/MRDGH2821/dotfiles/commit/c97a7a17a3c907cb8cf5bc6ed8b53c3c63b6916f)) - MRDGH2821
+- **(soar)** update versions - ([15539dd](https://github.com/MRDGH2821/dotfiles/commit/15539dd6d7df7f12f40f76a13b666a4602a1d2b0)) - MRDGH2821
+- **(soar)** update versions - ([3c9ff8a](https://github.com/MRDGH2821/dotfiles/commit/3c9ff8a0ab3cfe85700c20b51664d5e4b1a61f79)) - MRDGH2821
+- **(soar)** update package versions - ([23e0025](https://github.com/MRDGH2821/dotfiles/commit/23e0025584edfdc509aec418746624b7cc9c343c)) - MRDGH2821
+- **(soar)** update versions - ([83a2f9c](https://github.com/MRDGH2821/dotfiles/commit/83a2f9c741e551d07ca41ae72177d8c6cee0f86d)) - MRDGH2821
+- **(soar)** update package versions - ([f7587dd](https://github.com/MRDGH2821/dotfiles/commit/f7587dda27d30b3644385c26392958b136f46e45)) - MRDGH2821
+- **(soar)** update versions - ([6dc9a3f](https://github.com/MRDGH2821/dotfiles/commit/6dc9a3f0aae926fa9bed7d66d60dc261218fca3e)) - MRDGH2821
+- **(soar)** update versions - ([d07903f](https://github.com/MRDGH2821/dotfiles/commit/d07903f75303b09c5c010e1143fea290b8065e62)) - MRDGH2821
+- **(soar)** update versions - ([e754cfc](https://github.com/MRDGH2821/dotfiles/commit/e754cfc7c1da58d5bb4289890233c5553c24ce34)) - MRDGH2821
+- **(soar)** update package versions - ([62156b3](https://github.com/MRDGH2821/dotfiles/commit/62156b3a2a8e12d775482dd41dac07b0e456e127)) - MRDGH2821
+- **(soar)** update package versions - ([c454dfb](https://github.com/MRDGH2821/dotfiles/commit/c454dfb6929c3351afdae4ef588e65f03245875f)) - MRDGH2821
+- **(soar)** update versions - ([8508268](https://github.com/MRDGH2821/dotfiles/commit/85082682edc98632021ba2ff1d979af9b3bf24a6)) - MRDGH2821
+- **(soar)** update versions - ([8a66db9](https://github.com/MRDGH2821/dotfiles/commit/8a66db9746dca6b816a5304e6c9598db3c1632eb)) - MRDGH2821
+- **(soar)** update package versions - ([403fd9d](https://github.com/MRDGH2821/dotfiles/commit/403fd9dbf878393de01024afc9a7f9e119a1aaf3)) - MRDGH2821
+- **(soar)** update package version - ([1b08409](https://github.com/MRDGH2821/dotfiles/commit/1b08409f38047018959726b926476dde29276275)) - MRDGH2821
+- **(soar)** update package versions - ([ee89d2b](https://github.com/MRDGH2821/dotfiles/commit/ee89d2b822a8b7e337783f7918f6b220e0508bfd)) - MRDGH2821
+- **(soar)** update package versions - ([7aa7525](https://github.com/MRDGH2821/dotfiles/commit/7aa7525f1ac3212c0ed3f0227f0c3bf44462c76f)) - MRDGH2821
+- **(soar)** update package versions - ([385090f](https://github.com/MRDGH2821/dotfiles/commit/385090fafd849c8f369b23642c1568e837854f20)) - MRDGH2821
+- **(soar)** update package versions - ([8090d5f](https://github.com/MRDGH2821/dotfiles/commit/8090d5fe0309d753de9a48fe631ce1b899f4657c)) - MRDGH2821
+- **(soar)** update versions - ([d4a667d](https://github.com/MRDGH2821/dotfiles/commit/d4a667d76b5b4757aa4edf076c892dbff18d14c3)) - MRDGH2821
+- **(soar)** update package versions - ([d3701df](https://github.com/MRDGH2821/dotfiles/commit/d3701df584a489497fa384496a5174b2ef6c7d11)) - MRDGH2821
+- **(soar)** update versions - ([e598336](https://github.com/MRDGH2821/dotfiles/commit/e598336fc9483b3ced285aa9fb2542e67965b6cd)) - MRDGH2821
+- **(soar)** update versions - ([711546a](https://github.com/MRDGH2821/dotfiles/commit/711546ab8218fb9bf40939c7ac77936a4c3b31db)) - MRDGH2821
+- **(soar)** update package versions - ([6f5c5c0](https://github.com/MRDGH2821/dotfiles/commit/6f5c5c03163ecea0202ec9fe8baf94c2f68b4661)) - MRDGH2821
+- **(soar)** update package versions - ([131043a](https://github.com/MRDGH2821/dotfiles/commit/131043a78a62ab90cf3ec7eefc078bbb4236d683)) - MRDGH2821
+- **(soar)** remove invalid repo config - ([d0507f3](https://github.com/MRDGH2821/dotfiles/commit/d0507f3f5536d47d8ddbeb01662f3fb9f6d19ef7)) - MRDGH2821
+- **(soar)** update package versions - ([7e5d04a](https://github.com/MRDGH2821/dotfiles/commit/7e5d04ae3d57dfd25ad5eebb5e77ba4b1dd5bf55)) - MRDGH2821
+- **(soar)** update versions - ([a324b35](https://github.com/MRDGH2821/dotfiles/commit/a324b352c62fd3a45119520ecd5aebfc02d33754)) - MRDGH2821
+- **(soar)** add post install hooks for irminsul - ([dc314b8](https://github.com/MRDGH2821/dotfiles/commit/dc314b8dd0e24cb5c97b0b16fafec1ed8ce9cb66)) - MRDGH2821
+- **(soar)** update package versions - ([37fdcff](https://github.com/MRDGH2821/dotfiles/commit/37fdcff2ce6fda14a8a0ba8ae2d3fcf186c66ce1)) - MRDGH2821
+- **(soar)** update versions - ([3678faa](https://github.com/MRDGH2821/dotfiles/commit/3678faaf52f231a547ef12f2d91f7137d2e8ccc7)) - MRDGH2821
+- **(soar)** update package versions - ([256a0d4](https://github.com/MRDGH2821/dotfiles/commit/256a0d46313ace94b31c3f71733f9ca8d4e1dd95)) - MRDGH2821
+- **(soar)** update versions - ([9476c47](https://github.com/MRDGH2821/dotfiles/commit/9476c47f02d3a9dae0763321bb15c847e53c6287)) - MRDGH2821
+- **(soar)** update package versions - ([06147f7](https://github.com/MRDGH2821/dotfiles/commit/06147f77ba35aef8510696da3160922fa1182410)) - MRDGH2821
+- **(soar)** update versions - ([1466397](https://github.com/MRDGH2821/dotfiles/commit/14663978c5592557b55c0a6e758a5588aa285003)) - MRDGH2821
+- **(soar)** update versions - ([5f6c588](https://github.com/MRDGH2821/dotfiles/commit/5f6c5882e4e3098fa9a4b1831303bbeee88c6ecb)) - MRDGH2821
+- **(soar)** update versions - ([0542d40](https://github.com/MRDGH2821/dotfiles/commit/0542d404890d06dc9e67df35f61bcac50528f5ec)) - MRDGH2821
+- **(soar)** update versions - ([da27d35](https://github.com/MRDGH2821/dotfiles/commit/da27d3593db246e7fda8b4422dc6154027735276)) - MRDGH2821
+- **(soar)** update versions - ([b8d9156](https://github.com/MRDGH2821/dotfiles/commit/b8d9156a06ef03bf95376bb3965a002b14a82ce0)) - MRDGH2821
+- **(soar)** remove marktext - ([4682389](https://github.com/MRDGH2821/dotfiles/commit/468238920bfd238eb3bdaf81c515fca31c5a6727)) - MRDGH2821
+- **(treefmt)** format .ps1 files - ([9b63b1e](https://github.com/MRDGH2821/dotfiles/commit/9b63b1eae0b93b6684ade7ed5e9260bf8f8dc8e5)) - MRDGH2821
+- **(treefmt)** add ini files - ([3c7dd0d](https://github.com/MRDGH2821/dotfiles/commit/3c7dd0d132cd493b965ddc0af428f8e416d58ba2)) - MRDGH2821
+- **(treefmt)** allow *.jsonc formatting - ([27a48b6](https://github.com/MRDGH2821/dotfiles/commit/27a48b604b91ee81254676c9fe236e4b6629431c)) - MRDGH2821
+- **(treefmt)** update config - ([2a3806f](https://github.com/MRDGH2821/dotfiles/commit/2a3806f7265d133733044773fbfca716a60abf1a)) - MRDGH2821
+- **(treefmt)** update config - ([b3e7917](https://github.com/MRDGH2821/dotfiles/commit/b3e79173e561f46ce549e8342d1947dad09bb3e8)) - MRDGH2821
+- **(treefmt)** add ini files for formatting - ([88332f6](https://github.com/MRDGH2821/dotfiles/commit/88332f64e05003ce5073b84861062419be1664f4)) - MRDGH2821
+- **(treefmt)** exclude chezmoiignore from being formatted - ([6885f0f](https://github.com/MRDGH2821/dotfiles/commit/6885f0ff98abdf7c23f0ef3e35310edf8e6e9164)) - MRDGH2821
+- **(treefmt)** update formatting config - ([46d58f2](https://github.com/MRDGH2821/dotfiles/commit/46d58f20a85c9592b253832f78d07c1db5569e08)) - MRDGH2821
+- **(treefmt)** update paths - ([85d6330](https://github.com/MRDGH2821/dotfiles/commit/85d6330383aa803e395fe2be60d9e07169dadee6)) - MRDGH2821
+- **(treefmt)** update prettier plugins list - ([4fcfcfa](https://github.com/MRDGH2821/dotfiles/commit/4fcfcfae6b4c6565590f701f513b496683f053d7)) - MRDGH2821
+- **(vscode)** :wrench: add scopes - ([37023b2](https://github.com/MRDGH2821/dotfiles/commit/37023b241520179e9b9bb2e3abdbc8b68c4f3d18)) - MRDGH2821
+- **(vscode)** :wrench: update formatter settings - ([e7ac1eb](https://github.com/MRDGH2821/dotfiles/commit/e7ac1eb21a051d09b5f1db893c853e714b6b6fc5)) - MRDGH2821
+- **(vscode)** add new scope - ([9393072](https://github.com/MRDGH2821/dotfiles/commit/93930721838bd752af003778fbee03909cac8cea)) - MRDGH2821
+- **(vscode)** :wrench: run scripts on terminal and add scopes - ([b097bac](https://github.com/MRDGH2821/dotfiles/commit/b097bac52371b9aa9af1e1cca3c916a51cd84238)) - MRDGH2821
+- **(vscode)** update scopes - ([e6a9777](https://github.com/MRDGH2821/dotfiles/commit/e6a977797e4ab58607c451faee489f5bb4548b53)) - MRDGH2821
+- **(vscode)** :wrench: add extension recommendations - ([1e8c6b5](https://github.com/MRDGH2821/dotfiles/commit/1e8c6b56b08a219fb85cd8e6d2715aadd64f7a0b)) - MRDGH2821
+- **(vscode)** add extension recommendations - ([4d54236](https://github.com/MRDGH2821/dotfiles/commit/4d54236025d65504430da6d7dbc2e958b9bc7c86)) - MRDGH2821
+- **(vscode)** :wrench: add formatter settings - ([2832e69](https://github.com/MRDGH2821/dotfiles/commit/2832e69d9b86d37600c0b072a6c1ad4928b85a97)) - MRDGH2821
+- **(vscode)** add extensions - ([4ff6ff0](https://github.com/MRDGH2821/dotfiles/commit/4ff6ff0ec608af938c6c3be7a94e4c3f7c01b7ca)) - MRDGH2821
+- **(vscode)** :wrench: add formatter settings - ([178d53d](https://github.com/MRDGH2821/dotfiles/commit/178d53d2b36a641ecbdaf121563c91b7e2d06e54)) - MRDGH2821
+- **(vscode)** :wrench: change recommended extension - ([c66a4d4](https://github.com/MRDGH2821/dotfiles/commit/c66a4d410e8902984c7c27e3ccd0c77f0ca7f99d)) - MRDGH2821
+- **(vscode)** :wrench: add commit scope - ([5b1289b](https://github.com/MRDGH2821/dotfiles/commit/5b1289bf5799b935a3caa2f758b1fe9eaf681ecb)) - MRDGH2821
+- **(vscode)** :wrench: update extension recommendation - ([1c9184f](https://github.com/MRDGH2821/dotfiles/commit/1c9184f106dd802bee6abd7cbd4f01b1d3dfc727)) - MRDGH2821
+- **(vscode)** :wrench: update xml formatter settings - ([c340eb6](https://github.com/MRDGH2821/dotfiles/commit/c340eb6eefeba82f5f81e72c88d3b17db9efd16e)) - MRDGH2821
+- **(vscode)** :wrench: remove prettier path config - ([9c50667](https://github.com/MRDGH2821/dotfiles/commit/9c50667c66b19f8821930372223e7ba4be50fd67)) - MRDGH2821
+- **(vscode)** :wrench: change shell script formatter - ([22f76ff](https://github.com/MRDGH2821/dotfiles/commit/22f76ff9efada7a67fd3b88708137d574c9d192f)) - MRDGH2821
+- **(vscode)** :wrench: update file association config - ([82ab153](https://github.com/MRDGH2821/dotfiles/commit/82ab1533b635eb1317a81053a5e69db90cb8eaf1)) - MRDGH2821
+- **(vscode)** delete config - ([f1f3407](https://github.com/MRDGH2821/dotfiles/commit/f1f3407893b222be101a6ddca1fa4138aa398539)) - MRDGH2821
+- **(zed)** add settings & task config - ([2dd6762](https://github.com/MRDGH2821/dotfiles/commit/2dd676213d3431cde26196f5ca796601acae7ec0)) - MRDGH2821
+- **(zed)** add new task - ([ca33908](https://github.com/MRDGH2821/dotfiles/commit/ca339089f214a8d37780db57e8f12491ef3838a6)) - MRDGH2821
+- **(zed)** update file associations - ([6720ac7](https://github.com/MRDGH2821/dotfiles/commit/6720ac78df14f33a5865841482d4ba1051506184)) - MRDGH2821
+- **(zed)** never hide task outputs - ([755c640](https://github.com/MRDGH2821/dotfiles/commit/755c6400721c65a84531dd0440c27228b68a619b)) - MRDGH2821
+- **(zed)** add chezmoi applying task - ([0c6fb34](https://github.com/MRDGH2821/dotfiles/commit/0c6fb349834775a9a8ad96cfeff3ee7d0cfc0fbc)) - MRDGH2821
+- **(zed)** prettify sorted files - ([f30f050](https://github.com/MRDGH2821/dotfiles/commit/f30f05071e11c7e1699e4bbee8d8462a333d749d)) - MRDGH2821
+- **(zed)** add tasks - ([e2bdd96](https://github.com/MRDGH2821/dotfiles/commit/e2bdd96b78e418dd13b0d7e51dde42f3b4fac128)) - MRDGH2821
+- **(zed)** auto install extensions - ([adecfa7](https://github.com/MRDGH2821/dotfiles/commit/adecfa7a5a38860322be604c27605efb42f830df)) - MRDGH2821
+- **(zed)** add file associations - ([4a8bd40](https://github.com/MRDGH2821/dotfiles/commit/4a8bd40c5000896a209899c8e1f9e529f10b9b55)) - MRDGH2821
+- **(zed)** add chezmoi template executing task - ([d460d7f](https://github.com/MRDGH2821/dotfiles/commit/d460d7f5a02677ce86f24d9f14b1ada236d2e553)) - MRDGH2821
+- **(zed)** add tags - ([1c8c563](https://github.com/MRDGH2821/dotfiles/commit/1c8c563371a0d82c50593ae3bec2572394a390c0)) - MRDGH2821
+- **(zed)** add a script to sort yaml packages - ([21c9d81](https://github.com/MRDGH2821/dotfiles/commit/21c9d81fbb57fe605dc2470fa6b97a4b03cfea29)) - MRDGH2821
+- **(zed)** add global config - ([24c2f86](https://github.com/MRDGH2821/dotfiles/commit/24c2f86e6f0db9ffbf23ddd55f9c3306fc01ac0e)) - MRDGH2821
+- **(zed)** update settings - ([e4a3efb](https://github.com/MRDGH2821/dotfiles/commit/e4a3efb5a3578851008e78c3479af190547b148f)) - MRDGH2821
+- **(zed)** add typst previewing task - ([a340d06](https://github.com/MRDGH2821/dotfiles/commit/a340d06cbf0cc3059d22d200e6e354742578dc90)) - MRDGH2821
+- **(zed)** update favourite model list - ([d698a72](https://github.com/MRDGH2821/dotfiles/commit/d698a726bf348564ba5167d9d26fe76fc0e5f4f0)) - MRDGH2821
+- **(zed)** update tinymist lsp settings - ([604ba4e](https://github.com/MRDGH2821/dotfiles/commit/604ba4e47ec7320977710da47d6ac54e33707fe1)) - MRDGH2821
+- **(zed)** change formatter order - ([62bead9](https://github.com/MRDGH2821/dotfiles/commit/62bead9569833816b04330abb7fe3e99048273d0)) - MRDGH2821
+- **(zed)** update settings schema - ([e5660f2](https://github.com/MRDGH2821/dotfiles/commit/e5660f2502fdfbe96d4e1a8dfd9e73043c856b3d)) - MRDGH2821
+- **(zed)** update config - ([c0179bd](https://github.com/MRDGH2821/dotfiles/commit/c0179bd179d78248a7d54c0c837e7e869fcb700e)) - MRDGH2821
+- **(zed)** auto install an extension - ([8f0255d](https://github.com/MRDGH2821/dotfiles/commit/8f0255ddbc46d11ff93eb63861736a42c4ebdf21)) - MRDGH2821
+- **(zed)** update tasks - ([be7f9df](https://github.com/MRDGH2821/dotfiles/commit/be7f9dffe50b74e7c6cf68ed3b0903c406162ebb)) - MRDGH2821
+- **(zed)** update laabels & tags - ([3b6cc30](https://github.com/MRDGH2821/dotfiles/commit/3b6cc307f0968d8cede33997d71042bb91d5f227)) - MRDGH2821
+- **(zed)** add reveal targets - ([e361e16](https://github.com/MRDGH2821/dotfiles/commit/e361e16b8b4b54838f955e8519e89e66646cf070)) - MRDGH2821
+- **(zed)** add keybing to format with treefmt - ([0b6eb54](https://github.com/MRDGH2821/dotfiles/commit/0b6eb541121da31ed90a811e51c3d2f1f31c7c83)) - MRDGH2821
+- **(zed)** update ai settings - ([c5ce378](https://github.com/MRDGH2821/dotfiles/commit/c5ce378896b708f158413c58e41a1ea4829c8c01)) - MRDGH2821
+- **(zed)** update zed agent settings - ([c19dfd9](https://github.com/MRDGH2821/dotfiles/commit/c19dfd9950ef9f8ee3962ac1892e07fd8e470552)) - MRDGH2821
+- **(zed)** update settings - ([39c1f30](https://github.com/MRDGH2821/dotfiles/commit/39c1f304043d08316550c5175014057ce6627db9)) - MRDGH2821
+- **(zed)** add megalinter task & tags - ([cde071c](https://github.com/MRDGH2821/dotfiles/commit/cde071c434bdb4c2e8ef443539e57f0edad3a577)) - MRDGH2821
+- **(zed)** add reveal target - ([8c7a3c4](https://github.com/MRDGH2821/dotfiles/commit/8c7a3c4e4b57ad41c6f9797b033d77dd4961cbe0)) - MRDGH2821
+- **(zed)** remove toml config - ([a11585e](https://github.com/MRDGH2821/dotfiles/commit/a11585e5586baaedadd12f597ba4e3194fea9220)) - MRDGH2821
+- **(zed)** add schemas - ([117555a](https://github.com/MRDGH2821/dotfiles/commit/117555a5f71179d54244010f471c3315f7016ee4)) - MRDGH2821
+- **(zed)** allow auto schema download from schema store - ([2ad493f](https://github.com/MRDGH2821/dotfiles/commit/2ad493ff6be7aafa20da3820d15adcae4c445aea)) - MRDGH2821
+- **(zed)** add tasks & keymap - ([623c1f2](https://github.com/MRDGH2821/dotfiles/commit/623c1f2230acf74db3a996300c2b04fe1b1e239a)) - MRDGH2821
+- **(zed)** update settings - ([b84609b](https://github.com/MRDGH2821/dotfiles/commit/b84609b71a31b3487c060a900032640c86d7347a)) - MRDGH2821
+- **(zed)** change task command - ([29eccd0](https://github.com/MRDGH2821/dotfiles/commit/29eccd0f4a7cb7f6386bb2f78f162db4284c4809)) - MRDGH2821
+- **(zed)** add new task and keybind - ([4d5083e](https://github.com/MRDGH2821/dotfiles/commit/4d5083e2bc97db032f62925633bc435f16e10a6d)) - MRDGH2821
+- **(zed)** add cursor acp - ([be4be25](https://github.com/MRDGH2821/dotfiles/commit/be4be256f78c31fbc7164f00b267fbc2f09881f8)) - MRDGH2821
+- **(zed)** add cursor acp0; add jsonc formatter - ([e1ff935](https://github.com/MRDGH2821/dotfiles/commit/e1ff935eaea1b4ea82efab39337c80b672dfcb52)) - MRDGH2821
+- **(zed)** add task to re-add files via chezmoi - ([a59c233](https://github.com/MRDGH2821/dotfiles/commit/a59c233b6bfdec643686bc3b605c7328f73a9faa)) - MRDGH2821
+- **(zed)** update keymap - ([da783a9](https://github.com/MRDGH2821/dotfiles/commit/da783a9277850bc1a0456e36eec66c0248023eae)) - MRDGH2821
+- **(zed)** add gemini - ([ccb752b](https://github.com/MRDGH2821/dotfiles/commit/ccb752bf303f24df34e22a1df1038bf7cff718bb)) - MRDGH2821
+- **(zed)** update tasks & keymap - ([568d941](https://github.com/MRDGH2821/dotfiles/commit/568d94150f0095f9088570e7c8f3b86208445e55)) - MRDGH2821
+- **(zed)** update config - ([b9a75c4](https://github.com/MRDGH2821/dotfiles/commit/b9a75c49d1fa65c3bec95760dd18f2e939029f1f)) - MRDGH2821
+- **(zed)** update panel settings - ([8caf940](https://github.com/MRDGH2821/dotfiles/commit/8caf9409d6765eacb4f33746cf59bdc09ccd7a1b)) - MRDGH2821
+- **(zed)** update settings - ([5e332ec](https://github.com/MRDGH2821/dotfiles/commit/5e332ec788def38815f92572009ce02314e013e4)) - MRDGH2821
+- **(zed)** add tmux integration - ([f1ca612](https://github.com/MRDGH2821/dotfiles/commit/f1ca612a42793eec903aee2b42a61b4592bb7161)) - MRDGH2821
+- **(zed)** remove tmux config - ([99e514f](https://github.com/MRDGH2821/dotfiles/commit/99e514f2a659867fc0c7a2d5232d5003cee61337)) - MRDGH2821
+- **(zed)** add tasks - ([b49266f](https://github.com/MRDGH2821/dotfiles/commit/b49266f284b619dace489bcbdb7133657a0fe78d)) - MRDGH2821
+- **(zed)** add default agent settings - ([8d3fa12](https://github.com/MRDGH2821/dotfiles/commit/8d3fa1231ba7103381a70eede3703f24b69743e1)) - MRDGH2821
+- **(zed)** add bucket clearing tasks - ([5da47da](https://github.com/MRDGH2821/dotfiles/commit/5da47da9e5578256e774f4d4f682df3fa4c38e57)) - MRDGH2821
+- **(zed)** update agent settings - ([6506189](https://github.com/MRDGH2821/dotfiles/commit/6506189ae418ca7a0a76ff7b3e03a3a5f9af48f9)) - MRDGH2821
+- **(zed)** add gemini cli config - ([a224584](https://github.com/MRDGH2821/dotfiles/commit/a224584d61f125b93d805554bbd4953253bd7a06)) - MRDGH2821
+- **(zed)** add file association - ([5f77053](https://github.com/MRDGH2821/dotfiles/commit/5f77053a058dd20768b99ab564b8164dab42d919)) - MRDGH2821
+- **(zed)** add hermes acp - ([824b04b](https://github.com/MRDGH2821/dotfiles/commit/824b04b17f7f872c50c00c9c32ca06ca5e085652)) - MRDGH2821
+- **(zed)** remove gemini agent - ([3552daf](https://github.com/MRDGH2821/dotfiles/commit/3552daf40830c60e890dcab0a29f490be38f5bfa)) - MRDGH2821
+- **(zed)** use cursor agent from registry - ([891cc2a](https://github.com/MRDGH2821/dotfiles/commit/891cc2aa6ad0807930488c20b61d4fb8b2ceec40)) - MRDGH2821
+- **(zed)** fix syntax - ([e7b2403](https://github.com/MRDGH2821/dotfiles/commit/e7b2403b4e4e3c0e8aaeee78e7dfd5fe22258677)) - MRDGH2821
+- **(zed)** remove redundant task - ([81ee8cd](https://github.com/MRDGH2821/dotfiles/commit/81ee8cd190f6ff28bcb35c9fc8c00e6aff149bfc)) - MRDGH2821
+- **(zed)** update model settings - ([3f488e8](https://github.com/MRDGH2821/dotfiles/commit/3f488e895ef9289d90b24353b1bd19671a2707ac)) - MRDGH2821
+- **(zed)** update config - ([53ce2ed](https://github.com/MRDGH2821/dotfiles/commit/53ce2edb597858350f2ee6010f1d8823a9054119)) - MRDGH2821
+- **(zed)** update agent + extension settings - ([4c9d2ef](https://github.com/MRDGH2821/dotfiles/commit/4c9d2efed2152b3bb0962214542a2f8d859005f7)) - MRDGH2821
+- **(zed)** update agent settings - ([0b67cbb](https://github.com/MRDGH2821/dotfiles/commit/0b67cbb416035d7cb27218e79d605db3917546d6)) - MRDGH2821
+- **(zed)** update settings - ([e754311](https://github.com/MRDGH2821/dotfiles/commit/e75431199fdd505ade5d959c05a02ffed6584d37)) - MRDGH2821
+- **(zed)** add file associations - ([235bdca](https://github.com/MRDGH2821/dotfiles/commit/235bdca8a5c94e8c3b55baeefdad63ef1772c8e8)) - MRDGH2821
+- **(zed)** update settings - ([44f58ca](https://github.com/MRDGH2821/dotfiles/commit/44f58ca0918a8f9697bef9b6194a84bb639d9d0a)) - MRDGH2821
+- **(zed)** update settings - ([b5d1bf5](https://github.com/MRDGH2821/dotfiles/commit/b5d1bf58fb1d7d98058320d4c3d677be3a3c075c)) - MRDGH2821
+- **(zed)** remove claude acp - ([3e0435a](https://github.com/MRDGH2821/dotfiles/commit/3e0435a42f544fe3b55844acdf2d2e06e0613c53)) - MRDGH2821
+- **(zed)** update settings - ([c3a326d](https://github.com/MRDGH2821/dotfiles/commit/c3a326d9731f94d668d09ad1172882998af68f24)) - MRDGH2821
+- **(zed)** update extensions - ([003d3c5](https://github.com/MRDGH2821/dotfiles/commit/003d3c509fc328dd220e1366a58e30e73066dc55)) - MRDGH2821
+- **(zed)** set terminal init command to herdr - ([56ca427](https://github.com/MRDGH2821/dotfiles/commit/56ca427eae3e6018a80c8aeb701bd145dfbfea09)) - MRDGH2821
+- **(zed)** remove terminal init command - ([8f3f75b](https://github.com/MRDGH2821/dotfiles/commit/8f3f75b3922f0f69cccbcb0373a50af89babbe4e)) - MRDGH2821
+- **(zed)** add sourcegit task - ([fa3fa06](https://github.com/MRDGH2821/dotfiles/commit/fa3fa06e41dacf78392f95cb61b51d95648e3d2e)) - MRDGH2821
+- **(zed)** remove opencode - ([9de05ad](https://github.com/MRDGH2821/dotfiles/commit/9de05ad41d859a5cbc3847bef20b62d9b465d110)) - MRDGH2821
+- **(zed)** update extension list - ([9fdbd0d](https://github.com/MRDGH2821/dotfiles/commit/9fdbd0dce05eb0d1ba1e4dda565d9c999191e849)) - MRDGH2821
+- **(zed)** update keymap - ([8464e80](https://github.com/MRDGH2821/dotfiles/commit/8464e802778ee845ed4ed4ea048e50944ce8faa9)) - MRDGH2821
+- **(zed)** update zed settings - ([1895c80](https://github.com/MRDGH2821/dotfiles/commit/1895c80f9919a61f72f9fb22a1f6a5e0f5b5cd40)) - MRDGH2821
+- **(zed)** fix settings - ([0126b84](https://github.com/MRDGH2821/dotfiles/commit/0126b84be120b0efa93077499734848de6ccdacc)) - MRDGH2821
+- **(zed)** add cspell words refresher - ([afdf93e](https://github.com/MRDGH2821/dotfiles/commit/afdf93edd31ca1fa93ab9f9a29c8e36994739f1c)) - MRDGH2821
+- **(zed)** add antigravity agent - ([5f64619](https://github.com/MRDGH2821/dotfiles/commit/5f6461911ede3bb1d40b80e5a720fad24c1657a5)) - MRDGH2821
+- **(zed)** add more fallback formatters - ([080019b](https://github.com/MRDGH2821/dotfiles/commit/080019b0a04d0b3b6f0871e9f26b8b98b6bdd9e8)) - MRDGH2821
+- **(zed)** change order of formatting - ([b4197bb](https://github.com/MRDGH2821/dotfiles/commit/b4197bb69ccdf1d663db8f8da7c15016dada6b72)) - MRDGH2821
+- **(zed)** add prettier as last fallback - ([c07bb6f](https://github.com/MRDGH2821/dotfiles/commit/c07bb6fc6fed6af264203bf76d3ac05a33ae6b0f)) - MRDGH2821
+- **(zed)** add terminal allow list - ([3b84231](https://github.com/MRDGH2821/dotfiles/commit/3b84231a8c764e1ada60136bfe0d687d677c60e9)) - MRDGH2821
+- **(zed)** add keymap config by claude - ([5ae691c](https://github.com/MRDGH2821/dotfiles/commit/5ae691c16850310aba384de81cce8a164d451ab4)) - MRDGH2821
+- **(zed)** add patterns - ([13de7b2](https://github.com/MRDGH2821/dotfiles/commit/13de7b272f123f116930a14d537c093b42c20bd8)) - MRDGH2821
+- **(zed)** add & merge kaymaps - ([c654b32](https://github.com/MRDGH2821/dotfiles/commit/c654b328d0f6e08db252647473fe395d6cbda833)) - MRDGH2821
+- **(zed)** change font - ([503c70a](https://github.com/MRDGH2821/dotfiles/commit/503c70a95dcf65828c697343928154a754a71196)) - MRDGH2821
+- **(zed)** migrate settings - ([97ecbc5](https://github.com/MRDGH2821/dotfiles/commit/97ecbc53cc39cebe4dd19c3ef5e8d984aa40b5ff)) - MRDGH2821
+- **(zed)** update settings - ([5ae5bb7](https://github.com/MRDGH2821/dotfiles/commit/5ae5bb71082f3d18d977623c5573916cb79b2b7a)) - MRDGH2821
+- **(zed)** update settings - ([6640630](https://github.com/MRDGH2821/dotfiles/commit/6640630c907f27c46039d8024e5942cc75b615e2)) - MRDGH2821
+- **(zed)** update settings - ([26b0454](https://github.com/MRDGH2821/dotfiles/commit/26b04547bb00704b07007779d58123e8a5f5f2fe)) - MRDGH2821
+- **(zed)** remove opencode - ([30e0004](https://github.com/MRDGH2821/dotfiles/commit/30e00048342329bbdf9b2803ec5c78181d419d60)) - MRDGH2821
+- **(zed)** use oxfmt instead of prettier - ([6142dc7](https://github.com/MRDGH2821/dotfiles/commit/6142dc78b87743962e411bd2a21e2edab8f97de9)) - MRDGH2821
+- **(zed)** add mise bootstrap - ([8101ca1](https://github.com/MRDGH2821/dotfiles/commit/8101ca13994dd92e5069074a153c07a3c8acfd42)) - MRDGH2821
+- **(zed)** change copier task repo - ([b0560ab](https://github.com/MRDGH2821/dotfiles/commit/b0560ab5e2445e5178dbd386db16d62ad5bdfa78)) - MRDGH2821
+- **(zed)** don't hide formatting task - ([e960ed6](https://github.com/MRDGH2821/dotfiles/commit/e960ed6d153ddb1e3c03379da0cf88fc58c9c967)) - MRDGH2821
+- **(zed)** add emoji fix - ([e0bec7e](https://github.com/MRDGH2821/dotfiles/commit/e0bec7e427d3f44ed77e4d0413a2c353698023f7)) - MRDGH2821
+- initial commit - ([e05c0d7](https://github.com/MRDGH2821/dotfiles/commit/e05c0d73f7fff942dea2f4ad1c54c82661b68d2f)) - MRDGH2821
+- :see_no_evil: add gitignore file - ([3c3c839](https://github.com/MRDGH2821/dotfiles/commit/3c3c839457673ee89aed3b3da62f5a72c6694be6)) - MRDGH2821
+- allow unattended install - ([243a353](https://github.com/MRDGH2821/dotfiles/commit/243a353ebe6a7757166d5688a0e2274554d07605)) - MRDGH2821
+- make files executable - ([8ae43dc](https://github.com/MRDGH2821/dotfiles/commit/8ae43dc3703159254d689685d64cd3b814f1b44e)) - MRDGH2821
+- :art: print system type - ([1873d58](https://github.com/MRDGH2821/dotfiles/commit/1873d58a657ec061784fe9e5ed6980dba5609976)) - MRDGH2821
+- :wrench: update git config - ([e3febcf](https://github.com/MRDGH2821/dotfiles/commit/e3febcf81ce8bed63160695783065ac4b70b5107)) - MRDGH2821
+- update cspell.json - ([6706ac3](https://github.com/MRDGH2821/dotfiles/commit/6706ac33ad7b29b2242bd21563ecafeab6b50fe3)) - MRDGH2821
+- allow pinentry program to use secret service in kde - ([bfd0882](https://github.com/MRDGH2821/dotfiles/commit/bfd0882f8fc1b21ae44600be78636199a671f887)) - MRDGH2821
+- perform invisible changes - ([58e175d](https://github.com/MRDGH2821/dotfiles/commit/58e175d78eec78dfd998e89bb896ef26de952e95)) - MRDGH2821
+- use included prettier binary instead of user provided one - ([4d5f667](https://github.com/MRDGH2821/dotfiles/commit/4d5f667a86364b174821760966b92d814bbad9cf)) - MRDGH2821
+- :fire: remove goverlay generated config - ([b735d53](https://github.com/MRDGH2821/dotfiles/commit/b735d538afd6a8a082e10558a52e2e7a9827d0f1)) - MRDGH2821
+- :wrench: update konsole settings - ([8a01b9e](https://github.com/MRDGH2821/dotfiles/commit/8a01b9ec5a8f7f536736b03cb5b571d6638494d9)) - MRDGH2821
+- :wrench: add another repo folder for topgrade - ([d233d6a](https://github.com/MRDGH2821/dotfiles/commit/d233d6a05c1a5c4dc6015c276362f0885f18c948)) - MRDGH2821
+- :fire: remove git credential fill pre commands - ([dcf2bc9](https://github.com/MRDGH2821/dotfiles/commit/dcf2bc9912b33e2e97704383f257c4f0615db921)) - MRDGH2821
+- remove plugin settings - ([1c4d149](https://github.com/MRDGH2821/dotfiles/commit/1c4d14993ffa15b0328e511915d9634228157384)) - MRDGH2821
+- update cocogitto config - ([e42d270](https://github.com/MRDGH2821/dotfiles/commit/e42d270ca6ac25c6939c9a2743e9e9467ca47ff0)) - MRDGH2821
+- disable updating containers via topgrade - ([95a90fb](https://github.com/MRDGH2821/dotfiles/commit/95a90fbeb17eb13a0715ca2d9d157eed48246998)) - MRDGH2821
+- remove comments & sort properties - ([7124b8c](https://github.com/MRDGH2821/dotfiles/commit/7124b8c138a3d6061028f0440a5a808fec0e5a42)) - MRDGH2821
+- update dolphin config - ([0879fde](https://github.com/MRDGH2821/dotfiles/commit/0879fdeca8b7d6f770bf16726787ccfa640f0915)) - MRDGH2821
+- add commit scopes - ([1a5251d](https://github.com/MRDGH2821/dotfiles/commit/1a5251da6761f5d68828651db55a86353a61aa93)) - MRDGH2821
+- add pre-commit & commitizen config - ([50d0a97](https://github.com/MRDGH2821/dotfiles/commit/50d0a97109f69657b3b6d3a698a22ebf42bb6124)) - MRDGH2821
+- specify hook stage - ([74037c4](https://github.com/MRDGH2821/dotfiles/commit/74037c41924b2f4b43f6e17fb16d4e7a17028cf7)) - MRDGH2821
+- convert topgrade config template to regular type - ([e0f7707](https://github.com/MRDGH2821/dotfiles/commit/e0f77070ed75976174ea12abf17bb62b172d3b5b)) - MRDGH2821
+- add jsonc override - ([ad13f32](https://github.com/MRDGH2821/dotfiles/commit/ad13f32920d3a83ae413645080ef8081e18f0c83)) - MRDGH2821
+- prevent template files from being formatted - ([71dea26](https://github.com/MRDGH2821/dotfiles/commit/71dea2643525dde9620f33fdd80614a36299c314)) - MRDGH2821
+- sort file names - ([b0b377a](https://github.com/MRDGH2821/dotfiles/commit/b0b377a7dcd9a08878f5363cf489151b21b625ea)) - MRDGH2821
+- add prettier plugins - ([53feb0d](https://github.com/MRDGH2821/dotfiles/commit/53feb0d8115120834ce9e5d7b1439898c959ec5b)) - MRDGH2821
+- auto create bin folder instead of via shell scripts - ([8d36f24](https://github.com/MRDGH2821/dotfiles/commit/8d36f24d63b8a55b6fe959c803b9ecd789fccc6e)) - MRDGH2821
+- remove file patterns - ([82589e2](https://github.com/MRDGH2821/dotfiles/commit/82589e241789c1ae9bb621601305fc6b07a517b1)) - MRDGH2821
+- delete commit-me config - ([be49f97](https://github.com/MRDGH2821/dotfiles/commit/be49f975107060d67dcb6ea063835eee3fb6b48a)) - MRDGH2821
+- ignore additional file from validation - ([554b0cf](https://github.com/MRDGH2821/dotfiles/commit/554b0cf0bff0dae575bf547f8f17e4eb46e09ddb)) - MRDGH2821
+- ensure zed is the default editor - ([3a8d8bf](https://github.com/MRDGH2821/dotfiles/commit/3a8d8bfc867a76ce1d2a9d405cdb96c68993d4c5)) - MRDGH2821
+- add markdownlint config - ([1bdb02d](https://github.com/MRDGH2821/dotfiles/commit/1bdb02dce474669b2899f301064d5af093cb8418)) - MRDGH2821
+- add powershell plugin for prettier - ([ad99fa4](https://github.com/MRDGH2821/dotfiles/commit/ad99fa48b637cf6d3cf5ff24139556fe6f00619d)) - MRDGH2821
+- add marktext config - ([8eee2b2](https://github.com/MRDGH2821/dotfiles/commit/8eee2b2153f5360c61ba1f30c40748e3f83987b7)) - MRDGH2821
+- fix typos - ([9b19ed5](https://github.com/MRDGH2821/dotfiles/commit/9b19ed535e3163e8fd77ac1729f6def55f9b8ebb)) - MRDGH2821
+- update topgrade config - ([85b4c0d](https://github.com/MRDGH2821/dotfiles/commit/85b4c0d9979a89a99db5bddc0ec1358c75bee12f)) - MRDGH2821
+- set trailing commas to be removed in prettier config - ([3aa74ba](https://github.com/MRDGH2821/dotfiles/commit/3aa74ba62dc0b6e5a9397945aba86cc8f9c6ebda)) - MRDGH2821
+- update fastfetch config - ([9826572](https://github.com/MRDGH2821/dotfiles/commit/9826572ba0d95152276ca4f4e5446f76e0ec2101)) - MRDGH2821
+- add tombi config - ([8a58448](https://github.com/MRDGH2821/dotfiles/commit/8a58448210a49b6ccda13acd01c1aa351e065a10)) - MRDGH2821
+- add tombi comment directive - ([6a74ab5](https://github.com/MRDGH2821/dotfiles/commit/6a74ab5b1ae95f35bb8005ba203889619d329238)) - MRDGH2821
+- ignore bun.lock - ([fbb69bc](https://github.com/MRDGH2821/dotfiles/commit/fbb69bccbc10e089f3c7fc79cc0489cfa9a07c02)) - MRDGH2821
+- update allowed file types to be formatted - ([3f96b2f](https://github.com/MRDGH2821/dotfiles/commit/3f96b2f8e2579e9a55786a5a767e259c64728f52)) - MRDGH2821
+- fix formatter commands - ([d9a96e4](https://github.com/MRDGH2821/dotfiles/commit/d9a96e42fdd65f4145f06c3de56b98beadd16a39)) - MRDGH2821
+- move comments upwards - ([714cd66](https://github.com/MRDGH2821/dotfiles/commit/714cd66bcf1faece18ca08525fe8fcfd013fbf2a)) - MRDGH2821
+- delete unneeded dir - ([f75aa3e](https://github.com/MRDGH2821/dotfiles/commit/f75aa3ee01bcaae4119be6f804cc3be113d79441)) - MRDGH2821
+- add editor config to lazygit - ([9526c54](https://github.com/MRDGH2821/dotfiles/commit/9526c54243803c223b0bad7ee7cdbb1fcba1f643)) - MRDGH2821
+- add nix config - ([e72c019](https://github.com/MRDGH2821/dotfiles/commit/e72c0196927c7774dbcdf21afee27e4535e7cc69)) - MRDGH2821
+- add cargo config - ([3c9bbd9](https://github.com/MRDGH2821/dotfiles/commit/3c9bbd98cc3c87d2d4259bc9436e5f2d993212a6)) - MRDGH2821
+- add treefmt schema - ([f5506e6](https://github.com/MRDGH2821/dotfiles/commit/f5506e618e33bcddc12e9af499f86ae2479dbfd9)) - MRDGH2821
+- ignore bun lock file - ([780050b](https://github.com/MRDGH2821/dotfiles/commit/780050b77ec5b5310b340079d7574cbd6dc14771)) - MRDGH2821
+- use correct unix pattern - ([820f483](https://github.com/MRDGH2821/dotfiles/commit/820f483db2ac14b7456aa624c6a8b5c6e917adda)) - MRDGH2821
+- add another path to git repos - ([d00dbda](https://github.com/MRDGH2821/dotfiles/commit/d00dbdaf6c2af1816dee9fce68d84b21d1efb6de)) - MRDGH2821
+- remove dialogue box sizes - ([434e9eb](https://github.com/MRDGH2821/dotfiles/commit/434e9eb70a61f7fdec88b30d1e459ab76df43cfc)) - MRDGH2821
+- add metadata files - ([495b0b8](https://github.com/MRDGH2821/dotfiles/commit/495b0b8cbf115cda0a6fc5f74704e7e25107f926)) - MRDGH2821
+- ignore lock files - ([025987e](https://github.com/MRDGH2821/dotfiles/commit/025987ef3ea240861cf2e3c1263c8d872c1ca2ac)) - MRDGH2821
+- remove tombi format rules - ([bbe1f87](https://github.com/MRDGH2821/dotfiles/commit/bbe1f8755b29441c950d9252b05b5227bfe6af3a)) - MRDGH2821
+- remove go template plugin - ([4015de7](https://github.com/MRDGH2821/dotfiles/commit/4015de7a335d6ab17aaebf5f97e6fa84d0bffc3e)) - MRDGH2821
+- use smt to sort table - ([11df514](https://github.com/MRDGH2821/dotfiles/commit/11df5140e6295082d335c0bf5570288b42e6dde2)) - MRDGH2821
+- remove agents.md - ([36c876f](https://github.com/MRDGH2821/dotfiles/commit/36c876fc51c2b223a48d503bd5d0ec150ea3fd98)) - MRDGH2821
+- add opencode config - ([06b4212](https://github.com/MRDGH2821/dotfiles/commit/06b421285658f154f1cb7f190fb3b2386719cdae)) - MRDGH2821
+- update omo-z profile - ([ff5ef5a](https://github.com/MRDGH2821/dotfiles/commit/ff5ef5a5b53acb2ad4054cc339015754ae26d082)) - MRDGH2821
+- remove receipt - ([42ed3a0](https://github.com/MRDGH2821/dotfiles/commit/42ed3a086b4ff469a3fbb988cd8dc596de46a899)) - MRDGH2821
+- update profile - ([95386a3](https://github.com/MRDGH2821/dotfiles/commit/95386a3e2ad4c3a59e872b82783dc4858907fc9c)) - MRDGH2821
+- update config - ([ebbf508](https://github.com/MRDGH2821/dotfiles/commit/ebbf508ca76b97b8ca94b923037ccf86bd9dbb7d)) - MRDGH2821
+- ignore devenv folder - ([65bbb0e](https://github.com/MRDGH2821/dotfiles/commit/65bbb0e9e52809b6689532a7e4c1d6af2d22e617)) - MRDGH2821
+- use open-cursor plugin - ([921f104](https://github.com/MRDGH2821/dotfiles/commit/921f1044418d197d159a41e4da192b7cb081ecb5)) - MRDGH2821
+- remove PII - ([ae64abd](https://github.com/MRDGH2821/dotfiles/commit/ae64abd5e52b3bda9e7f6e653a7bc94c2fc5714e)) - MRDGH2821
+- re-enable prettier plugin - ([da457ff](https://github.com/MRDGH2821/dotfiles/commit/da457ff045762845ec3591d9e3d44fd0ff3a0192)) - MRDGH2821
+- remove git templates - ([20bca26](https://github.com/MRDGH2821/dotfiles/commit/20bca26eaf4464d03d0664e7e94155d47b0c7ccf)) - MRDGH2821
+- add git config - ([e7c6ea1](https://github.com/MRDGH2821/dotfiles/commit/e7c6ea17a66a96e225837b9ee845a0578a60bad9)) - MRDGH2821
+- add antidot config - ([928a669](https://github.com/MRDGH2821/dotfiles/commit/928a669a243c08b6408bdabffc9dc9a48a766e78)) - MRDGH2821
+- remove templates dir - ([04bdd87](https://github.com/MRDGH2821/dotfiles/commit/04bdd87865c4fa12798c757b424e60ffa61df263)) - MRDGH2821
+- remove redundant config - ([5ebcb21](https://github.com/MRDGH2821/dotfiles/commit/5ebcb2144324683ffd23069d5cb67d6c2395b82d)) - MRDGH2821
+- remove git-credential-keepassxc - ([33d69c0](https://github.com/MRDGH2821/dotfiles/commit/33d69c0ef85d7ffd83ad9a5d10ba2d4d46587e88)) - MRDGH2821
+- update antidot config - ([79f3c26](https://github.com/MRDGH2821/dotfiles/commit/79f3c26c98a42b10e5bff9bc1735e8e528f5b773)) - MRDGH2821
+- change default editor - ([8f06634](https://github.com/MRDGH2821/dotfiles/commit/8f066340c933a6243aeafba523df9876aae74f1f)) - MRDGH2821
+- update schema link - ([14ed017](https://github.com/MRDGH2821/dotfiles/commit/14ed0176ce1bb31ce5ec9fd6722c37cfaeb9e398)) - MRDGH2821
+- update antidot config - ([610f4f0](https://github.com/MRDGH2821/dotfiles/commit/610f4f0e586fa69b17824317d351bd48f19892fb)) - MRDGH2821
+- add work config - ([2aa1332](https://github.com/MRDGH2821/dotfiles/commit/2aa1332a929a276f9e84d6c8b9cca0077873744d)) - MRDGH2821
+- add git hook templates - ([17533fd](https://github.com/MRDGH2821/dotfiles/commit/17533fde6687c4f550f763399a88138fdbdf810c)) - MRDGH2821
+- update & format git config - ([b6def49](https://github.com/MRDGH2821/dotfiles/commit/b6def498550028bef0e8f7de69438617cc549d76)) - MRDGH2821
+- update prettier config - ([4cbbbd3](https://github.com/MRDGH2821/dotfiles/commit/4cbbbd3abcf82ed694bcc615a7879c925fae794c)) - MRDGH2821
+- delete empty file - ([0c96ef1](https://github.com/MRDGH2821/dotfiles/commit/0c96ef1002b3b2c99f1953b07b971abe7e8af1de)) - MRDGH2821
+- update git config - ([3aae9eb](https://github.com/MRDGH2821/dotfiles/commit/3aae9eb11d2b6e0b459ae5f2249a4f9e6164502e)) - MRDGH2821
+- update gitignore - ([0557dee](https://github.com/MRDGH2821/dotfiles/commit/0557deeb9545f550772203ac1ef7211276b67fb7)) - MRDGH2821
+- add libsecret helper - ([abdd6a4](https://github.com/MRDGH2821/dotfiles/commit/abdd6a411452b60841214b286b816becd685e15c)) - MRDGH2821
+- update topgrade config - ([f57e5a0](https://github.com/MRDGH2821/dotfiles/commit/f57e5a048e4abe8ca94b38f0ad8b531e59ae9a0d)) - MRDGH2821
+- rename commands - ([decf133](https://github.com/MRDGH2821/dotfiles/commit/decf133c55f054ca669a5bfec0e6f1f5eed9aeca)) - MRDGH2821
+- export appimage folder in path - ([2df7e7b](https://github.com/MRDGH2821/dotfiles/commit/2df7e7be5fb32a344af8acad9ac1a96545dc05bc)) - MRDGH2821
+- add gitlab credential elper - ([740ed39](https://github.com/MRDGH2821/dotfiles/commit/740ed39229dcdd0ec1872557eb4da8aaca03a732)) - MRDGH2821
+- trust copier repo - ([f408664](https://github.com/MRDGH2821/dotfiles/commit/f4086641ae216f227f05e46a5f179dfd61dd36e8)) - MRDGH2821
+- fix syntax - ([7e787c9](https://github.com/MRDGH2821/dotfiles/commit/7e787c9f7184cd1b7f54cf802acc442975100ecf)) - MRDGH2821
+- ignore files not to be formatted by prettier - ([6363f50](https://github.com/MRDGH2821/dotfiles/commit/6363f507a6b90e331ee5ed9ffdfb8a05d6f4aaa8)) - MRDGH2821
+- fix paths - ([9a23bd4](https://github.com/MRDGH2821/dotfiles/commit/9a23bd48859a9d7180513d3d4534b18fe99057cb)) - MRDGH2821
+- make scripts executable - ([cf3be6b](https://github.com/MRDGH2821/dotfiles/commit/cf3be6b488a19aad202cdfd17c3d4179e672a596)) - MRDGH2821
+- add linter fixes - ([44d9ce2](https://github.com/MRDGH2821/dotfiles/commit/44d9ce2dcd80ba50500bf530fc6c1fda1ee0c284)) - MRDGH2821
+- add upgrade command - ([1ce29bf](https://github.com/MRDGH2821/dotfiles/commit/1ce29bf4dfff5d6a06bb4e521898b5ec99f9bf9c)) - MRDGH2821
+- delete devskim - ([05e80ad](https://github.com/MRDGH2821/dotfiles/commit/05e80adef80b213fb69e6c03344629682efd679a)) - MRDGH2821
+- add license - ([e26955b](https://github.com/MRDGH2821/dotfiles/commit/e26955b989f35092d5b86ba77696ec40603fc3dd)) - MRDGH2821
+- add system files - ([e8fc01e](https://github.com/MRDGH2821/dotfiles/commit/e8fc01e62554072749172721d1e719ac3168c25e)) - MRDGH2821
+- ignore system files - ([0705b91](https://github.com/MRDGH2821/dotfiles/commit/0705b91622660b769ed069c2331877cdb05d314c)) - MRDGH2821
+- replace paths - ([000be22](https://github.com/MRDGH2821/dotfiles/commit/000be229559a5233848aca1ba3999af66bf9ef5f)) - MRDGH2821
+- use homedir instead of pcloud folder - ([ccf6af1](https://github.com/MRDGH2821/dotfiles/commit/ccf6af1c83522db6d5224365bcc35a353505bad8)) - MRDGH2821
+- update distro list - ([3b5d418](https://github.com/MRDGH2821/dotfiles/commit/3b5d418139874c4041bec21f3a64eda9be56e92f)) - MRDGH2821
+- always show commit signature - ([e82d408](https://github.com/MRDGH2821/dotfiles/commit/e82d408c61bf4203cb5ddb6850bad30d936d15dc)) - MRDGH2821
+- remove agent packages - ([22b1c77](https://github.com/MRDGH2821/dotfiles/commit/22b1c7786a80dc14ba5cba9bddcba926b4a348a8)) - MRDGH2821
+- update exported paths - ([3267e18](https://github.com/MRDGH2821/dotfiles/commit/3267e1898067e4001262363cfd7ee1e3ff998318)) - MRDGH2821
+- add extra substituters & trusted public keys - ([bc22d15](https://github.com/MRDGH2821/dotfiles/commit/bc22d156d18aa8e857a49876018a722319036e41)) - MRDGH2821
+- make scripts executable - ([6ba1d1d](https://github.com/MRDGH2821/dotfiles/commit/6ba1d1d3358c6fd864734f6de14254d774313972)) - MRDGH2821
+- update lazygit config - ([b81e628](https://github.com/MRDGH2821/dotfiles/commit/b81e6286ca5d6290d1db60045dbea834e09db407)) - MRDGH2821
+- remove soar command - ([7664d76](https://github.com/MRDGH2821/dotfiles/commit/7664d76d526c9d89312fba97c2641b6a20aadbf4)) - MRDGH2821
+- add herdr config - ([60debe1](https://github.com/MRDGH2821/dotfiles/commit/60debe1c323566a57f3c00dd65ce6fbab33cec19)) - MRDGH2821
+- update config - ([f4be524](https://github.com/MRDGH2821/dotfiles/commit/f4be524c12a11053456b9560cd535717e3d3c076)) - MRDGH2821
+- update herdr config - ([321ca16](https://github.com/MRDGH2821/dotfiles/commit/321ca164728d05c8d49293e40099e8db5c21d478)) - MRDGH2821
+- update ignores - ([75638c9](https://github.com/MRDGH2821/dotfiles/commit/75638c9704994747b6031d32d920da5d592dc0ce)) - MRDGH2821
+- update git config - ([c7dfbab](https://github.com/MRDGH2821/dotfiles/commit/c7dfbab96d48b52ca5562d756c082737b220fc01)) - MRDGH2821
+- add toml configs - ([446607f](https://github.com/MRDGH2821/dotfiles/commit/446607f8c804d4ed295614e331059d6c26656083)) - MRDGH2821
+- add mise config - ([457c4be](https://github.com/MRDGH2821/dotfiles/commit/457c4bea960f73d27cba97370ef8b1ba3ee393d1)) - MRDGH2821
+- update mise config - ([8cf4a8a](https://github.com/MRDGH2821/dotfiles/commit/8cf4a8a15b7bb867ee2784819e75dceea446d611)) - MRDGH2821
+- delete fnm - ([95ebb70](https://github.com/MRDGH2821/dotfiles/commit/95ebb70ad5f80f7185575e34ec226aa63dde14b2)) - MRDGH2821
+- update configs - ([731d999](https://github.com/MRDGH2821/dotfiles/commit/731d9990688d7ad4f6f8cd93c769294dd3e31118)) - MRDGH2821
+- add merge gui tool - ([27d9160](https://github.com/MRDGH2821/dotfiles/commit/27d9160892d95e6731f2bc9c7e3545224695c9ed)) - MRDGH2821
+- update git config - ([dc35e73](https://github.com/MRDGH2821/dotfiles/commit/dc35e7337422985972dace4f26f445fd6ca0b3b3)) - MRDGH2821
+- add apm.lock.yaml - ([b4e9164](https://github.com/MRDGH2821/dotfiles/commit/b4e9164ca83175de943f35e2043405b730b850a3)) - MRDGH2821
+- fix typo - ([54d9581](https://github.com/MRDGH2821/dotfiles/commit/54d9581559d18bc02c1683ecf413d6d3cc58d01e)) - MRDGH2821
+- migrate to typos.toml - ([68e912b](https://github.com/MRDGH2821/dotfiles/commit/68e912b8875cf78ab7fe831f9a2e13a385d5ac75)) - MRDGH2821
+- add mise hooks & tasks - ([582e77e](https://github.com/MRDGH2821/dotfiles/commit/582e77eff5307090710c28faa49effc66390d4b7)) - MRDGH2821
+- prefer latest versions of mise tools - ([46063e8](https://github.com/MRDGH2821/dotfiles/commit/46063e810aa9c90e2c0fca91a7525d70dc91bb5d)) - MRDGH2821
+- add herdr integration scripts - ([b97e7c7](https://github.com/MRDGH2821/dotfiles/commit/b97e7c7cd36536e1e633cda34981f07c15cbb2e2)) - MRDGH2821
+- add superpowers & paad plugin - ([65c98a6](https://github.com/MRDGH2821/dotfiles/commit/65c98a6e9dce2bad3831f1c8d6bd3857915fd1e8)) - MRDGH2821
+- disable ponytail installation in hermes - ([7d15dc0](https://github.com/MRDGH2821/dotfiles/commit/7d15dc0b4217cda5c864a1db36f1ad7f5e68847b)) - MRDGH2821
+- remove global install hook - ([838ab13](https://github.com/MRDGH2821/dotfiles/commit/838ab130a8f89a616abd3561373f4d7e34879d79)) - MRDGH2821
+- update topgrade commands - ([8f6e75d](https://github.com/MRDGH2821/dotfiles/commit/8f6e75d781e3cb277701be3a0819dd2af5d704de)) - MRDGH2821
+- make commands idempotent - ([e72379b](https://github.com/MRDGH2821/dotfiles/commit/e72379b091140c9d4220475e951969f831b9a08e)) - MRDGH2821
+- use agent-talk instead of hcom - ([56a64d1](https://github.com/MRDGH2821/dotfiles/commit/56a64d1bf8be16c40c3d2a5197ab3dbddf5797e3)) - MRDGH2821
+- preserve idempotency - ([99e2858](https://github.com/MRDGH2821/dotfiles/commit/99e2858e6c2d0454abc6e94bd800be83295c92d4)) - MRDGH2821
+- fix plugin installation commands - ([e32be3d](https://github.com/MRDGH2821/dotfiles/commit/e32be3d15a905a6794dc12d650342c4d4b7c8d37)) - MRDGH2821
+- extend path exports - ([6c44c65](https://github.com/MRDGH2821/dotfiles/commit/6c44c65e051dfa712689e6170aa140da7a5d9f04)) - MRDGH2821
+- update nix config - ([11487a2](https://github.com/MRDGH2821/dotfiles/commit/11487a232f25168bc88b122d6d6a41db892d7095)) - MRDGH2821
+- remove vllm and OpenMPI mise entries - ([3c4e4ba](https://github.com/MRDGH2821/dotfiles/commit/3c4e4ba31fb2f22888f8d06ca078d5a7be71bc85)) - MRDGH2821
+- remove url - ([876d99e](https://github.com/MRDGH2821/dotfiles/commit/876d99e7a6a0a650ade6c31a16a37d79774658fe)) - MRDGH2821
+- migrate prettier settings to oxfmt - ([a9abded](https://github.com/MRDGH2821/dotfiles/commit/a9abded4e554496267f8aa3e77120592d6ce92b7)) - MRDGH2821
+- add lock files - ([0a90e55](https://github.com/MRDGH2821/dotfiles/commit/0a90e5532a9621379d12ea3e6dae40e237dceb86)) - MRDGH2821
+- remove redundant overrides & associations - ([f998438](https://github.com/MRDGH2821/dotfiles/commit/f9984387348f05c2486696ab3e21c533e204db9d)) - MRDGH2821
+- delete old configs - ([504c423](https://github.com/MRDGH2821/dotfiles/commit/504c423089b7c32f73057f402ceef96a8590dde7)) - MRDGH2821
+- regenerate file - ([2f6258c](https://github.com/MRDGH2821/dotfiles/commit/2f6258c86ed3c1e00de8216484380fb5c0d8f972)) - MRDGH2821
+- remove empty table - ([f5e30f9](https://github.com/MRDGH2821/dotfiles/commit/f5e30f98c9d6b52e5a3b014ddb5b85e15191ae74)) - MRDGH2821
+- fix linter errors - ([61c7a2d](https://github.com/MRDGH2821/dotfiles/commit/61c7a2d223ed7c5ec1a32cfff2015422819e6870)) - MRDGH2821
+- update agents.md - ([24858a0](https://github.com/MRDGH2821/dotfiles/commit/24858a0e9246f19e2225472a5974e04c452fd088)) - MRDGH2821
+- update capabilities.lock - ([44a22f7](https://github.com/MRDGH2821/dotfiles/commit/44a22f751eb1e255bcc2b2bc56350ce2790837d0)) - MRDGH2821
+- add kiro-cli - ([7ac8b83](https://github.com/MRDGH2821/dotfiles/commit/7ac8b8384ff3a666e50ab89970997b4a8c16e074)) - MRDGH2821
+- merge pull request #2 from MRDGH2821/MRDGH2821/refactor/migrate-ir-to-mise - ([9d6aed4](https://github.com/MRDGH2821/dotfiles/commit/9d6aed42501a68de715d68071eb6d25e396bd2c3)) - Mihir Rabade
+- use bare executable name - ([89a5fd6](https://github.com/MRDGH2821/dotfiles/commit/89a5fd677545c906474ce014620d3ee4ce36b5e5)) - MRDGH2821
+- clean up scripts - ([c384810](https://github.com/MRDGH2821/dotfiles/commit/c384810806dde5b212adbe9e51c5d1204bda1e55)) - MRDGH2821
+- remove redundant commands - ([530578c](https://github.com/MRDGH2821/dotfiles/commit/530578c2dea75246cb114c64a8612ee2e53e1abc)) - MRDGH2821
+- update git config - ([0e844d9](https://github.com/MRDGH2821/dotfiles/commit/0e844d9e830219f6bd61626ec7ccc681997c3342)) - MRDGH2821
+- remove sccache - ([b660fc9](https://github.com/MRDGH2821/dotfiles/commit/b660fc98216c3b90a776bd59b3d84151496a1b2d)) - MRDGH2821
+- unmanage codex shell script - ([5d6cc56](https://github.com/MRDGH2821/dotfiles/commit/5d6cc5605d75d00c7f09a9cf6d02b21e27c85334)) - MRDGH2821
+- remove prek git hooks - ([3727a75](https://github.com/MRDGH2821/dotfiles/commit/3727a7536e01172518bae36180176c48ede9a5c7)) - MRDGH2821
+- update paths - ([5e581d8](https://github.com/MRDGH2821/dotfiles/commit/5e581d85095adedafe878d9ceae06538ed0062a7)) - MRDGH2821
+- add package names - ([7c8a6a8](https://github.com/MRDGH2821/dotfiles/commit/7c8a6a86fb2feef39b56acb734bc811cbdee63f9)) - MRDGH2821
+- regenerate table - ([956613c](https://github.com/MRDGH2821/dotfiles/commit/956613c5b074ec96ec1b028d5074e5e4fcb211a4)) - MRDGH2821
+
+### Refactoring
+
+- **(chezmoi)** :truck: rename files - ([794d971](https://github.com/MRDGH2821/dotfiles/commit/794d9718f77f1f596f6ac9ae5d48e929dc63c40b)) - MRDGH2821
+- **(chezmoi)** install url packages in the end - ([7faa092](https://github.com/MRDGH2821/dotfiles/commit/7faa0928f147a4cf105c51e37428f24ed10ed475)) - MRDGH2821
+- **(chezmoi)** remove dashes & update paths - ([53eb228](https://github.com/MRDGH2821/dotfiles/commit/53eb2285572238b77e20935792db9e4f34e6d1b4)) - MRDGH2821
+- **(chezmoi)** :recycle: use builtins to perform thorough checks - ([66cb65c](https://github.com/MRDGH2821/dotfiles/commit/66cb65c947c41e06c4c91133c7b3d22a84cf6993)) - MRDGH2821
+- **(chezmoi)** :recycle: use builtins to form a path - ([bea70c3](https://github.com/MRDGH2821/dotfiles/commit/bea70c36fc4ddd09673ab57a22fbf760ccb2c2da)) - MRDGH2821
+- **(chezmoi)** :wrench: directly ask in first attempt instead of empty variable fallovers - ([a57d474](https://github.com/MRDGH2821/dotfiles/commit/a57d4747b5455f933d8678d10738751ad4fb31c4)) - MRDGH2821
+- **(chezmoi)** :truck: increase rank of fnm - ([97fccad](https://github.com/MRDGH2821/dotfiles/commit/97fccad80d34fc5d6f83bbfc582edc7e6783c185)) - MRDGH2821
+- **(chezmoi)** :hammer: add new template for git config - ([9e9f579](https://github.com/MRDGH2821/dotfiles/commit/9e9f579a90eaabf28fa199d5dbbdcd180fb87dbd)) - MRDGH2821
+- **(chezmoi)** :truck: renumber the scripts - ([8905324](https://github.com/MRDGH2821/dotfiles/commit/890532430afb02197fab5308318b0bbe8473361f)) - MRDGH2821
+- **(chezmoi)** :truck: rename folders to guarantee order of execution - ([48ea75c](https://github.com/MRDGH2821/dotfiles/commit/48ea75cbe66953ba9080cfedbaf5ae520d289bcb)) - MRDGH2821
+- **(chezmoi)** :hammer: update logic of finding oh-my-posh themes - ([9cc74c1](https://github.com/MRDGH2821/dotfiles/commit/9cc74c1dfdcc4a4dfe47b06fba844e43d12d6367)) - MRDGH2821
+- **(chezmoi)** change os detection logic - ([0fd7bbf](https://github.com/MRDGH2821/dotfiles/commit/0fd7bbf13125f8b23a38c075d6b694218d0cfd57)) - MRDGH2821
+- **(chezmoi)** rename template file - ([df2596c](https://github.com/MRDGH2821/dotfiles/commit/df2596c8390da2b8eecc3ad02c55101da6cdbe77)) - MRDGH2821
+- **(chezmoi)** use go text template - ([e43fe76](https://github.com/MRDGH2821/dotfiles/commit/e43fe762b5db08881716cdf0dc58172bfb5988f1)) - MRDGH2821
+- **(copier)** rename copier answers file - ([04c6a5f](https://github.com/MRDGH2821/dotfiles/commit/04c6a5fb742ca534b958f9ae219560851795e588)) - MRDGH2821
+- **(cspell)** :truck: rename cspell config file - ([f7a4d7e](https://github.com/MRDGH2821/dotfiles/commit/f7a4d7ef005d701d5675f7cc7e027e00df343d9d)) - MRDGH2821
+- **(mise)** migrate ir install from soar to mise - ([cc549d6](https://github.com/MRDGH2821/dotfiles/commit/cc549d67cdc202b6041c3faee910ae57f6640c17)) - MRDGH2821
+- **(mise)** move winget packages into bootstrap - ([14191a6](https://github.com/MRDGH2821/dotfiles/commit/14191a64c106515e54e05ec33cf0d0f04db85f47)) - MRDGH2821
+- **(opencode)** rename file - ([0b81951](https://github.com/MRDGH2821/dotfiles/commit/0b819510cead515ab5633ebd3eebb1b40a14bd3d)) - MRDGH2821
+- **(package)** :recycle: split post scripts - ([34bf377](https://github.com/MRDGH2821/dotfiles/commit/34bf37754edf48fcce2fa725fdeb3ceaa5b969a9)) - MRDGH2821
+- **(package)** use go templates instead of bash scrit conditionals - ([5506be0](https://github.com/MRDGH2821/dotfiles/commit/5506be0006c2c55338426f4bd92c3ae9033f0238)) - MRDGH2821
+- **(package)** :recycle: move tablet only packages in dedicated section - ([d1cd6f2](https://github.com/MRDGH2821/dotfiles/commit/d1cd6f21177dcba0d9a6f2e5a53ecff7ffa1cdde)) - MRDGH2821
+- **(package)** :recycle: skip installation of preinstalled vs code extensions - ([3472fd6](https://github.com/MRDGH2821/dotfiles/commit/3472fd6c5dbd0d26949e44e72060a50bf707cc0f)) - MRDGH2821
+- **(package)** :truck: split packages based on platform - ([11742d6](https://github.com/MRDGH2821/dotfiles/commit/11742d66be136608e05d1e20a28b92a962b5692c)) - MRDGH2821
+- **(package)** :hammer: move native & url packages into nala - ([cfe9607](https://github.com/MRDGH2821/dotfiles/commit/cfe960798ff5766428f00458d0e0aa25e160470e)) - MRDGH2821
+- **(package)** reclassify package list - ([d0e180f](https://github.com/MRDGH2821/dotfiles/commit/d0e180fba5fc468f921ce3ec12a2bd51f53eb34d)) - MRDGH2821
+- **(package)** directly install rclone using dra - ([24b9a82](https://github.com/MRDGH2821/dotfiles/commit/24b9a828946ba9965f654d52eb2a0f4325f9c909)) - MRDGH2821
+- **(package)** use github release - ([5412e26](https://github.com/MRDGH2821/dotfiles/commit/5412e26834ae123c6a495d3378faa07509b41241)) - MRDGH2821
+- **(package)** install zed from installer url - ([54470aa](https://github.com/MRDGH2821/dotfiles/commit/54470aa33ea24876bb8bbada1c53b1036b6336d4)) - MRDGH2821
+- **(package)** move list into commons - ([96f3701](https://github.com/MRDGH2821/dotfiles/commit/96f37013cf2dc1649ae695db631bd9d54b207714)) - MRDGH2821
+- **(package)** install github cli as native package - ([f0a7412](https://github.com/MRDGH2821/dotfiles/commit/f0a7412daf390036b2303a7104baca554535af0b)) - MRDGH2821
+- **(package)** install bun as native package - ([a78ae72](https://github.com/MRDGH2821/dotfiles/commit/a78ae72407fb5a2b1bf73669410c81807a91fdf2)) - MRDGH2821
+- **(package)** install uv as native package - ([0df19f3](https://github.com/MRDGH2821/dotfiles/commit/0df19f3feaffc9f3f241445b4bc2c9b5a2ea7894)) - MRDGH2821
+- **(package)** move packages from soar to cargo - ([53febbc](https://github.com/MRDGH2821/dotfiles/commit/53febbcf50d1b6951104205863dec1a10f74b1cb)) - MRDGH2821
+- **(package)** install treefmt via soar instead - ([5e41fc7](https://github.com/MRDGH2821/dotfiles/commit/5e41fc79198e6bd65f59157326d52f151e6ac547)) - MRDGH2821
+- **(package)** install via soar - ([0e80048](https://github.com/MRDGH2821/dotfiles/commit/0e80048680ff262508f702b35409d8174d7b4363)) - MRDGH2821
+- **(package)** install llmfit via soar - ([7976020](https://github.com/MRDGH2821/dotfiles/commit/7976020255048df644bbd69b757db461f9bf5d0c)) - MRDGH2821
+- **(package)** install binary instead of compiling - ([dcd055b](https://github.com/MRDGH2821/dotfiles/commit/dcd055bd7f9620a233458cc8bc626e04a3e67342)) - MRDGH2821
+- **(package)** install nix as native package - ([d446294](https://github.com/MRDGH2821/dotfiles/commit/d446294844c67c8deabdfbb60c67902f5ceddbaf)) - MRDGH2821
+- **(package)** update list - ([c9887e5](https://github.com/MRDGH2821/dotfiles/commit/c9887e58770e91f643dd2ac7b1d214fe04283101)) - MRDGH2821
+- **(package)** install shellcheck as soar package - ([4043105](https://github.com/MRDGH2821/dotfiles/commit/4043105c4bcdf4a14350bdf297c4c1930f714109)) - MRDGH2821
+- **(packages)** migrate some packages to soar - ([c1f496f](https://github.com/MRDGH2821/dotfiles/commit/c1f496fdf896b6c1a8c2f1196aa20f4ac8dcbd6e)) - MRDGH2821
+- **(packages)** replace dra with install-release (ir) - ([52da08c](https://github.com/MRDGH2821/dotfiles/commit/52da08c8aa0ed2b0714226681262745286aa57e5)) - MRDGH2821
+- **(packages)** move rust & python packages in mise - ([08ccb77](https://github.com/MRDGH2821/dotfiles/commit/08ccb77557a8bfd4e34deb07715a3050ac8ca76d)) - MRDGH2821
+- **(script)** :truck: rename script to reflect actual purpose - ([ae7c9d2](https://github.com/MRDGH2821/dotfiles/commit/ae7c9d2f4eadc97ef184c0c72b9dde38b4c2a2bd)) - MRDGH2821
+- **(script)** :truck: fix typo - ([af69cf8](https://github.com/MRDGH2821/dotfiles/commit/af69cf8190241e85fd1eded85d0650140f100c60)) - MRDGH2821
+- **(script)** :recycle: enclose chaotic-aur related commands in if block - ([87945ec](https://github.com/MRDGH2821/dotfiles/commit/87945eceb5660447d46494e914be371600d8a1ba)) - MRDGH2821
+- **(script)** :truck: move aliases in dedicated file - ([62ed12c](https://github.com/MRDGH2821/dotfiles/commit/62ed12ce1c475474e810fc4f8f97e4d581231137)) - MRDGH2821
+- **(script)** :truck: move shell invocations to ~/.bashrc.d/ - ([3504391](https://github.com/MRDGH2821/dotfiles/commit/350439101767ddd0e1a2a0eb54436e02bbd14374)) - MRDGH2821
+- **(script)** :recycle: alert user if bashrc was modified instead of moving the modified contents - ([44da04d](https://github.com/MRDGH2821/dotfiles/commit/44da04d57f6a70206930106f2946369e475c874d)) - MRDGH2821
+- **(script)** :package: use yay instead of pacman - ([af2794e](https://github.com/MRDGH2821/dotfiles/commit/af2794e4d216028e95e0aa8254b6ff4d4023ea26)) - MRDGH2821
+- **(script)** :truck: rename files - ([0cc1bb0](https://github.com/MRDGH2821/dotfiles/commit/0cc1bb008ea1aae5daed1b26afdca23c0e12ad8e)) - MRDGH2821
+- **(script)** :truck: rename files - ([e60456e](https://github.com/MRDGH2821/dotfiles/commit/e60456e9f2d71b3ae207fe59f3400f6a4c478fda)) - MRDGH2821
+- **(script)** :hammer: migrate to templates - ([80e4ee7](https://github.com/MRDGH2821/dotfiles/commit/80e4ee736b98dbd1da6a51eca0457eca33f64083)) - MRDGH2821
+- **(script)** :hammer: migrate shell aliases to template - ([f2b6ce9](https://github.com/MRDGH2821/dotfiles/commit/f2b6ce91fe10711a385584e8a8f24aa968380846)) - MRDGH2821
+- **(script)** simplify theme selection logic of oh-my-posh - ([34c06ba](https://github.com/MRDGH2821/dotfiles/commit/34c06baf485d1a68d7a931befd51ca467ad5e972)) - MRDGH2821
+- **(script)** :hammer: refactor script to download dra using gh cli - ([d30ccc0](https://github.com/MRDGH2821/dotfiles/commit/d30ccc080019ad026d0d3398dd5c9e16fd4f158c)) - MRDGH2821
+- **(script)** :recycle: append all packages in a string then install in one go - ([cb673b2](https://github.com/MRDGH2821/dotfiles/commit/cb673b2dbfa157bc3e01c63d4eb67a6d82100a4e)) - MRDGH2821
+- **(script)** rewrite the script in go native template - ([502bec3](https://github.com/MRDGH2821/dotfiles/commit/502bec35741132e43430071fb524561fded6ddb2)) - MRDGH2821
+- **(script)** use go native template to generate the script - ([443bbcc](https://github.com/MRDGH2821/dotfiles/commit/443bbcc2cfc92a31a195b49a4cc52cfb5ca50583)) - MRDGH2821
+- **(script)** make scripts consistent with each other - ([852e86a](https://github.com/MRDGH2821/dotfiles/commit/852e86abc6dd0b08965eebcd331801e5f1910677)) - MRDGH2821
+- **(script)** use shell scripts instead of chezmoi templates - ([98b27a5](https://github.com/MRDGH2821/dotfiles/commit/98b27a5fd5857f65a642435ea3a3e6355eb96a51)) - MRDGH2821
+- **(script)** rearrange the installation order of packages - ([410a0f3](https://github.com/MRDGH2821/dotfiles/commit/410a0f39e6e06761b73e8a94330e8b79c033a8cd)) - MRDGH2821
+- **(script)** remove `after` from filename - ([f0ad75a](https://github.com/MRDGH2821/dotfiles/commit/f0ad75ad44d877871b39d0220fd04ea6e21ce5ee)) - MRDGH2821
+- **(script)** rename file - ([9c2208e](https://github.com/MRDGH2821/dotfiles/commit/9c2208ed30ec477cbbfe634260c147b336437509)) - MRDGH2821
+- **(script)** use python script instead - ([d4311b2](https://github.com/MRDGH2821/dotfiles/commit/d4311b22d8ee506701e13980d349b2e8b3c14b30)) - MRDGH2821
+- **(script)** make script executable using chezmoi - ([ec13cef](https://github.com/MRDGH2821/dotfiles/commit/ec13cef8060c24bf0fd0d807b7d284d0dd42b4ac)) - MRDGH2821
+- **(script)** use chezmoi native way to read data - ([2704883](https://github.com/MRDGH2821/dotfiles/commit/2704883ca9c7722a4e5340698de4de7980afdaa0)) - MRDGH2821
+- **(script)** convert this into dedicated script - ([e55b9ee](https://github.com/MRDGH2821/dotfiles/commit/e55b9ee70adcfc5ab87ae026e062da0b8b8cec9a)) - MRDGH2821
+- **(script)** create dedicated install releases script - ([c63c238](https://github.com/MRDGH2821/dotfiles/commit/c63c23803b78371787bbfbfad1ef75b90463222b)) - MRDGH2821
+- **(soar)** use soar pkgs directly instead of distro packages - ([4e99b24](https://github.com/MRDGH2821/dotfiles/commit/4e99b24b28ed263fb0b57457a7825497d87f5be0)) - MRDGH2821
+- **(soar)** use soarpkgs for some packages - ([6b8018c](https://github.com/MRDGH2821/dotfiles/commit/6b8018ca3f6410739b0d2a190991e1949542ab9e)) - MRDGH2821
+- **(treefmt)** move zed formatting tasks into treefmt - ([02d0140](https://github.com/MRDGH2821/dotfiles/commit/02d0140cdf03e1f042332860b5c252102afc49c0)) - MRDGH2821
+- **(zed)** sort ignorePaths array of cspell in same task - ([3835906](https://github.com/MRDGH2821/dotfiles/commit/38359068087d8c2e5cfe70e82f939d0271ab4f59)) - MRDGH2821
+- **(zed)** ask package name interactively - ([c50ad20](https://github.com/MRDGH2821/dotfiles/commit/c50ad206e61942dca87038da5b18e96d7e61be87)) - MRDGH2821
+- **(zed)** put extensions list in user setting - ([5e90847](https://github.com/MRDGH2821/dotfiles/commit/5e908471886d9eaad1c43d3d75d7cbade06f5659)) - MRDGH2821
+- **(zed)** put args in args array - ([aec1382](https://github.com/MRDGH2821/dotfiles/commit/aec138217e83ffeff40d864c6c0cc13f13dd45b8)) - MRDGH2821
+- **(zed)** use cli instead of registry for agents - ([633974b](https://github.com/MRDGH2821/dotfiles/commit/633974beb5f56368e42326cb735f8d4953e66062)) - MRDGH2821
+- **(zed)** update file - ([2e64a37](https://github.com/MRDGH2821/dotfiles/commit/2e64a37a52f136651b7d0b78e5a78c69a0872934)) - MRDGH2821
+- **(zed)** use `nix fmt` as primary formatter - ([86e7604](https://github.com/MRDGH2821/dotfiles/commit/86e7604a85bcc4140796603c71b770cc53cfb4a4)) - MRDGH2821
+- move files into subfolder - ([70893c0](https://github.com/MRDGH2821/dotfiles/commit/70893c098228d2bb905e5bcde1af17dd4ff7c08d)) - MRDGH2821
+- :truck: rename files - ([bdcf385](https://github.com/MRDGH2821/dotfiles/commit/bdcf385b68299d8f401579b97bfc24aa707085cf)) - MRDGH2821
+- :truck: rename files - ([d0f737d](https://github.com/MRDGH2821/dotfiles/commit/d0f737da3adb07c01b9acf6ab98efe783c5ebebf)) - MRDGH2821
+- :truck: move files in their respective os folder - ([1e14725](https://github.com/MRDGH2821/dotfiles/commit/1e14725df56c69357f360bc0242fb4219d68b4b6)) - MRDGH2821
+- :truck: rename files - ([1a66130](https://github.com/MRDGH2821/dotfiles/commit/1a661309e27c5d54504280aa1fef80a2c3d0caee)) - MRDGH2821
+- :truck: rename files again - ([17b4694](https://github.com/MRDGH2821/dotfiles/commit/17b4694a745440eb0d45c94a9fcb8b0f3ebf7c97)) - MRDGH2821
+- :truck: rename file extensions - ([ae9c5d2](https://github.com/MRDGH2821/dotfiles/commit/ae9c5d2a6f47e51a972e1a2c1ea08e3239c4f581)) - MRDGH2821
+- :truck: rename file - ([c5dbe19](https://github.com/MRDGH2821/dotfiles/commit/c5dbe19700a6d4642aea40920974388012121b0a)) - MRDGH2821
+- :recycle: add config lines individually - ([2476adf](https://github.com/MRDGH2821/dotfiles/commit/2476adf4256ee7eb932bbda7d76035b0debb9760)) - MRDGH2821
+- :adhesive_bandage: use alternate way of printing strings - ([9f22875](https://github.com/MRDGH2821/dotfiles/commit/9f22875fd1b50d0558a0f4145fbadaf1fe886fdc)) - MRDGH2821
+- :adhesive_bandage: ignore errors by set - ([d113b87](https://github.com/MRDGH2821/dotfiles/commit/d113b87c8bd66b49644517d047edb80c5a47cf71)) - MRDGH2821
+- :truck: rename files - ([3e549d9](https://github.com/MRDGH2821/dotfiles/commit/3e549d97dd31da980ba54f7fdb9eac311ba28e55)) - MRDGH2821
+- :truck: append `.sh` in file names - ([be00e7a](https://github.com/MRDGH2821/dotfiles/commit/be00e7aafb6f8abeb4bf126cacc0311429eea348)) - MRDGH2821
+- write in native go text template - ([5b616a2](https://github.com/MRDGH2821/dotfiles/commit/5b616a24db256dbee6ed9b9015d2ec98bbf412a0)) - MRDGH2821
+- use go native text template - ([31aaa69](https://github.com/MRDGH2821/dotfiles/commit/31aaa691c6ea8ae5eb170acc3a80832984a638a6)) - MRDGH2821
+- use chezmoi go text template - ([193a531](https://github.com/MRDGH2821/dotfiles/commit/193a531bb6143f687d06615becc5598752ce1ec8)) - MRDGH2821
+- convert pattern to match all sub directories - ([82e8fd3](https://github.com/MRDGH2821/dotfiles/commit/82e8fd32c6e0f8acc88c1943732f89cb66405d14)) - MRDGH2821
+- move scripts in src folder - ([7a90f81](https://github.com/MRDGH2821/dotfiles/commit/7a90f81aad9f921f999851d855e5380d82d92027)) - MRDGH2821
+- use underscores & python scripts - ([3127b49](https://github.com/MRDGH2821/dotfiles/commit/3127b498f6b17886b1ab2d0f9eba5112ede539f8)) - MRDGH2821
+- move python & rust package commands in template - ([fbfb879](https://github.com/MRDGH2821/dotfiles/commit/fbfb879223012767c28ae1bf095890a698f3060f)) - MRDGH2821
+- move directories as per XDG spec - ([7c227e6](https://github.com/MRDGH2821/dotfiles/commit/7c227e605401f9f097985b713b7bd59fb9cef11e)) - MRDGH2821
+- use xdg dir - ([efc9d61](https://github.com/MRDGH2821/dotfiles/commit/efc9d61eebc7873350cad35928e9a263bead01dc)) - MRDGH2821
+- remove private_ prefix - ([00dfbfe](https://github.com/MRDGH2821/dotfiles/commit/00dfbfee07743b33b6aed7fea15dca8f9811d95b)) - MRDGH2821
+- use native go template syntax - ([1ed7b1d](https://github.com/MRDGH2821/dotfiles/commit/1ed7b1dae9bed8c347e856e6dc8f987f3e42c53b)) - MRDGH2821
+- add chezmoi root file - ([78a7849](https://github.com/MRDGH2821/dotfiles/commit/78a7849b9ecb2d0e7e452f717c900d8a826e00a0)) - MRDGH2821
+- update git repo directory - ([b42fcec](https://github.com/MRDGH2821/dotfiles/commit/b42fcecbd4a29600f31118d0c9e07b092a61b47f)) - MRDGH2821
+- use pre-exported env variables from cheamoi source dir - ([8371158](https://github.com/MRDGH2821/dotfiles/commit/83711580e02f78c80ce8742d0dfc024cb71a82b9)) - MRDGH2821
+- migrate packages to mise - ([0ecf94e](https://github.com/MRDGH2821/dotfiles/commit/0ecf94e062a282a5a24539a73dfbf56f59b8d500)) - MRDGH2821
+- rename file - ([852d348](https://github.com/MRDGH2821/dotfiles/commit/852d348090b5b67994863fa4b96a1c723f0b12ca)) - MRDGH2821
+- use chezmoi templates to import shell scripts - ([70fb7fd](https://github.com/MRDGH2821/dotfiles/commit/70fb7fd4be6b5513bce2f4c2333fb44f190c835e)) - MRDGH2821
+- split tasks and ensure paad, superpowers & ponytail are installed - ([eaaf1a0](https://github.com/MRDGH2821/dotfiles/commit/eaaf1a083574cd8885352f3e1568e8799990f48f)) - MRDGH2821
+- migrate soar packages to mise - ([9bfa821](https://github.com/MRDGH2821/dotfiles/commit/9bfa82153c1dcfbe13713b3b7aa5fc0a5abdc80e)) - MRDGH2821
+- migrate checks & steps - ([5b5059f](https://github.com/MRDGH2821/dotfiles/commit/5b5059f1378696306eda8ef07abd8d6f19524114)) - MRDGH2821
+- move packages to mise bootstrap - ([8c38167](https://github.com/MRDGH2821/dotfiles/commit/8c38167a4afb11e65e75d50966c98c6d4db53d0c)) - MRDGH2821
+- rename task name - ([e7911eb](https://github.com/MRDGH2821/dotfiles/commit/e7911eb2b33d64265cc99c8e66c5859d860c6181)) - MRDGH2821
+
+### Revert
+
+- "refactor(script): :truck: rename files" - ([c4cc836](https://github.com/MRDGH2821/dotfiles/commit/c4cc8368cbae38c1765195b7adbb216f6b16d981)) - MRDGH2821
+
+### Style
+
+- **(chezmoi)** format file - ([51533b0](https://github.com/MRDGH2821/dotfiles/commit/51533b0a3fdbfc924b3f45e79fc7eac4d2009777)) - MRDGH2821
+- **(cspell)** sort words - ([01c0165](https://github.com/MRDGH2821/dotfiles/commit/01c0165a74b0784eee963ff4a0552c5e4f50f4cf)) - MRDGH2821
+- **(package)** format with prettier - ([b142c53](https://github.com/MRDGH2821/dotfiles/commit/b142c535a2fe9c9035c2a534c2e1219f8725371f)) - MRDGH2821
+- **(script)** :rotating_light: add brackets in variables & remove blank lines - ([474bdde](https://github.com/MRDGH2821/dotfiles/commit/474bddeef1bcb3ee66385646ce2ecfa657318afb)) - MRDGH2821
+- **(script)** :rotating_light: use shfmt - ([2ce8bd4](https://github.com/MRDGH2821/dotfiles/commit/2ce8bd42db35b678192cf3ea9ebe52494e79195f)) - MRDGH2821
+- **(script)** :rotating_light: apply linter fixes - ([41d4c1e](https://github.com/MRDGH2821/dotfiles/commit/41d4c1e55e35a855775ced73c03f3c26997395cf)) - MRDGH2821
+- **(script)** format file - ([c9b5f99](https://github.com/MRDGH2821/dotfiles/commit/c9b5f999947a5296e9cebf709d00c771778281b8)) - MRDGH2821
+- **(zed)** sort task list - ([969f3d7](https://github.com/MRDGH2821/dotfiles/commit/969f3d70c0020a575ea4f87e833774f340109c59)) - MRDGH2821
+- **(zed)** sort keys - ([1fcb18a](https://github.com/MRDGH2821/dotfiles/commit/1fcb18adc96bc9bfdeb16fc35fbe8729fd5be8a1)) - MRDGH2821
+- add blank line - ([efd3e5a](https://github.com/MRDGH2821/dotfiles/commit/efd3e5a8276ea27b84cfa266dc7c68947615b09f)) - MRDGH2821
+- remove blank line - ([7f904dc](https://github.com/MRDGH2821/dotfiles/commit/7f904dc6aa739d5ccd1acff0a3e9ed823ee09736)) - MRDGH2821
+- :art: sort yaml keys - ([0ae52fe](https://github.com/MRDGH2821/dotfiles/commit/0ae52fe834f1ffb02368f3a612b1d14a50228ff7)) - MRDGH2821
+- format files with prettier - ([5e17010](https://github.com/MRDGH2821/dotfiles/commit/5e170109f81fa71a29fde0eb19a4e77f5438e221)) - MRDGH2821
+- sort keys - ([9a27b70](https://github.com/MRDGH2821/dotfiles/commit/9a27b707a6afd86803ade41b23e8b6ea5a0ae5eb)) - MRDGH2821
+- sort yaml properties - ([00b45a1](https://github.com/MRDGH2821/dotfiles/commit/00b45a1a8b54a0e291665579f6ac5571ac061bbd)) - MRDGH2821
+- sort json keys - ([c64fd9d](https://github.com/MRDGH2821/dotfiles/commit/c64fd9dde18e0d8acceeaa248aea1b9b608ab78b)) - MRDGH2821
+- sort keys - ([4fbe1ed](https://github.com/MRDGH2821/dotfiles/commit/4fbe1ed050a39ed2bc04e8b96c865785de5556f0)) - MRDGH2821
+- add space in the template brackets - ([ebebd62](https://github.com/MRDGH2821/dotfiles/commit/ebebd6287f769ad9851e2e9351f3af27aeeec5e2)) - MRDGH2821
+- format with prettier - ([8150b27](https://github.com/MRDGH2821/dotfiles/commit/8150b279d1811c061222a09197ae66d02a5c9c26)) - MRDGH2821
+- sort keys - ([ecba754](https://github.com/MRDGH2821/dotfiles/commit/ecba75408af366e06eb5bf51117ec65a3dc2cc73)) - MRDGH2821
+- apply yamlfix - ([ca8ffe6](https://github.com/MRDGH2821/dotfiles/commit/ca8ffe6b93677fcdde1aa0bf2be15a1dd970f3cd)) - MRDGH2821
+- format file - ([1c27a18](https://github.com/MRDGH2821/dotfiles/commit/1c27a18221dfbc27b2e35f5c53bd75b631bd519a)) - MRDGH2821
+- sort package arrays - ([fb14386](https://github.com/MRDGH2821/dotfiles/commit/fb14386e3578228bdfaf757220515e519ec2973c)) - MRDGH2821
+- format using xmllint - ([02a3cb6](https://github.com/MRDGH2821/dotfiles/commit/02a3cb65a899afb92782d4d2090d0120173356de)) - MRDGH2821
+- format files & fix linter errors - ([155d16b](https://github.com/MRDGH2821/dotfiles/commit/155d16b294f76fd56b47f046010f6043d605eefd)) - MRDGH2821
+- format file - ([55a55cf](https://github.com/MRDGH2821/dotfiles/commit/55a55cfdf698885e7f04f10653b47098a532f8b6)) - MRDGH2821
+- sort keys - ([940d5e8](https://github.com/MRDGH2821/dotfiles/commit/940d5e8a4848ed2a66ee63615309232acb660c8d)) - MRDGH2821
+- format files - ([d3a572b](https://github.com/MRDGH2821/dotfiles/commit/d3a572bd458703385ca4a608328cf6dccdc24c01)) - MRDGH2821
+- sort packages - ([1b63c72](https://github.com/MRDGH2821/dotfiles/commit/1b63c7246df151f8cc324cbed6d881d60f4fb19a)) - MRDGH2821
+- format files - ([6c7269e](https://github.com/MRDGH2821/dotfiles/commit/6c7269eb16871bcbe5c1aeb3b9b360e746586bad)) - MRDGH2821
+- format file - ([226e7cf](https://github.com/MRDGH2821/dotfiles/commit/226e7cf5cb082c295dd60e53ba92c9eb906d2c20)) - MRDGH2821
+- sort packages - ([dd1a8cd](https://github.com/MRDGH2821/dotfiles/commit/dd1a8cd3519328b88d2fed856ffb34f20fc2c5ad)) - MRDGH2821
+- sort names - ([237ee6e](https://github.com/MRDGH2821/dotfiles/commit/237ee6e9224e174ccb750125fe068631fc4a4161)) - MRDGH2821
+- sort table - ([8b5a382](https://github.com/MRDGH2821/dotfiles/commit/8b5a382629481a9c7dec58b7b1889cb3408c1b3c)) - MRDGH2821
+- sort imports - ([9d2e5ca](https://github.com/MRDGH2821/dotfiles/commit/9d2e5cabfe65327e825896587803e3c6d4bf2493)) - MRDGH2821
+- format file - ([02eff7c](https://github.com/MRDGH2821/dotfiles/commit/02eff7c8fda229fe243d0159256885a6c26beb96)) - MRDGH2821
+- fix linter errors - ([30b5c7e](https://github.com/MRDGH2821/dotfiles/commit/30b5c7e7cf8949dd82cb57efdf71df30b296c76f)) - MRDGH2821
+- format files - ([67d2d91](https://github.com/MRDGH2821/dotfiles/commit/67d2d91e289d508863cf699d6f520aa3e676771f)) - MRDGH2821
+- format files - ([968cf6c](https://github.com/MRDGH2821/dotfiles/commit/968cf6cf08593c7d8dd9ae4e6798ccdd839c98d4)) - MRDGH2821
+- format config - ([98cb373](https://github.com/MRDGH2821/dotfiles/commit/98cb3739cc10dd4eb96e1479eb662fd094a548d6)) - MRDGH2821
+- format file - ([8caf9ee](https://github.com/MRDGH2821/dotfiles/commit/8caf9ee992a71cf06224d378e35adef12d1876ae)) - MRDGH2821
+- format files - ([db330c3](https://github.com/MRDGH2821/dotfiles/commit/db330c33c1b9948fccdc9bd7d455be6cefababeb)) - MRDGH2821
+- format file - ([3d20f0d](https://github.com/MRDGH2821/dotfiles/commit/3d20f0d103fef645b44145edc8e5a9c9905e8020)) - MRDGH2821
+- format files - ([c799ed5](https://github.com/MRDGH2821/dotfiles/commit/c799ed537057cbd9c9a4c5d93467e7ad6adb8bb3)) - MRDGH2821
+- format files - ([8654e21](https://github.com/MRDGH2821/dotfiles/commit/8654e2146db5422151805d8eb7f5a1e9a2dd1394)) - MRDGH2821
+- format files - ([89a9e76](https://github.com/MRDGH2821/dotfiles/commit/89a9e76fcba868b2d35e2bbb4e1532622370062d)) - MRDGH2821
+- format files - ([804091a](https://github.com/MRDGH2821/dotfiles/commit/804091a5e1ccac8fdbf38ab3aee78e0b5c73aadf)) - MRDGH2821
+- format files - ([5e91961](https://github.com/MRDGH2821/dotfiles/commit/5e919619c83f7a36b6c420c2e4ef8dbaba10658c)) - MRDGH2821
+- format files - ([e332619](https://github.com/MRDGH2821/dotfiles/commit/e332619a2071184e917778a3cf6967deb70cef87)) - MRDGH2821
+- format files - ([4355d5e](https://github.com/MRDGH2821/dotfiles/commit/4355d5ebddc750c7bc9960d99637700518d390af)) - MRDGH2821
+- format file - ([172ed6a](https://github.com/MRDGH2821/dotfiles/commit/172ed6af430b64d6f03221902823ec46b8f07eb8)) - MRDGH2821
+- format files - ([f194e3d](https://github.com/MRDGH2821/dotfiles/commit/f194e3d988f6c2f503ac2096cb150bdb708f4f8c)) - MRDGH2821
+- format files - ([e8e33ab](https://github.com/MRDGH2821/dotfiles/commit/e8e33abc7088869b6afc485bb87e38e1e1336e5c)) - MRDGH2821
+- format files - ([a499724](https://github.com/MRDGH2821/dotfiles/commit/a499724d4860b248e8aedcd48acb5f6e6df69f0a)) - MRDGH2821
+- format files - ([6c36bc8](https://github.com/MRDGH2821/dotfiles/commit/6c36bc85b571dae79f220e771df5d8a580ca10b8)) - MRDGH2821
+- format files - ([e58301b](https://github.com/MRDGH2821/dotfiles/commit/e58301b7dfda2a308d6632aa320620c1d1589fbe)) - MRDGH2821
+- format files - ([cd9ce38](https://github.com/MRDGH2821/dotfiles/commit/cd9ce3851478a5c34b91fecacf39be9b4b87c88f)) - MRDGH2821
+- format files - ([8d9039f](https://github.com/MRDGH2821/dotfiles/commit/8d9039f97128d5b1697510436f18651d45021264)) - MRDGH2821
+- format files - ([44090b6](https://github.com/MRDGH2821/dotfiles/commit/44090b6e7b31d8d5f681a730ceca6ed848a23da0)) - MRDGH2821
+- format files - ([738b3cc](https://github.com/MRDGH2821/dotfiles/commit/738b3cc3e91cd7de782510bfbc1e37f243dfbcc6)) - MRDGH2821
+- format files - ([07216f7](https://github.com/MRDGH2821/dotfiles/commit/07216f77372e01fd3391b821a49664601821b500)) - MRDGH2821
+- format files - ([5dc0f76](https://github.com/MRDGH2821/dotfiles/commit/5dc0f764ae05e7f963a59be781dda43e0362b808)) - MRDGH2821
+- format files - ([632a20c](https://github.com/MRDGH2821/dotfiles/commit/632a20c9d45cb508a7880e4f502422da0c1b08fb)) - MRDGH2821
+- format files - ([676e8da](https://github.com/MRDGH2821/dotfiles/commit/676e8da187094bd872de3adf2fc2ff1077f154db)) - MRDGH2821
+- format files - ([6abfee3](https://github.com/MRDGH2821/dotfiles/commit/6abfee338cdec9a3ba325256ea7eaf67e58c2858)) - MRDGH2821
+- format files - ([56a85a9](https://github.com/MRDGH2821/dotfiles/commit/56a85a931c31fe0434a661cc2fa4c9d3378e801a)) - MRDGH2821
+
+### Build
+
+- **(mise)** update lock files - ([019eb74](https://github.com/MRDGH2821/dotfiles/commit/019eb74952fed37a622f45266508431f5afd4e90)) - MRDGH2821
+- **(mise)** update lock files - ([1635b96](https://github.com/MRDGH2821/dotfiles/commit/1635b960b711a01cad13e37fa49807886f3fac83)) - MRDGH2821
+- **(mise)** bump versions - ([f8f15b5](https://github.com/MRDGH2821/dotfiles/commit/f8f15b55d3efea237fcaf21eb3faeda55597047b)) - MRDGH2821
+- **(mise)** update lock files & versions - ([958057d](https://github.com/MRDGH2821/dotfiles/commit/958057de3f25b6ab8f5f62e8eb983e7a83bce59c)) - MRDGH2821
+- **(mise)** install shapin globally - ([6350069](https://github.com/MRDGH2821/dotfiles/commit/63500695ac202b5b0c8b1efea3aca5092c57f7a6)) - MRDGH2821
+- **(mise)** update versions & lockfiles - ([f2ab184](https://github.com/MRDGH2821/dotfiles/commit/f2ab184f7fe3170394d06f01fa96ec6f33b172fa)) - MRDGH2821
+- **(mise)** track uv deps - ([9c6cd82](https://github.com/MRDGH2821/dotfiles/commit/9c6cd82405a6219bdfb3230f8a212d26c2d54804)) - MRDGH2821
+- **(mise)** update lock files - ([0424c02](https://github.com/MRDGH2821/dotfiles/commit/0424c02185b31646301ca43cd1dac7b4e68cc5af)) - MRDGH2821
+- **(mise)** use pypi instead of pipx - ([91f7aa5](https://github.com/MRDGH2821/dotfiles/commit/91f7aa56f29e24c5a256bc2f7eed396d3805b209)) - MRDGH2821
+- **(mise)** regenerate lock files - ([c426090](https://github.com/MRDGH2821/dotfiles/commit/c4260905e66a73bf4f7218a194cabeed36ca3f99)) - MRDGH2821
+- **(mise)** update versions - ([92e648a](https://github.com/MRDGH2821/dotfiles/commit/92e648a2f6981a0af48010bcb61b1b861cb5a668)) - MRDGH2821
+- **(mise)** update versions - ([b43fcc1](https://github.com/MRDGH2821/dotfiles/commit/b43fcc17bce46849d05b628283be89b9d602a10b)) - MRDGH2821
+- **(mise)** remove zerobrew - ([cab8f2b](https://github.com/MRDGH2821/dotfiles/commit/cab8f2b5d0d5a4421413a6c1984a856844378853)) - MRDGH2821
+- **(mise)** remove libsecret helper - ([ea990c7](https://github.com/MRDGH2821/dotfiles/commit/ea990c727a28834aa6806625233b66b391e30e91)) - MRDGH2821
+- **(mise)** update package name - ([c5bdf1f](https://github.com/MRDGH2821/dotfiles/commit/c5bdf1f3a5e7411e2e822070c66f7ec85e38d108)) - MRDGH2821
+- **(mise)** add copier - ([2f24928](https://github.com/MRDGH2821/dotfiles/commit/2f24928d1f6b7b182ecc4eb638d515f032961458)) - MRDGH2821
+- **(mise)** set minimum age for teyvat.me - ([6cc4346](https://github.com/MRDGH2821/dotfiles/commit/6cc434617055d48c5c464e5ecdfd17b95963ea30)) - MRDGH2821
+- **(mise)** add gamemode & gamescope - ([d363479](https://github.com/MRDGH2821/dotfiles/commit/d3634791841a266f4aa53855d4ca252d0887cb86)) - MRDGH2821
+- **(mise)** add android-sdk - ([6b68c18](https://github.com/MRDGH2821/dotfiles/commit/6b68c18d0d22ed3aa71d13ff5830c8907a62115f)) - MRDGH2821
+- **(mise)** remove gamemode - ([b84ec0b](https://github.com/MRDGH2821/dotfiles/commit/b84ec0b7b6d665f15ea14efd109e68c2cad755b4)) - MRDGH2821
+- **(mise)** add minimum release ages - ([6fe820c](https://github.com/MRDGH2821/dotfiles/commit/6fe820c37033365c0beee3c8b2c5de2b5757f834)) - MRDGH2821
+- **(mise)** update versions - ([50c5def](https://github.com/MRDGH2821/dotfiles/commit/50c5def04b0e41e4d68d330765816e8789558e0c)) - MRDGH2821
+- **(mise)** add new packages - ([1c0ad0e](https://github.com/MRDGH2821/dotfiles/commit/1c0ad0ee2a00b9ddcf8b81fba1197ff3ddde55b3)) - MRDGH2821
+- **(mise)** update versions - ([b67203e](https://github.com/MRDGH2821/dotfiles/commit/b67203e5781bbdac3972754d9253c0024403cb74)) - MRDGH2821
+- **(mise)** remove node - ([ef4cb8c](https://github.com/MRDGH2821/dotfiles/commit/ef4cb8c1da65c07aca9b78b91fcc6d30bf923e83)) - MRDGH2821
+- **(mise)** add shell alias - ([6f5c7f2](https://github.com/MRDGH2821/dotfiles/commit/6f5c7f26324c4c9fdf6da6187b3c6e855810403f)) - MRDGH2821
+- **(mise)** remove stardb & agent plugins - ([63a0be3](https://github.com/MRDGH2821/dotfiles/commit/63a0be336c77d8b251ea6de755f27ce4bb4173f2)) - MRDGH2821
+- **(mise)** add node & npm - ([351bc22](https://github.com/MRDGH2821/dotfiles/commit/351bc221d8841c0a1cef474d097a34b36dc6561d)) - MRDGH2821
+- update deps - ([8e46de0](https://github.com/MRDGH2821/dotfiles/commit/8e46de0838b11063f85ac9569a9b8407ab9c8099)) - MRDGH2821
+- pin package version - ([ccee84f](https://github.com/MRDGH2821/dotfiles/commit/ccee84f9e5bb408af492aac14cb4002ab0db0b7d)) - MRDGH2821
+- update bun.lock - ([9cc3ffd](https://github.com/MRDGH2821/dotfiles/commit/9cc3ffd264cffc5a9ed095c2cb31ef5b2671b218)) - MRDGH2821
+- update lockfiles - ([4a5566b](https://github.com/MRDGH2821/dotfiles/commit/4a5566bd5f160bdd2986de5a1f7c033dd1eede15)) - MRDGH2821
+- update python deps - ([669c638](https://github.com/MRDGH2821/dotfiles/commit/669c638c03526b09bd4ad9ac510fdccd7acbe6a3)) - MRDGH2821
+- update oxfmt - ([b4a69de](https://github.com/MRDGH2821/dotfiles/commit/b4a69de58e933ffc1b7e667d86fda38bda5515c7)) - MRDGH2821
+
+### Ci
+
+- **(megalinter)** update version - ([98994e7](https://github.com/MRDGH2821/dotfiles/commit/98994e78691aa016179c882dacdc4843dd20ab98)) - MRDGH2821
+- **(megalinter)** update config - ([646bc48](https://github.com/MRDGH2821/dotfiles/commit/646bc48258100f37a29efd69fde6015c9e8545f3)) - MRDGH2821
+- **(megalinter)** run pre commands in root - ([44ef3b5](https://github.com/MRDGH2821/dotfiles/commit/44ef3b5bac5a9b6a0f353c1a7607b38add3867e9)) - MRDGH2821
+- **(megalinter)** add pylint pre commands - ([18b2d0e](https://github.com/MRDGH2821/dotfiles/commit/18b2d0e53dc1c498891ce23f242eff3965424883)) - MRDGH2821
+- **(megalinter)** add project mode for prettier - ([d87b09d](https://github.com/MRDGH2821/dotfiles/commit/d87b09d82b3a78c541f8dde24b12267574c8558e)) - MRDGH2821
+- update versions - ([ff26fa2](https://github.com/MRDGH2821/dotfiles/commit/ff26fa2c6c40e192ca6f4412c89ad368d3c58bac)) - MRDGH2821
+- update refs - ([cead4cf](https://github.com/MRDGH2821/dotfiles/commit/cead4cfe2bca61abe53b10e7347daaf4328db5b7)) - MRDGH2821
+
+<!-- generated by git-cliff -->

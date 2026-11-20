@@ -59,8 +59,8 @@ aliases:
   # --- KDE packages (linux_common kde:) that appear in the table ---
   # These are intentionally NOT aliased - they show their raw package names
   # because they are low-level KDE dependencies, not user-facing apps.
-  # Exception: discover, filelight, kcalc, kclock, partitionmanager,
-  # skanlite, skanpage are KDE apps but kept as-is since not in old table.
+  # discover, filelight, kcalc, kclock, partitionmanager, skanlite, skanpage
+  # are KDE apps now aliased below (they install via mise bootstrap.packages).
 
   # --- rust.yaml package IDs (cargo binstall/install/git) ---
   bat: Bat # cargo binstall
@@ -78,22 +78,28 @@ aliases:
   com.github.tchx84.Flatseal: Flatseal
   com.jeffser.Alpaca: Alpaca
   dandavison.delta: Delta
+  delta: Delta
   direnv: direnv
   direnv.direnv: direnv
   discord: Discord # Arch extra, Fedora native (lowercase)
+  discover: Discover # apt:discover (bootstrap)
   ente-io.auth-desktop: Ente Auth
   espanso: Espanso # install_release repo name (Debian/Ubuntu)
   espanso --file wayland: Espanso # install_release repo name (Debian/Ubuntu) - wayland selector
   espanso-wayland: Espanso # Arch AUR, Fedora terra
   fastfetch: Fastfetch
+  ffmpeg: FFmpeg
+  filelight: Filelight
   # --- linux_common packages: list (lowercase package ID -> display name) ---
   firefox: Firefox
   flatpak: flatpak
   futo-org.Grayjay.Desktop: GrayJay
   fzf: Fzf
+  gamescope: Gamescope # apt/dnf/pacman bootstrap
   gh: GitHub cli # Debian/Ubuntu/Fedora native
   git: Git
   git-agecrypt: git-agecrypt # cargo git (repo name)
+  git-credential-libsecret: git-credential-libsecret # git helper, keep as-is
   git-credential-oauth: git-credential-oauth
   git-delta: Delta
   git-sync: git-sync # internal tool, keep as-is
@@ -111,6 +117,8 @@ aliases:
   io.github.radiolamp.mangojuice: Mangojuice
   ir: Install Release # soar key -> display name
   junegunn.fzf: Fzf
+  kcalc: KCalc
+  kclock: KClock
   kde-partitionmanager: KDE Partition Manager
   keepassxc: Keepassxc
   kleopatra: Kleopatra
@@ -128,6 +136,7 @@ aliases:
   mtkennerly.ludusavi: Ludusavi
   mvdan.shfmt: Shfmt
   nix: nix # keep as-is (package manager itself)
+  nvtop: nvtop # low-level monitor, keep as-is
   obs-studio: OBS Studio # laptop_only on Debian/Ubuntu/Fedora
   obs-studio-plugin-vkcapture: OBS Studio # Fedora plugin (merged)
   obs-studio-plugin-vlc-video: OBS Studio # Fedora plugin (merged)
@@ -146,6 +155,8 @@ aliases:
   pcloud-drive: pCloud # Arch AUR
   pince: PINCE
   planify: Planify # Arch AUR
+  plasma-camera: Plasma Camera
+  podman: Podman
   prettypst: prettypst # cargo git (repo name)
   rclone: Rclone
   rclone_browser: Rclone browser
@@ -157,6 +168,8 @@ aliases:
   sharkdp.bat: Bat
   shellcheck: Shellcheck
   shfmt: Shfmt
+  skanlite: Skanlite
+  skanpage: Skanpage
   sourcegit: SourceGit
   sourcegit-bin: SourceGit # Arch AUR
   steam: Steam # Arch multilib, Fedora native (lowercase)

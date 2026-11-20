@@ -27,19 +27,23 @@
 | Bun                      | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Calibre                  | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
 | Cocogitto                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| Delta                    | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
+| Delta                    | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Discord                  | 👍🧰 | 👍🔗   | 👍🧰   | 👍🔗   | 👍      |
+| Discover                 | 👍🧰 | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
 | Docker Desktop           | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Ente Auth                | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 👍      |
 | Epic games launcher      | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
-| Espanso                  | 👍   | 🚫     | 👍🧰   | 👍📥   | 👍      |
+| Espanso                  | 👍   | 👍📥   | 👍🧰   | 👍📥   | 👍      |
 | Everything               | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
+| FFmpeg                   | 🚫   | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
 | Fastfetch                | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
-| Firefox                  | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
+| Filelight                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Firefox                  | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
 | Flatseal                 | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 🚫      |
 | Fzf                      | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | GNOME Firmware           | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 🚫      |
-| Git                      | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
+| Gamescope                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Git                      | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
 | GitHub cli               | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | GitLab cli               | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Gnupg                    | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
@@ -47,8 +51,11 @@
 | Gramps                   | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 👍      |
 | GrayJay                  | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 👍      |
 | Heroic Games Launcher    | 👍   | 👍📥   | 👍📥   | 👍📥   | 🚫      |
-| Keepassxc                | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
-| Kleopatra                | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| KCalc                    | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| KClock                   | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| KDE Partition Manager    | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Keepassxc                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
+| Kleopatra                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | Lazygit                  | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Link Shell Extension     | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Ludusavi                 | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
@@ -56,21 +63,25 @@
 | Mangojuice               | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 🚫      |
 | McFly                    | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Meld                     | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
-| OBS Studio               | 👍   | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
+| OBS Studio               | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
 | OBS input overlay        | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Oh My Posh               | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
 | OneDrive                 | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Only Office              | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 👍      |
 | PINCE                    | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
 | Planify                  | 📦🧰 | 📦🧰   | 📦🧰   | 📦🧰   | 🚫      |
+| Plasma Camera            | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
+| Podman                   | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | Powertoys                | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Rclone                   | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | Shapin                   | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | Shellcheck               | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Shfmt                    | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
+| Skanlite                 | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Skanpage                 | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | SourceGit                | 👍   | 👍📥   | 👍📥   | 👍📥   | 🚫      |
 | Steam                    | 👍🧰 | 👍🔗   | 👍🧰   | 👍🔗   | 👍      |
-| Syncthing                | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Syncthing                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | Syncthing Tray           | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 👍      |
 | Topgrade                 | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
 | Treefmt                  | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
@@ -83,7 +94,7 @@
 | Windows terminal         | 🚫   | 🚫     | 🚫     | 🚫     | 👍      |
 | Zed                      | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 👍      |
 | Zoxide                   | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
-| Zsh                      | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| Zsh                      | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | age                      | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | android-sdk              | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | antidot                  | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
@@ -104,17 +115,12 @@
 | cspell                   | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | cursor-agent             | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | direnv                   | 🧰   | 🧰     | 🧰     | 🧰     | 👍      |
-| discover                 | 👍🧰 | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
 | emplace                  | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | escrcpy                  | 🪽🔗 | 🪽🔗   | 🪽🔗   | 🪽🔗   | 🚫      |
-| espanso --file wayland   | 🚫   | 👍📥   | 🚫     | 🚫     | 🚫      |
 | fd                       | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| ffmpeg                   | 🚫   | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
-| filelight                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| flatpak                  | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| flatpak                  | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | fnox                     | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | forgejo-cli              | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| gamescope                | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | git-agecrypt             | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | git-cliff                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | git-credential-libsecret | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
@@ -127,9 +133,6 @@
 | iio-sensor-proxy         | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | install-release          | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | irminsul                 | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| kcalc                    | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| kclock                   | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| kde-partitionmanager     | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
 | keep-sorted              | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | kiro-cli                 | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | libavcodec-freeworld     | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
@@ -139,7 +142,7 @@
 | mcp-nixos                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | memorix                  | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | mr-boxington             | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| nix                      | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
+| nix                      | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | node                     | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | npm                      | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | nvtop                    | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
@@ -150,12 +153,9 @@
 | packslip                 | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | pam-u2f                  | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | pamu2fcfg                | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| partitionmanager         | 👍🧰 | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
 | parui                    | 👍   | 🚫     | 🚫     | 🚫     | 🚫      |
 | pay-respects             | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | pitchfork                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
-| plasma-camera            | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
-| podman                   | 🚫   | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | podman-docker            | 🚫   | 🚫     | 👍🧰   | 🚫     | 🚫      |
 | prettypst                | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | print-manager            | 👍🧰 | 👍🧰   | 🚫     | 👍🧰   | 🚫      |
@@ -167,9 +167,6 @@
 | rumdl                    | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | rust                     | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | sane                     | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| skanlite                 | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| skanpage                 | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
-| sort-package-json        | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |
 | system-config-printer    | 👍🧰 | 👍🧰   | 👍🧰   | 👍🧰   | 🚫      |
 | tailscale                | 💻🔗 | 💻🔗   | 💻🔗   | 💻🔗   | 🚫      |
 | tealdeer                 | 🧰   | 🧰     | 🧰     | 🧰     | 🚫      |

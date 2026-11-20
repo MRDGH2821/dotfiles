@@ -51,7 +51,7 @@ prepare-ci = ["bun ci"]
 alias = "fmt"
 run = ["hk fix --all"]
 
-[tasks.generate-package-tables]
+[tasks.generate-package-table]
 depends_post = [{ task = "format" }]
 run = "uv run gen-packages-table"
 # tombi: format.rules.array-values-order = "ascending"
@@ -99,4 +99,4 @@ patterns = [
   "src/chez_helpers/gen_packages_table.py",
   "src/chez_helpers/packages-names.yaml"
 ]
-task = "generate-package-tables"
+task = "generate-package-table"

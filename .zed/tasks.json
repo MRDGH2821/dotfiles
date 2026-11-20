@@ -67,8 +67,8 @@
     "label": "Search Repology"
   },
   {
-    "args": ["run", "gen-packages-table"],
-    "command": "uv",
+    "args": ["run", "generate-package-table"],
+    "command": "mise",
     "hide": "on_success",
     "label": "Generate packages table"
   }

@@ -54,7 +54,12 @@ run = ["hk fix --all"]
 [tasks.generate-package-tables]
 depends_post = [{ task = "format" }]
 run = "uv run gen-packages-table"
-sources = ["**/packages/**"]
+# tombi: format.rules.array-values-order = "ascending"
+sources = [
+  "**/packages/**",
+  "dot_config/mise/config.toml",
+  "src/chez_helpers/packages-names.yaml"
+]
 
 [tasks.prepare]
 interactive = true
@@ -87,5 +92,11 @@ uv = "0.13.7"
 yq = "4.54.3"
 
 [[watch_files]]
-patterns = ["**/packages/**"]
+# tombi: format.rules.array-values-order = "ascending"
+patterns = [
+  "**/packages/**",
+  "dot_config/mise/config.toml",
+  "src/chez_helpers/gen_packages_table.py",
+  "src/chez_helpers/packages-names.yaml"
+]
 task = "generate-package-tables"

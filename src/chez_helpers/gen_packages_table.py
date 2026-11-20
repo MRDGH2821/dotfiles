@@ -278,15 +278,14 @@ def _parse_mise_toml(
 ) -> None:
     """Parse mise's config.toml `[tools]` table.
 
-    mise-managed tools are installed identically on every Linux distro
-    (arch/debian/fedora/ubuntu) via the shared shell config; mise is not
-    used on Windows.
+    mise-managed tools are installed identically on every distro
+    (arch/debian/fedora/ubuntu on Linux, plus Windows).
     """
     data = tomllib.loads(path.read_text(encoding="utf-8"))
     for key in data.get("tools", {}):
         raw = _extract_mise_tool_name(key)
         display = _resolve(raw, aliases)
-        for d in _ALL_LINUX:
+        for d in (*_ALL_LINUX, "windows"):
             _set_if_better(packages, display, d, MISE)
 
 
@@ -295,12 +294,14 @@ def _parse_mise_toml(
 # ---------------------------------------------------------------------------
 
 # [bootstrap.packages] key prefixes → distro column(s) they install into.
-# 'apt' covers both Debian and Ubuntu; 'flatpak-user' is distro-agnostic.
+# 'apt' covers both Debian and Ubuntu; 'flatpak-user' is distro-agnostic;
+# 'winget' targets the Windows column.
 _BOOTSTRAP_PREFIX_DISTROS: dict[str, tuple[str, ...]] = {
     "apt": ("debian", "ubuntu"),
     "dnf": ("fedora",),
     "pacman": ("arch",),
     "flatpak-user": _ALL_LINUX,
+    "winget": ("windows",),
 }
 
 
@@ -312,8 +313,9 @@ def _parse_mise_bootstrap(
     """Parse mise's config.toml [bootstrap.packages] table.
 
     Keys look like 'apt:git', 'dnf:steam', 'pacman:steam',
-    'flatpak-user:org.gnome.Firmware'. Values may be a version string or a
-    table with 'env' conditions — only presence matters for the table.
+    'flatpak-user:org.gnome.Firmware', 'winget:Mozilla.Firefox'. Values may
+    be a version string or a table with 'env' conditions — only presence
+    matters for the table.
     """
     data = tomllib.loads(path.read_text(encoding="utf-8"))
     for key in data.get("bootstrap", {}).get("packages", {}):
@@ -328,6 +330,7 @@ def _parse_mise_bootstrap(
         display = _resolve(pkg_id, aliases)
         for d in distros:
             _set_if_better(packages, display, d, emoji)
+
 
 # ---------------------------------------------------------------------------
 # Windows YAML parser

@@ -341,7 +341,7 @@ def _parse_windows_yaml(
 ) -> None:
     data = _load_yaml(path)
     data = data.get("windows", data)
-    for pkg_id in data.get("winget", []):
+    for pkg_id in data.get("winget") or []:
         display = _resolve(pkg_id, aliases)
         _set_if_better(packages, display, "windows", NATIVE)
 

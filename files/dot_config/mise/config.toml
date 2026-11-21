@@ -99,6 +99,8 @@ run = [
 "flatpak-user:org.gnome.Firmware" = "latest"
 "flatpak-user:org.gramps_project.Gramps" = "latest"
 "flatpak-user:org.onlyoffice.desktopeditors" = "latest"
+"nix:github:nix-community/nixos-cli#nixos-cli" = "latest"
+"nix:nixd" = "latest"
 "pacman:discord" = "latest"
 "pacman:discover" = { env = ["kde"], version = "latest" }
 "pacman:filelight" = { env = ["kde"], version = "latest" }
